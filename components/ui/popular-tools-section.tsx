@@ -22,7 +22,7 @@ const POPULAR_IDS = [
 ]
 
 export function PopularToolsSection() {
-  const { t } = useI18n()
+  const { t, href } = useI18n()
   const popular = POPULAR_IDS.map((id) => getTool(id)).filter(
     (tool): tool is NonNullable<typeof tool> => Boolean(tool),
   )
@@ -42,7 +42,7 @@ export function PopularToolsSection() {
         {popular.map((tool) => (
           <Link
             key={tool.id}
-            href={`/tools/${tool.id}`}
+            href={href(`/tools/${tool.id}`)}
             className="group relative flex items-center justify-between gap-4 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] p-5 backdrop-blur-md transition-all hover:border-primary/40 hover:bg-white/[0.06]"
           >
             <div

@@ -1,0 +1,165 @@
+{
+  "meta": {
+    "title": "Toolando — Twoje narzędzia online w jednym miejscu",
+    "description": "Konwertery, generatory, PDF i narzędzia AI — wszystko w jednym eleganckim ekosystemie. Szybko i prosto."
+  },
+  "nav": {
+    "aiTools": "Narzędzia AI",
+    "tools": "Narzędzia",
+    "categories": "Kategorie",
+    "about": "O platformie",
+    "contact": "Kontakt",
+    "cta": "Zacznij korzystać",
+    "openMenu": "Otwórz menu",
+    "closeMenu": "Zamknij menu",
+    "allTools": "Wszystkie narzędzia"
+  },
+  "hero": {
+    "badge": "Nowy ekosystem narzędzi online",
+    "titleA": "Twoje narzędzia online w",
+    "titleHighlight": "jednym miejscu",
+    "subtitle": "Konwertery, generatory, PDF, AI — wszystko w jednym ekosystemie.",
+    "browse": "Przeglądaj narzędzia",
+    "learnMore": "Dowiedz się więcej"
+  },
+  "opener": {
+    "title": "Uniwersalny otwieracz plików",
+    "subtitle": "Otwórz i podejrzyj dosłownie każdy format pliku bezpośrednio w przeglądarce — bez instalacji i bez wysyłania danych na serwer.",
+    "cta": "Otwórz plik",
+    "kindImages": "Obrazy",
+    "kindVideo": "Wideo",
+    "kindAudio": "Audio",
+    "kindDocs": "PDF, kod i dane"
+  },
+  "ai": {
+    "badge": "Premium AI",
+    "title": "Inteligentne narzędzia AI",
+    "subtitle": "Pisz, streszczaj, tłumacz i twórz obrazy dzięki najnowszym modelom sztucznej inteligencji — bezpośrednio w Toolando, bez instalacji.",
+    "openTool": "Otwórz narzędzie",
+    "more": "Więcej narzędzi AI"
+  },
+  "features": {
+    "title": "Najpopularniejsze narzędzia",
+    "subtitle": "Najczęściej wybierane narzędzia Toolando — gotowe do użycia w kilka sekund.",
+    "popularTitle": "Najpopularniejsze konwertery",
+    "popularSubtitle": "Najczęściej używane konwersje — w obie strony, gotowe od razu."
+  },
+  "categories": {
+    "title": "Kategorie narzędzi",
+    "subtitle": "Wybierz kategorię, aby zobaczyć wszystkie dostępne konwertery.",
+    "browse": "Przeglądaj"
+  },
+  "why": {
+    "title": "Dlaczego Toolando?",
+    "subtitle": "Zbudowane z myślą o Twojej produktywności i komforcie pracy.",
+    "speedTitle": "Szybkość",
+    "speedDesc": "Narzędzia działają błyskawicznie w przeglądarce — bez czekania i bez instalacji.",
+    "simpleTitle": "Prostota",
+    "simpleDesc": "Przejrzysty interfejs, w którym każde narzędzie znajdziesz w kilka sekund.",
+    "toolsTitle": "Ponad 200 narzędzi online",
+    "toolsDesc": "Ogromny zestaw konwerterów, generatorów i narzędzi AI w jednym miejscu."
+  },
+  "ctaSection": {
+    "title": "Zacznij korzystać z Toolando już dziś",
+    "subtitle": "Dołącz do ekosystemu narzędzi, które oszczędzają Twój czas każdego dnia.",
+    "browse": "Przeglądaj narzędzia"
+  },
+  "footer": {
+    "tools": "Narzędzia",
+    "about": "O platformie",
+    "contact": "Kontakt",
+    "support": "Wesprzyj nas",
+    "privacy": "Polityka prywatności",
+    "terms": "Regulamin",
+    "rights": "© 2026 Toolando. Wszelkie prawa zastrzeżone."
+  },
+  "language": {
+    "label": "Język"
+  },
+  "support": {
+    "eyebrow": "Wesprzyj projekt",
+    "title": "Pomóż utrzymać Toolando",
+    "subtitle": "Toolando powstaje i jest udostępniane za darmo. Jeśli oszczędza Ci czas, rozważ wsparcie jego rozwoju.",
+    "coffee": "Postaw mi kawę",
+    "donate": "Przekaż darowiznę",
+    "back": "Wróć na stronę główną",
+    "thanks": "Każde wsparcie pomaga pokryć koszty serwerów i tworzyć nowe narzędzia."
+  },
+  "openerPage": {
+    "eyebrow": "Podgląd i konwersja",
+    "title": "Uniwersalny otwieracz i konwerter plików",
+    "subtitle": "Otwórz dosłownie każdy format pliku — obrazy, wideo, dźwięk, PDF, dokumenty, kod i dane wyświetlą się natychmiast. Po otwarciu Toolando od razu podpowie wszystkie sensowne formaty, na które możesz przekonwertować plik jednym kliknięciem.",
+    "back": "Wszystkie narzędzia",
+    "drop": "Przeciągnij i upuść plik tutaj",
+    "or": "lub",
+    "choose": "Wybierz plik",
+    "convertTitle": "Konwertuj na inny format",
+    "optionOne": "opcja",
+    "optionMany": "opcji",
+    "noConverter": "Dla tego formatu nie mamy jeszcze konwertera — możesz jednak podejrzeć i pobrać plik poniżej.",
+    "downloaded": "Gotowe! Plik został pobrany.",
+    "convertError": "Konwersja nie powiodła się.",
+    "download": "Pobierz",
+    "remove": "Usuń plik",
+    "previewUnavailable": "Podgląd niedostępny dla tego formatu.",
+    "binaryNote": "Podgląd binarny (heksadecymalny) pierwszych bajtów pliku."
+  },
+  "tool": {
+    "back": "Wszystkie narzędzia",
+    "otherTools": "Inne narzędzia",
+    "relatedTools": "Powiązane narzędzia",
+    "drop": "Przeciągnij i upuść plik tutaj",
+    "dropMulti": "Przeciągnij i upuść pliki tutaj",
+    "or": "lub",
+    "choose": "Wybierz plik",
+    "chooseMulti": "Wybierz pliki",
+    "convert": "Konwertuj",
+    "processing": "Przetwarzanie…",
+    "download": "Pobierz wynik",
+    "remove": "Usuń",
+    "error": "Wystąpił błąd. Spróbuj ponownie.",
+    "quality": "Jakość",
+    "supportedFormats": "Obsługiwane formaty",
+    "addMore": "Dodaj więcej plików",
+    "merge": "Połącz pliki",
+    "result": "Wynik",
+    "notFound": "Narzędzie nie znalezione"
+  },
+  "aiTool": {
+    "prompt": "Twój tekst",
+    "promptPlaceholder": "Wpisz treść…",
+    "tone": "Ton",
+    "targetLang": "Język docelowy",
+    "generate": "Generuj",
+    "generating": "Generowanie…",
+    "result": "Wynik",
+    "copy": "Kopiuj",
+    "copied": "Skopiowano",
+    "download": "Pobierz",
+    "regenerate": "Generuj ponownie",
+    "uploadDoc": "Wgraj dokument (PDF, DOCX, TXT)",
+    "summarize": "Podsumuj",
+    "imagePrompt": "Opisz obraz, który chcesz utworzyć",
+    "aspectRatio": "Proporcje",
+    "aspectSquare": "Kwadrat",
+    "aspectLandscape": "Poziomy",
+    "aspectPortrait": "Pionowy",
+    "chatPlaceholder": "Zadaj pytanie…",
+    "send": "Wyślij",
+    "stop": "Zatrzymaj",
+    "clear": "Wyczyść",
+    "thinking": "Myślę…",
+    "aiError": "Nie udało się uzyskać odpowiedzi AI. Spróbuj ponownie.",
+    "emptyChat": "Zadaj pytanie, aby rozpocząć rozmowę."
+  },
+  "category": {
+    "back": "Strona główna",
+    "allCategories": "Wszystkie kategorie",
+    "toolsCount": "narzędzi",
+    "converterOne": "dostępny konwerter",
+    "converterMany": "dostępnych konwerterów",
+    "soon": "Wkrótce",
+    "open": "Otwórz",
+    "notFound": "Kategoria nie znaleziona"
+  }
+}

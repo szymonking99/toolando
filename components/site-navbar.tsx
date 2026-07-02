@@ -7,14 +7,14 @@ import { LanguageSwitcher } from "@/components/language-switcher"
 
 export function SiteNavbar() {
   const [open, setOpen] = useState(false)
-  const { t } = useI18n()
+  const { t, href } = useI18n()
 
   const links = [
     { label: t.nav.aiTools, href: "#ai" },
     { label: t.nav.tools, href: "#narzedzia" },
     { label: t.nav.categories, href: "#kategorie" },
     { label: t.nav.about, href: "#o-platformie" },
-    { label: t.nav.contact, href: "/kontakt" }, // ← poprawione
+    { label: t.nav.contact, href: href("/kontakt") },
   ]
 
   return (
@@ -22,7 +22,7 @@ export function SiteNavbar() {
       <nav className="mx-auto flex max-w-6xl items-center justify-between rounded-2xl border border-white/10 bg-background/60 px-5 py-3 backdrop-blur-xl">
         
         {/* Logo */}
-        <a href="/" className="flex items-center gap-2">
+        <a href={href("/")} className="flex items-center gap-2">
           <span className="flex size-8 items-center justify-center rounded-lg bg-primary/15 text-primary ring-1 ring-primary/30">
             <Wrench className="size-4" aria-hidden="true" />
           </span>

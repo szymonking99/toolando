@@ -3,7 +3,12 @@
 import { useEffect, useRef, useState } from "react"
 import { Globe, Check } from "lucide-react"
 import { useI18n } from "@/components/i18n-provider"
-import { locales, localeNames, localeFlags, type Locale } from "@/lib/i18n/config"
+import {
+  supportedLocales,
+  localeNames,
+  localeFlags,
+  type Locale,
+} from "@/lib/i18n/config"
 import { usePathname, useRouter } from "next/navigation"
 
 export function LanguageSwitcher({ className = "" }: { className?: string }) {
@@ -25,10 +30,13 @@ export function LanguageSwitcher({ className = "" }: { className?: string }) {
   }, [])
 
   function choose(next: Locale) {
-    // usuwa pierwszy segment języka
-    const pathWithoutLocale = pathname.replace(/^\/[a-z]{2}/, "")
-    // przejście na nowy język
-    router.push(`/${next}${pathWithoutLocale}`)
+    // Remember the choice so the "/" redirect honors it on future visits.
+    document.cookie = `toolando-locale=${next}; path=/; max-age=31536000; samesite=lax`
+    // Strip the current locale segment, then prefix the newly chosen one.
+    const segments = pathname.split("/")
+    // segments[0] is "" (leading slash), segments[1] is the current locale.
+    const rest = segments.slice(2).join("/")
+    router.push(`/${next}${rest ? `/${rest}` : ""}`)
     setOpen(false)
   }
 
@@ -43,15 +51,15 @@ export function LanguageSwitcher({ className = "" }: { className?: string }) {
         aria-label={t.language.label}
       >
         <Globe className="size-4 text-muted-foreground" aria-hidden="true" />
-        {localeFlags[locale]}
+        {localeFlags[locale] ?? locale.slice(0, 2).toUpperCase()}
       </button>
 
       {open && (
         <ul
           role="listbox"
-          className="absolute right-0 z-50 mt-2 w-44 overflow-hidden rounded-xl border border-white/10 bg-background/95 p-1 shadow-lg backdrop-blur-xl"
+          className="absolute right-0 z-50 mt-2 max-h-80 w-44 overflow-y-auto rounded-xl border border-white/10 bg-background/95 p-1 shadow-lg backdrop-blur-xl"
         >
-          {locales.map((code) => (
+          {supportedLocales.map((code) => (
             <li key={code}>
               <button
                 type="button"

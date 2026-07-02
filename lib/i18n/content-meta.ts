@@ -96,9 +96,11 @@ const featureMeta: Record<Locale, Record<string, TextMeta>> = {
 }
 
 export function getCategoryMeta(locale: Locale, slug: string): TextMeta | undefined {
-  return categoryMeta[locale][slug] ?? categoryMeta.pl[slug]
+  const map = categoryMeta[locale] ?? categoryMeta.en
+  return map[slug] ?? categoryMeta.en[slug]
 }
 
 export function getFeatureMeta(locale: Locale, id: string): TextMeta | undefined {
-  return featureMeta[locale][id] ?? featureMeta.pl[id]
+  const map = featureMeta[locale] ?? featureMeta.en
+  return map[id] ?? featureMeta.en[id]
 }

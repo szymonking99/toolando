@@ -13,7 +13,7 @@ import {
 } from "lucide-react"
 import { aiTools } from "@/lib/ai-tools"
 import { useI18n } from "@/components/i18n-provider"
-import { aiMeta } from "@/lib/i18n/ai-meta"
+import { getAiMeta } from "@/lib/i18n/ai-meta"
 
 const ICONS: Record<string, LucideIcon> = {
   PenLine,
@@ -24,8 +24,8 @@ const ICONS: Record<string, LucideIcon> = {
 }
 
 export function AiToolsSection() {
-  const { t, locale } = useI18n()
-  const meta = aiMeta[locale]
+  const { t, locale, href } = useI18n()
+  const meta = getAiMeta(locale)
   return (
     <section id="ai" className="relative px-4 py-20 sm:py-28">
       <div className="mx-auto max-w-6xl">
@@ -48,7 +48,7 @@ export function AiToolsSection() {
             return (
               <Link
                 key={tool.id}
-                href={`/tools/${tool.id}`}
+                href={href(`/tools/${tool.id}`)}
                 className="group relative flex flex-col overflow-hidden rounded-2xl border border-primary/15 bg-gradient-to-br from-primary/[0.07] to-white/[0.02] p-6 backdrop-blur-md transition-all hover:border-primary/40 hover:from-primary/[0.12]"
               >
                 <div

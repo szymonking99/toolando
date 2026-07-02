@@ -23,7 +23,7 @@ const features = [
 ]
 
 export function FeaturesSection() {
-  const { t, locale } = useI18n()
+  const { t, locale, href } = useI18n()
   return (
     <section id="narzedzia" className="relative px-4 py-24 md:py-32">
       <div className="mx-auto max-w-6xl">
@@ -42,7 +42,7 @@ export function FeaturesSection() {
             return (
               <Link
                 key={feature.id}
-                href={feature.href}
+                href={href(feature.href)}
                 className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] p-6 backdrop-blur-md transition-all hover:border-primary/40 hover:bg-white/[0.06]"
               >
                 <div

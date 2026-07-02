@@ -1,0 +1,165 @@
+{
+  "meta": {
+    "title": "Toolando — Deine Online-Tools an einem Ort",
+    "description": "Konverter, Generatoren, PDF- und KI-Tools — alles in einem eleganten Ökosystem. Schnell und einfach."
+  },
+  "nav": {
+    "aiTools": "KI-Tools",
+    "tools": "Werkzeuge",
+    "categories": "Kategorien",
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "cta": "Loslegen",
+    "openMenu": "Menü öffnen",
+    "closeMenu": "Menü schließen",
+    "allTools": "Alle Werkzeuge"
+  },
+  "hero": {
+    "badge": "Ein neues Ökosystem für Online-Tools",
+    "titleA": "Deine Online-Tools an",
+    "titleHighlight": "einem Ort",
+    "subtitle": "Konverter, Generatoren, PDF, KI — alles in einem Ökosystem.",
+    "browse": "Werkzeuge durchsuchen",
+    "learnMore": "Mehr erfahren"
+  },
+  "opener": {
+    "title": "Universeller Datei-Öffner",
+    "subtitle": "Öffne und betrachte buchstäblich jedes Dateiformat direkt im Browser — ohne Installation und ohne Daten an einen Server zu senden.",
+    "cta": "Datei öffnen",
+    "kindImages": "Bilder",
+    "kindVideo": "Video",
+    "kindAudio": "Audio",
+    "kindDocs": "PDF, Code und Daten"
+  },
+  "ai": {
+    "badge": "Premium-KI",
+    "title": "Intelligente KI-Tools",
+    "subtitle": "Schreibe, fasse zusammen, übersetze und erstelle Bilder mit den neuesten KI-Modellen — direkt in Toolando, ohne Installation.",
+    "openTool": "Werkzeug öffnen",
+    "more": "Weitere KI-Tools"
+  },
+  "features": {
+    "title": "Beliebteste Werkzeuge",
+    "subtitle": "Die meistgewählten Toolando-Werkzeuge — in Sekunden einsatzbereit.",
+    "popularTitle": "Beliebteste Konverter",
+    "popularSubtitle": "Die meistgenutzten Konvertierungen — in beide Richtungen, sofort bereit."
+  },
+  "categories": {
+    "title": "Werkzeug-Kategorien",
+    "subtitle": "Wähle eine Kategorie, um alle verfügbaren Konverter zu sehen.",
+    "browse": "Durchsuchen"
+  },
+  "why": {
+    "title": "Warum Toolando?",
+    "subtitle": "Für deine Produktivität und deinen Komfort entwickelt.",
+    "speedTitle": "Geschwindigkeit",
+    "speedDesc": "Die Werkzeuge laufen blitzschnell im Browser — ohne Warten und ohne Installation.",
+    "simpleTitle": "Einfachheit",
+    "simpleDesc": "Eine übersichtliche Oberfläche, in der du jedes Werkzeug in Sekunden findest.",
+    "toolsTitle": "Über 200 Online-Tools",
+    "toolsDesc": "Eine riesige Sammlung von Konvertern, Generatoren und KI-Tools an einem Ort."
+  },
+  "ctaSection": {
+    "title": "Starte noch heute mit Toolando",
+    "subtitle": "Werde Teil eines Ökosystems von Werkzeugen, die dir jeden Tag Zeit sparen.",
+    "browse": "Werkzeuge durchsuchen"
+  },
+  "footer": {
+    "tools": "Werkzeuge",
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "support": "Unterstütze uns",
+    "privacy": "Datenschutz",
+    "terms": "Nutzungsbedingungen",
+    "rights": "© 2026 Toolando. Alle Rechte vorbehalten."
+  },
+  "language": {
+    "label": "Sprache"
+  },
+  "support": {
+    "eyebrow": "Unterstütze das Projekt",
+    "title": "Hilf, Toolando zu erhalten",
+    "subtitle": "Toolando entsteht und wird kostenlos angeboten. Wenn es dir Zeit spart, unterstütze gern die Entwicklung.",
+    "coffee": "Spendier mir einen Kaffee",
+    "donate": "Spende geben",
+    "back": "Zurück zur Startseite",
+    "thanks": "Jeder Beitrag hilft, die Server zu finanzieren und neue Werkzeuge zu ermöglichen."
+  },
+  "openerPage": {
+    "eyebrow": "Vorschau und Konvertierung",
+    "title": "Universeller Datei-Öffner und -Konverter",
+    "subtitle": "Öffne buchstäblich jedes Dateiformat — Bilder, Video, Audio, PDF, Dokumente, Code und Daten werden sofort angezeigt. Nach dem Öffnen schlägt Toolando sofort alle sinnvollen Formate vor, in die du die Datei mit einem Klick konvertieren kannst.",
+    "back": "Alle Werkzeuge",
+    "drop": "Datei hierher ziehen und ablegen",
+    "or": "oder",
+    "choose": "Datei auswählen",
+    "convertTitle": "In ein anderes Format konvertieren",
+    "optionOne": "Option",
+    "optionMany": "Optionen",
+    "noConverter": "Für dieses Format haben wir noch keinen Konverter — du kannst die Datei aber unten ansehen und herunterladen.",
+    "downloaded": "Fertig! Die Datei wurde heruntergeladen.",
+    "convertError": "Konvertierung fehlgeschlagen.",
+    "download": "Herunterladen",
+    "remove": "Datei entfernen",
+    "previewUnavailable": "Für dieses Format ist keine Vorschau verfügbar.",
+    "binaryNote": "Binäre (hexadezimale) Vorschau der ersten Bytes der Datei."
+  },
+  "tool": {
+    "back": "Alle Werkzeuge",
+    "otherTools": "Andere Werkzeuge",
+    "relatedTools": "Verwandte Werkzeuge",
+    "drop": "Datei hierher ziehen und ablegen",
+    "dropMulti": "Dateien hierher ziehen und ablegen",
+    "or": "oder",
+    "choose": "Datei auswählen",
+    "chooseMulti": "Dateien auswählen",
+    "convert": "Konvertieren",
+    "processing": "Verarbeitung…",
+    "download": "Ergebnis herunterladen",
+    "remove": "Entfernen",
+    "error": "Etwas ist schiefgelaufen. Bitte versuche es erneut.",
+    "quality": "Qualität",
+    "supportedFormats": "Unterstützte Formate",
+    "addMore": "Weitere Dateien hinzufügen",
+    "merge": "Dateien zusammenführen",
+    "result": "Ergebnis",
+    "notFound": "Werkzeug nicht gefunden"
+  },
+  "aiTool": {
+    "prompt": "Dein Text",
+    "promptPlaceholder": "Text eingeben…",
+    "tone": "Ton",
+    "targetLang": "Zielsprache",
+    "generate": "Generieren",
+    "generating": "Wird generiert…",
+    "result": "Ergebnis",
+    "copy": "Kopieren",
+    "copied": "Kopiert",
+    "download": "Herunterladen",
+    "regenerate": "Neu generieren",
+    "uploadDoc": "Dokument hochladen (PDF, DOCX, TXT)",
+    "summarize": "Zusammenfassen",
+    "imagePrompt": "Beschreibe das Bild, das du erstellen möchtest",
+    "aspectRatio": "Seitenverhältnis",
+    "aspectSquare": "Quadrat",
+    "aspectLandscape": "Querformat",
+    "aspectPortrait": "Hochformat",
+    "chatPlaceholder": "Stelle eine Frage…",
+    "send": "Senden",
+    "stop": "Stoppen",
+    "clear": "Löschen",
+    "thinking": "Denke nach…",
+    "aiError": "Keine KI-Antwort erhalten. Bitte versuche es erneut.",
+    "emptyChat": "Stelle eine Frage, um das Gespräch zu beginnen."
+  },
+  "category": {
+    "back": "Startseite",
+    "allCategories": "Alle Kategorien",
+    "toolsCount": "Werkzeuge",
+    "converterOne": "verfügbarer Konverter",
+    "converterMany": "verfügbare Konverter",
+    "soon": "Bald",
+    "open": "Öffnen",
+    "notFound": "Kategorie nicht gefunden"
+  }
+}

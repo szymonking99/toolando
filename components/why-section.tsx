@@ -19,8 +19,8 @@ export function WhySection() {
     },
     {
       icon: Layers,
-      title: "Ponad 200 narzędzi online",
-      description: "Ogromny zestaw konwerterów, generatorów i narzędzi AI w jednym miejscu.",
+      title: t.why.toolsTitle,
+      description: t.why.toolsDesc,
     },
   ]
 
