@@ -75,7 +75,14 @@ export async function POST(req: NextRequest) {
     }
     console.error("[v0] conversion failed:", err);
     return json(
-      { error: "Wystąpił nieoczekiwany błąd podczas konwersji." },
+      {
+        error: "Wystąpił nieoczekiwany błąd podczas konwersji.",
+        // TEMP DEBUG — remove after diagnosing native-binary failure.
+        debug:
+          err instanceof Error
+            ? { message: err.message, stack: err.stack?.split("\n").slice(0, 6) }
+            : String(err),
+      },
       500,
     );
   }
