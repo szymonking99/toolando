@@ -1,5 +1,6 @@
 import { Analytics } from "@vercel/analytics/next"
 import type { Metadata, Viewport } from "next"
+import Script from "next/script"
 import { Geist, Geist_Mono } from "next/font/google"
 import { I18nProvider } from "@/components/i18n-provider"
 import { getDictionary } from "@/lib/i18n/dictionaries"
@@ -18,6 +19,8 @@ const geistMono = Geist_Mono({
 })
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://toolando.tech"
+const ADSENSE_CLIENT =
+  process.env.NEXT_PUBLIC_ADSENSE_CLIENT ?? "ca-pub-1137300798632743"
 
 /** Pre-render every supported locale at build time. */
 export function generateStaticParams() {
@@ -112,6 +115,15 @@ export default async function LocaleLayout({
           {children}
         </I18nProvider>
         {process.env.NODE_ENV === "production" && <Analytics />}
+        {ADSENSE_CLIENT && (
+          <Script
+            id="adsbygoogle-loader"
+            async
+            strategy="afterInteractive"
+            crossOrigin="anonymous"
+            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`}
+          />
+        )}
       </body>
     </html>
   )

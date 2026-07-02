@@ -9,7 +9,8 @@ import { cn } from "@/lib/utils"
  * When empty, a neutral placeholder is rendered so the layout stays intact
  * (and no AdSense policy is violated by empty units).
  */
-const ADSENSE_CLIENT = process.env.NEXT_PUBLIC_ADSENSE_CLIENT ?? ""
+const ADSENSE_CLIENT =
+  process.env.NEXT_PUBLIC_ADSENSE_CLIENT ?? "ca-pub-1137300798632743"
 
 type AdSlotProps = {
   /** The AdSense ad unit slot id (data-ad-slot). */
@@ -52,16 +53,16 @@ export function AdSlot({
   useEffect(() => {
     if (!isConfigured || pushedRef.current) return
     try {
-      // Load the AdSense library once, then request the unit.
+      // The AdSense library is loaded globally in the root layout. As a
+      // fallback (e.g. if it hasn't been injected yet), load it once here.
       const existing = document.querySelector<HTMLScriptElement>(
-        'script[data-adsense-loader="true"]',
+        'script[src*="adsbygoogle.js"]',
       )
       if (!existing) {
         const script = document.createElement("script")
         script.src = `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`
         script.async = true
         script.crossOrigin = "anonymous"
-        script.dataset.adsenseLoader = "true"
         document.head.appendChild(script)
       }
       ;(window.adsbygoogle = window.adsbygoogle || []).push({})
