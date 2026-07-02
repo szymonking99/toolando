@@ -1,6 +1,5 @@
 import { Analytics } from "@vercel/analytics/next"
 import type { Metadata, Viewport } from "next"
-import Script from "next/script"
 import { Geist, Geist_Mono } from "next/font/google"
 import { I18nProvider } from "@/components/i18n-provider"
 import { getDictionary } from "@/lib/i18n/dictionaries"
@@ -117,12 +116,13 @@ export default async function LocaleLayout({
     >
       <head>
         {ADSENSE_CLIENT && (
-          <Script
-            id="adsbygoogle-loader"
+          // Plain <script> so the real AdSense loader appears verbatim in the
+          // initial HTML <head> (Google's crawler needs the actual tag, not a
+          // Next.js preload link).
+          <script
             async
-            strategy="beforeInteractive"
-            crossOrigin="anonymous"
             src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`}
+            crossOrigin="anonymous"
           />
         )}
       </head>
