@@ -7,6 +7,7 @@ import { SiteFooter } from "@/components/site-footer"
 import { getDictionary } from "@/lib/i18n/dictionaries"
 import { getCategoryMeta } from "@/lib/i18n/content-meta"
 import { localeHref } from "@/lib/i18n/href"
+import { AdSlot } from "@/components/ad-slot"
 
 export async function generateMetadata({
   params,
@@ -75,6 +76,9 @@ export default async function ToolsIndexPage({
             )
           })}
         </div>
+
+        {/* Ad placement: below the tools grid */}
+        <AdSlot slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT_TOOLS} className="mt-12 px-0" />
       </main>
       <SiteFooter />
     </div>

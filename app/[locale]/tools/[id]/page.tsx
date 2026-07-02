@@ -10,6 +10,7 @@ import { SpecialTool } from "@/components/special-tool"
 import { AiTool } from "@/components/ai-tool"
 import { getDictionary } from "@/lib/i18n/dictionaries"
 import { localeHref } from "@/lib/i18n/href"
+import { AdSlot } from "@/components/ad-slot"
 
 export function generateStaticParams() {
   return [
@@ -28,10 +29,25 @@ export async function generateMetadata({
   const dict = await getDictionary(locale)
   const tool = getTool(id) ?? getSpecialTool(id) ?? getAiTool(id)
   if (!tool) return { title: `${dict.tool.notFound} — Toolando` }
+  const title = `${tool.name} — Toolando`
   return {
-    title: `${tool.name} — Toolando`,
+    title,
     description: tool.description,
     alternates: { canonical: `/${locale}/tools/${id}` },
+    openGraph: {
+      title,
+      description: tool.description,
+      url: `/${locale}/tools/${id}`,
+      siteName: "Toolando",
+      type: "website",
+      images: [{ url: "/og-image.png", width: 1200, height: 630, alt: tool.name }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description: tool.description,
+      images: ["/og-image.png"],
+    },
   }
 }
 
@@ -92,6 +108,11 @@ function ToolShell({
           {description}
         </p>
         {children}
+        {/* Ad placement: below the tool, before related tools scroll away */}
+        <AdSlot
+          slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT_TOOL}
+          className="mt-12 px-0"
+        />
       </main>
     </>
   )

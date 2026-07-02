@@ -42,15 +42,49 @@ const loaders: Record<string, () => Promise<{ default: Dictionary }>> = {
 export const fallbackDictionary: Dictionary = en
 
 /**
+ * Deep-merge a partial locale dictionary on top of the English base so that any
+ * missing key (or entire section) transparently falls back to English instead
+ * of rendering `undefined`. Values present in the locale always win.
+ */
+function mergeWithFallback<T>(base: T, override: unknown): T {
+  if (
+    typeof base !== "object" ||
+    base === null ||
+    Array.isArray(base) ||
+    typeof override !== "object" ||
+    override === null ||
+    Array.isArray(override)
+  ) {
+    // Use the override only when it is a non-empty string; otherwise keep base.
+    if (typeof override === "string" && override.trim() !== "") {
+      return override as T
+    }
+    return override === undefined || override === null ? base : (override as T)
+  }
+
+  const result: Record<string, unknown> = { ...(base as Record<string, unknown>) }
+  const ov = override as Record<string, unknown>
+  for (const key of Object.keys(base as Record<string, unknown>)) {
+    result[key] = mergeWithFallback(
+      (base as Record<string, unknown>)[key],
+      ov[key],
+    )
+  }
+  return result as T
+}
+
+/**
  * Load the translation dictionary for any locale. Unsupported or malformed
- * locales gracefully fall back to English.
+ * locales gracefully fall back to English, and any individual missing key is
+ * backfilled from the English dictionary.
  */
 export async function getDictionary(locale: Locale): Promise<Dictionary> {
   const supported = normalizeToSupported(locale) ?? fallbackLocale
+  if (supported === fallbackLocale) return fallbackDictionary
   const load = loaders[supported] ?? loaders[fallbackLocale]
   try {
     const mod = await load()
-    return mod.default as Dictionary
+    return mergeWithFallback(fallbackDictionary, mod.default)
   } catch {
     return fallbackDictionary
   }

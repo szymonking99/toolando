@@ -25,10 +25,26 @@ export async function generateMetadata({
   const meta = getCategory(category)
   if (!meta) return { title: `${dict.category.notFound} — Toolando` }
   const cm = getCategoryMeta(locale, category)
+  const title = `${cm?.title ?? meta.title} — Toolando`
+  const description = cm?.description ?? meta.description
   return {
-    title: `${cm?.title ?? meta.title} — Toolando`,
-    description: cm?.description ?? meta.description,
+    title,
+    description,
     alternates: { canonical: `/${locale}/category/${category}` },
+    openGraph: {
+      title,
+      description,
+      url: `/${locale}/category/${category}`,
+      siteName: "Toolando",
+      type: "website",
+      images: [{ url: "/og-image.png", width: 1200, height: 630, alt: title }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: ["/og-image.png"],
+    },
   }
 }
 

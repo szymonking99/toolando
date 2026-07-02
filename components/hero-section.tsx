@@ -2,6 +2,7 @@
 
 import { Sparkles } from "lucide-react"
 import { useI18n } from "@/components/i18n-provider"
+import { SupportButton } from "@/components/support-button"
 
 export function HeroSection() {
   const { t } = useI18n()
@@ -36,7 +37,9 @@ export function HeroSection() {
           {t.hero.subtitle}
         </p>
 
-        {/* Przyciski zostały usunięte */}
+        <div className="mt-8 flex w-full justify-center sm:w-auto">
+          <SupportButton className="px-6 py-3 text-base" />
+        </div>
       </div>
     </section>
   )
