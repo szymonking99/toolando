@@ -4,6 +4,7 @@ import { useState } from "react"
 import { Menu, X, Wrench } from "lucide-react"
 import { useI18n } from "@/components/i18n-provider"
 import { LanguageSwitcher } from "@/components/language-switcher"
+import { SupportButton } from "@/components/support-button"
 
 export function SiteNavbar() {
   const [open, setOpen] = useState(false)
@@ -44,9 +45,10 @@ export function SiteNavbar() {
           ))}
         </div>
 
-        {/* Desktop right side (bez CTA) */}
+        {/* Desktop right side */}
         <div className="hidden items-center gap-3 md:flex">
           <LanguageSwitcher />
+          <SupportButton />
         </div>
 
         {/* Mobile hamburger */}
@@ -78,7 +80,7 @@ export function SiteNavbar() {
                 {link.label}
               </a>
             ))}
-            {/* CTA usunięte */}
+            <SupportButton fullWidth className="mt-3" />
           </div>
         </div>
       )}

@@ -3,6 +3,7 @@
 import { Wrench } from "lucide-react"
 import Link from "next/link"
 import { useI18n } from "@/components/i18n-provider"
+import { AdSlot } from "@/components/ad-slot"
 
 export function SiteFooter() {
   const { t, href } = useI18n()
@@ -17,6 +18,12 @@ export function SiteFooter() {
 
   return (
     <footer className="border-t border-white/10 px-4 py-12">
+      {/* Ad placement: consistent footer slot across all pages */}
+      <AdSlot
+        slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT_FOOTER}
+        className="mb-10 px-0"
+        minHeight={90}
+      />
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 md:flex-row">
         
         {/* Logo */}

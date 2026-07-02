@@ -4,7 +4,7 @@ import { categories, tools } from "@/lib/tools"
 import { specialTools } from "@/lib/special-tools"
 import { aiTools } from "@/lib/ai-tools"
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://toolando.com"
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://toolando.tech"
 
 /** Static (non-parameterized) paths that exist for every locale. */
 const STATIC_PATHS = [

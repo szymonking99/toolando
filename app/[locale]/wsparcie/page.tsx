@@ -5,7 +5,7 @@ import { getDictionary } from "@/lib/i18n/dictionaries"
 import { localeHref } from "@/lib/i18n/href"
 
 // Placeholder support links — replace with your real Buy Me a Coffee / donation URLs.
-const COFFEE_URL = "https://www.buymeacoffee.com/"
+const COFFEE_URL = "https://buymeacoffee.com/badyltech"
 const DONATE_URL = "https://www.paypal.com/donate"
 
 export async function generateMetadata({
