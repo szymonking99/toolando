@@ -81,6 +81,11 @@ export async function generateMetadata({
       ],
       apple: "/apple-icon.png",
     },
+    // Google AdSense site verification (meta-tag method). Renders
+    // <meta name="google-adsense-account" content="ca-pub-..."> in <head>.
+    other: ADSENSE_CLIENT
+      ? { "google-adsense-account": ADSENSE_CLIENT }
+      : {},
   }
 }
 
@@ -110,20 +115,22 @@ export default async function LocaleLayout({
       dir={dir}
       className={`dark bg-background ${geistSans.variable} ${geistMono.variable}`}
     >
+      <head>
+        {ADSENSE_CLIENT && (
+          <Script
+            id="adsbygoogle-loader"
+            async
+            strategy="beforeInteractive"
+            crossOrigin="anonymous"
+            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`}
+          />
+        )}
+      </head>
       <body className="bg-background font-sans antialiased">
         <I18nProvider locale={locale} dictionary={dictionary}>
           {children}
         </I18nProvider>
         {process.env.NODE_ENV === "production" && <Analytics />}
-        {ADSENSE_CLIENT && (
-          <Script
-            id="adsbygoogle-loader"
-            async
-            strategy="afterInteractive"
-            crossOrigin="anonymous"
-            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`}
-          />
-        )}
       </body>
     </html>
   )
