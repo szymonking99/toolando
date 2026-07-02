@@ -7,14 +7,14 @@ import { LanguageSwitcher } from "@/components/language-switcher"
 
 export function SiteNavbar() {
   const [open, setOpen] = useState(false)
-  const { t } = useI18n()
+  const { t, href } = useI18n()
 
   const links = [
     { label: t.nav.aiTools, href: "#ai" },
     { label: t.nav.tools, href: "#narzedzia" },
     { label: t.nav.categories, href: "#kategorie" },
     { label: t.nav.about, href: "#o-platformie" },
-    { label: t.nav.contact, href: "/kontakt" }, // ← poprawione
+    { label: t.nav.contact, href: href("/kontakt") },
   ]
 
   return (

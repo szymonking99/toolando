@@ -170,4 +170,11 @@ const uk: MetaMap = {
   },
 }
 
-export const aiMeta: Record<Locale, MetaMap> = { pl, en, de, es, uk }
+const maps: Record<string, MetaMap> = { pl, en, de, es, uk }
+
+export const aiMeta = maps
+
+/** Resolve AI tool metadata for any locale, falling back to English. */
+export function getAiMeta(locale: Locale): MetaMap {
+  return maps[locale] ?? maps.en
+}

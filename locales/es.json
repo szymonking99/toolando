@@ -1,0 +1,165 @@
+{
+  "meta": {
+    "title": "Toolando — Tus herramientas online en un solo lugar",
+    "description": "Conversores, generadores, PDF y herramientas de IA — todo en un ecosistema elegante. Rápido, simple y sin anuncios."
+  },
+  "nav": {
+    "aiTools": "Herramientas IA",
+    "tools": "Herramientas",
+    "categories": "Categorías",
+    "about": "Acerca de",
+    "contact": "Contacto",
+    "cta": "Empezar",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú",
+    "allTools": "Todas las herramientas"
+  },
+  "hero": {
+    "badge": "Un nuevo ecosistema de herramientas online",
+    "titleA": "Tus herramientas online en",
+    "titleHighlight": "un solo lugar",
+    "subtitle": "Conversores, generadores, PDF, IA — todo en un ecosistema.",
+    "browse": "Explorar herramientas",
+    "learnMore": "Saber más"
+  },
+  "opener": {
+    "title": "Visor universal de archivos",
+    "subtitle": "Abre y previsualiza literalmente cualquier formato de archivo directamente en tu navegador — sin instalación y sin enviar tus datos a un servidor.",
+    "cta": "Abrir un archivo",
+    "kindImages": "Imágenes",
+    "kindVideo": "Vídeo",
+    "kindAudio": "Audio",
+    "kindDocs": "PDF, código y datos"
+  },
+  "ai": {
+    "badge": "IA Premium",
+    "title": "Herramientas de IA inteligentes",
+    "subtitle": "Escribe, resume, traduce y crea imágenes con los últimos modelos de IA — directamente en Toolando, sin instalación.",
+    "openTool": "Abrir herramienta",
+    "more": "Más herramientas de IA"
+  },
+  "features": {
+    "title": "Herramientas más populares",
+    "subtitle": "Las herramientas de Toolando más elegidas — listas para usar en segundos.",
+    "popularTitle": "Conversores más populares",
+    "popularSubtitle": "Las conversiones más usadas — en ambos sentidos, listas al instante."
+  },
+  "categories": {
+    "title": "Categorías de herramientas",
+    "subtitle": "Elige una categoría para ver todos los conversores disponibles.",
+    "browse": "Explorar"
+  },
+  "why": {
+    "title": "¿Por qué Toolando?",
+    "subtitle": "Creado pensando en tu productividad y comodidad.",
+    "speedTitle": "Velocidad",
+    "speedDesc": "Las herramientas funcionan al instante en tu navegador — sin esperas ni instalación.",
+    "simpleTitle": "Sencillez",
+    "simpleDesc": "Una interfaz clara donde encuentras cualquier herramienta en segundos.",
+    "noAdsTitle": "Sin anuncios",
+    "noAdsDesc": "Concéntrate en tu trabajo — sin ventanas emergentes ni banners molestos."
+  },
+  "ctaSection": {
+    "title": "Empieza a usar Toolando hoy",
+    "subtitle": "Únete a un ecosistema de herramientas que te ahorran tiempo cada día.",
+    "browse": "Explorar herramientas"
+  },
+  "footer": {
+    "tools": "Herramientas",
+    "about": "Acerca de",
+    "contact": "Contacto",
+    "support": "Apóyanos",
+    "privacy": "Política de privacidad",
+    "terms": "Términos de servicio",
+    "rights": "© 2026 Toolando. Todos los derechos reservados."
+  },
+  "language": {
+    "label": "Idioma"
+  },
+  "support": {
+    "eyebrow": "Apoya el proyecto",
+    "title": "Ayuda a mantener Toolando gratis y sin anuncios",
+    "subtitle": "Toolando lo crea un equipo pequeño y se ofrece gratis, sin anuncios. Si te ahorra tiempo, considera apoyar su desarrollo.",
+    "coffee": "Invítame a un café",
+    "donate": "Hacer una donación",
+    "back": "Volver al inicio",
+    "thanks": "Cada aportación ayuda a cubrir los servidores y a crear nuevas herramientas."
+  },
+  "openerPage": {
+    "eyebrow": "Previsualiza y convierte",
+    "title": "Visor y conversor universal de archivos",
+    "subtitle": "Abre literalmente cualquier formato de archivo — imágenes, vídeo, audio, PDF, documentos, código y datos se muestran al instante. Una vez abierto, Toolando sugiere de inmediato todos los formatos con sentido a los que puedes convertir el archivo con un solo clic.",
+    "back": "Todas las herramientas",
+    "drop": "Arrastra y suelta un archivo aquí",
+    "or": "o",
+    "choose": "Elegir un archivo",
+    "convertTitle": "Convertir a otro formato",
+    "optionOne": "opción",
+    "optionMany": "opciones",
+    "noConverter": "Aún no tenemos un conversor para este formato — pero puedes previsualizar y descargar el archivo abajo.",
+    "downloaded": "¡Listo! El archivo se ha descargado.",
+    "convertError": "La conversión falló.",
+    "download": "Descargar",
+    "remove": "Quitar archivo",
+    "previewUnavailable": "La vista previa no está disponible para este formato.",
+    "binaryNote": "Vista binaria (hexadecimal) de los primeros bytes del archivo."
+  },
+  "tool": {
+    "back": "Todas las herramientas",
+    "otherTools": "Otras herramientas",
+    "relatedTools": "Herramientas relacionadas",
+    "drop": "Arrastra y suelta un archivo aquí",
+    "dropMulti": "Arrastra y suelta archivos aquí",
+    "or": "o",
+    "choose": "Elegir un archivo",
+    "chooseMulti": "Elegir archivos",
+    "convert": "Convertir",
+    "processing": "Procesando…",
+    "download": "Descargar resultado",
+    "remove": "Quitar",
+    "error": "Algo salió mal. Inténtalo de nuevo.",
+    "quality": "Calidad",
+    "supportedFormats": "Formatos admitidos",
+    "addMore": "Añadir más archivos",
+    "merge": "Combinar archivos",
+    "result": "Resultado",
+    "notFound": "Herramienta no encontrada"
+  },
+  "aiTool": {
+    "prompt": "Tu texto",
+    "promptPlaceholder": "Escribe tu texto…",
+    "tone": "Tono",
+    "targetLang": "Idioma de destino",
+    "generate": "Generar",
+    "generating": "Generando…",
+    "result": "Resultado",
+    "copy": "Copiar",
+    "copied": "Copiado",
+    "download": "Descargar",
+    "regenerate": "Volver a generar",
+    "uploadDoc": "Sube un documento (PDF, DOCX, TXT)",
+    "summarize": "Resumir",
+    "imagePrompt": "Describe la imagen que quieres crear",
+    "aspectRatio": "Proporción",
+    "aspectSquare": "Cuadrado",
+    "aspectLandscape": "Horizontal",
+    "aspectPortrait": "Vertical",
+    "chatPlaceholder": "Haz una pregunta…",
+    "send": "Enviar",
+    "stop": "Detener",
+    "clear": "Borrar",
+    "thinking": "Pensando…",
+    "aiError": "No se pudo obtener respuesta de la IA. Inténtalo de nuevo.",
+    "emptyChat": "Haz una pregunta para empezar la conversación."
+  },
+  "category": {
+    "back": "Inicio",
+    "allCategories": "Todas las categorías",
+    "toolsCount": "herramientas",
+    "converterOne": "conversor disponible",
+    "converterMany": "conversores disponibles",
+    "soon": "Pronto",
+    "open": "Abrir",
+    "notFound": "Categoría no encontrada"
+  }
+}

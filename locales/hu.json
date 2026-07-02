@@ -1,0 +1,165 @@
+{
+  "meta": {
+    "title": "Toolando — Your online tools in one place",
+    "description": "Converters, generators, PDF and AI tools — all in one elegant ecosystem. Fast, simple and ad-free."
+  },
+  "nav": {
+    "aiTools": "AI Tools",
+    "tools": "Tools",
+    "categories": "Categories",
+    "about": "About",
+    "contact": "Contact",
+    "cta": "Get started",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "allTools": "All tools"
+  },
+  "hero": {
+    "badge": "A new online tools ecosystem",
+    "titleA": "Your online tools in",
+    "titleHighlight": "one place",
+    "subtitle": "Converters, generators, PDF, AI — all in one ecosystem.",
+    "browse": "Browse tools",
+    "learnMore": "Learn more"
+  },
+  "opener": {
+    "title": "Universal file opener",
+    "subtitle": "Open and preview literally any file format directly in your browser — no installation and no uploading your data to a server.",
+    "cta": "Open a file",
+    "kindImages": "Images",
+    "kindVideo": "Video",
+    "kindAudio": "Audio",
+    "kindDocs": "PDF, code and data"
+  },
+  "ai": {
+    "badge": "Premium AI",
+    "title": "Intelligent AI tools",
+    "subtitle": "Write, summarize, translate and create images with the latest AI models — right inside Toolando, no installation needed.",
+    "openTool": "Open tool",
+    "more": "More AI tools"
+  },
+  "features": {
+    "title": "Most popular tools",
+    "subtitle": "The most-picked Toolando tools — ready to use in seconds.",
+    "popularTitle": "Most popular converters",
+    "popularSubtitle": "The most-used conversions — both directions, ready to go."
+  },
+  "categories": {
+    "title": "Tool categories",
+    "subtitle": "Pick a category to see all available converters.",
+    "browse": "Browse"
+  },
+  "why": {
+    "title": "Why Toolando?",
+    "subtitle": "Built with your productivity and comfort in mind.",
+    "speedTitle": "Speed",
+    "speedDesc": "Tools run instantly in your browser — no waiting and no installation.",
+    "simpleTitle": "Simplicity",
+    "simpleDesc": "A clean interface where you find any tool in seconds.",
+    "noAdsTitle": "No ads",
+    "noAdsDesc": "Focus on your work — no pop-ups or distracting banners."
+  },
+  "ctaSection": {
+    "title": "Start using Toolando today",
+    "subtitle": "Join an ecosystem of tools that save you time every day.",
+    "browse": "Browse tools"
+  },
+  "footer": {
+    "tools": "Tools",
+    "about": "About",
+    "contact": "Contact",
+    "support": "Support us",
+    "privacy": "Privacy policy",
+    "terms": "Terms of service",
+    "rights": "© 2026 Toolando. All rights reserved."
+  },
+  "language": {
+    "label": "Language"
+  },
+  "support": {
+    "eyebrow": "Support the project",
+    "title": "Help keep Toolando free and ad-free",
+    "subtitle": "Toolando is built by a small team and offered for free, with no ads. If it saves you time, consider supporting its development.",
+    "coffee": "Buy me a coffee",
+    "donate": "Make a donation",
+    "back": "Back to home",
+    "thanks": "Every contribution helps cover servers and keeps new tools coming."
+  },
+  "openerPage": {
+    "eyebrow": "Preview and convert",
+    "title": "Universal file opener and converter",
+    "subtitle": "Open literally any file format — images, video, audio, PDF, documents, code and data show up instantly. Once opened, Toolando immediately suggests every sensible format you can convert the file to with one click.",
+    "back": "All tools",
+    "drop": "Drag and drop a file here",
+    "or": "or",
+    "choose": "Choose a file",
+    "convertTitle": "Convert to another format",
+    "optionOne": "option",
+    "optionMany": "options",
+    "noConverter": "We don't have a converter for this format yet — but you can still preview and download the file below.",
+    "downloaded": "Done! The file has been downloaded.",
+    "convertError": "Conversion failed.",
+    "download": "Download",
+    "remove": "Remove file",
+    "previewUnavailable": "Preview is not available for this format.",
+    "binaryNote": "Binary (hexadecimal) preview of the first bytes of the file."
+  },
+  "tool": {
+    "back": "All tools",
+    "otherTools": "Other tools",
+    "relatedTools": "Related tools",
+    "drop": "Drag and drop a file here",
+    "dropMulti": "Drag and drop files here",
+    "or": "or",
+    "choose": "Choose a file",
+    "chooseMulti": "Choose files",
+    "convert": "Convert",
+    "processing": "Processing…",
+    "download": "Download result",
+    "remove": "Remove",
+    "error": "Something went wrong. Please try again.",
+    "quality": "Quality",
+    "supportedFormats": "Supported formats",
+    "addMore": "Add more files",
+    "merge": "Merge files",
+    "result": "Result",
+    "notFound": "Tool not found"
+  },
+  "aiTool": {
+    "prompt": "Your text",
+    "promptPlaceholder": "Enter your text…",
+    "tone": "Tone",
+    "targetLang": "Target language",
+    "generate": "Generate",
+    "generating": "Generating…",
+    "result": "Result",
+    "copy": "Copy",
+    "copied": "Copied",
+    "download": "Download",
+    "regenerate": "Regenerate",
+    "uploadDoc": "Upload a document (PDF, DOCX, TXT)",
+    "summarize": "Summarize",
+    "imagePrompt": "Describe the image you want to create",
+    "aspectRatio": "Aspect ratio",
+    "aspectSquare": "Square",
+    "aspectLandscape": "Landscape",
+    "aspectPortrait": "Portrait",
+    "chatPlaceholder": "Ask a question…",
+    "send": "Send",
+    "stop": "Stop",
+    "clear": "Clear",
+    "thinking": "Thinking…",
+    "aiError": "Couldn't get an AI response. Please try again.",
+    "emptyChat": "Ask a question to start the conversation."
+  },
+  "category": {
+    "back": "Home",
+    "allCategories": "All categories",
+    "toolsCount": "tools",
+    "converterOne": "available converter",
+    "converterMany": "available converters",
+    "soon": "Soon",
+    "open": "Open",
+    "notFound": "Category not found"
+  }
+}
