@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Toolando — Tus herramientas online en un solo lugar",
-    "description": "Conversores, generadores, PDF y herramientas de IA — todo en un ecosistema elegante. Rápido, simple y sin anuncios."
+    "description": "Conversores, generadores, PDF y herramientas de IA — todo en un ecosistema elegante. Rápido y simple."
   },
   "nav": {
     "aiTools": "Herramientas IA",
@@ -56,8 +56,8 @@
     "speedDesc": "Las herramientas funcionan al instante en tu navegador — sin esperas ni instalación.",
     "simpleTitle": "Sencillez",
     "simpleDesc": "Una interfaz clara donde encuentras cualquier herramienta en segundos.",
-    "noAdsTitle": "Sin anuncios",
-    "noAdsDesc": "Concéntrate en tu trabajo — sin ventanas emergentes ni banners molestos."
+    "toolsTitle": "Más de 200 herramientas online",
+    "toolsDesc": "Un enorme conjunto de conversores, generadores y herramientas de IA en un solo lugar."
   },
   "ctaSection": {
     "title": "Empieza a usar Toolando hoy",
@@ -78,8 +78,8 @@
   },
   "support": {
     "eyebrow": "Apoya el proyecto",
-    "title": "Ayuda a mantener Toolando gratis y sin anuncios",
-    "subtitle": "Toolando lo crea un equipo pequeño y se ofrece gratis, sin anuncios. Si te ahorra tiempo, considera apoyar su desarrollo.",
+    "title": "Ayuda a mantener Toolando gratis",
+    "subtitle": "Toolando se crea y se ofrece gratis. Si te ahorra tiempo, considera apoyar su desarrollo.",
     "coffee": "Invítame a un café",
     "donate": "Hacer una donación",
     "back": "Volver al inicio",

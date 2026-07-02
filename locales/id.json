@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Toolando — Your online tools in one place",
-    "description": "Converters, generators, PDF and AI tools — all in one elegant ecosystem. Fast, simple and ad-free."
+    "description": "Converters, generators, PDF and AI tools — all in one elegant ecosystem. Fast and simple."
   },
   "nav": {
     "aiTools": "AI Tools",
@@ -56,8 +56,8 @@
     "speedDesc": "Tools run instantly in your browser — no waiting and no installation.",
     "simpleTitle": "Simplicity",
     "simpleDesc": "A clean interface where you find any tool in seconds.",
-    "noAdsTitle": "No ads",
-    "noAdsDesc": "Focus on your work — no pop-ups or distracting banners."
+    "toolsTitle": "200+ online tools",
+    "toolsDesc": "A huge set of converters, generators and AI tools in one place."
   },
   "ctaSection": {
     "title": "Start using Toolando today",
@@ -78,8 +78,8 @@
   },
   "support": {
     "eyebrow": "Support the project",
-    "title": "Help keep Toolando free and ad-free",
-    "subtitle": "Toolando is built by a small team and offered for free, with no ads. If it saves you time, consider supporting its development.",
+    "title": "Help keep Toolando free",
+    "subtitle": "Toolando is built and offered for free. If it saves you time, consider supporting its development.",
     "coffee": "Buy me a coffee",
     "donate": "Make a donation",
     "back": "Back to home",

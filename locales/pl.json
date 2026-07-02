@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Toolando — Twoje narzędzia online w jednym miejscu",
-    "description": "Konwertery, generatory, PDF i narzędzia AI — wszystko w jednym eleganckim ekosystemie. Szybko, prosto i bez reklam."
+    "description": "Konwertery, generatory, PDF i narzędzia AI — wszystko w jednym eleganckim ekosystemie. Szybko i prosto."
   },
   "nav": {
     "aiTools": "Narzędzia AI",
@@ -56,8 +56,8 @@
     "speedDesc": "Narzędzia działają błyskawicznie w przeglądarce — bez czekania i bez instalacji.",
     "simpleTitle": "Prostota",
     "simpleDesc": "Przejrzysty interfejs, w którym każde narzędzie znajdziesz w kilka sekund.",
-    "noAdsTitle": "Brak reklam",
-    "noAdsDesc": "Skup się na pracy — żadnych wyskakujących okien ani rozpraszających banerów."
+    "toolsTitle": "Ponad 200 narzędzi online",
+    "toolsDesc": "Ogromny zestaw konwerterów, generatorów i narzędzi AI w jednym miejscu."
   },
   "ctaSection": {
     "title": "Zacznij korzystać z Toolando już dziś",
@@ -78,8 +78,8 @@
   },
   "support": {
     "eyebrow": "Wesprzyj projekt",
-    "title": "Pomóż utrzymać Toolando za darmo i bez reklam",
-    "subtitle": "Toolando tworzy niewielki zespół i udostępnia je za darmo, bez reklam. Jeśli oszczędza Ci czas, rozważ wsparcie jego rozwoju.",
+    "title": "Pomóż utrzymać Toolando za darmo",
+    "subtitle": "Toolando powstaje i jest udostępniane za darmo. Jeśli oszczędza Ci czas, rozważ wsparcie jego rozwoju.",
     "coffee": "Postaw mi kawę",
     "donate": "Przekaż darowiznę",
     "back": "Wróć na stronę główną",

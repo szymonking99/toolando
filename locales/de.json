@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Toolando — Deine Online-Tools an einem Ort",
-    "description": "Konverter, Generatoren, PDF- und KI-Tools — alles in einem eleganten Ökosystem. Schnell, einfach und werbefrei."
+    "description": "Konverter, Generatoren, PDF- und KI-Tools — alles in einem eleganten Ökosystem. Schnell und einfach."
   },
   "nav": {
     "aiTools": "KI-Tools",
@@ -56,8 +56,8 @@
     "speedDesc": "Die Werkzeuge laufen blitzschnell im Browser — ohne Warten und ohne Installation.",
     "simpleTitle": "Einfachheit",
     "simpleDesc": "Eine übersichtliche Oberfläche, in der du jedes Werkzeug in Sekunden findest.",
-    "noAdsTitle": "Keine Werbung",
-    "noAdsDesc": "Konzentriere dich auf deine Arbeit — keine Pop-ups und keine störenden Banner."
+    "toolsTitle": "Über 200 Online-Tools",
+    "toolsDesc": "Eine riesige Sammlung von Konvertern, Generatoren und KI-Tools an einem Ort."
   },
   "ctaSection": {
     "title": "Starte noch heute mit Toolando",
@@ -78,8 +78,8 @@
   },
   "support": {
     "eyebrow": "Unterstütze das Projekt",
-    "title": "Hilf, Toolando kostenlos und werbefrei zu halten",
-    "subtitle": "Toolando wird von einem kleinen Team entwickelt und kostenlos, ohne Werbung angeboten. Wenn es dir Zeit spart, unterstütze gern die Entwicklung.",
+    "title": "Hilf, Toolando kostenlos zu halten",
+    "subtitle": "Toolando entsteht und wird kostenlos angeboten. Wenn es dir Zeit spart, unterstütze gern die Entwicklung.",
     "coffee": "Spendier mir einen Kaffee",
     "donate": "Spende geben",
     "back": "Zurück zur Startseite",
