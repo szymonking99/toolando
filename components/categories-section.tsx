@@ -26,7 +26,7 @@ const ICONS: Record<string, typeof Music> = {
 }
 
 export function CategoriesSection() {
-  const { t, locale } = useI18n()
+  const { t, locale, href } = useI18n()
   return (
     <section id="kategorie" className="relative px-4 py-24 md:py-32">
       <div className="mx-auto max-w-6xl">
@@ -47,7 +47,7 @@ export function CategoriesSection() {
             return (
               <Link
                 key={category.slug}
-                href={`/category/${category.slug}`}
+                href={href(`/category/${category.slug}`)}
                 className="group relative flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] p-6 backdrop-blur-md transition-all hover:border-accent/40 hover:bg-white/[0.06]"
               >
                 <div

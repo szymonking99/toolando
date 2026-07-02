@@ -5,13 +5,14 @@ import Link from "next/link"
 import { useI18n } from "@/components/i18n-provider"
 
 export function SiteFooter() {
-  const { t } = useI18n()
+  const { t, href } = useI18n()
 
   const links = [
-    { label: t.footer.tools, href: "/tools" },
-    { label: "Kontakt", href: "/kontakt" },
-    { label: "Polityka prywatności", href: "/polityka-prywatnosci" },
-    { label: "Regulamin", href: "/regulamin" },
+    { label: t.footer.tools, href: href("/tools") },
+    { label: t.footer.support, href: href("/wsparcie") },
+    { label: t.footer.contact, href: href("/kontakt") },
+    { label: t.footer.privacy, href: href("/polityka-prywatnosci") },
+    { label: t.footer.terms, href: href("/regulamin") },
   ]
 
   return (
@@ -19,7 +20,7 @@ export function SiteFooter() {
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 md:flex-row">
         
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2">
+        <Link href={href("/")} className="flex items-center gap-2">
           <span className="flex size-8 items-center justify-center rounded-lg bg-primary/15 text-primary ring-1 ring-primary/30">
             <Wrench className="size-4" aria-hidden="true" />
           </span>
@@ -43,9 +44,7 @@ export function SiteFooter() {
 
         {/* Copyright + Email */}
         <div className="flex flex-col items-center md:items-end">
-          <p className="text-sm text-muted-foreground">
-            © 2026 Toolando. Wszelkie prawa zastrzeżone.
-          </p>
+          <p className="text-sm text-muted-foreground">{t.footer.rights}</p>
           <a
             href="mailto:badyltech@outlook.com"
             className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"

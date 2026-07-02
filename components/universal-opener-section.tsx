@@ -5,7 +5,7 @@ import { FolderOpen, ArrowRight, ImageIcon, Film, Music, FileText } from "lucide
 import { useI18n } from "@/components/i18n-provider"
 
 export function UniversalOpenerSection() {
-  const { t } = useI18n()
+  const { t, href } = useI18n()
 
   const kinds = [
     { icon: ImageIcon, label: t.opener.kindImages },
@@ -47,7 +47,7 @@ export function UniversalOpenerSection() {
               </div>
 
               <Link
-                href="/otworz"
+                href={href("/otworz")}
                 className="mt-6 inline-flex items-center gap-2 rounded-md bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/85"
               >
                 {t.opener.cta}

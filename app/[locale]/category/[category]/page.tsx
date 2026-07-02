@@ -7,6 +7,9 @@ import {
   getCategory,
   getToolsForCategory,
 } from "@/lib/tools"
+import { getDictionary } from "@/lib/i18n/dictionaries"
+import { getCategoryMeta } from "@/lib/i18n/content-meta"
+import { localeHref } from "@/lib/i18n/href"
 
 export function generateStaticParams() {
   return categories.map((c) => ({ category: c.slug }))
@@ -15,33 +18,38 @@ export function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ category: string }>
+  params: Promise<{ category: string; locale: string }>
 }): Promise<Metadata> {
-  const { category } = await params
+  const { category, locale } = await params
+  const dict = await getDictionary(locale)
   const meta = getCategory(category)
-  if (!meta) return { title: "Kategoria nie znaleziona — Toolando" }
+  if (!meta) return { title: `${dict.category.notFound} — Toolando` }
+  const cm = getCategoryMeta(locale, category)
   return {
-    title: `${meta.title} — narzędzia i konwertery — Toolando`,
-    description: meta.description,
+    title: `${cm?.title ?? meta.title} — Toolando`,
+    description: cm?.description ?? meta.description,
+    alternates: { canonical: `/${locale}/category/${category}` },
   }
 }
 
 export default async function CategoryPage({
   params,
 }: {
-  params: Promise<{ category: string }>
+  params: Promise<{ category: string; locale: string }>
 }) {
-  const { category } = await params
+  const { category, locale } = await params
   const meta = getCategory(category)
   if (!meta) return notFound()
 
+  const dict = await getDictionary(locale)
+  const cm = getCategoryMeta(locale, category)
   const list = getToolsForCategory(category)
 
   return (
     <div className="min-h-dvh">
       <header className="fixed inset-x-0 top-0 z-50 px-4 pt-4">
         <nav className="mx-auto flex max-w-5xl items-center justify-between rounded-2xl border border-white/10 bg-background/60 px-5 py-3 backdrop-blur-xl">
-          <Link href="/" className="flex items-center gap-2">
+          <Link href={localeHref(locale, "/")} className="flex items-center gap-2">
             <span className="flex size-8 items-center justify-center rounded-lg bg-primary/15 text-primary ring-1 ring-primary/30">
               <Wrench className="size-4" aria-hidden="true" />
             </span>
@@ -50,32 +58,34 @@ export default async function CategoryPage({
             </span>
           </Link>
           <Link
-            href="/#kategorie"
+            href={localeHref(locale, "/#kategorie")}
             className="inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
           >
             <ArrowLeft className="size-4" />
-            Wszystkie kategorie
+            {dict.category.allCategories}
           </Link>
         </nav>
       </header>
 
       <main className="mx-auto max-w-5xl px-4 pb-24 pt-32">
         <h1 className="text-balance text-3xl font-semibold tracking-tight text-foreground sm:text-4xl md:text-5xl">
-          {meta.title}
+          {cm?.title ?? meta.title}
         </h1>
         <p className="mt-3 max-w-2xl text-pretty leading-relaxed text-muted-foreground">
-          {meta.description}
+          {cm?.description ?? meta.description}
         </p>
         <p className="mt-2 text-sm text-muted-foreground">
           {list.length}{" "}
-          {list.length === 1 ? "dostępny konwerter" : "dostępnych konwerterów"}
+          {list.length === 1
+            ? dict.category.converterOne
+            : dict.category.converterMany}
         </p>
 
         <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {list.map((tool) => (
             <Link
               key={tool.id}
-              href={`/tools/${tool.id}`}
+              href={localeHref(locale, `/tools/${tool.id}`)}
               className="group relative flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] p-5 backdrop-blur-md transition-all hover:border-primary/40 hover:bg-white/[0.06]"
             >
               <div
@@ -90,7 +100,7 @@ export default async function CategoryPage({
                 </span>
                 {!tool.supported && (
                   <span className="rounded-md bg-muted px-2 py-0.5 text-[10px] font-medium uppercase tracking-wide text-muted-foreground">
-                    Wkrótce
+                    {dict.category.soon}
                   </span>
                 )}
               </div>

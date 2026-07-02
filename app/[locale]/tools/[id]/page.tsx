@@ -8,6 +8,8 @@ import { aiTools, getAiTool } from "@/lib/ai-tools"
 import { ToolConverter } from "@/components/tool-converter"
 import { SpecialTool } from "@/components/special-tool"
 import { AiTool } from "@/components/ai-tool"
+import { getDictionary } from "@/lib/i18n/dictionaries"
+import { localeHref } from "@/lib/i18n/href"
 
 export function generateStaticParams() {
   return [
@@ -20,14 +22,16 @@ export function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ id: string }>
+  params: Promise<{ id: string; locale: string }>
 }): Promise<Metadata> {
-  const { id } = await params
+  const { id, locale } = await params
+  const dict = await getDictionary(locale)
   const tool = getTool(id) ?? getSpecialTool(id) ?? getAiTool(id)
-  if (!tool) return { title: "Narzędzie nie znalezione — Toolando" }
+  if (!tool) return { title: `${dict.tool.notFound} — Toolando` }
   return {
     title: `${tool.name} — Toolando`,
     description: tool.description,
+    alternates: { canonical: `/${locale}/tools/${id}` },
   }
 }
 
@@ -43,11 +47,15 @@ const CATEGORY_LABELS: Record<string, string> = {
 }
 
 function ToolShell({
+  locale,
+  backLabel,
   category,
   name,
   description,
   children,
 }: {
+  locale: string
+  backLabel: string
   category: string
   name: string
   description: string
@@ -57,7 +65,7 @@ function ToolShell({
     <>
       <header className="fixed inset-x-0 top-0 z-50 px-4 pt-4">
         <nav className="mx-auto flex max-w-4xl items-center justify-between rounded-2xl border border-white/10 bg-background/60 px-5 py-3 backdrop-blur-xl">
-          <Link href="/" className="flex items-center gap-2">
+          <Link href={localeHref(locale, "/")} className="flex items-center gap-2">
             <span className="flex size-8 items-center justify-center rounded-lg bg-primary/15 text-primary ring-1 ring-primary/30">
               <Wrench className="size-4" aria-hidden="true" />
             </span>
@@ -66,11 +74,11 @@ function ToolShell({
             </span>
           </Link>
           <Link
-            href="/#narzedzia"
+            href={localeHref(locale, "/#narzedzia")}
             className="inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
           >
             <ArrowLeft className="size-4" />
-            Wszystkie narzędzia
+            {backLabel}
           </Link>
         </nav>
       </header>
@@ -92,16 +100,23 @@ function ToolShell({
 export default async function ToolPage({
   params,
 }: {
-  params: Promise<{ id: string }>
+  params: Promise<{ id: string; locale: string }>
 }) {
-  const { id } = await params
+  const { id, locale } = await params
+  const dict = await getDictionary(locale)
 
   const ai = getAiTool(id)
   if (ai) {
     const relatedAi = aiTools.filter((t) => t.id !== ai.id)
     return (
       <div className="min-h-dvh">
-        <ToolShell category={ai.category} name={ai.name} description={ai.description}>
+        <ToolShell
+          locale={locale}
+          backLabel={dict.tool.back}
+          category={ai.category}
+          name={ai.name}
+          description={ai.description}
+        >
           <section className="mt-8 rounded-2xl border border-primary/20 bg-primary/[0.04] p-6 backdrop-blur-md">
             <AiTool tool={ai} />
           </section>
@@ -109,13 +124,13 @@ export default async function ToolPage({
           {relatedAi.length > 0 && (
             <section className="mt-12">
               <h2 className="text-lg font-semibold text-foreground">
-                Więcej narzędzi AI
+                {dict.tool.otherTools}
               </h2>
               <div className="mt-4 grid gap-3 sm:grid-cols-2">
                 {relatedAi.map((t) => (
                   <Link
                     key={t.id}
-                    href={`/tools/${t.id}`}
+                    href={localeHref(locale, `/tools/${t.id}`)}
                     className="group flex items-center justify-between rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 transition-colors hover:border-primary/40 hover:bg-white/[0.06]"
                   >
                     <span className="text-sm font-medium text-foreground">
@@ -140,6 +155,8 @@ export default async function ToolPage({
     return (
       <div className="min-h-dvh">
         <ToolShell
+          locale={locale}
+          backLabel={dict.tool.back}
           category={special.category}
           name={special.name}
           description={special.description}
@@ -151,13 +168,13 @@ export default async function ToolPage({
           {relatedSpecial.length > 0 && (
             <section className="mt-12">
               <h2 className="text-lg font-semibold text-foreground">
-                Inne narzędzia
+                {dict.tool.otherTools}
               </h2>
               <div className="mt-4 grid gap-3 sm:grid-cols-2">
                 {relatedSpecial.map((t) => (
                   <Link
                     key={t.id}
-                    href={`/tools/${t.id}`}
+                    href={localeHref(locale, `/tools/${t.id}`)}
                     className="group flex items-center justify-between rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 transition-colors hover:border-primary/40 hover:bg-white/[0.06]"
                   >
                     <span className="text-sm font-medium text-foreground">
@@ -187,6 +204,8 @@ export default async function ToolPage({
   return (
     <div className="min-h-dvh">
       <ToolShell
+        locale={locale}
+        backLabel={dict.tool.back}
         category={CATEGORY_LABELS[tool.category] ?? tool.category}
         name={tool.name}
         description={tool.description}
@@ -198,13 +217,13 @@ export default async function ToolPage({
         {related.length > 0 && (
           <section className="mt-12">
             <h2 className="text-lg font-semibold text-foreground">
-              Powiązane narzędzia
+              {dict.tool.relatedTools}
             </h2>
             <div className="mt-4 grid gap-3 sm:grid-cols-2">
               {related.map((t) => (
                 <Link
                   key={t.id}
-                  href={`/tools/${t.id}`}
+                  href={localeHref(locale, `/tools/${t.id}`)}
                   className="group flex items-center justify-between rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 transition-colors hover:border-primary/40 hover:bg-white/[0.06]"
                 >
                   <span className="text-sm font-medium text-foreground">

@@ -5,7 +5,7 @@ import Link from "next/link"
 import { useI18n } from "@/components/i18n-provider"
 
 export function CtaSection() {
-  const { t } = useI18n()
+  const { t, href } = useI18n()
 
   return (
     <section className="px-4 py-24 md:py-32">
@@ -28,7 +28,7 @@ export function CtaSection() {
 
         <div className="mt-10 flex justify-center">
           <Link
-            href="/tools"
+            href={href("/tools")}
             className="group inline-flex items-center rounded-xl bg-primary px-8 py-3 text-primary-foreground shadow-[0_0_32px_-6px] shadow-primary/60 hover:bg-primary/90 transition"
           >
             {t.ctaSection.browse}

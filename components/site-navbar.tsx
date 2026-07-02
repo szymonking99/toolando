@@ -22,7 +22,7 @@ export function SiteNavbar() {
       <nav className="mx-auto flex max-w-6xl items-center justify-between rounded-2xl border border-white/10 bg-background/60 px-5 py-3 backdrop-blur-xl">
         
         {/* Logo */}
-        <a href="/" className="flex items-center gap-2">
+        <a href={href("/")} className="flex items-center gap-2">
           <span className="flex size-8 items-center justify-center rounded-lg bg-primary/15 text-primary ring-1 ring-primary/30">
             <Wrench className="size-4" aria-hidden="true" />
           </span>
