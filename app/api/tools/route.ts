@@ -1,6 +1,7 @@
 import { NextRequest } from "next/server"
 import { getSpecialTool } from "@/lib/special-tools"
 import { ConversionError } from "@/lib/convert"
+import { readIntake } from "@/lib/upload-intake"
 import {
   compressImage,
   mergePdfs,
@@ -11,8 +12,8 @@ import {
 export const runtime = "nodejs"
 export const maxDuration = 300
 
-// 100 MB per-file ceiling.
-const MAX_BYTES = 100 * 1024 * 1024
+// 500 MB per-file ceiling (large files arrive via Vercel Blob).
+const MAX_BYTES = 500 * 1024 * 1024
 
 export async function POST(req: NextRequest) {
   const id = new URL(req.url).searchParams.get("id")
@@ -22,52 +23,43 @@ export async function POST(req: NextRequest) {
     return json({ error: "Nieznane narzędzie." }, 404)
   }
 
-  let formData: FormData
-  try {
-    formData = await req.formData()
-  } catch {
-    return json({ error: "Nieprawidłowe dane formularza." }, 400)
-  }
-
-  const files = formData.getAll("file").filter((f): f is File => f instanceof File)
-
-  if (files.length === 0) {
-    return json({ error: "Nie przesłano pliku." }, 400)
-  }
-
-  for (const file of files) {
-    if (file.size === 0) {
-      return json({ error: "Jeden z plików jest pusty." }, 400)
-    }
-    if (file.size > MAX_BYTES) {
-      return json({ error: "Plik jest za duży (limit 100 MB)." }, 413)
-    }
-  }
+  let cleanup: (() => Promise<void>) | null = null
 
   try {
+    const intake = await readIntake(req)
+    cleanup = intake.cleanup
+
+    const files = intake.files
+    if (files.length === 0) {
+      return json({ error: "Nie przesłano pliku." }, 400)
+    }
+
+    for (const file of files) {
+      if (file.buffer.length === 0) {
+        return json({ error: "Jeden z plików jest pusty." }, 400)
+      }
+      if (file.buffer.length > MAX_BYTES) {
+        return json({ error: "Plik jest za duży (limit 500 MB)." }, 413)
+      }
+    }
+
     let result: SpecialResult
 
     switch (tool.engine) {
       case "compress-image": {
-        const quality = Number(formData.get("quality") ?? 75)
-        const buffer = Buffer.from(await files[0].arrayBuffer())
-        result = await compressImage(buffer, files[0].name, quality)
+        const quality = Number(intake.field("quality") ?? 75)
+        result = await compressImage(files[0].buffer, files[0].name, quality)
         break
       }
       case "merge-pdf": {
-        const buffers = await Promise.all(
-          files.map(async (f) => ({
-            buffer: Buffer.from(await f.arrayBuffer()),
-            name: f.name,
-          })),
+        result = await mergePdfs(
+          files.map((f) => ({ buffer: f.buffer, name: f.name })),
         )
-        result = await mergePdfs(buffers)
         break
       }
       case "remove-bg": {
-        const buffer = Buffer.from(await files[0].arrayBuffer())
         result = await removeImageBackground(
-          buffer,
+          files[0].buffer,
           files[0].name,
           files[0].type,
         )
@@ -94,6 +86,12 @@ export async function POST(req: NextRequest) {
     }
     console.error("[v0] special tool failed:", err)
     return json({ error: "Wystąpił nieoczekiwany błąd." }, 500)
+  } finally {
+    if (cleanup) {
+      await cleanup().catch((e) =>
+        console.error("[v0] blob cleanup failed:", e),
+      )
+    }
   }
 }
 

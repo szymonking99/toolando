@@ -1,12 +1,13 @@
 import { NextRequest } from "next/server";
 import { getTool, normalizeFormat } from "@/lib/tools";
 import { convertFile, ConversionError } from "@/lib/convert";
+import { readIntake } from "@/lib/upload-intake";
 
 export const runtime = "nodejs";
 export const maxDuration = 300;
 
-// 100 MB upload ceiling.
-const MAX_BYTES = 100 * 1024 * 1024;
+// 500 MB upload ceiling (large files arrive via Vercel Blob).
+const MAX_BYTES = 500 * 1024 * 1024;
 
 export async function POST(req: NextRequest) {
   const id = new URL(req.url).searchParams.get("id");
@@ -23,40 +24,37 @@ export async function POST(req: NextRequest) {
     );
   }
 
-  let formData: FormData;
-  try {
-    formData = await req.formData();
-  } catch {
-    return json({ error: "Nieprawidłowe dane formularza." }, 400);
-  }
-
-  const file = formData.get("file");
-  if (!(file instanceof File)) {
-    return json({ error: "Nie przesłano pliku." }, 400);
-  }
-
-  if (file.size === 0) {
-    return json({ error: "Przesłany plik jest pusty." }, 400);
-  }
-
-  if (file.size > MAX_BYTES) {
-    return json({ error: "Plik jest za duży (limit 100 MB)." }, 413);
-  }
-
-  // Light extension check so users get a friendly message early.
-  const ext = file.name.split(".").pop()?.toLowerCase();
-  if (ext && normalizeFormat(ext) !== tool.from) {
-    return json(
-      {
-        error: `Ten konwerter przyjmuje pliki .${tool.from}, a przesłano .${ext}.`,
-      },
-      400,
-    );
-  }
+  let cleanup: (() => Promise<void>) | null = null;
 
   try {
-    const input = Buffer.from(await file.arrayBuffer());
-    const result = await convertFile(tool, input, file.name);
+    const intake = await readIntake(req);
+    cleanup = intake.cleanup;
+
+    const file = intake.files[0];
+    if (!file) {
+      return json({ error: "Nie przesłano pliku." }, 400);
+    }
+
+    if (file.buffer.length === 0) {
+      return json({ error: "Przesłany plik jest pusty." }, 400);
+    }
+
+    if (file.buffer.length > MAX_BYTES) {
+      return json({ error: "Plik jest za duży (limit 500 MB)." }, 413);
+    }
+
+    // Light extension check so users get a friendly message early.
+    const ext = file.name.split(".").pop()?.toLowerCase();
+    if (ext && normalizeFormat(ext) !== tool.from) {
+      return json(
+        {
+          error: `Ten konwerter przyjmuje pliki .${tool.from}, a przesłano .${ext}.`,
+        },
+        400,
+      );
+    }
+
+    const result = await convertFile(tool, file.buffer, file.name);
 
     return new Response(new Uint8Array(result.buffer), {
       status: 200,
@@ -78,6 +76,13 @@ export async function POST(req: NextRequest) {
       { error: "Wystąpił nieoczekiwany błąd podczas konwersji." },
       500,
     );
+  } finally {
+    // Always remove the uploaded Blob input, whether conversion succeeded or not.
+    if (cleanup) {
+      await cleanup().catch((e) =>
+        console.error("[v0] blob cleanup failed:", e),
+      );
+    }
   }
 }
 

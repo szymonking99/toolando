@@ -18,6 +18,7 @@ import {
   AlertCircle,
 } from "lucide-react"
 import { getConversionsFrom, type ToolConfig } from "@/lib/tools"
+import { uploadAndProcess } from "@/lib/client-upload"
 
 type Kind = "image" | "video" | "audio" | "pdf" | "text" | "binary"
 
@@ -200,11 +201,10 @@ function ConversionPanel({ file }: { file: File }) {
     setError(null)
     setDoneId(null)
     try {
-      const body = new FormData()
-      body.append("file", file)
-      const res = await fetch(`/api/convert?id=${tool.id}`, {
-        method: "POST",
-        body,
+      const res = await uploadAndProcess({
+        file,
+        endpoint: "/api/convert",
+        id: tool.id,
       })
       if (!res.ok) {
         const data = await res.json().catch(() => null)

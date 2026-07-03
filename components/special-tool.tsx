@@ -10,8 +10,9 @@ import {
   X,
 } from "lucide-react"
 import type { SpecialToolConfig } from "@/lib/special-tools"
+import { uploadManyAndProcess } from "@/lib/client-upload"
 
-type Status = "idle" | "working" | "done" | "error"
+type Status = "idle" | "uploading" | "working" | "done" | "error"
 
 function formatBytes(bytes: number) {
   if (bytes < 1024) return `${bytes} B`
@@ -25,6 +26,7 @@ export function SpecialTool({ tool }: { tool: SpecialToolConfig }) {
   const [quality, setQuality] = useState(75)
   const [status, setStatus] = useState<Status>("idle")
   const [error, setError] = useState<string | null>(null)
+  const [progress, setProgress] = useState(0)
   const [dragging, setDragging] = useState(false)
   const [result, setResult] = useState<{
     url: string
@@ -44,6 +46,7 @@ export function SpecialTool({ tool }: { tool: SpecialToolConfig }) {
     setFiles([])
     setStatus("idle")
     setError(null)
+    setProgress(0)
     clearResult()
     if (inputRef.current) inputRef.current.value = ""
   }
@@ -68,17 +71,26 @@ export function SpecialTool({ tool }: { tool: SpecialToolConfig }) {
       return
     }
 
-    setStatus("working")
+    const totalBytes = files.reduce((sum, f) => sum + f.size, 0)
+    const isLarge = totalBytes > 4 * 1024 * 1024
+    if (isLarge) {
+      setStatus("uploading")
+      setProgress(0)
+    } else {
+      setStatus("working")
+    }
     setError(null)
 
     try {
-      const body = new FormData()
-      for (const file of files) body.append("file", file)
-      if (tool.hasQuality) body.append("quality", String(quality))
-
-      const res = await fetch(`/api/tools?id=${tool.id}`, {
-        method: "POST",
-        body,
+      const res = await uploadManyAndProcess({
+        files,
+        endpoint: "/api/tools",
+        id: tool.id,
+        fields: tool.hasQuality ? { quality: String(quality) } : undefined,
+        onUploadProgress: (pct) => {
+          setProgress(pct)
+          if (pct >= 100) setStatus("working")
+        },
       })
 
       if (!res.ok) {
@@ -150,7 +162,7 @@ export function SpecialTool({ tool }: { tool: SpecialToolConfig }) {
             : "Przeciągnij plik tutaj lub kliknij, aby wybrać"}
         </span>
         <span className="text-xs text-muted-foreground">
-          Obsługiwane: {tool.acceptLabel} • maks. 100 MB
+          Obsługiwane: {tool.acceptLabel} • maks. 500 MB
         </span>
       </label>
 
@@ -277,23 +289,48 @@ export function SpecialTool({ tool }: { tool: SpecialToolConfig }) {
           </div>
         </div>
       ) : (
-        <button
-          type="button"
-          onClick={run}
-          disabled={files.length === 0 || status === "working"}
-          className="inline-flex w-full items-center justify-center gap-2 rounded-md bg-primary px-4 py-2.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/85 disabled:cursor-not-allowed disabled:opacity-50 sm:w-auto"
-        >
-          {status === "working" ? (
-            <>
-              <Loader2 className="size-4 animate-spin" />
-              {tool.engine === "remove-bg"
-                ? "Przetwarzanie (może potrwać kilka sekund)…"
-                : "Przetwarzanie…"}
-            </>
-          ) : (
-            tool.actionLabel
+        <div className="space-y-3">
+          {status === "uploading" && (
+            <div className="space-y-1.5">
+              <div className="flex items-center justify-between text-xs text-muted-foreground">
+                <span>Przesyłanie plików…</span>
+                <span>{progress}%</span>
+              </div>
+              <div className="h-2 w-full overflow-hidden rounded-full bg-white/10">
+                <div
+                  className="h-full rounded-full bg-primary transition-all"
+                  style={{ width: `${progress}%` }}
+                />
+              </div>
+            </div>
           )}
-        </button>
+          <button
+            type="button"
+            onClick={run}
+            disabled={
+              files.length === 0 ||
+              status === "working" ||
+              status === "uploading"
+            }
+            className="inline-flex w-full items-center justify-center gap-2 rounded-md bg-primary px-4 py-2.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/85 disabled:cursor-not-allowed disabled:opacity-50 sm:w-auto"
+          >
+            {status === "uploading" ? (
+              <>
+                <Loader2 className="size-4 animate-spin" />
+                Przesyłanie… {progress}%
+              </>
+            ) : status === "working" ? (
+              <>
+                <Loader2 className="size-4 animate-spin" />
+                {tool.engine === "remove-bg"
+                  ? "Przetwarzanie (może potrwać kilka sekund)…"
+                  : "Przetwarzanie…"}
+              </>
+            ) : (
+              tool.actionLabel
+            )}
+          </button>
+        </div>
       )}
     </div>
   )
