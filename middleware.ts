@@ -18,6 +18,12 @@ export function middleware(request: NextRequest) {
     return NextResponse.next()
   }
 
+  // Locale-agnostic routes (Stripe URLs, auth & account pages) are served as-is.
+  const LOCALE_AGNOSTIC = ["/premium", "/sign-in", "/sign-up", "/account"]
+  if (LOCALE_AGNOSTIC.some((p) => pathname === p || pathname.startsWith(`${p}/`))) {
+    return NextResponse.next()
+  }
+
   // Resolve the preferred locale: saved cookie first, then Accept-Language.
   const cookieLocale = request.cookies.get(LOCALE_COOKIE)?.value
   const locale =
