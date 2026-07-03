@@ -72,3 +72,85 @@ export async function findUserIdByStripeCustomer(
     .limit(1)
   return rows[0]?.id ?? null
 }
+
+/**
+ * Awaryjne uzgodnienie Premium na podstawie ID sesji checkout Stripe.
+ * Używane na stronie sukcesu jako niezależne od webhooka zabezpieczenie:
+ * jeśli płatność jest opłacona, aktywuje Premium bezpośrednio.
+ * Zwraca true, gdy Premium zostało (lub już było) aktywne.
+ */
+export async function reconcilePremiumFromSession(
+  sessionId: string,
+): Promise<boolean> {
+  const { getStripe } = await import("@/lib/stripe")
+  const stripe = getStripe()
+
+  const session = await stripe.checkout.sessions.retrieve(sessionId, {
+    expand: ["subscription"],
+  })
+
+  // Aktywujemy wyłącznie po potwierdzonej płatności.
+  const paid =
+    session.payment_status === "paid" || session.status === "complete"
+  if (!paid) return false
+
+  // userId: najpierw z metadanych sesji, potem po kliencie Stripe.
+  let userId = session.metadata?.userId ?? null
+  if (!userId) {
+    const customerId =
+      typeof session.customer === "string" ? session.customer : null
+    if (customerId) userId = await findUserIdByStripeCustomer(customerId)
+  }
+  if (!userId) return false
+
+  // Data ważności z subskrypcji (jeśli dostępna).
+  let premiumUntil: Date | null = null
+  const sub = session.subscription
+  if (sub && typeof sub === "object") {
+    const end = (sub as { current_period_end?: number }).current_period_end
+    if (typeof end === "number") premiumUntil = new Date(end * 1000)
+  }
+
+  await activatePremium(userId, premiumUntil)
+  return true
+}
+
+/**
+ * Synchronizuje Premium użytkownika ze stanem w Stripe.
+ * Sprawdza aktywne subskrypcje powiązanego klienta Stripe i ustawia Premium
+ * zgodnie z rzeczywistością. Zwraca aktualny status Premium.
+ * Używane jako ręczne "Odśwież status Premium" i naprawa kont po awarii webhooka.
+ */
+export async function syncPremiumFromStripe(userId: string): Promise<boolean> {
+  const rows = await db
+    .select({ stripeCustomerId: userTable.stripeCustomerId })
+    .from(userTable)
+    .where(eq(userTable.id, userId))
+    .limit(1)
+
+  const customerId = rows[0]?.stripeCustomerId
+  if (!customerId) return isUserPremium(userId)
+
+  const { getStripe } = await import("@/lib/stripe")
+  const stripe = getStripe()
+
+  const subs = await stripe.subscriptions.list({
+    customer: customerId,
+    status: "active",
+    limit: 1,
+  })
+
+  const active = subs.data[0]
+  if (active) {
+    const end = (active as { current_period_end?: number }).current_period_end
+    await activatePremium(
+      userId,
+      typeof end === "number" ? new Date(end * 1000) : null,
+    )
+    return true
+  }
+
+  // Brak aktywnej subskrypcji — nie wyłączamy tu Premium przyznanego ręcznie
+  // z datą w przyszłości; wyłączeniem zajmuje się webhook subscription.deleted.
+  return isUserPremium(userId)
+}

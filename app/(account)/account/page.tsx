@@ -5,6 +5,7 @@ import { getCurrentUser, isUserPremium } from "@/lib/user"
 import { PREMIUM_PLAN } from "@/lib/premium"
 import { BuyPremiumButton } from "@/components/BuyPremiumButton"
 import { ManageSubscriptionButton } from "@/components/manage-subscription-button"
+import { RefreshPremiumButton } from "@/components/refresh-premium-button"
 import { SignOutButton } from "@/components/sign-out-button"
 
 export default async function AccountPage() {
@@ -88,6 +89,12 @@ export default async function AccountPage() {
               </span>
             </div>
             <BuyPremiumButton className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-indigo-600/25 transition-transform hover:scale-[1.02] disabled:cursor-not-allowed disabled:opacity-50 sm:w-auto" />
+            <div className="mt-1 border-t border-white/10 pt-4">
+              <p className="mb-2 text-xs text-muted-foreground">
+                Zapłaciłeś, a Premium wciąż nieaktywne? Odśwież status:
+              </p>
+              <RefreshPremiumButton />
+            </div>
           </div>
         )}
       </section>
