@@ -18,8 +18,6 @@ const nextConfig = {
     "wawoff2",
     "ttf2woff",
     "pdf-lib",
-    "@imgly/background-removal-node",
-    "onnxruntime-node",
   ],
   // These packages are marked external, so Next.js won't trace their binaries
   // into the serverless function on its own. Force-include the ffmpeg binaries
