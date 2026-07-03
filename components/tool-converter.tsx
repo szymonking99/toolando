@@ -3,8 +3,9 @@
 import { useRef, useState } from "react"
 import { Upload, Loader2, CheckCircle2, AlertCircle, Download, X } from "lucide-react"
 import type { ToolConfig } from "@/lib/tools"
+import { uploadAndProcess } from "@/lib/client-upload"
 
-type Status = "idle" | "converting" | "done" | "error"
+type Status = "idle" | "uploading" | "converting" | "done" | "error"
 
 function formatBytes(bytes: number) {
   if (bytes < 1024) return `${bytes} B`
@@ -17,6 +18,7 @@ export function ToolConverter({ tool }: { tool: ToolConfig }) {
   const [file, setFile] = useState<File | null>(null)
   const [status, setStatus] = useState<Status>("idle")
   const [error, setError] = useState<string | null>(null)
+  const [progress, setProgress] = useState(0)
   const [dragging, setDragging] = useState(false)
   const [result, setResult] = useState<{ url: string; name: string } | null>(
     null,
@@ -26,6 +28,7 @@ export function ToolConverter({ tool }: { tool: ToolConfig }) {
     setFile(null)
     setStatus("idle")
     setError(null)
+    setProgress(0)
     if (result) URL.revokeObjectURL(result.url)
     setResult(null)
     if (inputRef.current) inputRef.current.value = ""
@@ -42,17 +45,29 @@ export function ToolConverter({ tool }: { tool: ToolConfig }) {
     }
   }
 
+  const LARGE = 4 * 1024 * 1024
+
   async function convert() {
     if (!file) return
-    setStatus("converting")
     setError(null)
 
+    const isLarge = file.size > LARGE
+    if (isLarge) {
+      setStatus("uploading")
+      setProgress(0)
+    } else {
+      setStatus("converting")
+    }
+
     try {
-      const body = new FormData()
-      body.append("file", file)
-      const res = await fetch(`/api/convert?id=${tool.id}`, {
-        method: "POST",
-        body,
+      const res = await uploadAndProcess({
+        file,
+        endpoint: "/api/convert",
+        id: tool.id,
+        onUploadProgress: (pct) => {
+          setProgress(pct)
+          if (pct >= 100) setStatus("converting")
+        },
       })
 
       if (!res.ok) {
@@ -134,7 +149,7 @@ export function ToolConverter({ tool }: { tool: ToolConfig }) {
           Przeciągnij plik tutaj lub kliknij, aby wybrać
         </span>
         <span className="text-xs text-muted-foreground">
-          Obsługiwany format: {tool.from.toUpperCase()} • maks. 100 MB
+          Obsługiwany format: {tool.from.toUpperCase()} • maks. 500 MB
         </span>
       </label>
 
@@ -191,21 +206,44 @@ export function ToolConverter({ tool }: { tool: ToolConfig }) {
           </div>
         </div>
       ) : (
-        <button
-          type="button"
-          onClick={convert}
-          disabled={!file || status === "converting"}
-          className="inline-flex w-full items-center justify-center gap-2 rounded-md bg-primary px-4 py-2.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/85 disabled:cursor-not-allowed disabled:opacity-50 sm:w-auto"
-        >
-          {status === "converting" ? (
-            <>
-              <Loader2 className="size-4 animate-spin" />
-              Konwertowanie…
-            </>
-          ) : (
-            `Konwertuj na ${tool.to.toUpperCase()}`
+        <div className="space-y-3">
+          {status === "uploading" && (
+            <div className="space-y-1.5">
+              <div className="flex items-center justify-between text-xs text-muted-foreground">
+                <span>Przesyłanie pliku…</span>
+                <span>{progress}%</span>
+              </div>
+              <div className="h-2 w-full overflow-hidden rounded-full bg-white/10">
+                <div
+                  className="h-full rounded-full bg-primary transition-all"
+                  style={{ width: `${progress}%` }}
+                />
+              </div>
+            </div>
           )}
-        </button>
+          <button
+            type="button"
+            onClick={convert}
+            disabled={
+              !file || status === "converting" || status === "uploading"
+            }
+            className="inline-flex w-full items-center justify-center gap-2 rounded-md bg-primary px-4 py-2.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/85 disabled:cursor-not-allowed disabled:opacity-50 sm:w-auto"
+          >
+            {status === "uploading" ? (
+              <>
+                <Loader2 className="size-4 animate-spin" />
+                Przesyłanie… {progress}%
+              </>
+            ) : status === "converting" ? (
+              <>
+                <Loader2 className="size-4 animate-spin" />
+                Konwertowanie…
+              </>
+            ) : (
+              `Konwertuj na ${tool.to.toUpperCase()}`
+            )}
+          </button>
+        </div>
       )}
     </div>
   )
