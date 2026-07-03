@@ -771,13 +771,59 @@ async function convertDocument(
 /* Audio / Video (ffmpeg)                                              */
 /* ------------------------------------------------------------------ */
 
+/**
+ * Resolve a usable ffmpeg binary path.
+ *
+ * Prefers `@ffmpeg-installer/ffmpeg`, which ships the binary as an ordinary
+ * package file (no network download in a postinstall script), so it is always
+ * present and gets traced into the serverless function. Falls back to
+ * `ffmpeg-static`. As a safety net we ensure the file is executable, since some
+ * build environments skip the permission-setting install script.
+ */
+async function resolveFfmpegPath(): Promise<string | null> {
+  const candidates: string[] = [];
+
+  try {
+    const installer = (await import("@ffmpeg-installer/ffmpeg")) as {
+      path?: string;
+      default?: { path?: string };
+    };
+    const p = installer.path ?? installer.default?.path;
+    if (p) candidates.push(p);
+  } catch {
+    // package not available — fall through to ffmpeg-static
+  }
+
+  try {
+    const staticPath = (await import("ffmpeg-static")).default as
+      | string
+      | null;
+    if (staticPath) candidates.push(staticPath);
+  } catch {
+    // ignore
+  }
+
+  for (const p of candidates) {
+    try {
+      await fs.access(p);
+      // Ensure the binary is executable (install scripts are sometimes skipped).
+      await fs.chmod(p, 0o755).catch(() => {});
+      return p;
+    } catch {
+      // try next candidate
+    }
+  }
+
+  return null;
+}
+
 async function convertMedia(
   input: Buffer,
   from: string,
   to: string,
   isVideo: boolean,
 ): Promise<Buffer> {
-  const ffmpegStatic = (await import("ffmpeg-static")).default as string | null;
+  const ffmpegStatic = await resolveFfmpegPath();
   if (!ffmpegStatic) {
     throw new ConversionError("Silnik ffmpeg jest niedostępny.", 500);
   }
