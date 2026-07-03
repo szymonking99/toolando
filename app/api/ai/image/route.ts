@@ -1,5 +1,6 @@
 import { generateImage, gateway } from "ai"
 import type { NextRequest } from "next/server"
+import { checkPremiumAccess, premiumDeniedResponse } from "@/lib/premium-gate"
 
 export const maxDuration = 60
 
@@ -7,6 +8,9 @@ const MODEL = "openai/gpt-image-1"
 
 export async function POST(req: NextRequest) {
   try {
+    const gate = await checkPremiumAccess()
+    if (!gate.ok) return premiumDeniedResponse(gate)
+
     const { prompt, aspectRatio } = await req.json()
 
     if (!prompt || typeof prompt !== "string" || !prompt.trim()) {

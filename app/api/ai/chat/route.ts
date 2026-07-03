@@ -1,5 +1,6 @@
 import { streamText, convertToModelMessages, type UIMessage } from "ai"
 import type { NextRequest } from "next/server"
+import { checkPremiumAccess, premiumDeniedResponse } from "@/lib/premium-gate"
 
 export const maxDuration = 60
 
@@ -10,6 +11,9 @@ const SYSTEM =
 
 export async function POST(req: NextRequest) {
   try {
+    const gate = await checkPremiumAccess()
+    if (!gate.ok) return premiumDeniedResponse(gate)
+
     const { messages }: { messages: UIMessage[] } = await req.json()
 
     const result = streamText({

@@ -5,6 +5,7 @@ import { Menu, X, Wrench } from "lucide-react"
 import { useI18n } from "@/components/i18n-provider"
 import { LanguageSwitcher } from "@/components/language-switcher"
 import { SupportButton } from "@/components/support-button"
+import { AccountNavButton } from "@/components/account-nav-button"
 
 export function SiteNavbar() {
   const [open, setOpen] = useState(false)
@@ -48,6 +49,7 @@ export function SiteNavbar() {
         {/* Desktop right side */}
         <div className="hidden items-center gap-3 md:flex">
           <LanguageSwitcher />
+          <AccountNavButton />
           <SupportButton />
         </div>
 
@@ -80,7 +82,8 @@ export function SiteNavbar() {
                 {link.label}
               </a>
             ))}
-            <SupportButton fullWidth className="mt-3" />
+            <AccountNavButton fullWidth className="mt-3" />
+            <SupportButton fullWidth className="mt-2" />
           </div>
         </div>
       )}

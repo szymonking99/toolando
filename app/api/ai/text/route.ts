@@ -1,6 +1,7 @@
 import { streamText } from "ai"
 import type { NextRequest } from "next/server"
 import { extractTextForAI } from "@/lib/ai-extract"
+import { checkPremiumAccess, premiumDeniedResponse } from "@/lib/premium-gate"
 
 export const maxDuration = 60
 
@@ -19,6 +20,9 @@ const SYSTEM_PROMPTS: Record<TextTask, string> = {
 
 export async function POST(req: NextRequest) {
   try {
+    const gate = await checkPremiumAccess()
+    if (!gate.ok) return premiumDeniedResponse(gate)
+
     const contentType = req.headers.get("content-type") ?? ""
 
     let task: TextTask = "copywriting"

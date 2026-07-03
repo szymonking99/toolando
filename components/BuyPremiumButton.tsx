@@ -31,6 +31,12 @@ export function BuyPremiumButton({
 
       const data = await res.json()
 
+      // Niezalogowany — przekieruj do logowania z powrotem na /account.
+      if (res.status === 401 || data?.requiresAuth) {
+        window.location.href = "/sign-in"
+        return
+      }
+
       if (!res.ok || !data?.url) {
         throw new Error(data?.error || "Nie udało się rozpocząć płatności.")
       }

@@ -8,6 +8,8 @@ import { aiTools, getAiTool } from "@/lib/ai-tools"
 import { ToolConverter } from "@/components/tool-converter"
 import { SpecialTool } from "@/components/special-tool"
 import { AiTool } from "@/components/ai-tool"
+import { PremiumPaywall } from "@/components/premium-paywall"
+import { getCurrentUser, isUserPremium } from "@/lib/user"
 import { getDictionary } from "@/lib/i18n/dictionaries"
 import { localeHref } from "@/lib/i18n/href"
 import { AdSlot } from "@/components/ad-slot"
@@ -129,6 +131,9 @@ export default async function ToolPage({
   const ai = getAiTool(id)
   if (ai) {
     const relatedAi = aiTools.filter((t) => t.id !== ai.id)
+    // Narzędzia AI są dostępne wyłącznie dla użytkowników Premium.
+    const currentUser = await getCurrentUser()
+    const hasPremium = currentUser ? await isUserPremium(currentUser.id) : false
     return (
       <div className="min-h-dvh">
         <ToolShell
@@ -139,7 +144,14 @@ export default async function ToolPage({
           description={ai.description}
         >
           <section className="mt-8 rounded-2xl border border-primary/20 bg-primary/[0.04] p-6 backdrop-blur-md">
-            <AiTool tool={ai} />
+            {hasPremium ? (
+              <AiTool tool={ai} />
+            ) : (
+              <PremiumPaywall
+                isLoggedIn={Boolean(currentUser)}
+                toolName={ai.name}
+              />
+            )}
           </section>
 
           {relatedAi.length > 0 && (

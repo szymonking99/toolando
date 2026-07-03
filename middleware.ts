@@ -18,8 +18,9 @@ export function middleware(request: NextRequest) {
     return NextResponse.next()
   }
 
-  // Locale-agnostic routes (e.g. Stripe success/cancel URLs) are served as-is.
-  if (pathname === "/premium" || pathname.startsWith("/premium/")) {
+  // Locale-agnostic routes (Stripe URLs, auth & account pages) are served as-is.
+  const LOCALE_AGNOSTIC = ["/premium", "/sign-in", "/sign-up", "/account"]
+  if (LOCALE_AGNOSTIC.some((p) => pathname === p || pathname.startsWith(`${p}/`))) {
     return NextResponse.next()
   }
 
