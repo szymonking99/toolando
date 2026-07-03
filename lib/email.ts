@@ -1,28 +1,24 @@
-import nodemailer from "nodemailer"
+import { Resend } from "resend"
 
-const SMTP_USER = process.env.SMTP_USER ?? "badyltech@outlook.com"
-const SMTP_PASS = process.env.SMTP_PASSWORD
-const FROM_NAME = "Toolando"
+const RESEND_API_KEY = process.env.RESEND_API_KEY
 
 /**
- * Transporter SMTP dla Outlook / Microsoft 365.
- * Wymaga zmiennej SMTP_PASSWORD (hasło konta lub hasło aplikacji przy 2FA).
+ * Adres nadawcy. Domyślnie startowy adres testowy Resend, który działa bez
+ * weryfikacji domeny. Aby wysyłać z własnego adresu (np. kontakt@toolando.tech),
+ * zweryfikuj domenę w panelu Resend i ustaw zmienną EMAIL_FROM na adres w tej domenie.
  */
-function getTransporter() {
-  if (!SMTP_PASS) return null
-  return nodemailer.createTransport({
-    host: "smtp-mail.outlook.com",
-    port: 587,
-    secure: false, // STARTTLS
-    auth: { user: SMTP_USER, pass: SMTP_PASS },
-  })
-}
+const EMAIL_FROM = process.env.EMAIL_FROM || "Toolando <onboarding@resend.dev>"
 
-/** Wysyła e-mail powitalny po rejestracji. Błędy nie przerywają rejestracji. */
-export async function sendWelcomeEmail(to: string, name?: string) {
-  const transporter = getTransporter()
-  if (!transporter) {
-    console.log("[v0] SMTP_PASSWORD nie ustawione — pomijam e-mail powitalny.")
+const resend = RESEND_API_KEY ? new Resend(RESEND_API_KEY) : null
+
+/**
+ * Wysyła e-mail powitalny po rejestracji.
+ * Bezpiecznie pomija wysyłkę, gdy brak RESEND_API_KEY — rejestracja działa dalej.
+ * Błędy nie przerywają rejestracji.
+ */
+export async function sendWelcomeEmail(to: string, name?: string | null) {
+  if (!resend) {
+    console.log("[v0] RESEND_API_KEY nie ustawione — pomijam e-mail powitalny.")
     return
   }
 
@@ -35,7 +31,7 @@ export async function sendWelcomeEmail(to: string, name?: string) {
       Dziękujemy za założenie konta w <strong>Toolando</strong>. Masz teraz dostęp do naszego zestawu narzędzi online — konwertery, generatory i asystent AI w jednym miejscu.
     </p>
     <p style="font-size:15px;line-height:1.6;margin:0 0 24px;">
-      Aby odblokować narzędzia AI (czat, copywriting, streszczenia, tłumaczenia), rozważ plan <strong>Premium</strong> — już od 9 zł miesięcznie.
+      Aby odblokować narzędzia AI (czat, copywriting, streszczenia, tłumaczenia), rozważ plan <strong>Premium</strong>.
     </p>
     <a href="https://toolando.tech/account" style="display:inline-block;background:#4f46e5;color:#fff;text-decoration:none;font-weight:600;font-size:14px;padding:12px 22px;border-radius:10px;">
       Przejdź do konta
@@ -45,18 +41,26 @@ export async function sendWelcomeEmail(to: string, name?: string) {
     </p>
   </div>`
 
+  const text = `${greeting}\n\nDziękujemy za założenie konta w Toolando. Masz teraz dostęp do naszych narzędzi online.\n\nAby odblokować narzędzia AI, rozważ plan Premium: https://toolando.tech/account`
+
   try {
-    await transporter.sendMail({
-      from: `"${FROM_NAME}" <${SMTP_USER}>`,
+    const { error } = await resend.emails.send({
+      from: EMAIL_FROM,
       to,
       subject: "Witaj w Toolando!",
       html,
-      text: `${greeting}\n\nDziękujemy za założenie konta w Toolando. Masz teraz dostęp do naszych narzędzi online.\n\nAby odblokować narzędzia AI, rozważ plan Premium (od 9 zł/mies.): https://toolando.tech/account`,
+      text,
     })
+
+    if (error) {
+      console.log("[v0] Błąd wysyłki e-maila powitalnego:", error.message)
+      return
+    }
+
     console.log("[v0] E-mail powitalny wysłany do:", to)
   } catch (err) {
     console.log(
-      "[v0] Błąd wysyłki e-maila powitalnego:",
+      "[v0] Wyjątek podczas wysyłki e-maila powitalnego:",
       err instanceof Error ? err.message : err,
     )
   }
