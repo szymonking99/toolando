@@ -40,16 +40,19 @@ export const auth = betterAuth({
     ...(process.env.VERCEL_PROJECT_PRODUCTION_URL
       ? [`https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`]
       : []),
+    // Lokalny dev / testy w przeglądarce.
+    "http://localhost:3000",
+    "http://localhost:3001",
   ],
   session: {
     expiresIn: 60 * 60 * 24 * 7, // 7 dni
     updateAge: 60 * 60 * 24, // 1 dzień
   },
-  ...(process.env.NODE_ENV === "development"
+  ...(process.env.NODE_ENV !== "production"
     ? {
         advanced: {
-          // W dev (iframe podglądu v0) wymuszamy cookies cross-site,
-          // aby przeglądarka zapisała cookie sesji.
+          // Poza produkcją (iframe podglądu v0) wymuszamy cookies cross-site,
+          // aby przeglądarka zapisała cookie sesji. NODE_ENV bywa pusty w dev.
           defaultCookieAttributes: {
             sameSite: "none" as const,
             secure: true,

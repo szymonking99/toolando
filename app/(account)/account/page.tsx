@@ -83,7 +83,7 @@ export default async function AccountPage() {
                 / {PREMIUM_PLAN.displayPeriod}
               </span>
             </div>
-            <BuyPremiumButton className="w-full sm:w-auto" />
+            <BuyPremiumButton className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-indigo-600/25 transition-transform hover:scale-[1.02] disabled:cursor-not-allowed disabled:opacity-50 sm:w-auto" />
           </div>
         )}
       </section>

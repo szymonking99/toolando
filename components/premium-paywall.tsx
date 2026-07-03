@@ -22,7 +22,7 @@ export function PremiumPaywall({ isLoggedIn, toolName }: PremiumPaywallProps) {
 
       <div className="max-w-md">
         <h2 className="text-xl font-semibold tracking-tight text-foreground text-balance">
-          {toolName} jest dostępne w Premium
+          Odblokuj „{toolName}" w Premium
         </h2>
         <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
           Odblokuj wszystkie narzędzia AI Toolando — generowanie tekstów i
