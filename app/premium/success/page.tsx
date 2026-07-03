@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { CheckCircle2 } from "lucide-react"
 import { getStripe } from "@/lib/stripe"
+import { reconcilePremiumFromSession } from "@/lib/user"
 
 export const dynamic = "force-dynamic"
 
@@ -12,13 +13,20 @@ export default async function PremiumSuccessPage({
   const { session_id: sessionId } = await searchParams
 
   let email: string | null = null
+  let activated = false
   if (sessionId) {
     try {
       const session = await getStripe().checkout.sessions.retrieve(sessionId)
       email = session.customer_details?.email ?? null
     } catch {
-      // Sesja może nie być jeszcze gotowa — pomijamy, potwierdzenie i tak
-      // pochodzi z webhooka.
+      // Sesja może nie być jeszcze gotowa — pomijamy.
+    }
+
+    // Niezależne od webhooka aktywowanie Premium po potwierdzonej płatności.
+    try {
+      activated = await reconcilePremiumFromSession(sessionId)
+    } catch (error) {
+      console.error("[premium/success] Reconcyliacja nie powiodła się:", error)
     }
   }
 
@@ -41,8 +49,10 @@ export default async function PremiumSuccessPage({
               dla adresu <span className="font-medium text-foreground">{email}</span>
             </>
           ) : null}
-          . Dostęp Premium zostanie aktywowany automatycznie w ciągu kilku chwil
-          przez webhook Stripe.
+          .{" "}
+          {activated
+            ? "Dostęp Premium został aktywowany na Twoim koncie."
+            : "Dostęp Premium zostanie aktywowany automatycznie w ciągu kilku chwil."}
         </p>
 
         {sessionId ? (
