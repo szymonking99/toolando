@@ -2,15 +2,16 @@
 
 import { useState } from "react"
 import { Loader2 } from "lucide-react"
+import { PREMIUM_PLAN } from "@/lib/premium"
 
 interface BuyPremiumButtonProps {
-  priceId: string
+  priceId?: string
   label?: string
   className?: string
 }
 
 export function BuyPremiumButton({
-  priceId,
+  priceId = PREMIUM_PLAN.priceId,
   label = "Kup Premium",
   className,
 }: BuyPremiumButtonProps) {
