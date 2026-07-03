@@ -36,7 +36,20 @@ export async function POST(req: NextRequest) {
       image: `data:${image.mediaType};base64,${image.base64}`,
     })
   } catch (err) {
-    console.log("[v0] AI image error:", err instanceof Error ? err.message : err)
+    const message = err instanceof Error ? err.message : String(err)
+    console.log("[v0] AI image error:", message)
+
+    // Model obrazu wymaga płatnych kredytów AI Gateway (brak w darmowym planie).
+    if (/free tier|paid credits|insufficient|quota|billing/i.test(message)) {
+      return Response.json(
+        {
+          error:
+            "Generator obrazów jest tymczasowo niedostępny — wymaga doładowania kredytów AI. Pozostałe narzędzia AI działają normalnie.",
+        },
+        { status: 503 },
+      )
+    }
+
     return Response.json(
       { error: "Nie udało się wygenerować obrazu. Spróbuj ponownie." },
       { status: 500 },

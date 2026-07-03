@@ -1,5 +1,6 @@
 import { betterAuth } from "better-auth"
 import { pool } from "@/lib/db"
+import { sendWelcomeEmail } from "@/lib/email"
 
 export const auth = betterAuth({
   database: pool,
@@ -44,6 +45,16 @@ export const auth = betterAuth({
     "http://localhost:3000",
     "http://localhost:3001",
   ],
+  databaseHooks: {
+    user: {
+      create: {
+        after: async (user) => {
+          // Wysyłka nieblokująca — ewentualny błąd nie przerywa rejestracji.
+          void sendWelcomeEmail(user.email, user.name)
+        },
+      },
+    },
+  },
   session: {
     expiresIn: 60 * 60 * 24 * 7, // 7 dni
     updateAge: 60 * 60 * 24, // 1 dzień

@@ -5,7 +5,7 @@ import { checkPremiumAccess, premiumDeniedResponse } from "@/lib/premium-gate"
 
 export const maxDuration = 60
 
-const MODEL = "openai/gpt-5.4"
+const MODEL = "openai/gpt-4o-mini"
 
 type TextTask = "copywriting" | "summarize" | "translate"
 

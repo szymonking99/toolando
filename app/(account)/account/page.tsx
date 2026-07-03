@@ -4,6 +4,7 @@ import { Crown, Check, Sparkles, ArrowLeft } from "lucide-react"
 import { getCurrentUser, isUserPremium } from "@/lib/user"
 import { PREMIUM_PLAN } from "@/lib/premium"
 import { BuyPremiumButton } from "@/components/BuyPremiumButton"
+import { ManageSubscriptionButton } from "@/components/manage-subscription-button"
 import { SignOutButton } from "@/components/sign-out-button"
 
 export default async function AccountPage() {
@@ -56,6 +57,9 @@ export default async function AccountPage() {
               Dziękujemy za wsparcie! Masz pełny dostęp do wszystkich narzędzi AI
               bez ograniczeń.
             </p>
+            <div className="mt-2">
+              <ManageSubscriptionButton />
+            </div>
           </div>
         ) : (
           <div className="flex flex-col gap-4">
