@@ -1,7 +1,8 @@
 // Centralna konfiguracja planu Premium.
-// priceId pochodzi z ceny utworzonej w Stripe (tryb testowy).
+// priceId pochodzi ze zmiennej STRIPE_PRICE_ID (ustaw ją na cenę LIVE w Stripe).
+// Fallback to testowa cena — używana tylko, gdy zmienna nie jest ustawiona.
 export const PREMIUM_PLAN = {
-  priceId: "price_1Tp3sxQCXdlppkX0eB7ET5u9",
+  priceId: process.env.STRIPE_PRICE_ID || "price_1Tp3sxQCXdlppkX0eB7ET5u9",
   amount: 900, // w groszach
   currency: "PLN",
   interval: "month" as const,

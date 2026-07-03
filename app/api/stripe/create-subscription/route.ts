@@ -22,9 +22,9 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    const body = await request.json().catch(() => ({}))
-    const priceId: string =
-      typeof body?.priceId === "string" ? body.priceId : PREMIUM_PLAN.priceId
+    // Cena pochodzi wyłącznie z konfiguracji serwera (STRIPE_PRICE_ID) —
+    // ignorujemy ewentualne priceId z klienta ze względów bezpieczeństwa.
+    const priceId = PREMIUM_PLAN.priceId
 
     const stripe = getStripe()
 
