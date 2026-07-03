@@ -18,6 +18,11 @@ export function middleware(request: NextRequest) {
     return NextResponse.next()
   }
 
+  // Locale-agnostic routes (e.g. Stripe success/cancel URLs) are served as-is.
+  if (pathname === "/premium" || pathname.startsWith("/premium/")) {
+    return NextResponse.next()
+  }
+
   // Resolve the preferred locale: saved cookie first, then Accept-Language.
   const cookieLocale = request.cookies.get(LOCALE_COOKIE)?.value
   const locale =
