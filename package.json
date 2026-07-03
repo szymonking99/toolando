@@ -55,6 +55,8 @@
       "hono": "4.12.25"
     },
     "onlyBuiltDependencies": [
+      "@ffmpeg-installer/ffmpeg",
+      "@ffmpeg-installer/linux-x64",
       "ffmpeg-static",
       "sharp",
       "onnxruntime-node"
