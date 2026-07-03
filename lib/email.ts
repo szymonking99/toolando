@@ -3,11 +3,17 @@ import { Resend } from "resend"
 const RESEND_API_KEY = process.env.RESEND_API_KEY
 
 /**
- * Adres nadawcy. Domyślnie startowy adres testowy Resend, który działa bez
- * weryfikacji domeny. Aby wysyłać z własnego adresu (np. kontakt@toolando.tech),
- * zweryfikuj domenę w panelu Resend i ustaw zmienną EMAIL_FROM na adres w tej domenie.
+ * Adres nadawcy. Domyślnie no-reply@toolando.tech — wymaga zweryfikowania
+ * domeny toolando.tech w panelu Resend (rekordy DNS SPF/DKIM). Dopóki domena
+ * nie jest zweryfikowana, wysyłka będzie zwracać błąd (rejestracja działa dalej).
+ * Można nadpisać zmienną EMAIL_FROM.
  */
-const EMAIL_FROM = process.env.EMAIL_FROM || "Toolando <onboarding@resend.dev>"
+const EMAIL_FROM = process.env.EMAIL_FROM || "Toolando <no-reply@toolando.tech>"
+
+/**
+ * Adres, na który trafią odpowiedzi użytkowników (Twoja skrzynka Outlook).
+ */
+const REPLY_TO = process.env.EMAIL_REPLY_TO || "badyltech@outlook.com"
 
 const resend = RESEND_API_KEY ? new Resend(RESEND_API_KEY) : null
 
@@ -47,6 +53,7 @@ export async function sendWelcomeEmail(to: string, name?: string | null) {
     const { error } = await resend.emails.send({
       from: EMAIL_FROM,
       to,
+      replyTo: REPLY_TO,
       subject: "Witaj w Toolando!",
       html,
       text,
