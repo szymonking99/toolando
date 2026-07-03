@@ -114,34 +114,76 @@ export async function mergePdfs(
 }
 
 /* ------------------------------------------------------------------ */
-/* Background removal (@imgly/background-removal-node)                 */
+/* Background removal (AI Gateway image model)                         */
 /* ------------------------------------------------------------------ */
+
+// Nano Banana image model, called through the Vercel AI Gateway. Using a remote
+// model keeps the serverless function small (no heavy onnxruntime / imgly
+// binaries bundled) while still supporting one-click background removal.
+const BACKGROUND_REMOVAL_MODEL = "google/gemini-3.1-flash-image"
 
 export async function removeImageBackground(
   input: Buffer,
   originalName: string,
   mimeType: string,
 ): Promise<SpecialResult> {
-  const { removeBackground } = await import(
-    "@imgly/background-removal-node"
-  )
-
-  const type = mimeType && mimeType.startsWith("image/") ? mimeType : "image/png"
-  const inputBlob = new Blob([new Uint8Array(input)], { type })
-
-  let resultBlob: Blob
-  try {
-    resultBlob = await removeBackground(inputBlob, {
-      output: { format: "image/png" },
-    })
-  } catch (err) {
-    console.error("[v0] background removal failed:", err)
+  if (!process.env.AI_GATEWAY_API_KEY) {
     throw new ConversionError(
-      "Nie udało się usunąć tła. Spróbuj ponownie z innym zdjęciem.",
+      "Usuwanie tła jest chwilowo niedostępne (brak konfiguracji AI).",
+      503,
     )
   }
 
-  const buffer = Buffer.from(await resultBlob.arrayBuffer())
+  const { generateText } = await import("ai")
+  const type = mimeType && mimeType.startsWith("image/") ? mimeType : "image/png"
+
+  let files: Array<{ mediaType: string; uint8Array: Uint8Array }>
+  try {
+    const result = await generateText({
+      model: BACKGROUND_REMOVAL_MODEL,
+      messages: [
+        {
+          role: "user",
+          content: [
+            {
+              type: "text",
+              text:
+                "Remove the background from this image completely. Keep the main " +
+                "subject exactly as it is — do not change, crop, recolor, or " +
+                "stylize it in any way. Output a PNG image with a fully " +
+                "transparent background.",
+            },
+            {
+              type: "file",
+              mediaType: type,
+              data: new Uint8Array(input),
+            },
+          ],
+        },
+      ],
+    })
+    files = result.files.filter((f) => f.mediaType.startsWith("image/"))
+  } catch (err) {
+    console.error("[v0] background removal failed:", err)
+    throw new ConversionError(
+      "Nie udało się usunąć tła. Spróbuj ponownie za chwilę.",
+      502,
+    )
+  }
+
+  if (files.length === 0) {
+    throw new ConversionError(
+      "Nie udało się usunąć tła z tego zdjęcia. Spróbuj z innym obrazem.",
+    )
+  }
+
+  // Normalize to a proper PNG with an alpha channel via sharp.
+  const sharp = (await import("sharp")).default
+  const buffer = await sharp(Buffer.from(files[0].uint8Array))
+    .png()
+    .ensureAlpha()
+    .toBuffer()
+
   const stem = stemOf(originalName)
   return {
     buffer,
