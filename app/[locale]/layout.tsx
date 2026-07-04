@@ -112,7 +112,7 @@ export default async function LocaleLayout({
     <html
       lang={locale}
       dir={dir}
-      className={`dark bg-background ${geistSans.variable} ${geistMono.variable}`}
+      className={`dark overflow-x-hidden bg-background ${geistSans.variable} ${geistMono.variable}`}
     >
       <head>
         {ADSENSE_CLIENT && (
@@ -126,7 +126,7 @@ export default async function LocaleLayout({
           />
         )}
       </head>
-      <body className="bg-background font-sans antialiased">
+      <body className="overflow-x-hidden bg-background font-sans antialiased">
         <I18nProvider locale={locale} dictionary={dictionary}>
           {children}
         </I18nProvider>
