@@ -12,7 +12,9 @@
     "cta": "Get started",
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
-    "allTools": "All tools"
+    "allTools": "All tools",
+    "signIn": "Sign in",
+    "account": "My account"
   },
   "hero": {
     "badge": "A new online tools ecosystem",

@@ -7,12 +7,14 @@ import { PREMIUM_PLAN } from "@/lib/premium"
 interface BuyPremiumButtonProps {
   priceId?: string
   label?: string
+  loadingLabel?: string
   className?: string
 }
 
 export function BuyPremiumButton({
   priceId = PREMIUM_PLAN.priceId,
   label = "Kup Premium",
+  loadingLabel = "Przekierowywanie…",
   className,
 }: BuyPremiumButtonProps) {
   const [loading, setLoading] = useState(false)
@@ -63,7 +65,7 @@ export function BuyPremiumButton({
         {loading ? (
           <>
             <Loader2 className="size-4 animate-spin" />
-            Przekierowywanie…
+            {loadingLabel}
           </>
         ) : (
           label

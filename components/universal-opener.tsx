@@ -59,13 +59,13 @@ function detectKind(file: File): Kind {
   return "binary"
 }
 
-const KIND_META: Record<Kind, { label: string; icon: typeof FileText }> = {
-  image: { label: "Obraz", icon: ImageIcon },
-  video: { label: "Wideo", icon: Film },
-  audio: { label: "Audio", icon: Music },
-  pdf: { label: "Dokument PDF", icon: FileType2 },
-  text: { label: "Tekst / kod", icon: FileText },
-  binary: { label: "Plik binarny", icon: Binary },
+const KIND_ICON: Record<Kind, typeof FileText> = {
+  image: ImageIcon,
+  video: Film,
+  audio: Music,
+  pdf: FileType2,
+  text: FileText,
+  binary: Binary,
 }
 
 type Loaded = {
@@ -78,6 +78,7 @@ type Loaded = {
 }
 
 export function UniversalOpener() {
+  const { t } = useI18n()
   const inputRef = useRef<HTMLInputElement>(null)
   const [loaded, setLoaded] = useState<Loaded | null>(null)
   const [loading, setLoading] = useState(false)
@@ -122,7 +123,7 @@ export function UniversalOpener() {
       }
     } catch {
       // fall back to binary view on any read error
-      hex = "Nie udało się odczytać zawartości pliku."
+      hex = t.opener.readError
     }
 
     setLoaded({ file, kind, url, text, textTruncated, hex })
@@ -163,11 +164,10 @@ export function UniversalOpener() {
             )}
           </span>
           <span className="text-base font-medium text-foreground">
-            Przeciągnij dowolny plik tutaj lub kliknij, aby wybrać
+            {t.opener.dropAny}
           </span>
           <span className="max-w-sm text-xs leading-relaxed text-muted-foreground">
-            Obrazy, wideo, audio, PDF, dokumenty, kod, dane — każdy format.
-            Pliki są otwierane lokalnie w przeglądarce i nie są nigdzie wysyłane.
+            {t.opener.dropHint}
           </span>
         </label>
       )}
@@ -189,6 +189,7 @@ function extName(name: string) {
 }
 
 function ConversionPanel({ file }: { file: File }) {
+  const { t } = useI18n()
   const conversions = useMemo(
     () => getConversionsFrom(extName(file.name)),
     [file],
@@ -209,7 +210,7 @@ function ConversionPanel({ file }: { file: File }) {
       })
       if (!res.ok) {
         const data = await res.json().catch(() => null)
-        throw new Error(data?.error ?? "Konwersja nie powiodła się.")
+        throw new Error(data?.error ?? t.tool.convertFailed)
       }
       const blob = await res.blob()
       const disposition = res.headers.get("Content-Disposition") ?? ""
@@ -228,7 +229,7 @@ function ConversionPanel({ file }: { file: File }) {
       URL.revokeObjectURL(url)
       setDoneId(tool.id)
     } catch (err) {
-      setError(err instanceof Error ? err.message : "Konwersja nie powiodła się.")
+      setError(err instanceof Error ? err.message : t.tool.convertFailed)
     } finally {
       setBusyId(null)
     }
@@ -237,8 +238,7 @@ function ConversionPanel({ file }: { file: File }) {
   if (conversions.length === 0) {
     return (
       <div className="rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 text-sm text-muted-foreground">
-        Dla tego formatu nie mamy jeszcze konwertera — możesz jednak podejrzeć i
-        pobrać plik poniżej.
+        {t.opener.noConverter}
       </div>
     )
   }
@@ -248,11 +248,11 @@ function ConversionPanel({ file }: { file: File }) {
       <div className="mb-3 flex items-center gap-2">
         <Wand2 className="size-4 text-primary" />
         <h3 className="text-sm font-semibold text-foreground">
-          Konwertuj na inny format
+          {t.opener.convertTo}
         </h3>
         <span className="text-xs text-muted-foreground">
           ({conversions.length}{" "}
-          {conversions.length === 1 ? "opcja" : "opcji"})
+          {conversions.length === 1 ? t.opener.optionOne : t.opener.optionMany})
         </span>
       </div>
 
@@ -290,7 +290,7 @@ function ConversionPanel({ file }: { file: File }) {
       {doneId && !error && (
         <p className="mt-3 flex items-center gap-2 text-sm text-primary">
           <CheckCircle2 className="size-4" />
-          Gotowe! Plik został pobrany.
+          {t.opener.downloadedOk}
         </p>
       )}
     </div>
@@ -298,8 +298,8 @@ function ConversionPanel({ file }: { file: File }) {
 }
 
 function FileHeader({ loaded, onReset }: { loaded: Loaded; onReset: () => void }) {
-  const meta = KIND_META[loaded.kind]
-  const Icon = meta.icon
+  const { t } = useI18n()
+  const Icon = KIND_ICON[loaded.kind]
   return (
     <div className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3">
       <div className="flex min-w-0 items-center gap-3">
@@ -311,7 +311,7 @@ function FileHeader({ loaded, onReset }: { loaded: Loaded; onReset: () => void }
             {loaded.file.name}
           </p>
           <p className="text-xs text-muted-foreground">
-            {meta.label} • {formatBytes(loaded.file.size)}
+            {t.opener.kinds[loaded.kind]} • {formatBytes(loaded.file.size)}
             {loaded.file.type ? ` • ${loaded.file.type}` : ""}
           </p>
         </div>
@@ -324,7 +324,7 @@ function FileHeader({ loaded, onReset }: { loaded: Loaded; onReset: () => void }
             className="inline-flex items-center gap-2 rounded-md border border-white/15 px-3 py-1.5 text-sm font-medium text-foreground transition-colors hover:bg-white/5"
           >
             <Download className="size-4" />
-            Pobierz
+            {t.opener.download}
           </a>
         )}
         <button
@@ -333,7 +333,7 @@ function FileHeader({ loaded, onReset }: { loaded: Loaded; onReset: () => void }
           className="inline-flex items-center gap-1.5 rounded-md bg-primary px-3 py-1.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/85"
         >
           <X className="size-4" />
-          Zamknij
+          {t.opener.close}
         </button>
       </div>
     </div>
@@ -341,6 +341,7 @@ function FileHeader({ loaded, onReset }: { loaded: Loaded; onReset: () => void }
 }
 
 function Preview({ loaded }: { loaded: Loaded }) {
+  const { t } = useI18n()
   const { kind, url, text, textTruncated, hex, file } = loaded
 
   if (kind === "image" && url) {
@@ -397,12 +398,11 @@ function Preview({ loaded }: { loaded: Loaded }) {
     return (
       <div className="overflow-hidden rounded-xl border border-white/10 bg-[#0b1020]">
         <pre className="max-h-[70vh] overflow-auto p-4 text-xs leading-relaxed text-foreground/90">
-          <code>{text || "(pusty plik)"}</code>
+          <code>{text || t.opener.emptyFile}</code>
         </pre>
         {textTruncated && (
           <p className="border-t border-white/10 px-4 py-2 text-xs text-muted-foreground">
-            Podgląd skrócony do pierwszych 200 000 znaków. Pobierz plik, aby
-            zobaczyć całość.
+            {t.opener.textTruncated}
           </p>
         )}
       </div>
@@ -413,7 +413,7 @@ function Preview({ loaded }: { loaded: Loaded }) {
   return (
     <div className="overflow-hidden rounded-xl border border-white/10 bg-[#0b1020]">
       <div className="border-b border-white/10 px-4 py-2 text-xs font-medium text-muted-foreground">
-        Podgląd binarny (pierwsze bajty w formacie szesnastkowym)
+        {t.opener.binaryPreview}
       </div>
       <pre className="max-h-[70vh] overflow-auto p-4 font-mono text-xs leading-relaxed text-foreground/80">
         <code>{hex}</code>
