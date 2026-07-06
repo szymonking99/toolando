@@ -591,30 +591,6 @@ async function convertPdfToImage(
 /* PDF <-> DOCX and office documents                                   */
 /* ------------------------------------------------------------------ */
 
-/** Extract the plain-text content of each PDF page via mupdf. */
-async function pdfToParagraphs(input: Buffer): Promise<string[]> {
-  const mupdf = await import("mupdf");
-  const doc = mupdf.Document.openDocument(
-    new Uint8Array(input),
-    "application/pdf",
-  );
-  const pageCount = doc.countPages();
-  if (pageCount === 0) {
-    throw new ConversionError("Plik PDF nie zawiera żadnych stron.");
-  }
-
-  const paragraphs: string[] = [];
-  for (let i = 0; i < pageCount; i++) {
-    const page = doc.loadPage(i);
-    const text = page.toStructuredText("preserve-whitespace").asText();
-    for (const line of text.split(/\r?\n/)) {
-      paragraphs.push(line);
-    }
-    if (i < pageCount - 1) paragraphs.push("");
-  }
-  return paragraphs;
-}
-
 /** Build a valid, openable .docx from a list of text paragraphs. */
 async function buildDocx(paragraphs: string[]): Promise<Buffer> {
   const JSZip = (await import("jszip")).default;
@@ -665,8 +641,8 @@ async function buildDocx(paragraphs: string[]): Promise<Buffer> {
 }
 
 async function convertPdfToDocx(input: Buffer): Promise<Buffer> {
-  const paragraphs = await pdfToParagraphs(input);
-  return buildDocx(paragraphs);
+  const { pdfToDocx } = await import("@/lib/document-render");
+  return pdfToDocx(input);
 }
 
 /** Extract text paragraphs from an ODT (OpenDocument) file. */
@@ -689,60 +665,6 @@ async function odtToParagraphs(input: Buffer): Promise<string[]> {
     .split(/\r?\n/);
 }
 
-/** Render text paragraphs into a simple, multi-page PDF via pdf-lib. */
-async function textToPdf(paragraphs: string[]): Promise<Buffer> {
-  const { PDFDocument, StandardFonts } = await import("pdf-lib");
-  const pdf = await PDFDocument.create();
-  const font = await pdf.embedFont(StandardFonts.Helvetica);
-
-  const fontSize = 11;
-  const lineHeight = 16;
-  const margin = 56;
-  const pageWidth = 595.28; // A4
-  const pageHeight = 841.89;
-  const maxWidth = pageWidth - margin * 2;
-
-  // pdf-lib's StandardFont only supports WinAnsi; drop unsupported glyphs.
-  const sanitize = (s: string) =>
-    // eslint-disable-next-line no-control-regex
-    s.replace(/[^\x00-\xFF]/g, "?").replace(/\t/g, "    ");
-
-  const wrap = (text: string): string[] => {
-    if (!text) return [""];
-    const words = text.split(/\s+/);
-    const lines: string[] = [];
-    let current = "";
-    for (const word of words) {
-      const candidate = current ? `${current} ${word}` : word;
-      if (font.widthOfTextAtSize(candidate, fontSize) > maxWidth && current) {
-        lines.push(current);
-        current = word;
-      } else {
-        current = candidate;
-      }
-    }
-    if (current) lines.push(current);
-    return lines.length ? lines : [""];
-  };
-
-  let page = pdf.addPage([pageWidth, pageHeight]);
-  let y = pageHeight - margin;
-
-  for (const paragraph of paragraphs) {
-    for (const line of wrap(sanitize(paragraph))) {
-      if (y < margin) {
-        page = pdf.addPage([pageWidth, pageHeight]);
-        y = pageHeight - margin;
-      }
-      page.drawText(line, { x: margin, y, size: fontSize, font });
-      y -= lineHeight;
-    }
-  }
-
-  const bytes = await pdf.save();
-  return Buffer.from(bytes);
-}
-
 async function convertDocument(
   input: Buffer,
   from: string,
@@ -751,8 +673,8 @@ async function convertDocument(
   const pair = `${from}->${to}`;
   switch (pair) {
     case "docx->pdf": {
-      const text = await docxToText(input);
-      return textToPdf(text.split(/\r?\n/));
+      const { docxToPdf } = await import("@/lib/document-render");
+      return docxToPdf(input);
     }
     case "odt->docx": {
       const paragraphs = await odtToParagraphs(input);
