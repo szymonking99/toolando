@@ -12,6 +12,7 @@ import {
 import type { SpecialToolConfig } from "@/lib/special-tools"
 import { uploadManyAndProcess } from "@/lib/client-upload"
 import { useI18n } from "@/components/i18n-provider"
+import { useFakeProgress } from "@/hooks/use-fake-progress"
 
 type Status = "idle" | "uploading" | "working" | "done" | "error"
 
@@ -38,6 +39,7 @@ export function SpecialTool({ tool }: { tool: SpecialToolConfig }) {
   } | null>(null)
 
   const isImageResult = tool.engine !== "merge-pdf"
+  const workProgress = useFakeProgress(status === "working")
 
   // Live thumbnails for selected image files (before processing).
   const [previews, setPreviews] = useState<string[]>([])
@@ -322,6 +324,24 @@ export function SpecialTool({ tool }: { tool: SpecialToolConfig }) {
                 <div
                   className="h-full rounded-full bg-primary transition-all"
                   style={{ width: `${progress}%` }}
+                />
+              </div>
+            </div>
+          )}
+          {status === "working" && (
+            <div className="space-y-1.5">
+              <div className="flex items-center justify-between text-xs text-muted-foreground">
+                <span>
+                  {tool.engine === "remove-bg"
+                    ? t.tool.processingLong
+                    : t.tool.processing}
+                </span>
+                <span>{workProgress}%</span>
+              </div>
+              <div className="h-2 w-full overflow-hidden rounded-full bg-white/10">
+                <div
+                  className="h-full rounded-full bg-primary transition-all duration-200"
+                  style={{ width: `${workProgress}%` }}
                 />
               </div>
             </div>

@@ -20,6 +20,7 @@ import {
 import { getConversionsFrom, type ToolConfig } from "@/lib/tools"
 import { uploadAndProcess } from "@/lib/client-upload"
 import { useI18n } from "@/components/i18n-provider"
+import { useFakeProgress } from "@/hooks/use-fake-progress"
 
 type Kind = "image" | "video" | "audio" | "pdf" | "text" | "binary"
 
@@ -197,6 +198,7 @@ function ConversionPanel({ file }: { file: File }) {
   const [busyId, setBusyId] = useState<string | null>(null)
   const [error, setError] = useState<string | null>(null)
   const [doneId, setDoneId] = useState<string | null>(null)
+  const convProgress = useFakeProgress(busyId !== null)
 
   async function convert(tool: ToolConfig) {
     setBusyId(tool.id)
@@ -281,6 +283,20 @@ function ConversionPanel({ file }: { file: File }) {
         })}
       </div>
 
+      {busyId && (
+        <div className="mt-3 space-y-1.5">
+          <div className="flex items-center justify-between text-xs text-muted-foreground">
+            <span>{t.tool.converting}</span>
+            <span>{convProgress}%</span>
+          </div>
+          <div className="h-2 w-full overflow-hidden rounded-full bg-white/10">
+            <div
+              className="h-full rounded-full bg-primary transition-all duration-200"
+              style={{ width: `${convProgress}%` }}
+            />
+          </div>
+        </div>
+      )}
       {error && (
         <p className="mt-3 flex items-start gap-2 text-sm text-destructive">
           <AlertCircle className="mt-0.5 size-4 shrink-0" />

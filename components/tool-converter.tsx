@@ -5,6 +5,7 @@ import { Upload, Loader2, CheckCircle2, AlertCircle, Download, X } from "lucide-
 import type { ToolConfig } from "@/lib/tools"
 import { uploadAndProcess } from "@/lib/client-upload"
 import { useI18n } from "@/components/i18n-provider"
+import { useFakeProgress } from "@/hooks/use-fake-progress"
 
 type Status = "idle" | "uploading" | "converting" | "done" | "error"
 
@@ -25,6 +26,7 @@ export function ToolConverter({ tool }: { tool: ToolConfig }) {
   const [result, setResult] = useState<{ url: string; name: string } | null>(
     null,
   )
+  const convProgress = useFakeProgress(status === "converting")
 
   function reset() {
     setFile(null)
@@ -219,6 +221,20 @@ export function ToolConverter({ tool }: { tool: ToolConfig }) {
                 <div
                   className="h-full rounded-full bg-primary transition-all"
                   style={{ width: `${progress}%` }}
+                />
+              </div>
+            </div>
+          )}
+          {status === "converting" && (
+            <div className="space-y-1.5">
+              <div className="flex items-center justify-between text-xs text-muted-foreground">
+                <span>{t.tool.converting}</span>
+                <span>{convProgress}%</span>
+              </div>
+              <div className="h-2 w-full overflow-hidden rounded-full bg-white/10">
+                <div
+                  className="h-full rounded-full bg-primary transition-all duration-200"
+                  style={{ width: `${convProgress}%` }}
                 />
               </div>
             </div>
