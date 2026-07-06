@@ -18,6 +18,8 @@ const nextConfig = {
     "wawoff2",
     "ttf2woff",
     "pdf-lib",
+    "@pdf-lib/fontkit",
+    "mammoth",
   ],
   // These packages are marked external, so Next.js won't trace their binaries
   // into the serverless function on its own. Force-include the ffmpeg binaries
@@ -30,6 +32,9 @@ const nextConfig = {
       "./node_modules/@ffmpeg-installer/**/ffmpeg",
       "./node_modules/.pnpm/ffmpeg-static@*/node_modules/ffmpeg-static/ffmpeg",
       "./node_modules/ffmpeg-static/ffmpeg",
+      // Unicode fonts embedded into generated PDFs (DOCX -> PDF). Without this
+      // the fonts directory is missing at runtime and PDF export fails.
+      "./lib/fonts/*.ttf",
     ],
   },
 }
