@@ -19,6 +19,7 @@ import {
 } from "lucide-react"
 import { getConversionsFrom, type ToolConfig } from "@/lib/tools"
 import { uploadAndProcess } from "@/lib/client-upload"
+import { useI18n } from "@/components/i18n-provider"
 
 type Kind = "image" | "video" | "audio" | "pdf" | "text" | "binary"
 

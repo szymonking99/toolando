@@ -11,28 +11,29 @@ import {
   X,
 } from "lucide-react"
 import type { AiToolConfig } from "@/lib/ai-tools"
+import { useI18n } from "@/components/i18n-provider"
 
 type Mode = "copywriting" | "translate" | "summarize"
 
-const TONES = [
-  "profesjonalny",
-  "przyjazny",
-  "energiczny",
-  "formalny",
-  "zabawny",
-  "perswazyjny",
-]
+const TONE_KEYS = [
+  "professional",
+  "friendly",
+  "energetic",
+  "formal",
+  "playful",
+  "persuasive",
+] as const
 
-const LANGUAGES = [
-  "angielski",
-  "niemiecki",
-  "hiszpański",
-  "francuski",
-  "włoski",
-  "ukraiński",
-  "polski",
-  "japoński",
-]
+const LANGUAGE_KEYS = [
+  "english",
+  "german",
+  "spanish",
+  "french",
+  "italian",
+  "ukrainian",
+  "polish",
+  "japanese",
+] as const
 
 function formatBytes(bytes: number) {
   if (bytes < 1024) return `${bytes} B`
@@ -41,6 +42,7 @@ function formatBytes(bytes: number) {
 }
 
 export function AiTextTool({ tool }: { tool: AiToolConfig }) {
+  const { t } = useI18n()
   const mode: Mode =
     tool.engine === "text-translate"
       ? "translate"
@@ -49,8 +51,10 @@ export function AiTextTool({ tool }: { tool: AiToolConfig }) {
         : "copywriting"
 
   const [prompt, setPrompt] = useState("")
-  const [tone, setTone] = useState(TONES[0])
-  const [targetLang, setTargetLang] = useState(LANGUAGES[0])
+  const [tone, setTone] = useState<(typeof TONE_KEYS)[number]>(TONE_KEYS[0])
+  const [targetLang, setTargetLang] = useState<(typeof LANGUAGE_KEYS)[number]>(
+    LANGUAGE_KEYS[0],
+  )
   const [file, setFile] = useState<File | null>(null)
   const [dragging, setDragging] = useState(false)
   const inputRef = useRef<HTMLInputElement>(null)
@@ -90,7 +94,7 @@ export function AiTextTool({ tool }: { tool: AiToolConfig }) {
       }
 
       if (!res.ok || !res.body) {
-        let message = "Nie udało się wygenerować odpowiedzi."
+        let message = t.aiTool.generateFailed
         try {
           const data = await res.json()
           if (data?.error) message = data.error
@@ -112,12 +116,10 @@ export function AiTextTool({ tool }: { tool: AiToolConfig }) {
         setOutput(acc)
       }
       if (!acc.trim()) {
-        setError(
-          "Usługa AI nie zwróciła treści. Sprawdź, czy AI Gateway jest aktywny (wymaga karty płatniczej).",
-        )
+        setError(t.aiTool.noContent)
       }
     } catch {
-      setError("Wystąpił błąd połączenia. Spróbuj ponownie.")
+      setError(t.aiTool.connectionError)
     } finally {
       setLoading(false)
     }
@@ -163,7 +165,7 @@ export function AiTextTool({ tool }: { tool: AiToolConfig }) {
               <Upload className="size-5" />
             </span>
             <span className="text-sm font-medium text-foreground">
-              Przeciągnij dokument tutaj lub kliknij, aby wybrać
+              {t.aiTool.dropDoc}
             </span>
             <span className="text-xs text-muted-foreground">
               PDF, DOCX, TXT, MD, CSV, JSON, HTML
@@ -187,7 +189,7 @@ export function AiTextTool({ tool }: { tool: AiToolConfig }) {
                   if (inputRef.current) inputRef.current.value = ""
                 }}
                 className="shrink-0 rounded-md p-1.5 text-muted-foreground transition-colors hover:bg-white/10 hover:text-foreground"
-                aria-label="Usuń plik"
+                aria-label={t.aiTool.removeFile}
               >
                 <X className="size-4" />
               </button>
@@ -202,8 +204,8 @@ export function AiTextTool({ tool }: { tool: AiToolConfig }) {
             rows={mode === "translate" ? 5 : 4}
             placeholder={
               mode === "translate"
-                ? "Wklej tekst do przetłumaczenia…"
-                : "Opisz, co ma napisać AI, np. „opis produktu dla ekologicznej butelki na wodę”…"
+                ? t.aiTool.translatePlaceholder
+                : t.aiTool.copyPlaceholder
             }
             className="w-full resize-y rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 text-sm leading-relaxed text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:border-primary/50"
           />
@@ -211,15 +213,17 @@ export function AiTextTool({ tool }: { tool: AiToolConfig }) {
           <div className="flex flex-wrap items-center gap-3">
             {mode === "copywriting" && (
               <label className="flex items-center gap-2 text-sm text-muted-foreground">
-                Ton:
+                {t.aiTool.toneLabel}:
                 <select
                   value={tone}
-                  onChange={(e) => setTone(e.target.value)}
+                  onChange={(e) =>
+                    setTone(e.target.value as (typeof TONE_KEYS)[number])
+                  }
                   className="rounded-lg border border-white/10 bg-white/[0.03] px-3 py-1.5 text-sm text-foreground outline-none focus:border-primary/50"
                 >
-                  {TONES.map((t) => (
-                    <option key={t} value={t} className="bg-background">
-                      {t}
+                  {TONE_KEYS.map((key) => (
+                    <option key={key} value={key} className="bg-background">
+                      {t.aiTool.tones[key]}
                     </option>
                   ))}
                 </select>
@@ -227,15 +231,19 @@ export function AiTextTool({ tool }: { tool: AiToolConfig }) {
             )}
             {mode === "translate" && (
               <label className="flex items-center gap-2 text-sm text-muted-foreground">
-                Język docelowy:
+                {t.aiTool.targetLangLabel}:
                 <select
                   value={targetLang}
-                  onChange={(e) => setTargetLang(e.target.value)}
+                  onChange={(e) =>
+                    setTargetLang(
+                      e.target.value as (typeof LANGUAGE_KEYS)[number],
+                    )
+                  }
                   className="rounded-lg border border-white/10 bg-white/[0.03] px-3 py-1.5 text-sm text-foreground outline-none focus:border-primary/50"
                 >
-                  {LANGUAGES.map((l) => (
-                    <option key={l} value={l} className="bg-background">
-                      {l}
+                  {LANGUAGE_KEYS.map((key) => (
+                    <option key={key} value={key} className="bg-background">
+                      {t.aiTool.languages[key]}
                     </option>
                   ))}
                 </select>
@@ -254,16 +262,16 @@ export function AiTextTool({ tool }: { tool: AiToolConfig }) {
         {loading ? (
           <>
             <Loader2 className="size-4 animate-spin" />
-            Generowanie…
+            {t.aiTool.generating}
           </>
         ) : (
           <>
             <Sparkles className="size-4" />
             {mode === "translate"
-              ? "Przetłumacz"
+              ? t.aiTool.translate
               : mode === "summarize"
-                ? "Podsumuj dokument"
-                : "Wygeneruj tekst"}
+                ? t.aiTool.summarizeDoc
+                : t.aiTool.generateText}
           </>
         )}
       </button>
@@ -278,7 +286,7 @@ export function AiTextTool({ tool }: { tool: AiToolConfig }) {
       {output && (
         <div className="rounded-xl border border-primary/25 bg-primary/[0.06] p-4">
           <div className="mb-3 flex items-center justify-between">
-            <span className="text-sm font-semibold text-foreground">Wynik</span>
+            <span className="text-sm font-semibold text-foreground">{t.aiTool.result}</span>
             <button
               type="button"
               onClick={copy}
@@ -286,11 +294,11 @@ export function AiTextTool({ tool }: { tool: AiToolConfig }) {
             >
               {copied ? (
                 <>
-                  <Check className="size-3.5 text-primary" /> Skopiowano
+                  <Check className="size-3.5 text-primary" /> {t.aiTool.copied}
                 </>
               ) : (
                 <>
-                  <Copy className="size-3.5" /> Kopiuj
+                  <Copy className="size-3.5" /> {t.aiTool.copy}
                 </>
               )}
             </button>
