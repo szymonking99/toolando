@@ -11,8 +11,40 @@ import { AiTool } from "@/components/ai-tool"
 import { PremiumPaywall } from "@/components/premium-paywall"
 import { getCurrentUser, isUserPremium } from "@/lib/user"
 import { getDictionary } from "@/lib/i18n/dictionaries"
+import { getAiMeta } from "@/lib/i18n/ai-meta"
+import {
+  getCategoryLabel,
+  getConversionDescription,
+  getSpecialMeta,
+  getAiCategoryLabel,
+} from "@/lib/i18n/tool-meta"
 import { localeHref } from "@/lib/i18n/href"
 import { AdSlot } from "@/components/ad-slot"
+
+/** Resolve a localized display name + description for any tool id. */
+function resolveToolText(
+  locale: string,
+  id: string,
+): { name: string; description: string } | undefined {
+  const special = getSpecialTool(id)
+  if (special) {
+    const meta = getSpecialMeta(locale, special.id)
+    return { name: meta.name, description: meta.description }
+  }
+  const ai = getAiTool(id)
+  if (ai) {
+    const meta = getAiMeta(locale)[ai.id]
+    return { name: meta.name, description: meta.description }
+  }
+  const tool = getTool(id)
+  if (tool) {
+    return {
+      name: tool.name,
+      description: getConversionDescription(locale, tool.from, tool.to),
+    }
+  }
+  return undefined
+}
 
 export function generateStaticParams() {
   return [
@@ -29,39 +61,28 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { id, locale } = await params
   const dict = await getDictionary(locale)
-  const tool = getTool(id) ?? getSpecialTool(id) ?? getAiTool(id)
-  if (!tool) return { title: `${dict.tool.notFound} — Toolando` }
-  const title = `${tool.name} — Toolando`
+  const text = resolveToolText(locale, id)
+  if (!text) return { title: `${dict.tool.notFound} — Toolando` }
+  const title = `${text.name} — Toolando`
   return {
     title,
-    description: tool.description,
+    description: text.description,
     alternates: { canonical: `/${locale}/tools/${id}` },
     openGraph: {
       title,
-      description: tool.description,
+      description: text.description,
       url: `/${locale}/tools/${id}`,
       siteName: "Toolando",
       type: "website",
-      images: [{ url: "/og-image.png", width: 1200, height: 630, alt: tool.name }],
+      images: [{ url: "/og-image.png", width: 1200, height: 630, alt: text.name }],
     },
     twitter: {
       card: "summary_large_image",
       title,
-      description: tool.description,
+      description: text.description,
       images: ["/og-image.png"],
     },
   }
-}
-
-const CATEGORY_LABELS: Record<string, string> = {
-  audio: "Audio",
-  video: "Wideo",
-  image: "Obrazy",
-  pdf: "PDF",
-  doc: "Dokumenty",
-  data: "Dane",
-  archive: "Archiwa",
-  font: "Fonty",
 }
 
 function ToolShell({
@@ -131,6 +152,8 @@ export default async function ToolPage({
   const ai = getAiTool(id)
   if (ai) {
     const relatedAi = aiTools.filter((t) => t.id !== ai.id)
+    const aiMeta = getAiMeta(locale)
+    const aiText = aiMeta[ai.id]
     // Narzędzia AI są dostępne wyłącznie dla użytkowników Premium.
     const currentUser = await getCurrentUser()
     const hasPremium = currentUser ? await isUserPremium(currentUser.id) : false
@@ -139,9 +162,9 @@ export default async function ToolPage({
         <ToolShell
           locale={locale}
           backLabel={dict.tool.back}
-          category={ai.category}
-          name={ai.name}
-          description={ai.description}
+          category={getAiCategoryLabel(locale, ai.id)}
+          name={aiText.name}
+          description={aiText.description}
         >
           <section className="mt-8 rounded-2xl border border-primary/20 bg-primary/[0.04] p-6 backdrop-blur-md">
             {hasPremium ? (
@@ -149,7 +172,7 @@ export default async function ToolPage({
             ) : (
               <PremiumPaywall
                 isLoggedIn={Boolean(currentUser)}
-                toolName={ai.name}
+                toolName={aiText.name}
               />
             )}
           </section>
@@ -167,10 +190,10 @@ export default async function ToolPage({
                     className="group flex items-center justify-between rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 transition-colors hover:border-primary/40 hover:bg-white/[0.06]"
                   >
                     <span className="text-sm font-medium text-foreground">
-                      {t.name}
+                      {aiMeta[t.id].name}
                     </span>
                     <span className="text-xs text-muted-foreground">
-                      {t.tagline}
+                      {aiMeta[t.id].tagline}
                     </span>
                   </Link>
                 ))}
@@ -185,14 +208,15 @@ export default async function ToolPage({
   const special = getSpecialTool(id)
   if (special) {
     const relatedSpecial = specialTools.filter((t) => t.id !== special.id)
+    const specialText = getSpecialMeta(locale, special.id)
     return (
       <div className="min-h-dvh">
         <ToolShell
           locale={locale}
           backLabel={dict.tool.back}
-          category={special.category}
-          name={special.name}
-          description={special.description}
+          category={specialText.category}
+          name={specialText.name}
+          description={specialText.description}
         >
           <section className="mt-8 rounded-2xl border border-white/10 bg-white/[0.03] p-6 backdrop-blur-md">
             <SpecialTool tool={special} />
@@ -204,20 +228,23 @@ export default async function ToolPage({
                 {dict.tool.otherTools}
               </h2>
               <div className="mt-4 grid gap-3 sm:grid-cols-2">
-                {relatedSpecial.map((t) => (
-                  <Link
-                    key={t.id}
-                    href={localeHref(locale, `/tools/${t.id}`)}
-                    className="group flex items-center justify-between rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 transition-colors hover:border-primary/40 hover:bg-white/[0.06]"
-                  >
-                    <span className="text-sm font-medium text-foreground">
-                      {t.name}
-                    </span>
-                    <span className="text-xs text-muted-foreground">
-                      {t.category}
-                    </span>
-                  </Link>
-                ))}
+                {relatedSpecial.map((t) => {
+                  const meta = getSpecialMeta(locale, t.id)
+                  return (
+                    <Link
+                      key={t.id}
+                      href={localeHref(locale, `/tools/${t.id}`)}
+                      className="group flex items-center justify-between rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 transition-colors hover:border-primary/40 hover:bg-white/[0.06]"
+                    >
+                      <span className="text-sm font-medium text-foreground">
+                        {meta.name}
+                      </span>
+                      <span className="text-xs text-muted-foreground">
+                        {meta.category}
+                      </span>
+                    </Link>
+                  )
+                })}
               </div>
             </section>
           )}
@@ -239,9 +266,9 @@ export default async function ToolPage({
       <ToolShell
         locale={locale}
         backLabel={dict.tool.back}
-        category={CATEGORY_LABELS[tool.category] ?? tool.category}
+        category={getCategoryLabel(locale, tool.category)}
         name={tool.name}
-        description={tool.description}
+        description={getConversionDescription(locale, tool.from, tool.to)}
       >
         <section className="mt-8 rounded-2xl border border-white/10 bg-white/[0.03] p-6 backdrop-blur-md">
           <ToolConverter tool={tool} />

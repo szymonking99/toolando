@@ -4,6 +4,7 @@ import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 import { getTool } from "@/lib/tools"
 import { useI18n } from "@/components/i18n-provider"
+import { getCategoryLabel } from "@/lib/i18n/tool-meta"
 
 // Curated most-popular converters, featuring both directions of each pair.
 const POPULAR_IDS = [
@@ -22,7 +23,7 @@ const POPULAR_IDS = [
 ]
 
 export function PopularToolsSection() {
-  const { t, href } = useI18n()
+  const { t, locale, href } = useI18n()
   const popular = POPULAR_IDS.map((id) => getTool(id)).filter(
     (tool): tool is NonNullable<typeof tool> => Boolean(tool),
   )
@@ -62,7 +63,7 @@ export function PopularToolsSection() {
               </span>
             </div>
             <span className="text-xs uppercase tracking-wide text-muted-foreground">
-              {tool.category}
+              {getCategoryLabel(locale, tool.category)}
             </span>
           </Link>
         ))}
