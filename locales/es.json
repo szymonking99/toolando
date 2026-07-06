@@ -261,5 +261,30 @@
     "signInToBuy": "Inicia sesión para comprar Premium",
     "noAccount": "¿No tienes cuenta?",
     "signUp": "Regístrate"
+  },
+  "account": {
+    "backToHome": "Volver a la página principal",
+    "yourAccount": "Tu cuenta",
+    "premiumBadge": "Premium",
+    "freeBadge": "Cuenta gratuita",
+    "premiumActiveTitle": "Tienes Premium activo",
+    "premiumActiveDesc": "¡Gracias por tu apoyo! Tienes acceso completo a todas las herramientas de IA sin límites.",
+    "manageSubscription": "Gestionar suscripción",
+    "manageOpening": "Abriendo…",
+    "managePortalError": "No se pudo abrir el portal.",
+    "manageGenericError": "Se produjo un error.",
+    "goPremiumTitle": "Cambiar a Premium",
+    "feature1": "Acceso ilimitado a las herramientas de IA",
+    "feature2": "Eliminación de fondo, generación de imágenes y textos",
+    "feature3": "Procesamiento prioritario",
+    "buyPremium": "Comprar Premium",
+    "buyRedirecting": "Redirigiendo…",
+    "refreshHint": "¿Pagaste pero Premium sigue inactivo? Actualiza tu estado:",
+    "refreshStatus": "Actualizar estado Premium",
+    "refreshChecking": "Comprobando...",
+    "refreshNoSub": "No se encontró ninguna suscripción activa. Si acabas de pagar, espera un momento e inténtalo de nuevo.",
+    "refreshFailed": "No se pudo actualizar el estado.",
+    "refreshNetworkError": "Se produjo un error de red. Inténtalo de nuevo.",
+    "signOut": "Cerrar sesión"
   }
 }

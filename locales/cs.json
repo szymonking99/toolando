@@ -261,5 +261,30 @@
     "signInToBuy": "Sign in to buy Premium",
     "noAccount": "Don't have an account?",
     "signUp": "Sign up"
+  },
+  "account": {
+    "backToHome": "Back to homepage",
+    "yourAccount": "Your account",
+    "premiumBadge": "Premium",
+    "freeBadge": "Free account",
+    "premiumActiveTitle": "You have active Premium",
+    "premiumActiveDesc": "Thank you for your support! You have full access to all AI tools without limits.",
+    "manageSubscription": "Manage subscription",
+    "manageOpening": "Opening…",
+    "managePortalError": "Could not open the portal.",
+    "manageGenericError": "An error occurred.",
+    "goPremiumTitle": "Go Premium",
+    "feature1": "Unlimited access to AI tools",
+    "feature2": "Background removal, image and text generation",
+    "feature3": "Priority processing",
+    "buyPremium": "Buy Premium",
+    "buyRedirecting": "Redirecting…",
+    "refreshHint": "Paid but Premium still inactive? Refresh your status:",
+    "refreshStatus": "Refresh Premium status",
+    "refreshChecking": "Checking...",
+    "refreshNoSub": "No active subscription found. If you just paid, wait a moment and try again.",
+    "refreshFailed": "Could not refresh status.",
+    "refreshNetworkError": "A network error occurred. Please try again.",
+    "signOut": "Sign out"
   }
 }
