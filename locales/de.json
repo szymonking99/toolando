@@ -12,7 +12,9 @@
     "cta": "Loslegen",
     "openMenu": "Menü öffnen",
     "closeMenu": "Menü schließen",
-    "allTools": "Alle Werkzeuge"
+    "allTools": "Alle Werkzeuge",
+    "signIn": "Anmelden",
+    "account": "Mein Konto"
   },
   "hero": {
     "badge": "Ein neues Ökosystem für Online-Tools",
@@ -29,7 +31,28 @@
     "kindImages": "Bilder",
     "kindVideo": "Video",
     "kindAudio": "Audio",
-    "kindDocs": "PDF, Code und Daten"
+    "kindDocs": "PDF, Code und Daten",
+    "readError": "Dateiinhalt konnte nicht gelesen werden.",
+    "dropAny": "Beliebige Datei hierher ziehen oder zum Auswählen klicken",
+    "dropHint": "Bilder, Video, Audio, PDF, Dokumente, Code, Daten — jedes Format. Dateien werden lokal im Browser geöffnet und nirgendwo hochgeladen.",
+    "noConverter": "Für dieses Format haben wir noch keinen Konverter — du kannst die Datei aber unten ansehen und herunterladen.",
+    "convertTo": "In ein anderes Format konvertieren",
+    "optionOne": "Option",
+    "optionMany": "Optionen",
+    "downloadedOk": "Fertig! Die Datei wurde heruntergeladen.",
+    "download": "Herunterladen",
+    "close": "Schließen",
+    "emptyFile": "(leere Datei)",
+    "textTruncated": "Vorschau auf die ersten 200.000 Zeichen gekürzt. Lade die Datei herunter, um alles zu sehen.",
+    "binaryPreview": "Binärvorschau (erste Bytes in hexadezimaler Form)",
+    "kinds": {
+      "image": "Bild",
+      "video": "Video",
+      "audio": "Audio",
+      "pdf": "PDF-Dokument",
+      "text": "Text / Code",
+      "binary": "Binärdatei"
+    }
   },
   "ai": {
     "badge": "Premium-KI",
@@ -123,7 +146,33 @@
     "addMore": "Weitere Dateien hinzufügen",
     "merge": "Dateien zusammenführen",
     "result": "Ergebnis",
-    "notFound": "Werkzeug nicht gefunden"
+    "notFound": "Werkzeug nicht gefunden",
+    "convertFailed": "Konvertierung fehlgeschlagen.",
+    "connectionError": "Verbindung zum Server fehlgeschlagen. Bitte versuche es erneut.",
+    "unavailable": "Dieser Konverter ist derzeit nicht verfügbar",
+    "dropClick": "Datei hierher ziehen oder zum Auswählen klicken",
+    "dropClickMulti": "Dateien hierher ziehen oder zum Auswählen klicken",
+    "supportedFormat": "Unterstütztes Format",
+    "supported": "Unterstützt",
+    "maxSize": "max. 500 MB",
+    "removeFile": "Datei entfernen",
+    "convertDone": "Konvertierung abgeschlossen",
+    "downloadNamed": "Herunterladen",
+    "convertAnother": "Weitere Datei konvertieren",
+    "uploadingFile": "Datei wird hochgeladen…",
+    "uploadingFiles": "Dateien werden hochgeladen…",
+    "uploading": "Wird hochgeladen…",
+    "converting": "Wird konvertiert…",
+    "convertToPrefix": "Konvertieren in",
+    "needTwoPdf": "Füge mindestens zwei PDF-Dateien zum Zusammenführen hinzu.",
+    "operationFailed": "Der Vorgang ist fehlgeschlagen.",
+    "compressionQuality": "Komprimierungsqualität",
+    "qualityHint": "Niedrigerer Wert = kleinere Datei. Höherer Wert = bessere Qualität.",
+    "done": "Fertig",
+    "less": "weniger",
+    "resultPreview": "Ergebnisvorschau",
+    "startOver": "Neu beginnen",
+    "processingLong": "Wird verarbeitet (kann einige Sekunden dauern)…"
   },
   "aiTool": {
     "prompt": "Dein Text",
@@ -150,7 +199,46 @@
     "clear": "Löschen",
     "thinking": "Denke nach…",
     "aiError": "Keine KI-Antwort erhalten. Bitte versuche es erneut.",
-    "emptyChat": "Stelle eine Frage, um das Gespräch zu beginnen."
+    "emptyChat": "Stelle eine Frage, um das Gespräch zu beginnen.",
+    "generateFailed": "Antwort konnte nicht generiert werden.",
+    "noContent": "Der KI-Dienst hat keinen Inhalt zurückgegeben. Prüfe, ob AI Gateway aktiv ist (erfordert eine Zahlungskarte).",
+    "connectionError": "Ein Verbindungsfehler ist aufgetreten. Bitte versuche es erneut.",
+    "dropDoc": "Dokument hierher ziehen oder zum Auswählen klicken",
+    "removeFile": "Datei entfernen",
+    "translatePlaceholder": "Text zum Übersetzen einfügen…",
+    "copyPlaceholder": "Beschreibe, was die KI schreiben soll, z. B. „eine Produktbeschreibung für eine umweltfreundliche Wasserflasche“…",
+    "toneLabel": "Tonfall",
+    "targetLangLabel": "Zielsprache",
+    "translate": "Übersetzen",
+    "summarizeDoc": "Dokument zusammenfassen",
+    "generateText": "Text generieren",
+    "imageFailed": "Bild konnte nicht generiert werden.",
+    "imagePromptPlaceholder": "Beschreibe das Bild, z. B. „eine futuristische Stadt bei Sonnenuntergang, Aquarellstil“…",
+    "ratioSquare": "Quadrat 1:1",
+    "ratioLandscape": "Querformat 3:2",
+    "ratioPortrait": "Hochformat 2:3",
+    "generatingImage": "Bild wird generiert (kann einige Sekunden dauern)…",
+    "generateImage": "Bild generieren",
+    "generatedImageAlt": "Generiertes Bild",
+    "downloadImage": "Bild herunterladen",
+    "tones": {
+      "professional": "professionell",
+      "friendly": "freundlich",
+      "energetic": "energisch",
+      "formal": "förmlich",
+      "playful": "verspielt",
+      "persuasive": "überzeugend"
+    },
+    "languages": {
+      "english": "Englisch",
+      "german": "Deutsch",
+      "spanish": "Spanisch",
+      "french": "Französisch",
+      "italian": "Italienisch",
+      "ukrainian": "Ukrainisch",
+      "polish": "Polnisch",
+      "japanese": "Japanisch"
+    }
   },
   "category": {
     "back": "Startseite",
@@ -161,5 +249,17 @@
     "soon": "Bald",
     "open": "Öffnen",
     "notFound": "Kategorie nicht gefunden"
+  },
+  "paywall": {
+    "unlockTitle": "„{tool}“ mit Premium freischalten",
+    "description": "Schalte alle KI-Tools von Toolando frei — Text- und Bildgenerierung, Übersetzung, Zusammenfassungen und den Assistenten — in einem Abo.",
+    "feature1": "Unbegrenzter Zugriff auf alle KI-Tools",
+    "feature2": "Textgenerator, Bildgenerator und Übersetzer",
+    "feature3": "Bevorzugte Verarbeitung von Anfragen",
+    "goPremium": "Auf Premium upgraden",
+    "redirecting": "Weiterleitung…",
+    "signInToBuy": "Anmelden, um Premium zu kaufen",
+    "noAccount": "Noch kein Konto?",
+    "signUp": "Registrieren"
   }
 }

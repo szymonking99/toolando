@@ -3,6 +3,7 @@
 import Link from "next/link"
 import { Crown, User } from "lucide-react"
 import { useUser } from "@/hooks/use-user"
+import { useI18n } from "@/components/i18n-provider"
 import { cn } from "@/lib/utils"
 
 type AccountNavButtonProps = {
@@ -16,6 +17,7 @@ type AccountNavButtonProps = {
  */
 export function AccountNavButton({ fullWidth, className }: AccountNavButtonProps) {
   const { isLoggedIn, isPremium, isLoading } = useUser()
+  const { t } = useI18n()
 
   if (isLoading) {
     return (
@@ -43,7 +45,7 @@ export function AccountNavButton({ fullWidth, className }: AccountNavButtonProps
         )}
       >
         <User className="size-4" aria-hidden="true" />
-        Zaloguj się
+        {t.nav.signIn}
       </Link>
     )
   }
@@ -62,7 +64,7 @@ export function AccountNavButton({ fullWidth, className }: AccountNavButtonProps
       ) : (
         <User className="size-4" aria-hidden="true" />
       )}
-      Moje konto
+      {t.nav.account}
     </Link>
   )
 }

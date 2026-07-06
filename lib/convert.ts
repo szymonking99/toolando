@@ -792,17 +792,30 @@ function audioArgs(to: string, inPath: string, outPath: string): string[] {
 }
 
 function videoArgs(to: string, inPath: string, outPath: string): string[] {
-  const base = ["-y", "-i", inPath];
+  // `-threads 0` lets ffmpeg use every available core on the serverless CPU.
+  const base = ["-y", "-threads", "0", "-i", inPath];
   switch (to.toLowerCase()) {
     case "webm":
+      // VP9 at the default speed (cpu-used 0, single row) is extremely slow and
+      // times out on longer clips. `-deadline realtime -cpu-used 8 -row-mt 1`
+      // uses the fastest multithreaded path, trading a little quality for a
+      // conversion that actually finishes inside the function budget.
       return [
         ...base,
         "-c:v",
         "libvpx-vp9",
         "-b:v",
         "1M",
+        "-deadline",
+        "realtime",
+        "-cpu-used",
+        "8",
+        "-row-mt",
+        "1",
         "-c:a",
         "libopus",
+        "-b:a",
+        "128k",
         outPath,
       ];
     case "mp4":
@@ -815,7 +828,7 @@ function videoArgs(to: string, inPath: string, outPath: string): string[] {
         "-c:v",
         "libx264",
         "-preset",
-        "veryfast",
+        "ultrafast",
         "-crf",
         "23",
         "-pix_fmt",

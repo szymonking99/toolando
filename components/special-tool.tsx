@@ -1,6 +1,6 @@
 "use client"
 
-import { useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import {
   Upload,
   Loader2,
@@ -11,6 +11,8 @@ import {
 } from "lucide-react"
 import type { SpecialToolConfig } from "@/lib/special-tools"
 import { uploadManyAndProcess } from "@/lib/client-upload"
+import { useI18n } from "@/components/i18n-provider"
+import { useFakeProgress } from "@/hooks/use-fake-progress"
 
 type Status = "idle" | "uploading" | "working" | "done" | "error"
 
@@ -21,6 +23,7 @@ function formatBytes(bytes: number) {
 }
 
 export function SpecialTool({ tool }: { tool: SpecialToolConfig }) {
+  const { t } = useI18n()
   const inputRef = useRef<HTMLInputElement>(null)
   const [files, setFiles] = useState<File[]>([])
   const [quality, setQuality] = useState(75)
@@ -36,6 +39,21 @@ export function SpecialTool({ tool }: { tool: SpecialToolConfig }) {
   } | null>(null)
 
   const isImageResult = tool.engine !== "merge-pdf"
+  const workProgress = useFakeProgress(status === "working")
+
+  // Live thumbnails for selected image files (before processing).
+  const [previews, setPreviews] = useState<string[]>([])
+  useEffect(() => {
+    const urls = files.map((f) =>
+      f.type.startsWith("image/") ? URL.createObjectURL(f) : "",
+    )
+    setPreviews(urls)
+    return () => {
+      for (const url of urls) {
+        if (url) URL.revokeObjectURL(url)
+      }
+    }
+  }, [files])
 
   function clearResult() {
     if (result) URL.revokeObjectURL(result.url)
@@ -67,7 +85,7 @@ export function SpecialTool({ tool }: { tool: SpecialToolConfig }) {
   async function run() {
     if (files.length === 0) return
     if (tool.engine === "merge-pdf" && files.length < 2) {
-      setError("Dodaj co najmniej dwa pliki PDF do połączenia.")
+      setError(t.tool.needTwoPdf)
       return
     }
 
@@ -94,7 +112,7 @@ export function SpecialTool({ tool }: { tool: SpecialToolConfig }) {
       })
 
       if (!res.ok) {
-        let message = "Operacja nie powiodła się."
+        let message = t.tool.operationFailed
         try {
           const data = await res.json()
           if (data?.error) message = data.error
@@ -109,7 +127,7 @@ export function SpecialTool({ tool }: { tool: SpecialToolConfig }) {
       const blob = await res.blob()
       const disposition = res.headers.get("Content-Disposition") ?? ""
       const match = disposition.match(/filename="?([^"]+)"?/)
-      const name = match ? decodeURIComponent(match[1]) : "wynik"
+      const name = match ? decodeURIComponent(match[1]) : t.tool.result
 
       setResult({
         url: URL.createObjectURL(blob),
@@ -119,7 +137,7 @@ export function SpecialTool({ tool }: { tool: SpecialToolConfig }) {
       })
       setStatus("done")
     } catch {
-      setError("Nie udało się połączyć z serwerem. Spróbuj ponownie.")
+      setError(t.tool.connectionError)
       setStatus("error")
     }
   }
@@ -157,12 +175,10 @@ export function SpecialTool({ tool }: { tool: SpecialToolConfig }) {
           <Upload className="size-5" />
         </span>
         <span className="text-sm font-medium text-foreground">
-          {tool.multiple
-            ? "Przeciągnij pliki tutaj lub kliknij, aby wybrać"
-            : "Przeciągnij plik tutaj lub kliknij, aby wybrać"}
+          {tool.multiple ? t.tool.dropClickMulti : t.tool.dropClick}
         </span>
         <span className="text-xs text-muted-foreground">
-          Obsługiwane: {tool.acceptLabel} • maks. 500 MB
+          {t.tool.supported}: {tool.acceptLabel} • {t.tool.maxSize}
         </span>
       </label>
 
@@ -179,6 +195,14 @@ export function SpecialTool({ tool }: { tool: SpecialToolConfig }) {
                     {index + 1}
                   </span>
                 )}
+                {previews[index] && (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={previews[index] || "/placeholder.svg"}
+                    alt={file.name}
+                    className="size-12 shrink-0 rounded-md border border-white/10 object-cover"
+                  />
+                )}
                 <div className="min-w-0">
                   <p className="truncate text-sm font-medium text-foreground">
                     {file.name}
@@ -192,7 +216,7 @@ export function SpecialTool({ tool }: { tool: SpecialToolConfig }) {
                 type="button"
                 onClick={() => removeFile(index)}
                 className="shrink-0 rounded-md p-1.5 text-muted-foreground transition-colors hover:bg-white/10 hover:text-foreground"
-                aria-label="Usuń plik"
+                aria-label={t.tool.removeFile}
               >
                 <X className="size-4" />
               </button>
@@ -208,7 +232,7 @@ export function SpecialTool({ tool }: { tool: SpecialToolConfig }) {
               htmlFor="quality"
               className="text-sm font-medium text-foreground"
             >
-              Jakość kompresji
+              {t.tool.compressionQuality}
             </label>
             <span className="text-sm font-semibold text-primary">{quality}%</span>
           </div>
@@ -223,7 +247,7 @@ export function SpecialTool({ tool }: { tool: SpecialToolConfig }) {
             className="mt-3 w-full accent-primary"
           />
           <p className="mt-2 text-xs text-muted-foreground">
-            Niższa wartość = mniejszy plik. Wyższa wartość = lepsza jakość.
+            {t.tool.qualityHint}
           </p>
         </div>
       )}
@@ -239,13 +263,13 @@ export function SpecialTool({ tool }: { tool: SpecialToolConfig }) {
         <div className="space-y-4 rounded-xl border border-primary/25 bg-primary/[0.06] px-4 py-4">
           <div className="flex items-center gap-2 text-sm font-medium text-foreground">
             <CheckCircle2 className="size-4 text-primary" />
-            Gotowe
+            {t.tool.done}
             {tool.hasQuality && originalSize > 0 && (
               <span className="text-muted-foreground">
                 {" "}
                 — {formatBytes(originalSize)} → {formatBytes(result.size)} (
                 {Math.max(0, Math.round((1 - result.size / originalSize) * 100))}
-                % mniej)
+                % {t.tool.less})
               </span>
             )}
           </div>
@@ -264,7 +288,7 @@ export function SpecialTool({ tool }: { tool: SpecialToolConfig }) {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={result.url || "/placeholder.svg"}
-                alt="Podgląd wyniku"
+                alt={t.tool.resultPreview}
                 className="mx-auto max-h-80 w-auto"
               />
             </div>
@@ -277,14 +301,14 @@ export function SpecialTool({ tool }: { tool: SpecialToolConfig }) {
               className="inline-flex items-center gap-2 rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/85"
             >
               <Download className="size-4" />
-              Pobierz {result.name}
+              {t.tool.downloadNamed} {result.name}
             </a>
             <button
               type="button"
               onClick={reset}
               className="inline-flex items-center rounded-md border border-white/15 px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-white/5"
             >
-              Zacznij od nowa
+              {t.tool.startOver}
             </button>
           </div>
         </div>
@@ -293,13 +317,31 @@ export function SpecialTool({ tool }: { tool: SpecialToolConfig }) {
           {status === "uploading" && (
             <div className="space-y-1.5">
               <div className="flex items-center justify-between text-xs text-muted-foreground">
-                <span>Przesyłanie plików…</span>
+                <span>{t.tool.uploadingFiles}</span>
                 <span>{progress}%</span>
               </div>
               <div className="h-2 w-full overflow-hidden rounded-full bg-white/10">
                 <div
                   className="h-full rounded-full bg-primary transition-all"
                   style={{ width: `${progress}%` }}
+                />
+              </div>
+            </div>
+          )}
+          {status === "working" && (
+            <div className="space-y-1.5">
+              <div className="flex items-center justify-between text-xs text-muted-foreground">
+                <span>
+                  {tool.engine === "remove-bg"
+                    ? t.tool.processingLong
+                    : t.tool.processing}
+                </span>
+                <span>{workProgress}%</span>
+              </div>
+              <div className="h-2 w-full overflow-hidden rounded-full bg-white/10">
+                <div
+                  className="h-full rounded-full bg-primary transition-all duration-200"
+                  style={{ width: `${workProgress}%` }}
                 />
               </div>
             </div>
@@ -317,14 +359,14 @@ export function SpecialTool({ tool }: { tool: SpecialToolConfig }) {
             {status === "uploading" ? (
               <>
                 <Loader2 className="size-4 animate-spin" />
-                Przesyłanie… {progress}%
+                {t.tool.uploading} {progress}%
               </>
             ) : status === "working" ? (
               <>
                 <Loader2 className="size-4 animate-spin" />
                 {tool.engine === "remove-bg"
-                  ? "Przetwarzanie (może potrwać kilka sekund)…"
-                  : "Przetwarzanie…"}
+                  ? t.tool.processingLong
+                  : t.tool.processing}
               </>
             ) : (
               tool.actionLabel

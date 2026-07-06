@@ -4,6 +4,8 @@ import { useRef, useState } from "react"
 import { Upload, Loader2, CheckCircle2, AlertCircle, Download, X } from "lucide-react"
 import type { ToolConfig } from "@/lib/tools"
 import { uploadAndProcess } from "@/lib/client-upload"
+import { useI18n } from "@/components/i18n-provider"
+import { useFakeProgress } from "@/hooks/use-fake-progress"
 
 type Status = "idle" | "uploading" | "converting" | "done" | "error"
 
@@ -14,6 +16,7 @@ function formatBytes(bytes: number) {
 }
 
 export function ToolConverter({ tool }: { tool: ToolConfig }) {
+  const { t } = useI18n()
   const inputRef = useRef<HTMLInputElement>(null)
   const [file, setFile] = useState<File | null>(null)
   const [status, setStatus] = useState<Status>("idle")
@@ -23,6 +26,7 @@ export function ToolConverter({ tool }: { tool: ToolConfig }) {
   const [result, setResult] = useState<{ url: string; name: string } | null>(
     null,
   )
+  const convProgress = useFakeProgress(status === "converting")
 
   function reset() {
     setFile(null)
@@ -71,7 +75,7 @@ export function ToolConverter({ tool }: { tool: ToolConfig }) {
       })
 
       if (!res.ok) {
-        let message = "Konwersja nie powiodła się."
+        let message = t.tool.convertFailed
         try {
           const data = await res.json()
           if (data?.error) message = data.error
@@ -93,7 +97,7 @@ export function ToolConverter({ tool }: { tool: ToolConfig }) {
       setResult({ url: URL.createObjectURL(blob), name })
       setStatus("done")
     } catch {
-      setError("Nie udało się połączyć z serwerem. Spróbuj ponownie.")
+      setError(t.tool.connectionError)
       setStatus("error")
     }
   }
@@ -105,7 +109,7 @@ export function ToolConverter({ tool }: { tool: ToolConfig }) {
           <AlertCircle className="mt-0.5 size-5 shrink-0 text-amber-300" />
           <div>
             <p className="font-medium text-foreground">
-              Ten konwerter jest obecnie niedostępny
+              {t.tool.unavailable}
             </p>
             <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
               {tool.unsupportedReason}
@@ -146,10 +150,10 @@ export function ToolConverter({ tool }: { tool: ToolConfig }) {
           <Upload className="size-5" />
         </span>
         <span className="text-sm font-medium text-foreground">
-          Przeciągnij plik tutaj lub kliknij, aby wybrać
+          {t.tool.dropClick}
         </span>
         <span className="text-xs text-muted-foreground">
-          Obsługiwany format: {tool.from.toUpperCase()} • maks. 500 MB
+          {t.tool.supportedFormat}: {tool.from.toUpperCase()} • {t.tool.maxSize}
         </span>
       </label>
 
@@ -167,7 +171,7 @@ export function ToolConverter({ tool }: { tool: ToolConfig }) {
             type="button"
             onClick={reset}
             className="shrink-0 rounded-md p-1.5 text-muted-foreground transition-colors hover:bg-white/10 hover:text-foreground"
-            aria-label="Usuń plik"
+            aria-label={t.tool.removeFile}
           >
             <X className="size-4" />
           </button>
@@ -185,7 +189,7 @@ export function ToolConverter({ tool }: { tool: ToolConfig }) {
         <div className="space-y-3 rounded-xl border border-primary/25 bg-primary/[0.06] px-4 py-4">
           <div className="flex items-center gap-2 text-sm font-medium text-foreground">
             <CheckCircle2 className="size-4 text-primary" />
-            Konwersja zakończona
+            {t.tool.convertDone}
           </div>
           <div className="flex flex-wrap gap-3">
             <a
@@ -194,14 +198,14 @@ export function ToolConverter({ tool }: { tool: ToolConfig }) {
               className="inline-flex items-center gap-2 rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/85"
             >
               <Download className="size-4" />
-              Pobierz {result.name}
+              {t.tool.downloadNamed} {result.name}
             </a>
             <button
               type="button"
               onClick={reset}
               className="inline-flex items-center rounded-md border border-white/15 px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-white/5"
             >
-              Konwertuj kolejny plik
+              {t.tool.convertAnother}
             </button>
           </div>
         </div>
@@ -210,13 +214,27 @@ export function ToolConverter({ tool }: { tool: ToolConfig }) {
           {status === "uploading" && (
             <div className="space-y-1.5">
               <div className="flex items-center justify-between text-xs text-muted-foreground">
-                <span>Przesyłanie pliku…</span>
+                <span>{t.tool.uploadingFile}</span>
                 <span>{progress}%</span>
               </div>
               <div className="h-2 w-full overflow-hidden rounded-full bg-white/10">
                 <div
                   className="h-full rounded-full bg-primary transition-all"
                   style={{ width: `${progress}%` }}
+                />
+              </div>
+            </div>
+          )}
+          {status === "converting" && (
+            <div className="space-y-1.5">
+              <div className="flex items-center justify-between text-xs text-muted-foreground">
+                <span>{t.tool.converting}</span>
+                <span>{convProgress}%</span>
+              </div>
+              <div className="h-2 w-full overflow-hidden rounded-full bg-white/10">
+                <div
+                  className="h-full rounded-full bg-primary transition-all duration-200"
+                  style={{ width: `${convProgress}%` }}
                 />
               </div>
             </div>
@@ -232,15 +250,15 @@ export function ToolConverter({ tool }: { tool: ToolConfig }) {
             {status === "uploading" ? (
               <>
                 <Loader2 className="size-4 animate-spin" />
-                Przesyłanie… {progress}%
+                {t.tool.uploading} {progress}%
               </>
             ) : status === "converting" ? (
               <>
                 <Loader2 className="size-4 animate-spin" />
-                Konwertowanie…
+                {t.tool.converting}
               </>
             ) : (
-              `Konwertuj na ${tool.to.toUpperCase()}`
+              `${t.tool.convertToPrefix} ${tool.to.toUpperCase()}`
             )}
           </button>
         </div>

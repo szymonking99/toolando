@@ -12,7 +12,9 @@
     "cta": "Začít",
     "openMenu": "Otevřít menu",
     "closeMenu": "Zavřít menu",
-    "allTools": "Všechny nástroje"
+    "allTools": "Všechny nástroje",
+    "signIn": "Sign in",
+    "account": "My account"
   },
   "hero": {
     "badge": "Nový ekosystém online nástrojů",
@@ -29,7 +31,28 @@
     "kindImages": "Obrázky",
     "kindVideo": "Video",
     "kindAudio": "Zvuk",
-    "kindDocs": "PDF, kód a data"
+    "kindDocs": "PDF, kód a data",
+    "readError": "Couldn't read the file contents.",
+    "dropAny": "Drag any file here or click to choose",
+    "dropHint": "Images, video, audio, PDF, documents, code, data — any format. Files are opened locally in your browser and never uploaded anywhere.",
+    "noConverter": "We don't have a converter for this format yet — but you can preview and download the file below.",
+    "convertTo": "Convert to another format",
+    "optionOne": "option",
+    "optionMany": "options",
+    "downloadedOk": "Done! The file has been downloaded.",
+    "download": "Download",
+    "close": "Close",
+    "emptyFile": "(empty file)",
+    "textTruncated": "Preview truncated to the first 200,000 characters. Download the file to see everything.",
+    "binaryPreview": "Binary preview (first bytes in hexadecimal)",
+    "kinds": {
+      "image": "Image",
+      "video": "Video",
+      "audio": "Audio",
+      "pdf": "PDF document",
+      "text": "Text / code",
+      "binary": "Binary file"
+    }
   },
   "ai": {
     "badge": "Prémiová AI",
@@ -123,7 +146,33 @@
     "addMore": "Přidat další soubory",
     "merge": "Sloučit soubory",
     "result": "Výsledek",
-    "notFound": "Nástroj nenalezen"
+    "notFound": "Nástroj nenalezen",
+    "convertFailed": "Conversion failed.",
+    "connectionError": "Couldn't connect to the server. Please try again.",
+    "unavailable": "This converter is currently unavailable",
+    "dropClick": "Drag a file here or click to choose",
+    "dropClickMulti": "Drag files here or click to choose",
+    "supportedFormat": "Supported format",
+    "supported": "Supported",
+    "maxSize": "max. 500 MB",
+    "removeFile": "Remove file",
+    "convertDone": "Conversion complete",
+    "downloadNamed": "Download",
+    "convertAnother": "Convert another file",
+    "uploadingFile": "Uploading file…",
+    "uploadingFiles": "Uploading files…",
+    "uploading": "Uploading…",
+    "converting": "Converting…",
+    "convertToPrefix": "Convert to",
+    "needTwoPdf": "Add at least two PDF files to merge.",
+    "operationFailed": "The operation failed.",
+    "compressionQuality": "Compression quality",
+    "qualityHint": "Lower value = smaller file. Higher value = better quality.",
+    "done": "Done",
+    "less": "less",
+    "resultPreview": "Result preview",
+    "startOver": "Start over",
+    "processingLong": "Processing (this may take a few seconds)…"
   },
   "aiTool": {
     "prompt": "Váš text",
@@ -150,7 +199,46 @@
     "clear": "Vymazat",
     "thinking": "Přemýšlím…",
     "aiError": "Nepodařilo se získat odpověď od AI. Zkuste to znovu.",
-    "emptyChat": "Položte otázku a zahajte konverzaci."
+    "emptyChat": "Položte otázku a zahajte konverzaci.",
+    "generateFailed": "Couldn't generate a response.",
+    "noContent": "The AI service returned no content. Check that AI Gateway is active (requires a payment card).",
+    "connectionError": "A connection error occurred. Please try again.",
+    "dropDoc": "Drag a document here or click to choose",
+    "removeFile": "Remove file",
+    "translatePlaceholder": "Paste the text to translate…",
+    "copyPlaceholder": "Describe what the AI should write, e.g. \"a product description for an eco-friendly water bottle\"…",
+    "toneLabel": "Tone",
+    "targetLangLabel": "Target language",
+    "translate": "Translate",
+    "summarizeDoc": "Summarize document",
+    "generateText": "Generate text",
+    "imageFailed": "Couldn't generate the image.",
+    "imagePromptPlaceholder": "Describe the image, e.g. \"a futuristic city at sunset, watercolor style\"…",
+    "ratioSquare": "Square 1:1",
+    "ratioLandscape": "Landscape 3:2",
+    "ratioPortrait": "Portrait 2:3",
+    "generatingImage": "Generating image (this may take several seconds)…",
+    "generateImage": "Generate image",
+    "generatedImageAlt": "Generated image",
+    "downloadImage": "Download image",
+    "tones": {
+      "professional": "professional",
+      "friendly": "friendly",
+      "energetic": "energetic",
+      "formal": "formal",
+      "playful": "playful",
+      "persuasive": "persuasive"
+    },
+    "languages": {
+      "english": "English",
+      "german": "German",
+      "spanish": "Spanish",
+      "french": "French",
+      "italian": "Italian",
+      "ukrainian": "Ukrainian",
+      "polish": "Polish",
+      "japanese": "Japanese"
+    }
   },
   "category": {
     "back": "Domů",
@@ -161,5 +249,17 @@
     "soon": "Brzy",
     "open": "Otevřít",
     "notFound": "Kategorie nenalezena"
+  },
+  "paywall": {
+    "unlockTitle": "Unlock \"{tool}\" with Premium",
+    "description": "Unlock all Toolando AI tools — text and image generation, translation, summaries and the assistant — in one subscription.",
+    "feature1": "Unlimited access to all AI tools",
+    "feature2": "Text generator, image generator and translator",
+    "feature3": "Priority request processing",
+    "goPremium": "Upgrade to Premium",
+    "redirecting": "Redirecting…",
+    "signInToBuy": "Sign in to buy Premium",
+    "noAccount": "Don't have an account?",
+    "signUp": "Sign up"
   }
 }

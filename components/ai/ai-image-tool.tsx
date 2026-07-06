@@ -2,16 +2,19 @@
 
 import { useState } from "react"
 import { Loader2, Sparkles, Download, AlertCircle } from "lucide-react"
+import { useI18n } from "@/components/i18n-provider"
 
 type Ratio = "square" | "portrait" | "landscape"
 
-const RATIOS: { id: Ratio; label: string }[] = [
-  { id: "square", label: "Kwadrat 1:1" },
-  { id: "landscape", label: "Poziomy 3:2" },
-  { id: "portrait", label: "Pionowy 2:3" },
-]
+const RATIO_IDS: Ratio[] = ["square", "landscape", "portrait"]
 
 export function AiImageTool() {
+  const { t } = useI18n()
+  const ratioLabels: Record<Ratio, string> = {
+    square: t.aiTool.ratioSquare,
+    landscape: t.aiTool.ratioLandscape,
+    portrait: t.aiTool.ratioPortrait,
+  }
   const [prompt, setPrompt] = useState("")
   const [ratio, setRatio] = useState<Ratio>("square")
   const [loading, setLoading] = useState(false)
@@ -32,12 +35,12 @@ export function AiImageTool() {
       })
       const data = await res.json()
       if (!res.ok || !data.image) {
-        setError(data?.error ?? "Nie udało się wygenerować obrazu.")
+        setError(data?.error ?? t.aiTool.imageFailed)
         return
       }
       setImage(data.image)
     } catch {
-      setError("Wystąpił błąd połączenia. Spróbuj ponownie.")
+      setError(t.aiTool.connectionError)
     } finally {
       setLoading(false)
     }
@@ -49,23 +52,23 @@ export function AiImageTool() {
         value={prompt}
         onChange={(e) => setPrompt(e.target.value)}
         rows={4}
-        placeholder="Opisz obraz, np. „futurystyczne miasto o zachodzie słońca, styl akwareli”…"
+        placeholder={t.aiTool.imagePromptPlaceholder}
         className="w-full resize-y rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 text-sm leading-relaxed text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:border-primary/50"
       />
 
       <div className="flex flex-wrap gap-2">
-        {RATIOS.map((r) => (
+        {RATIO_IDS.map((id) => (
           <button
-            key={r.id}
+            key={id}
             type="button"
-            onClick={() => setRatio(r.id)}
+            onClick={() => setRatio(id)}
             className={`rounded-lg border px-3 py-1.5 text-sm font-medium transition-colors ${
-              ratio === r.id
+              ratio === id
                 ? "border-primary/60 bg-primary/15 text-foreground"
                 : "border-white/10 bg-white/[0.03] text-muted-foreground hover:border-primary/40"
             }`}
           >
-            {r.label}
+            {ratioLabels[id]}
           </button>
         ))}
       </div>
@@ -79,12 +82,12 @@ export function AiImageTool() {
         {loading ? (
           <>
             <Loader2 className="size-4 animate-spin" />
-            Generowanie obrazu (może potrwać kilkanaście sekund)…
+            {t.aiTool.generatingImage}
           </>
         ) : (
           <>
             <Sparkles className="size-4" />
-            Wygeneruj obraz
+            {t.aiTool.generateImage}
           </>
         )}
       </button>
@@ -108,7 +111,7 @@ export function AiImageTool() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={image || "/placeholder.svg"}
-              alt="Wygenerowany obraz"
+              alt={t.aiTool.generatedImageAlt}
               className="mx-auto max-h-[32rem] w-auto"
             />
           </div>
@@ -118,7 +121,7 @@ export function AiImageTool() {
             className="inline-flex items-center gap-2 rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/85"
           >
             <Download className="size-4" />
-            Pobierz obraz
+            {t.aiTool.downloadImage}
           </a>
         </div>
       )}
