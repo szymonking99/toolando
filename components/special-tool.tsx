@@ -1,6 +1,6 @@
 "use client"
 
-import { useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import {
   Upload,
   Loader2,
@@ -38,6 +38,20 @@ export function SpecialTool({ tool }: { tool: SpecialToolConfig }) {
   } | null>(null)
 
   const isImageResult = tool.engine !== "merge-pdf"
+
+  // Live thumbnails for selected image files (before processing).
+  const [previews, setPreviews] = useState<string[]>([])
+  useEffect(() => {
+    const urls = files.map((f) =>
+      f.type.startsWith("image/") ? URL.createObjectURL(f) : "",
+    )
+    setPreviews(urls)
+    return () => {
+      for (const url of urls) {
+        if (url) URL.revokeObjectURL(url)
+      }
+    }
+  }, [files])
 
   function clearResult() {
     if (result) URL.revokeObjectURL(result.url)
@@ -178,6 +192,14 @@ export function SpecialTool({ tool }: { tool: SpecialToolConfig }) {
                   <span className="flex size-6 shrink-0 items-center justify-center rounded-md bg-primary/15 text-xs font-semibold text-primary">
                     {index + 1}
                   </span>
+                )}
+                {previews[index] && (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={previews[index] || "/placeholder.svg"}
+                    alt={file.name}
+                    className="size-12 shrink-0 rounded-md border border-white/10 object-cover"
+                  />
                 )}
                 <div className="min-w-0">
                   <p className="truncate text-sm font-medium text-foreground">

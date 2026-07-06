@@ -12,7 +12,9 @@
     "cta": "Zacznij korzystać",
     "openMenu": "Otwórz menu",
     "closeMenu": "Zamknij menu",
-    "allTools": "Wszystkie narzędzia"
+    "allTools": "Wszystkie narzędzia",
+    "signIn": "Zaloguj się",
+    "account": "Moje konto"
   },
   "hero": {
     "badge": "Nowy ekosystem narzędzi online",
@@ -29,7 +31,28 @@
     "kindImages": "Obrazy",
     "kindVideo": "Wideo",
     "kindAudio": "Audio",
-    "kindDocs": "PDF, kod i dane"
+    "kindDocs": "PDF, kod i dane",
+    "readError": "Nie udało się odczytać zawartości pliku.",
+    "dropAny": "Przeciągnij dowolny plik tutaj lub kliknij, aby wybrać",
+    "dropHint": "Obrazy, wideo, audio, PDF, dokumenty, kod, dane — każdy format. Pliki są otwierane lokalnie w przeglądarce i nie są nigdzie wysyłane.",
+    "noConverter": "Dla tego formatu nie mamy jeszcze konwertera — możesz jednak podejrzeć i pobrać plik poniżej.",
+    "convertTo": "Konwertuj na inny format",
+    "optionOne": "opcja",
+    "optionMany": "opcji",
+    "downloadedOk": "Gotowe! Plik został pobrany.",
+    "download": "Pobierz",
+    "close": "Zamknij",
+    "emptyFile": "(pusty plik)",
+    "textTruncated": "Podgląd skrócony do pierwszych 200 000 znaków. Pobierz plik, aby zobaczyć całość.",
+    "binaryPreview": "Podgląd binarny (pierwsze bajty w formacie szesnastkowym)",
+    "kinds": {
+      "image": "Obraz",
+      "video": "Wideo",
+      "audio": "Audio",
+      "pdf": "Dokument PDF",
+      "text": "Tekst / kod",
+      "binary": "Plik binarny"
+    }
   },
   "ai": {
     "badge": "Premium AI",
@@ -123,7 +146,33 @@
     "addMore": "Dodaj więcej plików",
     "merge": "Połącz pliki",
     "result": "Wynik",
-    "notFound": "Narzędzie nie znalezione"
+    "notFound": "Narzędzie nie znalezione",
+    "convertFailed": "Konwersja nie powiodła się.",
+    "connectionError": "Nie udało się połączyć z serwerem. Spróbuj ponownie.",
+    "unavailable": "Ten konwerter jest obecnie niedostępny",
+    "dropClick": "Przeciągnij plik tutaj lub kliknij, aby wybrać",
+    "dropClickMulti": "Przeciągnij pliki tutaj lub kliknij, aby wybrać",
+    "supportedFormat": "Obsługiwany format",
+    "supported": "Obsługiwane",
+    "maxSize": "maks. 500 MB",
+    "removeFile": "Usuń plik",
+    "convertDone": "Konwersja zakończona",
+    "downloadNamed": "Pobierz",
+    "convertAnother": "Konwertuj kolejny plik",
+    "uploadingFile": "Przesyłanie pliku…",
+    "uploadingFiles": "Przesyłanie plików…",
+    "uploading": "Przesyłanie…",
+    "converting": "Konwertowanie…",
+    "convertToPrefix": "Konwertuj na",
+    "needTwoPdf": "Dodaj co najmniej dwa pliki PDF do połączenia.",
+    "operationFailed": "Operacja nie powiodła się.",
+    "compressionQuality": "Jakość kompresji",
+    "qualityHint": "Niższa wartość = mniejszy plik. Wyższa wartość = lepsza jakość.",
+    "done": "Gotowe",
+    "less": "mniej",
+    "resultPreview": "Podgląd wyniku",
+    "startOver": "Zacznij od nowa",
+    "processingLong": "Przetwarzanie (może potrwać kilka sekund)…"
   },
   "aiTool": {
     "prompt": "Twój tekst",
@@ -150,7 +199,46 @@
     "clear": "Wyczyść",
     "thinking": "Myślę…",
     "aiError": "Nie udało się uzyskać odpowiedzi AI. Spróbuj ponownie.",
-    "emptyChat": "Zadaj pytanie, aby rozpocząć rozmowę."
+    "emptyChat": "Zadaj pytanie, aby rozpocząć rozmowę.",
+    "generateFailed": "Nie udało się wygenerować odpowiedzi.",
+    "noContent": "Usługa AI nie zwróciła treści. Sprawdź, czy AI Gateway jest aktywny (wymaga karty płatniczej).",
+    "connectionError": "Wystąpił błąd połączenia. Spróbuj ponownie.",
+    "dropDoc": "Przeciągnij dokument tutaj lub kliknij, aby wybrać",
+    "removeFile": "Usuń plik",
+    "translatePlaceholder": "Wklej tekst do przetłumaczenia…",
+    "copyPlaceholder": "Opisz, co ma napisać AI, np. „opis produktu dla ekologicznej butelki na wodę”…",
+    "toneLabel": "Ton",
+    "targetLangLabel": "Język docelowy",
+    "translate": "Przetłumacz",
+    "summarizeDoc": "Podsumuj dokument",
+    "generateText": "Wygeneruj tekst",
+    "imageFailed": "Nie udało się wygenerować obrazu.",
+    "imagePromptPlaceholder": "Opisz obraz, np. „futurystyczne miasto o zachodzie słońca, styl akwareli”…",
+    "ratioSquare": "Kwadrat 1:1",
+    "ratioLandscape": "Poziomy 3:2",
+    "ratioPortrait": "Pionowy 2:3",
+    "generatingImage": "Generowanie obrazu (może potrwać kilkanaście sekund)…",
+    "generateImage": "Wygeneruj obraz",
+    "generatedImageAlt": "Wygenerowany obraz",
+    "downloadImage": "Pobierz obraz",
+    "tones": {
+      "professional": "profesjonalny",
+      "friendly": "przyjazny",
+      "energetic": "energiczny",
+      "formal": "formalny",
+      "playful": "zabawny",
+      "persuasive": "perswazyjny"
+    },
+    "languages": {
+      "english": "angielski",
+      "german": "niemiecki",
+      "spanish": "hiszpański",
+      "french": "francuski",
+      "italian": "włoski",
+      "ukrainian": "ukraiński",
+      "polish": "polski",
+      "japanese": "japoński"
+    }
   },
   "category": {
     "back": "Strona główna",
@@ -161,5 +249,17 @@
     "soon": "Wkrótce",
     "open": "Otwórz",
     "notFound": "Kategoria nie znaleziona"
+  },
+  "paywall": {
+    "unlockTitle": "Odblokuj „{tool}” w Premium",
+    "description": "Odblokuj wszystkie narzędzia AI Toolando — generowanie tekstów i obrazów, tłumaczenia, podsumowania i asystenta — w jednym abonamencie.",
+    "feature1": "Nieograniczony dostęp do wszystkich narzędzi AI",
+    "feature2": "Generator tekstu, obrazów i tłumacz",
+    "feature3": "Priorytetowe przetwarzanie zapytań",
+    "goPremium": "Przejdź na Premium",
+    "redirecting": "Przekierowywanie…",
+    "signInToBuy": "Zaloguj się, aby kupić Premium",
+    "noAccount": "Nie masz konta?",
+    "signUp": "Zarejestruj się"
   }
 }
