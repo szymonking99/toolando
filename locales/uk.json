@@ -261,5 +261,30 @@
     "signInToBuy": "Увійдіть, щоб купити Premium",
     "noAccount": "Немає акаунта?",
     "signUp": "Зареєструватися"
+  },
+  "account": {
+    "backToHome": "Повернутися на головну",
+    "yourAccount": "Ваш акаунт",
+    "premiumBadge": "Premium",
+    "freeBadge": "Безкоштовний акаунт",
+    "premiumActiveTitle": "У вас активний Premium",
+    "premiumActiveDesc": "Дякуємо за підтримку! У вас повний доступ до всіх інструментів ШІ без обмежень.",
+    "manageSubscription": "Керувати підпискою",
+    "manageOpening": "Відкриття…",
+    "managePortalError": "Не вдалося відкрити портал.",
+    "manageGenericError": "Сталася помилка.",
+    "goPremiumTitle": "Перейти на Premium",
+    "feature1": "Необмежений доступ до інструментів ШІ",
+    "feature2": "Видалення фону, генерація зображень і текстів",
+    "feature3": "Пріоритетна обробка",
+    "buyPremium": "Придбати Premium",
+    "buyRedirecting": "Перенаправлення…",
+    "refreshHint": "Оплатили, а Premium досі неактивний? Оновіть статус:",
+    "refreshStatus": "Оновити статус Premium",
+    "refreshChecking": "Перевірка...",
+    "refreshNoSub": "Активну підписку не знайдено. Якщо ви щойно оплатили, зачекайте хвилинку та спробуйте ще раз.",
+    "refreshFailed": "Не вдалося оновити статус.",
+    "refreshNetworkError": "Помилка мережі. Спробуйте ще раз.",
+    "signOut": "Вийти"
   }
 }

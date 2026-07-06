@@ -1,5 +1,7 @@
 import type { Metadata, Viewport } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
+import { cookies } from "next/headers"
+import { normalizeToSupported, fallbackLocale, rtlLocales } from "@/lib/i18n/config"
 import "../globals.css"
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] })
@@ -22,12 +24,18 @@ export const viewport: Viewport = {
   ],
 }
 
-export default function AccountLayout({
+export default async function AccountLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
+  const cookieStore = await cookies()
+  const raw = cookieStore.get("toolando-locale")?.value || fallbackLocale
+  const locale = normalizeToSupported(raw) ?? fallbackLocale
+  const dir = rtlLocales.has(locale) ? "rtl" : "ltr"
+
   return (
     <html
-      lang="pl"
+      lang={locale}
+      dir={dir}
       className={`dark bg-background ${geistSans.variable} ${geistMono.variable}`}
     >
       <body className="bg-background font-sans antialiased">{children}</body>

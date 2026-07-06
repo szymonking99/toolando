@@ -453,7 +453,7 @@ function toHexDump(bytes: Uint8Array): string {
     lines.push(`${offset}  ${hex}  ${ascii}`)
   }
   if (bytes.length >= 4096) {
-    lines.push("… (podgląd ograniczony do 4 KB)")
+    lines.push("… (4 KB)")
   }
   return lines.join("\n")
 }

@@ -261,5 +261,30 @@
     "signInToBuy": "Anmelden, um Premium zu kaufen",
     "noAccount": "Noch kein Konto?",
     "signUp": "Registrieren"
+  },
+  "account": {
+    "backToHome": "Zurück zur Startseite",
+    "yourAccount": "Dein Konto",
+    "premiumBadge": "Premium",
+    "freeBadge": "Kostenloses Konto",
+    "premiumActiveTitle": "Du hast aktives Premium",
+    "premiumActiveDesc": "Danke für deine Unterstützung! Du hast uneingeschränkten Zugriff auf alle KI-Tools.",
+    "manageSubscription": "Abo verwalten",
+    "manageOpening": "Wird geöffnet…",
+    "managePortalError": "Portal konnte nicht geöffnet werden.",
+    "manageGenericError": "Ein Fehler ist aufgetreten.",
+    "goPremiumTitle": "Auf Premium upgraden",
+    "feature1": "Unbegrenzter Zugriff auf KI-Tools",
+    "feature2": "Hintergrund entfernen, Bild- und Textgenerierung",
+    "feature3": "Priorisierte Verarbeitung",
+    "buyPremium": "Premium kaufen",
+    "buyRedirecting": "Weiterleitung…",
+    "refreshHint": "Bezahlt, aber Premium noch inaktiv? Status aktualisieren:",
+    "refreshStatus": "Premium-Status aktualisieren",
+    "refreshChecking": "Wird geprüft...",
+    "refreshNoSub": "Kein aktives Abo gefunden. Wenn du gerade bezahlt hast, warte einen Moment und versuche es erneut.",
+    "refreshFailed": "Status konnte nicht aktualisiert werden.",
+    "refreshNetworkError": "Netzwerkfehler. Bitte versuche es erneut.",
+    "signOut": "Abmelden"
   }
 }

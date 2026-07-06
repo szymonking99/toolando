@@ -6,7 +6,7 @@ import { Loader2, LogOut } from "lucide-react"
 import { authClient } from "@/lib/auth-client"
 import { Button } from "@/components/ui/button"
 
-export function SignOutButton() {
+export function SignOutButton({ label = "Wyloguj się" }: { label?: string }) {
   const router = useRouter()
   const [loading, setLoading] = useState(false)
 
@@ -29,7 +29,7 @@ export function SignOutButton() {
       ) : (
         <LogOut className="size-4" aria-hidden="true" />
       )}
-      Wyloguj się
+      {label}
     </Button>
   )
 }

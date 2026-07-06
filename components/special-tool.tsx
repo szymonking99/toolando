@@ -12,6 +12,7 @@ import {
 import type { SpecialToolConfig } from "@/lib/special-tools"
 import { uploadManyAndProcess } from "@/lib/client-upload"
 import { useI18n } from "@/components/i18n-provider"
+import { getSpecialMeta } from "@/lib/i18n/tool-meta"
 import { useFakeProgress } from "@/hooks/use-fake-progress"
 
 type Status = "idle" | "uploading" | "working" | "done" | "error"
@@ -23,7 +24,8 @@ function formatBytes(bytes: number) {
 }
 
 export function SpecialTool({ tool }: { tool: SpecialToolConfig }) {
-  const { t } = useI18n()
+  const { t, locale } = useI18n()
+  const meta = getSpecialMeta(locale, tool.id)
   const inputRef = useRef<HTMLInputElement>(null)
   const [files, setFiles] = useState<File[]>([])
   const [quality, setQuality] = useState(75)
@@ -178,7 +180,7 @@ export function SpecialTool({ tool }: { tool: SpecialToolConfig }) {
           {tool.multiple ? t.tool.dropClickMulti : t.tool.dropClick}
         </span>
         <span className="text-xs text-muted-foreground">
-          {t.tool.supported}: {tool.acceptLabel} • {t.tool.maxSize}
+          {t.tool.supported}: {meta.acceptLabel} • {t.tool.maxSize}
         </span>
       </label>
 
@@ -369,7 +371,7 @@ export function SpecialTool({ tool }: { tool: SpecialToolConfig }) {
                   : t.tool.processing}
               </>
             ) : (
-              tool.actionLabel
+              meta.actionLabel
             )}
           </button>
         </div>

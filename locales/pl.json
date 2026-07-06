@@ -261,5 +261,30 @@
     "signInToBuy": "Zaloguj się, aby kupić Premium",
     "noAccount": "Nie masz konta?",
     "signUp": "Zarejestruj się"
+  },
+  "account": {
+    "backToHome": "Powrót do strony głównej",
+    "yourAccount": "Twoje konto",
+    "premiumBadge": "Premium",
+    "freeBadge": "Konto darmowe",
+    "premiumActiveTitle": "Masz aktywne Premium",
+    "premiumActiveDesc": "Dziękujemy za wsparcie! Masz pełny dostęp do wszystkich narzędzi AI bez ograniczeń.",
+    "manageSubscription": "Zarządzaj subskrypcją",
+    "manageOpening": "Otwieranie…",
+    "managePortalError": "Nie udało się otworzyć panelu.",
+    "manageGenericError": "Wystąpił błąd.",
+    "goPremiumTitle": "Przejdź na Premium",
+    "feature1": "Nieograniczony dostęp do narzędzi AI",
+    "feature2": "Usuwanie tła, generowanie obrazów i tekstów",
+    "feature3": "Priorytetowe przetwarzanie",
+    "buyPremium": "Kup Premium",
+    "buyRedirecting": "Przekierowywanie…",
+    "refreshHint": "Zapłaciłeś, a Premium wciąż nieaktywne? Odśwież status:",
+    "refreshStatus": "Odśwież status Premium",
+    "refreshChecking": "Sprawdzam...",
+    "refreshNoSub": "Nie znaleziono aktywnej subskrypcji. Jeśli właśnie zapłaciłeś, odczekaj chwilę i spróbuj ponownie.",
+    "refreshFailed": "Nie udało się odświeżyć statusu.",
+    "refreshNetworkError": "Wystąpił błąd sieci. Spróbuj ponownie.",
+    "signOut": "Wyloguj się"
   }
 }

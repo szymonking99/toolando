@@ -9,6 +9,7 @@ import {
 } from "@/lib/tools"
 import { getDictionary } from "@/lib/i18n/dictionaries"
 import { getCategoryMeta } from "@/lib/i18n/content-meta"
+import { getConversionDescription } from "@/lib/i18n/tool-meta"
 import { localeHref } from "@/lib/i18n/href"
 
 export function generateStaticParams() {
@@ -124,7 +125,7 @@ export default async function CategoryPage({
                 {tool.name}
               </h2>
               <p className="mt-1.5 line-clamp-2 text-sm leading-relaxed text-muted-foreground">
-                {tool.description}
+                {getConversionDescription(locale, tool.from, tool.to)}
               </p>
             </Link>
           ))}

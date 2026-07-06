@@ -5,10 +5,18 @@ import { Loader2, Settings } from "lucide-react"
 
 interface ManageSubscriptionButtonProps {
   className?: string
+  label?: string
+  loadingLabel?: string
+  portalError?: string
+  genericError?: string
 }
 
 export function ManageSubscriptionButton({
   className,
+  label = "Zarządzaj subskrypcją",
+  loadingLabel = "Otwieranie…",
+  portalError = "Nie udało się otworzyć panelu.",
+  genericError = "Wystąpił błąd.",
 }: ManageSubscriptionButtonProps) {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
@@ -25,11 +33,11 @@ export function ManageSubscriptionButton({
         return
       }
       if (!res.ok || !data?.url) {
-        throw new Error(data?.error || "Nie udało się otworzyć panelu.")
+        throw new Error(data?.error || portalError)
       }
       window.location.href = data.url
     } catch (err) {
-      setError(err instanceof Error ? err.message : "Wystąpił błąd.")
+      setError(err instanceof Error ? err.message : genericError)
       setLoading(false)
     }
   }
@@ -50,7 +58,7 @@ export function ManageSubscriptionButton({
         ) : (
           <Settings className="size-4" aria-hidden="true" />
         )}
-        {loading ? "Otwieranie…" : "Zarządzaj subskrypcją"}
+        {loading ? loadingLabel : label}
       </button>
       {error && <p className="text-sm text-destructive">{error}</p>}
     </div>

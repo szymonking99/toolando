@@ -9,7 +9,23 @@ import { RefreshCw } from "lucide-react"
  * powiązanego klienta i aktualizuje konto. Przydatne, gdy webhook nie zdążył
  * lub zawiódł po zakupie.
  */
-export function RefreshPremiumButton({ className }: { className?: string }) {
+interface RefreshPremiumButtonProps {
+  className?: string
+  label?: string
+  loadingLabel?: string
+  noSubMessage?: string
+  failedMessage?: string
+  networkErrorMessage?: string
+}
+
+export function RefreshPremiumButton({
+  className,
+  label = "Odśwież status Premium",
+  loadingLabel = "Sprawdzam...",
+  noSubMessage = "Nie znaleziono aktywnej subskrypcji. Jeśli właśnie zapłaciłeś, odczekaj chwilę i spróbuj ponownie.",
+  failedMessage = "Nie udało się odświeżyć statusu.",
+  networkErrorMessage = "Wystąpił błąd sieci. Spróbuj ponownie.",
+}: RefreshPremiumButtonProps) {
   const router = useRouter()
   const [loading, setLoading] = useState(false)
   const [message, setMessage] = useState<string | null>(null)
@@ -21,18 +37,16 @@ export function RefreshPremiumButton({ className }: { className?: string }) {
       const res = await fetch("/api/premium/sync", { method: "POST" })
       const data = (await res.json()) as { premium?: boolean; error?: string }
       if (!res.ok) {
-        setMessage(data.error ?? "Nie udało się odświeżyć statusu.")
+        setMessage(data.error ?? failedMessage)
         return
       }
       if (data.premium) {
         router.refresh()
       } else {
-        setMessage(
-          "Nie znaleziono aktywnej subskrypcji. Jeśli właśnie zapłaciłeś, odczekaj chwilę i spróbuj ponownie.",
-        )
+        setMessage(noSubMessage)
       }
     } catch {
-      setMessage("Wystąpił błąd sieci. Spróbuj ponownie.")
+      setMessage(networkErrorMessage)
     } finally {
       setLoading(false)
     }
@@ -53,7 +67,7 @@ export function RefreshPremiumButton({ className }: { className?: string }) {
           className={`size-4 ${loading ? "animate-spin" : ""}`}
           aria-hidden="true"
         />
-        {loading ? "Sprawdzam..." : "Odśwież status Premium"}
+        {loading ? loadingLabel : label}
       </button>
       {message ? (
         <p className="text-xs text-muted-foreground">{message}</p>
