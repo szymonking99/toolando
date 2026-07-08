@@ -215,11 +215,17 @@ export async function docxToPdf(input: Buffer): Promise<Buffer> {
   pdf.registerFontkit(fontkit);
 
   const bytesSet = await loadFontBytes();
+  // NOTE: `subset: true` MUST NOT be used here. pdf-lib's fontkit subsetter
+  // corrupts composite glyphs (base letter + combining diacritic) for Noto
+  // Sans, which is exactly how Polish/most-Latin accents are built. The result
+  // is a tiny PDF whose text is still copyable (the ToUnicode CMap is intact)
+  // but whose glyph outlines are broken — producing the "scattered single
+  // letters" output users reported. Embedding the full font renders correctly.
   const fonts = {
-    regular: await pdf.embedFont(bytesSet.regular, { subset: true }),
-    bold: await pdf.embedFont(bytesSet.bold, { subset: true }),
-    italic: await pdf.embedFont(bytesSet.italic, { subset: true }),
-    boldItalic: await pdf.embedFont(bytesSet.boldItalic, { subset: true }),
+    regular: await pdf.embedFont(bytesSet.regular, { subset: false }),
+    bold: await pdf.embedFont(bytesSet.bold, { subset: false }),
+    italic: await pdf.embedFont(bytesSet.italic, { subset: false }),
+    boldItalic: await pdf.embedFont(bytesSet.boldItalic, { subset: false }),
   };
 
   const pickFont = (bold: boolean, italic: boolean) =>
