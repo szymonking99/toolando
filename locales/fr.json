@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Toolando — Vos outils en ligne en un seul endroit",
+    "title": "Toolando.tech — Vos outils en ligne en un seul endroit",
     "description": "Convertisseurs, générateurs, outils PDF et IA — le tout dans un écosystème élégant. Rapide et simple."
   },
   "nav": {
@@ -57,13 +57,13 @@
   "ai": {
     "badge": "IA Premium",
     "title": "Outils IA intelligents",
-    "subtitle": "Rédigez, résumez, traduisez et créez des images avec les derniers modèles d'IA — directement dans Toolando, sans installation.",
+    "subtitle": "Rédigez, résumez, traduisez et créez des images avec les derniers modèles d'IA — directement dans Toolando.tech, sans installation.",
     "openTool": "Ouvrir l'outil",
     "more": "Plus d'outils IA"
   },
   "features": {
     "title": "Outils les plus populaires",
-    "subtitle": "Les outils Toolando les plus choisis — prêts à l'emploi en quelques secondes.",
+    "subtitle": "Les outils Toolando.tech les plus choisis — prêts à l'emploi en quelques secondes.",
     "popularTitle": "Convertisseurs les plus populaires",
     "popularSubtitle": "Les conversions les plus utilisées — dans les deux sens, prêtes à l'emploi."
   },
@@ -73,7 +73,7 @@
     "browse": "Parcourir"
   },
   "why": {
-    "title": "Pourquoi Toolando ?",
+    "title": "Pourquoi Toolando.tech ?",
     "subtitle": "Conçu en pensant à votre productivité et à votre confort.",
     "speedTitle": "Rapidité",
     "speedDesc": "Les outils s'exécutent instantanément dans votre navigateur — sans attente ni installation.",
@@ -83,7 +83,7 @@
     "toolsDesc": "Un vaste ensemble de convertisseurs, générateurs et outils IA en un seul endroit."
   },
   "ctaSection": {
-    "title": "Commencez à utiliser Toolando dès aujourd'hui",
+    "title": "Commencez à utiliser Toolando.tech dès aujourd'hui",
     "subtitle": "Rejoignez un écosystème d'outils qui vous fait gagner du temps chaque jour.",
     "browse": "Parcourir les outils"
   },
@@ -94,15 +94,15 @@
     "support": "Soutenez-moi",
     "privacy": "Politique de confidentialité",
     "terms": "Conditions d'utilisation",
-    "rights": "© 2026 Toolando. Tous droits réservés."
+    "rights": "© 2026 Toolando.tech. Tous droits réservés."
   },
   "language": {
     "label": "Langue"
   },
   "support": {
     "eyebrow": "Soutenir le projet",
-    "title": "Aidez Toolando à continuer",
-    "subtitle": "Toolando est développé et offert gratuitement. S'il vous fait gagner du temps, envisagez de soutenir son développement.",
+    "title": "Aidez Toolando.tech à continuer",
+    "subtitle": "Toolando.tech est développé et offert gratuitement. S'il vous fait gagner du temps, envisagez de soutenir son développement.",
     "coffee": "Offrez-moi un café",
     "donate": "Faire un don",
     "back": "Retour à l'accueil",
@@ -111,7 +111,7 @@
   "openerPage": {
     "eyebrow": "Prévisualiser et convertir",
     "title": "Ouvre-fichiers et convertisseur universel",
-    "subtitle": "Ouvrez n'importe quel format de fichier — images, vidéo, audio, PDF, documents, code et données s'affichent instantanément. Une fois ouvert, Toolando suggère aussitôt tous les formats vers lesquels convertir en un clic.",
+    "subtitle": "Ouvrez n'importe quel format de fichier — images, vidéo, audio, PDF, documents, code et données s'affichent instantanément. Une fois ouvert, Toolando.tech suggère aussitôt tous les formats vers lesquels convertir en un clic.",
     "back": "Tous les outils",
     "drop": "Glissez-déposez un fichier ici",
     "or": "ou",
@@ -252,7 +252,7 @@
   },
   "paywall": {
     "unlockTitle": "Unlock \"{tool}\" with Premium",
-    "description": "Unlock all Toolando AI tools — text and image generation, translation, summaries and the assistant — in one subscription.",
+    "description": "Unlock all Toolando.tech AI tools — text and image generation, translation, summaries and the assistant — in one subscription.",
     "feature1": "Unlimited access to all AI tools",
     "feature2": "Text generator, image generator and translator",
     "feature3": "Priority request processing",

@@ -8,7 +8,7 @@ const RESEND_API_KEY = process.env.RESEND_API_KEY
  * nie jest zweryfikowana, wysyłka będzie zwracać błąd (rejestracja działa dalej).
  * Można nadpisać zmienną EMAIL_FROM.
  */
-const EMAIL_FROM = process.env.EMAIL_FROM || "Toolando <no-reply@toolando.tech>"
+const EMAIL_FROM = process.env.EMAIL_FROM || "Toolando.tech <no-reply@toolando.tech>"
 
 /**
  * Adres, na który trafią odpowiedzi użytkowników (Twoja skrzynka Outlook).
@@ -34,7 +34,7 @@ export async function sendWelcomeEmail(to: string, name?: string | null) {
   <div style="font-family:-apple-system,Segoe UI,Roboto,Arial,sans-serif;max-width:520px;margin:0 auto;padding:32px 24px;color:#1a1a1a;">
     <h1 style="font-size:22px;margin:0 0 16px;">${greeting}</h1>
     <p style="font-size:15px;line-height:1.6;margin:0 0 16px;">
-      Dziękujemy za założenie konta w <strong>Toolando</strong>. Masz teraz dostęp do naszego zestawu narzędzi online — konwertery, generatory i asystent AI w jednym miejscu.
+      Dziękujemy za założenie konta w <strong>Toolando.tech</strong>. Masz teraz dostęp do naszego zestawu narzędzi online — konwertery, generatory i asystent AI w jednym miejscu.
     </p>
     <p style="font-size:15px;line-height:1.6;margin:0 0 24px;">
       Aby odblokować narzędzia AI (czat, copywriting, streszczenia, tłumaczenia), rozważ plan <strong>Premium</strong>.
@@ -47,14 +47,14 @@ export async function sendWelcomeEmail(to: string, name?: string | null) {
     </p>
   </div>`
 
-  const text = `${greeting}\n\nDziękujemy za założenie konta w Toolando. Masz teraz dostęp do naszych narzędzi online.\n\nAby odblokować narzędzia AI, rozważ plan Premium: https://toolando.tech/account`
+  const text = `${greeting}\n\nDziękujemy za założenie konta w Toolando.tech. Masz teraz dostęp do naszych narzędzi online.\n\nAby odblokować narzędzia AI, rozważ plan Premium: https://toolando.tech/account`
 
   try {
     const { error } = await resend.emails.send({
       from: EMAIL_FROM,
       to,
       replyTo: REPLY_TO,
-      subject: "Witaj w Toolando!",
+      subject: "Witaj w Toolando.tech!",
       html,
       text,
     })

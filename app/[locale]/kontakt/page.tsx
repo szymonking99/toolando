@@ -16,7 +16,7 @@ export default function ContactPage() {
     const message = data.get("message")
 
     // mailto — działa bez backendu
-    window.location.href = `mailto:badyltech@outlook.com?subject=Zgłoszenie z Toolando&body=Imię: ${name}%0AEmail: ${email}%0AWiadomość:%0A${message}`
+    window.location.href = `mailto:badyltech@outlook.com?subject=Zgłoszenie z Toolando.tech&body=Imię: ${name}%0AEmail: ${email}%0AWiadomość:%0A${message}`
 
     setStatus("sent")
   }

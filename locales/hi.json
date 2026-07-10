@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Toolando — आपके सभी ऑनलाइन टूल एक ही जगह",
+    "title": "Toolando.tech — आपके सभी ऑनलाइन टूल एक ही जगह",
     "description": "कन्वर्टर, जनरेटर, PDF और AI टूल — सब कुछ एक सुंदर इकोसिस्टम में। तेज़ और आसान।"
   },
   "nav": {
@@ -57,13 +57,13 @@
   "ai": {
     "badge": "प्रीमियम AI",
     "title": "बुद्धिमान AI टूल",
-    "subtitle": "नवीनतम AI मॉडलों के साथ लिखें, सारांश बनाएं, अनुवाद करें और छवियाँ बनाएं — Toolando के भीतर ही, बिना इंस्टॉलेशन के।",
+    "subtitle": "नवीनतम AI मॉडलों के साथ लिखें, सारांश बनाएं, अनुवाद करें और छवियाँ बनाएं — Toolando.tech के भीतर ही, बिना इंस्टॉलेशन के।",
     "openTool": "टूल खोलें",
     "more": "और AI टूल"
   },
   "features": {
     "title": "सबसे लोकप्रिय टूल",
-    "subtitle": "सबसे अधिक चुने गए Toolando टूल — कुछ ही सेकंड में उपयोग के लिए तैयार।",
+    "subtitle": "सबसे अधिक चुने गए Toolando.tech टूल — कुछ ही सेकंड में उपयोग के लिए तैयार।",
     "popularTitle": "सबसे लोकप्रिय कन्वर्टर",
     "popularSubtitle": "सबसे अधिक उपयोग किए जाने वाले रूपांतरण — दोनों दिशाओं में, उपयोग के लिए तैयार।"
   },
@@ -73,7 +73,7 @@
     "browse": "ब्राउज़ करें"
   },
   "why": {
-    "title": "Toolando क्यों?",
+    "title": "Toolando.tech क्यों?",
     "subtitle": "आपकी उत्पादकता और सुविधा को ध्यान में रखकर बनाया गया।",
     "speedTitle": "गति",
     "speedDesc": "टूल आपके ब्राउज़र में तुरंत चलते हैं — कोई प्रतीक्षा नहीं और कोई इंस्टॉलेशन नहीं।",
@@ -83,7 +83,7 @@
     "toolsDesc": "कन्वर्टर, जनरेटर और AI टूल का विशाल संग्रह एक ही जगह।"
   },
   "ctaSection": {
-    "title": "आज ही Toolando का उपयोग शुरू करें",
+    "title": "आज ही Toolando.tech का उपयोग शुरू करें",
     "subtitle": "टूल के ऐसे इकोसिस्टम से जुड़ें जो हर दिन आपका समय बचाता है।",
     "browse": "टूल ब्राउज़ करें"
   },
@@ -94,15 +94,15 @@
     "support": "मेरा समर्थन करें",
     "privacy": "गोपनीयता नीति",
     "terms": "सेवा की शर्तें",
-    "rights": "© 2026 Toolando. सर्वाधिकार सुरक्षित।"
+    "rights": "© 2026 Toolando.tech. सर्वाधिकार सुरक्षित।"
   },
   "language": {
     "label": "भाषा"
   },
   "support": {
     "eyebrow": "परियोजना का समर्थन करें",
-    "title": "Toolando को चलाए रखने में मदद करें",
-    "subtitle": "Toolando मुफ़्त में विकसित और उपलब्ध कराया जाता है। अगर यह आपका समय बचाता है, तो इसके विकास में सहयोग करने पर विचार करें।",
+    "title": "Toolando.tech को चलाए रखने में मदद करें",
+    "subtitle": "Toolando.tech मुफ़्त में विकसित और उपलब्ध कराया जाता है। अगर यह आपका समय बचाता है, तो इसके विकास में सहयोग करने पर विचार करें।",
     "coffee": "मुझे एक कॉफ़ी पिलाएँ",
     "donate": "दान करें",
     "back": "होम पर वापस",
@@ -111,7 +111,7 @@
   "openerPage": {
     "eyebrow": "पूर्वावलोकन और रूपांतरण",
     "title": "यूनिवर्सल फ़ाइल ओपनर और कन्वर्टर",
-    "subtitle": "लगभग किसी भी फ़ाइल फ़ॉर्मैट को खोलें — छवियाँ, वीडियो, ऑडियो, PDF, दस्तावेज़, कोड और डेटा तुरंत दिखते हैं। खुलने के बाद, Toolando तुरंत हर उस उपयुक्त फ़ॉर्मैट का सुझाव देता है जिसमें आप एक क्लिक में बदल सकते हैं।",
+    "subtitle": "लगभग किसी भी फ़ाइल फ़ॉर्मैट को खोलें — छवियाँ, वीडियो, ऑडियो, PDF, दस्तावेज़, कोड और डेटा तुरंत दिखते हैं। खुलने के बाद, Toolando.tech तुरंत हर उस उपयुक्त फ़ॉर्मैट का सुझाव देता है जिसमें आप एक क्लिक में बदल सकते हैं।",
     "back": "सभी टूल",
     "drop": "यहाँ फ़ाइल खींचें और छोड़ें",
     "or": "या",
@@ -252,7 +252,7 @@
   },
   "paywall": {
     "unlockTitle": "Unlock \"{tool}\" with Premium",
-    "description": "Unlock all Toolando AI tools — text and image generation, translation, summaries and the assistant — in one subscription.",
+    "description": "Unlock all Toolando.tech AI tools — text and image generation, translation, summaries and the assistant — in one subscription.",
     "feature1": "Unlimited access to all AI tools",
     "feature2": "Text generator, image generator and translator",
     "feature3": "Priority request processing",

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Toolando — 你的在线工具尽在一处",
+    "title": "Toolando.tech — 你的在线工具尽在一处",
     "description": "转换器、生成器、PDF 和 AI 工具——全部集于一个优雅的生态系统。快速而简单。"
   },
   "nav": {
@@ -57,13 +57,13 @@
   "ai": {
     "badge": "高级 AI",
     "title": "智能 AI 工具",
-    "subtitle": "使用最新的 AI 模型撰写、总结、翻译和创建图像——就在 Toolando 内，无需安装。",
+    "subtitle": "使用最新的 AI 模型撰写、总结、翻译和创建图像——就在 Toolando.tech 内，无需安装。",
     "openTool": "打开工具",
     "more": "更多 AI 工具"
   },
   "features": {
     "title": "最受欢迎的工具",
-    "subtitle": "最多人选择的 Toolando 工具——几秒即可使用。",
+    "subtitle": "最多人选择的 Toolando.tech 工具——几秒即可使用。",
     "popularTitle": "最受欢迎的转换器",
     "popularSubtitle": "最常用的转换——双向可用，即开即用。"
   },
@@ -73,7 +73,7 @@
     "browse": "浏览"
   },
   "why": {
-    "title": "为什么选择 Toolando？",
+    "title": "为什么选择 Toolando.tech？",
     "subtitle": "以你的效率与舒适为出发点而打造。",
     "speedTitle": "速度",
     "speedDesc": "工具在你的浏览器中即时运行——无需等待，无需安装。",
@@ -83,7 +83,7 @@
     "toolsDesc": "海量的转换器、生成器和 AI 工具，尽在一处。"
   },
   "ctaSection": {
-    "title": "立即开始使用 Toolando",
+    "title": "立即开始使用 Toolando.tech",
     "subtitle": "加入一个每天为你节省时间的工具生态系统。",
     "browse": "浏览工具"
   },
@@ -94,15 +94,15 @@
     "support": "支持我",
     "privacy": "隐私政策",
     "terms": "服务条款",
-    "rights": "© 2026 Toolando。保留所有权利。"
+    "rights": "© 2026 Toolando.tech。保留所有权利。"
   },
   "language": {
     "label": "语言"
   },
   "support": {
     "eyebrow": "支持本项目",
-    "title": "帮助 Toolando 持续运营",
-    "subtitle": "Toolando 免费开发并提供。如果它为你节省了时间，欢迎支持它的发展。",
+    "title": "帮助 Toolando.tech 持续运营",
+    "subtitle": "Toolando.tech 免费开发并提供。如果它为你节省了时间，欢迎支持它的发展。",
     "coffee": "请我喝杯咖啡",
     "donate": "进行捐赠",
     "back": "返回首页",
@@ -111,7 +111,7 @@
   "openerPage": {
     "eyebrow": "预览与转换",
     "title": "通用文件打开器与转换器",
-    "subtitle": "打开几乎任何文件格式——图片、视频、音频、PDF、文档、代码和数据都会即时显示。文件打开后，Toolando 会立即建议所有可一键转换的合理格式。",
+    "subtitle": "打开几乎任何文件格式——图片、视频、音频、PDF、文档、代码和数据都会即时显示。文件打开后，Toolando.tech 会立即建议所有可一键转换的合理格式。",
     "back": "所有工具",
     "drop": "将文件拖放到此处",
     "or": "或",
@@ -252,7 +252,7 @@
   },
   "paywall": {
     "unlockTitle": "Unlock \"{tool}\" with Premium",
-    "description": "Unlock all Toolando AI tools — text and image generation, translation, summaries and the assistant — in one subscription.",
+    "description": "Unlock all Toolando.tech AI tools — text and image generation, translation, summaries and the assistant — in one subscription.",
     "feature1": "Unlimited access to all AI tools",
     "feature2": "Text generator, image generator and translator",
     "feature3": "Priority request processing",

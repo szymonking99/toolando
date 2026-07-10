@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Toolando — I tuoi strumenti online in un unico posto",
+    "title": "Toolando.tech — I tuoi strumenti online in un unico posto",
     "description": "Convertitori, generatori, strumenti PDF e IA — tutto in un elegante ecosistema. Veloce e semplice."
   },
   "nav": {
@@ -57,13 +57,13 @@
   "ai": {
     "badge": "IA Premium",
     "title": "Strumenti IA intelligenti",
-    "subtitle": "Scrivi, riassumi, traduci e crea immagini con i più recenti modelli di IA — direttamente in Toolando, senza installazione.",
+    "subtitle": "Scrivi, riassumi, traduci e crea immagini con i più recenti modelli di IA — direttamente in Toolando.tech, senza installazione.",
     "openTool": "Apri strumento",
     "more": "Altri strumenti IA"
   },
   "features": {
     "title": "Strumenti più popolari",
-    "subtitle": "Gli strumenti Toolando più scelti — pronti all'uso in pochi secondi.",
+    "subtitle": "Gli strumenti Toolando.tech più scelti — pronti all'uso in pochi secondi.",
     "popularTitle": "Convertitori più popolari",
     "popularSubtitle": "Le conversioni più usate — in entrambe le direzioni, pronte all'uso."
   },
@@ -73,7 +73,7 @@
     "browse": "Esplora"
   },
   "why": {
-    "title": "Perché Toolando?",
+    "title": "Perché Toolando.tech?",
     "subtitle": "Progettato pensando alla tua produttività e comodità.",
     "speedTitle": "Velocità",
     "speedDesc": "Gli strumenti funzionano istantaneamente nel browser — senza attese né installazioni.",
@@ -83,7 +83,7 @@
     "toolsDesc": "Un enorme insieme di convertitori, generatori e strumenti IA in un unico posto."
   },
   "ctaSection": {
-    "title": "Inizia a usare Toolando oggi",
+    "title": "Inizia a usare Toolando.tech oggi",
     "subtitle": "Unisciti a un ecosistema di strumenti che ti fa risparmiare tempo ogni giorno.",
     "browse": "Esplora gli strumenti"
   },
@@ -94,15 +94,15 @@
     "support": "Sostienimi",
     "privacy": "Informativa sulla privacy",
     "terms": "Termini di servizio",
-    "rights": "© 2026 Toolando. Tutti i diritti riservati."
+    "rights": "© 2026 Toolando.tech. Tutti i diritti riservati."
   },
   "language": {
     "label": "Lingua"
   },
   "support": {
     "eyebrow": "Sostieni il progetto",
-    "title": "Aiuta Toolando a continuare",
-    "subtitle": "Toolando è sviluppato e offerto gratuitamente. Se ti fa risparmiare tempo, valuta di sostenerne lo sviluppo.",
+    "title": "Aiuta Toolando.tech a continuare",
+    "subtitle": "Toolando.tech è sviluppato e offerto gratuitamente. Se ti fa risparmiare tempo, valuta di sostenerne lo sviluppo.",
     "coffee": "Offrimi un caffè",
     "donate": "Fai una donazione",
     "back": "Torna alla home",
@@ -111,7 +111,7 @@
   "openerPage": {
     "eyebrow": "Anteprima e conversione",
     "title": "Apri-file e convertitore universale",
-    "subtitle": "Apri qualsiasi formato di file — immagini, video, audio, PDF, documenti, codice e dati appaiono istantaneamente. Una volta aperto, Toolando suggerisce subito tutti i formati verso cui convertire con un clic.",
+    "subtitle": "Apri qualsiasi formato di file — immagini, video, audio, PDF, documenti, codice e dati appaiono istantaneamente. Una volta aperto, Toolando.tech suggerisce subito tutti i formati verso cui convertire con un clic.",
     "back": "Tutti gli strumenti",
     "drop": "Trascina un file qui",
     "or": "oppure",
@@ -252,7 +252,7 @@
   },
   "paywall": {
     "unlockTitle": "Unlock \"{tool}\" with Premium",
-    "description": "Unlock all Toolando AI tools — text and image generation, translation, summaries and the assistant — in one subscription.",
+    "description": "Unlock all Toolando.tech AI tools — text and image generation, translation, summaries and the assistant — in one subscription.",
     "feature1": "Unlimited access to all AI tools",
     "feature2": "Text generator, image generator and translator",
     "feature3": "Priority request processing",

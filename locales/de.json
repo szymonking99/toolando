@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Toolando — Deine Online-Tools an einem Ort",
+    "title": "Toolando.tech — Deine Online-Tools an einem Ort",
     "description": "Konverter, Generatoren, PDF- und KI-Tools — alles in einem eleganten Ökosystem. Schnell und einfach."
   },
   "nav": {
@@ -57,13 +57,13 @@
   "ai": {
     "badge": "Premium-KI",
     "title": "Intelligente KI-Tools",
-    "subtitle": "Schreibe, fasse zusammen, übersetze und erstelle Bilder mit den neuesten KI-Modellen — direkt in Toolando, ohne Installation.",
+    "subtitle": "Schreibe, fasse zusammen, übersetze und erstelle Bilder mit den neuesten KI-Modellen — direkt in Toolando.tech, ohne Installation.",
     "openTool": "Werkzeug öffnen",
     "more": "Weitere KI-Tools"
   },
   "features": {
     "title": "Beliebteste Werkzeuge",
-    "subtitle": "Die meistgewählten Toolando-Werkzeuge — in Sekunden einsatzbereit.",
+    "subtitle": "Die meistgewählten Toolando.tech-Werkzeuge — in Sekunden einsatzbereit.",
     "popularTitle": "Beliebteste Konverter",
     "popularSubtitle": "Die meistgenutzten Konvertierungen — in beide Richtungen, sofort bereit."
   },
@@ -73,7 +73,7 @@
     "browse": "Durchsuchen"
   },
   "why": {
-    "title": "Warum Toolando?",
+    "title": "Warum Toolando.tech?",
     "subtitle": "Für deine Produktivität und deinen Komfort entwickelt.",
     "speedTitle": "Geschwindigkeit",
     "speedDesc": "Die Werkzeuge laufen blitzschnell im Browser — ohne Warten und ohne Installation.",
@@ -83,7 +83,7 @@
     "toolsDesc": "Eine riesige Sammlung von Konvertern, Generatoren und KI-Tools an einem Ort."
   },
   "ctaSection": {
-    "title": "Starte noch heute mit Toolando",
+    "title": "Starte noch heute mit Toolando.tech",
     "subtitle": "Werde Teil eines Ökosystems von Werkzeugen, die dir jeden Tag Zeit sparen.",
     "browse": "Werkzeuge durchsuchen"
   },
@@ -94,15 +94,15 @@
     "support": "Unterstütze mich",
     "privacy": "Datenschutz",
     "terms": "Nutzungsbedingungen",
-    "rights": "© 2026 Toolando. Alle Rechte vorbehalten."
+    "rights": "© 2026 Toolando.tech. Alle Rechte vorbehalten."
   },
   "language": {
     "label": "Sprache"
   },
   "support": {
     "eyebrow": "Unterstütze das Projekt",
-    "title": "Hilf, Toolando zu erhalten",
-    "subtitle": "Toolando entsteht und wird kostenlos angeboten. Wenn es dir Zeit spart, unterstütze gern die Entwicklung.",
+    "title": "Hilf, Toolando.tech zu erhalten",
+    "subtitle": "Toolando.tech entsteht und wird kostenlos angeboten. Wenn es dir Zeit spart, unterstütze gern die Entwicklung.",
     "coffee": "Spendier mir einen Kaffee",
     "donate": "Spende geben",
     "back": "Zurück zur Startseite",
@@ -111,7 +111,7 @@
   "openerPage": {
     "eyebrow": "Vorschau und Konvertierung",
     "title": "Universeller Datei-Öffner und -Konverter",
-    "subtitle": "Öffne buchstäblich jedes Dateiformat — Bilder, Video, Audio, PDF, Dokumente, Code und Daten werden sofort angezeigt. Nach dem Öffnen schlägt Toolando sofort alle sinnvollen Formate vor, in die du die Datei mit einem Klick konvertieren kannst.",
+    "subtitle": "Öffne buchstäblich jedes Dateiformat — Bilder, Video, Audio, PDF, Dokumente, Code und Daten werden sofort angezeigt. Nach dem Öffnen schlägt Toolando.tech sofort alle sinnvollen Formate vor, in die du die Datei mit einem Klick konvertieren kannst.",
     "back": "Alle Werkzeuge",
     "drop": "Datei hierher ziehen und ablegen",
     "or": "oder",
@@ -252,7 +252,7 @@
   },
   "paywall": {
     "unlockTitle": "„{tool}“ mit Premium freischalten",
-    "description": "Schalte alle KI-Tools von Toolando frei — Text- und Bildgenerierung, Übersetzung, Zusammenfassungen und den Assistenten — in einem Abo.",
+    "description": "Schalte alle KI-Tools von Toolando.tech frei — Text- und Bildgenerierung, Übersetzung, Zusammenfassungen und den Assistenten — in einem Abo.",
     "feature1": "Unbegrenzter Zugriff auf alle KI-Tools",
     "feature2": "Textgenerator, Bildgenerator und Übersetzer",
     "feature3": "Bevorzugte Verarbeitung von Anfragen",

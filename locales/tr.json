@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Toolando — Tüm çevrimiçi araçlarınız tek bir yerde",
+    "title": "Toolando.tech — Tüm çevrimiçi araçlarınız tek bir yerde",
     "description": "Dönüştürücüler, oluşturucular, PDF ve yapay zekâ araçları — hepsi şık bir ekosistemde. Hızlı ve basit."
   },
   "nav": {
@@ -57,13 +57,13 @@
   "ai": {
     "badge": "Premium Yapay Zekâ",
     "title": "Akıllı yapay zekâ araçları",
-    "subtitle": "En yeni yapay zekâ modelleriyle yazın, özetleyin, çevirin ve görsel oluşturun — kurulum olmadan doğrudan Toolando içinde.",
+    "subtitle": "En yeni yapay zekâ modelleriyle yazın, özetleyin, çevirin ve görsel oluşturun — kurulum olmadan doğrudan Toolando.tech içinde.",
     "openTool": "Aracı aç",
     "more": "Daha fazla yapay zekâ aracı"
   },
   "features": {
     "title": "En popüler araçlar",
-    "subtitle": "En çok seçilen Toolando araçları — saniyeler içinde kullanıma hazır.",
+    "subtitle": "En çok seçilen Toolando.tech araçları — saniyeler içinde kullanıma hazır.",
     "popularTitle": "En popüler dönüştürücüler",
     "popularSubtitle": "En çok kullanılan dönüşümler — her iki yönde, kullanıma hazır."
   },
@@ -73,7 +73,7 @@
     "browse": "Göz at"
   },
   "why": {
-    "title": "Neden Toolando?",
+    "title": "Neden Toolando.tech?",
     "subtitle": "Verimliliğiniz ve rahatınız düşünülerek geliştirildi.",
     "speedTitle": "Hız",
     "speedDesc": "Araçlar tarayıcınızda anında çalışır — bekleme yok ve kurulum yok.",
@@ -83,7 +83,7 @@
     "toolsDesc": "Tek bir yerde çok sayıda dönüştürücü, oluşturucu ve yapay zekâ aracı."
   },
   "ctaSection": {
-    "title": "Toolando'yu bugün kullanmaya başlayın",
+    "title": "Toolando.tech'yu bugün kullanmaya başlayın",
     "subtitle": "Her gün size zaman kazandıran bir araç ekosistemine katılın.",
     "browse": "Araçlara göz at"
   },
@@ -94,15 +94,15 @@
     "support": "Bana destek olun",
     "privacy": "Gizlilik politikası",
     "terms": "Hizmet şartları",
-    "rights": "© 2026 Toolando. Tüm hakları saklıdır."
+    "rights": "© 2026 Toolando.tech. Tüm hakları saklıdır."
   },
   "language": {
     "label": "Dil"
   },
   "support": {
     "eyebrow": "Projeyi destekleyin",
-    "title": "Toolando'nun sürmesine yardım edin",
-    "subtitle": "Toolando ücretsiz olarak geliştirilir ve sunulur. Size zaman kazandırıyorsa gelişimini desteklemeyi düşünün.",
+    "title": "Toolando.tech'nun sürmesine yardım edin",
+    "subtitle": "Toolando.tech ücretsiz olarak geliştirilir ve sunulur. Size zaman kazandırıyorsa gelişimini desteklemeyi düşünün.",
     "coffee": "Bana bir kahve ısmarla",
     "donate": "Bağış yap",
     "back": "Ana sayfaya dön",
@@ -111,7 +111,7 @@
   "openerPage": {
     "eyebrow": "Önizle ve dönüştür",
     "title": "Evrensel dosya açıcı ve dönüştürücü",
-    "subtitle": "Neredeyse her dosya biçimini açın — görseller, video, ses, PDF, belgeler, kod ve veri anında görünür. Dosya açıldıktan sonra Toolando, tek tıklamayla dönüştürebileceğiniz tüm mantıklı biçimleri hemen önerir.",
+    "subtitle": "Neredeyse her dosya biçimini açın — görseller, video, ses, PDF, belgeler, kod ve veri anında görünür. Dosya açıldıktan sonra Toolando.tech, tek tıklamayla dönüştürebileceğiniz tüm mantıklı biçimleri hemen önerir.",
     "back": "Tüm araçlar",
     "drop": "Bir dosyayı buraya sürükleyip bırakın",
     "or": "veya",
@@ -252,7 +252,7 @@
   },
   "paywall": {
     "unlockTitle": "Unlock \"{tool}\" with Premium",
-    "description": "Unlock all Toolando AI tools — text and image generation, translation, summaries and the assistant — in one subscription.",
+    "description": "Unlock all Toolando.tech AI tools — text and image generation, translation, summaries and the assistant — in one subscription.",
     "feature1": "Unlimited access to all AI tools",
     "feature2": "Text generator, image generator and translator",
     "feature3": "Priority request processing",

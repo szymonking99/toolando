@@ -24,9 +24,9 @@ export async function generateMetadata({
   const { category, locale } = await params
   const dict = await getDictionary(locale)
   const meta = getCategory(category)
-  if (!meta) return { title: `${dict.category.notFound} — Toolando` }
+  if (!meta) return { title: `${dict.category.notFound} — Toolando.tech` }
   const cm = getCategoryMeta(locale, category)
-  const title = `${cm?.title ?? meta.title} — Toolando`
+  const title = `${cm?.title ?? meta.title} — Toolando.tech`
   const description = cm?.description ?? meta.description
   return {
     title,
@@ -36,7 +36,7 @@ export async function generateMetadata({
       title,
       description,
       url: `/${locale}/category/${category}`,
-      siteName: "Toolando",
+      siteName: "Toolando.tech",
       type: "website",
       images: [{ url: "/og-image.png", width: 1200, height: 630, alt: title }],
     },
@@ -71,7 +71,7 @@ export default async function CategoryPage({
               <Wrench className="size-4" aria-hidden="true" />
             </span>
             <span className="text-lg font-semibold tracking-tight text-foreground">
-              Toolando
+              Toolando.tech
             </span>
           </Link>
           <Link

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Toolando — Všechny vaše online nástroje na jednom místě",
+    "title": "Toolando.tech — Všechny vaše online nástroje na jednom místě",
     "description": "Převodníky, generátory, PDF a AI nástroje — vše v jednom elegantním ekosystému. Rychle a jednoduše."
   },
   "nav": {
@@ -63,7 +63,7 @@
   },
   "features": {
     "title": "Nejoblíbenější nástroje",
-    "subtitle": "Nejvíce vybírané nástroje Toolando — připravené k použití během několika sekund.",
+    "subtitle": "Nejvíce vybírané nástroje Toolando.tech — připravené k použití během několika sekund.",
     "popularTitle": "Nejoblíbenější převodníky",
     "popularSubtitle": "Nejpoužívanější převody — oběma směry, připravené k použití."
   },
@@ -73,7 +73,7 @@
     "browse": "Procházet"
   },
   "why": {
-    "title": "Proč Toolando?",
+    "title": "Proč Toolando.tech?",
     "subtitle": "Vytvořeno s ohledem na vaši produktivitu a pohodlí.",
     "speedTitle": "Rychlost",
     "speedDesc": "Nástroje běží okamžitě ve vašem prohlížeči — bez čekání a bez instalace.",
@@ -83,7 +83,7 @@
     "toolsDesc": "Obrovská sada převodníků, generátorů a AI nástrojů na jednom místě."
   },
   "ctaSection": {
-    "title": "Začněte používat Toolando ještě dnes",
+    "title": "Začněte používat Toolando.tech ještě dnes",
     "subtitle": "Připojte se k ekosystému nástrojů, který vám každý den šetří čas.",
     "browse": "Procházet nástroje"
   },
@@ -94,15 +94,15 @@
     "support": "Podpořte mě",
     "privacy": "Zásady ochrany osobních údajů",
     "terms": "Podmínky služby",
-    "rights": "© 2026 Toolando. Všechna práva vyhrazena."
+    "rights": "© 2026 Toolando.tech. Všechna práva vyhrazena."
   },
   "language": {
     "label": "Jazyk"
   },
   "support": {
     "eyebrow": "Podpořte projekt",
-    "title": "Pomozte udržet Toolando",
-    "subtitle": "Toolando je vyvíjeno a nabízeno zdarma. Pokud vám šetří čas, zvažte podporu jeho vývoje.",
+    "title": "Pomozte udržet Toolando.tech",
+    "subtitle": "Toolando.tech je vyvíjeno a nabízeno zdarma. Pokud vám šetří čas, zvažte podporu jeho vývoje.",
     "coffee": "Kupte mi kávu",
     "donate": "Přispět darem",
     "back": "Zpět na úvod",
@@ -111,7 +111,7 @@
   "openerPage": {
     "eyebrow": "Náhled a převod",
     "title": "Univerzální otvírač souborů a převodník",
-    "subtitle": "Otevřete prakticky jakýkoli formát souboru — obrázky, video, zvuk, PDF, dokumenty, kód a data se zobrazí okamžitě. Po otevření Toolando ihned navrhne všechny smysluplné formáty, do kterých lze soubor jedním kliknutím převést.",
+    "subtitle": "Otevřete prakticky jakýkoli formát souboru — obrázky, video, zvuk, PDF, dokumenty, kód a data se zobrazí okamžitě. Po otevření Toolando.tech ihned navrhne všechny smysluplné formáty, do kterých lze soubor jedním kliknutím převést.",
     "back": "Všechny nástroje",
     "drop": "Přetáhněte soubor sem",
     "or": "nebo",
@@ -252,7 +252,7 @@
   },
   "paywall": {
     "unlockTitle": "Unlock \"{tool}\" with Premium",
-    "description": "Unlock all Toolando AI tools — text and image generation, translation, summaries and the assistant — in one subscription.",
+    "description": "Unlock all Toolando.tech AI tools — text and image generation, translation, summaries and the assistant — in one subscription.",
     "feature1": "Unlimited access to all AI tools",
     "feature2": "Text generator, image generator and translator",
     "feature3": "Priority request processing",

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Toolando — كل أدواتك عبر الإنترنت في مكان واحد",
+    "title": "Toolando.tech — كل أدواتك عبر الإنترنت في مكان واحد",
     "description": "محوّلات ومولّدات وأدوات PDF والذكاء الاصطناعي — كل ذلك في منظومة أنيقة واحدة. سريع وبسيط."
   },
   "nav": {
@@ -57,13 +57,13 @@
   "ai": {
     "badge": "ذكاء اصطناعي مميّز",
     "title": "أدوات ذكاء اصطناعي ذكية",
-    "subtitle": "اكتب ولخّص وترجم وأنشئ صورًا بأحدث نماذج الذكاء الاصطناعي — داخل Toolando مباشرة، دون تثبيت.",
+    "subtitle": "اكتب ولخّص وترجم وأنشئ صورًا بأحدث نماذج الذكاء الاصطناعي — داخل Toolando.tech مباشرة، دون تثبيت.",
     "openTool": "افتح الأداة",
     "more": "المزيد من أدوات الذكاء الاصطناعي"
   },
   "features": {
     "title": "الأدوات الأكثر شيوعًا",
-    "subtitle": "أكثر أدوات Toolando اختيارًا — جاهزة للاستخدام في ثوانٍ.",
+    "subtitle": "أكثر أدوات Toolando.tech اختيارًا — جاهزة للاستخدام في ثوانٍ.",
     "popularTitle": "المحوّلات الأكثر شيوعًا",
     "popularSubtitle": "أكثر التحويلات استخدامًا — في كلا الاتجاهين، جاهزة للاستخدام."
   },
@@ -73,7 +73,7 @@
     "browse": "تصفّح"
   },
   "why": {
-    "title": "لماذا Toolando؟",
+    "title": "لماذا Toolando.tech؟",
     "subtitle": "مصمَّم مع مراعاة إنتاجيتك وراحتك.",
     "speedTitle": "السرعة",
     "speedDesc": "تعمل الأدوات فورًا في متصفحك — دون انتظار ودون تثبيت.",
@@ -83,7 +83,7 @@
     "toolsDesc": "مجموعة ضخمة من المحوّلات والمولّدات وأدوات الذكاء الاصطناعي في مكان واحد."
   },
   "ctaSection": {
-    "title": "ابدأ باستخدام Toolando اليوم",
+    "title": "ابدأ باستخدام Toolando.tech اليوم",
     "subtitle": "انضم إلى منظومة أدوات توفّر لك الوقت كل يوم.",
     "browse": "تصفّح الأدوات"
   },
@@ -94,15 +94,15 @@
     "support": "ادعمني",
     "privacy": "سياسة الخصوصية",
     "terms": "شروط الخدمة",
-    "rights": "© 2026 Toolando. جميع الحقوق محفوظة."
+    "rights": "© 2026 Toolando.tech. جميع الحقوق محفوظة."
   },
   "language": {
     "label": "اللغة"
   },
   "support": {
     "eyebrow": "ادعم المشروع",
-    "title": "ساعد في استمرار Toolando",
-    "subtitle": "يُطوَّر Toolando ويُقدَّم مجانًا. إذا كان يوفّر لك الوقت، ففكّر في دعم تطويره.",
+    "title": "ساعد في استمرار Toolando.tech",
+    "subtitle": "يُطوَّر Toolando.tech ويُقدَّم مجانًا. إذا كان يوفّر لك الوقت، ففكّر في دعم تطويره.",
     "coffee": "اشترِ لي قهوة",
     "donate": "قدّم تبرعًا",
     "back": "العودة إلى الصفحة الرئيسية",
@@ -111,7 +111,7 @@
   "openerPage": {
     "eyebrow": "المعاينة والتحويل",
     "title": "فاتح ملفات ومحوّل شامل",
-    "subtitle": "افتح تقريبًا أي صيغة ملف — تظهر الصور والفيديو والصوت وPDF والمستندات والكود والبيانات فورًا. بمجرد الفتح، يقترح Toolando على الفور كل الصيغ المنطقية التي يمكنك التحويل إليها بنقرة واحدة.",
+    "subtitle": "افتح تقريبًا أي صيغة ملف — تظهر الصور والفيديو والصوت وPDF والمستندات والكود والبيانات فورًا. بمجرد الفتح، يقترح Toolando.tech على الفور كل الصيغ المنطقية التي يمكنك التحويل إليها بنقرة واحدة.",
     "back": "كل الأدوات",
     "drop": "اسحب وأفلت ملفًا هنا",
     "or": "أو",
@@ -252,7 +252,7 @@
   },
   "paywall": {
     "unlockTitle": "Unlock \"{tool}\" with Premium",
-    "description": "Unlock all Toolando AI tools — text and image generation, translation, summaries and the assistant — in one subscription.",
+    "description": "Unlock all Toolando.tech AI tools — text and image generation, translation, summaries and the assistant — in one subscription.",
     "feature1": "Unlimited access to all AI tools",
     "feature2": "Text generator, image generator and translator",
     "feature3": "Priority request processing",

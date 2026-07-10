@@ -54,7 +54,7 @@ export async function generateMetadata({
       title: dict.meta.title,
       description: dict.meta.description,
       url: `/${locale}`,
-      siteName: "Toolando",
+      siteName: "Toolando.tech",
       locale,
       type: "website",
       images: [
@@ -62,7 +62,7 @@ export async function generateMetadata({
           url: "/og-image.png",
           width: 1200,
           height: 630,
-          alt: "Toolando",
+          alt: "Toolando.tech",
         },
       ],
     },
