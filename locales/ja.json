@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Toolando — あなたのオンラインツールを一か所に",
+    "title": "Toolando.tech — あなたのオンラインツールを一か所に",
     "description": "コンバーター、ジェネレーター、PDF・AI ツール——すべてを一つの洗練されたエコシステムに。速く、シンプルに。"
   },
   "nav": {
@@ -57,13 +57,13 @@
   "ai": {
     "badge": "プレミアム AI",
     "title": "インテリジェントな AI ツール",
-    "subtitle": "最新の AI モデルで文章作成、要約、翻訳、画像生成——インストール不要で Toolando 内から直接。",
+    "subtitle": "最新の AI モデルで文章作成、要約、翻訳、画像生成——インストール不要で Toolando.tech 内から直接。",
     "openTool": "ツールを開く",
     "more": "その他の AI ツール"
   },
   "features": {
     "title": "人気のツール",
-    "subtitle": "最も選ばれている Toolando のツール——数秒で使えます。",
+    "subtitle": "最も選ばれている Toolando.tech のツール——数秒で使えます。",
     "popularTitle": "人気のコンバーター",
     "popularSubtitle": "最もよく使われる変換——双方向対応、すぐに使えます。"
   },
@@ -73,7 +73,7 @@
     "browse": "見る"
   },
   "why": {
-    "title": "なぜ Toolando なのか？",
+    "title": "なぜ Toolando.tech なのか？",
     "subtitle": "あなたの生産性と快適さを考えて作られています。",
     "speedTitle": "スピード",
     "speedDesc": "ツールはブラウザー内で瞬時に動作——待ち時間もインストールも不要です。",
@@ -83,7 +83,7 @@
     "toolsDesc": "コンバーター、ジェネレーター、AI ツールの膨大なセットを一か所に。"
   },
   "ctaSection": {
-    "title": "今日から Toolando を使いはじめよう",
+    "title": "今日から Toolando.tech を使いはじめよう",
     "subtitle": "毎日あなたの時間を節約するツールのエコシステムに参加しましょう。",
     "browse": "ツールを見る"
   },
@@ -94,15 +94,15 @@
     "support": "応援する",
     "privacy": "プライバシーポリシー",
     "terms": "利用規約",
-    "rights": "© 2026 Toolando. All rights reserved."
+    "rights": "© 2026 Toolando.tech. All rights reserved."
   },
   "language": {
     "label": "言語"
   },
   "support": {
     "eyebrow": "プロジェクトを応援",
-    "title": "Toolando の運営を支えてください",
-    "subtitle": "Toolando は無料で開発・提供されています。時間の節約になったら、開発の支援をご検討ください。",
+    "title": "Toolando.tech の運営を支えてください",
+    "subtitle": "Toolando.tech は無料で開発・提供されています。時間の節約になったら、開発の支援をご検討ください。",
     "coffee": "コーヒーをおごる",
     "donate": "寄付する",
     "back": "ホームに戻る",
@@ -111,7 +111,7 @@
   "openerPage": {
     "eyebrow": "プレビューと変換",
     "title": "ユニバーサルファイルオープナー＆コンバーター",
-    "subtitle": "ほぼあらゆるファイル形式を開けます——画像、動画、音声、PDF、ドキュメント、コード、データが瞬時に表示されます。開いた後、Toolando はワンクリックで変換できる妥当な形式をすぐに提案します。",
+    "subtitle": "ほぼあらゆるファイル形式を開けます——画像、動画、音声、PDF、ドキュメント、コード、データが瞬時に表示されます。開いた後、Toolando.tech はワンクリックで変換できる妥当な形式をすぐに提案します。",
     "back": "すべてのツール",
     "drop": "ここにファイルをドラッグ＆ドロップ",
     "or": "または",
@@ -252,7 +252,7 @@
   },
   "paywall": {
     "unlockTitle": "Unlock \"{tool}\" with Premium",
-    "description": "Unlock all Toolando AI tools — text and image generation, translation, summaries and the assistant — in one subscription.",
+    "description": "Unlock all Toolando.tech AI tools — text and image generation, translation, summaries and the assistant — in one subscription.",
     "feature1": "Unlimited access to all AI tools",
     "feature2": "Text generator, image generator and translator",
     "feature3": "Priority request processing",

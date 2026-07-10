@@ -2,20 +2,20 @@ export default function TermsPage() {
   return (
     <main className="mx-auto max-w-3xl px-4 py-24">
       <h1 className="text-3xl font-semibold text-foreground mb-6">
-        Regulamin korzystania z Toolando
+        Regulamin korzystania z Toolando.tech
       </h1>
 
       <div className="space-y-6 text-muted-foreground leading-relaxed">
         <h2 className="text-xl font-semibold text-foreground">1. Postanowienia ogólne</h2>
         <p>
-          Toolando jest serwisem internetowym udostępniającym narzędzia online do konwersji plików,
+          Toolando.tech jest serwisem internetowym udostępniającym narzędzia online do konwersji plików,
           generowania treści oraz narzędzia wspierane sztuczną inteligencją.
           Korzystanie z serwisu oznacza akceptację niniejszego regulaminu.
         </p>
 
         <h2 className="text-xl font-semibold text-foreground">2. Korzystanie z serwisu</h2>
         <p>
-          Użytkownik zobowiązuje się do korzystania z Toolando zgodnie z prawem,
+          Użytkownik zobowiązuje się do korzystania z Toolando.tech zgodnie z prawem,
           dobrymi obyczajami oraz niniejszym regulaminem.
         </p>
         <ul className="list-disc pl-6">
@@ -47,7 +47,7 @@ export default function TermsPage() {
 
         <h2 className="text-xl font-semibold text-foreground">5. Prawa autorskie</h2>
         <p>
-          Nazwa Toolando, elementy graficzne oraz treści opisowe serwisu podlegają ochronie prawnej.
+          Nazwa Toolando.tech, elementy graficzne oraz treści opisowe serwisu podlegają ochronie prawnej.
           Zabronione jest ich kopiowanie i wykorzystywanie bez zgody właściciela.
         </p>
 

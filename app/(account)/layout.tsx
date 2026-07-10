@@ -11,8 +11,8 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "Konto — Toolando",
-  description: "Zaloguj się lub załóż konto w Toolando.",
+  title: "Konto — Toolando.tech",
+  description: "Zaloguj się lub załóż konto w Toolando.tech.",
   robots: { index: false, follow: false },
 }
 

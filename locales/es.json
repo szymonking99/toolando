@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Toolando — Tus herramientas online en un solo lugar",
+    "title": "Toolando.tech — Tus herramientas online en un solo lugar",
     "description": "Conversores, generadores, PDF y herramientas de IA — todo en un ecosistema elegante. Rápido y simple."
   },
   "nav": {
@@ -57,13 +57,13 @@
   "ai": {
     "badge": "IA Premium",
     "title": "Herramientas de IA inteligentes",
-    "subtitle": "Escribe, resume, traduce y crea imágenes con los últimos modelos de IA — directamente en Toolando, sin instalación.",
+    "subtitle": "Escribe, resume, traduce y crea imágenes con los últimos modelos de IA — directamente en Toolando.tech, sin instalación.",
     "openTool": "Abrir herramienta",
     "more": "Más herramientas de IA"
   },
   "features": {
     "title": "Herramientas más populares",
-    "subtitle": "Las herramientas de Toolando más elegidas — listas para usar en segundos.",
+    "subtitle": "Las herramientas de Toolando.tech más elegidas — listas para usar en segundos.",
     "popularTitle": "Conversores más populares",
     "popularSubtitle": "Las conversiones más usadas — en ambos sentidos, listas al instante."
   },
@@ -73,7 +73,7 @@
     "browse": "Explorar"
   },
   "why": {
-    "title": "¿Por qué Toolando?",
+    "title": "¿Por qué Toolando.tech?",
     "subtitle": "Creado pensando en tu productividad y comodidad.",
     "speedTitle": "Velocidad",
     "speedDesc": "Las herramientas funcionan al instante en tu navegador — sin esperas ni instalación.",
@@ -83,7 +83,7 @@
     "toolsDesc": "Un enorme conjunto de conversores, generadores y herramientas de IA en un solo lugar."
   },
   "ctaSection": {
-    "title": "Empieza a usar Toolando hoy",
+    "title": "Empieza a usar Toolando.tech hoy",
     "subtitle": "Únete a un ecosistema de herramientas que te ahorran tiempo cada día.",
     "browse": "Explorar herramientas"
   },
@@ -94,15 +94,15 @@
     "support": "Apóyame",
     "privacy": "Política de privacidad",
     "terms": "Términos de servicio",
-    "rights": "© 2026 Toolando. Todos los derechos reservados."
+    "rights": "© 2026 Toolando.tech. Todos los derechos reservados."
   },
   "language": {
     "label": "Idioma"
   },
   "support": {
     "eyebrow": "Apoya el proyecto",
-    "title": "Ayuda a mantener Toolando",
-    "subtitle": "Toolando se crea y se ofrece gratis. Si te ahorra tiempo, considera apoyar su desarrollo.",
+    "title": "Ayuda a mantener Toolando.tech",
+    "subtitle": "Toolando.tech se crea y se ofrece gratis. Si te ahorra tiempo, considera apoyar su desarrollo.",
     "coffee": "Invítame a un café",
     "donate": "Hacer una donación",
     "back": "Volver al inicio",
@@ -111,7 +111,7 @@
   "openerPage": {
     "eyebrow": "Previsualiza y convierte",
     "title": "Visor y conversor universal de archivos",
-    "subtitle": "Abre literalmente cualquier formato de archivo — imágenes, vídeo, audio, PDF, documentos, código y datos se muestran al instante. Una vez abierto, Toolando sugiere de inmediato todos los formatos con sentido a los que puedes convertir el archivo con un solo clic.",
+    "subtitle": "Abre literalmente cualquier formato de archivo — imágenes, vídeo, audio, PDF, documentos, código y datos se muestran al instante. Una vez abierto, Toolando.tech sugiere de inmediato todos los formatos con sentido a los que puedes convertir el archivo con un solo clic.",
     "back": "Todas las herramientas",
     "drop": "Arrastra y suelta un archivo aquí",
     "or": "o",
@@ -252,7 +252,7 @@
   },
   "paywall": {
     "unlockTitle": "Desbloquea «{tool}» con Premium",
-    "description": "Desbloquea todas las herramientas de IA de Toolando — generación de texto e imágenes, traducción, resúmenes y el asistente — en una sola suscripción.",
+    "description": "Desbloquea todas las herramientas de IA de Toolando.tech — generación de texto e imágenes, traducción, resúmenes y el asistente — en una sola suscripción.",
     "feature1": "Acceso ilimitado a todas las herramientas de IA",
     "feature2": "Generador de texto, de imágenes y traductor",
     "feature3": "Procesamiento prioritario de solicitudes",

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Toolando — Semua alat online Anda dalam satu tempat",
+    "title": "Toolando.tech — Semua alat online Anda dalam satu tempat",
     "description": "Konverter, generator, alat PDF dan AI — semuanya dalam satu ekosistem yang elegan. Cepat dan sederhana."
   },
   "nav": {
@@ -57,13 +57,13 @@
   "ai": {
     "badge": "AI Premium",
     "title": "Alat AI cerdas",
-    "subtitle": "Menulis, meringkas, menerjemahkan, dan membuat gambar dengan model AI terbaru — langsung di dalam Toolando, tanpa pemasangan.",
+    "subtitle": "Menulis, meringkas, menerjemahkan, dan membuat gambar dengan model AI terbaru — langsung di dalam Toolando.tech, tanpa pemasangan.",
     "openTool": "Buka alat",
     "more": "Alat AI lainnya"
   },
   "features": {
     "title": "Alat paling populer",
-    "subtitle": "Alat Toolando yang paling banyak dipilih — siap digunakan dalam hitungan detik.",
+    "subtitle": "Alat Toolando.tech yang paling banyak dipilih — siap digunakan dalam hitungan detik.",
     "popularTitle": "Konverter paling populer",
     "popularSubtitle": "Konversi yang paling banyak digunakan — dua arah, siap dipakai."
   },
@@ -73,7 +73,7 @@
     "browse": "Jelajahi"
   },
   "why": {
-    "title": "Mengapa Toolando?",
+    "title": "Mengapa Toolando.tech?",
     "subtitle": "Dibuat dengan mempertimbangkan produktivitas dan kenyamanan Anda.",
     "speedTitle": "Kecepatan",
     "speedDesc": "Alat berjalan seketika di peramban Anda — tanpa menunggu dan tanpa pemasangan.",
@@ -83,7 +83,7 @@
     "toolsDesc": "Sekumpulan besar konverter, generator, dan alat AI dalam satu tempat."
   },
   "ctaSection": {
-    "title": "Mulai gunakan Toolando hari ini",
+    "title": "Mulai gunakan Toolando.tech hari ini",
     "subtitle": "Bergabunglah dengan ekosistem alat yang menghemat waktu Anda setiap hari.",
     "browse": "Jelajahi alat"
   },
@@ -94,15 +94,15 @@
     "support": "Dukung saya",
     "privacy": "Kebijakan privasi",
     "terms": "Ketentuan layanan",
-    "rights": "© 2026 Toolando. Semua hak dilindungi."
+    "rights": "© 2026 Toolando.tech. Semua hak dilindungi."
   },
   "language": {
     "label": "Bahasa"
   },
   "support": {
     "eyebrow": "Dukung proyek ini",
-    "title": "Bantu Toolando tetap berjalan",
-    "subtitle": "Toolando dikembangkan dan ditawarkan secara gratis. Jika menghemat waktu Anda, pertimbangkan untuk mendukung pengembangannya.",
+    "title": "Bantu Toolando.tech tetap berjalan",
+    "subtitle": "Toolando.tech dikembangkan dan ditawarkan secara gratis. Jika menghemat waktu Anda, pertimbangkan untuk mendukung pengembangannya.",
     "coffee": "Belikan saya kopi",
     "donate": "Beri donasi",
     "back": "Kembali ke beranda",
@@ -111,7 +111,7 @@
   "openerPage": {
     "eyebrow": "Pratinjau dan konversi",
     "title": "Pembuka berkas dan konverter universal",
-    "subtitle": "Buka hampir semua format berkas — gambar, video, audio, PDF, dokumen, kode, dan data muncul seketika. Setelah dibuka, Toolando langsung menyarankan setiap format yang masuk akal untuk dikonversi dengan satu klik.",
+    "subtitle": "Buka hampir semua format berkas — gambar, video, audio, PDF, dokumen, kode, dan data muncul seketika. Setelah dibuka, Toolando.tech langsung menyarankan setiap format yang masuk akal untuk dikonversi dengan satu klik.",
     "back": "Semua alat",
     "drop": "Seret dan lepas berkas di sini",
     "or": "atau",
@@ -252,7 +252,7 @@
   },
   "paywall": {
     "unlockTitle": "Unlock \"{tool}\" with Premium",
-    "description": "Unlock all Toolando AI tools — text and image generation, translation, summaries and the assistant — in one subscription.",
+    "description": "Unlock all Toolando.tech AI tools — text and image generation, translation, summaries and the assistant — in one subscription.",
     "feature1": "Unlimited access to all AI tools",
     "feature2": "Text generator, image generator and translator",
     "feature3": "Priority request processing",

@@ -17,7 +17,7 @@ export async function generateMetadata({
   const { locale } = await params
   const dict = await getDictionary(locale)
   return {
-    title: `${dict.nav.allTools} — Toolando`,
+    title: `${dict.nav.allTools} — Toolando.tech`,
     description: dict.categories.subtitle,
     alternates: { canonical: `/${locale}/tools` },
   }

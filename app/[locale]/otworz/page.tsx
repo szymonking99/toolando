@@ -13,7 +13,7 @@ export async function generateMetadata({
   const { locale } = await params
   const dict = await getDictionary(locale)
   return {
-    title: `${dict.openerPage.title} — Toolando`,
+    title: `${dict.openerPage.title} — Toolando.tech`,
     description: dict.openerPage.subtitle,
     alternates: { canonical: `/${locale}/otworz` },
   }
@@ -36,7 +36,7 @@ export default async function OpenerPage({
               <Wrench className="size-4" aria-hidden="true" />
             </span>
             <span className="text-lg font-semibold tracking-tight text-foreground">
-              Toolando
+              Toolando.tech
             </span>
           </Link>
           <Link

@@ -62,8 +62,8 @@ export async function generateMetadata({
   const { id, locale } = await params
   const dict = await getDictionary(locale)
   const text = resolveToolText(locale, id)
-  if (!text) return { title: `${dict.tool.notFound} — Toolando` }
-  const title = `${text.name} — Toolando`
+  if (!text) return { title: `${dict.tool.notFound} — Toolando.tech` }
+  const title = `${text.name} — Toolando.tech`
   return {
     title,
     description: text.description,
@@ -72,7 +72,7 @@ export async function generateMetadata({
       title,
       description: text.description,
       url: `/${locale}/tools/${id}`,
-      siteName: "Toolando",
+      siteName: "Toolando.tech",
       type: "website",
       images: [{ url: "/og-image.png", width: 1200, height: 630, alt: text.name }],
     },
@@ -109,7 +109,7 @@ function ToolShell({
               <Wrench className="size-4" aria-hidden="true" />
             </span>
             <span className="text-lg font-semibold tracking-tight text-foreground">
-              Toolando
+              Toolando.tech
             </span>
           </Link>
           <Link

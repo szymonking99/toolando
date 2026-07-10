@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Toolando — Kaikki verkkotyökalusi yhdessä paikassa",
+    "title": "Toolando.tech — Kaikki verkkotyökalusi yhdessä paikassa",
     "description": "Muuntimet, generaattorit, PDF- ja tekoälytyökalut — kaikki yhdessä tyylikkäässä ekosysteemissä. Nopeaa ja yksinkertaista."
   },
   "nav": {
@@ -57,13 +57,13 @@
   "ai": {
     "badge": "Premium-tekoäly",
     "title": "Älykkäät tekoälytyökalut",
-    "subtitle": "Kirjoita, tiivistä, käännä ja luo kuvia uusimmilla tekoälymalleilla — suoraan Toolandossa, ilman asennusta.",
+    "subtitle": "Kirjoita, tiivistä, käännä ja luo kuvia uusimmilla tekoälymalleilla — suoraan Toolando.techssa, ilman asennusta.",
     "openTool": "Avaa työkalu",
     "more": "Lisää tekoälytyökaluja"
   },
   "features": {
     "title": "Suosituimmat työkalut",
-    "subtitle": "Eniten valitut Toolando-työkalut — käyttövalmiina sekunneissa.",
+    "subtitle": "Eniten valitut Toolando.tech-työkalut — käyttövalmiina sekunneissa.",
     "popularTitle": "Suosituimmat muuntimet",
     "popularSubtitle": "Eniten käytetyt muunnokset — molempiin suuntiin, käyttövalmiina."
   },
@@ -73,7 +73,7 @@
     "browse": "Selaa"
   },
   "why": {
-    "title": "Miksi Toolando?",
+    "title": "Miksi Toolando.tech?",
     "subtitle": "Rakennettu tuottavuutesi ja mukavuutesi huomioiden.",
     "speedTitle": "Nopeus",
     "speedDesc": "Työkalut toimivat välittömästi selaimessasi — ei odottelua eikä asennusta.",
@@ -83,7 +83,7 @@
     "toolsDesc": "Valtava kokoelma muuntimia, generaattoreita ja tekoälytyökaluja yhdessä paikassa."
   },
   "ctaSection": {
-    "title": "Aloita Toolandon käyttö tänään",
+    "title": "Aloita Toolando.techn käyttö tänään",
     "subtitle": "Liity työkalujen ekosysteemiin, joka säästää aikaasi joka päivä.",
     "browse": "Selaa työkaluja"
   },
@@ -94,15 +94,15 @@
     "support": "Tue minua",
     "privacy": "Tietosuojakäytäntö",
     "terms": "Käyttöehdot",
-    "rights": "© 2026 Toolando. Kaikki oikeudet pidätetään."
+    "rights": "© 2026 Toolando.tech. Kaikki oikeudet pidätetään."
   },
   "language": {
     "label": "Kieli"
   },
   "support": {
     "eyebrow": "Tue projektia",
-    "title": "Auta pitämään Toolando pystyssä",
-    "subtitle": "Toolando kehitetään ja tarjotaan ilmaiseksi. Jos se säästää aikaasi, harkitse sen kehityksen tukemista.",
+    "title": "Auta pitämään Toolando.tech pystyssä",
+    "subtitle": "Toolando.tech kehitetään ja tarjotaan ilmaiseksi. Jos se säästää aikaasi, harkitse sen kehityksen tukemista.",
     "coffee": "Tarjoa minulle kahvi",
     "donate": "Tee lahjoitus",
     "back": "Takaisin etusivulle",
@@ -111,7 +111,7 @@
   "openerPage": {
     "eyebrow": "Esikatsele ja muunna",
     "title": "Universaali tiedostonavaaja ja muunnin",
-    "subtitle": "Avaa käytännössä mikä tahansa tiedostomuoto — kuvat, video, ääni, PDF, asiakirjat, koodi ja data näkyvät heti. Kun tiedosto on avattu, Toolando ehdottaa heti kaikki järkevät muodot, joihin voit muuntaa yhdellä klikkauksella.",
+    "subtitle": "Avaa käytännössä mikä tahansa tiedostomuoto — kuvat, video, ääni, PDF, asiakirjat, koodi ja data näkyvät heti. Kun tiedosto on avattu, Toolando.tech ehdottaa heti kaikki järkevät muodot, joihin voit muuntaa yhdellä klikkauksella.",
     "back": "Kaikki työkalut",
     "drop": "Vedä ja pudota tiedosto tähän",
     "or": "tai",
@@ -252,7 +252,7 @@
   },
   "paywall": {
     "unlockTitle": "Unlock \"{tool}\" with Premium",
-    "description": "Unlock all Toolando AI tools — text and image generation, translation, summaries and the assistant — in one subscription.",
+    "description": "Unlock all Toolando.tech AI tools — text and image generation, translation, summaries and the assistant — in one subscription.",
     "feature1": "Unlimited access to all AI tools",
     "feature2": "Text generator, image generator and translator",
     "feature3": "Priority request processing",

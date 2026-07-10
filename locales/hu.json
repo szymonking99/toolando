@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Toolando — Minden online eszközöd egy helyen",
+    "title": "Toolando.tech — Minden online eszközöd egy helyen",
     "description": "Konverterek, generátorok, PDF- és AI-eszközök — mind egyetlen elegáns ökoszisztémában. Gyors és egyszerű."
   },
   "nav": {
@@ -63,7 +63,7 @@
   },
   "features": {
     "title": "Legnépszerűbb eszközök",
-    "subtitle": "A legtöbbet választott Toolando-eszközök — másodpercek alatt használatra készen.",
+    "subtitle": "A legtöbbet választott Toolando.tech-eszközök — másodpercek alatt használatra készen.",
     "popularTitle": "Legnépszerűbb konverterek",
     "popularSubtitle": "A legtöbbet használt konverziók — mindkét irányban, használatra készen."
   },
@@ -73,7 +73,7 @@
     "browse": "Böngészés"
   },
   "why": {
-    "title": "Miért a Toolando?",
+    "title": "Miért a Toolando.tech?",
     "subtitle": "A termelékenységedet és kényelmedet szem előtt tartva épült.",
     "speedTitle": "Sebesség",
     "speedDesc": "Az eszközök azonnal futnak a böngésződben — nincs várakozás és nincs telepítés.",
@@ -94,7 +94,7 @@
     "support": "Támogass engem",
     "privacy": "Adatvédelmi irányelvek",
     "terms": "Szolgáltatási feltételek",
-    "rights": "© 2026 Toolando. Minden jog fenntartva."
+    "rights": "© 2026 Toolando.tech. Minden jog fenntartva."
   },
   "language": {
     "label": "Nyelv"
@@ -102,7 +102,7 @@
   "support": {
     "eyebrow": "Támogasd a projektet",
     "title": "Segíts fenntartani a Toolandót",
-    "subtitle": "A Toolando ingyenesen készül és érhető el. Ha időt takarít meg neked, fontold meg a fejlesztésének támogatását.",
+    "subtitle": "A Toolando.tech ingyenesen készül és érhető el. Ha időt takarít meg neked, fontold meg a fejlesztésének támogatását.",
     "coffee": "Hívj meg egy kávéra",
     "donate": "Adományozz",
     "back": "Vissza a főoldalra",
@@ -111,7 +111,7 @@
   "openerPage": {
     "eyebrow": "Előnézet és konvertálás",
     "title": "Univerzális fájlmegnyitó és konverter",
-    "subtitle": "Nyiss meg gyakorlatilag bármilyen fájlformátumot — a képek, videók, hang, PDF, dokumentumok, kód és adatok azonnal megjelennek. A megnyitás után a Toolando azonnal felkínálja az összes ésszerű formátumot, amelyre egyetlen kattintással konvertálhatsz.",
+    "subtitle": "Nyiss meg gyakorlatilag bármilyen fájlformátumot — a képek, videók, hang, PDF, dokumentumok, kód és adatok azonnal megjelennek. A megnyitás után a Toolando.tech azonnal felkínálja az összes ésszerű formátumot, amelyre egyetlen kattintással konvertálhatsz.",
     "back": "Minden eszköz",
     "drop": "Húzz ide egy fájlt",
     "or": "vagy",
@@ -252,7 +252,7 @@
   },
   "paywall": {
     "unlockTitle": "Unlock \"{tool}\" with Premium",
-    "description": "Unlock all Toolando AI tools — text and image generation, translation, summaries and the assistant — in one subscription.",
+    "description": "Unlock all Toolando.tech AI tools — text and image generation, translation, summaries and the assistant — in one subscription.",
     "feature1": "Unlimited access to all AI tools",
     "feature2": "Text generator, image generator and translator",
     "feature3": "Priority request processing",

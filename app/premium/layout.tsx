@@ -9,8 +9,8 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "Premium — Toolando",
-  description: "Zarządzaj swoją subskrypcją Premium w Toolando.",
+  title: "Premium — Toolando.tech",
+  description: "Zarządzaj swoją subskrypcją Premium w Toolando.tech.",
   robots: { index: false, follow: false },
 }
 

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Toolando — Twoje narzędzia online w jednym miejscu",
+    "title": "Toolando.tech — Twoje narzędzia online w jednym miejscu",
     "description": "Konwertery, generatory, PDF i narzędzia AI — wszystko w jednym eleganckim ekosystemie. Szybko i prosto."
   },
   "nav": {
@@ -57,13 +57,13 @@
   "ai": {
     "badge": "Premium AI",
     "title": "Inteligentne narzędzia AI",
-    "subtitle": "Pisz, streszczaj, tłumacz i twórz obrazy dzięki najnowszym modelom sztucznej inteligencji — bezpośrednio w Toolando, bez instalacji.",
+    "subtitle": "Pisz, streszczaj, tłumacz i twórz obrazy dzięki najnowszym modelom sztucznej inteligencji — bezpośrednio w Toolando.tech, bez instalacji.",
     "openTool": "Otwórz narzędzie",
     "more": "Więcej narzędzi AI"
   },
   "features": {
     "title": "Najpopularniejsze narzędzia",
-    "subtitle": "Najczęściej wybierane narzędzia Toolando — gotowe do użycia w kilka sekund.",
+    "subtitle": "Najczęściej wybierane narzędzia Toolando.tech — gotowe do użycia w kilka sekund.",
     "popularTitle": "Najpopularniejsze konwertery",
     "popularSubtitle": "Najczęściej używane konwersje — w obie strony, gotowe od razu."
   },
@@ -73,7 +73,7 @@
     "browse": "Przeglądaj"
   },
   "why": {
-    "title": "Dlaczego Toolando?",
+    "title": "Dlaczego Toolando.tech?",
     "subtitle": "Zbudowane z myślą o Twojej produktywności i komforcie pracy.",
     "speedTitle": "Szybkość",
     "speedDesc": "Narzędzia działają błyskawicznie w przeglądarce — bez czekania i bez instalacji.",
@@ -83,7 +83,7 @@
     "toolsDesc": "Ogromny zestaw konwerterów, generatorów i narzędzi AI w jednym miejscu."
   },
   "ctaSection": {
-    "title": "Zacznij korzystać z Toolando już dziś",
+    "title": "Zacznij korzystać z Toolando.tech już dziś",
     "subtitle": "Dołącz do ekosystemu narzędzi, które oszczędzają Twój czas każdego dnia.",
     "browse": "Przeglądaj narzędzia"
   },
@@ -94,15 +94,15 @@
     "support": "Wesprzyj mnie",
     "privacy": "Polityka prywatności",
     "terms": "Regulamin",
-    "rights": "© 2026 Toolando. Wszelkie prawa zastrzeżone."
+    "rights": "© 2026 Toolando.tech. Wszelkie prawa zastrzeżone."
   },
   "language": {
     "label": "Język"
   },
   "support": {
     "eyebrow": "Wesprzyj projekt",
-    "title": "Pomóż utrzymać Toolando",
-    "subtitle": "Toolando powstaje i jest udostępniane za darmo. Jeśli oszczędza Ci czas, rozważ wsparcie jego rozwoju.",
+    "title": "Pomóż utrzymać Toolando.tech",
+    "subtitle": "Toolando.tech powstaje i jest udostępniane za darmo. Jeśli oszczędza Ci czas, rozważ wsparcie jego rozwoju.",
     "coffee": "Postaw mi kawę",
     "donate": "Przekaż darowiznę",
     "back": "Wróć na stronę główną",
@@ -111,7 +111,7 @@
   "openerPage": {
     "eyebrow": "Podgląd i konwersja",
     "title": "Uniwersalny otwieracz i konwerter plików",
-    "subtitle": "Otwórz dosłownie każdy format pliku — obrazy, wideo, dźwięk, PDF, dokumenty, kod i dane wyświetlą się natychmiast. Po otwarciu Toolando od razu podpowie wszystkie sensowne formaty, na które możesz przekonwertować plik jednym kliknięciem.",
+    "subtitle": "Otwórz dosłownie każdy format pliku — obrazy, wideo, dźwięk, PDF, dokumenty, kod i dane wyświetlą się natychmiast. Po otwarciu Toolando.tech od razu podpowie wszystkie sensowne formaty, na które możesz przekonwertować plik jednym kliknięciem.",
     "back": "Wszystkie narzędzia",
     "drop": "Przeciągnij i upuść plik tutaj",
     "or": "lub",
@@ -252,7 +252,7 @@
   },
   "paywall": {
     "unlockTitle": "Odblokuj „{tool}” w Premium",
-    "description": "Odblokuj wszystkie narzędzia AI Toolando — generowanie tekstów i obrazów, tłumaczenia, podsumowania i asystenta — w jednym abonamencie.",
+    "description": "Odblokuj wszystkie narzędzia AI Toolando.tech — generowanie tekstów i obrazów, tłumaczenia, podsumowania i asystenta — w jednym abonamencie.",
     "feature1": "Nieograniczony dostęp do wszystkich narzędzi AI",
     "feature2": "Generator tekstu, obrazów i tłumacz",
     "feature3": "Priorytetowe przetwarzanie zapytań",

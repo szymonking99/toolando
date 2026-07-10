@@ -2,19 +2,19 @@ export default function PrivacyPolicyPage() {
   return (
     <main className="mx-auto max-w-3xl px-4 py-24">
       <h1 className="text-3xl font-semibold text-foreground mb-6">
-        Polityka Prywatności Toolando
+        Polityka Prywatności Toolando.tech
       </h1>
 
       <div className="space-y-6 text-muted-foreground leading-relaxed">
         <p>
-          Toolando to serwis internetowy oferujący narzędzia online do konwersji plików,
+          Toolando.tech to serwis internetowy oferujący narzędzia online do konwersji plików,
           generowania treści oraz narzędzia wspierane sztuczną inteligencją. Dbamy o prywatność
           użytkowników i przetwarzamy dane zgodnie z obowiązującymi przepisami, w tym RODO.
         </p>
 
         <h2 className="text-xl font-semibold text-foreground">1. Jakie dane są przetwarzane?</h2>
         <p>
-          Toolando nie zbiera i nie przechowuje plików przesyłanych przez użytkowników.
+          Toolando.tech nie zbiera i nie przechowuje plików przesyłanych przez użytkowników.
           Wszystkie konwersje i operacje na plikach odbywają się lokalnie w przeglądarce,
           bez wysyłania plików na serwer.
         </p>
@@ -36,7 +36,7 @@ export default function PrivacyPolicyPage() {
 
         <h2 className="text-xl font-semibold text-foreground">3. Pliki cookies</h2>
         <p>
-          Toolando może używać plików cookies w celu poprawnego działania strony,
+          Toolando.tech może używać plików cookies w celu poprawnego działania strony,
           analityki ruchu oraz zapamiętywania ustawień językowych.
           Możesz w każdej chwili wyłączyć cookies w ustawieniach przeglądarki.
         </p>

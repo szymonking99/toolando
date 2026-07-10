@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Toolando — Alle dine onlineværktøjer ét sted",
+    "title": "Toolando.tech — Alle dine onlineværktøjer ét sted",
     "description": "Konvertere, generatorer, PDF- og AI-værktøjer — alt i ét elegant økosystem. Hurtigt og enkelt."
   },
   "nav": {
@@ -57,13 +57,13 @@
   "ai": {
     "badge": "Premium-AI",
     "title": "Intelligente AI-værktøjer",
-    "subtitle": "Skriv, opsummer, oversæt og lav billeder med de nyeste AI-modeller — direkte i Toolando, uden installation.",
+    "subtitle": "Skriv, opsummer, oversæt og lav billeder med de nyeste AI-modeller — direkte i Toolando.tech, uden installation.",
     "openTool": "Åbn værktøj",
     "more": "Flere AI-værktøjer"
   },
   "features": {
     "title": "Mest populære værktøjer",
-    "subtitle": "De mest valgte Toolando-værktøjer — klar til brug på sekunder.",
+    "subtitle": "De mest valgte Toolando.tech-værktøjer — klar til brug på sekunder.",
     "popularTitle": "Mest populære konvertere",
     "popularSubtitle": "De mest brugte konverteringer — begge veje, klar til brug."
   },
@@ -73,7 +73,7 @@
     "browse": "Gennemse"
   },
   "why": {
-    "title": "Hvorfor Toolando?",
+    "title": "Hvorfor Toolando.tech?",
     "subtitle": "Bygget med din produktivitet og komfort for øje.",
     "speedTitle": "Hastighed",
     "speedDesc": "Værktøjerne kører øjeblikkeligt i din browser — ingen ventetid og ingen installation.",
@@ -83,7 +83,7 @@
     "toolsDesc": "En enorm samling af konvertere, generatorer og AI-værktøjer ét sted."
   },
   "ctaSection": {
-    "title": "Begynd at bruge Toolando i dag",
+    "title": "Begynd at bruge Toolando.tech i dag",
     "subtitle": "Bliv en del af et økosystem af værktøjer, der sparer dig tid hver dag.",
     "browse": "Gennemse værktøjer"
   },
@@ -94,15 +94,15 @@
     "support": "Støt mig",
     "privacy": "Privatlivspolitik",
     "terms": "Servicevilkår",
-    "rights": "© 2026 Toolando. Alle rettigheder forbeholdes."
+    "rights": "© 2026 Toolando.tech. Alle rettigheder forbeholdes."
   },
   "language": {
     "label": "Sprog"
   },
   "support": {
     "eyebrow": "Støt projektet",
-    "title": "Hjælp Toolando videre",
-    "subtitle": "Toolando udvikles og tilbydes gratis. Hvis det sparer dig tid, så overvej at støtte udviklingen.",
+    "title": "Hjælp Toolando.tech videre",
+    "subtitle": "Toolando.tech udvikles og tilbydes gratis. Hvis det sparer dig tid, så overvej at støtte udviklingen.",
     "coffee": "Giv mig en kaffe",
     "donate": "Giv en donation",
     "back": "Tilbage til forsiden",
@@ -111,7 +111,7 @@
   "openerPage": {
     "eyebrow": "Forhåndsvis og konverter",
     "title": "Universel filåbner og konverter",
-    "subtitle": "Åbn stort set ethvert filformat — billeder, video, lyd, PDF, dokumenter, kode og data vises øjeblikkeligt. Når filen er åbnet, foreslår Toolando straks alle de formater, du kan konvertere til med ét klik.",
+    "subtitle": "Åbn stort set ethvert filformat — billeder, video, lyd, PDF, dokumenter, kode og data vises øjeblikkeligt. Når filen er åbnet, foreslår Toolando.tech straks alle de formater, du kan konvertere til med ét klik.",
     "back": "Alle værktøjer",
     "drop": "Træk og slip en fil her",
     "or": "eller",
@@ -252,7 +252,7 @@
   },
   "paywall": {
     "unlockTitle": "Unlock \"{tool}\" with Premium",
-    "description": "Unlock all Toolando AI tools — text and image generation, translation, summaries and the assistant — in one subscription.",
+    "description": "Unlock all Toolando.tech AI tools — text and image generation, translation, summaries and the assistant — in one subscription.",
     "feature1": "Unlimited access to all AI tools",
     "feature2": "Text generator, image generator and translator",
     "feature3": "Priority request processing",

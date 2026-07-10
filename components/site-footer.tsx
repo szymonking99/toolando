@@ -32,7 +32,7 @@ export function SiteFooter() {
             <Wrench className="size-4" aria-hidden="true" />
           </span>
           <span className="text-lg font-semibold tracking-tight text-foreground">
-            Toolando
+            Toolando.tech
           </span>
         </Link>
 
