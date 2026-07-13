@@ -1,11 +1,11 @@
 "use client"
 
 import { useMemo, useRef, useState } from "react"
-import { useRouter } from "next/navigation"
 import { Link2, Music, Loader2, ArrowUpRight, AlertCircle } from "lucide-react"
 import { useI18n } from "@/components/i18n-provider"
 import {
   detectVideoLink,
+  buildConverterUrl,
   PLATFORM_LABELS,
   PLATFORM_COLORS,
   type DetectedLink,
@@ -22,9 +22,8 @@ interface VideoToMp3LinkerProps {
 type Phase = "idle" | "preparing" | "ready"
 
 export function VideoToMp3Linker({ onConvert }: VideoToMp3LinkerProps) {
-  const { t, href } = useI18n()
+  const { t } = useI18n()
   const d = t.downloader
-  const router = useRouter()
 
   const [value, setValue] = useState("")
   const [phase, setPhase] = useState<Phase>("idle")
@@ -72,7 +71,14 @@ export function VideoToMp3Linker({ onConvert }: VideoToMp3LinkerProps) {
       onConvert(detected.platform, detected.id)
       return
     }
-    router.push(href(`/downloader/${detected.platform}/${detected.id}`))
+    // Hand the ORIGINAL pasted link off to the external converter, which
+    // performs the actual MP3 download. Opening it directly (rather than the
+    // reconstructed results route) guarantees the converter gets a valid URL.
+    window.open(
+      buildConverterUrl(detected.sourceUrl),
+      "_blank",
+      "noopener,noreferrer",
+    )
   }
 
   const accent = detected ? PLATFORM_COLORS[detected.platform] : undefined

@@ -7,24 +7,10 @@ import { localeHref } from "@/lib/i18n/href"
 import {
   isPlatform,
   rebuildFromParts,
+  buildConverterUrl,
   PLATFORM_LABELS,
   PLATFORM_COLORS,
 } from "@/lib/video-link"
-
-/**
- * Optional external MP3 service configured by the site owner. Supports the
- * placeholders {url}, {id} and {platform}. When unset, the page simply links
- * back to the original public source — Toolando.tech never downloads media
- * itself.
- */
-const DOWNLOADER_ENDPOINT = process.env.NEXT_PUBLIC_DOWNLOADER_ENDPOINT ?? ""
-
-function buildExternalUrl(sourceUrl: string, platform: string, id: string) {
-  if (!DOWNLOADER_ENDPOINT) return sourceUrl
-  return DOWNLOADER_ENDPOINT.replace("{url}", encodeURIComponent(sourceUrl))
-    .replace("{platform}", platform)
-    .replace("{id}", id)
-}
 
 export async function generateMetadata({
   params,
@@ -56,7 +42,7 @@ export default async function DownloaderResultPage({
 
   const info = rebuildFromParts(platform, decodeURIComponent(id))
   const accent = PLATFORM_COLORS[platform]
-  const externalUrl = buildExternalUrl(info.sourceUrl, platform, info.id)
+  const externalUrl = buildConverterUrl(info.sourceUrl)
 
   return (
     <div className="min-h-dvh">

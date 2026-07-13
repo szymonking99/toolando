@@ -172,6 +172,21 @@ export function isPlatform(value: string): value is Platform {
 }
 
 /**
+ * Build the external converter URL that actually performs the download.
+ * Toolando.tech never downloads media itself — it hands the original public
+ * link off to cobalt.tools (open-source, ad-free, cross-platform). The `#<url>`
+ * hash prefills cobalt's input and starts the download automatically.
+ *
+ * Passing the *original* pasted URL (rather than one reconstructed from an id)
+ * matters: some platforms (e.g. TikTok) need the full canonical link.
+ */
+export function buildConverterUrl(originalUrl: string): string {
+  const template =
+    process.env.NEXT_PUBLIC_DOWNLOADER_ENDPOINT ?? "https://cobalt.tools/#{url}"
+  return template.replace("{url}", originalUrl.trim())
+}
+
+/**
  * Rebuild the public thumbnail + source URL from a stored `platform` + `id`
  * pair (used by the results page). Only derives values that are publicly
  * available without any API call.
