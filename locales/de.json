@@ -291,11 +291,11 @@
   "downloader": {
     "eyebrow": "Video → MP3",
     "title": "Multi-Plattform → MP3 Downloader",
-    "subtitle": "Füge einen Link von YouTube, TikTok, Instagram, Facebook, Twitter/X, Vimeo oder SoundCloud ein und hole dir das Audio.",
-    "metaDescription": "Multi-Plattform Video-zu-MP3-Downloader — YouTube, TikTok, Instagram, Facebook, Twitter, Vimeo, SoundCloud. Link einfügen und Audio herunterladen.",
+    "subtitle": "Füge einen Link von TikTok, Instagram, Facebook, Twitter/X, Vimeo oder SoundCloud ein und hol dir das Audio.",
+    "metaDescription": "Plattformübergreifender Video-zu-MP3-Downloader — TikTok, Instagram, Facebook, Twitter, Vimeo, SoundCloud. Link einfügen und Audio herunterladen.",
     "back": "Alle Tools",
     "inputLabel": "Video-Link",
-    "inputPlaceholder": "https://www.youtube.com/watch?v=...",
+    "inputPlaceholder": "https://www.tiktok.com/@user/video/...",
     "detected": "erkannt",
     "idLabel": "ID",
     "invalidLink": "Gib einen gültigen Link einer unterstützten Plattform ein.",
@@ -313,7 +313,7 @@
     "faq": [
       {
         "q": "Welche Plattformen werden unterstützt?",
-        "a": "YouTube, TikTok, Instagram Reels, Facebook, Twitter/X, Vimeo und SoundCloud. Füge einfach einen öffentlichen Link ein und die Plattform wird automatisch erkannt."
+        "a": "TikTok, Instagram Reels, Facebook, Twitter/X, Vimeo und SoundCloud — füge einfach einen öffentlichen Link ein, die Plattform wird automatisch erkannt. YouTube ist vorübergehend pausiert, da YouTube Downloader aktiv blockiert."
       },
       {
         "q": "Lädt Toolando.tech das Video auf seinen Servern herunter?",
@@ -331,6 +331,7 @@
         "q": "Ist das Herunterladen des Audios legal?",
         "a": "Lade nur Inhalte herunter, die dir gehören oder für die du eine Erlaubnis hast. Das Herunterladen urheberrechtlich geschützten Materials ohne Erlaubnis kann gegen die Nutzungsbedingungen und das Urheberrecht verstoßen."
       }
-    ]
+    ],
+    "platformDisabled": "Der Download von {platform} ist vorübergehend nicht verfügbar — {platform} blockiert Downloader aktiv, daher haben wir es pausiert, bis unser eigener Konverter bereit ist. Alle anderen Plattformen funktionieren weiterhin."
   }
 }

@@ -291,11 +291,11 @@
   "downloader": {
     "eyebrow": "Video → MP3",
     "title": "Multi-Platform → MP3 Downloader",
-    "subtitle": "Paste a link from YouTube, TikTok, Instagram, Facebook, Twitter/X, Vimeo or SoundCloud and grab the audio.",
-    "metaDescription": "Multi-platform Video to MP3 Downloader — YouTube, TikTok, Instagram, Facebook, Twitter, Vimeo, SoundCloud. Paste a link and download the audio.",
+    "subtitle": "Paste a link from TikTok, Instagram, Facebook, Twitter/X, Vimeo or SoundCloud and grab the audio.",
+    "metaDescription": "Multi-platform Video to MP3 Downloader — TikTok, Instagram, Facebook, Twitter, Vimeo, SoundCloud. Paste a link and download the audio.",
     "back": "All tools",
     "inputLabel": "Video link",
-    "inputPlaceholder": "https://www.youtube.com/watch?v=...",
+    "inputPlaceholder": "https://www.tiktok.com/@user/video/...",
     "detected": "detected",
     "idLabel": "ID",
     "invalidLink": "Enter a valid link from a supported platform.",
@@ -313,7 +313,7 @@
     "faq": [
       {
         "q": "Which platforms are supported?",
-        "a": "YouTube, TikTok, Instagram Reels, Facebook, Twitter/X, Vimeo and SoundCloud. Just paste a public link and the platform is detected automatically."
+        "a": "TikTok, Instagram Reels, Facebook, Twitter/X, Vimeo and SoundCloud — just paste a public link and the platform is detected automatically. YouTube is temporarily paused because YouTube actively blocks downloaders."
       },
       {
         "q": "Does Toolando.tech download the video on its servers?",
@@ -331,6 +331,7 @@
         "q": "Is it legal to download the audio?",
         "a": "Only download content you own or have permission to use. Downloading copyrighted material without permission may violate the platform's terms of service and copyright law."
       }
-    ]
+    ],
+    "platformDisabled": "Downloading from {platform} is temporarily unavailable — {platform} actively blocks downloaders, so we've paused it until our own converter is ready. All other platforms still work."
   }
 }

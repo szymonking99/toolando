@@ -3,16 +3,7 @@
 import Link from "next/link"
 import { Music, ArrowRight } from "lucide-react"
 import { useI18n } from "@/components/i18n-provider"
-
-const PLATFORMS = [
-  "YouTube",
-  "TikTok",
-  "Instagram",
-  "Facebook",
-  "X",
-  "Vimeo",
-  "SoundCloud",
-]
+import { SUPPORTED_PLATFORMS, PLATFORM_LABELS } from "@/lib/video-link"
 
 export function DownloaderSection() {
   const { t, href } = useI18n()
@@ -38,12 +29,12 @@ export function DownloaderSection() {
               </p>
 
               <div className="mt-5 flex flex-wrap gap-2">
-                {PLATFORMS.map((p) => (
+                {SUPPORTED_PLATFORMS.map((p) => (
                   <span
                     key={p}
                     className="inline-flex items-center rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-xs font-medium text-muted-foreground"
                   >
-                    {p}
+                    {PLATFORM_LABELS[p]}
                   </span>
                 ))}
               </div>

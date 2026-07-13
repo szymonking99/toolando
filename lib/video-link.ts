@@ -166,6 +166,29 @@ function build(platform: Platform, id: string, sourceUrl: string): DetectedLink 
   return { platform, id, thumbnail: null, sourceUrl }
 }
 
+/**
+ * Platforms that are temporarily disabled for downloading.
+ *
+ * YouTube actively blocks downloaders and even the public cobalt.tools instance
+ * has turned off YouTube. Until we run our own converter instance, YouTube is
+ * detected (so we can show an honest notice) but not offered for download.
+ *
+ * Re-enabling later is a one-line switch: set the env var
+ * NEXT_PUBLIC_YOUTUBE_DOWNLOAD_ENABLED="true" once a self-hosted API is ready.
+ */
+const YOUTUBE_ENABLED =
+  process.env.NEXT_PUBLIC_YOUTUBE_DOWNLOAD_ENABLED === "true"
+
+/** Whether a detected platform can currently be downloaded. */
+export function isPlatformEnabled(platform: Platform): boolean {
+  if (platform === "youtube") return YOUTUBE_ENABLED
+  return true
+}
+
+/** Platforms shown in the UI as currently supported (excludes disabled ones). */
+export const SUPPORTED_PLATFORMS: Platform[] =
+  PLATFORMS.filter(isPlatformEnabled)
+
 /** True when the given string is one of our supported platforms. */
 export function isPlatform(value: string): value is Platform {
   return (PLATFORMS as string[]).includes(value)

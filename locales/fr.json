@@ -291,11 +291,11 @@
   "downloader": {
     "eyebrow": "Vidéo → MP3",
     "title": "Téléchargeur Multiplateforme → MP3",
-    "subtitle": "Collez un lien de YouTube, TikTok, Instagram, Facebook, Twitter/X, Vimeo ou SoundCloud et récupérez l'audio.",
-    "metaDescription": "Téléchargeur vidéo vers MP3 multiplateforme — YouTube, TikTok, Instagram, Facebook, Twitter, Vimeo, SoundCloud. Collez un lien et téléchargez l'audio.",
+    "subtitle": "Collez un lien depuis TikTok, Instagram, Facebook, Twitter/X, Vimeo ou SoundCloud et récupérez l'audio.",
+    "metaDescription": "Téléchargeur vidéo vers MP3 multiplateforme — TikTok, Instagram, Facebook, Twitter, Vimeo, SoundCloud. Collez un lien et téléchargez l'audio.",
     "back": "Tous les outils",
     "inputLabel": "Lien de la vidéo",
-    "inputPlaceholder": "https://www.youtube.com/watch?v=...",
+    "inputPlaceholder": "https://www.tiktok.com/@user/video/...",
     "detected": "détecté",
     "idLabel": "ID",
     "invalidLink": "Saisissez un lien valide d'une plateforme prise en charge.",
@@ -313,7 +313,7 @@
     "faq": [
       {
         "q": "Quelles plateformes sont prises en charge ?",
-        "a": "YouTube, TikTok, Instagram Reels, Facebook, Twitter/X, Vimeo et SoundCloud. Collez simplement un lien public et la plateforme est détectée automatiquement."
+        "a": "TikTok, Instagram Reels, Facebook, Twitter/X, Vimeo et SoundCloud — collez simplement un lien public, la plateforme est détectée automatiquement. YouTube est temporairement suspendu car YouTube bloque activement les téléchargeurs."
       },
       {
         "q": "Toolando.tech télécharge-t-il la vidéo sur ses serveurs ?",
@@ -331,6 +331,7 @@
         "q": "Est-il légal de télécharger l'audio ?",
         "a": "Ne téléchargez que du contenu qui vous appartient ou pour lequel vous avez une autorisation. Télécharger du contenu protégé par le droit d'auteur sans autorisation peut enfreindre les conditions d'utilisation et la loi sur le droit d'auteur."
       }
-    ]
+    ],
+    "platformDisabled": "Le téléchargement depuis {platform} est temporairement indisponible — {platform} bloque activement les téléchargeurs, nous l'avons donc suspendu en attendant notre propre convertisseur. Les autres plateformes fonctionnent toujours."
   }
 }

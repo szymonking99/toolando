@@ -291,11 +291,11 @@
   "downloader": {
     "eyebrow": "Відео → MP3",
     "title": "Мультиплатформний → MP3 Downloader",
-    "subtitle": "Вставте посилання з YouTube, TikTok, Instagram, Facebook, Twitter/X, Vimeo або SoundCloud і отримайте аудіо.",
-    "metaDescription": "Мультиплатформний завантажувач відео у MP3 — YouTube, TikTok, Instagram, Facebook, Twitter, Vimeo, SoundCloud. Вставте посилання й завантажте аудіо.",
+    "subtitle": "Вставте посилання з TikTok, Instagram, Facebook, Twitter/X, Vimeo або SoundCloud і отримайте аудіо.",
+    "metaDescription": "Багатоплатформовий конвертер відео в MP3 — TikTok, Instagram, Facebook, Twitter, Vimeo, SoundCloud. Вставте посилання та завантажте аудіо.",
     "back": "Усі інструменти",
     "inputLabel": "Посилання на відео",
-    "inputPlaceholder": "https://www.youtube.com/watch?v=...",
+    "inputPlaceholder": "https://www.tiktok.com/@user/video/...",
     "detected": "виявлено",
     "idLabel": "ID",
     "invalidLink": "Введіть дійсне посилання з підтримуваної платформи.",
@@ -313,7 +313,7 @@
     "faq": [
       {
         "q": "Які платформи підтримуються?",
-        "a": "YouTube, TikTok, Instagram Reels, Facebook, Twitter/X, Vimeo та SoundCloud. Просто вставте публічне посилання, і платформа визначиться автоматично."
+        "a": "TikTok, Instagram Reels, Facebook, Twitter/X, Vimeo та SoundCloud — просто вставте публічне посилання, і платформа визначиться автоматично. YouTube тимчасово призупинено, оскільки YouTube активно блокує завантажувачі."
       },
       {
         "q": "Чи завантажує Toolando.tech відео на своїх серверах?",
@@ -331,6 +331,7 @@
         "q": "Чи легально завантажувати аудіо?",
         "a": "Завантажуйте лише той вміст, який вам належить або на який ви маєте дозвіл. Завантаження захищеного авторським правом матеріалу без дозволу може порушувати умови використання та закон про авторське право."
       }
-    ]
+    ],
+    "platformDisabled": "Завантаження з {platform} тимчасово недоступне — {platform} активно блокує завантажувачі, тож ми призупинили це, доки не запустимо власний конвертер. Інші платформи працюють як зазвичай."
   }
 }

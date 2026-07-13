@@ -291,11 +291,11 @@
   "downloader": {
     "eyebrow": "Vídeo → MP3",
     "title": "Descargador Multiplataforma → MP3",
-    "subtitle": "Pega un enlace de YouTube, TikTok, Instagram, Facebook, Twitter/X, Vimeo o SoundCloud y obtén el audio.",
-    "metaDescription": "Descargador de vídeo a MP3 multiplataforma — YouTube, TikTok, Instagram, Facebook, Twitter, Vimeo, SoundCloud. Pega un enlace y descarga el audio.",
+    "subtitle": "Pega un enlace de TikTok, Instagram, Facebook, Twitter/X, Vimeo o SoundCloud y obtén el audio.",
+    "metaDescription": "Descargador de vídeo a MP3 multiplataforma: TikTok, Instagram, Facebook, Twitter, Vimeo, SoundCloud. Pega un enlace y descarga el audio.",
     "back": "Todas las herramientas",
     "inputLabel": "Enlace del vídeo",
-    "inputPlaceholder": "https://www.youtube.com/watch?v=...",
+    "inputPlaceholder": "https://www.tiktok.com/@user/video/...",
     "detected": "detectado",
     "idLabel": "ID",
     "invalidLink": "Introduce un enlace válido de una plataforma compatible.",
@@ -313,7 +313,7 @@
     "faq": [
       {
         "q": "¿Qué plataformas son compatibles?",
-        "a": "YouTube, TikTok, Instagram Reels, Facebook, Twitter/X, Vimeo y SoundCloud. Solo pega un enlace público y la plataforma se detecta automáticamente."
+        "a": "TikTok, Instagram Reels, Facebook, Twitter/X, Vimeo y SoundCloud: solo pega un enlace público y la plataforma se detecta automáticamente. YouTube está pausado temporalmente porque bloquea activamente los descargadores."
       },
       {
         "q": "¿Toolando.tech descarga el vídeo en sus servidores?",
@@ -331,6 +331,7 @@
         "q": "¿Es legal descargar el audio?",
         "a": "Descarga solo contenido que te pertenezca o para el que tengas permiso. Descargar material con derechos de autor sin permiso puede violar los términos del servicio y la ley de derechos de autor."
       }
-    ]
+    ],
+    "platformDisabled": "La descarga desde {platform} no está disponible temporalmente: {platform} bloquea activamente los descargadores, así que la pausamos hasta tener nuestro propio conversor. Las demás plataformas siguen funcionando."
   }
 }

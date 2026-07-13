@@ -3,7 +3,7 @@ import type { Metadata } from "next"
 import { ArrowLeft, Wrench, Music } from "lucide-react"
 import { getDictionary } from "@/lib/i18n/dictionaries"
 import { localeHref } from "@/lib/i18n/href"
-import { PLATFORM_LABELS, PLATFORMS } from "@/lib/video-link"
+import { PLATFORM_LABELS, SUPPORTED_PLATFORMS } from "@/lib/video-link"
 import { VideoToMp3Linker } from "@/components/video-to-mp3-linker"
 
 export async function generateMetadata({
@@ -79,7 +79,7 @@ export default async function DownloaderPage({
 
         {/* Supported platforms */}
         <div className="mt-5 flex flex-wrap gap-2">
-          {PLATFORMS.map((p) => (
+          {SUPPORTED_PLATFORMS.map((p) => (
             <span
               key={p}
               className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-xs font-medium text-muted-foreground"

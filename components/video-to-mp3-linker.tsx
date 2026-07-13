@@ -6,6 +6,7 @@ import { useI18n } from "@/components/i18n-provider"
 import {
   detectVideoLink,
   buildConverterUrl,
+  isPlatformEnabled,
   PLATFORM_LABELS,
   PLATFORM_COLORS,
   type DetectedLink,
@@ -38,6 +39,8 @@ export function VideoToMp3Linker({ onConvert }: VideoToMp3LinkerProps) {
   )
 
   const showInvalid = value.trim().length > 0 && !detected
+  // Platform detected, but downloading it is temporarily disabled (e.g. YouTube).
+  const disabledPlatform = detected && !isPlatformEnabled(detected.platform)
 
   function reset() {
     if (timerRef.current) clearInterval(timerRef.current)
@@ -46,7 +49,7 @@ export function VideoToMp3Linker({ onConvert }: VideoToMp3LinkerProps) {
   }
 
   function handleConvert() {
-    if (!detected) return
+    if (!detected || disabledPlatform) return
     reset()
     setPhase("preparing")
     setProgress(0)
@@ -169,6 +172,22 @@ export function VideoToMp3Linker({ onConvert }: VideoToMp3LinkerProps) {
         </div>
       )}
 
+      {/* Temporarily disabled platform notice (e.g. YouTube) */}
+      {disabledPlatform && (
+        <div className="flex items-start gap-2.5 rounded-xl border border-amber-500/25 bg-amber-500/[0.07] p-4">
+          <AlertCircle
+            className="mt-0.5 size-4 shrink-0 text-amber-500"
+            aria-hidden="true"
+          />
+          <p className="text-pretty text-sm leading-relaxed text-foreground">
+            {d.platformDisabled.replace(
+              "{platform}",
+              PLATFORM_LABELS[detected.platform],
+            )}
+          </p>
+        </div>
+      )}
+
       {/* Progress bar */}
       {phase === "preparing" && (
         <div className="flex flex-col gap-2">
@@ -201,7 +220,7 @@ export function VideoToMp3Linker({ onConvert }: VideoToMp3LinkerProps) {
       {phase !== "ready" && (
         <button
           type="button"
-          disabled={!detected || phase === "preparing"}
+          disabled={!detected || !!disabledPlatform || phase === "preparing"}
           onClick={handleConvert}
           className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-6 py-3.5 font-medium text-primary-foreground transition-colors hover:bg-primary/85 disabled:cursor-not-allowed disabled:opacity-50"
         >
