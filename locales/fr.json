@@ -286,5 +286,50 @@
     "refreshFailed": "Could not refresh status.",
     "refreshNetworkError": "A network error occurred. Please try again.",
     "signOut": "Sign out"
+  },
+  "downloader": {
+    "eyebrow": "Vidéo → MP3",
+    "title": "Téléchargeur Multiplateforme → MP3",
+    "subtitle": "Collez un lien de YouTube, TikTok, Instagram, Facebook, Twitter/X, Vimeo ou SoundCloud et récupérez l'audio.",
+    "metaDescription": "Téléchargeur vidéo vers MP3 multiplateforme — YouTube, TikTok, Instagram, Facebook, Twitter, Vimeo, SoundCloud. Collez un lien et téléchargez l'audio.",
+    "back": "Tous les outils",
+    "inputLabel": "Lien de la vidéo",
+    "inputPlaceholder": "https://www.youtube.com/watch?v=...",
+    "detected": "détecté",
+    "idLabel": "ID",
+    "invalidLink": "Saisissez un lien valide d'une plateforme prise en charge.",
+    "download": "Télécharger le MP3",
+    "preparing": "Préparation de votre lien…",
+    "ready": "Votre lien est prêt.",
+    "openPage": "Ouvrir la page de téléchargement",
+    "resultTitle": "Prêt à télécharger",
+    "resultsBack": "Retour au téléchargeur",
+    "thumbnailAlt": "Miniature de la vidéo",
+    "viewSource": "Voir l'original",
+    "faqTitle": "Questions fréquentes",
+    "disclaimer": "Toolando.tech n'héberge ni ne télécharge aucun média. Il détecte uniquement la plateforme et l'ID public de la vidéo, puis transfère vers un service externe ou votre navigateur. Ne téléchargez que du contenu dont vous détenez les droits.",
+    "externalNote": "Le téléchargement se fait sur un service externe ou dans votre navigateur. Toolando.tech n'a capturé que la plateforme publique et l'ID de la vidéo. Merci de respecter le droit d'auteur et les conditions d'utilisation de chaque plateforme.",
+    "faq": [
+      {
+        "q": "Quelles plateformes sont prises en charge ?",
+        "a": "YouTube, TikTok, Instagram Reels, Facebook, Twitter/X, Vimeo et SoundCloud. Collez simplement un lien public et la plateforme est détectée automatiquement."
+      },
+      {
+        "q": "Toolando.tech télécharge-t-il la vidéo sur ses serveurs ?",
+        "a": "Non. Toolando.tech ne télécharge ni ne stocke jamais de média. Il lit uniquement le lien public pour détecter la plateforme et l'ID de la vidéo, puis transfère vers un service externe ou votre navigateur."
+      },
+      {
+        "q": "Est-ce gratuit ?",
+        "a": "Oui, détecter le lien et lire les métadonnées publiques est entièrement gratuit."
+      },
+      {
+        "q": "Pourquoi ne vois-je une miniature que pour certains liens ?",
+        "a": "Nous n'affichons que les miniatures disponibles publiquement sans connexion ni API — par exemple le CDN d'images public de YouTube. Pour les autres plateformes, la miniature peut ne pas s'afficher."
+      },
+      {
+        "q": "Est-il légal de télécharger l'audio ?",
+        "a": "Ne téléchargez que du contenu qui vous appartient ou pour lequel vous avez une autorisation. Télécharger du contenu protégé par le droit d'auteur sans autorisation peut enfreindre les conditions d'utilisation et la loi sur le droit d'auteur."
+      }
+    ]
   }
 }

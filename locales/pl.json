@@ -286,5 +286,50 @@
     "refreshFailed": "Nie udało się odświeżyć statusu.",
     "refreshNetworkError": "Wystąpił błąd sieci. Spróbuj ponownie.",
     "signOut": "Wyloguj się"
+  },
+  "downloader": {
+    "eyebrow": "Wideo → MP3",
+    "title": "Multi-Platform → MP3 Downloader",
+    "subtitle": "Wklej link z YouTube, TikTok, Instagram, Facebook, Twitter/X, Vimeo lub SoundCloud i pobierz audio.",
+    "metaDescription": "Multi-platform Video to MP3 Downloader — YouTube, TikTok, Instagram, Facebook, Twitter, Vimeo, SoundCloud. Wklej link i pobierz audio.",
+    "back": "Wszystkie narzędzia",
+    "inputLabel": "Link do wideo",
+    "inputPlaceholder": "https://www.youtube.com/watch?v=...",
+    "detected": "wykryto",
+    "idLabel": "ID",
+    "invalidLink": "Wklej prawidłowy link z obsługiwanej platformy.",
+    "download": "Pobierz MP3",
+    "preparing": "Przygotowuję link…",
+    "ready": "Twój link jest gotowy.",
+    "openPage": "Otwórz stronę pobierania",
+    "resultTitle": "Gotowe do pobrania",
+    "resultsBack": "Wróć do konwertera",
+    "thumbnailAlt": "Miniatura wideo",
+    "viewSource": "Zobacz oryginał",
+    "faqTitle": "Najczęściej zadawane pytania",
+    "disclaimer": "Toolando.tech nie hostuje ani nie pobiera żadnych plików. Wykrywa jedynie platformę i publiczne ID wideo, a pobieranie odbywa się w zewnętrznym serwisie lub w Twojej przeglądarce. Pobieraj tylko treści, do których masz prawa.",
+    "externalNote": "Pobieranie odbywa się w zewnętrznym serwisie lub w przeglądarce. Toolando.tech przechwyciło jedynie publiczną platformę i ID wideo. Szanuj prawa autorskie i regulaminy poszczególnych platform.",
+    "faq": [
+      {
+        "q": "Jakie platformy są obsługiwane?",
+        "a": "YouTube, TikTok, Instagram Reels, Facebook, Twitter/X, Vimeo i SoundCloud. Wklej publiczny link, a platforma zostanie wykryta automatycznie."
+      },
+      {
+        "q": "Czy Toolando.tech pobiera wideo na swoich serwerach?",
+        "a": "Nie. Toolando.tech nigdy nie pobiera ani nie przechowuje plików. Odczytuje tylko publiczny link, by wykryć platformę i ID wideo, a następnie przekazuje dalej do zewnętrznego serwisu lub przeglądarki."
+      },
+      {
+        "q": "Czy to jest darmowe?",
+        "a": "Tak, wykrywanie linku i odczyt publicznych metadanych są całkowicie darmowe."
+      },
+      {
+        "q": "Dlaczego przy niektórych linkach widzę tylko miniaturę?",
+        "a": "Pokazujemy tylko miniatury dostępne publicznie, bez logowania i API — na przykład z publicznego CDN obrazów YouTube. Dla innych platform miniatura może się nie pojawić."
+      },
+      {
+        "q": "Czy pobieranie audio jest legalne?",
+        "a": "Pobieraj wyłącznie treści, do których masz prawa lub zgodę. Pobieranie materiałów chronionych prawem autorskim bez zgody może naruszać regulamin platformy i prawo autorskie."
+      }
+    ]
   }
 }

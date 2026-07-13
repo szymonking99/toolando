@@ -1,4 +1,5 @@
 import { Analytics } from "@vercel/analytics/next"
+import Script from "next/script"
 import type { Metadata, Viewport } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
 import { I18nProvider } from "@/components/i18n-provider"
@@ -18,6 +19,8 @@ const geistMono = Geist_Mono({
 })
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://toolando.tech"
+const GA_MEASUREMENT_ID =
+  process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? "G-HCDN6BEKZH"
 const ADSENSE_CLIENT =
   process.env.NEXT_PUBLIC_ADSENSE_CLIENT ?? "ca-pub-1137300798632743"
 
@@ -131,6 +134,22 @@ export default async function LocaleLayout({
           {children}
         </I18nProvider>
         {process.env.NODE_ENV === "production" && <Analytics />}
+        {process.env.NODE_ENV === "production" && GA_MEASUREMENT_ID && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+              strategy="afterInteractive"
+            />
+            <Script id="ga4-init" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${GA_MEASUREMENT_ID}');
+              `}
+            </Script>
+          </>
+        )}
       </body>
     </html>
   )
