@@ -15,6 +15,7 @@ export function SiteNavbar() {
     { label: t.nav.aiTools, href: "#ai" },
     { label: t.nav.tools, href: "#narzedzia" },
     { label: t.nav.categories, href: "#kategorie" },
+    { label: t.nav.downloader, href: href("/downloader") },
     { label: t.nav.about, href: "#o-platformie" },
     { label: t.nav.contact, href: href("/kontakt") },
   ]
