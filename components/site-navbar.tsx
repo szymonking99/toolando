@@ -22,7 +22,7 @@ export function SiteNavbar() {
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 px-4 pt-4">
-      <nav className="mx-auto flex max-w-6xl items-center justify-between rounded-2xl border border-white/10 bg-background/60 px-5 py-3 backdrop-blur-xl">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between gap-6 rounded-2xl border border-white/10 bg-background/60 px-6 py-3 backdrop-blur-xl">
         
         {/* Logo */}
         <a href={href("/")} className="flex items-center gap-2">
@@ -35,7 +35,7 @@ export function SiteNavbar() {
         </a>
 
         {/* Desktop links */}
-        <div className="hidden items-center gap-8 md:flex">
+        <div className="hidden items-center gap-6 whitespace-nowrap lg:flex xl:gap-8">
           {links.map((link) => (
             <a
               key={link.href}
@@ -48,14 +48,14 @@ export function SiteNavbar() {
         </div>
 
         {/* Desktop right side */}
-        <div className="hidden items-center gap-3 md:flex">
+        <div className="hidden items-center gap-3 lg:flex">
           <LanguageSwitcher />
           <AccountNavButton />
           <SupportButton />
         </div>
 
         {/* Mobile hamburger */}
-        <div className="flex items-center gap-2 md:hidden">
+        <div className="flex items-center gap-2 lg:hidden">
           <LanguageSwitcher />
           <button
             type="button"
@@ -71,7 +71,7 @@ export function SiteNavbar() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="mx-auto mt-2 max-w-6xl rounded-2xl border border-white/10 bg-background/80 p-4 backdrop-blur-xl md:hidden">
+        <div className="mx-auto mt-2 max-w-7xl rounded-2xl border border-white/10 bg-background/80 p-4 backdrop-blur-xl lg:hidden">
           <div className="flex flex-col gap-1">
             {links.map((link) => (
               <a
