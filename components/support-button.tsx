@@ -25,7 +25,7 @@ export function SupportButton({ fullWidth, className }: SupportButtonProps) {
     <Link
       href={href("/wsparcie")}
       className={cn(
-        "group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-xl",
+        "group relative inline-flex items-center justify-center gap-2 overflow-hidden whitespace-nowrap rounded-xl",
         "border border-white/20 bg-white/10 backdrop-blur-md",
         "bg-gradient-to-r from-blue-600 to-indigo-600",
         "font-semibold text-white shadow-lg shadow-indigo-600/25",
@@ -33,7 +33,7 @@ export function SupportButton({ fullWidth, className }: SupportButtonProps) {
         "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background",
         fullWidth
           ? "w-full px-6 py-3.5 text-base"
-          : "px-3 py-2 text-sm lg:px-4",
+          : "px-2.5 py-2 text-[13px] lg:px-4 lg:text-sm",
         className,
       )}
     >
@@ -43,11 +43,7 @@ export function SupportButton({ fullWidth, className }: SupportButtonProps) {
         className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/25 to-transparent transition-transform duration-700 group-hover:translate-x-full"
       />
       <Heart className={cn(fullWidth ? "size-5" : "size-4")} aria-hidden="true" />
-      {/* In the compact top bar the label only appears once there's room (xl+),
-          so on tighter widths it stays a neat icon-only button. */}
-      <span className={cn(!fullWidth && "hidden xl:inline")}>
-        {t.footer.support}
-      </span>
+      {t.footer.support}
     </Link>
   )
 }
