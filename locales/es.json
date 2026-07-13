@@ -14,7 +14,8 @@
     "closeMenu": "Cerrar menú",
     "allTools": "Todas las herramientas",
     "signIn": "Iniciar sesión",
-    "account": "Mi cuenta"
+    "account": "Mi cuenta",
+    "downloader": "Descargar MP3"
   },
   "hero": {
     "badge": "Un nuevo ecosistema de herramientas online",
@@ -286,5 +287,51 @@
     "refreshFailed": "No se pudo actualizar el estado.",
     "refreshNetworkError": "Se produjo un error de red. Inténtalo de nuevo.",
     "signOut": "Cerrar sesión"
+  },
+  "downloader": {
+    "eyebrow": "Vídeo → MP3",
+    "title": "Descargador Multiplataforma → MP3",
+    "subtitle": "Pega un enlace de TikTok, Instagram, Facebook, Twitter/X, Vimeo o SoundCloud y obtén el audio.",
+    "metaDescription": "Descargador de vídeo a MP3 multiplataforma: TikTok, Instagram, Facebook, Twitter, Vimeo, SoundCloud. Pega un enlace y descarga el audio.",
+    "back": "Todas las herramientas",
+    "inputLabel": "Enlace del vídeo",
+    "inputPlaceholder": "https://www.tiktok.com/@user/video/...",
+    "detected": "detectado",
+    "idLabel": "ID",
+    "invalidLink": "Introduce un enlace válido de una plataforma compatible.",
+    "download": "Descargar MP3",
+    "preparing": "Preparando tu enlace…",
+    "ready": "Tu enlace está listo.",
+    "openPage": "Abrir página de descarga",
+    "resultTitle": "Listo para descargar",
+    "resultsBack": "Volver al descargador",
+    "thumbnailAlt": "Miniatura del vídeo",
+    "viewSource": "Ver original",
+    "faqTitle": "Preguntas frecuentes",
+    "disclaimer": "Toolando.tech no aloja ni descarga ningún archivo. Solo detecta la plataforma y el ID público del vídeo y lo transfiere a un servicio externo o a tu navegador. Descarga solo contenido sobre el que tengas derechos.",
+    "externalNote": "La descarga ocurre en un servicio externo o en tu navegador. Toolando.tech solo capturó la plataforma pública y el ID del vídeo. Respeta los derechos de autor y los términos de servicio de cada plataforma.",
+    "faq": [
+      {
+        "q": "¿Qué plataformas son compatibles?",
+        "a": "TikTok, Instagram Reels, Facebook, Twitter/X, Vimeo y SoundCloud: solo pega un enlace público y la plataforma se detecta automáticamente. YouTube está pausado temporalmente porque bloquea activamente los descargadores."
+      },
+      {
+        "q": "¿Toolando.tech descarga el vídeo en sus servidores?",
+        "a": "No. Toolando.tech nunca descarga ni almacena archivos. Solo lee el enlace público para detectar la plataforma y el ID del vídeo, y luego lo transfiere a un servicio externo o a tu navegador."
+      },
+      {
+        "q": "¿Es gratis?",
+        "a": "Sí, detectar el enlace y leer los metadatos públicos es completamente gratis."
+      },
+      {
+        "q": "¿Por qué solo veo una miniatura en algunos enlaces?",
+        "a": "Solo mostramos miniaturas disponibles públicamente sin inicio de sesión ni API, por ejemplo la CDN de imágenes pública de YouTube. En otras plataformas puede que no se muestre la miniatura."
+      },
+      {
+        "q": "¿Es legal descargar el audio?",
+        "a": "Descarga solo contenido que te pertenezca o para el que tengas permiso. Descargar material con derechos de autor sin permiso puede violar los términos del servicio y la ley de derechos de autor."
+      }
+    ],
+    "platformDisabled": "La descarga desde {platform} no está disponible temporalmente: {platform} bloquea activamente los descargadores, así que la pausamos hasta tener nuestro propio conversor. Las demás plataformas siguen funcionando."
   }
 }

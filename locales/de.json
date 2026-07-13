@@ -14,7 +14,8 @@
     "closeMenu": "Menü schließen",
     "allTools": "Alle Werkzeuge",
     "signIn": "Anmelden",
-    "account": "Mein Konto"
+    "account": "Mein Konto",
+    "downloader": "MP3-Downloader"
   },
   "hero": {
     "badge": "Ein neues Ökosystem für Online-Tools",
@@ -286,5 +287,51 @@
     "refreshFailed": "Status konnte nicht aktualisiert werden.",
     "refreshNetworkError": "Netzwerkfehler. Bitte versuche es erneut.",
     "signOut": "Abmelden"
+  },
+  "downloader": {
+    "eyebrow": "Video → MP3",
+    "title": "Multi-Plattform → MP3 Downloader",
+    "subtitle": "Füge einen Link von TikTok, Instagram, Facebook, Twitter/X, Vimeo oder SoundCloud ein und hol dir das Audio.",
+    "metaDescription": "Plattformübergreifender Video-zu-MP3-Downloader — TikTok, Instagram, Facebook, Twitter, Vimeo, SoundCloud. Link einfügen und Audio herunterladen.",
+    "back": "Alle Tools",
+    "inputLabel": "Video-Link",
+    "inputPlaceholder": "https://www.tiktok.com/@user/video/...",
+    "detected": "erkannt",
+    "idLabel": "ID",
+    "invalidLink": "Gib einen gültigen Link einer unterstützten Plattform ein.",
+    "download": "MP3 herunterladen",
+    "preparing": "Link wird vorbereitet…",
+    "ready": "Dein Link ist bereit.",
+    "openPage": "Download-Seite öffnen",
+    "resultTitle": "Bereit zum Download",
+    "resultsBack": "Zurück zum Downloader",
+    "thumbnailAlt": "Video-Vorschaubild",
+    "viewSource": "Original ansehen",
+    "faqTitle": "Häufig gestellte Fragen",
+    "disclaimer": "Toolando.tech hostet oder lädt keine Medien herunter. Es erkennt nur die Plattform und die öffentliche Video-ID und übergibt an einen externen Dienst oder deinen Browser. Lade nur Inhalte herunter, für die du die Rechte hast.",
+    "externalNote": "Der Download erfolgt auf einem externen Dienst oder in deinem Browser. Toolando.tech hat nur die öffentliche Plattform und Video-ID erfasst. Bitte respektiere das Urheberrecht und die Nutzungsbedingungen der Plattformen.",
+    "faq": [
+      {
+        "q": "Welche Plattformen werden unterstützt?",
+        "a": "TikTok, Instagram Reels, Facebook, Twitter/X, Vimeo und SoundCloud — füge einfach einen öffentlichen Link ein, die Plattform wird automatisch erkannt. YouTube ist vorübergehend pausiert, da YouTube Downloader aktiv blockiert."
+      },
+      {
+        "q": "Lädt Toolando.tech das Video auf seinen Servern herunter?",
+        "a": "Nein. Toolando.tech lädt oder speichert niemals Medien. Es liest nur den öffentlichen Link, um Plattform und Video-ID zu erkennen, und übergibt dann an einen externen Dienst oder deinen Browser."
+      },
+      {
+        "q": "Ist es kostenlos?",
+        "a": "Ja, das Erkennen des Links und das Lesen öffentlicher Metadaten sind völlig kostenlos."
+      },
+      {
+        "q": "Warum sehe ich nur bei manchen Links ein Vorschaubild?",
+        "a": "Wir zeigen nur Vorschaubilder, die öffentlich ohne Login oder API verfügbar sind — zum Beispiel das öffentliche Bild-CDN von YouTube. Bei anderen Plattformen wird das Vorschaubild möglicherweise nicht angezeigt."
+      },
+      {
+        "q": "Ist das Herunterladen des Audios legal?",
+        "a": "Lade nur Inhalte herunter, die dir gehören oder für die du eine Erlaubnis hast. Das Herunterladen urheberrechtlich geschützten Materials ohne Erlaubnis kann gegen die Nutzungsbedingungen und das Urheberrecht verstoßen."
+      }
+    ],
+    "platformDisabled": "Der Download von {platform} ist vorübergehend nicht verfügbar — {platform} blockiert Downloader aktiv, daher haben wir es pausiert, bis unser eigener Konverter bereit ist. Alle anderen Plattformen funktionieren weiterhin."
   }
 }

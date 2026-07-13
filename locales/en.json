@@ -14,7 +14,8 @@
     "closeMenu": "Close menu",
     "allTools": "All tools",
     "signIn": "Sign in",
-    "account": "My account"
+    "account": "My account",
+    "downloader": "MP3 Downloader"
   },
   "hero": {
     "badge": "A new online tools ecosystem",
@@ -286,5 +287,51 @@
     "refreshFailed": "Could not refresh status.",
     "refreshNetworkError": "A network error occurred. Please try again.",
     "signOut": "Sign out"
+  },
+  "downloader": {
+    "eyebrow": "Video → MP3",
+    "title": "Multi-Platform → MP3 Downloader",
+    "subtitle": "Paste a link from TikTok, Instagram, Facebook, Twitter/X, Vimeo or SoundCloud and grab the audio.",
+    "metaDescription": "Multi-platform Video to MP3 Downloader — TikTok, Instagram, Facebook, Twitter, Vimeo, SoundCloud. Paste a link and download the audio.",
+    "back": "All tools",
+    "inputLabel": "Video link",
+    "inputPlaceholder": "https://www.tiktok.com/@user/video/...",
+    "detected": "detected",
+    "idLabel": "ID",
+    "invalidLink": "Enter a valid link from a supported platform.",
+    "download": "Download MP3",
+    "preparing": "Preparing your link…",
+    "ready": "Your link is ready.",
+    "openPage": "Open download page",
+    "resultTitle": "Ready to download",
+    "resultsBack": "Back to downloader",
+    "thumbnailAlt": "Video thumbnail",
+    "viewSource": "View original",
+    "faqTitle": "Frequently asked questions",
+    "disclaimer": "Toolando.tech does not host or download any media. It only detects the platform and the public video ID and hands off to an external service or your browser. Only download content you have the rights to.",
+    "externalNote": "Download happens on an external service or in your browser. Toolando.tech only captured the public platform and video ID. Please respect copyright and each platform's terms of service.",
+    "faq": [
+      {
+        "q": "Which platforms are supported?",
+        "a": "TikTok, Instagram Reels, Facebook, Twitter/X, Vimeo and SoundCloud — just paste a public link and the platform is detected automatically. YouTube is temporarily paused because YouTube actively blocks downloaders."
+      },
+      {
+        "q": "Does Toolando.tech download the video on its servers?",
+        "a": "No. Toolando.tech never downloads or stores media. It only reads the public link to detect the platform and video ID, then hands off to an external service or your browser."
+      },
+      {
+        "q": "Is it free?",
+        "a": "Yes, detecting the link and reading public metadata is completely free."
+      },
+      {
+        "q": "Why do I only see a thumbnail for some links?",
+        "a": "We only show thumbnails that are publicly available without any login or API — for example YouTube's public image CDN. For other platforms the thumbnail may not be shown."
+      },
+      {
+        "q": "Is it legal to download the audio?",
+        "a": "Only download content you own or have permission to use. Downloading copyrighted material without permission may violate the platform's terms of service and copyright law."
+      }
+    ],
+    "platformDisabled": "Downloading from {platform} is temporarily unavailable — {platform} actively blocks downloaders, so we've paused it until our own converter is ready. All other platforms still work."
   }
 }
