@@ -21,26 +21,26 @@ export function SiteNavbar() {
   ]
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 px-4 pt-4">
-      <nav className="mx-auto flex max-w-6xl items-center justify-between rounded-2xl border border-white/10 bg-background/60 px-5 py-3 backdrop-blur-xl">
+    <header className="fixed inset-x-0 top-0 z-50 px-3 pt-4 sm:px-4">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between gap-2 rounded-2xl border border-white/10 bg-background/60 px-4 py-3 backdrop-blur-xl lg:gap-4">
         
         {/* Logo */}
-        <a href={href("/")} className="flex items-center gap-2">
+        <a href={href("/")} className="flex shrink-0 items-center gap-2">
           <span className="flex size-8 items-center justify-center rounded-lg bg-primary/15 text-primary ring-1 ring-primary/30">
             <Wrench className="size-4" aria-hidden="true" />
           </span>
-          <span className="text-lg font-semibold tracking-tight text-foreground">
+          <span className="text-base font-semibold tracking-tight text-foreground lg:text-lg">
             Toolando.tech
           </span>
         </a>
 
         {/* Desktop links */}
-        <div className="hidden items-center gap-8 md:flex">
+        <div className="hidden items-center gap-3 whitespace-nowrap min-[940px]:flex lg:gap-6 xl:gap-8">
           {links.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+              className="text-[13px] font-medium text-muted-foreground transition-colors hover:text-foreground lg:text-sm"
             >
               {link.label}
             </a>
@@ -48,14 +48,14 @@ export function SiteNavbar() {
         </div>
 
         {/* Desktop right side */}
-        <div className="hidden items-center gap-3 md:flex">
+        <div className="hidden items-center gap-1.5 min-[940px]:flex lg:gap-3">
           <LanguageSwitcher />
           <AccountNavButton />
           <SupportButton />
         </div>
 
         {/* Mobile hamburger */}
-        <div className="flex items-center gap-2 md:hidden">
+        <div className="flex items-center gap-2 min-[940px]:hidden">
           <LanguageSwitcher />
           <button
             type="button"
@@ -71,7 +71,7 @@ export function SiteNavbar() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="mx-auto mt-2 max-w-6xl rounded-2xl border border-white/10 bg-background/80 p-4 backdrop-blur-xl md:hidden">
+        <div className="mx-auto mt-2 max-w-7xl rounded-2xl border border-white/10 bg-background/80 p-4 backdrop-blur-xl min-[940px]:hidden">
           <div className="flex flex-col gap-1">
             {links.map((link) => (
               <a

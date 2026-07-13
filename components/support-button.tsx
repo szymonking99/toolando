@@ -25,13 +25,15 @@ export function SupportButton({ fullWidth, className }: SupportButtonProps) {
     <Link
       href={href("/wsparcie")}
       className={cn(
-        "group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-xl",
+        "group relative inline-flex items-center justify-center gap-2 overflow-hidden whitespace-nowrap rounded-xl",
         "border border-white/20 bg-white/10 backdrop-blur-md",
         "bg-gradient-to-r from-blue-600 to-indigo-600",
         "font-semibold text-white shadow-lg shadow-indigo-600/25",
         "transition-transform duration-200 ease-out hover:scale-[1.03]",
         "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background",
-        fullWidth ? "w-full px-6 py-3.5 text-base" : "px-4 py-2 text-sm",
+        fullWidth
+          ? "w-full px-6 py-3.5 text-base"
+          : "px-2.5 py-2 text-[13px] lg:px-4 lg:text-sm",
         className,
       )}
     >
