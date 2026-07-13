@@ -97,6 +97,17 @@ const rawTools: RawTool[] = [
   // -------------------------------------------------- AUDIO
   ...matrix("audio", "ffmpeg-audio", AUDIO),
 
+  // -------------------------------------------------- VIDEO → AUDIO (extract)
+  // Pull the audio track out of any uploaded video and save it as a standalone
+  // audio file. The `ffmpeg-audio` engine already strips the video stream
+  // (`-vn`), so this is the safe, legal "video file to MP3" converter (as
+  // opposed to downloading from YouTube/TikTok, which we deliberately avoid).
+  ...VIDEO.flatMap((v) =>
+    ["mp3", "m4a", "wav", "aac", "ogg", "flac"].map((a) =>
+      make("audio", "ffmpeg-audio", v, a),
+    ),
+  ),
+
   // -------------------------------------------------- VIDEO
   ...matrix("video", "ffmpeg-video", VIDEO),
   // Any common video source can be exported to an animated GIF, and back.
