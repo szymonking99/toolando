@@ -31,7 +31,9 @@ export function SupportButton({ fullWidth, className }: SupportButtonProps) {
         "font-semibold text-white shadow-lg shadow-indigo-600/25",
         "transition-transform duration-200 ease-out hover:scale-[1.03]",
         "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background",
-        fullWidth ? "w-full px-6 py-3.5 text-base" : "px-4 py-2 text-sm",
+        fullWidth
+          ? "w-full px-6 py-3.5 text-base"
+          : "px-3 py-2 text-sm lg:px-4",
         className,
       )}
     >
@@ -41,7 +43,11 @@ export function SupportButton({ fullWidth, className }: SupportButtonProps) {
         className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/25 to-transparent transition-transform duration-700 group-hover:translate-x-full"
       />
       <Heart className={cn(fullWidth ? "size-5" : "size-4")} aria-hidden="true" />
-      {t.footer.support}
+      {/* In the compact top bar the label only appears once there's room (xl+),
+          so on tighter widths it stays a neat icon-only button. */}
+      <span className={cn(!fullWidth && "hidden xl:inline")}>
+        {t.footer.support}
+      </span>
     </Link>
   )
 }
