@@ -3,6 +3,7 @@ import Script from "next/script"
 import type { Metadata, Viewport } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
 import { I18nProvider } from "@/components/i18n-provider"
+import { AdSenseScript } from "@/components/adsense-script"
 import { getDictionary } from "@/lib/i18n/dictionaries"
 import {
   supportedLocales,
@@ -117,19 +118,8 @@ export default async function LocaleLayout({
       dir={dir}
       className={`dark overflow-x-hidden bg-background ${geistSans.variable} ${geistMono.variable}`}
     >
-      <head>
-        {ADSENSE_CLIENT && (
-          // Plain <script> so the real AdSense loader appears verbatim in the
-          // initial HTML <head> (Google's crawler needs the actual tag, not a
-          // Next.js preload link).
-          <script
-            async
-            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`}
-            crossOrigin="anonymous"
-          />
-        )}
-      </head>
       <body className="overflow-x-hidden bg-background font-sans antialiased">
+        {ADSENSE_CLIENT && <AdSenseScript client={ADSENSE_CLIENT} />}
         <I18nProvider locale={locale} dictionary={dictionary}>
           {children}
         </I18nProvider>
