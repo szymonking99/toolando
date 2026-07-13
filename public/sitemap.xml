@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Strona główna -->
+  <url>
+    <loc>https://toolando.tech/</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Narzędzia PDF -->
+  <url>
+    <loc>https://toolando.tech/tools/pdf-converter</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Generator haseł -->
+  <url>
+    <loc>https://toolando.tech/tools/password-generator</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Usuwanie tła -->
+  <url>
+    <loc>https://toolando.tech/tools/image-background-remover</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Dodawaj kolejne narzędzia w tej samej formie -->
+  <!--
+  <url>
+    <loc>https://toolando.tech/tools/nazwa-narzedzia</loc>
+  </url>
+  -->
+
+</urlset>
