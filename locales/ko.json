@@ -95,7 +95,10 @@
     "support": "후원하기",
     "privacy": "개인정보 처리방침",
     "terms": "서비스 약관",
-    "rights": "© 2026 Toolando.tech. All rights reserved."
+    "rights": "© 2026 Toolando.tech. All rights reserved.",
+    "aboutMe": "About me",
+    "howItWorks": "How it works",
+    "faq": "FAQ"
   },
   "language": {
     "label": "언어"

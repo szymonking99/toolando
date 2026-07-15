@@ -95,7 +95,10 @@
     "support": "Támogass engem",
     "privacy": "Adatvédelmi irányelvek",
     "terms": "Szolgáltatási feltételek",
-    "rights": "© 2026 Toolando.tech. Minden jog fenntartva."
+    "rights": "© 2026 Toolando.tech. Minden jog fenntartva.",
+    "aboutMe": "About me",
+    "howItWorks": "How it works",
+    "faq": "FAQ"
   },
   "language": {
     "label": "Nyelv"

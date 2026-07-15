@@ -95,7 +95,10 @@
     "support": "Dukung saya",
     "privacy": "Kebijakan privasi",
     "terms": "Ketentuan layanan",
-    "rights": "© 2026 Toolando.tech. Semua hak dilindungi."
+    "rights": "© 2026 Toolando.tech. Semua hak dilindungi.",
+    "aboutMe": "About me",
+    "howItWorks": "How it works",
+    "faq": "FAQ"
   },
   "language": {
     "label": "Bahasa"

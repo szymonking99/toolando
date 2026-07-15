@@ -95,7 +95,10 @@
     "support": "Podpořte mě",
     "privacy": "Zásady ochrany osobních údajů",
     "terms": "Podmínky služby",
-    "rights": "© 2026 Toolando.tech. Všechna práva vyhrazena."
+    "rights": "© 2026 Toolando.tech. Všechna práva vyhrazena.",
+    "aboutMe": "About me",
+    "howItWorks": "How it works",
+    "faq": "FAQ"
   },
   "language": {
     "label": "Jazyk"

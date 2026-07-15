@@ -10,6 +10,9 @@ export function SiteFooter() {
 
   const links = [
     { label: t.footer.tools, href: href("/tools") },
+    { label: t.footer.aboutMe, href: href("/o-mnie") },
+    { label: t.footer.howItWorks, href: href("/jak-to-dziala") },
+    { label: t.footer.faq, href: href("/faq") },
     { label: t.footer.support, href: href("/wsparcie") },
     { label: t.footer.contact, href: href("/kontakt") },
     { label: t.footer.privacy, href: href("/polityka-prywatnosci") },
