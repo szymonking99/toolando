@@ -95,7 +95,10 @@
     "support": "Tue minua",
     "privacy": "Tietosuojakäytäntö",
     "terms": "Käyttöehdot",
-    "rights": "© 2026 Toolando.tech. Kaikki oikeudet pidätetään."
+    "rights": "© 2026 Toolando.tech. Kaikki oikeudet pidätetään.",
+    "aboutMe": "About me",
+    "howItWorks": "How it works",
+    "faq": "FAQ"
   },
   "language": {
     "label": "Kieli"

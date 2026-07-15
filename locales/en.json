@@ -95,7 +95,10 @@
     "support": "Support me",
     "privacy": "Privacy policy",
     "terms": "Terms of service",
-    "rights": "© 2026 Toolando.tech. All rights reserved."
+    "rights": "© 2026 Toolando.tech. All rights reserved.",
+    "aboutMe": "About me",
+    "howItWorks": "How it works",
+    "faq": "FAQ"
   },
   "language": {
     "label": "Language"
@@ -333,5 +336,197 @@
       }
     ],
     "platformDisabled": "Downloading from {platform} is temporarily unavailable — {platform} actively blocks downloaders, so we've paused it until our own converter is ready. All other platforms still work."
+  },
+  "pages": {
+    "contact": {
+      "eyebrow": "Contact",
+      "title": "Contact form",
+      "intro": "Have a question, a partnership idea, or want to report a problem? Fill in the form — I'll reply as soon as possible.",
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "Your email address",
+      "message": "Message",
+      "messagePlaceholder": "Describe your problem or question...",
+      "submit": "Send message",
+      "sent": "Thank you! Your message has been prepared in your email app.",
+      "subject": "Inquiry from Toolando.tech"
+    },
+    "about": {
+      "eyebrow": "About me",
+      "title": "Hi, I'm Szymon — the creator of Toolando",
+      "intro": "Toolando.tech is my own project that I build on my own. From the idea, through the code, to the content you're reading now — it all comes from one pair of hands. I want simple tasks, like converting a file or a quick online tool, to be available to everyone, with no software to install and no needless complications.",
+      "whyTitle": "Why Toolando was created",
+      "whyP1": "I work with computers every day and I've seen many times how much time people lose on tasks that should take a moment — changing a file format, extracting audio from a recording, or a quick operation that forces you to hunt for some random site full of ads and traps.",
+      "whyP2": "Toolando was created to gather such tools in one clear and safe place. I care about the service being fast, readable, and honest toward the user — with no tricks and no hidden catches.",
+      "howTitle": "How Toolando works",
+      "howIntro": "The service provides online tools in two variants: free and premium.",
+      "howFreeTerm": "Free tools",
+      "howFreeDesc": "available to everyone, without an account. These are the everyday, most-used features that I want to keep open to all.",
+      "howPremiumTerm": "Premium tools",
+      "howPremiumDesc": "more advanced features or higher limits that help maintain and grow the project. Premium revenue goes straight to servers, development, and new tools.",
+      "howOutro": "Regardless of the variant, I stick to the same rule: uploaded files are used solely to perform the conversion and are not stored by me.",
+      "outsideTitle": "What I do beyond Toolando",
+      "outsideP1": "I provide IT services — helping individuals and companies with everyday hardware and software problems.",
+      "outsideList": [
+        "servicing and repairing laptops and computers,",
+        "IT services and technical support,",
+        "building web tools and applications."
+      ],
+      "outsideP2": "Experience from repairs and working with users translates directly into how I design Toolando — simple, to the point, and with real needs in mind.",
+      "contactTitle": "Contact",
+      "contactP1": "Have a question, an idea for a new tool, or want to report a problem? Write to me — I'll gladly reply.",
+      "emailLabel": "Email:"
+    },
+    "howItWorks": {
+      "eyebrow": "How it works?",
+      "title": "How the tools in Toolando work",
+      "intro": "Toolando.tech is a set of online tools you run right in your browser — with nothing to install. Below I explain how file processing works, how I take care of security, and how free tools differ from premium.",
+      "browserTitle": "Tools that run in the browser",
+      "browserP": "You open a tool, choose a file or enter data, and you get the result right on the page. You don't need an account to use the free tools, and you don't need to install anything on your computer.",
+      "filesTitle": "How files are processed",
+      "filesIntro": "Depending on the type of tool, files are processed in two ways:",
+      "filesLocalTerm": "Locally in the browser",
+      "filesLocalDesc": "some operations run directly on your device, and the file never leaves your computer at all.",
+      "filesServerTerm": "Temporarily on the server",
+      "filesServerDesc": "when a tool needs more computing power, the file is processed on the server only for the duration of the conversion, and then deleted.",
+      "filesOutro": "In none of these cases do I store your files or use them for any other purpose.",
+      "securityTitle": "Security",
+      "securityP": "Security and privacy are a priority for me. The connection to the site is encrypted, and files are used solely to perform the task you request.",
+      "securityList": [
+        "uploaded files are not stored after the operation is complete,",
+        "I do not sell or share your data,",
+        "you don't need to provide personal data to use the free tools."
+      ],
+      "tiersTitle": "Free tools vs premium",
+      "tiersP": "Toolando offers tools in two variants, but the security principle is the same in both.",
+      "tiersFreeTerm": "Free",
+      "tiersFreeDesc": "available to everyone, without an account. Perfect for everyday, quick tasks.",
+      "tiersPremiumTerm": "Premium",
+      "tiersPremiumDesc": "more advanced features and higher limits or larger files. Premium supports server maintenance and the development of new tools."
+    },
+    "faq": {
+      "eyebrow": "FAQ",
+      "title": "Frequently asked questions",
+      "intro": "I've gathered here the answers to the questions that come up most often. If you can't find what you're looking for, write to me at badyltech@outlook.com.",
+      "items": [
+        {
+          "q": "Are Toolando's tools free?",
+          "a": "Most tools are fully free and available without creating an account. Some more advanced features and higher limits are available in the premium variant, which supports maintaining and developing the service."
+        },
+        {
+          "q": "How do free tools differ from premium?",
+          "a": "Free tools cover everyday, most common tasks and are open to everyone. Premium offers more advanced features and larger files or limits. The file security principle is the same in both variants."
+        },
+        {
+          "q": "Are my files safe?",
+          "a": "Yes. Uploaded files are used solely to perform the conversion and are not stored by me. Some operations run locally in the browser, and if a file goes to the server, it is processed only for the duration of the task and then deleted."
+        },
+        {
+          "q": "Does Toolando store the files I upload?",
+          "a": "No. I do not save your files after the operation is complete and I do not use them for any other purpose."
+        },
+        {
+          "q": "How do you protect my privacy?",
+          "a": "I process only technical and statistical data (e.g. IP address, browser type, system, site traffic), in line with the GDPR. You'll find the details in the Privacy Policy. You don't need to provide personal data to use the free tools."
+        },
+        {
+          "q": "Do I have to create an account to use the tools?",
+          "a": "No. The free tools work without an account. An account may only be needed for premium features."
+        },
+        {
+          "q": "Are there ads on the site?",
+          "a": "Yes, the service may display Google AdSense ads, which help keep the free tools available to everyone."
+        },
+        {
+          "q": "How do the online tools work?",
+          "a": "You open a tool in your browser, choose a file or enter data, and get the result right away — with nothing to install. I've described more details on the “How it works?” page."
+        },
+        {
+          "q": "How can I get in touch?",
+          "a": "Write to badyltech@outlook.com or use the contact form. I reply as quickly as possible."
+        }
+      ]
+    },
+    "privacy": {
+      "eyebrow": "Privacy Policy",
+      "title": "Toolando.tech Privacy Policy",
+      "intro": "Toolando.tech is a service providing online tools in a free and premium variant. I care about users' privacy and process data in accordance with applicable regulations, including the GDPR.",
+      "s1Title": "1. Data controller",
+      "s1Pre": "The data controller is Szymon, the owner of Toolando.tech. For privacy matters you can contact me at:",
+      "s2Title": "2. What data is processed",
+      "s2Intro": "The service processes technical and statistical data that is collected automatically while using the site:",
+      "s2List": [
+        "IP address,",
+        "browser type and version,",
+        "the device's operating system,",
+        "traffic and usage data (e.g. pages visited)."
+      ],
+      "s2Outro": "If you contact me by email or form, I also process the email address you provide and the content of your message.",
+      "s3Title": "3. Files uploaded to the tools",
+      "s3P": "Files you upload to the tools for conversion or another operation are not stored by me. They are used solely to perform the task you request and are deleted once it is complete. I do not use them for any other purpose.",
+      "s4Title": "4. Cookies",
+      "s4Intro": "The service uses the following types of cookies:",
+      "s4TechTerm": "Technical",
+      "s4TechDesc": "necessary for the site to work correctly and to remember settings (e.g. language).",
+      "s4AnalyticsTerm": "Analytical",
+      "s4AnalyticsDesc": "statistical tools (e.g. Google Analytics) that help understand how the site is used, in aggregate and anonymous form.",
+      "s4AdsTerm": "Advertising",
+      "s4AdsDesc": "Google AdSense, which may use cookies to display and personalize ads.",
+      "s4Outro": "You can manage or disable cookies at any time in your browser settings.",
+      "s5Title": "5. Free and premium tools",
+      "s5P": "Toolando provides free tools (available without an account) and premium tools. The rules for data processing and file protection are the same in both variants — they differ only in the range of features and limits.",
+      "s6Title": "6. Purpose of data processing",
+      "s6Intro": "I process data solely for the following purposes:",
+      "s6List": [
+        "ensuring the correct and secure operation of the service,",
+        "statistical traffic analysis and improving the tools,",
+        "displaying ads,",
+        "handling contact with the user."
+      ],
+      "s7Title": "7. Your rights",
+      "s7Intro": "You have the right to:",
+      "s7List": [
+        "access your data,",
+        "rectify or delete it,",
+        "restrict processing,",
+        "lodge a complaint with the relevant data protection authority."
+      ],
+      "s8Title": "8. Changes to the policy",
+      "s8P": "The privacy policy may be updated to reflect changes in the service or in the law. The current version is always available on this page."
+    },
+    "terms": {
+      "eyebrow": "Terms of Service",
+      "title": "Terms of Service for Toolando.tech",
+      "intro": "The terms below set out the rules for using the Toolando.tech service. Using the service means you accept these rules.",
+      "s1Title": "1. General provisions",
+      "s1P": "The owner of Toolando.tech is Szymon. The service provides online tools for file conversion, content generation, and AI-powered tools.",
+      "s2Title": "2. Free and premium tools",
+      "s2Intro": "Toolando offers tools in two variants:",
+      "s2FreeTerm": "Free",
+      "s2FreeDesc": "available to everyone, without the need to create an account.",
+      "s2PremiumTerm": "Premium",
+      "s2PremiumDesc": "with more advanced features and higher limits.",
+      "s2Outro": "Rules regarding any payments or subscriptions for premium features are presented in the relevant places on the service.",
+      "s3Title": "3. Use at your own risk",
+      "s3P1": "You use the service at your own risk. I make every effort for the tools to work correctly, however the service is provided “as is”, with no guarantee of availability, correctness of results, or fitness for a particular purpose.",
+      "s3P2": "The service owner is not liable for:",
+      "s3List": [
+        "the consequences of using the tools' results,",
+        "lost profits,",
+        "damage resulting from interruptions in the service."
+      ],
+      "s3Outro": "The user undertakes to use the service in accordance with the law and is responsible for the content and files they process.",
+      "s4Title": "4. User files",
+      "s4P": "Files uploaded to the tools are not stored. They are used solely to perform the given operation and are deleted once it is complete.",
+      "s5Title": "5. Ads",
+      "s5P": "The service may display Google AdSense ads. Ads help maintain the free tools and develop the project. The ad provider may use cookies in accordance with the Privacy Policy.",
+      "s6Title": "6. Copyright",
+      "s6P": "The name Toolando.tech, graphic elements, and the service's content are legally protected. Copying and using them without the owner's consent is prohibited.",
+      "s7Title": "7. Contact",
+      "s7Pre": "For matters related to these terms you can contact me at:",
+      "s8Title": "8. Changes to the terms",
+      "s8P": "The terms may be updated to reflect changes in the service or in the law. The current version is always available on this page."
+    }
   }
 }

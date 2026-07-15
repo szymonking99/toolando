@@ -95,7 +95,10 @@
     "support": "Υποστηρίξτε με",
     "privacy": "Πολιτική απορρήτου",
     "terms": "Όροι χρήσης",
-    "rights": "© 2026 Toolando.tech. Με επιφύλαξη παντός δικαιώματος."
+    "rights": "© 2026 Toolando.tech. Με επιφύλαξη παντός δικαιώματος.",
+    "aboutMe": "About me",
+    "howItWorks": "How it works",
+    "faq": "FAQ"
   },
   "language": {
     "label": "Γλώσσα"

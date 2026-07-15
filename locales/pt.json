@@ -95,7 +95,10 @@
     "support": "Apoie-me",
     "privacy": "Política de privacidade",
     "terms": "Termos de serviço",
-    "rights": "© 2026 Toolando.tech. Todos os direitos reservados."
+    "rights": "© 2026 Toolando.tech. Todos os direitos reservados.",
+    "aboutMe": "About me",
+    "howItWorks": "How it works",
+    "faq": "FAQ"
   },
   "language": {
     "label": "Idioma"

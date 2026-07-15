@@ -20,6 +20,11 @@ import {
 } from "@/lib/i18n/tool-meta"
 import { localeHref } from "@/lib/i18n/href"
 import { AdSlot } from "@/components/ad-slot"
+import { JsonLd } from "@/components/json-ld"
+import {
+  softwareApplicationSchema,
+  breadcrumbSchema,
+} from "@/lib/seo/structured-data"
 
 /** Resolve a localized display name + description for any tool id. */
 function resolveToolText(
@@ -87,6 +92,8 @@ export async function generateMetadata({
 
 function ToolShell({
   locale,
+  id,
+  toolsLabel,
   backLabel,
   category,
   name,
@@ -94,14 +101,28 @@ function ToolShell({
   children,
 }: {
   locale: string
+  id: string
+  toolsLabel: string
   backLabel: string
   category: string
   name: string
   description: string
   children: React.ReactNode
 }) {
+  const path = `/${locale}/tools/${id}`
   return (
     <>
+      {/* Per-tool structured data: app rich card + breadcrumb trail */}
+      <JsonLd
+        data={[
+          softwareApplicationSchema({ name, description, path, locale }),
+          breadcrumbSchema([
+            { name: "Toolando.tech", path: `/${locale}` },
+            { name: toolsLabel, path: `/${locale}/tools` },
+            { name, path },
+          ]),
+        ]}
+      />
       <header className="fixed inset-x-0 top-0 z-50 px-4 pt-4">
         <nav className="mx-auto flex max-w-4xl items-center justify-between rounded-2xl border border-white/10 bg-background/60 px-5 py-3 backdrop-blur-xl">
           <Link href={localeHref(locale, "/")} className="flex items-center gap-2">
@@ -161,6 +182,8 @@ export default async function ToolPage({
       <div className="min-h-dvh">
         <ToolShell
           locale={locale}
+          id={id}
+          toolsLabel={dict.nav.allTools}
           backLabel={dict.tool.back}
           category={getAiCategoryLabel(locale, ai.id)}
           name={aiText.name}
@@ -213,6 +236,8 @@ export default async function ToolPage({
       <div className="min-h-dvh">
         <ToolShell
           locale={locale}
+          id={id}
+          toolsLabel={dict.nav.allTools}
           backLabel={dict.tool.back}
           category={specialText.category}
           name={specialText.name}
@@ -265,6 +290,8 @@ export default async function ToolPage({
     <div className="min-h-dvh">
       <ToolShell
         locale={locale}
+        id={id}
+        toolsLabel={dict.nav.allTools}
         backLabel={dict.tool.back}
         category={getCategoryLabel(locale, tool.category)}
         name={tool.name}

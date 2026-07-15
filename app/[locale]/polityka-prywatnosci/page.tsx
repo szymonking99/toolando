@@ -1,75 +1,107 @@
-export default function PrivacyPolicyPage() {
+import type { Metadata } from "next"
+import {
+  ContentPageShell,
+  ContentSection,
+} from "@/components/content-page-shell"
+import { getDictionary } from "@/lib/i18n/dictionaries"
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params
+  const t = await getDictionary(locale)
+  return {
+    title: `${t.pages.privacy.title} — Toolando.tech`,
+    description: t.pages.privacy.intro,
+    alternates: { canonical: `/${locale}/polityka-prywatnosci` },
+  }
+}
+
+const emailLink = (
+  <a
+    href="mailto:badyltech@outlook.com"
+    className="font-medium text-foreground underline underline-offset-4 hover:text-primary"
+  >
+    badyltech@outlook.com
+  </a>
+)
+
+export default async function PrivacyPolicyPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params
+  const { privacy: p } = (await getDictionary(locale)).pages
+
   return (
-    <main className="mx-auto max-w-3xl px-4 py-24">
-      <h1 className="text-3xl font-semibold text-foreground mb-6">
-        Polityka Prywatności Toolando.tech
-      </h1>
-
-      <div className="space-y-6 text-muted-foreground leading-relaxed">
+    <ContentPageShell eyebrow={p.eyebrow} title={p.title} intro={p.intro}>
+      <ContentSection title={p.s1Title}>
         <p>
-          Toolando.tech to serwis internetowy oferujący narzędzia online do konwersji plików,
-          generowania treści oraz narzędzia wspierane sztuczną inteligencją. Dbamy o prywatność
-          użytkowników i przetwarzamy dane zgodnie z obowiązującymi przepisami, w tym RODO.
+          {p.s1Pre} {emailLink}.
         </p>
+      </ContentSection>
 
-        <h2 className="text-xl font-semibold text-foreground">1. Jakie dane są przetwarzane?</h2>
-        <p>
-          Toolando.tech nie zbiera i nie przechowuje plików przesyłanych przez użytkowników.
-          Wszystkie konwersje i operacje na plikach odbywają się lokalnie w przeglądarce,
-          bez wysyłania plików na serwer.
-        </p>
-        <p>Możemy przetwarzać następujące dane:</p>
-        <ul className="list-disc pl-6">
-          <li>adres e‑mail (jeśli kontaktujesz się przez formularz lub e‑mail),</li>
-          <li>dane techniczne przeglądarki (np. cookies techniczne),</li>
-          <li>anonimowe dane statystyczne (np. narzędzia analityczne).</li>
+      <ContentSection title={p.s2Title}>
+        <p>{p.s2Intro}</p>
+        <ul className="list-disc space-y-2 pl-6">
+          {p.s2List.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
         </ul>
+        <p>{p.s2Outro}</p>
+      </ContentSection>
 
-        <h2 className="text-xl font-semibold text-foreground">2. Cel przetwarzania danych</h2>
-        <p>Dane przetwarzamy wyłącznie w celu:</p>
-        <ul className="list-disc pl-6">
-          <li>obsługi kontaktu z użytkownikiem,</li>
-          <li>poprawy działania serwisu,</li>
-          <li>analizy statystycznej ruchu,</li>
-          <li>zapewnienia bezpieczeństwa i stabilności strony.</li>
+      <ContentSection title={p.s3Title}>
+        <p>{p.s3P}</p>
+      </ContentSection>
+
+      <ContentSection title={p.s4Title}>
+        <p>{p.s4Intro}</p>
+        <ul className="list-disc space-y-2 pl-6">
+          <li>
+            <strong className="text-foreground">{p.s4TechTerm}</strong> —{" "}
+            {p.s4TechDesc}
+          </li>
+          <li>
+            <strong className="text-foreground">{p.s4AnalyticsTerm}</strong> —{" "}
+            {p.s4AnalyticsDesc}
+          </li>
+          <li>
+            <strong className="text-foreground">{p.s4AdsTerm}</strong> —{" "}
+            {p.s4AdsDesc}
+          </li>
         </ul>
+        <p>{p.s4Outro}</p>
+      </ContentSection>
 
-        <h2 className="text-xl font-semibold text-foreground">3. Pliki cookies</h2>
-        <p>
-          Toolando.tech może używać plików cookies w celu poprawnego działania strony,
-          analityki ruchu oraz zapamiętywania ustawień językowych.
-          Możesz w każdej chwili wyłączyć cookies w ustawieniach przeglądarki.
-        </p>
+      <ContentSection title={p.s5Title}>
+        <p>{p.s5P}</p>
+      </ContentSection>
 
-        <h2 className="text-xl font-semibold text-foreground">4. Udostępnianie danych</h2>
-        <p>
-          Nie udostępniamy danych osobowych żadnym podmiotom zewnętrznym,
-          chyba że wymagają tego przepisy prawa.
-        </p>
-
-        <h2 className="text-xl font-semibold text-foreground">5. Twoje prawa</h2>
-        <p>Masz prawo do:</p>
-        <ul className="list-disc pl-6">
-          <li>dostępu do swoich danych,</li>
-          <li>poprawienia danych,</li>
-          <li>usunięcia danych,</li>
-          <li>ograniczenia przetwarzania,</li>
-          <li>wniesienia skargi do Prezesa UODO.</li>
+      <ContentSection title={p.s6Title}>
+        <p>{p.s6Intro}</p>
+        <ul className="list-disc space-y-2 pl-6">
+          {p.s6List.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
         </ul>
+      </ContentSection>
 
-        <h2 className="text-xl font-semibold text-foreground">6. Kontakt</h2>
-        <p>
-          W sprawach związanych z prywatnością możesz kontaktować się pod adresem:
-          <br />
-          <strong>badyltech@outlook.com</strong>
-        </p>
+      <ContentSection title={p.s7Title}>
+        <p>{p.s7Intro}</p>
+        <ul className="list-disc space-y-2 pl-6">
+          {p.s7List.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
+      </ContentSection>
 
-        <h2 className="text-xl font-semibold text-foreground">7. Zmiany polityki</h2>
-        <p>
-          Polityka prywatności może być aktualizowana w celu dostosowania jej do zmian
-          w serwisie lub przepisach prawa.
-        </p>
-      </div>
-    </main>
+      <ContentSection title={p.s8Title}>
+        <p>{p.s8P}</p>
+      </ContentSection>
+    </ContentPageShell>
   )
 }

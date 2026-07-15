@@ -95,7 +95,10 @@
     "support": "Stöd mig",
     "privacy": "Integritetspolicy",
     "terms": "Användarvillkor",
-    "rights": "© 2026 Toolando.tech. Alla rättigheter förbehållna."
+    "rights": "© 2026 Toolando.tech. Alla rättigheter förbehållna.",
+    "aboutMe": "About me",
+    "howItWorks": "How it works",
+    "faq": "FAQ"
   },
   "language": {
     "label": "Språk"

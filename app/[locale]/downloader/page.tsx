@@ -5,6 +5,8 @@ import { getDictionary } from "@/lib/i18n/dictionaries"
 import { localeHref } from "@/lib/i18n/href"
 import { PLATFORM_LABELS, SUPPORTED_PLATFORMS } from "@/lib/video-link"
 import { VideoToMp3Linker } from "@/components/video-to-mp3-linker"
+import { JsonLd } from "@/components/json-ld"
+import { faqPageSchema, breadcrumbSchema } from "@/lib/seo/structured-data"
 
 export async function generateMetadata({
   params,
@@ -42,6 +44,16 @@ export default async function DownloaderPage({
 
   return (
     <div className="min-h-dvh">
+      {/* Breadcrumb trail + FAQ rich result for the downloader page */}
+      <JsonLd
+        data={[
+          breadcrumbSchema([
+            { name: "Toolando.tech", path: `/${locale}` },
+            { name: d.title, path: `/${locale}/downloader` },
+          ]),
+          ...(faq.length > 0 ? [faqPageSchema(faq)] : []),
+        ]}
+      />
       <header className="fixed inset-x-0 top-0 z-50 px-4 pt-4">
         <nav className="mx-auto flex max-w-3xl items-center justify-between rounded-2xl border border-white/10 bg-background/60 px-5 py-3 backdrop-blur-xl">
           <Link

@@ -10,7 +10,10 @@ export type Dictionary = typeof en
  * (instead of a fully dynamic `import(variable)`) keeps the bundler happy and
  * lets each locale JSON be code-split and loaded on demand.
  */
-const loaders: Record<string, () => Promise<{ default: Dictionary }>> = {
+// Locale JSONs may be partial (placeholder locales omit sections like `pages`).
+// Missing keys are backfilled from the English base by `mergeWithFallback`, so
+// the override is typed loosely here.
+const loaders: Record<string, () => Promise<{ default: unknown }>> = {
   pl: () => import("@/locales/pl.json"),
   en: () => import("@/locales/en.json"),
   de: () => import("@/locales/de.json"),
