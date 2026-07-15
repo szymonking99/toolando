@@ -2,6 +2,8 @@ import type { Metadata } from "next"
 import { ChevronDown } from "lucide-react"
 import { ContentPageShell } from "@/components/content-page-shell"
 import { getDictionary } from "@/lib/i18n/dictionaries"
+import { JsonLd } from "@/components/json-ld"
+import { faqPageSchema } from "@/lib/seo/structured-data"
 
 export async function generateMetadata({
   params,
@@ -27,6 +29,8 @@ export default async function FaqPage({
 
   return (
     <ContentPageShell eyebrow={p.eyebrow} title={p.title} intro={p.intro}>
+      {/* FAQ rich result: expandable Q&A directly in Google search */}
+      <JsonLd data={faqPageSchema(p.items)} />
       <div className="space-y-3">
         {p.items.map((item) => (
           <details

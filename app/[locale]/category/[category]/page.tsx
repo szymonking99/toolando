@@ -11,6 +11,8 @@ import { getDictionary } from "@/lib/i18n/dictionaries"
 import { getCategoryMeta } from "@/lib/i18n/content-meta"
 import { getConversionDescription } from "@/lib/i18n/tool-meta"
 import { localeHref } from "@/lib/i18n/href"
+import { JsonLd } from "@/components/json-ld"
+import { breadcrumbSchema } from "@/lib/seo/structured-data"
 
 export function generateStaticParams() {
   return categories.map((c) => ({ category: c.slug }))
@@ -64,6 +66,17 @@ export default async function CategoryPage({
 
   return (
     <div className="min-h-dvh">
+      {/* Breadcrumb trail: Home → All tools → this category */}
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Toolando.tech", path: `/${locale}` },
+          { name: dict.nav.allTools, path: `/${locale}/tools` },
+          {
+            name: cm?.title ?? meta.title,
+            path: `/${locale}/category/${category}`,
+          },
+        ])}
+      />
       <header className="fixed inset-x-0 top-0 z-50 px-4 pt-4">
         <nav className="mx-auto flex max-w-5xl items-center justify-between rounded-2xl border border-white/10 bg-background/60 px-5 py-3 backdrop-blur-xl">
           <Link href={localeHref(locale, "/")} className="flex items-center gap-2">
