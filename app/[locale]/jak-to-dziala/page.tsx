@@ -85,9 +85,8 @@ export default function HowItWorksPage() {
           </li>
           <li>
             <strong className="text-foreground">Premium</strong> — bardziej
-            zaawansowane funkcje, większe limity lub pliki, oraz korzystanie bez
-            reklam. Premium wspiera utrzymanie serwerów i rozwój kolejnych
-            narzędzi.
+            zaawansowane funkcje oraz większe limity lub pliki. Premium wspiera
+            utrzymanie serwerów i rozwój kolejnych narzędzi.
           </li>
         </ul>
       </ContentSection>

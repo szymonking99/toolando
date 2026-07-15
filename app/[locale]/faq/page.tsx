@@ -23,7 +23,7 @@ const faqs: { q: string; a: string }[] = [
   },
   {
     q: "Czym różnią się narzędzia darmowe od premium?",
-    a: "Narzędzia darmowe pokrywają codzienne, najczęstsze zadania i są otwarte dla każdego. Premium oferuje bardziej zaawansowane funkcje, większe pliki lub limity oraz korzystanie bez reklam. Zasada bezpieczeństwa plików jest w obu wariantach taka sama.",
+    a: "Narzędzia darmowe pokrywają codzienne, najczęstsze zadania i są otwarte dla każdego. Premium oferuje bardziej zaawansowane funkcje oraz większe pliki lub limity. Zasada bezpieczeństwa plików jest w obu wariantach taka sama.",
   },
   {
     q: "Czy moje pliki są bezpieczne?",
