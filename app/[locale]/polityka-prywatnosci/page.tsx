@@ -3,6 +3,7 @@ import {
   ContentPageShell,
   ContentSection,
 } from "@/components/content-page-shell"
+import { getDictionary } from "@/lib/i18n/dictionaries"
 
 export async function generateMetadata({
   params,
@@ -10,124 +11,96 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>
 }): Promise<Metadata> {
   const { locale } = await params
+  const t = await getDictionary(locale)
   return {
-    title: "Polityka prywatności — Toolando.tech",
-    description:
-      "Polityka prywatności Toolando.tech: jakie dane są przetwarzane, pliki cookies (techniczne, analityczne, reklamowe) oraz Twoje prawa zgodnie z RODO.",
+    title: `${t.pages.privacy.title} — Toolando.tech`,
+    description: t.pages.privacy.intro,
     alternates: { canonical: `/${locale}/polityka-prywatnosci` },
   }
 }
 
-export default function PrivacyPolicyPage() {
+const emailLink = (
+  <a
+    href="mailto:badyltech@outlook.com"
+    className="font-medium text-foreground underline underline-offset-4 hover:text-primary"
+  >
+    badyltech@outlook.com
+  </a>
+)
+
+export default async function PrivacyPolicyPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params
+  const { privacy: p } = (await getDictionary(locale)).pages
+
   return (
-    <ContentPageShell
-      eyebrow="Polityka prywatności"
-      title="Polityka prywatności Toolando.tech"
-      intro="Toolando.tech to serwis udostępniający narzędzia online w wariancie darmowym i premium. Dbam o prywatność użytkowników i przetwarzam dane zgodnie z obowiązującymi przepisami, w tym z RODO."
-    >
-      <ContentSection title="1. Administrator danych">
+    <ContentPageShell eyebrow={p.eyebrow} title={p.title} intro={p.intro}>
+      <ContentSection title={p.s1Title}>
         <p>
-          Administratorem danych jest Szymon, właściciel serwisu Toolando.tech.
-          W sprawach związanych z prywatnością możesz kontaktować się pod
-          adresem:{" "}
-          <a
-            href="mailto:badyltech@outlook.com"
-            className="font-medium text-foreground underline underline-offset-4 hover:text-primary"
-          >
-            badyltech@outlook.com
-          </a>
-          .
+          {p.s1Pre} {emailLink}.
         </p>
       </ContentSection>
 
-      <ContentSection title="2. Jakie dane są przetwarzane">
-        <p>
-          Serwis przetwarza dane techniczne i statystyczne, które są zbierane
-          automatycznie podczas korzystania ze strony:
-        </p>
+      <ContentSection title={p.s2Title}>
+        <p>{p.s2Intro}</p>
         <ul className="list-disc space-y-2 pl-6">
-          <li>adres IP,</li>
-          <li>typ i wersja przeglądarki,</li>
-          <li>system operacyjny urządzenia,</li>
+          {p.s2List.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
+        <p>{p.s2Outro}</p>
+      </ContentSection>
+
+      <ContentSection title={p.s3Title}>
+        <p>{p.s3P}</p>
+      </ContentSection>
+
+      <ContentSection title={p.s4Title}>
+        <p>{p.s4Intro}</p>
+        <ul className="list-disc space-y-2 pl-6">
           <li>
-            dane o ruchu i sposobie korzystania ze strony (np. odwiedzane
-            podstrony).
+            <strong className="text-foreground">{p.s4TechTerm}</strong> —{" "}
+            {p.s4TechDesc}
+          </li>
+          <li>
+            <strong className="text-foreground">{p.s4AnalyticsTerm}</strong> —{" "}
+            {p.s4AnalyticsDesc}
+          </li>
+          <li>
+            <strong className="text-foreground">{p.s4AdsTerm}</strong> —{" "}
+            {p.s4AdsDesc}
           </li>
         </ul>
-        <p>
-          Jeśli kontaktujesz się przez e-mail lub formularz, przetwarzam także
-          podany przez Ciebie adres e-mail oraz treść wiadomości.
-        </p>
+        <p>{p.s4Outro}</p>
       </ContentSection>
 
-      <ContentSection title="3. Pliki przesyłane do narzędzi">
-        <p>
-          Pliki, które przesyłasz do narzędzi w celu konwersji lub innej
-          operacji, nie są przeze mnie przechowywane. Służą wyłącznie do
-          wykonania zadania, o które prosisz, i są usuwane po jego zakończeniu.
-          Nie wykorzystuję ich do żadnych innych celów.
-        </p>
+      <ContentSection title={p.s5Title}>
+        <p>{p.s5P}</p>
       </ContentSection>
 
-      <ContentSection title="4. Pliki cookies">
-        <p>Serwis korzysta z następujących rodzajów plików cookies:</p>
+      <ContentSection title={p.s6Title}>
+        <p>{p.s6Intro}</p>
         <ul className="list-disc space-y-2 pl-6">
-          <li>
-            <strong className="text-foreground">Techniczne</strong> — niezbędne
-            do poprawnego działania strony i zapamiętania ustawień (np. języka).
-          </li>
-          <li>
-            <strong className="text-foreground">Analityczne</strong> — narzędzia
-            statystyczne (np. Google Analytics), które pomagają zrozumieć, jak
-            używana jest strona, w formie zbiorczej i anonimowej.
-          </li>
-          <li>
-            <strong className="text-foreground">Reklamowe</strong> — Google
-            AdSense, który może wykorzystywać pliki cookies do wyświetlania i
-            personalizacji reklam.
-          </li>
-        </ul>
-        <p>
-          W każdej chwili możesz zarządzać plikami cookies lub je wyłączyć w
-          ustawieniach swojej przeglądarki.
-        </p>
-      </ContentSection>
-
-      <ContentSection title="5. Narzędzia darmowe i premium">
-        <p>
-          Toolando udostępnia narzędzia darmowe (dostępne bez konta) oraz
-          narzędzia premium. Zasady przetwarzania danych i ochrony plików są
-          takie same w obu wariantach — różnią się one jedynie zakresem funkcji i
-          limitami.
-        </p>
-      </ContentSection>
-
-      <ContentSection title="6. Cel przetwarzania danych">
-        <p>Dane przetwarzam wyłącznie w następujących celach:</p>
-        <ul className="list-disc space-y-2 pl-6">
-          <li>zapewnienia poprawnego i bezpiecznego działania serwisu,</li>
-          <li>analizy statystycznej ruchu i ulepszania narzędzi,</li>
-          <li>wyświetlania reklam,</li>
-          <li>obsługi kontaktu z użytkownikiem.</li>
+          {p.s6List.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
         </ul>
       </ContentSection>
 
-      <ContentSection title="7. Twoje prawa">
-        <p>Masz prawo do:</p>
+      <ContentSection title={p.s7Title}>
+        <p>{p.s7Intro}</p>
         <ul className="list-disc space-y-2 pl-6">
-          <li>dostępu do swoich danych,</li>
-          <li>ich sprostowania lub usunięcia,</li>
-          <li>ograniczenia przetwarzania,</li>
-          <li>wniesienia skargi do Prezesa Urzędu Ochrony Danych Osobowych.</li>
+          {p.s7List.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
         </ul>
       </ContentSection>
 
-      <ContentSection title="8. Zmiany polityki">
-        <p>
-          Polityka prywatności może być aktualizowana w celu dostosowania jej do
-          zmian w serwisie lub w przepisach prawa. Aktualna wersja jest zawsze
-          dostępna na tej stronie.
-        </p>
+      <ContentSection title={p.s8Title}>
+        <p>{p.s8P}</p>
       </ContentSection>
     </ContentPageShell>
   )

@@ -3,6 +3,7 @@ import {
   ContentPageShell,
   ContentSection,
 } from "@/components/content-page-shell"
+import { getDictionary } from "@/lib/i18n/dictionaries"
 
 export async function generateMetadata({
   params,
@@ -10,85 +11,58 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>
 }): Promise<Metadata> {
   const { locale } = await params
+  const t = await getDictionary(locale)
   return {
-    title: "O mnie — Toolando.tech",
-    description:
-      "Poznaj Szymona, twórcę Toolando.tech — projektu z narzędziami online. Usługi informatyczne, serwis laptopów i tworzenie narzędzi webowych.",
+    title: `${t.pages.about.title} — Toolando.tech`,
+    description: t.pages.about.intro,
     alternates: { canonical: `/${locale}/o-mnie` },
   }
 }
 
-export default function AboutMePage() {
+export default async function AboutMePage({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params
+  const { about: p } = (await getDictionary(locale)).pages
+
   return (
-    <ContentPageShell
-      eyebrow="O mnie"
-      title="Cześć, jestem Szymon — twórca Toolando"
-      intro="Toolando.tech to mój autorski projekt, który rozwijam samodzielnie. Od pomysłu, przez kod, po treści, które teraz czytasz — wszystko powstaje w jednych rękach. Chcę, żeby proste zadania, takie jak konwersja pliku czy szybkie narzędzie online, były dostępne dla każdego, bez instalowania programów i bez zbędnych komplikacji."
-    >
-      <ContentSection title="Dlaczego powstało Toolando">
-        <p>
-          Na co dzień pracuję z komputerami i wielokrotnie widziałem, jak wiele
-          czasu ludzie tracą na zadania, które powinny zająć chwilę — zamiana
-          formatu pliku, wyciągnięcie dźwięku z nagrania czy szybka operacja,
-          do której trzeba szukać przypadkowej strony pełnej reklam i pułapek.
-        </p>
-        <p>
-          Toolando powstało po to, aby zebrać takie narzędzia w jednym,
-          przejrzystym i bezpiecznym miejscu. Zależy mi na tym, żeby serwis był
-          szybki, czytelny i uczciwy wobec użytkownika — bez naciągania i bez
-          ukrytych kruczków.
-        </p>
+    <ContentPageShell eyebrow={p.eyebrow} title={p.title} intro={p.intro}>
+      <ContentSection title={p.whyTitle}>
+        <p>{p.whyP1}</p>
+        <p>{p.whyP2}</p>
       </ContentSection>
 
-      <ContentSection title="Jak działa Toolando">
-        <p>
-          Serwis udostępnia narzędzia online w dwóch wariantach: darmowym oraz
-          premium.
-        </p>
+      <ContentSection title={p.howTitle}>
+        <p>{p.howIntro}</p>
         <ul className="list-disc space-y-2 pl-6">
           <li>
-            <strong className="text-foreground">Narzędzia darmowe</strong> —
-            dostępne dla każdego, bez zakładania konta. To codzienne, najczęściej
-            używane funkcje, które chcę utrzymać otwarte dla wszystkich.
+            <strong className="text-foreground">{p.howFreeTerm}</strong> —{" "}
+            {p.howFreeDesc}
           </li>
           <li>
-            <strong className="text-foreground">Narzędzia premium</strong> —
-            bardziej zaawansowane funkcje lub większe limity, które pomagają
-            utrzymać i rozwijać projekt. Środki z premium idą wprost na serwery,
-            rozwój i nowe narzędzia.
+            <strong className="text-foreground">{p.howPremiumTerm}</strong> —{" "}
+            {p.howPremiumDesc}
           </li>
         </ul>
-        <p>
-          Niezależnie od wariantu stawiam na tę samą zasadę: przesyłane pliki
-          służą wyłącznie do wykonania konwersji i nie są przeze mnie
-          przechowywane.
-        </p>
+        <p>{p.howOutro}</p>
       </ContentSection>
 
-      <ContentSection title="Co robię poza Toolando">
-        <p>
-          Zajmuję się usługami informatycznymi — pomagam osobom prywatnym i
-          firmom w codziennych problemach ze sprzętem i oprogramowaniem.
-        </p>
+      <ContentSection title={p.outsideTitle}>
+        <p>{p.outsideP1}</p>
         <ul className="list-disc space-y-2 pl-6">
-          <li>serwis i naprawa laptopów oraz komputerów,</li>
-          <li>usługi informatyczne i wsparcie techniczne,</li>
-          <li>tworzenie narzędzi i aplikacji webowych.</li>
+          {p.outsideList.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
         </ul>
-        <p>
-          Doświadczenie z serwisu i pracy z użytkownikami wprost przekłada się na
-          to, jak projektuję Toolando — prosto, konkretnie i z myślą o realnych
-          potrzebach.
-        </p>
+        <p>{p.outsideP2}</p>
       </ContentSection>
 
-      <ContentSection title="Kontakt">
+      <ContentSection title={p.contactTitle}>
+        <p>{p.contactP1}</p>
         <p>
-          Masz pytanie, pomysł na nowe narzędzie albo chcesz zgłosić problem?
-          Napisz do mnie — chętnie odpowiem.
-        </p>
-        <p>
-          E-mail:{" "}
+          {p.emailLabel}{" "}
           <a
             href="mailto:badyltech@outlook.com"
             className="font-medium text-foreground underline underline-offset-4 hover:text-primary"

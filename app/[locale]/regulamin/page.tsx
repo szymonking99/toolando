@@ -3,6 +3,7 @@ import {
   ContentPageShell,
   ContentSection,
 } from "@/components/content-page-shell"
+import { getDictionary } from "@/lib/i18n/dictionaries"
 
 export async function generateMetadata({
   params,
@@ -10,96 +11,69 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>
 }): Promise<Metadata> {
   const { locale } = await params
+  const t = await getDictionary(locale)
   return {
-    title: "Regulamin — Toolando.tech",
-    description:
-      "Regulamin korzystania z Toolando.tech: narzędzia darmowe i premium, korzystanie na własną odpowiedzialność, brak przechowywania plików oraz reklamy Google AdSense.",
+    title: `${t.pages.terms.title} — Toolando.tech`,
+    description: t.pages.terms.intro,
     alternates: { canonical: `/${locale}/regulamin` },
   }
 }
 
-export default function TermsPage() {
+export default async function TermsPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params
+  const { terms: p } = (await getDictionary(locale)).pages
+
   return (
-    <ContentPageShell
-      eyebrow="Regulamin"
-      title="Regulamin korzystania z Toolando.tech"
-      intro="Poniższy regulamin określa zasady korzystania z serwisu Toolando.tech. Korzystanie z serwisu oznacza akceptację tych zasad."
-    >
-      <ContentSection title="1. Postanowienia ogólne">
-        <p>
-          Właścicielem serwisu Toolando.tech jest Szymon. Serwis udostępnia
-          narzędzia online do konwersji plików, generowania treści oraz
-          narzędzia wspierane sztuczną inteligencją.
-        </p>
+    <ContentPageShell eyebrow={p.eyebrow} title={p.title} intro={p.intro}>
+      <ContentSection title={p.s1Title}>
+        <p>{p.s1P}</p>
       </ContentSection>
 
-      <ContentSection title="2. Narzędzia darmowe i premium">
-        <p>
-          Toolando oferuje narzędzia w dwóch wariantach:
-        </p>
+      <ContentSection title={p.s2Title}>
+        <p>{p.s2Intro}</p>
         <ul className="list-disc space-y-2 pl-6">
           <li>
-            <strong className="text-foreground">Darmowe</strong> — dostępne dla
-            wszystkich, bez konieczności zakładania konta.
+            <strong className="text-foreground">{p.s2FreeTerm}</strong> —{" "}
+            {p.s2FreeDesc}
           </li>
           <li>
-            <strong className="text-foreground">Premium</strong> — z bardziej
-            zaawansowanymi funkcjami, większymi limitami oraz korzystaniem bez
-            reklam.
+            <strong className="text-foreground">{p.s2PremiumTerm}</strong> —{" "}
+            {p.s2PremiumDesc}
           </li>
         </ul>
-        <p>
-          Zasady dotyczące ewentualnych płatności lub subskrypcji za funkcje
-          premium są prezentowane w odpowiednich miejscach serwisu.
-        </p>
+        <p>{p.s2Outro}</p>
       </ContentSection>
 
-      <ContentSection title="3. Korzystanie na własną odpowiedzialność">
-        <p>
-          Z serwisu korzystasz na własną odpowiedzialność. Dokładam starań, aby
-          narzędzia działały poprawnie, jednak serwis udostępniany jest w modelu
-          „tak jak jest” (as is), bez gwarancji dostępności, poprawności wyników
-          ani przydatności do konkretnego celu.
-        </p>
-        <p>Właściciel serwisu nie ponosi odpowiedzialności za:</p>
+      <ContentSection title={p.s3Title}>
+        <p>{p.s3P1}</p>
+        <p>{p.s3P2}</p>
         <ul className="list-disc space-y-2 pl-6">
-          <li>skutki wykorzystania wyników działania narzędzi,</li>
-          <li>utracone korzyści,</li>
-          <li>szkody wynikające z przerw w działaniu serwisu.</li>
+          {p.s3List.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
         </ul>
-        <p>
-          Użytkownik zobowiązuje się korzystać z serwisu zgodnie z prawem i
-          ponosi odpowiedzialność za treści oraz pliki, które przetwarza.
-        </p>
+        <p>{p.s3Outro}</p>
       </ContentSection>
 
-      <ContentSection title="4. Pliki użytkownika">
-        <p>
-          Pliki przesyłane do narzędzi nie są przechowywane. Służą wyłącznie do
-          wykonania danej operacji i są usuwane po jej zakończeniu.
-        </p>
+      <ContentSection title={p.s4Title}>
+        <p>{p.s4P}</p>
       </ContentSection>
 
-      <ContentSection title="5. Reklamy">
-        <p>
-          Serwis może wyświetlać reklamy Google AdSense. Reklamy pomagają
-          utrzymać darmowe narzędzia i rozwijać projekt. Dostawca reklam może
-          wykorzystywać pliki cookies zgodnie z Polityką prywatności.
-        </p>
+      <ContentSection title={p.s5Title}>
+        <p>{p.s5P}</p>
       </ContentSection>
 
-      <ContentSection title="6. Prawa autorskie">
-        <p>
-          Nazwa Toolando.tech, elementy graficzne oraz treści serwisu podlegają
-          ochronie prawnej. Zabronione jest ich kopiowanie i wykorzystywanie bez
-          zgody właściciela.
-        </p>
+      <ContentSection title={p.s6Title}>
+        <p>{p.s6P}</p>
       </ContentSection>
 
-      <ContentSection title="7. Kontakt">
+      <ContentSection title={p.s7Title}>
         <p>
-          W sprawach związanych z regulaminem możesz kontaktować się pod
-          adresem:{" "}
+          {p.s7Pre}{" "}
           <a
             href="mailto:badyltech@outlook.com"
             className="font-medium text-foreground underline underline-offset-4 hover:text-primary"
@@ -110,12 +84,8 @@ export default function TermsPage() {
         </p>
       </ContentSection>
 
-      <ContentSection title="8. Zmiany regulaminu">
-        <p>
-          Regulamin może być aktualizowany w celu dostosowania go do zmian w
-          serwisie lub w przepisach prawa. Aktualna wersja jest zawsze dostępna
-          na tej stronie.
-        </p>
+      <ContentSection title={p.s8Title}>
+        <p>{p.s8P}</p>
       </ContentSection>
     </ContentPageShell>
   )
