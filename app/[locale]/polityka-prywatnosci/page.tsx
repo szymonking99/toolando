@@ -13,7 +13,7 @@ export async function generateMetadata({
   return {
     title: "Polityka prywatności — Toolando.tech",
     description:
-      "Polityka prywatności Toolando.tech: jakie dane przetwarzamy, pliki cookies (techniczne, analityczne, reklamowe) oraz Twoje prawa zgodnie z RODO.",
+      "Polityka prywatności Toolando.tech: jakie dane są przetwarzane, pliki cookies (techniczne, analityczne, reklamowe) oraz Twoje prawa zgodnie z RODO.",
     alternates: { canonical: `/${locale}/polityka-prywatnosci` },
   }
 }
@@ -55,7 +55,7 @@ export default function PrivacyPolicyPage() {
           </li>
         </ul>
         <p>
-          Jeśli kontaktujesz się przez e-mail lub formularz, przetwarzamy także
+          Jeśli kontaktujesz się przez e-mail lub formularz, przetwarzam także
           podany przez Ciebie adres e-mail oraz treść wiadomości.
         </p>
       </ContentSection>
@@ -63,9 +63,9 @@ export default function PrivacyPolicyPage() {
       <ContentSection title="3. Pliki przesyłane do narzędzi">
         <p>
           Pliki, które przesyłasz do narzędzi w celu konwersji lub innej
-          operacji, nie są przez nas przechowywane. Służą wyłącznie do wykonania
-          zadania, o które prosisz, i są usuwane po jego zakończeniu. Nie
-          wykorzystujemy ich do żadnych innych celów.
+          operacji, nie są przeze mnie przechowywane. Służą wyłącznie do
+          wykonania zadania, o które prosisz, i są usuwane po jego zakończeniu.
+          Nie wykorzystuję ich do żadnych innych celów.
         </p>
       </ContentSection>
 
@@ -103,7 +103,7 @@ export default function PrivacyPolicyPage() {
       </ContentSection>
 
       <ContentSection title="6. Cel przetwarzania danych">
-        <p>Dane przetwarzamy wyłącznie w celu:</p>
+        <p>Dane przetwarzam wyłącznie w następujących celach:</p>
         <ul className="list-disc space-y-2 pl-6">
           <li>zapewnienia poprawnego i bezpiecznego działania serwisu,</li>
           <li>analizy statystycznej ruchu i ulepszania narzędzi,</li>

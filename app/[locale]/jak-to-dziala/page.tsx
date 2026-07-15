@@ -52,8 +52,8 @@ export default function HowItWorksPage() {
           </li>
         </ul>
         <p>
-          W żadnym z tych przypadków nie przechowujemy Twoich plików ani nie
-          wykorzystujemy ich do innych celów.
+          W żadnym z tych przypadków nie przechowuję Twoich plików ani nie
+          wykorzystuję ich do innych celów.
         </p>
       </ContentSection>
 
@@ -65,7 +65,7 @@ export default function HowItWorksPage() {
         </p>
         <ul className="list-disc space-y-2 pl-6">
           <li>przesyłane pliki nie są przechowywane po zakończeniu operacji,</li>
-          <li>nie sprzedajemy i nie udostępniamy Twoich danych,</li>
+          <li>nie sprzedaję i nie udostępniam Twoich danych,</li>
           <li>
             do korzystania z narzędzi darmowych nie musisz podawać danych
             osobowych.

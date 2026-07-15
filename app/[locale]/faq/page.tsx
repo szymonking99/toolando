@@ -27,15 +27,15 @@ const faqs: { q: string; a: string }[] = [
   },
   {
     q: "Czy moje pliki są bezpieczne?",
-    a: "Tak. Przesyłane pliki służą wyłącznie do wykonania konwersji i nie są przez nas przechowywane. Część operacji wykonywana jest lokalnie w przeglądarce, a jeśli plik trafia na serwer, jest przetwarzany tylko na czas zadania i następnie usuwany.",
+    a: "Tak. Przesyłane pliki służą wyłącznie do wykonania konwersji i nie są przeze mnie przechowywane. Część operacji wykonywana jest lokalnie w przeglądarce, a jeśli plik trafia na serwer, jest przetwarzany tylko na czas zadania i następnie usuwany.",
   },
   {
     q: "Czy Toolando przechowuje przesyłane pliki?",
-    a: "Nie. Nie zapisujemy Twoich plików po zakończeniu operacji i nie wykorzystujemy ich do żadnych innych celów.",
+    a: "Nie. Nie zapisuję Twoich plików po zakończeniu operacji i nie wykorzystuję ich do żadnych innych celów.",
   },
   {
-    q: "Jak dbacie o moją prywatność?",
-    a: "Przetwarzamy jedynie dane techniczne i statystyczne (np. adres IP, typ przeglądarki, system, ruch na stronie), zgodnie z RODO. Szczegóły znajdziesz w Polityce prywatności. Do korzystania z narzędzi darmowych nie musisz podawać danych osobowych.",
+    q: "Jak dbasz o moją prywatność?",
+    a: "Przetwarzam jedynie dane techniczne i statystyczne (np. adres IP, typ przeglądarki, system, ruch na stronie), zgodnie z RODO. Szczegóły znajdziesz w Polityce prywatności. Do korzystania z narzędzi darmowych nie musisz podawać danych osobowych.",
   },
   {
     q: "Czy muszę zakładać konto, aby korzystać z narzędzi?",

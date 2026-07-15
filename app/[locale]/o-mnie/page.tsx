@@ -60,7 +60,7 @@ export default function AboutMePage() {
         </ul>
         <p>
           Niezależnie od wariantu stawiam na tę samą zasadę: przesyłane pliki
-          służą wyłącznie do wykonania konwersji i nie są przez nas
+          służą wyłącznie do wykonania konwersji i nie są przeze mnie
           przechowywane.
         </p>
       </ContentSection>
