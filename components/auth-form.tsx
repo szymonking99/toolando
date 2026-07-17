@@ -7,7 +7,33 @@ import { Loader2, Wrench } from "lucide-react"
 import { authClient } from "@/lib/auth-client"
 import { Button } from "@/components/ui/button"
 
-export function AuthForm({ mode }: { mode: "sign-in" | "sign-up" }) {
+/** Translation strings for the auth screens (the `auth` dictionary section). */
+export type AuthDict = {
+  signInTitle: string
+  signUpTitle: string
+  signInSubtitle: string
+  signUpSubtitle: string
+  nameLabel: string
+  emailLabel: string
+  passwordLabel: string
+  signInSubmit: string
+  signUpSubmit: string
+  loading: string
+  signInError: string
+  signUpError: string
+  haveAccount: string
+  noAccount: string
+  signInLink: string
+  signUpLink: string
+}
+
+export function AuthForm({
+  mode,
+  dict,
+}: {
+  mode: "sign-in" | "sign-up"
+  dict: AuthDict
+}) {
   const router = useRouter()
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
@@ -30,8 +56,7 @@ export function AuthForm({ mode }: { mode: "sign-in" | "sign-up" }) {
 
     if (error) {
       setError(
-        error.message ??
-          (isSignUp ? "Nie udało się utworzyć konta" : "Nie udało się zalogować"),
+        error.message ?? (isSignUp ? dict.signUpError : dict.signInError),
       )
       return
     }
@@ -57,12 +82,10 @@ export function AuthForm({ mode }: { mode: "sign-in" | "sign-up" }) {
 
         <div className="mb-6">
           <h1 className="text-2xl font-semibold tracking-tight text-foreground text-balance">
-            {isSignUp ? "Załóż konto" : "Witaj z powrotem"}
+            {isSignUp ? dict.signUpTitle : dict.signInTitle}
           </h1>
           <p className="mt-1 text-sm text-muted-foreground leading-relaxed">
-            {isSignUp
-              ? "Zarejestruj się, aby korzystać z funkcji Premium."
-              : "Zaloguj się, aby kontynuować."}
+            {isSignUp ? dict.signUpSubtitle : dict.signInSubtitle}
           </p>
         </div>
 
@@ -70,7 +93,7 @@ export function AuthForm({ mode }: { mode: "sign-in" | "sign-up" }) {
           {isSignUp && (
             <div className="flex flex-col gap-2">
               <label htmlFor="name" className="text-sm font-medium text-foreground">
-                Imię
+                {dict.nameLabel}
               </label>
               <input
                 id="name"
@@ -84,7 +107,7 @@ export function AuthForm({ mode }: { mode: "sign-in" | "sign-up" }) {
           )}
           <div className="flex flex-col gap-2">
             <label htmlFor="email" className="text-sm font-medium text-foreground">
-              E-mail
+              {dict.emailLabel}
             </label>
             <input
               id="email"
@@ -101,7 +124,7 @@ export function AuthForm({ mode }: { mode: "sign-in" | "sign-up" }) {
               htmlFor="password"
               className="text-sm font-medium text-foreground"
             >
-              Hasło
+              {dict.passwordLabel}
             </label>
             <input
               id="password"
@@ -124,20 +147,20 @@ export function AuthForm({ mode }: { mode: "sign-in" | "sign-up" }) {
           <Button type="submit" disabled={loading} size="lg" className="w-full">
             {loading && <Loader2 className="size-4 animate-spin" aria-hidden="true" />}
             {loading
-              ? "Proszę czekać..."
+              ? dict.loading
               : isSignUp
-                ? "Utwórz konto"
-                : "Zaloguj się"}
+                ? dict.signUpSubmit
+                : dict.signInSubmit}
           </Button>
         </form>
 
         <p className="mt-6 text-center text-sm text-muted-foreground">
-          {isSignUp ? "Masz już konto? " : "Nie masz konta? "}
+          {isSignUp ? `${dict.haveAccount} ` : `${dict.noAccount} `}
           <Link
             href={isSignUp ? "/sign-in" : "/sign-up"}
             className="font-medium text-foreground underline-offset-4 hover:underline"
           >
-            {isSignUp ? "Zaloguj się" : "Zarejestruj się"}
+            {isSignUp ? dict.signInLink : dict.signUpLink}
           </Link>
         </p>
       </div>

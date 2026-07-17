@@ -336,5 +336,23 @@
       }
     ],
     "platformDisabled": "Downloading from {platform} is temporarily unavailable — {platform} actively blocks downloaders, so we've paused it until our own converter is ready. All other platforms still work."
+  },
+  "auth": {
+    "signInTitle": "مرحبًا بعودتك",
+    "signUpTitle": "إنشاء حساب",
+    "signInSubtitle": "سجّل الدخول للمتابعة.",
+    "signUpSubtitle": "سجّل للاستفادة من ميزات Premium.",
+    "nameLabel": "الاسم",
+    "emailLabel": "البريد الإلكتروني",
+    "passwordLabel": "كلمة المرور",
+    "signInSubmit": "تسجيل الدخول",
+    "signUpSubmit": "إنشاء حساب",
+    "loading": "يرجى الانتظار...",
+    "signInError": "فشل تسجيل الدخول",
+    "signUpError": "تعذّر إنشاء الحساب",
+    "haveAccount": "هل لديك حساب بالفعل؟",
+    "noAccount": "ليس لديك حساب؟",
+    "signInLink": "تسجيل الدخول",
+    "signUpLink": "إنشاء حساب"
   }
 }

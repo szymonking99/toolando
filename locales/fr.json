@@ -336,5 +336,23 @@
       }
     ],
     "platformDisabled": "Le téléchargement depuis {platform} est temporairement indisponible — {platform} bloque activement les téléchargeurs, nous l'avons donc suspendu en attendant notre propre convertisseur. Les autres plateformes fonctionnent toujours."
+  },
+  "auth": {
+    "signInTitle": "Bon retour",
+    "signUpTitle": "Créer un compte",
+    "signInSubtitle": "Connectez-vous pour continuer.",
+    "signUpSubtitle": "Inscrivez-vous pour utiliser les fonctionnalités Premium.",
+    "nameLabel": "Nom",
+    "emailLabel": "E-mail",
+    "passwordLabel": "Mot de passe",
+    "signInSubmit": "Se connecter",
+    "signUpSubmit": "Créer un compte",
+    "loading": "Veuillez patienter...",
+    "signInError": "Échec de la connexion",
+    "signUpError": "Impossible de créer le compte",
+    "haveAccount": "Vous avez déjà un compte ?",
+    "noAccount": "Vous n'avez pas de compte ?",
+    "signInLink": "Se connecter",
+    "signUpLink": "S'inscrire"
   }
 }

@@ -336,5 +336,23 @@
       }
     ],
     "platformDisabled": "Downloading from {platform} is temporarily unavailable — {platform} actively blocks downloaders, so we've paused it until our own converter is ready. All other platforms still work."
+  },
+  "auth": {
+    "signInTitle": "Bine ai revenit",
+    "signUpTitle": "Creează un cont",
+    "signInSubtitle": "Conectează-te pentru a continua.",
+    "signUpSubtitle": "Înregistrează-te pentru a folosi funcțiile Premium.",
+    "nameLabel": "Nume",
+    "emailLabel": "E-mail",
+    "passwordLabel": "Parolă",
+    "signInSubmit": "Conectare",
+    "signUpSubmit": "Creează cont",
+    "loading": "Te rugăm să aștepți...",
+    "signInError": "Conectarea a eșuat",
+    "signUpError": "Contul nu a putut fi creat",
+    "haveAccount": "Ai deja un cont?",
+    "noAccount": "Nu ai un cont?",
+    "signInLink": "Conectare",
+    "signUpLink": "Înregistrează-te"
   }
 }

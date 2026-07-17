@@ -336,5 +336,23 @@
       }
     ],
     "platformDisabled": "Downloading from {platform} is temporarily unavailable — {platform} actively blocks downloaders, so we've paused it until our own converter is ready. All other platforms still work."
+  },
+  "auth": {
+    "signInTitle": "Vítejte zpět",
+    "signUpTitle": "Vytvořit účet",
+    "signInSubtitle": "Přihlaste se a pokračujte.",
+    "signUpSubtitle": "Zaregistrujte se a využívejte funkce Premium.",
+    "nameLabel": "Jméno",
+    "emailLabel": "E-mail",
+    "passwordLabel": "Heslo",
+    "signInSubmit": "Přihlásit se",
+    "signUpSubmit": "Vytvořit účet",
+    "loading": "Čekejte prosím...",
+    "signInError": "Přihlášení se nezdařilo",
+    "signUpError": "Účet se nepodařilo vytvořit",
+    "haveAccount": "Už máte účet?",
+    "noAccount": "Nemáte účet?",
+    "signInLink": "Přihlásit se",
+    "signUpLink": "Zaregistrovat se"
   }
 }

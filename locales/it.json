@@ -336,5 +336,23 @@
       }
     ],
     "platformDisabled": "Downloading from {platform} is temporarily unavailable — {platform} actively blocks downloaders, so we've paused it until our own converter is ready. All other platforms still work."
+  },
+  "auth": {
+    "signInTitle": "Bentornato",
+    "signUpTitle": "Crea un account",
+    "signInSubtitle": "Accedi per continuare.",
+    "signUpSubtitle": "Registrati per usare le funzioni Premium.",
+    "nameLabel": "Nome",
+    "emailLabel": "E-mail",
+    "passwordLabel": "Password",
+    "signInSubmit": "Accedi",
+    "signUpSubmit": "Crea account",
+    "loading": "Attendere prego...",
+    "signInError": "Accesso non riuscito",
+    "signUpError": "Impossibile creare l'account",
+    "haveAccount": "Hai già un account?",
+    "noAccount": "Non hai un account?",
+    "signInLink": "Accedi",
+    "signUpLink": "Registrati"
   }
 }

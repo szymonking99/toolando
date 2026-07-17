@@ -336,5 +336,23 @@
       }
     ],
     "platformDisabled": "Downloading from {platform} is temporarily unavailable — {platform} actively blocks downloaders, so we've paused it until our own converter is ready. All other platforms still work."
+  },
+  "auth": {
+    "signInTitle": "Καλώς ήρθες ξανά",
+    "signUpTitle": "Δημιουργία λογαριασμού",
+    "signInSubtitle": "Συνδέσου για να συνεχίσεις.",
+    "signUpSubtitle": "Εγγράψου για να χρησιμοποιήσεις τις λειτουργίες Premium.",
+    "nameLabel": "Όνομα",
+    "emailLabel": "E-mail",
+    "passwordLabel": "Κωδικός πρόσβασης",
+    "signInSubmit": "Σύνδεση",
+    "signUpSubmit": "Δημιουργία λογαριασμού",
+    "loading": "Παρακαλώ περίμενε...",
+    "signInError": "Η σύνδεση απέτυχε",
+    "signUpError": "Δεν ήταν δυνατή η δημιουργία λογαριασμού",
+    "haveAccount": "Έχεις ήδη λογαριασμό;",
+    "noAccount": "Δεν έχεις λογαριασμό;",
+    "signInLink": "Σύνδεση",
+    "signUpLink": "Εγγραφή"
   }
 }

@@ -528,5 +528,23 @@
       "s8Title": "8. Changes to the terms",
       "s8P": "The terms may be updated to reflect changes in the service or in the law. The current version is always available on this page."
     }
+  },
+  "auth": {
+    "signInTitle": "Welcome back",
+    "signUpTitle": "Create your account",
+    "signInSubtitle": "Sign in to continue.",
+    "signUpSubtitle": "Sign up to use Premium features.",
+    "nameLabel": "Name",
+    "emailLabel": "Email",
+    "passwordLabel": "Password",
+    "signInSubmit": "Sign in",
+    "signUpSubmit": "Create account",
+    "loading": "Please wait...",
+    "signInError": "Failed to sign in",
+    "signUpError": "Failed to create account",
+    "haveAccount": "Already have an account?",
+    "noAccount": "Don't have an account?",
+    "signInLink": "Sign in",
+    "signUpLink": "Sign up"
   }
 }

@@ -336,5 +336,23 @@
       }
     ],
     "platformDisabled": "Downloading from {platform} is temporarily unavailable — {platform} actively blocks downloaders, so we've paused it until our own converter is ready. All other platforms still work."
+  },
+  "auth": {
+    "signInTitle": "Welkom terug",
+    "signUpTitle": "Account aanmaken",
+    "signInSubtitle": "Log in om door te gaan.",
+    "signUpSubtitle": "Registreer je om Premium-functies te gebruiken.",
+    "nameLabel": "Naam",
+    "emailLabel": "E-mail",
+    "passwordLabel": "Wachtwoord",
+    "signInSubmit": "Inloggen",
+    "signUpSubmit": "Account aanmaken",
+    "loading": "Even geduld...",
+    "signInError": "Inloggen mislukt",
+    "signUpError": "Account kon niet worden aangemaakt",
+    "haveAccount": "Heb je al een account?",
+    "noAccount": "Nog geen account?",
+    "signInLink": "Inloggen",
+    "signUpLink": "Registreren"
   }
 }

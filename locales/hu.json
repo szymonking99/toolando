@@ -336,5 +336,23 @@
       }
     ],
     "platformDisabled": "Downloading from {platform} is temporarily unavailable — {platform} actively blocks downloaders, so we've paused it until our own converter is ready. All other platforms still work."
+  },
+  "auth": {
+    "signInTitle": "Üdvözlünk újra",
+    "signUpTitle": "Fiók létrehozása",
+    "signInSubtitle": "Jelentkezz be a folytatáshoz.",
+    "signUpSubtitle": "Regisztrálj a Prémium funkciók használatához.",
+    "nameLabel": "Név",
+    "emailLabel": "E-mail",
+    "passwordLabel": "Jelszó",
+    "signInSubmit": "Bejelentkezés",
+    "signUpSubmit": "Fiók létrehozása",
+    "loading": "Kérjük, várj...",
+    "signInError": "A bejelentkezés sikertelen",
+    "signUpError": "A fiók létrehozása nem sikerült",
+    "haveAccount": "Már van fiókod?",
+    "noAccount": "Nincs még fiókod?",
+    "signInLink": "Bejelentkezés",
+    "signUpLink": "Regisztráció"
   }
 }

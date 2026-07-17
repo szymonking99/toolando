@@ -336,5 +336,23 @@
       }
     ],
     "platformDisabled": "Downloading from {platform} is temporarily unavailable — {platform} actively blocks downloaders, so we've paused it until our own converter is ready. All other platforms still work."
+  },
+  "auth": {
+    "signInTitle": "Tervetuloa takaisin",
+    "signUpTitle": "Luo tili",
+    "signInSubtitle": "Kirjaudu sisään jatkaaksesi.",
+    "signUpSubtitle": "Rekisteröidy käyttääksesi Premium-ominaisuuksia.",
+    "nameLabel": "Nimi",
+    "emailLabel": "Sähköposti",
+    "passwordLabel": "Salasana",
+    "signInSubmit": "Kirjaudu sisään",
+    "signUpSubmit": "Luo tili",
+    "loading": "Odota...",
+    "signInError": "Kirjautuminen epäonnistui",
+    "signUpError": "Tilin luominen epäonnistui",
+    "haveAccount": "Onko sinulla jo tili?",
+    "noAccount": "Eikö sinulla ole tiliä?",
+    "signInLink": "Kirjaudu sisään",
+    "signUpLink": "Rekisteröidy"
   }
 }

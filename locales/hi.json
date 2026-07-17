@@ -336,5 +336,23 @@
       }
     ],
     "platformDisabled": "Downloading from {platform} is temporarily unavailable — {platform} actively blocks downloaders, so we've paused it until our own converter is ready. All other platforms still work."
+  },
+  "auth": {
+    "signInTitle": "वापसी पर स्वागत है",
+    "signUpTitle": "खाता बनाएं",
+    "signInSubtitle": "जारी रखने के लिए साइन इन करें।",
+    "signUpSubtitle": "प्रीमियम सुविधाओं का उपयोग करने के लिए साइन अप करें।",
+    "nameLabel": "नाम",
+    "emailLabel": "ईमेल",
+    "passwordLabel": "पासवर्ड",
+    "signInSubmit": "साइन इन करें",
+    "signUpSubmit": "खाता बनाएं",
+    "loading": "कृपया प्रतीक्षा करें...",
+    "signInError": "साइन इन विफल रहा",
+    "signUpError": "खाता नहीं बनाया जा सका",
+    "haveAccount": "पहले से खाता है?",
+    "noAccount": "खाता नहीं है?",
+    "signInLink": "साइन इन करें",
+    "signUpLink": "साइन अप करें"
   }
 }

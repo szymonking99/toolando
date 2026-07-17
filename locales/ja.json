@@ -336,5 +336,23 @@
       }
     ],
     "platformDisabled": "Downloading from {platform} is temporarily unavailable — {platform} actively blocks downloaders, so we've paused it until our own converter is ready. All other platforms still work."
+  },
+  "auth": {
+    "signInTitle": "おかえりなさい",
+    "signUpTitle": "アカウントを作成",
+    "signInSubtitle": "続行するにはログインしてください。",
+    "signUpSubtitle": "プレミアム機能を使うには登録してください。",
+    "nameLabel": "名前",
+    "emailLabel": "メールアドレス",
+    "passwordLabel": "パスワード",
+    "signInSubmit": "ログイン",
+    "signUpSubmit": "アカウントを作成",
+    "loading": "お待ちください...",
+    "signInError": "ログインに失敗しました",
+    "signUpError": "アカウントを作成できませんでした",
+    "haveAccount": "すでにアカウントをお持ちですか？",
+    "noAccount": "アカウントをお持ちでないですか？",
+    "signInLink": "ログイン",
+    "signUpLink": "登録"
   }
 }

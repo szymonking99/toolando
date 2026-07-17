@@ -528,5 +528,23 @@
       "s8Title": "8. Änderungen der Bedingungen",
       "s8P": "Die Bedingungen können aktualisiert werden, um Änderungen im Dienst oder in der Gesetzgebung zu berücksichtigen. Die aktuelle Version ist stets auf dieser Seite verfügbar."
     }
+  },
+  "auth": {
+    "signInTitle": "Willkommen zurück",
+    "signUpTitle": "Konto erstellen",
+    "signInSubtitle": "Melde dich an, um fortzufahren.",
+    "signUpSubtitle": "Registriere dich, um Premium-Funktionen zu nutzen.",
+    "nameLabel": "Name",
+    "emailLabel": "E-Mail",
+    "passwordLabel": "Passwort",
+    "signInSubmit": "Anmelden",
+    "signUpSubmit": "Konto erstellen",
+    "loading": "Bitte warten...",
+    "signInError": "Anmeldung fehlgeschlagen",
+    "signUpError": "Konto konnte nicht erstellt werden",
+    "haveAccount": "Hast du bereits ein Konto?",
+    "noAccount": "Noch kein Konto?",
+    "signInLink": "Anmelden",
+    "signUpLink": "Registrieren"
   }
 }

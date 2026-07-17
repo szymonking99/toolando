@@ -336,5 +336,23 @@
       }
     ],
     "platformDisabled": "Downloading from {platform} is temporarily unavailable — {platform} actively blocks downloaders, so we've paused it until our own converter is ready. All other platforms still work."
+  },
+  "auth": {
+    "signInTitle": "С возвращением",
+    "signUpTitle": "Создать аккаунт",
+    "signInSubtitle": "Войдите, чтобы продолжить.",
+    "signUpSubtitle": "Зарегистрируйтесь, чтобы использовать функции Premium.",
+    "nameLabel": "Имя",
+    "emailLabel": "Эл. почта",
+    "passwordLabel": "Пароль",
+    "signInSubmit": "Войти",
+    "signUpSubmit": "Создать аккаунт",
+    "loading": "Пожалуйста, подождите...",
+    "signInError": "Не удалось войти",
+    "signUpError": "Не удалось создать аккаунт",
+    "haveAccount": "Уже есть аккаунт?",
+    "noAccount": "Нет аккаунта?",
+    "signInLink": "Войти",
+    "signUpLink": "Зарегистрироваться"
   }
 }

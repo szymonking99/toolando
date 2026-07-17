@@ -336,5 +336,23 @@
       }
     ],
     "platformDisabled": "Downloading from {platform} is temporarily unavailable — {platform} actively blocks downloaders, so we've paused it until our own converter is ready. All other platforms still work."
+  },
+  "auth": {
+    "signInTitle": "Välkommen tillbaka",
+    "signUpTitle": "Skapa konto",
+    "signInSubtitle": "Logga in för att fortsätta.",
+    "signUpSubtitle": "Registrera dig för att använda Premium-funktioner.",
+    "nameLabel": "Namn",
+    "emailLabel": "E-post",
+    "passwordLabel": "Lösenord",
+    "signInSubmit": "Logga in",
+    "signUpSubmit": "Skapa konto",
+    "loading": "Vänta...",
+    "signInError": "Inloggningen misslyckades",
+    "signUpError": "Det gick inte att skapa kontot",
+    "haveAccount": "Har du redan ett konto?",
+    "noAccount": "Har du inget konto?",
+    "signInLink": "Logga in",
+    "signUpLink": "Registrera dig"
   }
 }

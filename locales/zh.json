@@ -336,5 +336,23 @@
       }
     ],
     "platformDisabled": "Downloading from {platform} is temporarily unavailable — {platform} actively blocks downloaders, so we've paused it until our own converter is ready. All other platforms still work."
+  },
+  "auth": {
+    "signInTitle": "欢迎回来",
+    "signUpTitle": "创建账户",
+    "signInSubtitle": "登录以继续。",
+    "signUpSubtitle": "注册以使用高级功能。",
+    "nameLabel": "姓名",
+    "emailLabel": "电子邮箱",
+    "passwordLabel": "密码",
+    "signInSubmit": "登录",
+    "signUpSubmit": "创建账户",
+    "loading": "请稍候...",
+    "signInError": "登录失败",
+    "signUpError": "无法创建账户",
+    "haveAccount": "已有账户？",
+    "noAccount": "还没有账户？",
+    "signInLink": "登录",
+    "signUpLink": "注册"
   }
 }

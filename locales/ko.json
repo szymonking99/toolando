@@ -336,5 +336,23 @@
       }
     ],
     "platformDisabled": "Downloading from {platform} is temporarily unavailable — {platform} actively blocks downloaders, so we've paused it until our own converter is ready. All other platforms still work."
+  },
+  "auth": {
+    "signInTitle": "다시 오신 것을 환영합니다",
+    "signUpTitle": "계정 만들기",
+    "signInSubtitle": "계속하려면 로그인하세요.",
+    "signUpSubtitle": "프리미엄 기능을 사용하려면 가입하세요.",
+    "nameLabel": "이름",
+    "emailLabel": "이메일",
+    "passwordLabel": "비밀번호",
+    "signInSubmit": "로그인",
+    "signUpSubmit": "계정 만들기",
+    "loading": "잠시만 기다려 주세요...",
+    "signInError": "로그인에 실패했습니다",
+    "signUpError": "계정을 만들 수 없습니다",
+    "haveAccount": "이미 계정이 있으신가요?",
+    "noAccount": "계정이 없으신가요?",
+    "signInLink": "로그인",
+    "signUpLink": "가입하기"
   }
 }

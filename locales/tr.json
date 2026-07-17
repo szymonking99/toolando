@@ -336,5 +336,23 @@
       }
     ],
     "platformDisabled": "Downloading from {platform} is temporarily unavailable — {platform} actively blocks downloaders, so we've paused it until our own converter is ready. All other platforms still work."
+  },
+  "auth": {
+    "signInTitle": "Tekrar hoş geldin",
+    "signUpTitle": "Hesap oluştur",
+    "signInSubtitle": "Devam etmek için giriş yap.",
+    "signUpSubtitle": "Premium özelliklerini kullanmak için kaydol.",
+    "nameLabel": "Ad",
+    "emailLabel": "E-posta",
+    "passwordLabel": "Şifre",
+    "signInSubmit": "Giriş yap",
+    "signUpSubmit": "Hesap oluştur",
+    "loading": "Lütfen bekleyin...",
+    "signInError": "Giriş başarısız",
+    "signUpError": "Hesap oluşturulamadı",
+    "haveAccount": "Zaten hesabın var mı?",
+    "noAccount": "Hesabın yok mu?",
+    "signInLink": "Giriş yap",
+    "signUpLink": "Kaydol"
   }
 }

@@ -336,5 +336,23 @@
       }
     ],
     "platformDisabled": "Downloading from {platform} is temporarily unavailable — {platform} actively blocks downloaders, so we've paused it until our own converter is ready. All other platforms still work."
+  },
+  "auth": {
+    "signInTitle": "Selamat datang kembali",
+    "signUpTitle": "Buat akun",
+    "signInSubtitle": "Masuk untuk melanjutkan.",
+    "signUpSubtitle": "Daftar untuk menggunakan fitur Premium.",
+    "nameLabel": "Nama",
+    "emailLabel": "Email",
+    "passwordLabel": "Kata sandi",
+    "signInSubmit": "Masuk",
+    "signUpSubmit": "Buat akun",
+    "loading": "Mohon tunggu...",
+    "signInError": "Gagal masuk",
+    "signUpError": "Tidak dapat membuat akun",
+    "haveAccount": "Sudah punya akun?",
+    "noAccount": "Belum punya akun?",
+    "signInLink": "Masuk",
+    "signUpLink": "Daftar"
   }
 }

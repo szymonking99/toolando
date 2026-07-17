@@ -528,5 +528,23 @@
       "s8Title": "8. Cambios en los términos",
       "s8P": "Los términos pueden actualizarse para adaptarlos a cambios en el servicio o en la legislación. La versión actual está siempre disponible en esta página."
     }
+  },
+  "auth": {
+    "signInTitle": "Bienvenido de nuevo",
+    "signUpTitle": "Crea tu cuenta",
+    "signInSubtitle": "Inicia sesión para continuar.",
+    "signUpSubtitle": "Regístrate para usar las funciones Premium.",
+    "nameLabel": "Nombre",
+    "emailLabel": "Correo electrónico",
+    "passwordLabel": "Contraseña",
+    "signInSubmit": "Iniciar sesión",
+    "signUpSubmit": "Crear cuenta",
+    "loading": "Espera un momento...",
+    "signInError": "No se pudo iniciar sesión",
+    "signUpError": "No se pudo crear la cuenta",
+    "haveAccount": "¿Ya tienes una cuenta?",
+    "noAccount": "¿No tienes cuenta?",
+    "signInLink": "Iniciar sesión",
+    "signUpLink": "Regístrate"
   }
 }

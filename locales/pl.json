@@ -528,5 +528,23 @@
       "s8Title": "8. Zmiany regulaminu",
       "s8P": "Regulamin może być aktualizowany w celu dostosowania go do zmian w serwisie lub w przepisach prawa. Aktualna wersja jest zawsze dostępna na tej stronie."
     }
+  },
+  "auth": {
+    "signInTitle": "Witaj z powrotem",
+    "signUpTitle": "Załóż konto",
+    "signInSubtitle": "Zaloguj się, aby kontynuować.",
+    "signUpSubtitle": "Zarejestruj się, aby korzystać z funkcji Premium.",
+    "nameLabel": "Imię",
+    "emailLabel": "E-mail",
+    "passwordLabel": "Hasło",
+    "signInSubmit": "Zaloguj się",
+    "signUpSubmit": "Utwórz konto",
+    "loading": "Proszę czekać...",
+    "signInError": "Nie udało się zalogować",
+    "signUpError": "Nie udało się utworzyć konta",
+    "haveAccount": "Masz już konto?",
+    "noAccount": "Nie masz konta?",
+    "signInLink": "Zaloguj się",
+    "signUpLink": "Zarejestruj się"
   }
 }
