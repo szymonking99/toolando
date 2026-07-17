@@ -354,5 +354,197 @@
     "noAccount": "Vous n'avez pas de compte ?",
     "signInLink": "Se connecter",
     "signUpLink": "S'inscrire"
+  },
+  "pages": {
+    "contact": {
+      "eyebrow": "Contact",
+      "title": "Formulaire de contact",
+      "intro": "Vous avez une question, une idée de partenariat ou souhaitez signaler un problème ? Remplissez le formulaire — je vous répondrai dans les plus brefs délais.",
+      "name": "Nom",
+      "namePlaceholder": "Votre nom",
+      "email": "E-mail",
+      "emailPlaceholder": "Votre adresse e-mail",
+      "message": "Message",
+      "messagePlaceholder": "Décrivez votre problème ou votre question...",
+      "submit": "Envoyer le message",
+      "sent": "Merci ! Votre message a été préparé dans votre application de messagerie.",
+      "subject": "Demande de renseignements depuis Toolando.tech"
+    },
+    "about": {
+      "eyebrow": "À propos de moi",
+      "title": "Bonjour, je suis Szymon — le créateur de Toolando",
+      "intro": "Toolando.tech est mon projet personnel que je développe seul. De l'idée au code, en passant par le contenu que vous lisez actuellement — tout vient d'une seule paire de mains. Je souhaite que les tâches simples, comme la conversion d'un fichier ou l'utilisation d'un outil en ligne rapide, soient accessibles à tous, sans logiciel à installer et sans complications inutiles.",
+      "whyTitle": "Pourquoi Toolando a été créé",
+      "whyP1": "Je travaille avec des ordinateurs tous les jours et j'ai souvent constaté combien de temps les gens perdent sur des tâches qui devraient prendre un instant — changer un format de fichier, extraire l'audio d'un enregistrement, ou une opération rapide qui vous oblige à chercher un site aléatoire rempli de publicités et de pièges.",
+      "whyP2": "Toolando a été créé pour rassembler de tels outils dans un endroit clair et sûr. Je tiens à ce que le service soit rapide, lisible et honnête envers l'utilisateur — sans astuces ni pièges cachés.",
+      "howTitle": "Comment Toolando fonctionne",
+      "howIntro": "Le service propose des outils en ligne en deux variantes : gratuite et Premium.",
+      "howFreeTerm": "Outils gratuits",
+      "howFreeDesc": "accessibles à tous, sans compte. Ce sont les fonctionnalités quotidiennes les plus utilisées que je souhaite maintenir ouvertes à tous.",
+      "howPremiumTerm": "Outils Premium",
+      "howPremiumDesc": "des fonctionnalités plus avancées ou des limites plus élevées qui contribuent à maintenir et à développer le projet. Les revenus Premium sont directement affectés aux serveurs, au développement et aux nouveaux outils.",
+      "howOutro": "Quelle que soit la variante, je m'en tiens à la même règle : les fichiers téléchargés sont utilisés uniquement pour effectuer la conversion et ne sont pas stockés par moi.",
+      "outsideTitle": "Ce que je fais en dehors de Toolando",
+      "outsideP1": "Je fournis des services informatiques — aidant les particuliers et les entreprises avec leurs problèmes quotidiens de matériel et de logiciel.",
+      "outsideList": [
+        "entretien et réparation d'ordinateurs portables et de bureaux,",
+        "services informatiques et support technique,",
+        "création d'outils et d'applications web."
+      ],
+      "outsideP2": "L'expérience acquise grâce aux réparations et au travail avec les utilisateurs se traduit directement dans la façon dont je conçois Toolando — simple, direct et en tenant compte des besoins réels.",
+      "contactTitle": "Contact",
+      "contactP1": "Vous avez une question, une idée pour un nouvel outil ou souhaitez signaler un problème ? Écrivez-moi — je vous répondrai avec plaisir.",
+      "emailLabel": "E-mail :"
+    },
+    "howItWorks": {
+      "eyebrow": "Comment ça marche ?",
+      "title": "Comment fonctionnent les outils de Toolando",
+      "intro": "Toolando.tech est un ensemble d'outils en ligne que vous utilisez directement dans votre navigateur — sans rien installer. Ci-dessous, j'explique comment fonctionne le traitement des fichiers, comment je gère la sécurité et en quoi les outils gratuits diffèrent des outils Premium.",
+      "browserTitle": "Outils qui fonctionnent dans le navigateur",
+      "browserP": "Vous ouvrez un outil, choisissez un fichier ou saisissez des données, et vous obtenez le résultat directement sur la page. Vous n'avez pas besoin de compte pour utiliser les outils gratuits, et vous n'avez rien à installer sur votre ordinateur.",
+      "filesTitle": "Comment les fichiers sont traités",
+      "filesIntro": "Selon le type d'outil, les fichiers sont traités de deux manières :",
+      "filesLocalTerm": "Localement dans le navigateur",
+      "filesLocalDesc": "certaines opérations s'exécutent directement sur votre appareil, et le fichier ne quitte jamais votre ordinateur.",
+      "filesServerTerm": "Temporairement sur le serveur",
+      "filesServerDesc": "lorsqu'un outil nécessite plus de puissance de calcul, le fichier est traité sur le serveur uniquement pendant la durée de la conversion, puis supprimé.",
+      "filesOutro": "Dans aucun de ces cas, je ne stocke vos fichiers ni ne les utilise à d'autres fins.",
+      "securityTitle": "Sécurité",
+      "securityP": "La sécurité et la confidentialité sont une priorité pour moi. La connexion au site est chiffrée, et les fichiers sont utilisés uniquement pour effectuer la tâche que vous demandez.",
+      "securityList": [
+        "les fichiers téléchargés ne sont pas stockés une fois l'opération terminée,",
+        "je ne vends ni ne partage vos données,",
+        "vous n'avez pas besoin de fournir de données personnelles pour utiliser les outils gratuits."
+      ],
+      "tiersTitle": "Outils gratuits vs Premium",
+      "tiersP": "Toolando propose des outils en deux variantes, mais le principe de sécurité est le même pour les deux.",
+      "tiersFreeTerm": "Gratuit",
+      "tiersFreeDesc": "accessible à tous, sans compte. Parfait pour les tâches quotidiennes et rapides.",
+      "tiersPremiumTerm": "Premium",
+      "tiersPremiumDesc": "des fonctionnalités plus avancées et des limites plus élevées ou des fichiers plus volumineux. Premium soutient la maintenance des serveurs et le développement de nouveaux outils."
+    },
+    "faq": {
+      "eyebrow": "FAQ",
+      "title": "Foire aux questions",
+      "intro": "J'ai rassemblé ici les réponses aux questions les plus fréquentes. Si vous ne trouvez pas ce que vous cherchez, écrivez-moi à badyltech@outlook.com.",
+      "items": [
+        {
+          "q": "Les outils de Toolando sont-ils gratuits ?",
+          "a": "La plupart des outils sont entièrement gratuits et disponibles sans créer de compte. Certaines fonctionnalités plus avancées et des limites plus élevées sont disponibles dans la variante Premium, qui soutient la maintenance et le développement du service."
+        },
+        {
+          "q": "En quoi les outils gratuits diffèrent-ils des outils Premium ?",
+          "a": "Les outils gratuits couvrent les tâches quotidiennes les plus courantes et sont ouverts à tous. Premium offre des fonctionnalités plus avancées et des fichiers ou des limites plus importants. Le principe de sécurité des fichiers est le même dans les deux variantes."
+        },
+        {
+          "q": "Mes fichiers sont-ils en sécurité ?",
+          "a": "Oui. Les fichiers téléchargés sont utilisés uniquement pour effectuer la conversion et ne sont pas stockés par moi. Certaines opérations s'exécutent localement dans le navigateur, et si un fichier est envoyé au serveur, il est traité uniquement pendant la durée de la tâche, puis supprimé."
+        },
+        {
+          "q": "Toolando stocke-t-il les fichiers que je télécharge ?",
+          "a": "Non. Je ne sauvegarde pas vos fichiers une fois l'opération terminée et je ne les utilise à aucune autre fin."
+        },
+        {
+          "q": "Comment protégez-vous ma vie privée ?",
+          "a": "Je ne traite que des données techniques et statistiques (par exemple, adresse IP, type de navigateur, système, trafic du site), conformément au RGPD. Vous trouverez les détails dans la Politique de confidentialité. Vous n'avez pas besoin de fournir de données personnelles pour utiliser les outils gratuits."
+        },
+        {
+          "q": "Dois-je créer un compte pour utiliser les outils ?",
+          "a": "Non. Les outils gratuits fonctionnent sans compte. Un compte peut être nécessaire uniquement pour les fonctionnalités Premium."
+        },
+        {
+          "q": "Y a-t-il des publicités sur le site ?",
+          "a": "Oui, le service peut afficher des publicités Google AdSense, ce qui contribue à maintenir les outils gratuits accessibles à tous."
+        },
+        {
+          "q": "Comment fonctionnent les outils en ligne ?",
+          "a": "Vous ouvrez un outil dans votre navigateur, choisissez un fichier ou saisissez des données, et obtenez le résultat immédiatement — sans rien installer. J'ai décrit plus de détails sur la page « Comment ça marche ? »."
+        },
+        {
+          "q": "Comment puis-je vous contacter ?",
+          "a": "Écrivez à badyltech@outlook.com ou utilisez le formulaire de contact. Je réponds aussi vite que possible."
+        }
+      ]
+    },
+    "privacy": {
+      "eyebrow": "Politique de confidentialité",
+      "title": "Politique de confidentialité de Toolando.tech",
+      "intro": "Toolando.tech est un service proposant des outils en ligne en version gratuite et Premium. Je me soucie de la vie privée des utilisateurs et traite les données conformément aux réglementations applicables, y compris le RGPD.",
+      "s1Title": "1. Responsable du traitement des données",
+      "s1Pre": "Le responsable du traitement des données est Szymon, le propriétaire de Toolando.tech. Pour toute question relative à la confidentialité, vous pouvez me contacter à l'adresse :",
+      "s2Title": "2. Quelles données sont traitées",
+      "s2Intro": "Le service traite des données techniques et statistiques collectées automatiquement lors de l'utilisation du site :",
+      "s2List": [
+        "adresse IP,",
+        "type et version du navigateur,",
+        "système d'exploitation de l'appareil,",
+        "données de trafic et d'utilisation (par exemple, pages visitées)."
+      ],
+      "s2Outro": "Si vous me contactez par e-mail ou via le formulaire, je traite également l'adresse e-mail que vous fournissez et le contenu de votre message.",
+      "s3Title": "3. Fichiers téléchargés vers les outils",
+      "s3P": "Les fichiers que vous téléchargez vers les outils pour une conversion ou une autre opération ne sont pas stockés par moi. Ils sont utilisés uniquement pour effectuer la tâche que vous demandez et sont supprimés une fois celle-ci terminée. Je ne les utilise à aucune autre fin.",
+      "s4Title": "4. Cookies",
+      "s4Intro": "Le service utilise les types de cookies suivants :",
+      "s4TechTerm": "Techniques",
+      "s4TechDesc": "nécessaires au bon fonctionnement du site et à la mémorisation des paramètres (par exemple, la langue).",
+      "s4AnalyticsTerm": "Analytiques",
+      "s4AnalyticsDesc": "outils statistiques (par exemple, Google Analytics) qui aident à comprendre comment le site est utilisé, sous forme agrégée et anonyme.",
+      "s4AdsTerm": "Publicitaires",
+      "s4AdsDesc": "Google AdSense, qui peut utiliser des cookies pour afficher et personnaliser les publicités.",
+      "s4Outro": "Vous pouvez gérer ou désactiver les cookies à tout moment dans les paramètres de votre navigateur.",
+      "s5Title": "5. Outils gratuits et Premium",
+      "s5P": "Toolando propose des outils gratuits (disponibles sans compte) et des outils Premium. Les règles de traitement des données et de protection des fichiers sont les mêmes dans les deux variantes — elles ne diffèrent que par l'étendue des fonctionnalités et des limites.",
+      "s6Title": "6. Finalité du traitement des données",
+      "s6Intro": "Je traite les données uniquement aux fins suivantes :",
+      "s6List": [
+        "assurer le fonctionnement correct et sécurisé du service,",
+        "analyse statistique du trafic et amélioration des outils,",
+        "affichage de publicités,",
+        "gestion des contacts avec l'utilisateur."
+      ],
+      "s7Title": "7. Vos droits",
+      "s7Intro": "Vous avez le droit de :",
+      "s7List": [
+        "accéder à vos données,",
+        "les rectifier ou les supprimer,",
+        "limiter le traitement,",
+        "déposer une plainte auprès de l'autorité de protection des données compétente."
+      ],
+      "s8Title": "8. Modifications de la politique",
+      "s8P": "La politique de confidentialité peut être mise à jour pour refléter les changements dans le service ou dans la loi. La version actuelle est toujours disponible sur cette page."
+    },
+    "terms": {
+      "eyebrow": "Conditions d'utilisation",
+      "title": "Conditions d'utilisation de Toolando.tech",
+      "intro": "Les conditions ci-dessous définissent les règles d'utilisation du service Toolando.tech. L'utilisation du service implique l'acceptation de ces règles.",
+      "s1Title": "1. Dispositions générales",
+      "s1P": "Le propriétaire de Toolando.tech est Szymon. Le service propose des outils en ligne pour la conversion de fichiers, la génération de contenu et des outils basés sur l'IA.",
+      "s2Title": "2. Outils gratuits et Premium",
+      "s2Intro": "Toolando propose des outils en deux variantes :",
+      "s2FreeTerm": "Gratuit",
+      "s2FreeDesc": "accessible à tous, sans avoir besoin de créer un compte.",
+      "s2PremiumTerm": "Premium",
+      "s2PremiumDesc": "avec des fonctionnalités plus avancées et des limites plus élevées.",
+      "s2Outro": "Les règles concernant les paiements ou abonnements pour les fonctionnalités Premium sont présentées aux endroits pertinents du service.",
+      "s3Title": "3. Utilisation à vos propres risques",
+      "s3P1": "Vous utilisez le service à vos propres risques. Je mets tout en œuvre pour que les outils fonctionnent correctement, cependant le service est fourni « tel quel », sans garantie de disponibilité, d'exactitude des résultats ou d'adéquation à un usage particulier.",
+      "s3P2": "Le propriétaire du service n'est pas responsable de :",
+      "s3List": [
+        "les conséquences de l'utilisation des résultats des outils,",
+        "les pertes de profits,",
+        "les dommages résultant d'interruptions du service."
+      ],
+      "s3Outro": "L'utilisateur s'engage à utiliser le service conformément à la loi et est responsable du contenu et des fichiers qu'il traite.",
+      "s4Title": "4. Fichiers utilisateur",
+      "s4P": "Les fichiers téléchargés vers les outils ne sont pas stockés. Ils sont utilisés uniquement pour effectuer l'opération donnée et sont supprimés une fois celle-ci terminée.",
+      "s5Title": "5. Publicités",
+      "s5P": "Le service peut afficher des publicités Google AdSense. Les publicités contribuent à maintenir les outils gratuits et à développer le projet. Le fournisseur de publicités peut utiliser des cookies conformément à la Politique de confidentialité.",
+      "s6Title": "6. Droits d'auteur",
+      "s6P": "Le nom Toolando.tech, les éléments graphiques et le contenu du service sont protégés légalement. La copie et l'utilisation sans le consentement du propriétaire sont interdites.",
+      "s7Title": "7. Contact",
+      "s7Pre": "Pour toute question relative à ces conditions, vous pouvez me contacter à l'adresse :",
+      "s8Title": "8. Modifications des conditions",
+      "s8P": "Les conditions peuvent être mises à jour pour refléter les changements dans le service ou dans la loi. La version actuelle est toujours disponible sur cette page."
+    }
   }
 }
