@@ -19,6 +19,7 @@ export async function generateMetadata({
   return {
     title: `${d.title} — Toolando.tech`,
     description: d.metaDescription,
+    robots: { index: false, follow: true },
     alternates: { canonical: `/${locale}/downloader` },
     openGraph: {
       title: `${d.title} — Toolando.tech`,

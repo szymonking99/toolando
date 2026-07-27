@@ -1,15 +1,14 @@
 "use client"
 
-import { Sparkles } from "lucide-react"
+import Link from "next/link"
+import { Sparkles, Upload } from "lucide-react"
 import { useI18n } from "@/components/i18n-provider"
-import { SupportButton } from "@/components/support-button"
 
 export function HeroSection() {
-  const { t } = useI18n()
+  const { t, href } = useI18n()
 
   return (
     <section className="relative overflow-hidden px-4 pb-24 pt-40 md:pb-32 md:pt-48">
-      {/* Neon glow accents */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 -z-10"
@@ -37,8 +36,20 @@ export function HeroSection() {
           {t.hero.subtitle}
         </p>
 
-        <div className="mt-8 flex w-full justify-center sm:w-auto">
-          <SupportButton className="px-6 py-3 text-base" />
+        <div className="mt-8 flex w-full flex-col items-center justify-center gap-3 sm:w-auto sm:flex-row">
+          <Link
+            href={href("/otworz")}
+            className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-6 py-3 text-base font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition-opacity hover:opacity-90 sm:w-auto"
+          >
+            <Upload className="size-5" aria-hidden="true" />
+            {t.hero.convertCta}
+          </Link>
+          <Link
+            href={href("/tools")}
+            className="inline-flex w-full items-center justify-center rounded-xl border border-white/10 bg-white/[0.04] px-6 py-3 text-base font-medium transition-colors hover:border-primary/40 hover:bg-white/[0.08] sm:w-auto"
+          >
+            {t.hero.browse}
+          </Link>
         </div>
       </div>
     </section>

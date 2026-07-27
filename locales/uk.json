@@ -15,7 +15,8 @@
     "allTools": "Усі інструменти",
     "signIn": "Увійти",
     "account": "Мій акаунт",
-    "downloader": "Завантажити MP3"
+    "downloader": "Завантажити MP3",
+    "formats": "Формати"
   },
   "hero": {
     "badge": "Нова екосистема онлайн-інструментів",
@@ -23,7 +24,8 @@
     "titleHighlight": "одному місці",
     "subtitle": "Конвертери, генератори, PDF, ШІ — усе в одній екосистемі.",
     "browse": "Переглянути інструменти",
-    "learnMore": "Дізнатися більше"
+    "learnMore": "Дізнатися більше",
+    "convertCta": "Конвертувати файл зараз"
   },
   "opener": {
     "title": "Універсальний відкривач файлів",
@@ -98,7 +100,11 @@
     "rights": "© 2026 Toolando.tech. Усі права захищено.",
     "aboutMe": "Про мене",
     "howItWorks": "Як це працює",
-    "faq": "Часті питання"
+    "faq": "Часті питання",
+    "formats": "Формати файлів",
+    "comparisons": "Порівняння",
+    "glossary": "Глосарій",
+    "guides": "Порадники"
   },
   "language": {
     "label": "Мова"
@@ -353,30 +359,41 @@
       "subject": "Звернення з Toolando.tech"
     },
     "about": {
-      "eyebrow": "Про мене",
-      "title": "Привіт, я Шимон — творець Toolando",
-      "intro": "Toolando.tech — це мій власний проєкт, який я розвиваю самостійно. Від ідеї, через код, до контенту, який ви зараз читаєте — усе створюється однією парою рук. Я хочу, щоб прості завдання, як-от конвертація файлу чи швидкий онлайн-інструмент, були доступні кожному, без встановлення програм і без зайвих ускладнень.",
-      "whyTitle": "Чому виник Toolando",
-      "whyP1": "Я щодня працюю з комп'ютерами і багато разів бачив, скільки часу люди втрачають на завдання, які мали б займати хвилину — зміна формату файлу, витягання звуку із запису чи швидка операція, для якої доводиться шукати випадковий сайт, повний реклами й пасток.",
-      "whyP2": "Toolando виник, щоб зібрати такі інструменти в одному зрозумілому й безпечному місці. Мені важливо, щоб сервіс був швидким, зрозумілим і чесним щодо користувача — без обману й без прихованих підступів.",
-      "howTitle": "Як працює Toolando",
-      "howIntro": "Сервіс надає онлайн-інструменти у двох варіантах: безкоштовному та преміум.",
-      "howFreeTerm": "Безкоштовні інструменти",
-      "howFreeDesc": "доступні кожному, без реєстрації. Це щоденні, найчастіше використовувані функції, які я хочу залишити відкритими для всіх.",
-      "howPremiumTerm": "Преміум-інструменти",
-      "howPremiumDesc": "більш просунуті функції або більші ліміти, які допомагають підтримувати й розвивати проєкт. Кошти з преміум ідуть безпосередньо на сервери, розвиток і нові інструменти.",
-      "howOutro": "Незалежно від варіанту я дотримуюся того самого принципу: завантажені файли слугують виключно для виконання конвертації й не зберігаються мною.",
-      "outsideTitle": "Чим я займаюся поза Toolando",
-      "outsideP1": "Я надаю ІТ-послуги — допомагаю приватним особам і компаніям із щоденними проблемами з обладнанням та програмним забезпеченням.",
+      "eyebrow": "About me",
+      "title": "Hi, I'm Szymon — the creator of Toolando",
+      "intro": "Toolando.tech is my own project that I build on my own. From the idea, through the code, to the content you're reading now — it all comes from one pair of hands. I want simple tasks, like converting a file or a quick online tool, to be available to everyone, with no software to install and no needless complications.",
+      "whyTitle": "Why Toolando was created",
+      "whyP1": "I work with computers every day and I've seen many times how much time people lose on tasks that should take a moment — changing a file format, extracting audio from a recording, or a quick operation that forces you to hunt for some random site full of ads and traps.",
+      "whyP2": "Toolando was created to gather such tools in one clear and safe place. I care about the service being fast, readable, and honest toward the user — with no tricks and no hidden catches.",
+      "howTitle": "How Toolando works",
+      "howIntro": "The service provides online tools in two variants: free and premium.",
+      "howFreeTerm": "Free tools",
+      "howFreeDesc": "available to everyone, without an account. These are the everyday, most-used features that I want to keep open to all.",
+      "howPremiumTerm": "Premium tools",
+      "howPremiumDesc": "more advanced features or higher limits that help maintain and grow the project. Premium revenue goes straight to servers, development, and new tools.",
+      "howOutro": "Regardless of the variant, I stick to the same rule: uploaded files are used solely to perform the conversion and are not stored by me.",
+      "outsideTitle": "What I do beyond Toolando",
+      "outsideP1": "I provide IT services — helping individuals and companies with everyday hardware and software problems.",
       "outsideList": [
-        "сервіс і ремонт ноутбуків та комп'ютерів,",
-        "ІТ-послуги та технічна підтримка,",
-        "створення вебінструментів і застосунків."
+        "servicing and repairing laptops and computers,",
+        "IT services and technical support,",
+        "building web tools and applications."
       ],
-      "outsideP2": "Досвід із ремонту й роботи з користувачами напряму впливає на те, як я проєктую Toolando — просто, конкретно й з думкою про реальні потреби.",
-      "contactTitle": "Контакт",
-      "contactP1": "Маєте запитання, ідею нового інструмента чи хочете повідомити про проблему? Напишіть мені — залюбки відповім.",
-      "emailLabel": "Ел. пошта:"
+      "outsideP2": "Experience from repairs and working with users translates directly into how I design Toolando — simple, to the point, and with real needs in mind.",
+      "contactTitle": "Contact",
+      "contactP1": "Have a question, an idea for a new tool, or want to report a problem? Write to me — I'll gladly reply.",
+      "emailLabel": "Email:",
+      "methodologyTitle": "Як я тестую конвертацію та пишу порадники",
+      "methodologyP1": "Кожен порадник і профіль формату на Toolando.tech базується на реальних тестах конвертації.",
+      "methodologyList": [
+        "Тестую конвертери на файлах різного розміру.",
+        "Для аудіо/відео порівнюю bitrate і сумісність.",
+        "Для зображень перевіряю розмір і якість.",
+        "Порадники оновлюю, коли змінюються формати."
+      ],
+      "methodologyP2": "Знайшли помилку? Напишіть на badyltech@outlook.com.",
+      "updatedLabel": "Сторінку оновлено",
+      "updatedDate": "липень 2026"
     },
     "howItWorks": {
       "eyebrow": "Як це працює?",
@@ -527,6 +544,79 @@
       "s7Pre": "У питаннях, пов'язаних з умовами, ви можете зв'язатися зі мною за адресою:",
       "s8Title": "8. Зміни умов",
       "s8P": "Умови може бути оновлено для приведення їх у відповідність до змін у сервісі чи законодавстві. Актуальна версія завжди доступна на цій сторінці."
+    }
+  },
+  "search": {
+    "placeholder": "Пошук конвертерів (напр. mp3 wav, pdf jpg)…",
+    "noResults": "Конвертерів не знайдено. Спробуйте інший запит."
+  },
+  "feedback": {
+    "question": "Чи була ця стаття корисною?",
+    "yes": "Так",
+    "no": "Ні",
+    "thanks": "Дякуємо за відгук!"
+  },
+  "knowledgeHub": {
+    "title": "Знання про формати та конвертацію",
+    "subtitle": "Не лише конвертуй — розумій, коли обрати MP3 замість FLAC, WebP замість JPG чи PDF замість DOCX.",
+    "formatsTitle": "Енциклопедія форматів файлів",
+    "formatsDesc": "Понад 40 форматів: переваги, недоліки, сумісність і порівняння.",
+    "formatsCta": "Переглянути формати",
+    "guidesTitle": "Порадники з конвертації",
+    "guidesDesc": "Практичні статті про якість аудіо, стиснення зображень, відео для соцмереж і більше.",
+    "guidesCta": "Читати порадники",
+    "comparisonsTitle": "Порівняння форматів",
+    "comparisonsDesc": "MP3 vs FLAC, JPG vs WebP, PDF vs DOCX — прямі порівняння з чітким вердиктом.",
+    "comparisonsCta": "Переглянути порівняння"
+  },
+  "toolsIndex": {
+    "intro": "Кожен інструмент конвертує файли на сервері — без встановлення. Не знаєте формат? Перегляньте енциклопедію або порадники.",
+    "formatsLink": "Енциклопедія форматів",
+    "guidesLink": "Порадники конвертації"
+  },
+  "recommender": {
+    "title": "Який формат обрати?",
+    "subtitle": "Відповідай на два запитання — ми порекомендуємо найкращий формат.",
+    "step1": "Який тип файлу у тебе?",
+    "step2": "Що хочеш з ним зробити?",
+    "categories": {
+      "image": "Зображення / фото",
+      "audio": "Аудіо / музика",
+      "video": "Відео",
+      "document": "Документ"
+    },
+    "goals": {
+      "image_web": "Опублікувати на сайті",
+      "image_email": "Надіслати email",
+      "image_print": "Друкувати",
+      "image_iphone": "Фото з iPhone (HEIC)",
+      "audio_listen": "Слухати на телефоні",
+      "audio_edit": "Редагувати в DAW",
+      "audio_archive": "Архівувати без втрат",
+      "video_social": "Опублікувати в соцмережах",
+      "video_web": "Вбудувати на сайт",
+      "video_audio": "Витягнути лише аудіо",
+      "document_share": "Надіслати для читання",
+      "document_edit": "Редагувати текст"
+    },
+    "resultTitle": "Рекомендований формат:",
+    "readFormat": "Путівник по формату",
+    "openConverter": "Відкрити конвертер",
+    "back": "Назад",
+    "tryAgain": "Почати спочатку",
+    "reasons": {
+      "webp-web": "WebP is 25–35% smaller than JPG at the same quality — ideal for faster websites.",
+      "jpg-email": "JPG is universal and small — perfect for email attachments.",
+      "png-print": "PNG is lossless with sharp edges — good for graphics and short-run print.",
+      "heic-jpg": "HEIC from iPhone needs conversion to JPG for compatibility with Windows and most services.",
+      "mp3-listen": "MP3 works on every device and keeps files small.",
+      "wav-edit": "WAV is lossless — best for editing without quality loss.",
+      "flac-archive": "FLAC compresses without losing quality — ideal for music archiving.",
+      "mp4-social": "MP4 (H.264 + AAC) is the standard for Instagram, TikTok, and YouTube.",
+      "webm-web": "WebM is optimized for HTML5 video in browsers.",
+      "mp3-audio": "Extract audio from your video as MP3 for podcasts or ringtones.",
+      "pdf-share": "PDF locks layout — the recipient sees exactly what you intended.",
+      "docx-edit": "DOCX lets you edit text, styles, and headings in Word."
     }
   }
 }

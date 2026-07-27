@@ -8,6 +8,8 @@ import { cn } from "@/lib/utils"
 type SupportButtonProps = {
   /** Full-width, larger padding variant for mobile menus / stacked layouts. */
   fullWidth?: boolean
+  /** Icon-only in navbar until there is room for the label. */
+  compact?: boolean
   className?: string
 }
 
@@ -18,12 +20,15 @@ type SupportButtonProps = {
  * glow, bold typography and a gentle hover scale — deliberately more eye-catching
  * than the muted nav links, while staying on-brand with Toolando's dark UI.
  */
-export function SupportButton({ fullWidth, className }: SupportButtonProps) {
+export function SupportButton({ fullWidth, compact, className }: SupportButtonProps) {
   const { t, href } = useI18n()
+  const label = t.footer.support
 
   return (
     <Link
       href={href("/wsparcie")}
+      title={label}
+      aria-label={label}
       className={cn(
         "group relative inline-flex items-center justify-center gap-2 overflow-hidden whitespace-nowrap rounded-xl",
         "border border-white/20 bg-white/10 backdrop-blur-md",
@@ -33,7 +38,9 @@ export function SupportButton({ fullWidth, className }: SupportButtonProps) {
         "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background",
         fullWidth
           ? "w-full px-6 py-3.5 text-base"
-          : "px-2.5 py-2 text-[13px] lg:px-4 lg:text-sm",
+          : compact
+            ? "size-9 p-0 xl:h-auto xl:w-auto xl:px-4 xl:py-2 xl:text-sm"
+            : "px-2.5 py-2 text-[13px] lg:px-4 lg:text-sm",
         className,
       )}
     >
@@ -42,8 +49,13 @@ export function SupportButton({ fullWidth, className }: SupportButtonProps) {
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/25 to-transparent transition-transform duration-700 group-hover:translate-x-full"
       />
-      <Heart className={cn(fullWidth ? "size-5" : "size-4")} aria-hidden="true" />
-      {t.footer.support}
+      <Heart
+        className={cn(fullWidth ? "size-5" : "size-4 shrink-0")}
+        aria-hidden="true"
+      />
+      <span className={cn(compact && !fullWidth && "hidden xl:inline")}>
+        {label}
+      </span>
     </Link>
   )
 }

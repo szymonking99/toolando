@@ -1,0 +1,26 @@
+# LibreOffice document converter for Toolando (PDF/DOCX/ODT).
+# Deploy on a VPS, then point Vercel at it via DOC_CONVERTER_URL.
+#
+#   docker compose up -d --build
+#   curl http://127.0.0.1:8080/health
+
+services:
+  doc-converter:
+    build: ./services/doc-converter
+    container_name: toolando-doc-converter
+    restart: unless-stopped
+    ports:
+      - "${DOC_CONVERTER_PORT:-8080}:8080"
+    environment:
+      PORT: "8080"
+      CONVERTER_SECRET: "${CONVERTER_SECRET:-change-me-in-production}"
+      MAX_UPLOAD_MB: "${MAX_UPLOAD_MB:-50}"
+      LIBREOFFICE_PATH: "/usr/bin/soffice"
+    mem_limit: 2g
+    cpus: 2
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://127.0.0.1:8080/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 45s

@@ -1,28 +1,19 @@
 "use client"
 
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 import { cn } from "@/lib/utils"
+import { hasAnalyticsConsent } from "@/lib/consent"
+import { useI18n } from "@/components/i18n-provider"
 
-/**
- * Google AdSense publisher ID, e.g. "ca-pub-1234567890123456".
- * Set NEXT_PUBLIC_ADSENSE_CLIENT in your project env to activate real ads.
- * When empty, a neutral placeholder is rendered so the layout stays intact
- * (and no AdSense policy is violated by empty units).
- */
 const ADSENSE_CLIENT =
   process.env.NEXT_PUBLIC_ADSENSE_CLIENT ?? "ca-pub-1137300798632743"
 
 type AdSlotProps = {
-  /** The AdSense ad unit slot id (data-ad-slot). */
   slot?: string
-  /** Ad format — "auto" is responsive and recommended. */
   format?: "auto" | "fluid" | "rectangle" | "horizontal" | "vertical"
-  /** Whether the unit should be full-width responsive. */
   responsive?: boolean
-  /** Optional label shown above the ad (AdSense requires clear labeling). */
   label?: string
   className?: string
-  /** Minimum height to reserve, preventing layout shift (CLS). */
   minHeight?: number
 }
 
@@ -32,29 +23,32 @@ declare global {
   }
 }
 
-/**
- * A reusable, AdSense-ready ad container.
- *
- * Usage: drop <AdSlot slot="1234567890" /> anywhere in the layout.
- * Reserve vertical space to satisfy AdSense layout rules and avoid CLS.
- */
 export function AdSlot({
   slot,
   format = "auto",
   responsive = true,
-  label = "Advertisement",
+  label,
   className,
   minHeight = 120,
 }: AdSlotProps) {
+  const { t } = useI18n()
+  const adLabel = label ?? t.ad.label
   const pushedRef = useRef(false)
-
+  const [consented, setConsented] = useState(false)
   const isConfigured = Boolean(ADSENSE_CLIENT && slot)
 
   useEffect(() => {
-    if (!isConfigured || pushedRef.current) return
+    setConsented(hasAnalyticsConsent())
+    function onConsentChange() {
+      setConsented(hasAnalyticsConsent())
+    }
+    window.addEventListener("consent-change", onConsentChange)
+    return () => window.removeEventListener("consent-change", onConsentChange)
+  }, [])
+
+  useEffect(() => {
+    if (!isConfigured || !consented || pushedRef.current) return
     try {
-      // The AdSense library is loaded globally in the root layout. As a
-      // fallback (e.g. if it hasn't been injected yet), load it once here.
       const existing = document.querySelector<HTMLScriptElement>(
         'script[src*="adsbygoogle.js"]',
       )
@@ -68,9 +62,9 @@ export function AdSlot({
       ;(window.adsbygoogle = window.adsbygoogle || []).push({})
       pushedRef.current = true
     } catch {
-      // Silently ignore — the placeholder container remains in place.
+      // Placeholder remains visible.
     }
-  }, [isConfigured])
+  }, [isConfigured, consented])
 
   return (
     <div
@@ -78,14 +72,14 @@ export function AdSlot({
         "mx-auto flex w-full max-w-6xl flex-col items-center gap-2 px-4 py-6",
         className,
       )}
-      aria-label={label}
+      aria-label={adLabel}
       role="complementary"
     >
       <span className="text-[10px] font-medium uppercase tracking-widest text-muted-foreground/60">
-        {label}
+        {adLabel}
       </span>
 
-      {isConfigured ? (
+      {isConfigured && consented ? (
         <ins
           className="adsbygoogle block w-full"
           style={{ display: "block", minHeight }}
@@ -99,7 +93,7 @@ export function AdSlot({
           style={{ minHeight }}
           className="flex w-full items-center justify-center rounded-xl border border-dashed border-white/15 bg-white/[0.02] text-xs text-muted-foreground/50"
         >
-          Ad space
+          {t.ad.placeholder}
         </div>
       )}
     </div>

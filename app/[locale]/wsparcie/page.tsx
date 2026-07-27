@@ -3,8 +3,8 @@ import type { Metadata } from "next"
 import { ArrowLeft, Coffee, Heart, Wrench } from "lucide-react"
 import { getDictionary } from "@/lib/i18n/dictionaries"
 import { localeHref } from "@/lib/i18n/href"
+import { SiteFooter } from "@/components/site-footer"
 
-// Placeholder support links — replace with your real Buy Me a Coffee / donation URLs.
 const COFFEE_URL = "https://buymeacoffee.com/badyltech"
 const DONATE_URL = "https://www.paypal.com/donate"
 
@@ -29,6 +29,7 @@ export default async function SupportPage({
 }) {
   const { locale } = await params
   const dict = await getDictionary(locale)
+  const s = dict.support
 
   return (
     <div className="min-h-dvh">
@@ -47,21 +48,25 @@ export default async function SupportPage({
             className="inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
           >
             <ArrowLeft className="size-4" />
-            {dict.support.back}
+            {s.back}
           </Link>
         </nav>
       </header>
 
       <main className="mx-auto max-w-3xl px-4 pb-24 pt-32">
-        <div className="mb-2 text-sm font-medium text-primary">
-          {dict.support.eyebrow}
-        </div>
+        <div className="mb-2 text-sm font-medium text-primary">{s.eyebrow}</div>
         <h1 className="text-balance text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
-          {dict.support.title}
+          {s.title}
         </h1>
         <p className="mt-3 text-pretty leading-relaxed text-muted-foreground">
-          {dict.support.subtitle}
+          {s.subtitle}
         </p>
+
+        <div className="mt-8 space-y-4 leading-relaxed text-muted-foreground">
+          <p>{s.body1}</p>
+          <p>{s.body2}</p>
+          <p>{s.body3}</p>
+        </div>
 
         <div className="mt-8 flex flex-col gap-3 sm:flex-row">
           <a
@@ -71,7 +76,7 @@ export default async function SupportPage({
             className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-6 py-3 font-medium text-primary-foreground transition-colors hover:bg-primary/85"
           >
             <Coffee className="size-4" aria-hidden="true" />
-            {dict.support.coffee}
+            {s.coffee}
           </a>
           <a
             href={DONATE_URL}
@@ -80,14 +85,30 @@ export default async function SupportPage({
             className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/[0.04] px-6 py-3 font-medium text-foreground transition-colors hover:bg-white/[0.08]"
           >
             <Heart className="size-4" aria-hidden="true" />
-            {dict.support.donate}
+            {s.donate}
           </a>
         </div>
 
-        <p className="mt-6 text-sm text-muted-foreground">
-          {dict.support.thanks}
+        <p className="mt-6 text-sm leading-relaxed text-muted-foreground">{s.thanks}</p>
+
+        <p className="mt-6 rounded-xl border border-white/10 bg-white/[0.03] p-4 text-xs leading-relaxed text-muted-foreground">
+          {s.legalNote}{" "}
+          <Link
+            href={localeHref(locale, "/regulamin")}
+            className="font-medium text-foreground underline underline-offset-4 hover:text-primary"
+          >
+            {dict.footer.terms}
+          </Link>
+          {" · "}
+          <Link
+            href={localeHref(locale, "/polityka-prywatnosci")}
+            className="font-medium text-foreground underline underline-offset-4 hover:text-primary"
+          >
+            {dict.footer.privacy}
+          </Link>
         </p>
       </main>
+      <SiteFooter />
     </div>
   )
 }

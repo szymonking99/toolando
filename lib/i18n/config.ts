@@ -45,6 +45,19 @@ export type SupportedLocale = (typeof supportedLocales)[number]
 /** Fallback used when a requested language is not supported. */
 export const fallbackLocale: SupportedLocale = "en"
 
+/**
+ * Locales with fully translated content (legal pages, guides, etc.).
+ * Other supported locales fall back to English and are excluded from the
+ * sitemap / search indexing to avoid duplicate thin pages.
+ */
+export const fullyTranslatedLocales: SupportedLocale[] = [
+  "pl",
+  "en",
+  "de",
+  "es",
+  "uk",
+]
+
 /** Right-to-left locales — used to set the <html dir> attribute. */
 export const rtlLocales = new Set<string>(["ar", "he", "fa", "ur"])
 

@@ -1,14 +1,16 @@
-import { Analytics } from "@vercel/analytics/next"
-import Script from "next/script"
 import type { Metadata, Viewport } from "next"
+import { Analytics } from "@vercel/analytics/next"
 import { Geist, Geist_Mono } from "next/font/google"
 import { I18nProvider } from "@/components/i18n-provider"
-import { AdSenseScript } from "@/components/adsense-script"
+import { CookieConsent } from "@/components/cookie-consent"
+import { ConsentModeInit } from "@/components/consent-mode-init"
+import { ConsentGatedScripts } from "@/components/consent-gated-scripts"
 import { JsonLd } from "@/components/json-ld"
 import { organizationSchema, websiteSchema } from "@/lib/seo/structured-data"
 import { getDictionary } from "@/lib/i18n/dictionaries"
 import {
   supportedLocales,
+  fullyTranslatedLocales,
   rtlLocales,
   normalizeToSupported,
   fallbackLocale,
@@ -22,8 +24,6 @@ const geistMono = Geist_Mono({
 })
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://toolando.tech"
-const GA_MEASUREMENT_ID =
-  process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? "G-HCDN6BEKZH"
 const ADSENSE_CLIENT =
   process.env.NEXT_PUBLIC_ADSENSE_CLIENT ?? "ca-pub-1137300798632743"
 
@@ -39,10 +39,12 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params
   const dict = await getDictionary(locale)
+  const resolved = normalizeToSupported(locale) ?? fallbackLocale
+  const isFullyTranslated = (fullyTranslatedLocales as readonly string[]).includes(resolved)
 
-  // Build hreflang alternates for every supported locale.
+  // Build hreflang alternates for indexed locales only.
   const languages: Record<string, string> = {}
-  for (const code of supportedLocales) {
+  for (const code of fullyTranslatedLocales) {
     languages[code] = `/${code}`
   }
   languages["x-default"] = `/${fallbackLocale}`
@@ -51,10 +53,13 @@ export async function generateMetadata({
     metadataBase: new URL(SITE_URL),
     title: dict.meta.title,
     description: dict.meta.description,
-    generator: "v0.app",
+    ...(isFullyTranslated ? {} : { robots: { index: false, follow: true } }),
     alternates: {
       canonical: `/${locale}`,
       languages,
+      types: {
+        "application/rss+xml": `${SITE_URL}/feed.xml`,
+      },
     },
     openGraph: {
       title: dict.meta.title,
@@ -65,7 +70,7 @@ export async function generateMetadata({
       type: "website",
       images: [
         {
-          url: "/og-image.png",
+          url: "/opengraph-image",
           width: 1200,
           height: 630,
           alt: "Toolando.tech",
@@ -76,7 +81,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: dict.meta.title,
       description: dict.meta.description,
-      images: ["/og-image.png"],
+      images: ["/opengraph-image"],
     },
     icons: {
       icon: [
@@ -121,29 +126,15 @@ export default async function LocaleLayout({
       className={`dark overflow-x-hidden bg-background ${geistSans.variable} ${geistMono.variable}`}
     >
       <body className="overflow-x-hidden bg-background font-sans antialiased">
+        <ConsentModeInit />
         {/* Site-wide structured data: brand identity + sitelinks search box */}
         <JsonLd data={[organizationSchema(), websiteSchema(locale)]} />
-        {ADSENSE_CLIENT && <AdSenseScript client={ADSENSE_CLIENT} />}
         <I18nProvider locale={locale} dictionary={dictionary}>
           {children}
+          <CookieConsent />
         </I18nProvider>
+        <ConsentGatedScripts />
         {process.env.NODE_ENV === "production" && <Analytics />}
-        {process.env.NODE_ENV === "production" && GA_MEASUREMENT_ID && (
-          <>
-            <Script
-              src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
-              strategy="afterInteractive"
-            />
-            <Script id="ga4-init" strategy="afterInteractive">
-              {`
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', '${GA_MEASUREMENT_ID}');
-              `}
-            </Script>
-          </>
-        )}
       </body>
     </html>
   )

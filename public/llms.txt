@@ -1,0 +1,23 @@
+# Toolando.tech
+
+> Free online file converters with format guides, comparisons and a technical glossary.
+
+Toolando helps users convert audio, video, image and document files in the browser.
+Indexed locales: pl, en, de, es, uk.
+
+## Main hubs
+
+- Home: https://toolando.tech/pl
+- All tools: https://toolando.tech/pl/tools
+- Format encyclopedia: https://toolando.tech/pl/formaty
+- Conversion guides: https://toolando.tech/pl/poradniki
+- Format comparisons: https://toolando.tech/pl/porownania
+- Glossary: https://toolando.tech/pl/slownik
+
+## RSS
+
+- https://toolando.tech/feed.xml
+
+## Contact
+
+- badyltech@outlook.com

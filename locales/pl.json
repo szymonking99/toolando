@@ -7,6 +7,7 @@
     "aiTools": "Narzędzia AI",
     "tools": "Narzędzia",
     "categories": "Kategorie",
+    "formats": "Formaty",
     "about": "O platformie",
     "contact": "Kontakt",
     "cta": "Zacznij korzystać",
@@ -15,7 +16,10 @@
     "allTools": "Wszystkie narzędzia",
     "signIn": "Zaloguj się",
     "account": "Moje konto",
-    "downloader": "Pobieranie MP3"
+    "downloader": "Pobieranie MP3",
+    "aboutMe": "O mnie",
+    "privacy": "Polityka prywatności",
+    "terms": "Regulamin"
   },
   "hero": {
     "badge": "Nowy ekosystem narzędzi online",
@@ -23,7 +27,63 @@
     "titleHighlight": "jednym miejscu",
     "subtitle": "Konwertery, generatory, PDF, AI — wszystko w jednym ekosystemie.",
     "browse": "Przeglądaj narzędzia",
-    "learnMore": "Dowiedz się więcej"
+    "learnMore": "Dowiedz się więcej",
+    "convertCta": "Konwertuj plik teraz"
+  },
+  "search": {
+    "placeholder": "Szukaj konwertera (np. mp3 wav, pdf jpg)…",
+    "noResults": "Nie znaleziono konwertera. Spróbuj innego zapytania."
+  },
+  "feedback": {
+    "question": "Czy ten artykuł był pomocny?",
+    "yes": "Tak",
+    "no": "Nie",
+    "thanks": "Dziękuję za opinię!"
+  },
+  "recommender": {
+    "title": "Który format wybrać?",
+    "subtitle": "Odpowiedz na dwa pytania — podpowiemy najlepszy format.",
+    "step1": "Jaki typ pliku masz?",
+    "step2": "Co chcesz z nim zrobić?",
+    "categories": {
+      "image": "Obraz / zdjęcie",
+      "audio": "Audio / muzyka",
+      "video": "Wideo",
+      "document": "Dokument"
+    },
+    "goals": {
+      "image_web": "Opublikować na stronie www",
+      "image_email": "Wysłać mailem",
+      "image_print": "Wydrukować",
+      "image_iphone": "Zdjęcie z iPhone (HEIC)",
+      "audio_listen": "Słuchać na telefonie / odtwarzaczu",
+      "audio_edit": "Edytować w DAW",
+      "audio_archive": "Archiwizować bez utraty jakości",
+      "video_social": "Opublikować w social media",
+      "video_web": "Osadzić na stronie www",
+      "video_audio": "Wyciągnąć samo audio",
+      "document_share": "Wysłać do odczytu (bez edycji)",
+      "document_edit": "Edytować tekst"
+    },
+    "resultTitle": "Rekomendowany format:",
+    "readFormat": "Przewodnik po formacie",
+    "openConverter": "Otwórz konwerter",
+    "back": "Wstecz",
+    "tryAgain": "Zacznij od nowa",
+    "reasons": {
+      "webp-web": "WebP jest o 25–35% mniejszy od JPG przy tej samej jakości — idealny na szybsze strony.",
+      "jpg-email": "JPG jest uniwersalny i mały — świetny do załączników e-mail.",
+      "png-print": "PNG jest bezstratny z ostrymi krawędziami — dobry do grafik i krótkich serii druku.",
+      "heic-jpg": "HEIC z iPhone wymaga konwersji na JPG dla Windows i większości serwisów.",
+      "mp3-listen": "MP3 działa na każdym urządzeniu i zajmuje mało miejsca.",
+      "wav-edit": "WAV jest bezstratny — najlepszy do edycji bez utraty jakości.",
+      "flac-archive": "FLAC kompresuje bez utraty jakości — idealny do archiwizacji muzyki.",
+      "mp4-social": "MP4 (H.264 + AAC) to standard Instagrama, TikToka i YouTube.",
+      "webm-web": "WebM jest zoptymalizowany pod wideo HTML5 w przeglądarce.",
+      "mp3-audio": "Wyciągnij audio z wideo jako MP3 do podcastu lub dzwonka.",
+      "pdf-share": "PDF zamraża układ — odbiorca widzi dokładnie to, co Ty.",
+      "docx-edit": "DOCX pozwala edytować tekst, style i nagłówki w Wordzie."
+    }
   },
   "opener": {
     "title": "Uniwersalny otwieracz plików",
@@ -73,6 +133,24 @@
     "subtitle": "Wybierz kategorię, aby zobaczyć wszystkie dostępne konwertery.",
     "browse": "Przeglądaj"
   },
+  "toolsIndex": {
+    "intro": "Każde narzędzie konwertuje pliki po stronie serwera — bez instalacji oprogramowania. Nie wiesz, który format wybrać? Sprawdź encyklopedię formatów lub poradniki konwersji.",
+    "formatsLink": "Encyklopedia formatów",
+    "guidesLink": "Poradniki konwersji"
+  },
+  "knowledgeHub": {
+    "title": "Wiedza o formatach i konwersji",
+    "subtitle": "Nie tylko konwertuj — zrozum, kiedy wybrać MP3 zamiast FLAC, WebP zamiast JPG albo PDF zamiast DOCX. Nasze przewodniki pomagają unikać utraty jakości i niepotrzebnych konwersji.",
+    "formatsTitle": "Encyklopedia formatów plików",
+    "formatsDesc": "Ponad 40 formatów: audio, wideo, obrazy, dokumenty, dane i archiwa. Zalety, wady, kompatybilność i porównania z alternatywami.",
+    "formatsCta": "Przeglądaj formaty",
+    "guidesTitle": "Poradniki konwersji",
+    "guidesDesc": "Praktyczne artykuły: jakość audio, kompresja obrazów, wideo na social media, PDF vs DOCX i bezpieczeństwo plików online.",
+    "guidesCta": "Czytaj poradniki",
+    "comparisonsTitle": "Porównania formatów",
+    "comparisonsDesc": "MP3 vs FLAC, JPG vs WebP, PDF vs DOCX — bezpośrednie porównania z jasnym werdyktem.",
+    "comparisonsCta": "Przeglądaj porównania"
+  },
   "why": {
     "title": "Dlaczego Toolando.tech?",
     "subtitle": "Zbudowane z myślą o Twojej produktywności i komforcie pracy.",
@@ -98,7 +176,16 @@
     "rights": "© 2026 Toolando.tech. Wszelkie prawa zastrzeżone.",
     "aboutMe": "O mnie",
     "howItWorks": "Jak to działa",
-    "faq": "FAQ"
+    "faq": "FAQ",
+    "guides": "Poradniki",
+    "formats": "Formaty plików",
+    "comparisons": "Porównania",
+    "glossary": "Słownik",
+    "cookieSettings": "Ustawienia cookies"
+  },
+  "ad": {
+    "label": "Reklama",
+    "placeholder": "Miejsce na reklamę"
   },
   "language": {
     "label": "Język"
@@ -107,10 +194,14 @@
     "eyebrow": "Wesprzyj projekt",
     "title": "Pomóż utrzymać Toolando.tech",
     "subtitle": "Toolando.tech powstaje i jest udostępniane za darmo. Jeśli oszczędza Ci czas, rozważ wsparcie jego rozwoju.",
+    "body1": "Serwis utrzymuję samodzielnie — od kodu, przez serwery, po treści prawne i poradniki. Twoje wsparcie pomaga pokryć koszty hostingu (Vercel), przetwarzania plików, domeny oraz rozwój nowych narzędzi.",
+    "body2": "Wsparcie jest całkowicie dobrowolne. Korzystanie z narzędzi darmowych nie wymaga żadnej wpłaty. Premium to osobna, opcjonalna subskrypcja z rozszerzonymi funkcjami — szczegóły w Regulaminie.",
+    "body3": "Masz pytanie, pomysł na narzędzie albo znalazłeś błąd? Napisz na badyltech@outlook.com lub skorzystaj z formularza kontaktowego — to też cenne wsparcie projektu.",
+    "legalNote": "Darowizny nie dają dostępu do Premium ani nie stanowią zawarcia umowy o świadczenie usług — chyba że wyraźnie zaznaczono inaczej. Regulamin i Polityka prywatności obowiązują niezależnie od wsparcia.",
     "coffee": "Postaw mi kawę",
     "donate": "Przekaż darowiznę",
     "back": "Wróć na stronę główną",
-    "thanks": "Każde wsparcie pomaga pokryć koszty serwerów i tworzyć nowe narzędzia."
+    "thanks": "Każde wsparcie — finansowe lub w formie feedbacku — pomaga utrzymać Toolando.tech dostępnym dla wszystkich."
   },
   "openerPage": {
     "eyebrow": "Podgląd i konwersja",
@@ -176,7 +267,22 @@
     "less": "mniej",
     "resultPreview": "Podgląd wyniku",
     "startOver": "Zacznij od nowa",
-    "processingLong": "Przetwarzanie (może potrwać kilka sekund)…"
+    "processingLong": "Przetwarzanie (może potrwać kilka sekund)…",
+    "howToTitle": "Jak przekonwertować plik — krok po kroku",
+    "aboutSource": "O formacie źródłowym",
+    "aboutTarget": "O formacie docelowym",
+    "whenToUseTitle": "Kiedy warto użyć tego konwertera",
+    "faqTitle": "Najczęstsze pytania",
+    "qualityTitle": "Jakość konwersji — co warto wiedzieć",
+    "tipsTitle": "Praktyczne wskazówki",
+    "readFormatGuide": "Pełny przewodnik po formacie"
+  },
+  "cookieConsent": {
+    "title": "Pliki cookies",
+    "description": "Toolando.tech korzysta z plików cookies niezbędnych do działania strony oraz — za Twoją zgodą — z cookies analitycznych (Google Analytics) i reklamowych (Google AdSense). Możesz zaakceptować wszystkie cookies lub ograniczyć się do niezbędnych.",
+    "acceptAll": "Akceptuję wszystkie",
+    "necessaryOnly": "Tylko niezbędne",
+    "privacyLink": "Polityka prywatności"
   },
   "aiTool": {
     "prompt": "Twój tekst",
@@ -376,7 +482,18 @@
       "outsideP2": "Doświadczenie z serwisu i pracy z użytkownikami wprost przekłada się na to, jak projektuję Toolando — prosto, konkretnie i z myślą o realnych potrzebach.",
       "contactTitle": "Kontakt",
       "contactP1": "Masz pytanie, pomysł na nowe narzędzie albo chcesz zgłosić problem? Napisz do mnie — chętnie odpowiem.",
-      "emailLabel": "E-mail:"
+      "emailLabel": "E-mail:",
+      "methodologyTitle": "Jak testuję konwersje i piszę poradniki",
+      "methodologyP1": "Każdy poradnik i profil formatu na Toolando.tech opiera się na realnych testach konwersji — nie na skopiowanych specyfikacjach. Przesyłam pliki testowe, porównuję rozmiar i jakość wyniku oraz notuję, które ustawienia działają najlepiej.",
+      "methodologyList": [
+        "Testuję konwertery na plikach różnej wielkości (małe, średnie, duże).",
+        "Dla audio/wideo porównuję bitrate, czas trwania i kompatybilność odtwarzania.",
+        "Dla obrazów sprawdzam rozmiar pliku, jakość wizualną i przezroczystość.",
+        "Poradniki aktualizuję, gdy zmieniają się formaty lub wymagania platform."
+      ],
+      "methodologyP2": "Jeśli znajdziesz błąd w poradniku lub konwerter nie działa tak jak opisano — napisz na badyltech@outlook.com. Poprawki pomagają wszystkim.",
+      "updatedLabel": "Ostatnia aktualizacja strony",
+      "updatedDate": "lipiec 2026"
     },
     "howItWorks": {
       "eyebrow": "Jak to działa?",
@@ -452,8 +569,10 @@
       "eyebrow": "Polityka prywatności",
       "title": "Polityka prywatności Toolando.tech",
       "intro": "Toolando.tech to serwis udostępniający narzędzia online w wariancie darmowym i premium. Dbam o prywatność użytkowników i przetwarzam dane zgodnie z obowiązującymi przepisami, w tym z RODO.",
+      "lastUpdated": "Ostatnia aktualizacja: 23 lipca 2026 r.",
       "s1Title": "1. Administrator danych",
-      "s1Pre": "Administratorem danych jest Szymon, właściciel serwisu Toolando.tech. W sprawach związanych z prywatnością możesz kontaktować się pod adresem:",
+      "s1Pre": "Administratorem danych osobowych jest Szymon Badyl, właściciel serwisu Toolando.tech (Polska). W sprawach związanych z prywatnością możesz kontaktować się pod adresem:",
+      "s1Address": "Korespondencja: badyltech@outlook.com",
       "s2Title": "2. Jakie dane są przetwarzane",
       "s2Intro": "Serwis przetwarza dane techniczne i statystyczne, które są zbierane automatycznie podczas korzystania ze strony:",
       "s2List": [
@@ -473,7 +592,9 @@
       "s4AnalyticsDesc": "narzędzia statystyczne (np. Google Analytics), które pomagają zrozumieć, jak używana jest strona, w formie zbiorczej i anonimowej.",
       "s4AdsTerm": "Reklamowe",
       "s4AdsDesc": "Google AdSense, który może wykorzystywać pliki cookies do wyświetlania i personalizacji reklam.",
-      "s4Outro": "W każdej chwili możesz zarządzać plikami cookies lub je wyłączyć w ustawieniach swojej przeglądarki.",
+      "s4Outro": "W każdej chwili możesz zarządzać plikami cookies lub je wyłączyć w ustawieniach swojej przeglądarki. Przy pierwszej wizycie wyświetlamy baner zgody na cookies, w którym możesz zaakceptować wszystkie cookies lub ograniczyć się do niezbędnych.",
+      "s4ThirdPartyTitle": "Dostawcy zewnętrzni",
+      "s4ThirdPartyP": "Serwis korzysta z usług Google (Analytics, AdSense). Google może zbierać dane zgodnie z własną polityką prywatności. Więcej informacji: https://policies.google.com/technologies/partner-sites",
       "s5Title": "5. Narzędzia darmowe i premium",
       "s5P": "Toolando udostępnia narzędzia darmowe (dostępne bez konta) oraz narzędzia premium. Zasady przetwarzania danych i ochrony plików są takie same w obu wariantach — różnią się one jedynie zakresem funkcji i limitami.",
       "s6Title": "6. Cel przetwarzania danych",
@@ -527,6 +648,53 @@
       "s7Pre": "W sprawach związanych z regulaminem możesz kontaktować się pod adresem:",
       "s8Title": "8. Zmiany regulaminu",
       "s8P": "Regulamin może być aktualizowany w celu dostosowania go do zmian w serwisie lub w przepisach prawa. Aktualna wersja jest zawsze dostępna na tej stronie."
+    },
+    "guides": {
+      "eyebrow": "Poradniki",
+      "title": "Poradniki i przewodniki po konwersji plików",
+      "intro": "Praktyczne artykuły o formatach plików, konwersji i najlepszych praktykach. Każdy poradnik wyjaśnia, kiedy i dlaczego warto przekonwertować plik, oraz jak zrobić to bezpiecznie w Toolando.tech.",
+      "articles": [
+        {
+          "title": "MP3 vs WAV — kiedy konwertować audio?",
+          "body": "MP3 to format ze stratną kompresją — pliki są małe, ale część danych dźwiękowych jest tracona. WAV zachowuje pełną jakość, lecz pliki mogą być 10-krotnie większe. Konwertuj MP3 → WAV, gdy potrzebujesz pliku do edycji w DAW (np. Audacity, FL Studio) lub gdy platforma wymaga formatu bezstratnego. Konwertuj WAV → MP3, gdy chcesz wysłać nagranie e-mailem, opublikować podcast lub zaoszczędzić miejsce na dysku. Toolando.tech obsługuje obie konwersje — wystarczy przesłać plik i pobrać wynik."
+        },
+        {
+          "title": "Jak przekonwertować PDF na JPG do druku i internetu",
+          "body": "PDF to format dokumentów, który zachowuje układ strony. Czasem jednak potrzebujesz poszczególnych stron jako obrazów — np. do wstawienia na stronę www, w prezentację PowerPoint lub do wydruku pojedynczej strony. Konwerter PDF → JPG w Toolando.tech renderuje każdą stronę PDF jako osobny obraz JPG w wysokiej rozdzielczości. Pliki PDF nie są przechowywane — po konwersji są natychmiast usuwane. Jeśli potrzebujesz formatu z przezroczystością, rozważ konwersję PDF → PNG."
+        },
+        {
+          "title": "WebP i AVIF — nowoczesne formaty obrazów dla stron www",
+          "body": "JPG i PNG dominują w internecie od lat, ale nowsze formaty oferują lepszą kompresję. WebP (Google) daje pliki o 25–35% mniejsze niż JPG przy tej samej jakości wizualnej i jest wspierany przez wszystkie nowoczesne przeglądarki. AVIF idzie jeszcze dalej — pliki mogą być o połowę mniejsze niż WebP. Konwertuj JPG → WebP lub PNG → AVIF w Toolando.tech, aby przyspieszyć ładowanie swojej strony. Pamiętaj, że starsze przeglądarki (np. IE) nie obsługują tych formatów — wtedy zachowaj też wersję JPG jako fallback."
+        },
+        {
+          "title": "Wyciąganie dźwięku z wideo — legalna alternatywa",
+          "body": "Czasem masz plik wideo (np. nagranie z kamery, prezentacja) i potrzebujesz tylko ścieżki audio. Toolando.tech pozwala wyciągnąć dźwięk z plików MP4, MOV, AVI, MKV i innych formatów wideo, zapisując go jako MP3, WAV, FLAC lub AAC. To legalna operacja na Twoim własnym pliku — w przeciwieństwie do pobierania muzyki z YouTube czy TikTok, czego Toolando.tech świadomie nie oferuje. Prześlij plik wideo, wybierz format audio i pobierz wynik."
+        },
+        {
+          "title": "JSON, CSV i XML — konwersja danych między formatami",
+          "body": "Programiści i analitycy danych często pracują z różnymi formatami danych. JSON jest standardem w API i konfiguracjach. CSV i TSV służą do importu do Excela i arkuszy kalkulacyjnych. XML jest używany w starszych systemach enterprise i RSS. Toolando.tech konwertuje między tymi formatami z zachowaniem struktury danych. Przykładowo: JSON → CSV pozwala otworzyć odpowiedź API w Excelu, a CSV → JSON przygotowuje dane do wysłania do REST API."
+        },
+        {
+          "title": "Bezpieczeństwo plików w narzędziach online",
+          "body": "Przesyłanie plików do narzędzi online budzi naturalne obawy o prywatność. W Toolando.tech pliki służą wyłąncznie do wykonania operacji, o którą prosisz — konwersji, kompresji lub podglądu. Po zakończeniu pracy pliki są usuwane z serwera. Część narzędzi (np. uniwersalny otwieracz plików) działa w całości w przeglądarce — wtedy plik w ogóle nie opuszcza Twojego komputera. Połączenie ze stroną jest szyfrowane (HTTPS). Nie sprzedajemy ani nie udostępniamy Twoich plików osobom trzecim."
+        },
+        {
+          "title": "Kompresja stratna vs bezstratna — prosty przewodnik",
+          "body": "Formaty stratne (MP3, JPG, AAC, H.264) usuwaja czesc danych, aby zmniejszyc rozmiar pliku. Formaty bezstratne (FLAC, PNG, WAV, ZIP) zachowuja wszystkie dane, ale pliki sa wieksze. Zasada: konwertuj ze stratnego na bezstratny tylko wtedy, gdy musisz — utraconej jakosci nie odzyskasz. Konwertuj ze stratnego na stratny (np. JPG -> JPG z nizsza jakoscia) tylko raz, bo kazda kolejna konwersja pogarsza wynik. W encyklopedii formatow Toolando.tech kazdy format ma oznaczenie typu kompresji."
+        },
+        {
+          "title": "HEIC z iPhone — jak otworzyc i przekonwertowac na JPG",
+          "body": "Apple domyslnie zapisuje zdjecia w formacie HEIC (HEIF), ktory jest mniejszy niz JPG przy tej samej jakosci. Problem: Windows bez rozszerzenia, starsze programy i wiele serwisow nie obsluguje HEIC. Rozwiazanie: konwertuj HEIC -> JPG lub HEIC -> PNG w Toolando.tech przed wyslaniem zdjec mailem, wgraniem na strone lub drukiem."
+        },
+        {
+          "title": "PDF vs DOCX — kiedy ktory format?",
+          "body": "DOCX (Word) sluzy do edycji tekstu — zmieniasz tresc, style, naglowki. PDF zamraza uklad strony: wyglada identycznie na kazdym urzadzeniu, idealny do faktur, umow i CV. Konwertuj DOCX -> PDF przed wyslaniem dokumentu do odczytu. Do archiwizacji i druku zawsze wybieraj PDF."
+        },
+        {
+          "title": "Wideo na social media — MP4, rozdzielczosc i bitrate",
+          "body": "Instagram, TikTok, YouTube i Facebook preferuja MP4 z kodekiem H.264 i sciezka AAC. Przed publikacja warto przekonwertowac MOV, AVI lub MKV na MP4. Rozdzielczosc 1080p wystarczy wiekszosci platform. Toolando.tech konwertuje wideo bez instalacji — szczegoly o MP4, WebM i MOV znajdziesz w encyklopedii formatow."
+        }
+      ]
     }
   }
 }

@@ -15,14 +15,14 @@ export function SiteNavbar() {
     { label: t.nav.aiTools, href: "#ai" },
     { label: t.nav.tools, href: "#narzedzia" },
     { label: t.nav.categories, href: "#kategorie" },
-    { label: t.nav.downloader, href: href("/downloader") },
-    { label: t.nav.about, href: "#o-platformie" },
+    { label: t.nav.formats, href: href("/formaty") },
+    { label: t.nav.aboutMe, href: href("/o-mnie") },
     { label: t.nav.contact, href: href("/kontakt") },
   ]
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 px-3 pt-4 sm:px-4">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between gap-2 rounded-2xl border border-white/10 bg-background/60 px-4 py-3 backdrop-blur-xl lg:gap-4">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between gap-2 overflow-hidden rounded-2xl border border-white/10 bg-background/60 px-3 py-3 backdrop-blur-xl sm:px-4 lg:gap-3">
         
         {/* Logo */}
         <a href={href("/")} className="flex shrink-0 items-center gap-2">
@@ -35,12 +35,12 @@ export function SiteNavbar() {
         </a>
 
         {/* Desktop links */}
-        <div className="hidden items-center gap-3 whitespace-nowrap min-[940px]:flex lg:gap-6 xl:gap-8">
+        <div className="hidden min-w-0 flex-1 items-center justify-center gap-2 whitespace-nowrap xl:gap-4 min-[1024px]:flex">
           {links.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="text-[13px] font-medium text-muted-foreground transition-colors hover:text-foreground lg:text-sm"
+              className="truncate text-[13px] font-medium text-muted-foreground transition-colors hover:text-foreground lg:text-sm"
             >
               {link.label}
             </a>
@@ -48,14 +48,14 @@ export function SiteNavbar() {
         </div>
 
         {/* Desktop right side */}
-        <div className="hidden items-center gap-1.5 min-[940px]:flex lg:gap-3">
+        <div className="hidden shrink-0 items-center gap-1.5 min-[1024px]:flex lg:gap-2">
           <LanguageSwitcher />
           <AccountNavButton />
-          <SupportButton />
+          <SupportButton compact />
         </div>
 
         {/* Mobile hamburger */}
-        <div className="flex items-center gap-2 min-[940px]:hidden">
+        <div className="flex shrink-0 items-center gap-2 min-[1024px]:hidden">
           <LanguageSwitcher />
           <button
             type="button"
@@ -71,7 +71,7 @@ export function SiteNavbar() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="mx-auto mt-2 max-w-7xl rounded-2xl border border-white/10 bg-background/80 p-4 backdrop-blur-xl min-[940px]:hidden">
+        <div className="mx-auto mt-2 max-w-7xl rounded-2xl border border-white/10 bg-background/80 p-4 backdrop-blur-xl min-[1024px]:hidden">
           <div className="flex flex-col gap-1">
             {links.map((link) => (
               <a
@@ -83,6 +83,20 @@ export function SiteNavbar() {
                 {link.label}
               </a>
             ))}
+            <a
+              href={href("/polityka-prywatnosci")}
+              onClick={() => setOpen(false)}
+              className="rounded-lg px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-white/5 hover:text-foreground"
+            >
+              {t.nav.privacy}
+            </a>
+            <a
+              href={href("/regulamin")}
+              onClick={() => setOpen(false)}
+              className="rounded-lg px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-white/5 hover:text-foreground"
+            >
+              {t.nav.terms}
+            </a>
             <AccountNavButton fullWidth className="mt-3" />
             <SupportButton fullWidth className="mt-2" />
           </div>

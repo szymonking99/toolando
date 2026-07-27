@@ -7,6 +7,7 @@ import { randomUUID } from "node:crypto";
 import { spawn } from "node:child_process";
 
 import type { ToolConfig } from "@/lib/tools";
+import { convertArchive } from "@/lib/archive-convert";
 
 export type ConversionResult = {
   buffer: Buffer;
@@ -75,6 +76,7 @@ const MIME: Record<string, string> = {
   otf: "font/otf",
   // archives
   zip: "application/zip",
+  rar: "application/vnd.rar",
 };
 
 function mimeFor(ext: string): string {
@@ -155,6 +157,18 @@ export async function convertFile(
         filename: outName,
         contentType: mimeFor(tool.to),
       };
+    case "archive":
+      try {
+        return {
+          buffer: await convertArchive(input, tool.from, tool.to),
+          filename: outName,
+          contentType: mimeFor(tool.to),
+        };
+      } catch (err) {
+        throw new ConversionError(
+          err instanceof Error ? err.message : "Konwersja archiwum nie powiodła się.",
+        );
+      }
     default:
       throw new ConversionError("Nieznany silnik konwersji.", 500);
   }
@@ -641,6 +655,12 @@ async function buildDocx(paragraphs: string[]): Promise<Buffer> {
 }
 
 async function convertPdfToDocx(input: Buffer): Promise<Buffer> {
+  const { tryConvertWithLibreOffice } = await import("@/lib/libreoffice-convert");
+  const viaLo = await tryConvertWithLibreOffice(input, "pdf", "docx").catch(
+    () => null,
+  );
+  if (viaLo) return viaLo;
+
   const { pdfToDocx } = await import("@/lib/document-render");
   return pdfToDocx(input);
 }
@@ -671,12 +691,22 @@ async function convertDocument(
   to: string,
 ): Promise<Buffer> {
   const pair = `${from}->${to}`;
+  const { tryConvertWithLibreOffice } = await import("@/lib/libreoffice-convert");
+
   switch (pair) {
     case "docx->pdf": {
+      const viaLo = await tryConvertWithLibreOffice(input, "docx", "pdf").catch(
+        () => null,
+      );
+      if (viaLo) return viaLo;
       const { docxToPdf } = await import("@/lib/document-render");
       return docxToPdf(input);
     }
     case "odt->docx": {
+      const viaLo = await tryConvertWithLibreOffice(input, "odt", "docx").catch(
+        () => null,
+      );
+      if (viaLo) return viaLo;
       const paragraphs = await odtToParagraphs(input);
       return buildDocx(paragraphs);
     }
@@ -696,47 +726,62 @@ async function convertDocument(
 /**
  * Resolve a usable ffmpeg binary path.
  *
- * Prefers `@ffmpeg-installer/ffmpeg`, which ships the binary as an ordinary
- * package file (no network download in a postinstall script), so it is always
- * present and gets traced into the serverless function. Falls back to
- * `ffmpeg-static`. As a safety net we ensure the file is executable, since some
- * build environments skip the permission-setting install script.
+ * Order:
+ * 1. FFMPEG_PATH env var (manual override, useful on Windows)
+ * 2. `@ffmpeg-installer/ffmpeg` (ships win32/linux/darwin binaries, no postinstall download)
+ * 3. `ffmpeg` / `ffmpeg.exe` from PATH (system install, e.g. winget/choco)
  */
 async function resolveFfmpegPath(): Promise<string | null> {
-  const candidates: string[] = [];
-
-  try {
-    const installer = (await import("@ffmpeg-installer/ffmpeg")) as {
-      path?: string;
-      default?: { path?: string };
-    };
-    const p = installer.path ?? installer.default?.path;
-    if (p) candidates.push(p);
-  } catch {
-    // package not available — fall through to ffmpeg-static
-  }
-
-  try {
-    const staticPath = (await import("ffmpeg-static")).default as
-      | string
-      | null;
-    if (staticPath) candidates.push(staticPath);
-  } catch {
-    // ignore
-  }
-
-  for (const p of candidates) {
+  const envPath = process.env.FFMPEG_PATH?.trim()
+  if (envPath) {
     try {
-      await fs.access(p);
-      // Ensure the binary is executable (install scripts are sometimes skipped).
-      await fs.chmod(p, 0o755).catch(() => {});
-      return p;
+      await fs.access(envPath)
+      return envPath
     } catch {
-      // try next candidate
+      // ignore invalid FFMPEG_PATH
     }
   }
 
-  return null;
+  try {
+    const installer = (await import("@ffmpeg-installer/ffmpeg")) as {
+      path?: string
+      default?: { path?: string }
+    }
+    const p = installer.path ?? installer.default?.path
+    if (p) {
+      try {
+        await fs.access(p)
+        if (process.platform !== "win32") {
+          await fs.chmod(p, 0o755).catch(() => {})
+        }
+        return p
+      } catch {
+        // binary missing — try PATH fallback
+      }
+    }
+  } catch {
+    // package not installed
+  }
+
+  const pathCandidates =
+    process.platform === "win32"
+      ? ["ffmpeg.exe", "ffmpeg"]
+      : ["ffmpeg"]
+
+  for (const bin of pathCandidates) {
+    if (await commandExists(bin)) return bin
+  }
+
+  return null
+}
+
+async function commandExists(command: string): Promise<boolean> {
+  return new Promise((resolve) => {
+    const checker = process.platform === "win32" ? "where" : "which"
+    const proc = spawn(checker, [command], { stdio: "ignore" })
+    proc.on("close", (code) => resolve(code === 0))
+    proc.on("error", () => resolve(false))
+  })
 }
 
 async function convertMedia(

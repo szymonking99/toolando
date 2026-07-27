@@ -7,6 +7,7 @@
     "aiTools": "AI Tools",
     "tools": "Tools",
     "categories": "Categories",
+    "formats": "Formats",
     "about": "About",
     "contact": "Contact",
     "cta": "Get started",
@@ -15,7 +16,10 @@
     "allTools": "All tools",
     "signIn": "Sign in",
     "account": "My account",
-    "downloader": "MP3 Downloader"
+    "downloader": "MP3 Downloader",
+    "aboutMe": "About me",
+    "privacy": "Privacy policy",
+    "terms": "Terms of service"
   },
   "hero": {
     "badge": "A new online tools ecosystem",
@@ -23,7 +27,63 @@
     "titleHighlight": "one place",
     "subtitle": "Converters, generators, PDF, AI — all in one ecosystem.",
     "browse": "Browse tools",
-    "learnMore": "Learn more"
+    "learnMore": "Learn more",
+    "convertCta": "Convert a file now"
+  },
+  "search": {
+    "placeholder": "Search converters (e.g. mp3 wav, pdf jpg)…",
+    "noResults": "No converters found. Try a different query."
+  },
+  "feedback": {
+    "question": "Was this article helpful?",
+    "yes": "Yes",
+    "no": "No",
+    "thanks": "Thank you for your feedback!"
+  },
+  "recommender": {
+    "title": "Which format should I choose?",
+    "subtitle": "Answer two quick questions and we'll recommend the best format.",
+    "step1": "What type of file do you have?",
+    "step2": "What do you want to do with it?",
+    "categories": {
+      "image": "Image / photo",
+      "audio": "Audio / music",
+      "video": "Video",
+      "document": "Document"
+    },
+    "goals": {
+      "image_web": "Publish on a website",
+      "image_email": "Send by email",
+      "image_print": "Print",
+      "image_iphone": "Photo from iPhone (HEIC)",
+      "audio_listen": "Listen on phone or player",
+      "audio_edit": "Edit in a DAW",
+      "audio_archive": "Archive without quality loss",
+      "video_social": "Post on social media",
+      "video_web": "Embed on a website",
+      "video_audio": "Extract audio only",
+      "document_share": "Send for reading (no editing)",
+      "document_edit": "Edit the text"
+    },
+    "resultTitle": "Recommended format:",
+    "readFormat": "Format guide",
+    "openConverter": "Open converter",
+    "back": "Back",
+    "tryAgain": "Start over",
+    "reasons": {
+      "webp-web": "WebP is 25–35% smaller than JPG at the same quality — ideal for faster websites.",
+      "jpg-email": "JPG is universal and small — perfect for email attachments.",
+      "png-print": "PNG is lossless with sharp edges — good for graphics and short-run print.",
+      "heic-jpg": "HEIC from iPhone needs conversion to JPG for compatibility with Windows and most services.",
+      "mp3-listen": "MP3 works on every device and keeps files small.",
+      "wav-edit": "WAV is lossless — best for editing without quality loss.",
+      "flac-archive": "FLAC compresses without losing quality — ideal for music archiving.",
+      "mp4-social": "MP4 (H.264 + AAC) is the standard for Instagram, TikTok, and YouTube.",
+      "webm-web": "WebM is optimized for HTML5 video in browsers.",
+      "mp3-audio": "Extract audio from your video as MP3 for podcasts or ringtones.",
+      "pdf-share": "PDF locks layout — the recipient sees exactly what you intended.",
+      "docx-edit": "DOCX lets you edit text, styles, and headings in Word."
+    }
   },
   "opener": {
     "title": "Universal file opener",
@@ -73,6 +133,24 @@
     "subtitle": "Pick a category to see all available converters.",
     "browse": "Browse"
   },
+  "toolsIndex": {
+    "intro": "Each tool converts files on the server — no software to install. Not sure which format to pick? Browse the format encyclopedia or conversion guides.",
+    "formatsLink": "Format encyclopedia",
+    "guidesLink": "Conversion guides"
+  },
+  "knowledgeHub": {
+    "title": "Format & conversion knowledge",
+    "subtitle": "Don't just convert — understand when to pick MP3 over FLAC, WebP over JPG, or PDF over DOCX. Our guides help you avoid quality loss and unnecessary conversions.",
+    "formatsTitle": "File format encyclopedia",
+    "formatsDesc": "40+ formats: audio, video, images, documents, data, and archives. Pros, cons, compatibility, and comparisons with alternatives.",
+    "formatsCta": "Browse formats",
+    "guidesTitle": "Conversion guides",
+    "guidesDesc": "Practical articles: audio quality, image compression, video for social media, PDF vs DOCX, and online file safety.",
+    "guidesCta": "Read guides",
+    "comparisonsTitle": "Format comparisons",
+    "comparisonsDesc": "MP3 vs FLAC, JPG vs WebP, PDF vs DOCX — head-to-head comparisons with a clear verdict.",
+    "comparisonsCta": "Browse comparisons"
+  },
   "why": {
     "title": "Why Toolando.tech?",
     "subtitle": "Built with your productivity and comfort in mind.",
@@ -98,7 +176,16 @@
     "rights": "© 2026 Toolando.tech. All rights reserved.",
     "aboutMe": "About me",
     "howItWorks": "How it works",
-    "faq": "FAQ"
+    "faq": "FAQ",
+    "guides": "Guides",
+    "formats": "File formats",
+    "comparisons": "Comparisons",
+    "glossary": "Glossary",
+    "cookieSettings": "Cookie settings"
+  },
+  "ad": {
+    "label": "Advertisement",
+    "placeholder": "Ad space"
   },
   "language": {
     "label": "Language"
@@ -107,10 +194,14 @@
     "eyebrow": "Support the project",
     "title": "Help keep Toolando.tech going",
     "subtitle": "Toolando.tech is built and offered for free. If it saves you time, consider supporting its development.",
+    "body1": "I maintain the service on my own — code, servers, legal content, and guides. Your support helps cover hosting (Vercel), file processing, the domain, and new tool development.",
+    "body2": "Support is entirely voluntary. Free tools require no payment. Premium is a separate optional subscription with extended features — see the Terms of Service for details.",
+    "body3": "Have a question, tool idea, or found a bug? Write to badyltech@outlook.com or use the contact form — that's valuable support too.",
+    "legalNote": "Donations do not grant Premium access or constitute a service contract unless explicitly stated otherwise. Terms and Privacy Policy apply regardless of donations.",
     "coffee": "Buy me a coffee",
     "donate": "Make a donation",
     "back": "Back to home",
-    "thanks": "Every contribution helps cover servers and keeps new tools coming."
+    "thanks": "Every contribution — financial or feedback — helps keep Toolando.tech available for everyone."
   },
   "openerPage": {
     "eyebrow": "Preview and convert",
@@ -176,7 +267,22 @@
     "less": "less",
     "resultPreview": "Result preview",
     "startOver": "Start over",
-    "processingLong": "Processing (this may take a few seconds)…"
+    "processingLong": "Processing (this may take a few seconds)…",
+    "howToTitle": "How to convert a file — step by step",
+    "aboutSource": "About the source format",
+    "aboutTarget": "About the target format",
+    "whenToUseTitle": "When to use this converter",
+    "faqTitle": "Frequently asked questions",
+    "qualityTitle": "Conversion quality — what to know",
+    "tipsTitle": "Practical tips",
+    "readFormatGuide": "Full format guide"
+  },
+  "cookieConsent": {
+    "title": "Cookies",
+    "description": "Toolando.tech uses cookies necessary for the site to work and — with your consent — analytics cookies (Google Analytics) and advertising cookies (Google AdSense). You can accept all cookies or limit yourself to essential ones.",
+    "acceptAll": "Accept all",
+    "necessaryOnly": "Essential only",
+    "privacyLink": "Privacy policy"
   },
   "aiTool": {
     "prompt": "Your text",
@@ -376,7 +482,18 @@
       "outsideP2": "Experience from repairs and working with users translates directly into how I design Toolando — simple, to the point, and with real needs in mind.",
       "contactTitle": "Contact",
       "contactP1": "Have a question, an idea for a new tool, or want to report a problem? Write to me — I'll gladly reply.",
-      "emailLabel": "Email:"
+      "emailLabel": "Email:",
+      "methodologyTitle": "How I test conversions and write guides",
+      "methodologyP1": "Every guide and format profile on Toolando.tech is based on real conversion tests — not copy-pasted specs. I upload sample files, compare output size and quality, and note which settings work best.",
+      "methodologyList": [
+        "I test converters with files of different sizes (small, medium, large).",
+        "For audio/video I compare bitrate, duration, and playback compatibility.",
+        "For images I check file size, visual quality, and transparency.",
+        "Guides are updated when formats or platform requirements change."
+      ],
+      "methodologyP2": "If you find an error in a guide or a converter that doesn't work as described, email badyltech@outlook.com — corrections help everyone.",
+      "updatedLabel": "Page last updated",
+      "updatedDate": "July 2026"
     },
     "howItWorks": {
       "eyebrow": "How it works?",
@@ -452,8 +569,10 @@
       "eyebrow": "Privacy Policy",
       "title": "Toolando.tech Privacy Policy",
       "intro": "Toolando.tech is a service providing online tools in a free and premium variant. I care about users' privacy and process data in accordance with applicable regulations, including the GDPR.",
+      "lastUpdated": "Last updated: July 23, 2026",
       "s1Title": "1. Data controller",
-      "s1Pre": "The data controller is Szymon, the owner of Toolando.tech. For privacy matters you can contact me at:",
+      "s1Pre": "The data controller is Szymon Badyl, the owner of Toolando.tech (Poland). For privacy matters you can contact me at:",
+      "s1Address": "Correspondence: badyltech@outlook.com",
       "s2Title": "2. What data is processed",
       "s2Intro": "The service processes technical and statistical data that is collected automatically while using the site:",
       "s2List": [
@@ -473,7 +592,9 @@
       "s4AnalyticsDesc": "statistical tools (e.g. Google Analytics) that help understand how the site is used, in aggregate and anonymous form.",
       "s4AdsTerm": "Advertising",
       "s4AdsDesc": "Google AdSense, which may use cookies to display and personalize ads.",
-      "s4Outro": "You can manage or disable cookies at any time in your browser settings.",
+      "s4Outro": "You can manage or disable cookies at any time in your browser settings. On your first visit we show a cookie consent banner where you can accept all cookies or limit yourself to essential ones.",
+      "s4ThirdPartyTitle": "Third-party providers",
+      "s4ThirdPartyP": "The service uses Google services (Analytics, AdSense). Google may collect data according to its own privacy policy. More information: https://policies.google.com/technologies/partner-sites",
       "s5Title": "5. Free and premium tools",
       "s5P": "Toolando provides free tools (available without an account) and premium tools. The rules for data processing and file protection are the same in both variants — they differ only in the range of features and limits.",
       "s6Title": "6. Purpose of data processing",
@@ -527,6 +648,53 @@
       "s7Pre": "For matters related to these terms you can contact me at:",
       "s8Title": "8. Changes to the terms",
       "s8P": "The terms may be updated to reflect changes in the service or in the law. The current version is always available on this page."
+    },
+    "guides": {
+      "eyebrow": "Guides",
+      "title": "File conversion guides and tutorials",
+      "intro": "Practical articles about file formats, conversion, and best practices. Each guide explains when and why to convert a file, and how to do it safely with Toolando.tech.",
+      "articles": [
+        {
+          "title": "MP3 vs WAV — when to convert audio?",
+          "body": "MP3 is a lossy compression format — files are small but some audio data is lost. WAV preserves full quality but files can be 10 times larger. Convert MP3 → WAV when you need a file for editing in a DAW (e.g. Audacity, FL Studio) or when a platform requires a lossless format. Convert WAV → MP3 when you want to email a recording, publish a podcast, or save disk space. Toolando.tech supports both conversions — just upload your file and download the result."
+        },
+        {
+          "title": "How to convert PDF to JPG for print and the web",
+          "body": "PDF is a document format that preserves page layout. Sometimes you need individual pages as images — for a website, a PowerPoint presentation, or printing a single page. The PDF → JPG converter in Toolando.tech renders each PDF page as a separate high-resolution JPG image. PDF files are never stored — they are deleted immediately after conversion. If you need transparency, consider PDF → PNG instead."
+        },
+        {
+          "title": "WebP and AVIF — modern image formats for websites",
+          "body": "JPG and PNG have dominated the web for years, but newer formats offer better compression. WebP (Google) produces files 25–35% smaller than JPG at the same visual quality and is supported by all modern browsers. AVIF goes even further — files can be half the size of WebP. Convert JPG → WebP or PNG → AVIF in Toolando.tech to speed up your website. Remember that older browsers (e.g. IE) don't support these formats — keep a JPG version as a fallback."
+        },
+        {
+          "title": "Extracting audio from video — the legal alternative",
+          "body": "Sometimes you have a video file (e.g. a camera recording, presentation) and only need the audio track. Toolando.tech lets you extract audio from MP4, MOV, AVI, MKV and other video formats, saving it as MP3, WAV, FLAC, or AAC. This is a legal operation on your own file — unlike downloading music from YouTube or TikTok, which Toolando.tech deliberately does not offer. Upload your video file, choose an audio format, and download the result."
+        },
+        {
+          "title": "JSON, CSV, and XML — converting data between formats",
+          "body": "Developers and data analysts often work with different data formats. JSON is the standard in APIs and configs. CSV and TSV are used for importing into Excel and spreadsheets. XML is used in older enterprise systems and RSS. Toolando.tech converts between these formats while preserving data structure. For example: JSON → CSV lets you open an API response in Excel, and CSV → JSON prepares data for sending to a REST API."
+        },
+        {
+          "title": "File security in online tools",
+          "body": "Uploading files to online tools naturally raises privacy concerns. At Toolando.tech, files are used solely to perform the operation you request — conversion, compression, or preview. After the job completes, files are deleted from the server. Some tools (e.g. the universal file opener) run entirely in your browser — in that case the file never leaves your computer. The connection to the site is encrypted (HTTPS). We never sell or share your files with third parties."
+        },
+        {
+          "title": "Lossy vs lossless compression — a simple guide",
+          "body": "Lossy formats (MP3, JPG, AAC, H.264) discard some data to shrink file size. Lossless formats (FLAC, PNG, WAV, ZIP) keep all data but produce larger files. Rule of thumb: only convert from lossy to lossless when you must — you won't recover lost quality. Converting lossy to lossy (e.g. JPG → JPG at lower quality) should happen once; each re-conversion degrades the result. In Toolando.tech's format encyclopedia, every format is labeled with its compression type."
+        },
+        {
+          "title": "HEIC from iPhone — how to open and convert to JPG",
+          "body": "Apple saves photos in HEIC (HEIF) by default — smaller than JPG at the same quality. The catch: Windows without an extension, older apps, and many services don't support HEIC. Solution: convert HEIC → JPG or HEIC → PNG in Toolando.tech before emailing photos, uploading to a site, or printing. You can also set iPhone to \"Most Compatible\" (JPG) in Settings, but online conversion works on photos already saved as HEIC."
+        },
+        {
+          "title": "PDF vs DOCX — which format when?",
+          "body": "DOCX (Word) is for editing text — you change content, styles, and headings. PDF locks page layout — it looks identical on every device, ideal for invoices, contracts, and CVs sent to recruiters. Convert DOCX → PDF before sending a document \"for reading only.\" Convert PDF → DOCX only when you need to edit text — layout may break. For archiving and print, always choose PDF."
+        },
+        {
+          "title": "Video for social media — MP4, resolution, and bitrate",
+          "body": "Instagram, TikTok, YouTube, and Facebook prefer MP4 with H.264 video and AAC audio. Before publishing, convert MOV, AVI, or MKV to MP4 to avoid upload errors. 1080p (1920×1080) is enough for most platforms; 4K only when the platform supports it. Higher bitrate means better quality but a larger file. Toolando.tech converts video with no install — see the format encyclopedia for details on MP4, WebM, and MOV."
+        }
+      ]
     }
   }
 }

@@ -1,0 +1,161 @@
+import type { FormatsHubMeta } from "./types"
+
+export const formatsHubPl: FormatsHubMeta = {
+  title: "Encyklopedia formatów plików",
+  intro:
+    "Poznaj formaty plików, które obsługuje Toolando.tech — dowiedz się, czym się różnią, kiedy używać MP3 a kiedy FLAC, czemu WebP jest szybszy od JPG i jak bezpiecznie konwertować pliki online. Każdy format ma własną stronę z opisem, zaletami, wadami i listą konwerterów.",
+  categoryLabels: {
+    audio: "Audio",
+    video: "Wideo",
+    image: "Obrazy",
+    document: "Dokumenty",
+    data: "Dane",
+    font: "Fonty",
+    archive: "Archiwa",
+  },
+  compressionTitle: "Typ kompresji",
+  useCasesTitle: "Kiedy używać tego formatu",
+  prosTitle: "Zalety",
+  consTitle: "Wady",
+  compatibilityTitle: "Kompatybilność",
+  faqTitle: "Najczęstsze pytania",
+  comparisonsTitle: "Porównanie z innymi formatami",
+  convertFromTitle: "Konwertuj z tego formatu",
+  convertToTitle: "Konwertuj na ten format",
+  viewFormat: "Czytaj więcej",
+  allFormats: "Wszystkie formaty",
+  basicsTitle: "Podstawy konwersji plików",
+  basicsParagraphs: [
+    "Konwersja pliku to zmiana sposobu zapisu danych — np. z WAV (bezstratny, duży) na MP3 (stratny, mały). Każda konwersja może wpływać na jakość, rozmiar i kompatybilność z programami oraz urządzeniami.",
+    "Format stratny (MP3, JPG, AAC) usuwa część informacji, aby zmniejszyć plik. Format bezstratny (FLAC, PNG, WAV) zachowuje pełne dane. Konwertując ze stratnego na bezstratny nie odzyskasz utraconej jakości — dlatego warto wybrać właściwy format od początku.",
+    "W Toolando.tech pliki są przetwarzane na serwerze i usuwane po zakończeniu operacji. Po wybraniu formatu docelowego skorzystaj z dedykowanego konwertera lub przejdź do strony formatu, aby zobaczyć wszystkie dostępne opcje konwersji.",
+  ],
+}
+
+export const formatsHubEn: FormatsHubMeta = {
+  title: "File formats encyclopedia",
+  intro:
+    "Explore the file formats Toolando.tech supports — learn the differences, when to choose MP3 vs FLAC, why WebP loads faster than JPG, and how to convert files safely online. Each format has its own page with description, pros, cons, and converter links.",
+  categoryLabels: {
+    audio: "Audio",
+    video: "Video",
+    image: "Images",
+    document: "Documents",
+    data: "Data",
+    font: "Fonts",
+    archive: "Archives",
+  },
+  compressionTitle: "Compression type",
+  useCasesTitle: "When to use this format",
+  prosTitle: "Pros",
+  consTitle: "Cons",
+  compatibilityTitle: "Compatibility",
+  faqTitle: "Frequently asked questions",
+  comparisonsTitle: "Comparison with other formats",
+  convertFromTitle: "Convert from this format",
+  convertToTitle: "Convert to this format",
+  viewFormat: "Read more",
+  allFormats: "All formats",
+  basicsTitle: "File conversion basics",
+  basicsParagraphs: [
+    "Converting a file changes how data is stored — e.g. from WAV (lossless, large) to MP3 (lossy, small). Every conversion can affect quality, file size, and compatibility with apps and devices.",
+    "Lossy formats (MP3, JPG, AAC) discard some information to shrink the file. Lossless formats (FLAC, PNG, WAV) keep all data. Converting from lossy to lossless won't recover lost quality — so pick the right format from the start.",
+    "At Toolando.tech files are processed on the server and deleted after the job completes. Once you know your target format, use the dedicated converter or open the format page to see all available conversion options.",
+  ],
+}
+
+export const formatsHubDe: FormatsHubMeta = {
+  title: "Enzyklopädie der Dateiformate",
+  intro:
+    "Entdecken Sie die Dateiformate, die Toolando.tech unterstützt — Unterschiede, wann MP3 vs FLAC, warum WebP schneller als JPG lädt, und wie Sie Dateien sicher online konvertieren.",
+  categoryLabels: {
+    audio: "Audio",
+    video: "Video",
+    image: "Bilder",
+    document: "Dokumente",
+    data: "Daten",
+    font: "Schriften",
+    archive: "Archive",
+  },
+  compressionTitle: "Kompressionstyp",
+  useCasesTitle: "Wann dieses Format verwenden",
+  prosTitle: "Vorteile",
+  consTitle: "Nachteile",
+  compatibilityTitle: "Kompatibilität",
+  faqTitle: "Häufig gestellte Fragen",
+  comparisonsTitle: "Vergleich mit anderen Formaten",
+  convertFromTitle: "Konvertieren von diesem Format",
+  convertToTitle: "Konvertieren in dieses Format",
+  viewFormat: "Mehr lesen",
+  allFormats: "Alle Formate",
+  basicsTitle: "Grundlagen der Dateikonvertierung",
+  basicsParagraphs: [
+    "Konvertierung ändert die Speicherung von Daten — z. B. von WAV (verlustfrei, groß) zu MP3 (verlustbehaftet, klein). Jede Konvertierung kann Qualität, Größe und Kompatibilität beeinflussen.",
+    "Verlustbehaftete Formate (MP3, JPG, AAC) entfernen Daten. Verlustfreie Formate (FLAC, PNG, WAV) behalten alles. Verlustbehaftet → verlustfrei stellt keine verlorene Qualität wieder her.",
+    "Bei Toolando.tech werden Dateien auf dem Server verarbeitet und danach gelöscht. Wählen Sie den Konverter oder die Formatseite für alle Optionen.",
+  ],
+}
+
+export const formatsHubEs: FormatsHubMeta = {
+  title: "Enciclopedia de formatos de archivo",
+  intro:
+    "Explore los formatos que soporta Toolando.tech — diferencias, cuándo elegir MP3 vs FLAC, por qué WebP carga más rápido que JPG, y cómo convertir archivos de forma segura.",
+  categoryLabels: {
+    audio: "Audio",
+    video: "Vídeo",
+    image: "Imágenes",
+    document: "Documentos",
+    data: "Datos",
+    font: "Fuentes",
+    archive: "Archivos comprimidos",
+  },
+  compressionTitle: "Tipo de compresión",
+  useCasesTitle: "Cuándo usar este formato",
+  prosTitle: "Ventajas",
+  consTitle: "Desventajas",
+  compatibilityTitle: "Compatibilidad",
+  faqTitle: "Preguntas frecuentes",
+  comparisonsTitle: "Comparación con otros formatos",
+  convertFromTitle: "Convertir desde este formato",
+  convertToTitle: "Convertir a este formato",
+  viewFormat: "Leer más",
+  allFormats: "Todos los formatos",
+  basicsTitle: "Fundamentos de la conversión de archivos",
+  basicsParagraphs: [
+    "Convertir un archivo cambia cómo se almacenan los datos — p. ej. de WAV (sin pérdida, grande) a MP3 (con pérdida, pequeño). Cada conversión puede afectar calidad, tamaño y compatibilidad.",
+    "Formatos con pérdida (MP3, JPG, AAC) descartan datos. Formatos sin pérdida (FLAC, PNG, WAV) conservan todo. Convertir con pérdida → sin pérdida no recupera calidad perdida.",
+    "En Toolando.tech los archivos se procesan en el servidor y se eliminan después. Use el convertidor o la página del formato para ver todas las opciones.",
+  ],
+}
+
+export const formatsHubUk: FormatsHubMeta = {
+  title: "Енциклопедія форматів файлів",
+  intro:
+    "Дізнайтеся про формати, які підтримує Toolando.tech — відмінності, коли обрати MP3 чи FLAC, чому WebP швидший за JPG, і як безпечно конвертувати файли онлайн.",
+  categoryLabels: {
+    audio: "Аудіо",
+    video: "Відео",
+    image: "Зображення",
+    document: "Документи",
+    data: "Дані",
+    font: "Шрифти",
+    archive: "Архіви",
+  },
+  compressionTitle: "Тип стиснення",
+  useCasesTitle: "Коли використовувати цей формат",
+  prosTitle: "Переваги",
+  consTitle: "Недоліки",
+  compatibilityTitle: "Сумісність",
+  faqTitle: "Часті запитання",
+  comparisonsTitle: "Порівняння з іншими форматами",
+  convertFromTitle: "Конвертувати з цього формату",
+  convertToTitle: "Конвертувати в цей формат",
+  viewFormat: "Читати далі",
+  allFormats: "Усі формати",
+  basicsTitle: "Основи конвертації файлів",
+  basicsParagraphs: [
+    "Конвертація змінює спосіб зберігання даних — напр. з WAV (без втрат, великий) на MP3 (з втратами, малий). Кожна конвертація впливає на якість, розмір і сумісність.",
+    "Формати з втратами (MP3, JPG, AAC) видаляють дані. Формати без втрат (FLAC, PNG, WAV) зберігають усе. Конвертація з втратами → без втрат не відновить якість.",
+    "У Toolando.tech файли обробляються на сервері та видаляються після операції. Оберіть конвертер або сторінку формату для всіх опцій.",
+  ],
+}

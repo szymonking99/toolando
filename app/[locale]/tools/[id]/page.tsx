@@ -20,10 +20,16 @@ import {
 } from "@/lib/i18n/tool-meta"
 import { localeHref } from "@/lib/i18n/href"
 import { AdSlot } from "@/components/ad-slot"
+import { SiteFooter } from "@/components/site-footer"
+import { ToolPageContentSection } from "@/components/tool-page-content"
+import { getToolPageContent } from "@/lib/i18n/tool-content"
 import { JsonLd } from "@/components/json-ld"
+import { buildPageMetadata } from "@/lib/seo/metadata"
 import {
   softwareApplicationSchema,
   breadcrumbSchema,
+  howToSchema,
+  faqPageSchema,
 } from "@/lib/seo/structured-data"
 
 /** Resolve a localized display name + description for any tool id. */
@@ -68,25 +74,20 @@ export async function generateMetadata({
   const dict = await getDictionary(locale)
   const text = resolveToolText(locale, id)
   if (!text) return { title: `${dict.tool.notFound} — Toolando.tech` }
+  const tool = getTool(id)
+  const pageContent = tool ? getToolPageContent(locale, tool) : null
+  const description = pageContent?.extendedDescription ?? text.description
   const title = `${text.name} — Toolando.tech`
-  return {
+  const noindex = tool ? !tool.supported : getAiTool(id) !== undefined
+  const meta = buildPageMetadata({
+    locale,
+    path: `/tools/${id}`,
     title,
-    description: text.description,
-    alternates: { canonical: `/${locale}/tools/${id}` },
-    openGraph: {
-      title,
-      description: text.description,
-      url: `/${locale}/tools/${id}`,
-      siteName: "Toolando.tech",
-      type: "website",
-      images: [{ url: "/og-image.png", width: 1200, height: 630, alt: text.name }],
-    },
-    twitter: {
-      card: "summary_large_image",
-      title,
-      description: text.description,
-      images: ["/og-image.png"],
-    },
+    description,
+  })
+  return {
+    ...meta,
+    ...(noindex ? { robots: { index: false, follow: true } } : {}),
   }
 }
 
@@ -109,20 +110,8 @@ function ToolShell({
   description: string
   children: React.ReactNode
 }) {
-  const path = `/${locale}/tools/${id}`
   return (
     <>
-      {/* Per-tool structured data: app rich card + breadcrumb trail */}
-      <JsonLd
-        data={[
-          softwareApplicationSchema({ name, description, path, locale }),
-          breadcrumbSchema([
-            { name: "Toolando.tech", path: `/${locale}` },
-            { name: toolsLabel, path: `/${locale}/tools` },
-            { name, path },
-          ]),
-        ]}
-      />
       <header className="fixed inset-x-0 top-0 z-50 px-4 pt-4">
         <nav className="mx-auto flex max-w-4xl items-center justify-between rounded-2xl border border-white/10 bg-background/60 px-5 py-3 backdrop-blur-xl">
           <Link href={localeHref(locale, "/")} className="flex items-center gap-2">
@@ -180,6 +169,21 @@ export default async function ToolPage({
     const hasPremium = currentUser ? await isUserPremium(currentUser.id) : false
     return (
       <div className="min-h-dvh">
+        <JsonLd
+          data={[
+            softwareApplicationSchema({
+              name: aiText.name,
+              description: aiText.description,
+              path: `/${locale}/tools/${id}`,
+              locale,
+            }),
+            breadcrumbSchema([
+              { name: "Toolando.tech", path: `/${locale}` },
+              { name: dict.nav.allTools, path: `/${locale}/tools` },
+              { name: aiText.name, path: `/${locale}/tools/${id}` },
+            ]),
+          ]}
+        />
         <ToolShell
           locale={locale}
           id={id}
@@ -224,6 +228,7 @@ export default async function ToolPage({
             </section>
           )}
         </ToolShell>
+        <SiteFooter />
       </div>
     )
   }
@@ -234,6 +239,21 @@ export default async function ToolPage({
     const specialText = getSpecialMeta(locale, special.id)
     return (
       <div className="min-h-dvh">
+        <JsonLd
+          data={[
+            softwareApplicationSchema({
+              name: specialText.name,
+              description: specialText.description,
+              path: `/${locale}/tools/${id}`,
+              locale,
+            }),
+            breadcrumbSchema([
+              { name: "Toolando.tech", path: `/${locale}` },
+              { name: dict.nav.allTools, path: `/${locale}/tools` },
+              { name: specialText.name, path: `/${locale}/tools/${id}` },
+            ]),
+          ]}
+        />
         <ToolShell
           locale={locale}
           id={id}
@@ -274,6 +294,7 @@ export default async function ToolPage({
             </section>
           )}
         </ToolShell>
+        <SiteFooter />
       </div>
     )
   }
@@ -286,8 +307,33 @@ export default async function ToolPage({
     .filter((t) => t.category === tool.category && t.id !== tool.id)
     .slice(0, 4)
 
+  const pageContent = getToolPageContent(locale, tool)
+  const path = `/${locale}/tools/${id}`
+
   return (
     <div className="min-h-dvh">
+      <JsonLd
+        data={[
+          softwareApplicationSchema({
+            name: tool.name,
+            description: pageContent.extendedDescription,
+            path,
+            locale,
+          }),
+          breadcrumbSchema([
+            { name: "Toolando.tech", path: `/${locale}` },
+            { name: dict.nav.allTools, path: `/${locale}/tools` },
+            { name: tool.name, path },
+          ]),
+          howToSchema({
+            name: tool.name,
+            description: pageContent.extendedDescription,
+            path,
+            steps: pageContent.steps,
+          }),
+          faqPageSchema(pageContent.faq),
+        ]}
+      />
       <ToolShell
         locale={locale}
         id={id}
@@ -295,11 +341,28 @@ export default async function ToolPage({
         backLabel={dict.tool.back}
         category={getCategoryLabel(locale, tool.category)}
         name={tool.name}
-        description={getConversionDescription(locale, tool.from, tool.to)}
+        description={pageContent.extendedDescription}
       >
         <section className="mt-8 rounded-2xl border border-white/10 bg-white/[0.03] p-6 backdrop-blur-md">
           <ToolConverter tool={tool} />
         </section>
+
+        <ToolPageContentSection
+          content={pageContent}
+          locale={locale}
+          labels={{
+            howToTitle: dict.tool.howToTitle,
+            aboutSource: dict.tool.aboutSource,
+            aboutTarget: dict.tool.aboutTarget,
+            whenToUseTitle: dict.tool.whenToUseTitle,
+            faqTitle: dict.tool.faqTitle,
+            qualityTitle: dict.tool.qualityTitle,
+            tipsTitle: dict.tool.tipsTitle,
+            readFormatGuide: dict.tool.readFormatGuide,
+          }}
+          sourceFormat={tool.from}
+          targetFormat={tool.to}
+        />
 
         {related.length > 0 && (
           <section className="mt-12">
@@ -325,6 +388,7 @@ export default async function ToolPage({
           </section>
         )}
       </ToolShell>
+      <SiteFooter />
     </div>
   )
 }

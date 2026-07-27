@@ -6,19 +6,12 @@ import path from "node:path";
 /**
  * High-fidelity document conversion helpers for the DOCX <-> PDF tools.
  *
- * The previous implementation rendered PDFs with pdf-lib's built-in Helvetica,
- * which only supports the WinAnsi character set. Every Polish diacritic
- * (ą ć ę ł ń ó ś ź ż …) was replaced with "?", and all structure (headings,
- * bold, lists) was flattened to plain text — hence the "very ugly" output.
+ * Used as a **fallback** when headless LibreOffice is not installed
+ * (`lib/libreoffice-convert.ts` is preferred for PDF↔DOCX and ODT→DOCX).
  *
- * This module:
- *   - Embeds a real Unicode font (Noto Sans, 4 weights) so any language renders
- *     correctly.
- *   - Uses mammoth to preserve DOCX structure (headings, bold/italic, lists)
- *     when producing a PDF.
- *   - Uses mupdf's structured text (paragraph blocks + per-run font metadata)
- *     to rebuild readable, well-formed DOCX from a PDF instead of one paragraph
- *     per visual line.
+ * The JS implementation renders PDFs with embedded Noto Sans and rebuilds
+ * DOCX from MuPDF structured text — workable, but layout fidelity is limited
+ * compared to LibreOffice.
  */
 
 /* ------------------------------------------------------------------ */

@@ -33,14 +33,13 @@ export function organizationSchema() {
       "@type": "ImageObject",
       url: abs("/icon.svg"),
     },
-    image: abs("/og-image.png"),
+    image: abs("/opengraph-image"),
     email: "badyltech@outlook.com",
   }
 }
 
 /**
- * WebSite — declares the site and enables the sitelinks search box by pointing
- * Google at the tools search/listing page.
+ * WebSite — declares the site identity for crawlers.
  */
 export function websiteSchema(locale: string) {
   return {
@@ -59,6 +58,29 @@ export function websiteSchema(locale: string) {
       },
       "query-input": "required name=search_term_string",
     },
+  }
+}
+
+/**
+ * HowTo — marks tool pages as step-by-step guides for rich results.
+ */
+export function howToSchema(opts: {
+  name: string
+  description: string
+  path: string
+  steps: string[]
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: opts.name,
+    description: opts.description,
+    url: abs(opts.path),
+    step: opts.steps.map((text, index) => ({
+      "@type": "HowToStep",
+      position: index + 1,
+      text,
+    })),
   }
 }
 
@@ -100,7 +122,7 @@ export function softwareApplicationSchema(opts: {
     applicationCategory: "UtilitiesApplication",
     operatingSystem: "Web browser",
     inLanguage: opts.locale,
-    image: abs("/og-image.png"),
+    image: abs("/opengraph-image"),
     offers: {
       "@type": "Offer",
       price: "0",
@@ -126,6 +148,74 @@ export function faqPageSchema(items: { q: string; a: string }[]) {
         text: item.a,
       },
     })),
+  }
+}
+
+/**
+ * Article / BlogPosting — for standalone guide and comparison pages.
+ */
+export function articleSchema(opts: {
+  title: string
+  description: string
+  path: string
+  author: string
+  published: string
+  updated: string
+  locale: string
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: opts.title,
+    description: opts.description,
+    url: abs(opts.path),
+    datePublished: opts.published,
+    dateModified: opts.updated,
+    inLanguage: opts.locale,
+    author: {
+      "@type": "Person",
+      name: opts.author,
+    },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    image: abs("/opengraph-image"),
+  }
+}
+
+/**
+ * ItemList — for hub/index pages listing articles or formats.
+ */
+export function itemListSchema(items: { name: string; path: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      url: abs(item.path),
+    })),
+  }
+}
+
+/** DefinedTerm — glossary term pages for long-tail SEO. */
+export function definedTermSchema(opts: {
+  name: string
+  description: string
+  path: string
+  locale: string
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "DefinedTerm",
+    name: opts.name,
+    description: opts.description,
+    url: abs(opts.path),
+    inLanguage: opts.locale,
+    inDefinedTermSet: {
+      "@type": "DefinedTermSet",
+      name: "Toolando.tech file conversion glossary",
+      url: abs(`/${opts.locale}/slownik`),
+    },
   }
 }
 

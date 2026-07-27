@@ -175,13 +175,11 @@ const SUPPORTED_ENGINES: ToolEngine[] = [
   "data-parser",
   "text",
   "font",
+  "archive",
 ];
 
 // Reasons for the conversions that cannot run in a serverless environment.
-const UNSUPPORTED_REASONS: Partial<Record<ToolEngine, string>> = {
-  archive:
-    "Format RAR jest zamknięty — kodowanie oraz dekodowanie RAR nie jest możliwe bez zewnętrznych, licencjonowanych narzędzi.",
-};
+const UNSUPPORTED_REASONS: Partial<Record<ToolEngine, string>> = {};
 
 export const tools: ToolConfig[] = rawTools.map((tool) => {
   const supported = SUPPORTED_ENGINES.includes(tool.engine);

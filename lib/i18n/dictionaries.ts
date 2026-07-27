@@ -1,6 +1,9 @@
 import "server-only"
 import { normalizeToSupported, fallbackLocale, type Locale } from "./config"
 import en from "@/locales/en.json"
+import { mergeLocalePack, loadLocalePack } from "./locale-packs/merge"
+import { getPagesMeta } from "./locale-packs/pages"
+import type { LocalePack } from "./locale-packs/merge"
 
 /** The shape of a translation dictionary, inferred from the English base. */
 export type Dictionary = typeof en
@@ -83,12 +86,21 @@ function mergeWithFallback<T>(base: T, override: unknown): T {
  */
 export async function getDictionary(locale: Locale): Promise<Dictionary> {
   const supported = normalizeToSupported(locale) ?? fallbackLocale
-  if (supported === fallbackLocale) return fallbackDictionary
-  const load = loaders[supported] ?? loaders[fallbackLocale]
-  try {
-    const mod = await load()
-    return mergeWithFallback(fallbackDictionary, mod.default)
-  } catch {
-    return fallbackDictionary
+  let dict: Dictionary = fallbackDictionary
+  if (supported !== fallbackLocale) {
+    const load = loaders[supported] ?? loaders[fallbackLocale]
+    try {
+      const mod = await load()
+      dict = mergeWithFallback(fallbackDictionary, mod.default)
+    } catch {
+      dict = fallbackDictionary
+    }
   }
+  const pack = await loadLocalePack(supported)
+  dict = mergeLocalePack(dict, pack)
+  const pages = getPagesMeta(supported)
+  if (pages) {
+    dict = mergeLocalePack(dict, { pages } as LocalePack)
+  }
+  return dict
 }

@@ -1,9 +1,12 @@
+import { Suspense } from "react"
 import Link from "next/link"
 import type { Metadata } from "next"
-import { ArrowRight } from "lucide-react"
+import { ArrowRight, BookOpen, FileType2 } from "lucide-react"
 import { categories, countToolsForCategory } from "@/lib/tools"
 import { SiteNavbar } from "@/components/site-navbar"
 import { SiteFooter } from "@/components/site-footer"
+import { ToolSearch } from "@/components/tool-search"
+import { buildPageMetadata } from "@/lib/seo/metadata"
 import { getDictionary } from "@/lib/i18n/dictionaries"
 import { getCategoryMeta } from "@/lib/i18n/content-meta"
 import { localeHref } from "@/lib/i18n/href"
@@ -16,11 +19,12 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params
   const dict = await getDictionary(locale)
-  return {
+  return buildPageMetadata({
+    locale,
+    path: "/tools",
     title: `${dict.nav.allTools} — Toolando.tech`,
     description: dict.categories.subtitle,
-    alternates: { canonical: `/${locale}/tools` },
-  }
+  })
 }
 
 export default async function ToolsIndexPage({
@@ -42,7 +46,30 @@ export default async function ToolsIndexPage({
           <p className="mt-4 text-pretty text-lg leading-relaxed text-muted-foreground">
             {dict.categories.subtitle}
           </p>
+          <p className="mt-3 text-pretty leading-relaxed text-muted-foreground">
+            {dict.toolsIndex.intro}
+          </p>
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-4">
+            <Link
+              href={localeHref(locale, "/formaty")}
+              className="inline-flex items-center gap-2 rounded-lg border border-white/10 bg-white/[0.04] px-4 py-2 text-sm font-medium transition-colors hover:border-primary/40 hover:bg-white/[0.08]"
+            >
+              <FileType2 className="size-4 text-primary" aria-hidden="true" />
+              {dict.toolsIndex.formatsLink}
+            </Link>
+            <Link
+              href={localeHref(locale, "/poradniki")}
+              className="inline-flex items-center gap-2 rounded-lg border border-white/10 bg-white/[0.04] px-4 py-2 text-sm font-medium transition-colors hover:border-primary/40 hover:bg-white/[0.08]"
+            >
+              <BookOpen className="size-4 text-primary" aria-hidden="true" />
+              {dict.toolsIndex.guidesLink}
+            </Link>
+          </div>
         </div>
+
+        <Suspense fallback={null}>
+          <ToolSearch className="mx-auto mt-10 max-w-xl" />
+        </Suspense>
 
         <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {categories.map((category) => {

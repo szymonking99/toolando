@@ -71,6 +71,19 @@ export default async function AboutMePage({
           </a>
         </p>
       </ContentSection>
+
+      <ContentSection title={p.methodologyTitle}>
+        <p>{p.methodologyP1}</p>
+        <ul className="list-disc space-y-2 pl-6">
+          {p.methodologyList.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
+        <p>{p.methodologyP2}</p>
+        <p className="text-sm text-muted-foreground">
+          {p.updatedLabel}: {p.updatedDate}
+        </p>
+      </ContentSection>
     </ContentPageShell>
   )
 }

@@ -15,7 +15,8 @@
     "allTools": "Alle Werkzeuge",
     "signIn": "Anmelden",
     "account": "Mein Konto",
-    "downloader": "MP3-Downloader"
+    "downloader": "MP3-Downloader",
+    "formats": "Formate"
   },
   "hero": {
     "badge": "Ein neues Ökosystem für Online-Tools",
@@ -23,7 +24,8 @@
     "titleHighlight": "einem Ort",
     "subtitle": "Konverter, Generatoren, PDF, KI — alles in einem Ökosystem.",
     "browse": "Werkzeuge durchsuchen",
-    "learnMore": "Mehr erfahren"
+    "learnMore": "Mehr erfahren",
+    "convertCta": "Datei jetzt konvertieren"
   },
   "opener": {
     "title": "Universeller Datei-Öffner",
@@ -98,7 +100,11 @@
     "rights": "© 2026 Toolando.tech. Alle Rechte vorbehalten.",
     "aboutMe": "Über mich",
     "howItWorks": "Wie es funktioniert",
-    "faq": "FAQ"
+    "faq": "FAQ",
+    "formats": "Dateiformate",
+    "comparisons": "Formatvergleiche",
+    "glossary": "Glossar",
+    "guides": "Ratgeber"
   },
   "language": {
     "label": "Sprache"
@@ -353,30 +359,41 @@
       "subject": "Anfrage von Toolando.tech"
     },
     "about": {
-      "eyebrow": "Über mich",
-      "title": "Hallo, ich bin Szymon — der Gründer von Toolando",
-      "intro": "Toolando.tech ist mein eigenes Projekt, das ich selbstständig entwickle. Von der Idee über den Code bis zu den Texten, die du gerade liest — alles entsteht in einer Hand. Ich möchte, dass einfache Aufgaben wie das Konvertieren einer Datei oder ein schnelles Online-Tool für jeden zugänglich sind, ohne Programme zu installieren und ohne unnötige Komplikationen.",
-      "whyTitle": "Warum Toolando entstanden ist",
-      "whyP1": "Ich arbeite täglich mit Computern und habe oft gesehen, wie viel Zeit Menschen für Aufgaben verlieren, die einen Moment dauern sollten — ein Dateiformat ändern, Ton aus einer Aufnahme extrahieren oder eine schnelle Operation, für die man eine zufällige Seite voller Werbung und Fallen suchen muss.",
-      "whyP2": "Toolando ist entstanden, um solche Tools an einem klaren und sicheren Ort zu bündeln. Mir ist wichtig, dass der Dienst schnell, übersichtlich und ehrlich gegenüber dem Nutzer ist — ohne Tricks und ohne versteckte Haken.",
-      "howTitle": "Wie Toolando funktioniert",
-      "howIntro": "Der Dienst stellt Online-Tools in zwei Varianten bereit: kostenlos und Premium.",
-      "howFreeTerm": "Kostenlose Tools",
-      "howFreeDesc": "für jeden verfügbar, ohne Konto. Das sind die alltäglichen, meistgenutzten Funktionen, die ich für alle offen halten möchte.",
-      "howPremiumTerm": "Premium-Tools",
-      "howPremiumDesc": "fortgeschrittenere Funktionen oder höhere Limits, die helfen, das Projekt zu erhalten und auszubauen. Premium-Einnahmen fließen direkt in Server, Entwicklung und neue Tools.",
-      "howOutro": "Unabhängig von der Variante gilt dieselbe Regel: Hochgeladene Dateien dienen ausschließlich der Durchführung der Konvertierung und werden von mir nicht gespeichert.",
-      "outsideTitle": "Was ich außerhalb von Toolando mache",
-      "outsideP1": "Ich biete IT-Dienstleistungen an — ich helfe Privatpersonen und Firmen bei alltäglichen Hardware- und Softwareproblemen.",
+      "eyebrow": "About me",
+      "title": "Hi, I'm Szymon — the creator of Toolando",
+      "intro": "Toolando.tech is my own project that I build on my own. From the idea, through the code, to the content you're reading now — it all comes from one pair of hands. I want simple tasks, like converting a file or a quick online tool, to be available to everyone, with no software to install and no needless complications.",
+      "whyTitle": "Why Toolando was created",
+      "whyP1": "I work with computers every day and I've seen many times how much time people lose on tasks that should take a moment — changing a file format, extracting audio from a recording, or a quick operation that forces you to hunt for some random site full of ads and traps.",
+      "whyP2": "Toolando was created to gather such tools in one clear and safe place. I care about the service being fast, readable, and honest toward the user — with no tricks and no hidden catches.",
+      "howTitle": "How Toolando works",
+      "howIntro": "The service provides online tools in two variants: free and premium.",
+      "howFreeTerm": "Free tools",
+      "howFreeDesc": "available to everyone, without an account. These are the everyday, most-used features that I want to keep open to all.",
+      "howPremiumTerm": "Premium tools",
+      "howPremiumDesc": "more advanced features or higher limits that help maintain and grow the project. Premium revenue goes straight to servers, development, and new tools.",
+      "howOutro": "Regardless of the variant, I stick to the same rule: uploaded files are used solely to perform the conversion and are not stored by me.",
+      "outsideTitle": "What I do beyond Toolando",
+      "outsideP1": "I provide IT services — helping individuals and companies with everyday hardware and software problems.",
       "outsideList": [
-        "Service und Reparatur von Laptops und Computern,",
-        "IT-Dienstleistungen und technischer Support,",
-        "Entwicklung von Web-Tools und Anwendungen."
+        "servicing and repairing laptops and computers,",
+        "IT services and technical support,",
+        "building web tools and applications."
       ],
-      "outsideP2": "Die Erfahrung aus der Reparatur und der Arbeit mit Nutzern fließt direkt in die Gestaltung von Toolando ein — einfach, konkret und mit Blick auf echte Bedürfnisse.",
-      "contactTitle": "Kontakt",
-      "contactP1": "Hast du eine Frage, eine Idee für ein neues Tool oder möchtest ein Problem melden? Schreib mir — ich antworte gern.",
-      "emailLabel": "E-Mail:"
+      "outsideP2": "Experience from repairs and working with users translates directly into how I design Toolando — simple, to the point, and with real needs in mind.",
+      "contactTitle": "Contact",
+      "contactP1": "Have a question, an idea for a new tool, or want to report a problem? Write to me — I'll gladly reply.",
+      "emailLabel": "Email:",
+      "methodologyTitle": "Wie ich Konvertierungen teste und Ratgeber schreibe",
+      "methodologyP1": "Jeder Ratgeber und Formatprofil auf Toolando.tech basiert auf echten Konvertierungstests — nicht auf kopierten Spezifikationen.",
+      "methodologyList": [
+        "Ich teste Konverter mit Dateien unterschiedlicher Größe.",
+        "Bei Audio/Video vergleiche ich Bitrate und Kompatibilität.",
+        "Bei Bildern prüfe ich Dateigröße und Qualität.",
+        "Ratgeber werden aktualisiert, wenn sich Formate ändern."
+      ],
+      "methodologyP2": "Fehler gefunden? Schreiben Sie an badyltech@outlook.com.",
+      "updatedLabel": "Seite zuletzt aktualisiert",
+      "updatedDate": "Juli 2026"
     },
     "howItWorks": {
       "eyebrow": "Wie funktioniert es?",
@@ -527,6 +544,79 @@
       "s7Pre": "In Angelegenheiten zu diesen Bedingungen kannst du mich erreichen unter:",
       "s8Title": "8. Änderungen der Bedingungen",
       "s8P": "Die Bedingungen können aktualisiert werden, um Änderungen im Dienst oder in der Gesetzgebung zu berücksichtigen. Die aktuelle Version ist stets auf dieser Seite verfügbar."
+    }
+  },
+  "search": {
+    "placeholder": "Konverter suchen (z.B. mp3 wav, pdf jpg)…",
+    "noResults": "Keine Konverter gefunden. Anderen Suchbegriff versuchen."
+  },
+  "feedback": {
+    "question": "War dieser Artikel hilfreich?",
+    "yes": "Ja",
+    "no": "Nein",
+    "thanks": "Danke für Ihr Feedback!"
+  },
+  "knowledgeHub": {
+    "title": "Wissen über Formate & Konvertierung",
+    "subtitle": "Nicht nur konvertieren — verstehen, wann MP3 statt FLAC, WebP statt JPG oder PDF statt DOCX.",
+    "formatsTitle": "Enzyklopädie der Dateiformate",
+    "formatsDesc": "40+ Formate mit Vor- und Nachteilen, Kompatibilität und Vergleichen.",
+    "formatsCta": "Formate durchsuchen",
+    "guidesTitle": "Konvertierungs-Ratgeber",
+    "guidesDesc": "Praktische Artikel zu Audioqualität, Bildkompression, Video für Social Media und mehr.",
+    "guidesCta": "Ratgeber lesen",
+    "comparisonsTitle": "Formatvergleiche",
+    "comparisonsDesc": "MP3 vs FLAC, JPG vs WebP, PDF vs DOCX — direkte Vergleiche mit klarem Fazit.",
+    "comparisonsCta": "Vergleiche ansehen"
+  },
+  "toolsIndex": {
+    "intro": "Jedes Tool konvertiert Dateien auf dem Server — ohne Installation. Unsicher beim Format? Enzyklopädie oder Ratgeber ansehen.",
+    "formatsLink": "Format-Enzyklopädie",
+    "guidesLink": "Konvertierungs-Ratgeber"
+  },
+  "recommender": {
+    "title": "Welches Format soll ich wählen?",
+    "subtitle": "Beantworten Sie zwei Fragen — wir empfehlen das beste Format.",
+    "step1": "Welche Art von Datei haben Sie?",
+    "step2": "Was möchten Sie damit tun?",
+    "categories": {
+      "image": "Bild / Foto",
+      "audio": "Audio / Musik",
+      "video": "Video",
+      "document": "Dokument"
+    },
+    "goals": {
+      "image_web": "Auf Website veröffentlichen",
+      "image_email": "Per E-Mail senden",
+      "image_print": "Drucken",
+      "image_iphone": "Foto vom iPhone (HEIC)",
+      "audio_listen": "Auf Handy/Player hören",
+      "audio_edit": "In DAW bearbeiten",
+      "audio_archive": "Ohne Qualitätsverlust archivieren",
+      "video_social": "In Social Media posten",
+      "video_web": "Auf Website einbetten",
+      "video_audio": "Nur Audio extrahieren",
+      "document_share": "Zum Lesen senden",
+      "document_edit": "Text bearbeiten"
+    },
+    "resultTitle": "Empfohlenes Format:",
+    "readFormat": "Format-Ratgeber",
+    "openConverter": "Konverter öffnen",
+    "back": "Zurück",
+    "tryAgain": "Neu starten",
+    "reasons": {
+      "webp-web": "WebP is 25–35% smaller than JPG at the same quality — ideal for faster websites.",
+      "jpg-email": "JPG is universal and small — perfect for email attachments.",
+      "png-print": "PNG is lossless with sharp edges — good for graphics and short-run print.",
+      "heic-jpg": "HEIC from iPhone needs conversion to JPG for compatibility with Windows and most services.",
+      "mp3-listen": "MP3 works on every device and keeps files small.",
+      "wav-edit": "WAV is lossless — best for editing without quality loss.",
+      "flac-archive": "FLAC compresses without losing quality — ideal for music archiving.",
+      "mp4-social": "MP4 (H.264 + AAC) is the standard for Instagram, TikTok, and YouTube.",
+      "webm-web": "WebM is optimized for HTML5 video in browsers.",
+      "mp3-audio": "Extract audio from your video as MP3 for podcasts or ringtones.",
+      "pdf-share": "PDF locks layout — the recipient sees exactly what you intended.",
+      "docx-edit": "DOCX lets you edit text, styles, and headings in Word."
     }
   }
 }

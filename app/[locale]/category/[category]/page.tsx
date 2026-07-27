@@ -12,7 +12,8 @@ import { getCategoryMeta } from "@/lib/i18n/content-meta"
 import { getConversionDescription } from "@/lib/i18n/tool-meta"
 import { localeHref } from "@/lib/i18n/href"
 import { JsonLd } from "@/components/json-ld"
-import { breadcrumbSchema } from "@/lib/seo/structured-data"
+import { breadcrumbSchema, faqPageSchema } from "@/lib/seo/structured-data"
+import { SiteFooter } from "@/components/site-footer"
 
 export function generateStaticParams() {
   return categories.map((c) => ({ category: c.slug }))
@@ -104,6 +105,16 @@ export default async function CategoryPage({
         <p className="mt-3 max-w-2xl text-pretty leading-relaxed text-muted-foreground">
           {cm?.description ?? meta.description}
         </p>
+        {cm?.intro && (
+          <p className="mt-4 max-w-3xl text-pretty leading-relaxed text-muted-foreground">
+            {cm.intro}
+          </p>
+        )}
+        {cm?.guide && (
+          <p className="mt-3 max-w-3xl text-pretty leading-relaxed text-muted-foreground">
+            {cm.guide}
+          </p>
+        )}
         <p className="mt-2 text-sm text-muted-foreground">
           {list.length}{" "}
           {list.length === 1
@@ -143,7 +154,25 @@ export default async function CategoryPage({
             </Link>
           ))}
         </div>
+
+        {cm?.faq && cm.faq.length > 0 && (
+          <section className="mt-16 border-t border-white/10 pt-10">
+            <JsonLd data={faqPageSchema(cm.faq)} />
+            <h2 className="text-xl font-semibold text-foreground">FAQ</h2>
+            <dl className="mt-6 space-y-6">
+              {cm.faq.map((item) => (
+                <div key={item.q}>
+                  <dt className="font-medium text-foreground">{item.q}</dt>
+                  <dd className="mt-1.5 leading-relaxed text-muted-foreground">
+                    {item.a}
+                  </dd>
+                </div>
+              ))}
+            </dl>
+          </section>
+        )}
       </main>
+      <SiteFooter />
     </div>
   )
 }
