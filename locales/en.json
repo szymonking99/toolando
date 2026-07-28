@@ -5,8 +5,8 @@
   },
   "nav": {
     "aiTools": "AI Tools",
-    "tools": "Tools",
-    "categories": "Categories",
+    "tools": "Converters",
+    "categories": "Converter categories",
     "formats": "Formats",
     "about": "About",
     "contact": "Contact",
@@ -20,7 +20,10 @@
     "aboutMe": "About me",
     "privacy": "Privacy policy",
     "terms": "Terms of service",
-    "onlineTools": "Online tools"
+    "onlineTools": "Calculators",
+    "converters": "Converters",
+    "calculators": "Calculators",
+    "developer": "Developer tools"
   },
   "hero": {
     "badge": "A new online tools ecosystem",
@@ -32,8 +35,8 @@
     "convertCta": "Convert a file now"
   },
   "search": {
-    "placeholder": "Search converters (e.g. mp3 wav, pdf jpg)…",
-    "noResults": "No converters found. Try a different query."
+    "placeholder": "Search tools (e.g. mp3 wav, currency, qr)…",
+    "noResults": "No tools found. Try a different query."
   },
   "feedback": {
     "question": "Was this article helpful?",
@@ -124,18 +127,18 @@
     "more": "More AI tools"
   },
   "features": {
-    "title": "Most popular tools",
+    "title": "Popular converters",
     "subtitle": "The most-picked Toolando.tech tools — ready to use in seconds.",
     "popularTitle": "Most popular converters",
     "popularSubtitle": "The most-used conversions — both directions, ready to go."
   },
   "categories": {
-    "title": "Tool categories",
-    "subtitle": "Pick a category to see all available converters.",
+    "title": "Converter categories",
+    "subtitle": "Audio, video, images, documents and more — all conversions in one place.",
     "browse": "Browse"
   },
   "toolsIndex": {
-    "intro": "Each tool converts files on the server — no software to install. Not sure which format to pick? Browse the format encyclopedia or conversion guides.",
+    "intro": "Pick file converters, calculators, or developer tools. Everything runs in the browser — no install.",
     "formatsLink": "Format encyclopedia",
     "guidesLink": "Conversion guides"
   },
@@ -697,5 +700,17 @@
         }
       ]
     }
+  },
+  "hub": {
+    "convertersTitle": "File converters",
+    "convertersDesc": "Audio, video, images, documents, data, fonts and archives — plus compress, merge PDF and background removal.",
+    "calculatorsTitle": "Calculators & converters",
+    "calculatorsDesc": "Currency, VAT, dates, timezones, units and bitrate.",
+    "developerTitle": "Developer & text tools",
+    "developerDesc": "Passwords, QR, Base64, UUID, hash, colors, timestamp and character counter.",
+    "specialTools": "File tools",
+    "browseConverters": "Browse converters",
+    "browseCalculators": "Browse calculators",
+    "browseDeveloper": "Browse tools"
   }
 }

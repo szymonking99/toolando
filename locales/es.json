@@ -5,8 +5,8 @@
   },
   "nav": {
     "aiTools": "Herramientas IA",
-    "tools": "Herramientas",
-    "categories": "Categorías",
+    "tools": "Convertidores",
+    "categories": "Converter categories",
     "about": "Acerca de",
     "contact": "Contacto",
     "cta": "Empezar",
@@ -17,7 +17,10 @@
     "account": "Mi cuenta",
     "downloader": "Descargar MP3",
     "formats": "Formatos",
-    "onlineTools": "Herramientas online"
+    "onlineTools": "Calculadoras",
+    "converters": "Convertidores",
+    "calculators": "Calculadoras",
+    "developer": "Para desarrolladores"
   },
   "hero": {
     "badge": "Un nuevo ecosistema de herramientas online",
@@ -619,5 +622,17 @@
       "pdf-share": "PDF locks layout — the recipient sees exactly what you intended.",
       "docx-edit": "DOCX lets you edit text, styles, and headings in Word."
     }
+  },
+  "hub": {
+    "convertersTitle": "Convertidores de archivos",
+    "convertersDesc": "Audio, video, imagenes, documentos, datos, fuentes y archivos — mas compresion, unir PDF y quitar fondo.",
+    "calculatorsTitle": "Calculadoras y conversores",
+    "calculatorsDesc": "Divisas, IVA, fechas, husos horarios, unidades y bitrate.",
+    "developerTitle": "Herramientas de desarrollador y texto",
+    "developerDesc": "Contrasenas, QR, Base64, UUID, hash, colores, timestamp y contador de caracteres.",
+    "specialTools": "Herramientas de archivos",
+    "browseConverters": "Ver convertidores",
+    "browseCalculators": "Ver calculadoras",
+    "browseDeveloper": "Ver herramientas"
   }
 }

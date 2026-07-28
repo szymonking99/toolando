@@ -5,8 +5,8 @@
   },
   "nav": {
     "aiTools": "Outils IA",
-    "tools": "Outils",
-    "categories": "Catégories",
+    "tools": "Convertisseurs",
+    "categories": "Converter categories",
     "about": "À propos",
     "contact": "Contact",
     "cta": "Commencer",
@@ -16,7 +16,10 @@
     "signIn": "Se connecter",
     "account": "Mon compte",
     "downloader": "Téléchargeur MP3",
-    "onlineTools": "Outils en ligne"
+    "onlineTools": "Calculateurs",
+    "converters": "Convertisseurs",
+    "calculators": "Calculateurs",
+    "developer": "Outils développeur"
   },
   "hero": {
     "badge": "Un nouvel écosystème d'outils en ligne",
@@ -337,5 +340,17 @@
       }
     ],
     "platformDisabled": "Le téléchargement depuis {platform} est temporairement indisponible — {platform} bloque activement les téléchargeurs, nous l'avons donc suspendu en attendant notre propre convertisseur. Les autres plateformes fonctionnent toujours."
+  },
+  "hub": {
+    "convertersTitle": "File converters",
+    "convertersDesc": "Audio, video, images, documents, data, fonts and archives — plus compress, merge PDF and background removal.",
+    "calculatorsTitle": "Calculators & converters",
+    "calculatorsDesc": "Currency, VAT, dates, timezones, units and bitrate.",
+    "developerTitle": "Developer & text tools",
+    "developerDesc": "Passwords, QR, Base64, UUID, hash, colors, timestamp and character counter.",
+    "specialTools": "File tools",
+    "browseConverters": "Browse converters",
+    "browseCalculators": "Browse calculators",
+    "browseDeveloper": "Browse tools"
   }
 }

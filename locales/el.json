@@ -5,8 +5,8 @@
   },
   "nav": {
     "aiTools": "Εργαλεία AI",
-    "tools": "Εργαλεία",
-    "categories": "Κατηγορίες",
+    "tools": "Μετατροπείς",
+    "categories": "Converter categories",
     "about": "Σχετικά",
     "contact": "Επικοινωνία",
     "cta": "Ξεκινήστε",
@@ -16,7 +16,10 @@
     "signIn": "Σύνδεση",
     "account": "Ο λογαριασμός μου",
     "downloader": "MP3 Downloader",
-    "onlineTools": "Διαδικτυακά εργαλεία"
+    "onlineTools": "Υπολογιστές",
+    "converters": "Μετατροπείς",
+    "calculators": "Υπολογιστές",
+    "developer": "Εργαλεία προγραμματιστών"
   },
   "hero": {
     "badge": "Ένα νέο οικοσύστημα διαδικτυακών εργαλείων",
@@ -337,5 +340,17 @@
       }
     ],
     "platformDisabled": "Downloading from {platform} is temporarily unavailable — {platform} actively blocks downloaders, so we've paused it until our own converter is ready. All other platforms still work."
+  },
+  "hub": {
+    "convertersTitle": "File converters",
+    "convertersDesc": "Audio, video, images, documents, data, fonts and archives — plus compress, merge PDF and background removal.",
+    "calculatorsTitle": "Calculators & converters",
+    "calculatorsDesc": "Currency, VAT, dates, timezones, units and bitrate.",
+    "developerTitle": "Developer & text tools",
+    "developerDesc": "Passwords, QR, Base64, UUID, hash, colors, timestamp and character counter.",
+    "specialTools": "File tools",
+    "browseConverters": "Browse converters",
+    "browseCalculators": "Browse calculators",
+    "browseDeveloper": "Browse tools"
   }
 }

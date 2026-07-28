@@ -5,8 +5,8 @@
   },
   "nav": {
     "aiTools": "ШІ-інструменти",
-    "tools": "Інструменти",
-    "categories": "Категорії",
+    "tools": "Конвертери",
+    "categories": "Converter categories",
     "about": "Про платформу",
     "contact": "Контакти",
     "cta": "Почати",
@@ -17,7 +17,10 @@
     "account": "Мій акаунт",
     "downloader": "Завантажити MP3",
     "formats": "Формати",
-    "onlineTools": "Онлайн-інструменти"
+    "onlineTools": "Калькулятори",
+    "converters": "Конвертери",
+    "calculators": "Калькулятори",
+    "developer": "Для розробників"
   },
   "hero": {
     "badge": "Нова екосистема онлайн-інструментів",
@@ -619,5 +622,17 @@
       "pdf-share": "PDF locks layout — the recipient sees exactly what you intended.",
       "docx-edit": "DOCX lets you edit text, styles, and headings in Word."
     }
+  },
+  "hub": {
+    "convertersTitle": "Конвертери файлів",
+    "convertersDesc": "Аудіо, відео, зображення, документи, дані, шрифти та архіви — плюс стиснення, об'єднання PDF і видалення фону.",
+    "calculatorsTitle": "Калькулятори та конвертери",
+    "calculatorsDesc": "Валюти, ПДВ, дати, часові пояси, одиниці та бітрейт.",
+    "developerTitle": "Для розробників і текст",
+    "developerDesc": "Паролі, QR, Base64, UUID, хеш, кольори, timestamp і лічильник символів.",
+    "specialTools": "Інструменти для файлів",
+    "browseConverters": "Переглянути конвертери",
+    "browseCalculators": "Переглянути калькулятори",
+    "browseDeveloper": "Переглянути інструменти"
   }
 }

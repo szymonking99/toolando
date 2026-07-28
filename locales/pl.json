@@ -5,8 +5,8 @@
   },
   "nav": {
     "aiTools": "Narzędzia AI",
-    "tools": "Narzędzia",
-    "categories": "Kategorie",
+    "tools": "Konwertery",
+    "categories": "Kategorie konwerterów",
     "formats": "Formaty",
     "about": "O platformie",
     "contact": "Kontakt",
@@ -20,7 +20,10 @@
     "aboutMe": "O mnie",
     "privacy": "Polityka prywatności",
     "terms": "Regulamin",
-    "onlineTools": "Kalkulatory"
+    "onlineTools": "Kalkulatory",
+    "converters": "Konwertery",
+    "calculators": "Kalkulatory",
+    "developer": "Dla developerów"
   },
   "hero": {
     "badge": "Nowy ekosystem narzędzi online",
@@ -32,8 +35,8 @@
     "convertCta": "Konwertuj plik teraz"
   },
   "search": {
-    "placeholder": "Szukaj konwertera (np. mp3 wav, pdf jpg)…",
-    "noResults": "Nie znaleziono konwertera. Spróbuj innego zapytania."
+    "placeholder": "Szukaj narzędzia (np. mp3 wav, waluty, qr)…",
+    "noResults": "Nie znaleziono narzędzia. Spróbuj innego zapytania."
   },
   "feedback": {
     "question": "Czy ten artykuł był pomocny?",
@@ -124,18 +127,18 @@
     "more": "Więcej narzędzi AI"
   },
   "features": {
-    "title": "Najpopularniejsze narzędzia",
+    "title": "Popularne konwertery",
     "subtitle": "Najczęściej wybierane narzędzia Toolando.tech — gotowe do użycia w kilka sekund.",
     "popularTitle": "Najpopularniejsze konwertery",
     "popularSubtitle": "Najczęściej używane konwersje — w obie strony, gotowe od razu."
   },
   "categories": {
-    "title": "Kategorie narzędzi",
-    "subtitle": "Wybierz kategorię, aby zobaczyć wszystkie dostępne konwertery.",
+    "title": "Kategorie konwerterów",
+    "subtitle": "Audio, wideo, obrazy, dokumenty i inne — wszystkie konwersje w jednym miejscu.",
     "browse": "Przeglądaj"
   },
   "toolsIndex": {
-    "intro": "Każde narzędzie konwertuje pliki po stronie serwera — bez instalacji oprogramowania. Nie wiesz, który format wybrać? Sprawdź encyklopedię formatów lub poradniki konwersji.",
+    "intro": "Wybierz konwertery plików, kalkulatory albo narzędzia dla developerów. Każde działa w przeglądarce — bez instalacji.",
     "formatsLink": "Encyklopedia formatów",
     "guidesLink": "Poradniki konwersji"
   },
@@ -697,5 +700,17 @@
         }
       ]
     }
+  },
+  "hub": {
+    "convertersTitle": "Konwertery plików",
+    "convertersDesc": "Audio, wideo, obrazy, dokumenty, dane, fonty i archiwa — plus kompresja, łączenie PDF i usuwanie tła.",
+    "calculatorsTitle": "Kalkulatory i przeliczniki",
+    "calculatorsDesc": "Waluty, VAT, daty, strefy czasowe, jednostki i bitrate.",
+    "developerTitle": "Dla developerów i tekst",
+    "developerDesc": "Hasła, QR, Base64, UUID, hash, kolory, timestamp i licznik znaków.",
+    "specialTools": "Narzędzia plików",
+    "browseConverters": "Przeglądaj konwertery",
+    "browseCalculators": "Przeglądaj kalkulatory",
+    "browseDeveloper": "Przeglądaj narzędzia"
   }
 }

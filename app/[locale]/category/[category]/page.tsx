@@ -7,9 +7,10 @@ import {
   getCategory,
   getToolsForCategory,
 } from "@/lib/tools"
+import { getSpecialsForCategory } from "@/lib/tool-hub"
 import { getDictionary } from "@/lib/i18n/dictionaries"
 import { getCategoryMeta } from "@/lib/i18n/content-meta"
-import { getConversionDescription } from "@/lib/i18n/tool-meta"
+import { getConversionDescription, getSpecialMeta } from "@/lib/i18n/tool-meta"
 import { localeHref } from "@/lib/i18n/href"
 import { JsonLd } from "@/components/json-ld"
 import { breadcrumbSchema, faqPageSchema } from "@/lib/seo/structured-data"
@@ -64,6 +65,8 @@ export default async function CategoryPage({
   const dict = await getDictionary(locale)
   const cm = getCategoryMeta(locale, category)
   const list = getToolsForCategory(category)
+  const specials = getSpecialsForCategory(category)
+  const totalCount = list.length + specials.length
 
   return (
     <div className="min-h-dvh">
@@ -89,11 +92,11 @@ export default async function CategoryPage({
             </span>
           </Link>
           <Link
-            href={localeHref(locale, "/#kategorie")}
+            href={localeHref(locale, "/tools#konwertery")}
             className="inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
           >
             <ArrowLeft className="size-4" />
-            {dict.category.allCategories}
+            {dict.nav.converters}
           </Link>
         </nav>
       </header>
@@ -116,11 +119,41 @@ export default async function CategoryPage({
           </p>
         )}
         <p className="mt-2 text-sm text-muted-foreground">
-          {list.length}{" "}
-          {list.length === 1
+          {totalCount}{" "}
+          {totalCount === 1
             ? dict.category.converterOne
             : dict.category.converterMany}
         </p>
+
+        {specials.length > 0 && (
+          <section className="mt-10">
+            <h2 className="text-lg font-semibold text-foreground">
+              {dict.hub.specialTools}
+            </h2>
+            <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {specials.map((tool) => {
+                const sm = getSpecialMeta(locale, tool.id)
+                return (
+                  <Link
+                    key={tool.id}
+                    href={localeHref(locale, `/tools/${tool.id}`)}
+                    className="group relative flex flex-col overflow-hidden rounded-2xl border border-primary/20 bg-primary/[0.04] p-5 transition-all hover:border-primary/40 hover:bg-primary/[0.07]"
+                  >
+                    <span className="text-xs font-medium uppercase tracking-wide text-primary">
+                      {sm.category}
+                    </span>
+                    <h3 className="mt-2 text-base font-semibold text-foreground">
+                      {sm.name}
+                    </h3>
+                    <p className="mt-1.5 line-clamp-2 text-sm text-muted-foreground">
+                      {sm.description}
+                    </p>
+                  </Link>
+                )
+              })}
+            </div>
+          </section>
+        )}
 
         <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {list.map((tool) => (

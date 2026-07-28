@@ -5,8 +5,8 @@
   },
   "nav": {
     "aiTools": "AI 工具",
-    "tools": "工具",
-    "categories": "分类",
+    "tools": "转换器",
+    "categories": "Converter categories",
     "about": "关于",
     "contact": "联系",
     "cta": "开始使用",
@@ -16,7 +16,10 @@
     "signIn": "登录",
     "account": "我的账户",
     "downloader": "MP3 Downloader",
-    "onlineTools": "在线工具"
+    "onlineTools": "计算器",
+    "converters": "转换器",
+    "calculators": "计算器",
+    "developer": "开发者工具"
   },
   "hero": {
     "badge": "全新的在线工具生态系统",
@@ -337,5 +340,17 @@
       }
     ],
     "platformDisabled": "Downloading from {platform} is temporarily unavailable — {platform} actively blocks downloaders, so we've paused it until our own converter is ready. All other platforms still work."
+  },
+  "hub": {
+    "convertersTitle": "File converters",
+    "convertersDesc": "Audio, video, images, documents, data, fonts and archives — plus compress, merge PDF and background removal.",
+    "calculatorsTitle": "Calculators & converters",
+    "calculatorsDesc": "Currency, VAT, dates, timezones, units and bitrate.",
+    "developerTitle": "Developer & text tools",
+    "developerDesc": "Passwords, QR, Base64, UUID, hash, colors, timestamp and character counter.",
+    "specialTools": "File tools",
+    "browseConverters": "Browse converters",
+    "browseCalculators": "Browse calculators",
+    "browseDeveloper": "Browse tools"
   }
 }

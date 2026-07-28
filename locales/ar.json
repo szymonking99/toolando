@@ -5,8 +5,8 @@
   },
   "nav": {
     "aiTools": "أدوات الذكاء الاصطناعي",
-    "tools": "الأدوات",
-    "categories": "الفئات",
+    "tools": "محولات",
+    "categories": "Converter categories",
     "about": "حول",
     "contact": "اتصل بنا",
     "cta": "ابدأ",
@@ -16,7 +16,10 @@
     "signIn": "تسجيل الدخول",
     "account": "حسابي",
     "downloader": "MP3 Downloader",
-    "onlineTools": "أدوات عبر الإنترنت"
+    "onlineTools": "حاسبات",
+    "converters": "محولات",
+    "calculators": "حاسبات",
+    "developer": "أدوات المطورين"
   },
   "hero": {
     "badge": "منظومة جديدة للأدوات عبر الإنترنت",
@@ -337,5 +340,17 @@
       }
     ],
     "platformDisabled": "Downloading from {platform} is temporarily unavailable — {platform} actively blocks downloaders, so we've paused it until our own converter is ready. All other platforms still work."
+  },
+  "hub": {
+    "convertersTitle": "File converters",
+    "convertersDesc": "Audio, video, images, documents, data, fonts and archives — plus compress, merge PDF and background removal.",
+    "calculatorsTitle": "Calculators & converters",
+    "calculatorsDesc": "Currency, VAT, dates, timezones, units and bitrate.",
+    "developerTitle": "Developer & text tools",
+    "developerDesc": "Passwords, QR, Base64, UUID, hash, colors, timestamp and character counter.",
+    "specialTools": "File tools",
+    "browseConverters": "Browse converters",
+    "browseCalculators": "Browse calculators",
+    "browseDeveloper": "Browse tools"
   }
 }

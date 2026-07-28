@@ -12,10 +12,9 @@ export function SiteNavbar() {
   const { t, href } = useI18n()
 
   const links = [
+    { label: t.nav.converters, href: href("/tools#konwertery") },
+    { label: t.nav.calculators, href: href("/tools#kalkulatory") },
     { label: t.nav.aiTools, href: href("/#ai") },
-    { label: t.nav.tools, href: href("/#narzedzia") },
-    { label: t.nav.onlineTools, href: href("/#narzedzia-online") },
-    { label: t.nav.categories, href: href("/#kategorie") },
     { label: t.nav.formats, href: href("/formaty") },
     { label: t.nav.aboutMe, href: href("/o-mnie") },
     { label: t.nav.contact, href: href("/kontakt") },

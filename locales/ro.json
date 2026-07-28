@@ -5,8 +5,8 @@
   },
   "nav": {
     "aiTools": "Instrumente AI",
-    "tools": "Instrumente",
-    "categories": "Categorii",
+    "tools": "Convertori",
+    "categories": "Converter categories",
     "about": "Despre",
     "contact": "Contact",
     "cta": "Începe",
@@ -16,7 +16,10 @@
     "signIn": "Autentificare",
     "account": "Contul meu",
     "downloader": "MP3 Downloader",
-    "onlineTools": "Instrumente online"
+    "onlineTools": "Calculatoare",
+    "converters": "Convertori",
+    "calculators": "Calculatoare",
+    "developer": "Pentru dezvoltatori"
   },
   "hero": {
     "badge": "Un nou ecosistem de instrumente online",
@@ -337,5 +340,17 @@
       }
     ],
     "platformDisabled": "Downloading from {platform} is temporarily unavailable — {platform} actively blocks downloaders, so we've paused it until our own converter is ready. All other platforms still work."
+  },
+  "hub": {
+    "convertersTitle": "File converters",
+    "convertersDesc": "Audio, video, images, documents, data, fonts and archives — plus compress, merge PDF and background removal.",
+    "calculatorsTitle": "Calculators & converters",
+    "calculatorsDesc": "Currency, VAT, dates, timezones, units and bitrate.",
+    "developerTitle": "Developer & text tools",
+    "developerDesc": "Passwords, QR, Base64, UUID, hash, colors, timestamp and character counter.",
+    "specialTools": "File tools",
+    "browseConverters": "Browse converters",
+    "browseCalculators": "Browse calculators",
+    "browseDeveloper": "Browse tools"
   }
 }

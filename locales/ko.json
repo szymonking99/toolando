@@ -5,8 +5,8 @@
   },
   "nav": {
     "aiTools": "AI 도구",
-    "tools": "도구",
-    "categories": "카테고리",
+    "tools": "변환기",
+    "categories": "Converter categories",
     "about": "소개",
     "contact": "문의",
     "cta": "시작하기",
@@ -16,7 +16,10 @@
     "signIn": "로그인",
     "account": "내 계정",
     "downloader": "MP3 Downloader",
-    "onlineTools": "온라인 도구"
+    "onlineTools": "계산기",
+    "converters": "변환기",
+    "calculators": "계산기",
+    "developer": "개발자 도구"
   },
   "hero": {
     "badge": "새로운 온라인 도구 생태계",
@@ -337,5 +340,17 @@
       }
     ],
     "platformDisabled": "Downloading from {platform} is temporarily unavailable — {platform} actively blocks downloaders, so we've paused it until our own converter is ready. All other platforms still work."
+  },
+  "hub": {
+    "convertersTitle": "File converters",
+    "convertersDesc": "Audio, video, images, documents, data, fonts and archives — plus compress, merge PDF and background removal.",
+    "calculatorsTitle": "Calculators & converters",
+    "calculatorsDesc": "Currency, VAT, dates, timezones, units and bitrate.",
+    "developerTitle": "Developer & text tools",
+    "developerDesc": "Passwords, QR, Base64, UUID, hash, colors, timestamp and character counter.",
+    "specialTools": "File tools",
+    "browseConverters": "Browse converters",
+    "browseCalculators": "Browse calculators",
+    "browseDeveloper": "Browse tools"
   }
 }

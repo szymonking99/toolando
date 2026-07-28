@@ -25,7 +25,7 @@ const features = [
 export function FeaturesSection() {
   const { t, locale, href } = useI18n()
   return (
-    <section id="narzedzia" className="relative px-4 py-24 md:py-32">
+    <section id="konwertery" className="relative px-4 py-24 md:py-32">
       <div className="mx-auto max-w-6xl">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-balance text-3xl font-semibold tracking-tight text-foreground sm:text-4xl md:text-5xl">
