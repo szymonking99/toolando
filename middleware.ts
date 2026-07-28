@@ -1,7 +1,13 @@
 import { NextResponse, type NextRequest } from "next/server"
-import { detectLocale } from "@/lib/i18n/config"
+import {
+  defaultLocale,
+  detectLocale,
+  localeFromCountry,
+  normalizeToSupported,
+} from "@/lib/i18n/config"
 
 const LOCALE_COOKIE = "toolando-locale"
+const LOCALE_MANUAL_COOKIE = "toolando-locale-manual"
 
 /**
  * Matches paths that already start with a locale-like first segment, e.g.
@@ -24,11 +30,19 @@ export function middleware(request: NextRequest) {
     return NextResponse.next()
   }
 
-  // Resolve the preferred locale: saved cookie first, then Accept-Language.
-  const cookieLocale = request.cookies.get(LOCALE_COOKIE)?.value
+  // Saved choice only when the user picked a language in the switcher.
+  const manualChoice = request.cookies.get(LOCALE_MANUAL_COOKIE)?.value === "1"
+  const cookieRaw = manualChoice
+    ? request.cookies.get(LOCALE_COOKIE)?.value
+    : undefined
+  const cookieLocale = cookieRaw ? normalizeToSupported(cookieRaw) : undefined
+
+  const country = request.headers.get("x-vercel-ip-country")
   const locale =
-    (cookieLocale && cookieLocale.trim()) ||
-    detectLocale(request.headers.get("accept-language"))
+    cookieLocale ||
+    localeFromCountry(country) ||
+    detectLocale(request.headers.get("accept-language")) ||
+    defaultLocale
 
   const url = request.nextUrl.clone()
   url.pathname = pathname === "/" ? `/${locale}` : `/${locale}${pathname}`

@@ -45,6 +45,51 @@ export type SupportedLocale = (typeof supportedLocales)[number]
 /** Fallback used when a requested language is not supported. */
 export const fallbackLocale: SupportedLocale = "en"
 
+/** Default locale for first visit (no manual choice, no Accept-Language match). */
+export const defaultLocale: SupportedLocale = "pl"
+
+/** Map ISO country code (Vercel geo) to a sensible default locale. */
+const countryLocaleMap: Record<string, SupportedLocale> = {
+  PL: "pl",
+  DE: "de",
+  AT: "de",
+  CH: "de",
+  ES: "es",
+  UA: "uk",
+  US: "en",
+  GB: "en",
+  IE: "en",
+  AU: "en",
+  CA: "en",
+  FR: "fr",
+  IT: "it",
+  PT: "pt",
+  NL: "nl",
+  SE: "sv",
+  NO: "no",
+  DK: "da",
+  FI: "fi",
+  CZ: "cs",
+  RO: "ro",
+  HU: "hu",
+  GR: "el",
+  TR: "tr",
+  RU: "ru",
+  JP: "ja",
+  KR: "ko",
+  CN: "zh",
+  TW: "zh",
+  IN: "hi",
+  ID: "id",
+}
+
+export function localeFromCountry(
+  country: string | null | undefined,
+): SupportedLocale | undefined {
+  if (!country) return undefined
+  return countryLocaleMap[country.toUpperCase()]
+}
+
 /**
  * Locales with fully translated content (legal pages, guides, etc.).
  * Other supported locales fall back to English and are excluded from the

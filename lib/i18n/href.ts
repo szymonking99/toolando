@@ -9,6 +9,8 @@ import type { Locale } from "./config"
  */
 export function localeHref(locale: Locale, href: string): string {
   if (!href.startsWith("/")) return href
+  // Home anchors: /#ai → /pl#ai
+  if (href.startsWith("/#")) return `/${locale}${href.slice(1)}`
   if (href === "/") return `/${locale}`
   return `/${locale}${href}`
 }

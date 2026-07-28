@@ -1,10 +1,10 @@
-# Uruchom konwerter z pliku .env (test ręczny).
+# Uruchom konwerter z pliku .env (test reczny).
 $ErrorActionPreference = "Stop"
 Set-Location $PSScriptRoot
 
 $envFile = Join-Path $PSScriptRoot ".env"
 if (-not (Test-Path $envFile)) {
-  Write-Host "Brak pliku .env — skopiuj: copy .env.windows.example .env" -ForegroundColor Red
+  Write-Host "Brak pliku .env - skopiuj: copy .env.windows.example .env" -ForegroundColor Red
   exit 1
 }
 

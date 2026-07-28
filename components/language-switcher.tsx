@@ -32,6 +32,7 @@ export function LanguageSwitcher({ className = "" }: { className?: string }) {
   function choose(next: Locale) {
     // Remember the choice so the "/" redirect honors it on future visits.
     document.cookie = `toolando-locale=${next}; path=/; max-age=31536000; samesite=lax`
+    document.cookie = `toolando-locale-manual=1; path=/; max-age=31536000; samesite=lax`
     // Strip the current locale segment, then prefix the newly chosen one.
     const segments = pathname.split("/")
     // segments[0] is "" (leading slash), segments[1] is the current locale.
@@ -57,7 +58,7 @@ export function LanguageSwitcher({ className = "" }: { className?: string }) {
       {open && (
         <ul
           role="listbox"
-          className="absolute right-0 z-50 mt-2 max-h-80 w-44 overflow-y-auto rounded-xl border border-white/10 bg-background/95 p-1 shadow-lg backdrop-blur-xl"
+          className="absolute right-0 z-[100] mt-2 max-h-80 w-44 overflow-y-auto rounded-xl border border-white/10 bg-background/95 p-1 shadow-lg backdrop-blur-xl"
         >
           {supportedLocales.map((code) => (
             <li key={code}>

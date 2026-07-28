@@ -12,9 +12,9 @@ export function SiteNavbar() {
   const { t, href } = useI18n()
 
   const links = [
-    { label: t.nav.aiTools, href: "#ai" },
-    { label: t.nav.tools, href: "#narzedzia" },
-    { label: t.nav.categories, href: "#kategorie" },
+    { label: t.nav.aiTools, href: href("/#ai") },
+    { label: t.nav.tools, href: href("/#narzedzia") },
+    { label: t.nav.categories, href: href("/#kategorie") },
     { label: t.nav.formats, href: href("/formaty") },
     { label: t.nav.aboutMe, href: href("/o-mnie") },
     { label: t.nav.contact, href: href("/kontakt") },
@@ -22,7 +22,7 @@ export function SiteNavbar() {
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 px-3 pt-4 sm:px-4">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between gap-2 overflow-hidden rounded-2xl border border-white/10 bg-background/60 px-3 py-3 backdrop-blur-xl sm:px-4 lg:gap-3">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between gap-2 rounded-2xl border border-white/10 bg-background/60 px-3 py-3 backdrop-blur-xl sm:px-4 lg:gap-3">
         
         {/* Logo */}
         <a href={href("/")} className="flex shrink-0 items-center gap-2">
@@ -48,14 +48,14 @@ export function SiteNavbar() {
         </div>
 
         {/* Desktop right side */}
-        <div className="hidden shrink-0 items-center gap-1.5 min-[1024px]:flex lg:gap-2">
+        <div className="relative z-[60] hidden shrink-0 items-center gap-1.5 min-[1024px]:flex lg:gap-2">
           <LanguageSwitcher />
           <AccountNavButton />
           <SupportButton compact />
         </div>
 
         {/* Mobile hamburger */}
-        <div className="flex shrink-0 items-center gap-2 min-[1024px]:hidden">
+        <div className="relative z-[60] flex shrink-0 items-center gap-2 min-[1024px]:hidden">
           <LanguageSwitcher />
           <button
             type="button"
