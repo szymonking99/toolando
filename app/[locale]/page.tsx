@@ -3,6 +3,7 @@ import { HeroSection } from "@/components/hero-section"
 import { UniversalOpenerSection } from "@/components/universal-opener-section"
 import { AiToolsSection } from "@/components/ai-tools-section"
 import { FeaturesSection } from "@/components/features-section"
+import { UtilityToolsSection } from "@/components/utility-tools-section"
 import { CategoriesSection } from "@/components/categories-section"
 import { WhySection } from "@/components/why-section"
 import { KnowledgeHubSection } from "@/components/knowledge-hub-section"
@@ -18,9 +19,9 @@ export default function Page() {
         <HeroSection />
         <UniversalOpenerSection />
         <AiToolsSection />
-        {/* Ad placement: between AI tools and the tools grid */}
         <AdSlot slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT_HOME} />
         <FeaturesSection />
+        <UtilityToolsSection />
         <CategoriesSection />
         <KnowledgeHubSection />
         <FormatRecommender />

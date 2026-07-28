@@ -14,6 +14,7 @@ export function SiteNavbar() {
   const links = [
     { label: t.nav.aiTools, href: href("/#ai") },
     { label: t.nav.tools, href: href("/#narzedzia") },
+    { label: t.nav.onlineTools, href: href("/#narzedzia-online") },
     { label: t.nav.categories, href: href("/#kategorie") },
     { label: t.nav.formats, href: href("/formaty") },
     { label: t.nav.aboutMe, href: href("/o-mnie") },

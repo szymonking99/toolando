@@ -5,10 +5,12 @@ import Link from "next/link"
 import { useSearchParams } from "next/navigation"
 import { Search } from "lucide-react"
 import { tools } from "@/lib/tools"
+import { utilityTools } from "@/lib/utility-tools"
+import { getUtilityMeta } from "@/lib/i18n/utility-meta"
 import { useI18n } from "@/components/i18n-provider"
 
 export function ToolSearch({ className }: { className?: string }) {
-  const { t, href } = useI18n()
+  const { t, href, locale } = useI18n()
   const searchParams = useSearchParams()
   const [query, setQuery] = useState("")
 
@@ -20,7 +22,8 @@ export function ToolSearch({ className }: { className?: string }) {
   const results = useMemo(() => {
     const q = query.trim().toLowerCase()
     if (q.length < 2) return []
-    return tools
+
+    const converters = tools
       .filter((tool) => tool.supported)
       .filter(
         (tool) =>
@@ -30,8 +33,27 @@ export function ToolSearch({ className }: { className?: string }) {
           tool.name.toLowerCase().includes(q) ||
           `${tool.from} ${tool.to}`.includes(q.replace(/\s+/g, " ")),
       )
-      .slice(0, 8)
-  }, [query])
+      .map((tool) => ({
+        id: tool.id,
+        title: `${tool.from.toUpperCase()} → ${tool.to.toUpperCase()}`,
+        hint: tool.category,
+      }))
+
+    const utilities = utilityTools
+      .map((tool) => {
+        const meta = getUtilityMeta(locale, tool.id)
+        return {
+          id: tool.id,
+          title: meta.name,
+          hint: meta.category,
+          haystack: `${meta.name} ${meta.description} ${tool.id}`.toLowerCase(),
+        }
+      })
+      .filter((tool) => tool.haystack.includes(q) || tool.id.includes(q))
+      .map(({ id, title, hint }) => ({ id, title, hint }))
+
+    return [...utilities, ...converters].slice(0, 10)
+  }, [query, locale])
 
   return (
     <div className={className}>
@@ -61,10 +83,8 @@ export function ToolSearch({ className }: { className?: string }) {
                 onClick={() => setQuery("")}
                 className="flex items-center justify-between px-4 py-2.5 text-sm transition-colors hover:bg-white/[0.06]"
               >
-                <span className="font-medium text-foreground">
-                  {tool.from.toUpperCase()} → {tool.to.toUpperCase()}
-                </span>
-                <span className="text-xs text-muted-foreground">{tool.category}</span>
+                <span className="font-medium text-foreground">{tool.title}</span>
+                <span className="text-xs text-muted-foreground">{tool.hint}</span>
               </Link>
             </li>
           ))}

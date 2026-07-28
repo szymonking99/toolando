@@ -77,6 +77,10 @@ const MIME: Record<string, string> = {
   // archives
   zip: "application/zip",
   rar: "application/vnd.rar",
+  "7z": "application/x-7z-compressed",
+  // spreadsheet
+  xlsx: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+  ico: "image/x-icon",
 };
 
 function mimeFor(ext: string): string {
@@ -180,10 +184,20 @@ export async function convertFile(
 
 async function convertImage(input: Buffer, to: string): Promise<Buffer> {
   const sharp = (await import("sharp")).default;
+  const target = to.toLowerCase();
+
+  if (target === "ico") {
+    const png = await sharp(input, { failOn: "none" })
+      .resize(256, 256, { fit: "inside", withoutEnlargement: false })
+      .png()
+      .toBuffer();
+    return pngToIco(png);
+  }
+
   // `animated` keeps multi-frame GIF/WebP frames where possible.
   let pipeline = sharp(input, { failOn: "none", animated: true });
 
-  switch (to.toLowerCase()) {
+  switch (target) {
     case "jpg":
     case "jpeg":
       pipeline = sharp(input, { failOn: "none" })
@@ -212,6 +226,24 @@ async function convertImage(input: Buffer, to: string): Promise<Buffer> {
   return pipeline.toBuffer();
 }
 
+/** Build a single-image ICO that embeds a PNG (Windows Vista+). */
+function pngToIco(png: Buffer): Buffer {
+  const header = Buffer.alloc(6);
+  header.writeUInt16LE(0, 0);
+  header.writeUInt16LE(1, 2);
+  header.writeUInt16LE(1, 4);
+  const entry = Buffer.alloc(16);
+  entry.writeUInt8(0, 0);
+  entry.writeUInt8(0, 1);
+  entry.writeUInt8(0, 2);
+  entry.writeUInt8(0, 3);
+  entry.writeUInt16LE(1, 4);
+  entry.writeUInt16LE(32, 6);
+  entry.writeUInt32LE(png.length, 8);
+  entry.writeUInt32LE(22, 12);
+  return Buffer.concat([header, entry, png]);
+}
+
 /* ------------------------------------------------------------------ */
 /* Data (CSV / TSV / JSON / XML / YAML)                                */
 /* ------------------------------------------------------------------ */
@@ -221,11 +253,50 @@ async function convertData(
   from: string,
   to: string,
 ): Promise<Buffer> {
+  if (from === "xlsx" || to === "xlsx") {
+    return convertSpreadsheet(input, from, to);
+  }
   const text = input.toString("utf8");
-  // Every data format is parsed into a plain JS value, then serialized to the
-  // target format. This yields a full any→any matrix through one intermediate.
   const value = await parseData(text, from);
   return serializeData(value, to);
+}
+
+async function convertSpreadsheet(
+  input: Buffer,
+  from: string,
+  to: string,
+): Promise<Buffer> {
+  const ExcelJS = (await import("exceljs")).default;
+  if (from === "csv" && to === "xlsx") {
+    const rows = dsvToRows(input.toString("utf8"), ",");
+    const wb = new ExcelJS.Workbook();
+    const ws = wb.addWorksheet("Sheet1");
+    if (rows.length > 0) {
+      const keys = Object.keys(rows[0]);
+      ws.addRow(keys);
+      for (const row of rows) ws.addRow(keys.map((k) => row[k] ?? ""));
+    }
+    const buf = await wb.xlsx.writeBuffer();
+    return Buffer.from(buf);
+  }
+  if (from === "xlsx" && to === "csv") {
+    const wb = new ExcelJS.Workbook();
+    await wb.xlsx.load(input);
+    const ws = wb.worksheets[0];
+    if (!ws) return Buffer.from("", "utf8");
+    const lines: string[] = [];
+    ws.eachRow((row) => {
+      const cells = (row.values as unknown[])
+        .slice(1)
+        .map((v) => {
+          const s = v == null ? "" : String(v);
+          return /[",\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s;
+        });
+      lines.push(cells.join(","));
+    });
+    return Buffer.from(lines.join("\n"), "utf8");
+  }
+  throw new ConversionError(`Nieobsługiwana konwersja arkusza: ${from}->${to}`);
 }
 
 async function parseData(text: string, from: string): Promise<unknown> {

@@ -11,7 +11,12 @@ import {
   hasRemoteConverter,
 } from "@/lib/remote-converter";
 
-const ARCHIVE_PAIRS = new Set(["zip->rar", "rar->zip"]);
+const ARCHIVE_PAIRS = new Set([
+  "zip->rar",
+  "rar->zip",
+  "zip->7z",
+  "7z->zip",
+]);
 
 async function commandExists(command: string): Promise<boolean> {
   return new Promise((resolve) => {
@@ -61,6 +66,45 @@ async function resolveRarPath(): Promise<string | null> {
   return null;
 }
 
+async function resolve7zPath(): Promise<string | null> {
+  const envPath = process.env.SEVEN_ZIP_PATH?.trim() || process.env.SEVENZ_PATH?.trim();
+  if (envPath) {
+    try {
+      await fs.access(envPath);
+      return envPath;
+    } catch {
+      // ignore
+    }
+  }
+
+  if (process.platform === "win32") {
+    const roots = [
+      process.env["ProgramFiles"],
+      process.env["ProgramFiles(x86)"],
+      "C:\\Program Files",
+      "C:\\Program Files (x86)",
+    ].filter(Boolean) as string[];
+
+    for (const root of roots) {
+      for (const name of ["7-Zip\\7z.exe", "7-Zip\\7za.exe"]) {
+        const candidate = path.join(root, name);
+        try {
+          await fs.access(candidate);
+          return candidate;
+        } catch {
+          // try next
+        }
+      }
+    }
+  }
+
+  for (const bin of ["7z", "7za", "7z.exe"]) {
+    if (await commandExists(bin)) return bin;
+  }
+
+  return null;
+}
+
 function runCommand(
   bin: string,
   args: string[],
@@ -101,6 +145,24 @@ async function extractZipToDir(input: Buffer, destDir: string): Promise<void> {
     const data = await entry.async("nodebuffer");
     await fs.writeFile(outPath, data);
   }
+}
+
+async function packDirToZip(workDir: string): Promise<Buffer> {
+  const JSZip = (await import("jszip")).default;
+  const zip = new JSZip();
+
+  async function walk(dir: string, prefix = "") {
+    const entries = await fs.readdir(dir, { withFileTypes: true });
+    for (const entry of entries) {
+      const rel = prefix ? `${prefix}/${entry.name}` : entry.name;
+      const full = path.join(dir, entry.name);
+      if (entry.isDirectory()) await walk(full, rel);
+      else zip.file(rel, await fs.readFile(full));
+    }
+  }
+
+  await walk(workDir);
+  return zip.generateAsync({ type: "nodebuffer", compression: "DEFLATE" });
 }
 
 async function rarToZipLocal(input: Buffer): Promise<Buffer> {
@@ -166,6 +228,42 @@ async function zipToRarLocal(input: Buffer): Promise<Buffer> {
   }
 }
 
+async function sevenZipRoundTrip(
+  input: Buffer,
+  fromExt: string,
+  toExt: string,
+): Promise<Buffer> {
+  const seven = await resolve7zPath();
+  if (!seven) {
+    throw new Error(
+      "Konwersja ZIP ↔ 7Z wymaga programu 7-Zip (lub p7zip) / serwera konwertera na VPS.",
+    );
+  }
+
+  const tmpDir = await fs.mkdtemp(path.join(os.tmpdir(), "toolando-7z-"));
+  const workDir = path.join(tmpDir, "content");
+  const inPath = path.join(tmpDir, `input.${fromExt}`);
+  const outPath = path.join(tmpDir, `output.${toExt}`);
+
+  await fs.mkdir(workDir, { recursive: true });
+  await fs.writeFile(inPath, input);
+
+  try {
+    await runCommand(seven, ["x", inPath, `-o${workDir}`, "-y"]);
+
+    if (toExt === "zip") {
+      return packDirToZip(workDir);
+    }
+
+    await runCommand(seven, ["a", "-t7z", "-y", outPath, "*"], workDir);
+    const stat = await fs.stat(outPath);
+    if (stat.size === 0) throw new Error("7-Zip wygenerował pusty plik.");
+    return await fs.readFile(outPath);
+  } finally {
+    await fs.rm(tmpDir, { recursive: true, force: true }).catch(() => {});
+  }
+}
+
 export async function convertArchive(
   input: Buffer,
   fromExt: string,
@@ -184,9 +282,7 @@ export async function convertArchive(
     }
   }
 
-  if (pair === "rar->zip") {
-    return rarToZipLocal(input);
-  }
-
-  return zipToRarLocal(input);
+  if (pair === "rar->zip") return rarToZipLocal(input);
+  if (pair === "zip->rar") return zipToRarLocal(input);
+  return sevenZipRoundTrip(input, fromExt.toLowerCase(), toExt.toLowerCase());
 }

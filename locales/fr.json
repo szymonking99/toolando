@@ -15,7 +15,8 @@
     "allTools": "Tous les outils",
     "signIn": "Se connecter",
     "account": "Mon compte",
-    "downloader": "Téléchargeur MP3"
+    "downloader": "Téléchargeur MP3",
+    "onlineTools": "Outils en ligne"
   },
   "hero": {
     "badge": "Un nouvel écosystème d'outils en ligne",

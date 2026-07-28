@@ -123,6 +123,10 @@ const rawTools: RawTool[] = [
   ...matrix("image", "sharp-image", RASTER),
   ...fanOut("image", "sharp-image", "svg", ["png", "jpg", "webp", "avif"]),
   ...fanOut("image", "sharp-image", "heic", ["jpg", "png", "webp"]),
+  make("image", "sharp-image", "png", "ico"),
+  make("image", "sharp-image", "jpg", "ico"),
+  make("image", "sharp-image", "ico", "png"),
+  make("image", "sharp-image", "ico", "jpg"),
 
   // -------------------------------------------------- PDF
   make("pdf", "pdf-image", "pdf", "png"),
@@ -147,10 +151,14 @@ const rawTools: RawTool[] = [
 
   // -------------------------------------------------- DATA (full matrix)
   ...matrix("data", "data-parser", DATA),
+  make("data", "data-parser", "csv", "xlsx"),
+  make("data", "data-parser", "xlsx", "csv"),
 
   // -------------------------------------------------- ARCHIVE
   make("archive", "archive", "zip", "rar"),
   make("archive", "archive", "rar", "zip"),
+  make("archive", "archive", "zip", "7z"),
+  make("archive", "archive", "7z", "zip"),
 
   // -------------------------------------------------- FONT
   make("font", "font", "ttf", "woff"),
@@ -209,6 +217,8 @@ export function normalizeFormat(ext: string): string {
     heif: "heic",
     weba: "ogg",
     oga: "ogg",
+    xls: "xlsx",
+    icon: "ico",
   };
   return aliases[e] ?? e;
 }

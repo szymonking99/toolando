@@ -5,13 +5,16 @@ import { ArrowLeft, Wrench } from "lucide-react"
 import { tools, getTool } from "@/lib/tools"
 import { specialTools, getSpecialTool } from "@/lib/special-tools"
 import { aiTools, getAiTool } from "@/lib/ai-tools"
+import { utilityTools, getUtilityTool } from "@/lib/utility-tools"
 import { ToolConverter } from "@/components/tool-converter"
 import { SpecialTool } from "@/components/special-tool"
 import { AiTool } from "@/components/ai-tool"
+import { UtilityTool } from "@/components/utility/utility-tool"
 import { PremiumPaywall } from "@/components/premium-paywall"
 import { getCurrentUser, isUserPremium } from "@/lib/user"
 import { getDictionary } from "@/lib/i18n/dictionaries"
 import { getAiMeta } from "@/lib/i18n/ai-meta"
+import { getUtilityMeta } from "@/lib/i18n/utility-meta"
 import {
   getCategoryLabel,
   getConversionDescription,
@@ -37,6 +40,11 @@ function resolveToolText(
   locale: string,
   id: string,
 ): { name: string; description: string } | undefined {
+  const utility = getUtilityTool(id)
+  if (utility) {
+    const meta = getUtilityMeta(locale, utility.id)
+    return { name: meta.name, description: meta.description }
+  }
   const special = getSpecialTool(id)
   if (special) {
     const meta = getSpecialMeta(locale, special.id)
@@ -62,6 +70,7 @@ export function generateStaticParams() {
     ...tools.map((tool) => ({ id: tool.id })),
     ...specialTools.map((tool) => ({ id: tool.id })),
     ...aiTools.map((tool) => ({ id: tool.id })),
+    ...utilityTools.map((tool) => ({ id: tool.id })),
   ]
 }
 
@@ -224,6 +233,104 @@ export default async function ToolPage({
                     </span>
                   </Link>
                 ))}
+              </div>
+            </section>
+          )}
+        </ToolShell>
+        <SiteFooter />
+      </div>
+    )
+  }
+
+  const utility = getUtilityTool(id)
+  if (utility) {
+    const meta = getUtilityMeta(locale, utility.id)
+    const related = utilityTools.filter((t) => t.id !== utility.id).slice(0, 6)
+    const path = `/${locale}/tools/${id}`
+    return (
+      <div className="min-h-dvh">
+        <JsonLd
+          data={[
+            softwareApplicationSchema({
+              name: meta.name,
+              description: meta.description,
+              path,
+              locale,
+            }),
+            breadcrumbSchema([
+              { name: "Toolando.tech", path: `/${locale}` },
+              { name: dict.nav.allTools, path: `/${locale}/tools` },
+              { name: meta.name, path },
+            ]),
+            howToSchema({
+              name: meta.name,
+              description: meta.description,
+              path,
+              steps: meta.steps,
+            }),
+            faqPageSchema(meta.faq),
+          ]}
+        />
+        <ToolShell
+          locale={locale}
+          id={id}
+          toolsLabel={dict.nav.allTools}
+          backLabel={dict.tool.back}
+          category={meta.category}
+          name={meta.name}
+          description={meta.description}
+        >
+          <section className="mt-8 rounded-2xl border border-white/10 bg-white/[0.03] p-6 backdrop-blur-md">
+            <UtilityTool tool={utility} />
+          </section>
+
+          <section className="mt-10 space-y-6">
+            <div>
+              <h2 className="text-lg font-semibold text-foreground">
+                {dict.tool.howToTitle}
+              </h2>
+              <ol className="mt-3 list-decimal space-y-2 pl-5 text-sm text-muted-foreground">
+                {meta.steps.map((step) => (
+                  <li key={step}>{step}</li>
+                ))}
+              </ol>
+            </div>
+            <div>
+              <h2 className="text-lg font-semibold text-foreground">
+                {dict.tool.faqTitle}
+              </h2>
+              <dl className="mt-3 space-y-4">
+                {meta.faq.map((item) => (
+                  <div key={item.q}>
+                    <dt className="text-sm font-medium text-foreground">{item.q}</dt>
+                    <dd className="mt-1 text-sm text-muted-foreground">{item.a}</dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+          </section>
+
+          {related.length > 0 && (
+            <section className="mt-12">
+              <h2 className="text-lg font-semibold text-foreground">
+                {dict.tool.otherTools}
+              </h2>
+              <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                {related.map((t) => {
+                  const m = getUtilityMeta(locale, t.id)
+                  return (
+                    <Link
+                      key={t.id}
+                      href={localeHref(locale, `/tools/${t.id}`)}
+                      className="group flex items-center justify-between rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 transition-colors hover:border-primary/40 hover:bg-white/[0.06]"
+                    >
+                      <span className="text-sm font-medium text-foreground">
+                        {m.name}
+                      </span>
+                      <span className="text-xs text-muted-foreground">{m.category}</span>
+                    </Link>
+                  )
+                })}
               </div>
             </section>
           )}

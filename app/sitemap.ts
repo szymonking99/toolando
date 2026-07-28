@@ -8,6 +8,7 @@ import { languageAlternates } from "@/lib/seo/alternates"
 import { SITE_URL } from "@/lib/seo/structured-data"
 import { categories, tools } from "@/lib/tools"
 import { specialTools } from "@/lib/special-tools"
+import { utilityTools } from "@/lib/utility-tools"
 
 /**
  * Static (non-parameterized) paths that exist for every locale, with a search
@@ -42,6 +43,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const toolIds = [
     ...tools.filter((t) => t.supported).map((t) => t.id),
     ...specialTools.map((t) => t.id),
+    ...utilityTools.map((t) => t.id),
   ]
 
   const entries: MetadataRoute.Sitemap = []

@@ -14,7 +14,7 @@ const DOC_PAIRS = new Set([
   "pdf->odt",
 ])
 
-const ARCHIVE_PAIRS = new Set(["zip->rar", "rar->zip"])
+const ARCHIVE_PAIRS = new Set(["zip->rar", "rar->zip", "zip->7z", "7z->zip"])
 
 function convertFilter(toExt) {
   switch (toExt.toLowerCase()) {
@@ -171,16 +171,20 @@ export async function convertArchive(input, fromExt, toExt) {
   await fs.writeFile(inPath, input)
 
   try {
-    if (pair === "rar->zip") {
-      await runCommand(resolve7zPath(), ["x", inPath, `-o${workDir}`, "-y"])
+    await runCommand(resolve7zPath(), ["x", inPath, `-o${workDir}`, "-y"])
+
+    if (toExt.toLowerCase() === "zip") {
       await runCommand("zip", ["-r", "-q", outPath, "."], workDir)
-    } else {
-      await runCommand(resolve7zPath(), ["x", inPath, `-o${workDir}`, "-y"])
+    } else if (toExt.toLowerCase() === "7z") {
+      await runCommand(resolve7zPath(), ["a", "-t7z", "-y", outPath, "*"], workDir)
+    } else if (toExt.toLowerCase() === "rar") {
       await runCommand(
         resolveRarPath(),
         ["a", "-r", "-ep1", "-y", "-idq", outPath, "*"],
         workDir,
       )
+    } else {
+      throw new Error(`Unsupported archive target: ${toExt}`)
     }
 
     const stat = await fs.stat(outPath)

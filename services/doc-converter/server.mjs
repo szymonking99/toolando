@@ -46,7 +46,7 @@ app.get("/health", async (_req, res) => {
     ok: true,
     service: "toolando-doc-converter",
     libreoffice: version,
-    archives: ["zip->rar", "rar->zip"],
+    archives: ["zip->rar", "rar->zip", "zip->7z", "7z->zip"],
   })
 })
 
