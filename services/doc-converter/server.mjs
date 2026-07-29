@@ -2,6 +2,7 @@ import express from "express"
 import multer from "multer"
 import dotenv from "dotenv"
 import { spawn } from "node:child_process"
+import { promises as fs } from "node:fs"
 import path from "node:path"
 import { fileURLToPath } from "node:url"
 import {
@@ -133,19 +134,63 @@ function schedulePm2Restart() {
   }, 750)
 }
 
+function lastSyncPath() {
+  return path.join(TOOLANDO_ROOT, "logs", "last-sync.json")
+}
+
+async function readLastSync() {
+  try {
+    const raw = await fs.readFile(lastSyncPath(), "utf8")
+    return JSON.parse(raw)
+  } catch {
+    return null
+  }
+}
+
+async function writeLastSync(payload) {
+  try {
+    const dir = path.join(TOOLANDO_ROOT, "logs")
+    await fs.mkdir(dir, { recursive: true })
+    await fs.writeFile(
+      lastSyncPath(),
+      JSON.stringify({ ...payload, at: new Date().toISOString() }, null, 2),
+      "utf8",
+    )
+  } catch (err) {
+    console.error("[doc-converter] failed to write last-sync.json", err)
+  }
+}
+
+const startedAt = new Date().toISOString()
+
 app.get("/health", async (_req, res) => {
   const version = await getLibreOfficeVersion()
+  const lastSync = await readLastSync()
   res.json({
     ok: true,
     service: "toolando-doc-converter",
     libreoffice: version,
     archives: ["zip->rar", "rar->zip", "zip->7z", "7z->zip"],
+    startedAt,
+    syncConfigured: Boolean(DEPLOY_SYNC_SECRET),
+    lastSync,
   })
+})
+
+app.post("/hooks/restart", authorizeDeploySync, async (_req, res) => {
+  res.json({ ok: true, restarted: true, app: PM2_APP_NAME })
+  schedulePm2Restart()
 })
 
 app.post("/hooks/sync", authorizeDeploySync, async (_req, res) => {
   try {
     const result = await runSyncScript()
+    await writeLastSync({
+      ok: true,
+      commit: result.commit,
+      backup: result.backup || null,
+      root: result.root || TOOLANDO_ROOT,
+    })
     res.json({
       ok: true,
       commit: result.commit,
@@ -156,6 +201,10 @@ app.post("/hooks/sync", authorizeDeploySync, async (_req, res) => {
     schedulePm2Restart()
   } catch (err) {
     console.error("[doc-converter] sync failed", err)
+    await writeLastSync({
+      ok: false,
+      error: err instanceof Error ? err.message : "Sync failed",
+    })
     res.status(500).json({
       ok: false,
       error: err instanceof Error ? err.message : "Sync failed",

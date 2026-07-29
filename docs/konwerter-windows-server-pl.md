@@ -254,6 +254,30 @@ Log: `F:\Toolando\logs\sync.log`. Backupy: `F:\Toolando\backups\`.
 
 Workflow: `.github/workflows/sync-windows-converter.yml` (każdy push na `main` albo ręczne **Run workflow**).
 
+### Restart bez pełnego sync
+
+Gdy wgrałeś pliki ręcznie (bez gita):
+
+```powershell
+curl.exe -X POST https://converter.toolando.tech/hooks/restart `
+  -H "Authorization: Bearer TWÓJ_DEPLOY_SYNC_SECRET" `
+  -H "Content-Type: application/json" `
+  -d "{}"
+```
+
+Albo lokalnie na serwerze: `pm2 restart toolando-converter`.
+
+`GET /health` zwraca też `lastSync` (z `F:\Toolando\logs\last-sync.json`) oraz `startedAt`.
+
+### Autostart po restarcie Windows
+
+```powershell
+pm2 startup
+pm2 save
+Get-Service cloudflared
+# cloudflared powinien być usługą Windows (zainstalowaną z tokenem)
+```
+
 ### Przywracanie z backupu
 
 ```powershell

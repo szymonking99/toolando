@@ -176,13 +176,16 @@ try {
   }
 
   Write-Log "=== sync ok ($commit) backup=$backupPath ==="
-  @{
+  $syncMeta = @{
     ok        = $true
     commit    = $commit
     root      = $RepoRoot
     backup    = $backupPath
     restarted = $false
-  } | ConvertTo-Json -Compress
+    at        = (Get-Date).ToUniversalTime().ToString("o")
+  }
+  ($syncMeta | ConvertTo-Json -Compress) | Set-Content -Path (Join-Path $LogDir "last-sync.json") -Encoding UTF8
+  $syncMeta | ConvertTo-Json -Compress
   exit 0
 }
 catch {
