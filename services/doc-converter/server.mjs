@@ -1,6 +1,9 @@
 import express from "express"
 import multer from "multer"
 import dotenv from "dotenv"
+import { spawn } from "node:child_process"
+import path from "node:path"
+import { fileURLToPath } from "node:url"
 import {
   convertArchive,
   convertDocument,
@@ -9,8 +12,12 @@ import {
 
 dotenv.config()
 
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const PORT = Number(process.env.PORT || 8080)
 const SECRET = process.env.CONVERTER_SECRET?.trim()
+const DEPLOY_SYNC_SECRET = process.env.DEPLOY_SYNC_SECRET?.trim()
+const TOOLANDO_ROOT = process.env.TOOLANDO_ROOT?.trim() || "F:\\Toolando"
+const PM2_APP_NAME = process.env.PM2_APP_NAME?.trim() || "toolando-converter"
 const MAX_BYTES = Number(process.env.MAX_UPLOAD_MB || 50) * 1024 * 1024
 
 const upload = multer({
@@ -29,15 +36,101 @@ function enqueue(task) {
   return run
 }
 
+function bearerToken(req) {
+  const header = req.headers.authorization || ""
+  return header.startsWith("Bearer ") ? header.slice(7) : ""
+}
+
 function authorize(req, res, next) {
   if (!SECRET) return next()
-  const header = req.headers.authorization || ""
-  const token = header.startsWith("Bearer ") ? header.slice(7) : ""
-  if (token !== SECRET) {
+  if (bearerToken(req) !== SECRET) {
     res.status(401).json({ error: "Unauthorized" })
     return
   }
   next()
+}
+
+function authorizeDeploySync(req, res, next) {
+  if (!DEPLOY_SYNC_SECRET) {
+    res.status(503).json({ error: "DEPLOY_SYNC_SECRET is not configured" })
+    return
+  }
+  if (bearerToken(req) !== DEPLOY_SYNC_SECRET) {
+    res.status(401).json({ error: "Unauthorized" })
+    return
+  }
+  next()
+}
+
+function runSyncScript() {
+  const scriptPath = path.join(__dirname, "sync-from-git.ps1")
+  return new Promise((resolve, reject) => {
+    const proc = spawn(
+      "powershell.exe",
+      [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        scriptPath,
+        "-RepoRoot",
+        TOOLANDO_ROOT,
+      ],
+      {
+        windowsHide: true,
+        env: { ...process.env, TOOLANDO_ROOT },
+      },
+    )
+
+    let stdout = ""
+    let stderr = ""
+    proc.stdout.on("data", (chunk) => {
+      stdout += chunk.toString()
+    })
+    proc.stderr.on("data", (chunk) => {
+      stderr += chunk.toString()
+    })
+    proc.on("error", reject)
+    proc.on("close", (code) => {
+      const lines = stdout
+        .split(/\r?\n/)
+        .map((l) => l.trim())
+        .filter(Boolean)
+      const jsonLine = [...lines].reverse().find((l) => l.startsWith("{"))
+      let parsed = null
+      if (jsonLine) {
+        try {
+          parsed = JSON.parse(jsonLine)
+        } catch {
+          parsed = null
+        }
+      }
+
+      if (code === 0 && parsed?.ok) {
+        resolve(parsed)
+        return
+      }
+
+      const message =
+        parsed?.error ||
+        stderr.trim() ||
+        stdout.trim() ||
+        `sync-from-git.ps1 exited with code ${code}`
+      reject(new Error(message))
+    })
+  })
+}
+
+function schedulePm2Restart() {
+  setTimeout(() => {
+    const proc = spawn("pm2", ["restart", PM2_APP_NAME], {
+      windowsHide: true,
+      detached: true,
+      stdio: "ignore",
+      shell: true,
+    })
+    proc.unref()
+  }, 750)
 }
 
 app.get("/health", async (_req, res) => {
@@ -48,6 +141,26 @@ app.get("/health", async (_req, res) => {
     libreoffice: version,
     archives: ["zip->rar", "rar->zip", "zip->7z", "7z->zip"],
   })
+})
+
+app.post("/hooks/sync", authorizeDeploySync, async (_req, res) => {
+  try {
+    const result = await runSyncScript()
+    res.json({
+      ok: true,
+      commit: result.commit,
+      root: result.root || TOOLANDO_ROOT,
+      backup: result.backup || null,
+      restarted: true,
+    })
+    schedulePm2Restart()
+  } catch (err) {
+    console.error("[doc-converter] sync failed", err)
+    res.status(500).json({
+      ok: false,
+      error: err instanceof Error ? err.message : "Sync failed",
+    })
+  }
 })
 
 app.post(
@@ -74,7 +187,11 @@ app.post(
       }
 
       const pair = `${from}->${to}`
-      const isArchive = pair === "zip->rar" || pair === "rar->zip"
+      const isArchive =
+        pair === "zip->rar" ||
+        pair === "rar->zip" ||
+        pair === "zip->7z" ||
+        pair === "7z->zip"
 
       const result = await enqueue(() =>
         isArchive
@@ -114,6 +231,8 @@ function mimeFor(ext) {
       return "application/zip"
     case "rar":
       return "application/vnd.rar"
+    case "7z":
+      return "application/x-7z-compressed"
     default:
       return "application/octet-stream"
   }

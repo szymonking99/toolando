@@ -196,6 +196,78 @@ pm2 logs toolando-converter
 
 ---
 
+## KROK 10 — Auto-sync całego kodu + kopie zapasowe (`F:\Toolando`)
+
+Vercel **nie** wysyła plików do domu. Po **każdym** `push` na `main` GitHub Action woła
+`POST https://converter.toolando.tech/hooks/sync`. Serwer:
+
+1. robi **kopię zapasową** aktualnego drzewa do `F:\Toolando\backups\toolando-YYYYMMDD-HHMMSS-<commit>\`
+2. ściąga **całe repo** z GitHub (`git fetch` + `reset --hard origin/main`)
+3. `npm install` w konwerterze i restart PM2
+
+Trzymane są ostatnie **10** backupów (konfiguracja: `SYNC_BACKUP_KEEP`).  
+Z backupu wyłączone: `node_modules`, `.next`, `.git`, `backups`, `logs` (żeby nie puchło).  
+Lokalny `.env` konwertera jest zachowywany i też kopiowany do snapshotu.
+
+### Wymagania
+
+1. **Git** zainstalowany na Windows Server
+2. `F:\Toolando` to klon repozytorium (nie tylko skopiowany folder):
+
+```powershell
+# Jeśli folder już istnieje bez .git — zrób świeży klon obok albo:
+cd F:\
+# przykład: przenieś stare pliki, potem:
+git clone https://github.com/szymonking99/toolando.git Toolando
+# przywróć services\doc-converter\.env
+```
+
+3. W `F:\Toolando\services\doc-converter\.env` dodaj:
+
+```
+DEPLOY_SYNC_SECRET=inny-losowy-sekret-min-32-znaki
+TOOLANDO_ROOT=F:\Toolando
+PM2_APP_NAME=toolando-converter
+SYNC_BACKUP_KEEP=10
+```
+
+4. Restart konwertera: `pm2 restart toolando-converter`
+
+5. W GitHub → repo → **Settings → Secrets and variables → Actions**:
+
+| Secret | Wartość |
+|--------|---------|
+| `CONVERTER_SYNC_URL` | `https://converter.toolando.tech/hooks/sync` |
+| `CONVERTER_SYNC_SECRET` | ten sam co `DEPLOY_SYNC_SECRET` |
+
+### Test ręczny
+
+```powershell
+curl -X POST https://converter.toolando.tech/hooks/sync `
+  -H "Authorization: Bearer TWÓJ_DEPLOY_SYNC_SECRET" `
+  -H "Content-Type: application/json" `
+  -d "{}"
+```
+
+Oczekiwane: JSON z `"ok": true`, hashem commita i ścieżką `"backup"`.  
+Log: `F:\Toolando\logs\sync.log`. Backupy: `F:\Toolando\backups\`.
+
+Workflow: `.github/workflows/sync-windows-converter.yml` (każdy push na `main` albo ręczne **Run workflow**).
+
+### Przywracanie z backupu
+
+```powershell
+# przykład — dostosuj nazwę folderu
+$bak = "F:\Toolando\backups\toolando-20260729-153000-abc1234"
+robocopy $bak F:\Toolando /E /XD node_modules .next .git backups logs
+# przywróć .env jeśli trzeba, potem:
+cd F:\Toolando\services\doc-converter
+npm install
+pm2 restart toolando-converter
+```
+
+---
+
 ## Rozwiązywanie problemów
 
 | Problem | Co zrobić |
@@ -205,14 +277,21 @@ pm2 logs toolando-converter
 | Timeout | Zwiększ `DOC_CONVERTER_TIMEOUT_MS` do `180000` |
 | Tunel padł | Uruchom ponownie `cloudflared` i zaktualizuj URL w Vercel |
 | Po restarcie serwera nie działa | `pm2 status` — jeśli stopped: `pm2 restart toolando-converter` |
+| Sync `not a git repository` | Zrób `git clone` do `F:\Toolando` (KROK 10) |
+| Sync `DEPLOY_SYNC_SECRET is not configured` | Dopisz sekret do `.env` i zrestartuj PM2 |
+| Sync Action failed / timeout | Sprawdź Secrets, tunel Healthy, `logs\sync.log`; backup+pull może trwać kilka minut |
+| Brak miejsca na dysku | Zmniejsz `SYNC_BACKUP_KEEP` albo przenieś `SYNC_BACKUP_DIR` na inny dysk |
 
 ---
 
 ## Aktualizacja po zmianach w kodzie
 
+**Automatycznie:** każdy push na `main` → GitHub Action → backup + pełny sync + `/hooks/sync`.
+
+**Ręcznie:**
+
 ```powershell
-cd C:\Toolando\doc-converter
-# skopiuj nowe pliki z repo
-npm install
+cd F:\Toolando\services\doc-converter
+powershell -NoProfile -ExecutionPolicy Bypass -File .\sync-from-git.ps1 -RepoRoot F:\Toolando
 pm2 restart toolando-converter
 ```

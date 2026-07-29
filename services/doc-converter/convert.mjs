@@ -43,6 +43,7 @@ function runLibreOffice(bin, args) {
   return new Promise((resolve, reject) => {
     const proc = spawn(bin, args, {
       env: { ...process.env, SAL_DISABLE_OPENCL: "1" },
+      windowsHide: true,
     })
 
     let logs = ""
@@ -63,7 +64,7 @@ function runLibreOffice(bin, args) {
 export async function getLibreOfficeVersion() {
   const bin = resolveLibreOfficePath()
   return new Promise((resolve) => {
-    const proc = spawn(bin, ["--version"])
+    const proc = spawn(bin, ["--version"], { windowsHide: true })
     let out = ""
     proc.stdout.on("data", (d) => {
       out += d.toString()
@@ -141,6 +142,7 @@ function runCommand(bin, args, cwd) {
     const proc = spawn(bin, args, {
       cwd,
       stdio: ["ignore", "ignore", "pipe"],
+      windowsHide: true,
     })
 
     let stderr = ""

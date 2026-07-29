@@ -1,0 +1,33 @@
+name: Sync Windows Toolando
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Trigger full repo sync + backup on Windows server
+        env:
+          CONVERTER_SYNC_URL: ${{ secrets.CONVERTER_SYNC_URL }}
+          CONVERTER_SYNC_SECRET: ${{ secrets.CONVERTER_SYNC_SECRET }}
+        run: |
+          set -euo pipefail
+          if [ -z "${CONVERTER_SYNC_URL:-}" ] || [ -z "${CONVERTER_SYNC_SECRET:-}" ]; then
+            echo "Missing CONVERTER_SYNC_URL or CONVERTER_SYNC_SECRET secrets."
+            exit 1
+          fi
+          echo "Calling sync hook (backup + git pull + converter refresh)..."
+          curl --fail --show-error --silent \
+            --connect-timeout 30 \
+            --max-time 600 \
+            -X POST \
+            -H "Authorization: Bearer ${CONVERTER_SYNC_SECRET}" \
+            -H "Content-Type: application/json" \
+            -d '{}' \
+            "${CONVERTER_SYNC_URL}"
+          echo
+          echo "Sync hook accepted."
