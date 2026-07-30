@@ -1,6 +1,6 @@
 import "server-only";
 
-/** POST file to the VPS doc-converter service (LibreOffice + archives). */
+/** POST file to the home/VPS doc-converter service (LibreOffice + archives). */
 export async function convertViaRemoteService(
   input: Buffer,
   fromExt: string,
@@ -21,12 +21,22 @@ export async function convertViaRemoteService(
   if (secret) headers.Authorization = `Bearer ${secret}`;
 
   const timeoutMs = Number(process.env.DOC_CONVERTER_TIMEOUT_MS || 120_000);
-  const res = await fetch(url, {
-    method: "POST",
-    headers,
-    body: form,
-    signal: AbortSignal.timeout(timeoutMs),
-  });
+
+  let res: Response;
+  try {
+    res = await fetch(url, {
+      method: "POST",
+      headers,
+      body: form,
+      signal: AbortSignal.timeout(timeoutMs),
+    });
+  } catch (err) {
+    const cause =
+      err instanceof Error ? err.message : "network error";
+    throw new Error(
+      `Nie udało się połączyć z konwerterem (${baseUrl}): ${cause}`,
+    );
+  }
 
   if (!res.ok) {
     const detail = await res.text().catch(() => "");

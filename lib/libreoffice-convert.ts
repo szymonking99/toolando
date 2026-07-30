@@ -137,7 +137,7 @@ function runLibreOffice(bin: string, args: string[]): Promise<void> {
 /**
  * Convert a document buffer using headless LibreOffice.
  * Returns null when LibreOffice is unavailable or disabled (caller should fallback).
- * Throws ConversionError when LibreOffice is present but conversion fails.
+ * Throws when a configured remote converter fails (no silent quality downgrade).
  */
 export async function tryConvertWithLibreOffice(
   input: Buffer,
@@ -149,13 +149,22 @@ export async function tryConvertWithLibreOffice(
   const pair = `${fromExt.toLowerCase()}->${toExt.toLowerCase()}`;
   if (!SUPPORTED_PAIRS.has(pair)) return null;
 
-  const remoteUrl = hasRemoteConverter();
-  if (remoteUrl) {
+  if (hasRemoteConverter()) {
     try {
       return await convertViaRemoteService(input, fromExt, toExt);
     } catch (err) {
       console.error("[libreoffice] remote converter failed:", err);
-      // Fall through to local LibreOffice if available.
+      const detail =
+        err instanceof Error ? err.message.slice(0, 240) : "unknown error";
+      // When DOC_CONVERTER_URL is set, never silently fall back to the JS engine —
+      // that produces incorrect layouts and looks like "LibreOffice is broken".
+      const allowLocalFallback =
+        process.env.DOC_CONVERTER_ALLOW_LOCAL_FALLBACK === "1";
+      if (!allowLocalFallback) {
+        throw new Error(
+          `Zdalny konwerter LibreOffice nie odpowiada (${detail}). Sprawdź cloudflared + PM2 na serwerze oraz https://converter.toolando.tech/health`,
+        );
+      }
     }
   }
 

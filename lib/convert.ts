@@ -727,10 +727,19 @@ async function buildDocx(paragraphs: string[]): Promise<Buffer> {
 
 async function convertPdfToDocx(input: Buffer): Promise<Buffer> {
   const { tryConvertWithLibreOffice } = await import("@/lib/libreoffice-convert");
-  const viaLo = await tryConvertWithLibreOffice(input, "pdf", "docx").catch(
-    () => null,
-  );
-  if (viaLo) return viaLo;
+  try {
+    const viaLo = await tryConvertWithLibreOffice(input, "pdf", "docx");
+    if (viaLo) return viaLo;
+  } catch (err) {
+    // Remote converter configured but down — surface the real error.
+    const { hasRemoteConverter } = await import("@/lib/remote-converter");
+    if (hasRemoteConverter()) {
+      throw new ConversionError(
+        err instanceof Error ? err.message : "Konwerter LibreOffice niedostępny.",
+        503,
+      );
+    }
+  }
 
   const { pdfToDocx } = await import("@/lib/document-render");
   return pdfToDocx(input);
@@ -766,10 +775,20 @@ async function convertDocument(
 
   switch (pair) {
     case "docx->pdf": {
-      const viaLo = await tryConvertWithLibreOffice(input, "docx", "pdf").catch(
-        () => null,
-      );
-      if (viaLo) return viaLo;
+      try {
+        const viaLo = await tryConvertWithLibreOffice(input, "docx", "pdf");
+        if (viaLo) return viaLo;
+      } catch (err) {
+        const { hasRemoteConverter } = await import("@/lib/remote-converter");
+        if (hasRemoteConverter()) {
+          throw new ConversionError(
+            err instanceof Error
+              ? err.message
+              : "Konwerter LibreOffice niedostępny.",
+            503,
+          );
+        }
+      }
       const { docxToPdf } = await import("@/lib/document-render");
       return docxToPdf(input);
     }
