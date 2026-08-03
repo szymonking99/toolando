@@ -81,6 +81,7 @@ export default uiPack({
     formats: "Dateiformate",
     comparisons: "Formatvergleiche",
     glossary: "Glossar",
+    rss: "RSS-Feed",
   },
   tool: {
     howToTitle: "So konvertieren Sie die Datei",

@@ -38,6 +38,8 @@ export function SiteFooter() {
 
     { label: t.footer.glossary, href: href("/slownik") },
 
+    { label: t.footer.rss, href: href("/feed.xml") },
+
     { label: t.footer.support, href: href("/wsparcie") },
 
     { label: t.footer.contact, href: href("/kontakt") },

@@ -58,7 +58,13 @@ export async function generateMetadata({
       canonical: `/${locale}`,
       languages,
       types: {
-        "application/rss+xml": `${SITE_URL}/feed.xml`,
+        "application/rss+xml": [
+          { url: `${SITE_URL}/feed.xml`, title: "Toolando RSS (all)" },
+          {
+            url: `${SITE_URL}/${resolved}/feed.xml`,
+            title: `Toolando RSS (${resolved})`,
+          },
+        ],
       },
     },
     openGraph: {
