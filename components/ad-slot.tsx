@@ -4,8 +4,10 @@ import { useEffect, useRef, useState } from "react"
 import { cn } from "@/lib/utils"
 import { hasAnalyticsConsent } from "@/lib/consent"
 import { useI18n } from "@/components/i18n-provider"
+import { EzoicAd } from "@/components/ezoic-ad"
 import {
   adSlotEnabled,
+  getAdNetwork,
   type AdPlacement,
 } from "@/lib/seo/ads-policy"
 
@@ -41,8 +43,12 @@ export function AdSlot({
   const adLabel = label ?? t.ad.label
   const pushedRef = useRef(false)
   const [consented, setConsented] = useState(false)
+  const network = getAdNetwork()
   const placementEnabled = adSlotEnabled(placement)
-  const isConfigured = Boolean(ADSENSE_CLIENT && slot) && placementEnabled
+  const isEzoic = network === "ezoic" && placementEnabled
+  const isAdSense =
+    network === "adsense" && Boolean(ADSENSE_CLIENT && slot) && placementEnabled
+  const isConfigured = (isEzoic || isAdSense) && placementEnabled
 
   useEffect(() => {
     setConsented(hasAnalyticsConsent())
@@ -54,7 +60,7 @@ export function AdSlot({
   }, [])
 
   useEffect(() => {
-    if (!isConfigured || !consented || pushedRef.current) return
+    if (!isAdSense || !consented || pushedRef.current) return
     try {
       const existing = document.querySelector<HTMLScriptElement>(
         'script[src*="adsbygoogle.js"]',
@@ -71,7 +77,7 @@ export function AdSlot({
     } catch {
       // Placeholder remains visible.
     }
-  }, [isConfigured, consented])
+  }, [isAdSense, consented])
 
   if (!placementEnabled) return null
 
@@ -89,14 +95,22 @@ export function AdSlot({
       </span>
 
       {isConfigured && consented ? (
-        <ins
-          className="adsbygoogle block w-full"
-          style={{ display: "block", minHeight }}
-          data-ad-client={ADSENSE_CLIENT}
-          data-ad-slot={slot}
-          data-ad-format={format}
-          data-full-width-responsive={responsive ? "true" : "false"}
-        />
+        isEzoic ? (
+          <EzoicAd
+            placement={placement}
+            minHeight={minHeight}
+            className="w-full"
+          />
+        ) : (
+          <ins
+            className="adsbygoogle block w-full"
+            style={{ display: "block", minHeight }}
+            data-ad-client={ADSENSE_CLIENT}
+            data-ad-slot={slot}
+            data-ad-format={format}
+            data-full-width-responsive={responsive ? "true" : "false"}
+          />
+        )
       ) : (
         <div
           style={{ minHeight }}

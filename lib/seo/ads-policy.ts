@@ -1,47 +1,82 @@
 /**
- * AdSense visibility policy — tuned for publisher network approval.
+ * Ad visibility policy — AdSense, Ezoic, or none.
  *
- * REVIEW_MODE=true  → zero ad scripts/units (use during AdSense re-review)
- * MINIMAL (default) → homepage only — avoids "made for ads" signals
- * FULL              → all slots (set NEXT_PUBLIC_ADSENSE_FULL=true after approval)
+ * NEXT_PUBLIC_AD_NETWORK=ezoic|adsense|none
+ * ADS_REVIEW_MODE=true → zero ad scripts/units (during network review)
+ * MINIMAL (default)    → homepage placements only
+ * ADS_FULL=true        → all placements
  */
 
 export type AdPlacement = "home" | "tools-index" | "tool" | "footer"
+export type AdNetwork = "none" | "adsense" | "ezoic"
 
+export function isAdReviewMode(): boolean {
+  return (
+    process.env.NEXT_PUBLIC_ADS_REVIEW_MODE === "true" ||
+    process.env.NEXT_PUBLIC_ADSENSE_REVIEW_MODE === "true"
+  )
+}
+
+/** @deprecated Use isAdReviewMode */
 export function isAdSenseReviewMode(): boolean {
-  return process.env.NEXT_PUBLIC_ADSENSE_REVIEW_MODE === "true"
+  return isAdReviewMode()
 }
 
+export function isAdsFullMode(): boolean {
+  return (
+    process.env.NEXT_PUBLIC_ADS_FULL === "true" ||
+    process.env.NEXT_PUBLIC_ADSENSE_FULL === "true"
+  )
+}
+
+/** @deprecated Use isAdsFullMode */
 export function isAdSenseFullMode(): boolean {
-  return process.env.NEXT_PUBLIC_ADSENSE_FULL === "true"
+  return isAdsFullMode()
 }
 
-/** May load the AdSense library at all. */
-export function adSenseScriptsEnabled(): boolean {
-  return !isAdSenseReviewMode()
+export function getAdNetwork(): AdNetwork {
+  if (isAdReviewMode()) return "none"
+  const network = process.env.NEXT_PUBLIC_AD_NETWORK?.toLowerCase()
+  if (network === "ezoic") return "ezoic"
+  if (network === "none") return "none"
+  if (network === "adsense") return "adsense"
+  // Legacy default: AdSense until Ezoic is configured in env
+  return "adsense"
 }
 
-/** Load AdSense script only where a unit may actually render. */
-export function adSenseScriptsEnabledForPath(pathname: string): boolean {
-  if (!adSenseScriptsEnabled()) return false
+/** May load any ad network library. */
+export function adScriptsEnabled(): boolean {
+  return getAdNetwork() !== "none"
+}
+
+/** Load ad scripts only where a unit may render on this path. */
+export function adScriptsEnabledForPath(pathname: string): boolean {
+  if (!adScriptsEnabled()) return false
 
   const segments = pathname.split("/").filter(Boolean)
   const page = segments[1]
 
   if (page === "downloader") return false
 
-  if (isAdSenseFullMode()) return true
+  if (isAdsFullMode()) return true
 
   // Minimal (default): homepage only — /{locale}
   return segments.length === 1
 }
 
+/** @deprecated Use adScriptsEnabledForPath */
+export function adSenseScriptsEnabled(): boolean {
+  return adScriptsEnabled()
+}
+
+/** @deprecated Use adScriptsEnabledForPath */
+export function adSenseScriptsEnabledForPath(pathname: string): boolean {
+  return adScriptsEnabledForPath(pathname)
+}
+
 /** May render an ad unit in a given placement. */
-export function adSlotEnabled(
-  placement: AdPlacement,
-): boolean {
-  if (isAdSenseReviewMode()) return false
-  if (isAdSenseFullMode()) return true
-  // Minimal (default): single placement on homepage only
+export function adSlotEnabled(placement: AdPlacement): boolean {
+  if (getAdNetwork() === "none") return false
+  if (isAdsFullMode()) return true
   return placement === "home"
 }

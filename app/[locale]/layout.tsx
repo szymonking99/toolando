@@ -5,6 +5,7 @@ import { I18nProvider } from "@/components/i18n-provider"
 import { CookieConsent } from "@/components/cookie-consent"
 import { ConsentModeInit } from "@/components/consent-mode-init"
 import { ConsentGatedScripts } from "@/components/consent-gated-scripts"
+import { EzoicRouteHandler } from "@/components/ezoic-route-handler"
 import { JsonLd } from "@/components/json-ld"
 import { organizationSchema, websiteSchema } from "@/lib/seo/structured-data"
 import { getDictionary } from "@/lib/i18n/dictionaries"
@@ -97,11 +98,11 @@ export async function generateMetadata({
       ],
       apple: "/apple-icon.png",
     },
-    // Google AdSense site verification (meta-tag method). Renders
-    // <meta name="google-adsense-account" content="ca-pub-..."> in <head>.
-    other: ADSENSE_CLIENT
-      ? { "google-adsense-account": ADSENSE_CLIENT }
-      : {},
+    // Google AdSense site verification (only when AdSense is the active network).
+    other:
+      ADSENSE_CLIENT && process.env.NEXT_PUBLIC_AD_NETWORK !== "ezoic"
+        ? { "google-adsense-account": ADSENSE_CLIENT }
+        : {},
   }
 }
 
@@ -140,6 +141,7 @@ export default async function LocaleLayout({
           <CookieConsent />
         </I18nProvider>
         <ConsentGatedScripts />
+        <EzoicRouteHandler />
         {process.env.NODE_ENV === "production" && <Analytics />}
       </body>
     </html>
