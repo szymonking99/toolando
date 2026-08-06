@@ -1,8 +1,7 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
 import { usePathname } from "next/navigation"
-import { hasAnalyticsConsent } from "@/lib/consent"
 import { runEzoic } from "@/lib/ezoic"
 import {
   adScriptsEnabledForPath,
@@ -10,29 +9,38 @@ import {
 } from "@/lib/seo/ads-policy"
 
 /**
- * Re-scan Ezoic placeholders after Next.js client-side navigation.
+ * Dynamic content / SPA navigation — Step 3 dynamic section.
+ * @see https://docs.ezoic.com/docs/ezoicads/implementation/
  * @see https://docs.ezoic.com/docs/ezoicadsadvanced/nextjs/
  */
 export function EzoicRouteHandler() {
   const pathname = usePathname()
-  const [consented, setConsented] = useState(false)
 
   useEffect(() => {
-    setConsented(hasAnalyticsConsent())
-    function onConsentChange() {
-      setConsented(hasAnalyticsConsent())
+    if (process.env.NODE_ENV !== "production" || getAdNetwork() !== "ezoic") {
+      return
     }
-    window.addEventListener("consent-change", onConsentChange)
-    return () => window.removeEventListener("consent-change", onConsentChange)
-  }, [])
 
-  useEffect(() => {
-    if (
-      process.env.NODE_ENV !== "production" ||
-      getAdNetwork() !== "ezoic" ||
-      !consented ||
-      !adScriptsEnabledForPath(pathname)
-    ) {
+    const segments = pathname.split("/").filter(Boolean)
+    const page = segments[1]
+
+    if (page === "downloader") {
+      runEzoic(() => {
+        window.ezstandalone?.destroyAll?.()
+        window.ezstandalone?.setInterstitialAllowed?.(false, {
+          reason: "policy-sensitive-page",
+        })
+        window.ezstandalone?.setOutstreamAllowed?.(false, {
+          reason: "policy-sensitive-page",
+        })
+      })
+      return
+    }
+
+    if (!adScriptsEnabledForPath(pathname)) {
+      runEzoic(() => {
+        window.ezstandalone?.destroyAll?.()
+      })
       return
     }
 
@@ -42,7 +50,7 @@ export function EzoicRouteHandler() {
         window.ezstandalone?.showAds()
       })
     })
-  }, [pathname, consented])
+  }, [pathname])
 
   return null
 }

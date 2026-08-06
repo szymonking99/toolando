@@ -48,7 +48,6 @@ export function AdSlot({
   const isEzoic = network === "ezoic" && placementEnabled
   const isAdSense =
     network === "adsense" && Boolean(ADSENSE_CLIENT && slot) && placementEnabled
-  const isConfigured = (isEzoic || isAdSense) && placementEnabled
 
   useEffect(() => {
     setConsented(hasAnalyticsConsent())
@@ -94,23 +93,17 @@ export function AdSlot({
         {adLabel}
       </span>
 
-      {isConfigured && consented ? (
-        isEzoic ? (
-          <EzoicAd
-            placement={placement}
-            minHeight={minHeight}
-            className="w-full"
-          />
-        ) : (
-          <ins
-            className="adsbygoogle block w-full"
-            style={{ display: "block", minHeight }}
-            data-ad-client={ADSENSE_CLIENT}
-            data-ad-slot={slot}
-            data-ad-format={format}
-            data-full-width-responsive={responsive ? "true" : "false"}
-          />
-        )
+      {isEzoic ? (
+        <EzoicAd minHeight={minHeight} className="w-full" />
+      ) : isAdSense && consented ? (
+        <ins
+          className="adsbygoogle block w-full"
+          style={{ display: "block", minHeight }}
+          data-ad-client={ADSENSE_CLIENT}
+          data-ad-slot={slot}
+          data-ad-format={format}
+          data-full-width-responsive={responsive ? "true" : "false"}
+        />
       ) : (
         <div
           style={{ minHeight }}

@@ -5,6 +5,7 @@ import { I18nProvider } from "@/components/i18n-provider"
 import { CookieConsent } from "@/components/cookie-consent"
 import { ConsentModeInit } from "@/components/consent-mode-init"
 import { ConsentGatedScripts } from "@/components/consent-gated-scripts"
+import { EzoicHeadScripts } from "@/components/ezoic-head-scripts"
 import { EzoicRouteHandler } from "@/components/ezoic-route-handler"
 import { JsonLd } from "@/components/json-ld"
 import { organizationSchema, websiteSchema } from "@/lib/seo/structured-data"
@@ -132,6 +133,9 @@ export default async function LocaleLayout({
       dir={dir}
       className={`dark overflow-x-hidden bg-background ${geistSans.variable} ${geistMono.variable}`}
     >
+      <head>
+        <EzoicHeadScripts />
+      </head>
       <body className="overflow-x-hidden bg-background font-sans antialiased">
         <ConsentModeInit />
         {/* Site-wide structured data: brand identity + sitelinks search box */}
