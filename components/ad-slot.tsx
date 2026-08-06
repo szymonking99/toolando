@@ -4,11 +4,18 @@ import { useEffect, useRef, useState } from "react"
 import { cn } from "@/lib/utils"
 import { hasAnalyticsConsent } from "@/lib/consent"
 import { useI18n } from "@/components/i18n-provider"
+import { EzoicAd } from "@/components/ezoic-ad"
+import {
+  adSlotEnabled,
+  getAdNetwork,
+  type AdPlacement,
+} from "@/lib/seo/ads-policy"
 
 const ADSENSE_CLIENT =
   process.env.NEXT_PUBLIC_ADSENSE_CLIENT ?? "ca-pub-1137300798632743"
 
 type AdSlotProps = {
+  placement: AdPlacement
   slot?: string
   format?: "auto" | "fluid" | "rectangle" | "horizontal" | "vertical"
   responsive?: boolean
@@ -24,6 +31,7 @@ declare global {
 }
 
 export function AdSlot({
+  placement,
   slot,
   format = "auto",
   responsive = true,
@@ -35,7 +43,11 @@ export function AdSlot({
   const adLabel = label ?? t.ad.label
   const pushedRef = useRef(false)
   const [consented, setConsented] = useState(false)
-  const isConfigured = Boolean(ADSENSE_CLIENT && slot)
+  const network = getAdNetwork()
+  const placementEnabled = adSlotEnabled(placement)
+  const isEzoic = network === "ezoic" && placementEnabled
+  const isAdSense =
+    network === "adsense" && Boolean(ADSENSE_CLIENT && slot) && placementEnabled
 
   useEffect(() => {
     setConsented(hasAnalyticsConsent())
@@ -47,7 +59,7 @@ export function AdSlot({
   }, [])
 
   useEffect(() => {
-    if (!isConfigured || !consented || pushedRef.current) return
+    if (!isAdSense || !consented || pushedRef.current) return
     try {
       const existing = document.querySelector<HTMLScriptElement>(
         'script[src*="adsbygoogle.js"]',
@@ -64,7 +76,9 @@ export function AdSlot({
     } catch {
       // Placeholder remains visible.
     }
-  }, [isConfigured, consented])
+  }, [isAdSense, consented])
+
+  if (!placementEnabled) return null
 
   return (
     <div
@@ -79,7 +93,9 @@ export function AdSlot({
         {adLabel}
       </span>
 
-      {isConfigured && consented ? (
+      {isEzoic ? (
+        <EzoicAd minHeight={minHeight} className="w-full" />
+      ) : isAdSense && consented ? (
         <ins
           className="adsbygoogle block w-full"
           style={{ display: "block", minHeight }}

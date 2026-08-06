@@ -2,9 +2,9 @@
 
 import { useEffect, useState } from "react"
 import Script from "next/script"
-import { usePathname } from "next/navigation"
 import { getStoredConsent, hasAnalyticsConsent } from "@/lib/consent"
 import { syncGoogleConsent } from "@/lib/google-consent"
+import { getAdNetwork } from "@/lib/seo/ads-policy"
 
 const GA_MEASUREMENT_ID =
   process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? "G-HCDN6BEKZH"
@@ -12,11 +12,9 @@ const ADSENSE_CLIENT =
   process.env.NEXT_PUBLIC_ADSENSE_CLIENT ?? "ca-pub-1137300798632743"
 
 /**
- * Loads Google Analytics and AdSense only after the user accepts all cookies.
- * AdSense is also excluded from the downloader pages (policy-sensitive).
+ * GA4 + AdSense only. Ezoic header scripts live in <head> via EzoicHeadScripts.
  */
 export function ConsentGatedScripts() {
-  const pathname = usePathname()
   const [consented, setConsented] = useState(false)
 
   useEffect(() => {
@@ -35,9 +33,8 @@ export function ConsentGatedScripts() {
 
   if (!consented || process.env.NODE_ENV !== "production") return null
 
-  const segments = pathname.split("/").filter(Boolean)
-  const firstSegment = segments[1]
-  const isDownloader = firstSegment === "downloader"
+  const showAdSense =
+    getAdNetwork() === "adsense" && Boolean(ADSENSE_CLIENT)
 
   return (
     <>
@@ -57,7 +54,7 @@ export function ConsentGatedScripts() {
           </Script>
         </>
       )}
-      {ADSENSE_CLIENT && !isDownloader && (
+      {showAdSense && (
         <Script
           id="adsbygoogle-init"
           async

@@ -9,6 +9,7 @@
     "dev": "next dev",
     "build": "next build",
     "indexnow": "node scripts/submit-indexnow.mjs",
+    "sync-adstxt": "node scripts/sync-adstxt.mjs",
     "start": "next start",
     "lint": "eslint .",
     "clean": "node scripts/clean.mjs",

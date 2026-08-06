@@ -153,7 +153,24 @@
     "guidesCta": "Czytaj poradniki",
     "comparisonsTitle": "Porównania formatów",
     "comparisonsDesc": "MP3 vs FLAC, JPG vs WebP, PDF vs DOCX — bezpośrednie porównania z jasnym werdyktem.",
-    "comparisonsCta": "Przeglądaj porównania"
+    "comparisonsCta": "Przeglądaj porównania",
+    "glossaryTitle": "Słownik pojęć",
+    "glossaryDesc": "Bitrate, kodek, kompresja stratna, MIME — wyjaśnienia bez żargonu technicznego.",
+    "glossaryCta": "Otwórz słownik"
+  },
+  "editorial": {
+    "title": "Kto stoi za Toolando.tech",
+    "body": "Nazywam się Szymon — sam projektuję, koduję i testuję każde narzędzie. Poradniki powstają na podstawie realnych konwersji, nie skopiowanych opisów. Chcę, żebyś wiedział, jak działają pliki, zanim je przekonwertujesz — i żeby serwis był uczciwy wobec Ciebie.",
+    "aboutCta": "O mnie i metodologii",
+    "howCta": "Jak działają narzędzia",
+    "editorialCta": "Standardy redakcyjne",
+    "guidesCta": "Poradniki"
+  },
+  "featuredGuides": {
+    "title": "Polecane poradniki",
+    "subtitle": "Praktyczne artykuły o formatach plików, bezpieczeństwie i konwersji — pisane na podstawie realnych testów, nie szablonów SEO.",
+    "readArticle": "Czytaj poradnik",
+    "allGuides": "Wszystkie poradniki"
   },
   "why": {
     "title": "Dlaczego Toolando.tech?",
@@ -182,6 +199,7 @@
     "howItWorks": "Jak to działa",
     "faq": "FAQ",
     "guides": "Poradniki",
+    "editorial": "Redakcja",
     "formats": "Formaty plików",
     "comparisons": "Porównania",
     "glossary": "Słownik",
@@ -499,6 +517,31 @@
       "methodologyP2": "Jeśli znajdziesz błąd w poradniku lub konwerter nie działa tak jak opisano — napisz na badyltech@outlook.com. Poprawki pomagają wszystkim.",
       "updatedLabel": "Ostatnia aktualizacja strony",
       "updatedDate": "lipiec 2026"
+    },
+    "editorial": {
+      "eyebrow": "Redakcja",
+      "title": "Standardy redakcyjne Toolando.tech",
+      "intro": "Toolando.tech to nie tylko konwertery — to też poradniki, encyklopedia formatów i porównania. Poniżej opisuję, jak powstają treści, skąd biorę informacje i kiedy je aktualizuję.",
+      "whoTitle": "Kto tworzy treści",
+      "whoP1": "Wszystkie poradniki, opisy formatów i artykuły porównawcze piszę sam — Szymon Badyl, twórca Toolando.tech. Nie korzystam z farm treści ani gotowych opisów od AI bez weryfikacji.",
+      "whoP2": "Każdy artykuł opiera się na testach konwersji na własnych plikach. Jeśli coś nie działa tak jak opisuję — poprawiam tekst i narzędzie.",
+      "standardsTitle": "Zasady redakcyjne",
+      "standardsIntro": "Stosuję te same zasady do każdego nowego poradnika:",
+      "standardsList": [
+        "Testuję konwerter na plikach różnej wielkości przed publikacją.",
+        "Podaję konkretne scenariusze (np. e-mail, sklep, social media), nie ogólniki.",
+        "Odróżniam kompresję od konwersji formatu i stratną od bezstratnej.",
+        "Piszę o ograniczeniach narzędzi — kiedy lepiej nie konwertować online.",
+        "Aktualizuję datę i treść, gdy zmieniają się wymagania platform lub formatów."
+      ],
+      "sourcesTitle": "Źródła i uczciwość",
+      "sourcesP1": "Specyfikacje formatów (MIME, kodeki) weryfikuję w dokumentacji IANA, FFmpeg i producentów oprogramowania. Porównania opieram na własnych pomiarach rozmiaru i jakości, nie na marketingowych tabelkach.",
+      "sourcesP2": "Linki do zewnętrznych serwisów pojawiają się tylko wtedy, gdy realnie pomagają (np. oficjalna dokumentacja). Nie promuję płatnych narzędzi konkurencji.",
+      "updatesTitle": "Aktualizacje i korekty",
+      "updatesP1": "Znalazłeś błąd, nieaktualną informację lub masz sugestię tematu? Napisz na badyltech@outlook.com — poprawki trafiają do artykułu z datą aktualizacji.",
+      "updatedLabel": "Ostatnia aktualizacja",
+      "updatedDate": "sierpień 2026",
+      "fullGuideCta": "Pełny poradnik o standardach redakcyjnych"
     },
     "howItWorks": {
       "eyebrow": "Jak to działa?",
