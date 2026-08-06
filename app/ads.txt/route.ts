@@ -1,42 +1,27 @@
-/** Ezoic Ads.txt Manager — account 19390 (default for most publishers). */
-const EZOIC_ADS_TXT_URL = "https://srv.adstxtmanager.com/19390/toolando.tech"
+import { fetchEzoicAdsTxt } from "@/lib/seo/ezoic-adstxt"
 
 /**
- * Fallback until Ezoic registers the domain in Ads.txt Manager.
- * Keep the AdSense line; Ezoic expands entries after onboarding.
+ * Serves /ads.txt from Ezoic Ads.txt Manager (method 3 — automated updates).
+ * Equivalent to: curl -L https://srv.adstxtmanager.com/19390/toolando.tech
+ *
+ * @see https://docs.ezoic.com/docs/ezoicads/adstxt/
  */
-const FALLBACK_ADS_TXT = `# toolando.tech — ads.txt
+export const revalidate = 86400 // daily refresh per Ezoic cron recommendation
+
+const FALLBACK = `# toolando.tech — ads.txt (fallback until Ezoic activates the manager URL)
+# Complete Step 1 in the Ezoic dashboard, then this file auto-syncs from Ads.txt Manager.
 google.com, pub-1137300798632743, DIRECT, f08c47fec0942fa0
 ezoic.com, ce6efd8f2b70c152305901379ddc96e3, DIRECT
 `
 
-export const revalidate = 3600
-
 export async function GET() {
-  try {
-    const res = await fetch(EZOIC_ADS_TXT_URL, {
-      next: { revalidate: 3600 },
-      headers: { "User-Agent": "ToolandoAdsTxt/1.0" },
-    })
-    if (res.ok) {
-      const text = (await res.text()).trim()
-      if (text.length > 0) {
-        return new Response(text, {
-          headers: {
-            "Content-Type": "text/plain; charset=utf-8",
-            "Cache-Control": "public, max-age=3600, s-maxage=3600",
-          },
-        })
-      }
-    }
-  } catch {
-    // Use fallback below.
-  }
+  const managed = await fetchEzoicAdsTxt()
+  const body = managed ?? FALLBACK
 
-  return new Response(FALLBACK_ADS_TXT, {
+  return new Response(body, {
     headers: {
       "Content-Type": "text/plain; charset=utf-8",
-      "Cache-Control": "public, max-age=300, s-maxage=300",
+      "Cache-Control": "public, max-age=86400, s-maxage=86400",
     },
   })
 }
