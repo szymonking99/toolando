@@ -244,7 +244,11 @@ export default async function ToolsIndexPage({
           </div>
         </section>
 
-        <AdSlot slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT_TOOLS} className="mt-12 px-0" />
+        <AdSlot
+          placement="tools-index"
+          slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT_TOOLS}
+          className="mt-12 px-0"
+        />
       </main>
       <SiteFooter />
     </div>

@@ -5,6 +5,7 @@ import Script from "next/script"
 import { usePathname } from "next/navigation"
 import { getStoredConsent, hasAnalyticsConsent } from "@/lib/consent"
 import { syncGoogleConsent } from "@/lib/google-consent"
+import { adSenseScriptsEnabledForPath } from "@/lib/seo/ads-policy"
 
 const GA_MEASUREMENT_ID =
   process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? "G-HCDN6BEKZH"
@@ -35,9 +36,8 @@ export function ConsentGatedScripts() {
 
   if (!consented || process.env.NODE_ENV !== "production") return null
 
-  const segments = pathname.split("/").filter(Boolean)
-  const firstSegment = segments[1]
-  const isDownloader = firstSegment === "downloader"
+  const adsEnabled =
+    Boolean(ADSENSE_CLIENT) && adSenseScriptsEnabledForPath(pathname)
 
   return (
     <>
@@ -57,7 +57,7 @@ export function ConsentGatedScripts() {
           </Script>
         </>
       )}
-      {ADSENSE_CLIENT && !isDownloader && (
+      {adsEnabled && (
         <Script
           id="adsbygoogle-init"
           async

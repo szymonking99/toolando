@@ -6,6 +6,7 @@ import { COMPARISON_SLUGS } from "@/lib/i18n/comparisons"
 import { GLOSSARY_SLUGS } from "@/lib/i18n/glossary"
 import { languageAlternates } from "@/lib/seo/alternates"
 import { SITE_URL } from "@/lib/seo/structured-data"
+import { isIndexableTool } from "@/lib/seo/indexable-tools"
 import { categories, tools } from "@/lib/tools"
 import { specialTools } from "@/lib/special-tools"
 import { utilityTools } from "@/lib/utility-tools"
@@ -28,6 +29,7 @@ const STATIC_PATHS: {
   { path: "/slownik", priority: 0.75, changeFrequency: "monthly" },
   { path: "/jak-to-dziala", priority: 0.6, changeFrequency: "monthly" },
   { path: "/o-mnie", priority: 0.5, changeFrequency: "monthly" },
+  { path: "/redakcja", priority: 0.55, changeFrequency: "monthly" },
   { path: "/faq", priority: 0.6, changeFrequency: "monthly" },
   { path: "/wsparcie", priority: 0.5, changeFrequency: "monthly" },
   { path: "/kontakt", priority: 0.5, changeFrequency: "monthly" },
@@ -41,7 +43,7 @@ function languagesFor(path: string): Record<string, string> {
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const toolIds = [
-    ...tools.filter((t) => t.supported).map((t) => t.id),
+    ...tools.filter((t) => isIndexableTool(t.id)).map((t) => t.id),
     ...specialTools.map((t) => t.id),
     ...utilityTools.map((t) => t.id),
   ]

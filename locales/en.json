@@ -153,7 +153,24 @@
     "guidesCta": "Read guides",
     "comparisonsTitle": "Format comparisons",
     "comparisonsDesc": "MP3 vs FLAC, JPG vs WebP, PDF vs DOCX — head-to-head comparisons with a clear verdict.",
-    "comparisonsCta": "Browse comparisons"
+    "comparisonsCta": "Browse comparisons",
+    "glossaryTitle": "Glossary",
+    "glossaryDesc": "Bitrate, codec, lossy compression, MIME — plain-language definitions.",
+    "glossaryCta": "Open glossary"
+  },
+  "editorial": {
+    "title": "Who runs Toolando.tech",
+    "body": "I'm Szymon — I design, build, and test every tool myself. Guides are based on real conversions, not copy-pasted specs. I want you to understand your files before you convert them, and I want the service to stay honest with you.",
+    "aboutCta": "About me & methodology",
+    "howCta": "How the tools work",
+    "editorialCta": "Editorial standards",
+    "guidesCta": "Guides"
+  },
+  "featuredGuides": {
+    "title": "Featured guides",
+    "subtitle": "Practical articles on file formats, security, and conversion — written from real tests, not SEO templates.",
+    "readArticle": "Read guide",
+    "allGuides": "All guides"
   },
   "why": {
     "title": "Why Toolando.tech?",
@@ -182,6 +199,7 @@
     "howItWorks": "How it works",
     "faq": "FAQ",
     "guides": "Guides",
+    "editorial": "Editorial",
     "formats": "File formats",
     "comparisons": "Comparisons",
     "glossary": "Glossary",
@@ -499,6 +517,31 @@
       "methodologyP2": "If you find an error in a guide or a converter that doesn't work as described, email badyltech@outlook.com — corrections help everyone.",
       "updatedLabel": "Page last updated",
       "updatedDate": "July 2026"
+    },
+    "editorial": {
+      "eyebrow": "Editorial",
+      "title": "Toolando.tech editorial standards",
+      "intro": "Toolando.tech is not just converters — it's guides, a format encyclopedia, and comparisons. Below I explain how content is created, where information comes from, and when it gets updated.",
+      "whoTitle": "Who creates the content",
+      "whoP1": "I write every guide, format profile, and comparison myself — Szymon Badyl, creator of Toolando.tech. I don't use content farms or unchecked AI-generated copy.",
+      "whoP2": "Every article is based on conversion tests on my own files. If something doesn't work as described, I fix both the text and the tool.",
+      "standardsTitle": "Editorial principles",
+      "standardsIntro": "I apply the same rules to every new guide:",
+      "standardsList": [
+        "I test the converter with files of different sizes before publishing.",
+        "I give concrete scenarios (email, shop, social media), not vague generalities.",
+        "I distinguish compression from format conversion and lossy from lossless.",
+        "I write about tool limits — when not to convert online.",
+        "I update the date and content when platform or format requirements change."
+      ],
+      "sourcesTitle": "Sources and honesty",
+      "sourcesP1": "I verify format specs (MIME, codecs) against IANA, FFmpeg, and vendor documentation. Comparisons rely on my own size and quality measurements, not marketing tables.",
+      "sourcesP2": "External links appear only when they genuinely help (e.g. official docs). I don't promote paid competitor tools.",
+      "updatesTitle": "Updates and corrections",
+      "updatesP1": "Found an error, outdated info, or have a topic suggestion? Email badyltech@outlook.com — fixes go into the article with an update date.",
+      "updatedLabel": "Last updated",
+      "updatedDate": "August 2026",
+      "fullGuideCta": "Full guide on editorial standards"
     },
     "howItWorks": {
       "eyebrow": "How it works?",

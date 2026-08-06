@@ -10,24 +10,37 @@ import {
 import { CategoriesSection } from "@/components/categories-section"
 import { WhySection } from "@/components/why-section"
 import { KnowledgeHubSection } from "@/components/knowledge-hub-section"
+import { EditorialTrustSection } from "@/components/editorial-trust-section"
+import { FeaturedGuidesSection } from "@/components/featured-guides-section"
 import { FormatRecommender } from "@/components/format-recommender"
 import { SiteFooter } from "@/components/site-footer"
 import { AdSlot } from "@/components/ad-slot"
 
-export default function Page() {
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       <SiteNavbar />
       <main>
         <HeroSection />
+        <EditorialTrustSection />
         <UniversalOpenerSection />
         <AiToolsSection />
-        <AdSlot slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT_HOME} />
+        <AdSlot
+          placement="home"
+          slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT_HOME}
+        />
         <FeaturesSection />
         <CategoriesSection />
         <CalculatorsSection />
         <DeveloperToolsSection />
         <KnowledgeHubSection />
+        <FeaturedGuidesSection locale={locale} />
         <FormatRecommender />
         <WhySection />
       </main>

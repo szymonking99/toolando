@@ -34,6 +34,7 @@ import {
   howToSchema,
   faqPageSchema,
 } from "@/lib/seo/structured-data"
+import { isIndexableTool } from "@/lib/seo/indexable-tools"
 
 /** Resolve a localized display name + description for any tool id. */
 function resolveToolText(
@@ -87,7 +88,9 @@ export async function generateMetadata({
   const pageContent = tool ? getToolPageContent(locale, tool) : null
   const description = pageContent?.extendedDescription ?? text.description
   const title = `${text.name} — Toolando.tech`
-  const noindex = tool ? !tool.supported : getAiTool(id) !== undefined
+  const noindex = tool
+    ? !tool.supported || !isIndexableTool(id)
+    : getAiTool(id) !== undefined
   const meta = buildPageMetadata({
     locale,
     path: `/tools/${id}`,
@@ -152,6 +155,7 @@ function ToolShell({
         {children}
         {/* Ad placement: below the tool, before related tools scroll away */}
         <AdSlot
+          placement="tool"
           slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT_TOOL}
           className="mt-12 px-0"
         />

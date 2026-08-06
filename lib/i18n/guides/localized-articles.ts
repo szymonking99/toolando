@@ -261,21 +261,25 @@ const copy: Record<string, readonly Copy[]> = {
 }
 
 function buildArticles(items: readonly Copy[]): Record<string, GuideArticle> {
-  return Object.fromEntries(GUIDE_SLUGS.map((slug, index) => {
-    const [title, description] = items[index]
+  const articles: Record<string, GuideArticle> = {}
+  GUIDE_SLUGS.forEach((slug, index) => {
+    const entry = items[index]
+    if (!entry) return
+    const [title, description] = entry
     const details = meta[slug]
-    return [slug, {
+    articles[slug] = {
       slug,
       title,
       description,
-      published: details.published,
+      published: details?.published ?? "2026-08-06",
       updated: "2026-07-23",
       author: AUTHOR,
       sections: [{ paragraphs: [description] }],
-      relatedFormats: details.formats,
-      relatedTools: details.tools,
-    }]
-  }))
+      relatedFormats: details?.formats,
+      relatedTools: details?.tools,
+    }
+  })
+  return articles
 }
 
 export const localizedGuideArticles: Record<string, Record<string, GuideArticle>> =

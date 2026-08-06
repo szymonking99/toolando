@@ -32,6 +32,8 @@ export function SiteFooter() {
 
     { label: t.footer.guides, href: href("/poradniki") },
 
+    { label: t.footer.editorial, href: href("/redakcja") },
+
     { label: t.footer.formats, href: href("/formaty") },
 
     { label: t.footer.comparisons, href: href("/porownania") },
@@ -57,13 +59,10 @@ export function SiteFooter() {
     <footer className="border-t border-white/10 px-4 py-12">
 
       <AdSlot
-
+        placement="footer"
         slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT_FOOTER}
-
         className="mb-10 px-0"
-
         minHeight={90}
-
       />
 
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 md:flex-row">

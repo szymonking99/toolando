@@ -4,11 +4,16 @@ import { useEffect, useRef, useState } from "react"
 import { cn } from "@/lib/utils"
 import { hasAnalyticsConsent } from "@/lib/consent"
 import { useI18n } from "@/components/i18n-provider"
+import {
+  adSlotEnabled,
+  type AdPlacement,
+} from "@/lib/seo/ads-policy"
 
 const ADSENSE_CLIENT =
   process.env.NEXT_PUBLIC_ADSENSE_CLIENT ?? "ca-pub-1137300798632743"
 
 type AdSlotProps = {
+  placement: AdPlacement
   slot?: string
   format?: "auto" | "fluid" | "rectangle" | "horizontal" | "vertical"
   responsive?: boolean
@@ -24,6 +29,7 @@ declare global {
 }
 
 export function AdSlot({
+  placement,
   slot,
   format = "auto",
   responsive = true,
@@ -35,7 +41,8 @@ export function AdSlot({
   const adLabel = label ?? t.ad.label
   const pushedRef = useRef(false)
   const [consented, setConsented] = useState(false)
-  const isConfigured = Boolean(ADSENSE_CLIENT && slot)
+  const placementEnabled = adSlotEnabled(placement)
+  const isConfigured = Boolean(ADSENSE_CLIENT && slot) && placementEnabled
 
   useEffect(() => {
     setConsented(hasAnalyticsConsent())
@@ -65,6 +72,8 @@ export function AdSlot({
       // Placeholder remains visible.
     }
   }, [isConfigured, consented])
+
+  if (!placementEnabled) return null
 
   return (
     <div

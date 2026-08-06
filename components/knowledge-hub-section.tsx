@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { BookOpen, FileType2, GitCompare } from "lucide-react"
+import { BookOpen, FileType2, GitCompare, BookMarked } from "lucide-react"
 import { useI18n } from "@/components/i18n-provider"
 
 export function KnowledgeHubSection() {
@@ -22,6 +22,20 @@ export function KnowledgeHubSection() {
       link: href("/poradniki"),
       cta: t.knowledgeHub.guidesCta,
     },
+    {
+      icon: GitCompare,
+      title: t.knowledgeHub.comparisonsTitle,
+      description: t.knowledgeHub.comparisonsDesc,
+      link: href("/porownania"),
+      cta: t.knowledgeHub.comparisonsCta,
+    },
+    {
+      icon: BookMarked,
+      title: t.knowledgeHub.glossaryTitle,
+      description: t.knowledgeHub.glossaryDesc,
+      link: href("/slownik"),
+      cta: t.knowledgeHub.glossaryCta,
+    },
   ]
 
   return (
@@ -36,7 +50,7 @@ export function KnowledgeHubSection() {
           </p>
         </div>
 
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid gap-6 sm:grid-cols-2">
           {cards.map((card) => (
             <Link
               key={card.link}
