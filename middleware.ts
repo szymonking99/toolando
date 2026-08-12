@@ -16,6 +16,23 @@ const LOCALE_MANUAL_COOKIE = "toolando-locale-manual"
  */
 const HAS_LOCALE_PREFIX = /^\/[a-z]{2,3}(-[a-z0-9]{2,8})?(\/|$)/i
 
+/** Auth pages — no locale prefix. Bare `/premium` IS localized. */
+const LOCALE_AGNOSTIC_EXACT = ["/sign-in", "/sign-up", "/account"]
+
+function isLocaleAgnostic(pathname: string): boolean {
+  if (LOCALE_AGNOSTIC_EXACT.includes(pathname)) return true
+  if (pathname.startsWith("/sign-in/")) return true
+  if (pathname.startsWith("/sign-up/")) return true
+  if (pathname.startsWith("/account/")) return true
+  if (pathname === "/premium/success" || pathname.startsWith("/premium/success/")) {
+    return true
+  }
+  if (pathname === "/premium/cancel" || pathname.startsWith("/premium/cancel/")) {
+    return true
+  }
+  return false
+}
+
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl
 
@@ -24,9 +41,7 @@ export function middleware(request: NextRequest) {
     return NextResponse.next()
   }
 
-  // Locale-agnostic routes (Stripe URLs, auth & account pages) are served as-is.
-  const LOCALE_AGNOSTIC = ["/premium", "/sign-in", "/sign-up", "/account"]
-  if (LOCALE_AGNOSTIC.some((p) => pathname === p || pathname.startsWith(`${p}/`))) {
+  if (isLocaleAgnostic(pathname)) {
     return NextResponse.next()
   }
 
@@ -38,10 +53,11 @@ export function middleware(request: NextRequest) {
   const cookieLocale = cookieRaw ? normalizeToSupported(cookieRaw) : undefined
 
   const country = request.headers.get("x-vercel-ip-country")
+  const fromHeader = detectLocale(request.headers.get("accept-language"))
   const locale =
     cookieLocale ||
     localeFromCountry(country) ||
-    detectLocale(request.headers.get("accept-language")) ||
+    fromHeader ||
     defaultLocale
 
   const url = request.nextUrl.clone()

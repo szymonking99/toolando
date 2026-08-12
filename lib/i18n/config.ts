@@ -182,10 +182,13 @@ export function normalizeToSupported(code: string): SupportedLocale | undefined 
 
 /**
  * Pick the best supported locale from an `Accept-Language` header value.
- * Respects quality (q) weighting and falls back to `fallbackLocale`.
+ * Respects quality (q) weighting. Returns `undefined` when nothing matches so
+ * callers can fall through to `defaultLocale` (pl) instead of forcing English.
  */
-export function detectLocale(acceptLanguage: string | null | undefined): SupportedLocale {
-  if (!acceptLanguage) return fallbackLocale
+export function detectLocale(
+  acceptLanguage: string | null | undefined,
+): SupportedLocale | undefined {
+  if (!acceptLanguage) return undefined
 
   const parsed = acceptLanguage
     .split(",")
@@ -203,5 +206,5 @@ export function detectLocale(acceptLanguage: string | null | undefined): Support
     if (match) return match
   }
 
-  return fallbackLocale
+  return undefined
 }
