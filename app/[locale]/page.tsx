@@ -15,6 +15,12 @@ import { FeaturedGuidesSection } from "@/components/featured-guides-section"
 import { FormatRecommender } from "@/components/format-recommender"
 import { SiteFooter } from "@/components/site-footer"
 import { AdSlot } from "@/components/ad-slot"
+import { RecentToolsSection } from "@/components/recent-tools-section"
+import { ComparisonSection } from "@/components/comparison-section"
+import { NewsletterSignup } from "@/components/newsletter-signup"
+import { ToolRequestBanner } from "@/components/tool-request-banner"
+import { OnboardingTour } from "@/components/onboarding-tour"
+import { ExitIntentModal } from "@/components/exit-intent-modal"
 
 export default async function Page({
   params,
@@ -26,8 +32,11 @@ export default async function Page({
   return (
     <div className="min-h-screen bg-background text-foreground">
       <SiteNavbar />
+      <OnboardingTour />
+      <ExitIntentModal />
       <main>
         <HeroSection />
+        <RecentToolsSection />
         <EditorialTrustSection />
         <UniversalOpenerSection />
         <AiToolsSection />
@@ -39,9 +48,12 @@ export default async function Page({
         <CategoriesSection />
         <CalculatorsSection />
         <DeveloperToolsSection />
+        <ComparisonSection />
         <KnowledgeHubSection />
         <FeaturedGuidesSection locale={locale} />
         <FormatRecommender />
+        <NewsletterSignup />
+        <ToolRequestBanner />
         <WhySection />
       </main>
       <SiteFooter />

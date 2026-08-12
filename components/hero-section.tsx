@@ -3,6 +3,9 @@
 import Link from "next/link"
 import { Sparkles, Upload } from "lucide-react"
 import { useI18n } from "@/components/i18n-provider"
+import { GlobalSearch } from "@/components/global-search"
+import { SocialProofBar } from "@/components/social-proof-bar"
+import { PrivacyFirstBadge } from "@/components/premium-upsell-card"
 
 export function HeroSection() {
   const { t, href } = useI18n()
@@ -35,6 +38,18 @@ export function HeroSection() {
         <p className="mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground">
           {t.hero.subtitle}
         </p>
+
+        <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
+          <PrivacyFirstBadge />
+        </div>
+
+        <div className="relative z-10 mt-8 w-full max-w-xl">
+          <GlobalSearch />
+        </div>
+
+        <div className="mt-8 w-full">
+          <SocialProofBar />
+        </div>
 
         <div className="mt-8 flex w-full flex-col items-center justify-center gap-3 sm:w-auto sm:flex-row">
           <Link

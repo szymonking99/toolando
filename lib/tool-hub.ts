@@ -17,8 +17,22 @@ export type UtilityBrowseGroup = {
 
 /** Special file tools attached to converter browse categories. */
 const SPECIALS_BY_CATEGORY: Record<string, SpecialToolConfig["id"][]> = {
-  image: ["kompresor-obrazow", "usuwanie-tla"],
-  documents: ["laczenie-pdf"],
+  image: [
+    "kompresor-obrazow",
+    "usuwanie-tla",
+    "zmiana-rozmiaru-obrazu",
+    "usun-exif",
+    "znak-wodny",
+  ],
+  documents: [
+    "laczenie-pdf",
+    "podzial-pdf",
+    "kompresja-pdf",
+    "obrot-pdf",
+    "pdf-do-tekstu",
+  ],
+  pdf: ["podzial-pdf", "kompresja-pdf", "obrot-pdf", "pdf-do-tekstu", "laczenie-pdf"],
+  video: ["wyciszenie-wideo", "przyciecie-wideo"],
 }
 
 export const CALCULATOR_CATEGORIES: UtilityCategory[] = [
@@ -63,7 +77,7 @@ export const utilityBrowseGroups: UtilityBrowseGroup[] = [
   {
     id: "finance",
     hub: "calculators",
-    utilityIds: ["przelicznik-walut", "kalkulator-vat"],
+    utilityIds: ["przelicznik-walut", "kalkulator-vat", "kalkulator-kredytu"],
   },
   {
     id: "time",
@@ -78,19 +92,30 @@ export const utilityBrowseGroups: UtilityBrowseGroup[] = [
   {
     id: "media",
     hub: "calculators",
-    utilityIds: ["kalkulator-bitrate"],
+    utilityIds: ["kalkulator-bitrate", "konwerter-napisow"],
   },
   {
     id: "text",
     hub: "developer",
-    utilityIds: ["licznik-znakow"],
+    utilityIds: [
+      "licznik-znakow",
+      "diff-tekstu",
+      "konwerter-wielkosci-liter",
+      "usun-duplikaty-linii",
+      "markdown-preview",
+      "generator-nazw-plikow",
+    ],
   },
   {
     id: "dev",
     hub: "developer",
     utilityIds: [
       "generator-hasel",
+      "sila-hasla",
       "generator-qr",
+      "json-formatter",
+      "dekoder-jwt",
+      "walidator-nip-pesel",
       "konwerter-kolorow",
       "base64",
       "unix-timestamp",

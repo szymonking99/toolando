@@ -6,6 +6,7 @@ import { tools, getTool } from "@/lib/tools"
 import { specialTools, getSpecialTool } from "@/lib/special-tools"
 import { aiTools, getAiTool } from "@/lib/ai-tools"
 import { utilityTools, getUtilityTool } from "@/lib/utility-tools"
+import { ToolPageChrome } from "@/components/tool-page-chrome"
 import { ToolConverter } from "@/components/tool-converter"
 import { SpecialTool } from "@/components/special-tool"
 import { AiTool } from "@/components/ai-tool"
@@ -284,6 +285,7 @@ export default async function ToolPage({
           name={meta.name}
           description={meta.description}
         >
+          <ToolPageChrome id={id} title={meta.name} localOnly />
           <section className="mt-8 rounded-2xl border border-white/10 bg-white/[0.03] p-6 backdrop-blur-md">
             <UtilityTool tool={utility} />
           </section>
@@ -374,6 +376,7 @@ export default async function ToolPage({
           name={specialText.name}
           description={specialText.description}
         >
+          <ToolPageChrome id={id} title={specialText.name} />
           <section className="mt-8 rounded-2xl border border-white/10 bg-white/[0.03] p-6 backdrop-blur-md">
             <SpecialTool tool={special} />
           </section>
@@ -454,6 +457,10 @@ export default async function ToolPage({
         name={tool.name}
         description={pageContent.extendedDescription}
       >
+        <ToolPageChrome
+          id={id}
+          title={`${tool.from.toUpperCase()} → ${tool.to.toUpperCase()}`}
+        />
         <section className="mt-8 rounded-2xl border border-white/10 bg-white/[0.03] p-6 backdrop-blur-md">
           <ToolConverter tool={tool} />
         </section>

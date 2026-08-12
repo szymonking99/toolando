@@ -3,6 +3,114 @@
     "title": "Toolando.tech — Twoje narzędzia online w jednym miejscu",
     "description": "Konwertery, generatory, PDF i narzędzia AI — wszystko w jednym eleganckim ekosystemie. Szybko i prosto."
   },
+  "socialProof": {
+    "toolsCount": "{count}+ narzędzi w jednym ekosystemie",
+    "usesToday": "{uses} użyć dziś"
+  },
+  "recent": {
+    "title": "Ostatnio używane",
+    "subtitle": "Twoje ostatnie narzędzia — zapisane lokalnie w tej przeglądarce.",
+    "favoritesHint": "Dodaj gwiazdkę na stronie narzędzia, aby przypiąć je tutaj."
+  },
+  "premiumUpsell": {
+    "title": "Odblokuj narzędzia AI z Premium",
+    "description": "Generowanie tekstu, streszczenia, obrazy, tłumaczenia i czat — jedna subskrypcja, bez niespodzianek.",
+    "point1": "Wszystkie narzędzia AI bez limitów",
+    "point2": "Priorytetowe przetwarzanie w szczytach",
+    "point3": "Wsparcie niezależnego rozwoju",
+    "cta": "Wybierz Premium",
+    "compare": "Zobacz plany",
+    "trialHint": "Zaloguj się, aby zobaczyć podgląd — potem ulepsz w dowolnym momencie."
+  },
+  "privacyBadge": {
+    "title": "Prywatność first",
+    "local": "Przetwarzane lokalnie w przeglądarce"
+  },
+  "onboarding": {
+    "skip": "Zamknij",
+    "next": "Dalej",
+    "start": "Przeglądaj narzędzia",
+    "learnMore": "Jak działa Toolando",
+    "step1": {
+      "title": "Konwertuj, licz, otwieraj — jeden ekosystem",
+      "body": "287+ narzędzi do plików, kalkulatory, utility dla developerów i AI — wybierz narzędzie lub szukaj Ctrl+K."
+    },
+    "step2": {
+      "title": "Prywatność tam, gdzie ma znaczenie",
+      "body": "Wiele narzędzi działa w przeglądarce. Konwersje serwerowe usuwają pliki po zakończeniu."
+    },
+    "step3": {
+      "title": "Narzędzia AI z Premium",
+      "body": "Konwertery za darmo. AI w prostej subskrypcji miesięcznej — zobacz ceny zanim trafisz na paywall."
+    }
+  },
+  "exitIntent": {
+    "title": "Zanim wyjdziesz…",
+    "body": "Szukasz innego konwertera? Przeszukaj 287+ narzędzi albo zaproponuj nowe.",
+    "browse": "Przeglądaj narzędzia",
+    "request": "Zaproponuj narzędzie",
+    "close": "Zamknij"
+  },
+  "nextSteps": {
+    "title": "Kolejne kroki"
+  },
+  "newsletter": {
+    "title": "Nowe narzędzia i aktualizacje Premium",
+    "subtitle": "Zostaw e-mail — damy znać o ważnych funkcjach (bez spamu).",
+    "placeholder": "ty@example.com",
+    "cta": "Zapisz się",
+    "thanks": "Dzięki! Potwierdź przez formularz kontaktowy, jeśli chcesz odpowiedź.",
+    "confirmViaContact": "Dokończ zapis przez kontakt →"
+  },
+  "toolRequest": {
+    "title": "Brakuje konwertera?",
+    "body": "Zaproponuj nowe narzędzie lub format — priorytetyzujemy prośby użytkowników.",
+    "cta": "Zaproponuj narzędzie"
+  },
+  "comparison": {
+    "title": "Toolando vs narzędzia z uploadem w chmurze",
+    "subtitle": "Dlaczego użytkownicy przechodzą z typowych konwerterów online.",
+    "feature": "Funkcja",
+    "competitor": "Typowy konwerter w chmurze",
+    "rows": {
+      "privacy": "Podgląd lokalny i opcje prywatności",
+      "offline": "Działa offline (PWA, utility)",
+      "ai": "Zintegrowany workflow AI",
+      "free": "Darmowe podstawowe konwertery",
+      "limits": "Bez sztucznych limitów uploadu na podstawy"
+    }
+  },
+  "premiumPage": {
+    "title": "Toolando Premium",
+    "subtitle": "Narzędzia AI, jasna cena, anuluj kiedy chcesz.",
+    "freeTitle": "Darmowy",
+    "freeDesc": "Wszystkie konwertery, kalkulatory i większość utility.",
+    "premiumTitle": "Premium",
+    "premiumDesc": "Pełny pakiet AI — tekst, obrazy, streszczenia, tłumaczenia, czat.",
+    "supporterTitle": "Supporter",
+    "supporterDesc": "Premium + bez reklam (wkrótce).",
+    "cta": "Wybierz Premium",
+    "signIn": "Zaloguj się, aby subskrybować",
+    "faqTitle": "FAQ cenowe",
+    "faq1q": "Jak działają kredyty?",
+    "faq1a": "Nie ma kredytów za żądanie — Premium to stała miesięczna subskrypcja z nielimitowanym AI.",
+    "faq2q": "Czy mogę spróbować przed płatnością?",
+    "faq2a": "Załóż darmowe konto, korzystaj z konwerterów, ulepsz gdy potrzebujesz AI.",
+    "faq3q": "A prywatność plików?",
+    "faq3a": "Pliki serwerowe są usuwane po przetworzeniu. Narzędzia w przeglądarce nie wysyłają danych."
+  },
+  "privacyPage": {
+    "title": "Prywatność w centrum projektu",
+    "subtitle": "Jak Toolando chroni Twoje pliki i dane.",
+    "localTitle": "Narzędzia lokalne w przeglądarce",
+    "localBody": "Utility, uniwersalny otwieracz i wiele kalkulatorów działają w całości w przeglądarce — dane nie opuszczają urządzenia.",
+    "serverTitle": "Konwersje serwerowe",
+    "serverBody": "Przy uploadzie plik służy tylko do tej operacji i jest potem usuwany. HTTPS end-to-end.",
+    "aiTitle": "Narzędzia AI",
+    "aiBody": "Premium AI wysyła tylko treść, którą sam przekażesz — nigdy nie sprzedajemy ani nie używamy do reklam.",
+    "badge": "Privacy-First",
+    "readPolicy": "Pełna polityka prywatności"
+  },
   "nav": {
     "aiTools": "Narzędzia AI",
     "tools": "Konwertery",
@@ -23,7 +131,10 @@
     "onlineTools": "Kalkulatory",
     "converters": "Konwertery",
     "calculators": "Kalkulatory",
-    "developer": "Dla developerów"
+    "developer": "Dla developerów",
+    "premium": "Premium",
+    "guides": "Poradniki",
+    "faq": "FAQ"
   },
   "hero": {
     "badge": "Nowy ekosystem narzędzi online",
@@ -37,6 +148,11 @@
   "search": {
     "placeholder": "Szukaj narzędzia (np. mp3 wav, waluty, qr)…",
     "noResults": "Nie znaleziono narzędzia. Spróbuj innego zapytania."
+  },
+  "share": {
+    "label": "Udostępnij",
+    "copy": "Kopiuj link",
+    "copied": "Skopiowano"
   },
   "feedback": {
     "question": "Czy ten artykuł był pomocny?",

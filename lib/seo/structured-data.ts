@@ -219,5 +219,26 @@ export function definedTermSchema(opts: {
   }
 }
 
+/** Premium subscription product schema for the pricing page. */
+export function premiumProductSchema(locale: string) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: "Toolando Premium",
+    applicationCategory: "UtilitiesApplication",
+    operatingSystem: "Web browser",
+    url: abs(`/${locale}/premium`),
+    offers: {
+      "@type": "Offer",
+      price: "9.00",
+      priceCurrency: "PLN",
+      priceValidUntil: "2099-12-31",
+      availability: "https://schema.org/InStock",
+      url: abs(`/${locale}/premium`),
+    },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+  }
+}
+
 /** All supported locales, exported for callers that need hreflang-style data. */
 export { supportedLocales }

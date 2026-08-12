@@ -3,6 +3,114 @@
     "title": "Toolando.tech — Your online tools in one place",
     "description": "Converters, generators, PDF and AI tools — all in one elegant ecosystem. Fast and simple."
   },
+  "socialProof": {
+    "toolsCount": "{count}+ tools in one ecosystem",
+    "usesToday": "{uses} uses today"
+  },
+  "recent": {
+    "title": "Recently used",
+    "subtitle": "Your last tools — saved locally in this browser.",
+    "favoritesHint": "Star a tool from its page to pin it here."
+  },
+  "premiumUpsell": {
+    "title": "Unlock AI tools with Premium",
+    "description": "Text generation, summaries, images, translation and chat — one subscription, no per-request surprises.",
+    "point1": "All AI tools without limits",
+    "point2": "Priority processing on busy days",
+    "point3": "Support independent development",
+    "cta": "Go Premium",
+    "compare": "See plans",
+    "trialHint": "Sign in for a free preview — then upgrade anytime."
+  },
+  "privacyBadge": {
+    "title": "Privacy-first",
+    "local": "Processed locally in your browser"
+  },
+  "onboarding": {
+    "skip": "Close",
+    "next": "Next",
+    "start": "Browse tools",
+    "learnMore": "How Toolando works",
+    "step1": {
+      "title": "Convert, calculate, open — one ecosystem",
+      "body": "287+ tools for files, calculators, developer utilities and AI — pick a tool or search with Ctrl+K."
+    },
+    "step2": {
+      "title": "Privacy when it matters",
+      "body": "Many utilities run in your browser. Server conversions delete files after the job finishes."
+    },
+    "step3": {
+      "title": "AI tools with Premium",
+      "body": "Try converters for free. AI features use a simple monthly plan — see pricing before you hit a paywall."
+    }
+  },
+  "exitIntent": {
+    "title": "Before you go…",
+    "body": "Need a different converter? Search 287+ tools or tell us what to build next.",
+    "browse": "Browse tools",
+    "request": "Request a tool",
+    "close": "Close"
+  },
+  "nextSteps": {
+    "title": "Next steps"
+  },
+  "newsletter": {
+    "title": "New tools & Premium updates",
+    "subtitle": "Leave your email — we notify you about major features (no spam).",
+    "placeholder": "you@example.com",
+    "cta": "Subscribe",
+    "thanks": "Thanks! Confirm via contact if you want a reply.",
+    "confirmViaContact": "Complete signup via contact form →"
+  },
+  "toolRequest": {
+    "title": "Missing a converter?",
+    "body": "Suggest a new tool or format — we prioritize what users ask for.",
+    "cta": "Suggest a tool"
+  },
+  "comparison": {
+    "title": "Toolando vs cloud upload tools",
+    "subtitle": "Why users switch from generic upload converters.",
+    "feature": "Feature",
+    "competitor": "Typical cloud converter",
+    "rows": {
+      "privacy": "Local preview & privacy options",
+      "offline": "Works offline (PWA utilities)",
+      "ai": "Integrated AI workflow",
+      "free": "Free core converters",
+      "limits": "No arbitrary daily upload caps on basics"
+    }
+  },
+  "premiumPage": {
+    "title": "Toolando Premium",
+    "subtitle": "AI tools, clear pricing, cancel anytime.",
+    "freeTitle": "Free",
+    "freeDesc": "All file converters, calculators and most utilities.",
+    "premiumTitle": "Premium",
+    "premiumDesc": "Full AI suite — text, images, summaries, translation, chat.",
+    "supporterTitle": "Supporter",
+    "supporterDesc": "Premium + ad-free experience (coming soon).",
+    "cta": "Start Premium",
+    "signIn": "Sign in to subscribe",
+    "faqTitle": "Pricing FAQ",
+    "faq1q": "How do credits work?",
+    "faq1a": "There are no per-request credits — Premium is a flat monthly subscription for unlimited AI use.",
+    "faq2q": "Can I try before paying?",
+    "faq2a": "Create a free account, explore converters, then upgrade when you need AI.",
+    "faq3q": "What about file privacy?",
+    "faq3a": "Server files are deleted after processing. Browser tools never upload your data."
+  },
+  "privacyPage": {
+    "title": "Privacy-first by design",
+    "subtitle": "How Toolando protects your files and data.",
+    "localTitle": "Browser-local tools",
+    "localBody": "Utilities, the universal opener and many calculators run entirely in your browser — data never leaves your device.",
+    "serverTitle": "Server conversions",
+    "serverBody": "When you upload for conversion, files are used only for that job and deleted afterward. HTTPS end-to-end.",
+    "aiTitle": "AI tools",
+    "aiBody": "Premium AI sends only the content you submit to the model provider — never sold or used for ads.",
+    "badge": "Privacy-First",
+    "readPolicy": "Read full privacy policy"
+  },
   "nav": {
     "aiTools": "AI Tools",
     "tools": "Converters",
@@ -23,7 +131,10 @@
     "onlineTools": "Calculators",
     "converters": "Converters",
     "calculators": "Calculators",
-    "developer": "Developer tools"
+    "developer": "Developer tools",
+    "premium": "Premium",
+    "guides": "Guides",
+    "faq": "FAQ"
   },
   "hero": {
     "badge": "A new online tools ecosystem",
@@ -37,6 +148,11 @@
   "search": {
     "placeholder": "Search tools (e.g. mp3 wav, currency, qr)…",
     "noResults": "No tools found. Try a different query."
+  },
+  "share": {
+    "label": "Share",
+    "copy": "Copy link",
+    "copied": "Copied"
   },
   "feedback": {
     "question": "Was this article helpful?",

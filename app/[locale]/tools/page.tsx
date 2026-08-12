@@ -24,7 +24,7 @@ import {
 } from "@/lib/tool-hub"
 import { SiteNavbar } from "@/components/site-navbar"
 import { SiteFooter } from "@/components/site-footer"
-import { ToolSearch } from "@/components/tool-search"
+import { GlobalSearch } from "@/components/global-search"
 import { buildPageMetadata } from "@/lib/seo/metadata"
 import { getDictionary } from "@/lib/i18n/dictionaries"
 import { getCategoryMeta } from "@/lib/i18n/content-meta"
@@ -117,7 +117,7 @@ export default async function ToolsIndexPage({
         </div>
 
         <Suspense fallback={null}>
-          <ToolSearch className="mx-auto mt-10 max-w-xl" />
+          <GlobalSearch className="relative mx-auto mt-10 max-w-xl" />
         </Suspense>
 
         {/* 1. Converters */}

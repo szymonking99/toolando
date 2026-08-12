@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils"
 import { hasAnalyticsConsent } from "@/lib/consent"
 import { useI18n } from "@/components/i18n-provider"
 import { EzoicAd } from "@/components/ezoic-ad"
+import { PremiumUpsellCard } from "@/components/premium-upsell-card"
 import {
   adSlotEnabled,
   getAdNetwork,
@@ -105,12 +106,7 @@ export function AdSlot({
           data-full-width-responsive={responsive ? "true" : "false"}
         />
       ) : (
-        <div
-          style={{ minHeight }}
-          className="flex w-full items-center justify-center rounded-xl border border-dashed border-white/15 bg-white/[0.02] text-xs text-muted-foreground/50"
-        >
-          {t.ad.placeholder}
-        </div>
+        <PremiumUpsellCard className="px-0" />
       )}
     </div>
   )

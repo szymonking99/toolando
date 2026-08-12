@@ -202,3 +202,363 @@ function stemOf(name: string): string {
   const stem = dot > 0 ? base.slice(0, dot) : base
   return stem.replace(/[^a-zA-Z0-9-_]+/g, "-").replace(/^-+|-+$/g, "") || "plik"
 }
+
+function extOf(name: string): string {
+  const base = name.split(/[\\/]/).pop() ?? name
+  const dot = base.lastIndexOf(".")
+  return dot > 0 ? base.slice(dot + 1).toLowerCase() : ""
+}
+
+/* ------------------------------------------------------------------ */
+/* PDF split / rotate / compress / text                                */
+/* ------------------------------------------------------------------ */
+
+function parsePageList(spec: string, total: number): number[] {
+  const pages = new Set<number>()
+  for (const part of spec.split(",")) {
+    const p = part.trim()
+    if (!p) continue
+    if (p.includes("-")) {
+      const [aStr, bStr] = p.split("-")
+      const a = Number(aStr.trim())
+      const b = Number(bStr.trim())
+      if (!Number.isFinite(a) || !Number.isFinite(b)) continue
+      for (let i = Math.min(a, b); i <= Math.max(a, b); i++) pages.add(i)
+    } else {
+      const n = Number(p)
+      if (Number.isFinite(n)) pages.add(n)
+    }
+  }
+  return [...pages]
+    .filter((p) => p >= 1 && p <= total)
+    .sort((a, b) => a - b)
+}
+
+export async function splitPdf(
+  input: Buffer,
+  originalName: string,
+  mode: "all" | "range",
+  range?: string,
+): Promise<SpecialResult> {
+  const { PDFDocument } = await import("pdf-lib")
+  let source
+  try {
+    source = await PDFDocument.load(input, { ignoreEncryption: true })
+  } catch {
+    throw new ConversionError("Nie udało się odczytać pliku PDF.")
+  }
+
+  const total = source.getPageCount()
+  const indices =
+    mode === "all"
+      ? Array.from({ length: total }, (_, i) => i)
+      : parsePageList(range ?? "", total).map((p) => p - 1)
+
+  if (indices.length === 0) {
+    throw new ConversionError("Podaj prawidłowy zakres stron (np. 1-3,5).")
+  }
+
+  const stem = stemOf(originalName)
+  const JSZip = (await import("jszip")).default
+  const zip = new JSZip()
+
+  for (const pageIndex of indices) {
+    const out = await PDFDocument.create()
+    const [page] = await out.copyPages(source, [pageIndex])
+    out.addPage(page)
+    const bytes = await out.save()
+    zip.file(`strona-${pageIndex + 1}.pdf`, Buffer.from(bytes))
+  }
+
+  const zipBuffer = await zip.generateAsync({ type: "nodebuffer" })
+  return {
+    buffer: zipBuffer,
+    filename: `${stem}-strony.zip`,
+    contentType: "application/zip",
+  }
+}
+
+export async function rotatePdf(
+  input: Buffer,
+  originalName: string,
+  degrees: 90 | 180 | 270,
+): Promise<SpecialResult> {
+  const { PDFDocument, degrees: deg } = await import("pdf-lib")
+  let doc
+  try {
+    doc = await PDFDocument.load(input, { ignoreEncryption: true })
+  } catch {
+    throw new ConversionError("Nie udało się odczytać pliku PDF.")
+  }
+
+  for (const page of doc.getPages()) {
+    const current = page.getRotation().angle
+    page.setRotation(deg(current + degrees))
+  }
+
+  const bytes = await doc.save()
+  const stem = stemOf(originalName)
+  return {
+    buffer: Buffer.from(bytes),
+    filename: `${stem}-obrocony.pdf`,
+    contentType: "application/pdf",
+  }
+}
+
+export async function compressPdf(
+  input: Buffer,
+  originalName: string,
+): Promise<SpecialResult> {
+  const { PDFDocument } = await import("pdf-lib")
+  let doc
+  try {
+    doc = await PDFDocument.load(input, { ignoreEncryption: true })
+  } catch {
+    throw new ConversionError("Nie udało się odczytać pliku PDF.")
+  }
+
+  const bytes = await doc.save({ useObjectStreams: true })
+  const stem = stemOf(originalName)
+  return {
+    buffer: Buffer.from(bytes),
+    filename: `${stem}-skompresowany.pdf`,
+    contentType: "application/pdf",
+  }
+}
+
+export async function pdfToText(
+  input: Buffer,
+  originalName: string,
+): Promise<SpecialResult> {
+  const mupdf = await import("mupdf")
+  const doc = mupdf.Document.openDocument(
+    new Uint8Array(input),
+    "application/pdf",
+  )
+  const pages = doc.countPages()
+  const parts: string[] = []
+  for (let i = 0; i < pages; i++) {
+    const page = doc.loadPage(i)
+    parts.push(page.toStructuredText("preserve-whitespace").asText())
+  }
+  const text = parts.join("\n\n").trim()
+  const stem = stemOf(originalName)
+  return {
+    buffer: Buffer.from(text, "utf8"),
+    filename: `${stem}.txt`,
+    contentType: "text/plain; charset=utf-8",
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* Image resize / EXIF strip / watermark                               */
+/* ------------------------------------------------------------------ */
+
+export async function resizeImage(
+  input: Buffer,
+  originalName: string,
+  width?: number,
+  height?: number,
+): Promise<SpecialResult> {
+  const sharp = (await import("sharp")).default
+  const w = width && width > 0 ? Math.round(width) : undefined
+  const h = height && height > 0 ? Math.round(height) : undefined
+  if (!w && !h) {
+    throw new ConversionError("Podaj szerokość lub wysokość w pikselach.")
+  }
+
+  let pipeline = sharp(input, { failOn: "none" }).rotate()
+  const meta = await pipeline.metadata()
+  pipeline = pipeline.resize(w, h, {
+    fit: "inside",
+    withoutEnlargement: true,
+  })
+
+  const format = String(meta.format ?? "jpeg")
+  let out: Buffer
+  let ext: string
+  let contentType: string
+
+  switch (format) {
+    case "png":
+      out = await pipeline.png({ compressionLevel: 9 }).toBuffer()
+      ext = "png"
+      contentType = "image/png"
+      break
+    case "webp":
+      out = await pipeline.webp({ quality: 85 }).toBuffer()
+      ext = "webp"
+      contentType = "image/webp"
+      break
+    default:
+      out = await pipeline.jpeg({ quality: 85, mozjpeg: true }).toBuffer()
+      ext = "jpg"
+      contentType = "image/jpeg"
+  }
+
+  const stem = stemOf(originalName)
+  return {
+    buffer: out,
+    filename: `${stem}-${w ?? "auto"}x${h ?? "auto"}.${ext}`,
+    contentType,
+  }
+}
+
+export async function stripExif(
+  input: Buffer,
+  originalName: string,
+): Promise<SpecialResult> {
+  const sharp = (await import("sharp")).default
+  const image = sharp(input, { failOn: "none" }).rotate()
+  const meta = await image.metadata()
+  const format = String(meta.format ?? "jpeg")
+
+  let out: Buffer
+  let ext: string
+  let contentType: string
+
+  switch (format) {
+    case "png":
+      out = await image.png().toBuffer()
+      ext = "png"
+      contentType = "image/png"
+      break
+    case "webp":
+      out = await image.webp({ quality: 90 }).toBuffer()
+      ext = "webp"
+      contentType = "image/webp"
+      break
+    default:
+      out = await image.jpeg({ quality: 90, mozjpeg: true }).toBuffer()
+      ext = "jpg"
+      contentType = "image/jpeg"
+  }
+
+  const stem = stemOf(originalName)
+  return {
+    buffer: out,
+    filename: `${stem}-bez-exif.${ext}`,
+    contentType,
+  }
+}
+
+export async function watermarkImage(
+  input: Buffer,
+  originalName: string,
+  text: string,
+): Promise<SpecialResult> {
+  const label = text.trim() || "toolando.tech"
+  const sharp = (await import("sharp")).default
+  const image = sharp(input, { failOn: "none" }).rotate()
+  const meta = await image.metadata()
+  const width = meta.width ?? 800
+  const height = meta.height ?? 600
+  const fontSize = Math.max(16, Math.round(Math.min(width, height) / 24))
+
+  const svg = `<svg width="${width}" height="${height}">
+    <text x="50%" y="95%" text-anchor="middle" font-family="Arial,sans-serif" font-size="${fontSize}" fill="rgba(255,255,255,0.55)" stroke="rgba(0,0,0,0.35)" stroke-width="1">${escapeXml(label)}</text>
+  </svg>`
+
+  const format = String(meta.format ?? "jpeg")
+  let pipeline = image.composite([{ input: Buffer.from(svg), gravity: "southeast" }])
+  let out: Buffer
+  let ext: string
+  let contentType: string
+
+  switch (format) {
+    case "png":
+      out = await pipeline.png().toBuffer()
+      ext = "png"
+      contentType = "image/png"
+      break
+    case "webp":
+      out = await pipeline.webp({ quality: 90 }).toBuffer()
+      ext = "webp"
+      contentType = "image/webp"
+      break
+    default:
+      out = await pipeline.jpeg({ quality: 90, mozjpeg: true }).toBuffer()
+      ext = "jpg"
+      contentType = "image/jpeg"
+  }
+
+  const stem = stemOf(originalName)
+  return {
+    buffer: out,
+    filename: `${stem}-znak-wodny.${ext}`,
+    contentType,
+  }
+}
+
+function escapeXml(value: string): string {
+  return value
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+}
+
+/* ------------------------------------------------------------------ */
+/* Video mute / trim (ffmpeg)                                          */
+/* ------------------------------------------------------------------ */
+
+export async function muteVideo(
+  input: Buffer,
+  originalName: string,
+): Promise<SpecialResult> {
+  const ext = extOf(originalName) || "mp4"
+  const outExt = ["mp4", "webm", "mov", "mkv"].includes(ext) ? ext : "mp4"
+  const out = await (
+    await import("@/lib/ffmpeg-utils")
+  ).ffmpegTransform(input, ext, outExt, (inPath, outPath) => [
+    "-y",
+    "-i",
+    inPath,
+    "-c:v",
+    "copy",
+    "-an",
+    outPath,
+  ])
+
+  const stem = stemOf(originalName)
+  return {
+    buffer: out,
+    filename: `${stem}-bez-dzwieku.${outExt}`,
+    contentType: outExt === "webm" ? "video/webm" : "video/mp4",
+  }
+}
+
+export async function trimVideo(
+  input: Buffer,
+  originalName: string,
+  startSec: number,
+  endSec: number,
+): Promise<SpecialResult> {
+  if (endSec <= startSec) {
+    throw new ConversionError("Czas końca musi być większy niż początek.")
+  }
+
+  const ext = extOf(originalName) || "mp4"
+  const outExt = ["mp4", "webm", "mov", "mkv"].includes(ext) ? ext : "mp4"
+  const { ffmpegTransform } = await import("@/lib/ffmpeg-utils")
+
+  const out = await ffmpegTransform(input, ext, outExt, (inPath, outPath) => [
+    "-y",
+    "-ss",
+    String(startSec),
+    "-to",
+    String(endSec),
+    "-i",
+    inPath,
+    "-c",
+    "copy",
+    outPath,
+  ])
+
+  const stem = stemOf(originalName)
+  return {
+    buffer: out,
+    filename: `${stem}-trim.${outExt}`,
+    contentType: outExt === "webm" ? "video/webm" : "video/mp4",
+  }
+}

@@ -14,6 +14,13 @@ import { uploadManyAndProcess } from "@/lib/client-upload"
 import { useI18n } from "@/components/i18n-provider"
 import { getSpecialMeta } from "@/lib/i18n/tool-meta"
 import { useFakeProgress } from "@/hooks/use-fake-progress"
+import {
+  SpecialToolFields,
+  buildSpecialFields,
+  defaultSpecialFields,
+} from "@/components/special-tool-fields"
+import { NextStepsPanel } from "@/components/next-steps-panel"
+import { recordToolVisit } from "@/lib/client-preferences"
 
 type Status = "idle" | "uploading" | "working" | "done" | "error"
 
@@ -29,6 +36,7 @@ export function SpecialTool({ tool }: { tool: SpecialToolConfig }) {
   const inputRef = useRef<HTMLInputElement>(null)
   const [files, setFiles] = useState<File[]>([])
   const [quality, setQuality] = useState(75)
+  const [extraFields, setExtraFields] = useState(defaultSpecialFields)
   const [status, setStatus] = useState<Status>("idle")
   const [error, setError] = useState<string | null>(null)
   const [progress, setProgress] = useState(0)
@@ -40,7 +48,7 @@ export function SpecialTool({ tool }: { tool: SpecialToolConfig }) {
     isImage: boolean
   } | null>(null)
 
-  const isImageResult = tool.engine !== "merge-pdf"
+  const isImageResult = tool.previewImage
   const workProgress = useFakeProgress(status === "working")
 
   // Live thumbnails for selected image files (before processing).
@@ -102,11 +110,17 @@ export function SpecialTool({ tool }: { tool: SpecialToolConfig }) {
     setError(null)
 
     try {
+      const extra = buildSpecialFields(tool.engine, extraFields)
+      const fields: Record<string, string> = {
+        ...(tool.hasQuality ? { quality: String(quality) } : {}),
+        ...(extra ?? {}),
+      }
+
       const res = await uploadManyAndProcess({
         files,
         endpoint: "/api/tools",
         id: tool.id,
-        fields: tool.hasQuality ? { quality: String(quality) } : undefined,
+        fields: Object.keys(fields).length > 0 ? fields : undefined,
         onUploadProgress: (pct) => {
           setProgress(pct)
           if (pct >= 100) setStatus("working")
@@ -138,6 +152,7 @@ export function SpecialTool({ tool }: { tool: SpecialToolConfig }) {
         isImage: isImageResult,
       })
       setStatus("done")
+      recordToolVisit(tool.id, meta.name)
     } catch {
       setError(t.tool.connectionError)
       setStatus("error")
@@ -254,6 +269,16 @@ export function SpecialTool({ tool }: { tool: SpecialToolConfig }) {
         </div>
       )}
 
+      {files.length > 0 && (
+        <SpecialToolFields
+          engine={tool.engine}
+          values={extraFields}
+          onChange={(patch) =>
+            setExtraFields((prev) => ({ ...prev, ...patch }))
+          }
+        />
+      )}
+
       {error && (
         <div className="flex items-start gap-2 rounded-xl border border-destructive/30 bg-destructive/10 px-4 py-3 text-sm text-destructive-foreground">
           <AlertCircle className="mt-0.5 size-4 shrink-0 text-destructive" />
@@ -313,6 +338,7 @@ export function SpecialTool({ tool }: { tool: SpecialToolConfig }) {
               {t.tool.startOver}
             </button>
           </div>
+          <NextStepsPanel toolId={tool.id} toolTitle={meta.name} />
         </div>
       ) : (
         <div className="space-y-3">

@@ -12,7 +12,7 @@ type ShareButtonsProps = {
 }
 
 export function ShareButtons({ title, path, className }: ShareButtonsProps) {
-  const { locale } = useI18n()
+  const { locale, t } = useI18n()
   const [copied, setCopied] = useState(false)
 
   const siteUrl =
@@ -56,7 +56,7 @@ export function ShareButtons({ title, path, className }: ShareButtonsProps) {
   return (
     <div className={cn("flex flex-wrap items-center gap-2", className)}>
       <span className="mr-1 text-xs font-medium uppercase tracking-widest text-muted-foreground">
-        Share
+        {t.share?.label ?? "Share"}
       </span>
       {shareLinks.map((link) => (
         <a
@@ -79,7 +79,7 @@ export function ShareButtons({ title, path, className }: ShareButtonsProps) {
         ) : (
           <Link2 className="size-3.5" aria-hidden="true" />
         )}
-        {copied ? "Copied" : "Copy link"}
+        {copied ? (t.share?.copied ?? "Copied") : (t.share?.copy ?? "Copy link")}
       </button>
     </div>
   )

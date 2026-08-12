@@ -16,6 +16,7 @@ import { aiTools } from "@/lib/ai-tools"
 import { useI18n } from "@/components/i18n-provider"
 import { getAiMeta } from "@/lib/i18n/ai-meta"
 import { useUser } from "@/hooks/use-user"
+import { PREMIUM_PLAN } from "@/lib/premium"
 
 const ICONS: Record<string, LucideIcon> = {
   PenLine,
@@ -83,6 +84,17 @@ export function AiToolsSection() {
               </Link>
             )
           })}
+        </div>
+
+        <div className="mx-auto mt-10 max-w-2xl rounded-2xl border border-primary/20 bg-primary/[0.06] p-6 text-center">
+          <p className="text-sm text-muted-foreground">{t.premiumUpsell.description}</p>
+          <Link
+            href={href("/premium")}
+            className="mt-4 inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground"
+          >
+            <Crown className="size-4" />
+            {t.premiumUpsell.compare} — {PREMIUM_PLAN.displayPrice}/{PREMIUM_PLAN.displayPeriod}
+          </Link>
         </div>
       </div>
     </section>

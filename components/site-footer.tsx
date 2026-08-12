@@ -128,17 +128,37 @@ export function SiteFooter() {
           <p className="text-sm text-muted-foreground">{t.footer.rights}</p>
 
           <a
-
             href="mailto:badyltech@outlook.com"
-
             className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
-
           >
-
             badyltech@outlook.com
-
           </a>
-
+          <div className="mt-2 flex flex-wrap justify-center gap-3 md:justify-end">
+            <a
+              href="https://twitter.com/toolando"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs text-muted-foreground hover:text-foreground"
+            >
+              X / Twitter
+            </a>
+            <a
+              href="https://www.youtube.com/@toolando"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs text-muted-foreground hover:text-foreground"
+            >
+              YouTube
+            </a>
+            <a
+              href="https://www.linkedin.com/company/toolando"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs text-muted-foreground hover:text-foreground"
+            >
+              LinkedIn
+            </a>
+          </div>
         </div>
 
       </div>

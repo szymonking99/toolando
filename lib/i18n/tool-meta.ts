@@ -102,7 +102,7 @@ export type SpecialMeta = {
   acceptLabel: string
 }
 
-type SpecialMap = Record<SpecialToolId, SpecialMeta>
+type SpecialMap = Partial<Record<SpecialToolId, SpecialMeta>>
 
 const specialMaps: Record<string, SpecialMap> = {
   pl: {
@@ -130,6 +130,71 @@ const specialMaps: Record<string, SpecialMap> = {
       actionLabel: "Usuń tło",
       acceptLabel: "JPG, PNG, WebP",
     },
+    "podzial-pdf": {
+      category: "Dokumenty",
+      name: "Podział PDF na strony",
+      description:
+        "Rozdziel dokument PDF na osobne pliki — każda strona osobno albo wybrany zakres. Wynik w archiwum ZIP.",
+      actionLabel: "Podziel PDF",
+      acceptLabel: "PDF",
+    },
+    "kompresja-pdf": {
+      category: "Dokumenty",
+      name: "Kompresja PDF",
+      description:
+        "Zmniejsz rozmiar pliku PDF przez optymalizację struktury dokumentu.",
+      actionLabel: "Kompresuj PDF",
+      acceptLabel: "PDF",
+    },
+    "obrot-pdf": {
+      category: "Dokumenty",
+      name: "Obrót stron PDF",
+      description: "Obróć wszystkie strony dokumentu PDF o 90°, 180° lub 270°.",
+      actionLabel: "Obróć PDF",
+      acceptLabel: "PDF",
+    },
+    "pdf-do-tekstu": {
+      category: "Dokumenty",
+      name: "PDF do tekstu",
+      description: "Wyodrębnij tekst z pliku PDF do pliku TXT.",
+      actionLabel: "Wyodrębnij tekst",
+      acceptLabel: "PDF",
+    },
+    "zmiana-rozmiaru-obrazu": {
+      category: "Obrazy",
+      name: "Zmiana rozmiaru obrazu",
+      description: "Zmień wymiary zdjęcia w pikselach z zachowaniem proporcji.",
+      actionLabel: "Zmień rozmiar",
+      acceptLabel: "JPG, PNG, WebP, AVIF, TIFF, GIF",
+    },
+    "usun-exif": {
+      category: "Obrazy",
+      name: "Usuń metadane EXIF",
+      description: "Usuń dane EXIF (GPS, aparat, daty) ze zdjęcia przed publikacją.",
+      actionLabel: "Usuń EXIF",
+      acceptLabel: "JPG, PNG, WebP, TIFF, HEIC",
+    },
+    "znak-wodny": {
+      category: "Obrazy",
+      name: "Znak wodny na zdjęciu",
+      description: "Dodaj półprzezroczysty tekstowy znak wodny na obrazie.",
+      actionLabel: "Dodaj znak wodny",
+      acceptLabel: "JPG, PNG, WebP",
+    },
+    "wyciszenie-wideo": {
+      category: "Wideo",
+      name: "Wyciszenie wideo",
+      description: "Usuń ścieżkę dźwiękową z pliku wideo.",
+      actionLabel: "Wycisz wideo",
+      acceptLabel: "MP4, WebM, MOV, MKV",
+    },
+    "przyciecie-wideo": {
+      category: "Wideo",
+      name: "Przycięcie wideo",
+      description: "Wytnij fragment wideo między podanym czasem początku i końca.",
+      actionLabel: "Przytnij wideo",
+      acceptLabel: "MP4, WebM, MOV, MKV",
+    },
   },
   en: {
     "kompresor-obrazow": {
@@ -155,6 +220,70 @@ const specialMaps: Record<string, SpecialMap> = {
         "Automatically cut out the background from a photo in one click with AI. The result is saved as a PNG with transparency.",
       actionLabel: "Remove background",
       acceptLabel: "JPG, PNG, WebP",
+    },
+    "podzial-pdf": {
+      category: "Documents",
+      name: "Split PDF pages",
+      description:
+        "Split a PDF into separate files — every page or a selected range. Result packaged as a ZIP archive.",
+      actionLabel: "Split PDF",
+      acceptLabel: "PDF",
+    },
+    "kompresja-pdf": {
+      category: "Documents",
+      name: "Compress PDF",
+      description: "Reduce PDF file size by optimizing the document structure.",
+      actionLabel: "Compress PDF",
+      acceptLabel: "PDF",
+    },
+    "obrot-pdf": {
+      category: "Documents",
+      name: "Rotate PDF pages",
+      description: "Rotate all pages in a PDF by 90°, 180° or 270°.",
+      actionLabel: "Rotate PDF",
+      acceptLabel: "PDF",
+    },
+    "pdf-do-tekstu": {
+      category: "Documents",
+      name: "PDF to text",
+      description: "Extract plain text from a PDF file into a TXT download.",
+      actionLabel: "Extract text",
+      acceptLabel: "PDF",
+    },
+    "zmiana-rozmiaru-obrazu": {
+      category: "Images",
+      name: "Resize image",
+      description: "Change image dimensions in pixels while keeping aspect ratio.",
+      actionLabel: "Resize image",
+      acceptLabel: "JPG, PNG, WebP, AVIF, TIFF, GIF",
+    },
+    "usun-exif": {
+      category: "Images",
+      name: "Strip EXIF metadata",
+      description: "Remove EXIF data (GPS, camera, dates) before publishing online.",
+      actionLabel: "Strip EXIF",
+      acceptLabel: "JPG, PNG, WebP, TIFF, HEIC",
+    },
+    "znak-wodny": {
+      category: "Images",
+      name: "Image watermark",
+      description: "Add a semi-transparent text watermark to your image.",
+      actionLabel: "Add watermark",
+      acceptLabel: "JPG, PNG, WebP",
+    },
+    "wyciszenie-wideo": {
+      category: "Video",
+      name: "Mute video",
+      description: "Remove the audio track from a video file.",
+      actionLabel: "Mute video",
+      acceptLabel: "MP4, WebM, MOV, MKV",
+    },
+    "przyciecie-wideo": {
+      category: "Video",
+      name: "Trim video",
+      description: "Cut a video clip between a start and end time.",
+      actionLabel: "Trim video",
+      acceptLabel: "MP4, WebM, MOV, MKV",
     },
   },
   de: {

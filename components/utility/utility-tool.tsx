@@ -16,6 +16,17 @@ import { Base64Tool } from "./base64-tool"
 import { TimestampTool } from "./timestamp-tool"
 import { UuidTool } from "./uuid-tool"
 import { HashTool } from "./hash-tool"
+import { JsonFormatterTool } from "./json-formatter-tool"
+import { DiffTool } from "./diff-tool"
+import { CaseConverterTool } from "./case-converter-tool"
+import { DedupeLinesTool } from "./dedupe-lines-tool"
+import { JwtTool } from "./jwt-tool"
+import { PolishIdTool } from "./polish-id-tool"
+import { LoanCalculatorTool } from "./loan-calculator-tool"
+import { MarkdownPreviewTool } from "./markdown-preview-tool"
+import { PasswordStrengthTool } from "./password-strength-tool"
+import { SubtitleTool } from "./subtitle-tool"
+import { BatchRenameTool } from "./batch-rename-tool"
 
 export function UtilityTool({ tool }: { tool: UtilityToolConfig }) {
   switch (tool.id) {
@@ -31,12 +42,34 @@ export function UtilityTool({ tool }: { tool: UtilityToolConfig }) {
       return <VatTool />
     case "kalkulator-wieku":
       return <AgeTool />
+    case "kalkulator-kredytu":
+      return <LoanCalculatorTool />
     case "generator-hasel":
       return <PasswordTool />
+    case "sila-hasla":
+      return <PasswordStrengthTool />
     case "licznik-znakow":
       return <CharCounterTool />
+    case "diff-tekstu":
+      return <DiffTool />
+    case "konwerter-wielkosci-liter":
+      return <CaseConverterTool />
+    case "usun-duplikaty-linii":
+      return <DedupeLinesTool />
+    case "markdown-preview":
+      return <MarkdownPreviewTool />
+    case "generator-nazw-plikow":
+      return <BatchRenameTool />
     case "generator-qr":
       return <QrTool />
+    case "json-formatter":
+      return <JsonFormatterTool />
+    case "dekoder-jwt":
+      return <JwtTool />
+    case "walidator-nip-pesel":
+      return <PolishIdTool />
+    case "konwerter-napisow":
+      return <SubtitleTool />
     case "kalkulator-bitrate":
       return <BitrateTool />
     case "konwerter-kolorow":

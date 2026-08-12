@@ -6,13 +6,22 @@ import {
   compressImage,
   mergePdfs,
   removeImageBackground,
+  splitPdf,
+  rotatePdf,
+  compressPdf,
+  pdfToText,
+  resizeImage,
+  stripExif,
+  watermarkImage,
+  muteVideo,
+  trimVideo,
   type SpecialResult,
 } from "@/lib/special-convert"
+import { parseTimeToSeconds } from "@/lib/ffmpeg-utils"
 
 export const runtime = "nodejs"
 export const maxDuration = 300
 
-// 500 MB per-file ceiling (large files arrive via Vercel Blob).
 const MAX_BYTES = 500 * 1024 * 1024
 
 export async function POST(req: NextRequest) {
@@ -62,6 +71,73 @@ export async function POST(req: NextRequest) {
           files[0].buffer,
           files[0].name,
           files[0].type,
+        )
+        break
+      }
+      case "split-pdf": {
+        const splitMode =
+          intake.field("splitMode") === "range" ? "range" : "all"
+        result = await splitPdf(
+          files[0].buffer,
+          files[0].name,
+          splitMode,
+          intake.field("pageRange") ?? "",
+        )
+        break
+      }
+      case "rotate-pdf": {
+        const rot = Number(intake.field("rotation") ?? 90)
+        const degrees = rot === 180 || rot === 270 ? rot : 90
+        result = await rotatePdf(
+          files[0].buffer,
+          files[0].name,
+          degrees as 90 | 180 | 270,
+        )
+        break
+      }
+      case "compress-pdf": {
+        result = await compressPdf(files[0].buffer, files[0].name)
+        break
+      }
+      case "pdf-to-text": {
+        result = await pdfToText(files[0].buffer, files[0].name)
+        break
+      }
+      case "resize-image": {
+        const width = Number(intake.field("width") ?? 0)
+        const height = Number(intake.field("height") ?? 0)
+        result = await resizeImage(
+          files[0].buffer,
+          files[0].name,
+          width || undefined,
+          height || undefined,
+        )
+        break
+      }
+      case "strip-exif": {
+        result = await stripExif(files[0].buffer, files[0].name)
+        break
+      }
+      case "watermark-image": {
+        result = await watermarkImage(
+          files[0].buffer,
+          files[0].name,
+          intake.field("watermarkText") ?? "toolando.tech",
+        )
+        break
+      }
+      case "mute-video": {
+        result = await muteVideo(files[0].buffer, files[0].name)
+        break
+      }
+      case "trim-video": {
+        const startSec = parseTimeToSeconds(intake.field("trimStart") ?? "0")
+        const endSec = parseTimeToSeconds(intake.field("trimEnd") ?? "0")
+        result = await trimVideo(
+          files[0].buffer,
+          files[0].name,
+          startSec,
+          endSec,
         )
         break
       }

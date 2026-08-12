@@ -7,6 +7,7 @@ import { ConsentModeInit } from "@/components/consent-mode-init"
 import { ConsentGatedScripts } from "@/components/consent-gated-scripts"
 import { EzoicHeadScripts } from "@/components/ezoic-head-scripts"
 import { EzoicRouteHandler } from "@/components/ezoic-route-handler"
+import { PwaRegister } from "@/components/pwa-register"
 import { JsonLd } from "@/components/json-ld"
 import { organizationSchema, websiteSchema } from "@/lib/seo/structured-data"
 import { getDictionary } from "@/lib/i18n/dictionaries"
@@ -69,6 +70,7 @@ export async function generateMetadata({
         ],
       },
     },
+    manifest: "/manifest.webmanifest",
     openGraph: {
       title: dict.meta.title,
       description: dict.meta.description,
@@ -146,6 +148,7 @@ export default async function LocaleLayout({
         </I18nProvider>
         <ConsentGatedScripts />
         <EzoicRouteHandler />
+        <PwaRegister />
         {process.env.NODE_ENV === "production" && <Analytics />}
       </body>
     </html>

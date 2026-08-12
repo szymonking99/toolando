@@ -6,6 +6,8 @@ import type { ToolConfig } from "@/lib/tools"
 import { uploadAndProcess } from "@/lib/client-upload"
 import { useI18n } from "@/components/i18n-provider"
 import { useFakeProgress } from "@/hooks/use-fake-progress"
+import { NextStepsPanel } from "@/components/next-steps-panel"
+import { recordToolVisit } from "@/lib/client-preferences"
 
 type Status = "idle" | "uploading" | "converting" | "done" | "error"
 
@@ -96,6 +98,7 @@ export function ToolConverter({ tool }: { tool: ToolConfig }) {
 
       setResult({ url: URL.createObjectURL(blob), name })
       setStatus("done")
+      recordToolVisit(tool.id, `${tool.from.toUpperCase()} → ${tool.to.toUpperCase()}`)
     } catch {
       setError(t.tool.connectionError)
       setStatus("error")
@@ -208,6 +211,10 @@ export function ToolConverter({ tool }: { tool: ToolConfig }) {
               {t.tool.convertAnother}
             </button>
           </div>
+          <NextStepsPanel
+            toolId={tool.id}
+            toolTitle={`${tool.from.toUpperCase()} → ${tool.to.toUpperCase()}`}
+          />
         </div>
       ) : (
         <div className="space-y-3">

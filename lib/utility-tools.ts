@@ -14,6 +14,17 @@ export type UtilityToolId =
   | "unix-timestamp"
   | "generator-uuid"
   | "generator-hash"
+  | "json-formatter"
+  | "diff-tekstu"
+  | "konwerter-wielkosci-liter"
+  | "usun-duplikaty-linii"
+  | "dekoder-jwt"
+  | "walidator-nip-pesel"
+  | "kalkulator-kredytu"
+  | "markdown-preview"
+  | "sila-hasla"
+  | "konwerter-napisow"
+  | "generator-nazw-plikow"
 
 export type UtilityCategory =
   | "finance"
@@ -26,7 +37,6 @@ export type UtilityCategory =
 export type UtilityToolConfig = {
   id: UtilityToolId
   category: UtilityCategory
-  /** Icon hint for cards (lucide name). */
   icon: string
 }
 
@@ -37,9 +47,20 @@ export const utilityTools: UtilityToolConfig[] = [
   { id: "przelicznik-jednostek", category: "units", icon: "Ruler" },
   { id: "kalkulator-vat", category: "finance", icon: "Percent" },
   { id: "kalkulator-wieku", category: "time", icon: "Cake" },
+  { id: "kalkulator-kredytu", category: "finance", icon: "Landmark" },
   { id: "generator-hasel", category: "dev", icon: "KeyRound" },
+  { id: "sila-hasla", category: "dev", icon: "ShieldCheck" },
   { id: "licznik-znakow", category: "text", icon: "Type" },
+  { id: "diff-tekstu", category: "text", icon: "GitCompare" },
+  { id: "konwerter-wielkosci-liter", category: "text", icon: "CaseSensitive" },
+  { id: "usun-duplikaty-linii", category: "text", icon: "ListX" },
+  { id: "markdown-preview", category: "text", icon: "FileText" },
+  { id: "generator-nazw-plikow", category: "text", icon: "Files" },
   { id: "generator-qr", category: "dev", icon: "QrCode" },
+  { id: "json-formatter", category: "dev", icon: "Braces" },
+  { id: "dekoder-jwt", category: "dev", icon: "Key" },
+  { id: "walidator-nip-pesel", category: "dev", icon: "BadgeCheck" },
+  { id: "konwerter-napisow", category: "media", icon: "Subtitles" },
   { id: "kalkulator-bitrate", category: "media", icon: "HardDrive" },
   { id: "konwerter-kolorow", category: "dev", icon: "Palette" },
   { id: "base64", category: "dev", icon: "Binary" },
