@@ -3,10 +3,122 @@
     "title": "Toolando.tech — Semua alat online Anda dalam satu tempat",
     "description": "Konverter, generator, alat PDF dan AI — semuanya dalam satu ekosistem yang elegan. Cepat dan sederhana."
   },
+  "socialProof": {
+    "toolsCount": "{count}+ alat dalam satu ekosistem",
+    "usesToday": "{uses} kali digunakan hari ini"
+  },
+  "recent": {
+    "title": "Baru-baru ini digunakan",
+    "subtitle": "Alat terakhir Anda — disimpan secara lokal di peramban ini.",
+    "favoritesHint": "Beri bintang pada alat dari halamannya untuk menyematkannya di sini."
+  },
+  "premiumUpsell": {
+    "title": "Buka alat AI dengan Premium",
+    "description": "Generasi teks, ringkasan, gambar, terjemahan, dan chat — satu langganan, tanpa biaya kejutan per permintaan.",
+    "point1": "Semua alat AI tanpa batas",
+    "point2": "Pemrosesan prioritas di hari sibuk",
+    "point3": "Dukung pengembangan independen",
+    "cta": "Pilih Premium",
+    "compare": "Lihat paket",
+    "trialHint": "Masuk untuk pratinjau gratis — upgrade kapan saja."
+  },
+  "privacyBadge": {
+    "title": "Privasi diutamakan",
+    "local": "Diproses secara lokal di peramban Anda"
+  },
+  "onboarding": {
+    "skip": "Tutup",
+    "next": "Berikutnya",
+    "start": "Jelajahi alat",
+    "learnMore": "Cara kerja Toolando",
+    "step1": {
+      "title": "Konversi, hitung, buka — satu ekosistem",
+      "body": "287+ alat untuk berkas, kalkulator, utilitas pengembang, dan AI — pilih alat atau cari dengan Ctrl+K."
+    },
+    "step2": {
+      "title": "Privasi saat penting",
+      "body": "Banyak utilitas berjalan di peramban Anda. Konversi server menghapus berkas setelah pekerjaan selesai."
+    },
+    "step3": {
+      "title": "Alat AI dengan Premium",
+      "body": "Coba konverter gratis. Fitur AI memakai paket bulanan sederhana — lihat harga sebelum paywall."
+    }
+  },
+  "exitIntent": {
+    "title": "Sebelum Anda pergi…",
+    "body": "Butuh konverter lain? Cari 287+ alat atau beri tahu kami apa yang harus dibuat berikutnya.",
+    "browse": "Jelajahi alat",
+    "request": "Minta alat",
+    "close": "Tutup"
+  },
+  "nextSteps": {
+    "title": "Langkah berikutnya",
+    "aiSummarizeTitle": "Ringkas dokumen dengan AI",
+    "aiSummarizeBody": "Buat ringkasan PDF atau DOCX dalam hitungan detik (Premium atau 1 percobaan/hari)."
+  },
+  "newsletter": {
+    "title": "Alat baru & pembaruan Premium",
+    "subtitle": "Tinggalkan email Anda — kami memberi tahu fitur utama (tanpa spam).",
+    "placeholder": "anda@example.com",
+    "cta": "Berlangganan",
+    "thanks": "Terima kasih! Konfirmasi via kontak jika ingin balasan.",
+    "confirmViaContact": "Selesaikan pendaftaran via formulir kontak →",
+    "error": "Pendaftaran gagal. Silakan coba lagi."
+  },
+  "toolRequest": {
+    "title": "Konverter tidak ada?",
+    "body": "Usulkan alat atau format baru — kami prioritaskan permintaan pengguna.",
+    "cta": "Usulkan alat"
+  },
+  "comparison": {
+    "title": "Toolando vs alat unggah cloud",
+    "subtitle": "Mengapa pengguna beralih dari konverter unggah generik.",
+    "feature": "Fitur",
+    "competitor": "Konverter cloud umum",
+    "rows": {
+      "privacy": "Pratinjau lokal & opsi privasi",
+      "offline": "Bekerja offline (utilitas PWA)",
+      "ai": "Alur kerja AI terintegrasi",
+      "free": "Konverter inti gratis",
+      "limits": "Tanpa batas unggah harian sewenang-wenang untuk dasar"
+    }
+  },
+  "premiumPage": {
+    "title": "Toolando Premium",
+    "subtitle": "Alat AI, harga jelas, batalkan kapan saja.",
+    "freeTitle": "Gratis",
+    "freeDesc": "Semua konverter berkas, kalkulator, dan sebagian besar utilitas.",
+    "premiumTitle": "Premium",
+    "premiumDesc": "Suite AI lengkap — teks, gambar, ringkasan, terjemahan, chat.",
+    "supporterTitle": "Pendukung",
+    "supporterDesc": "Premium + pengalaman bebas iklan (segera hadir).",
+    "cta": "Mulai Premium",
+    "signIn": "Masuk untuk berlangganan",
+    "faqTitle": "FAQ harga",
+    "faq1q": "Bagaimana kredit bekerja?",
+    "faq1a": "Tidak ada kredit per permintaan — Premium adalah langganan bulanan flat untuk penggunaan AI tanpa batas.",
+    "faq2q": "Bisa coba sebelum bayar?",
+    "faq2a": "Buat akun gratis, jelajahi konverter, lalu upgrade saat butuh AI.",
+    "faq3q": "Bagaimana privasi berkas?",
+    "faq3a": "Berkas server dihapus setelah diproses. Alat peramban tidak pernah mengunggah data Anda."
+  },
+  "privacyPage": {
+    "title": "Privasi diutamakan sejak desain",
+    "subtitle": "Cara Toolando melindungi berkas dan data Anda.",
+    "localTitle": "Alat lokal peramban",
+    "localBody": "Utilitas, pembuka universal, dan banyak kalkulator berjalan sepenuhnya di peramban — data tidak pernah meninggalkan perangkat.",
+    "serverTitle": "Konversi server",
+    "serverBody": "Saat Anda mengunggah untuk konversi, berkas hanya dipakai untuk pekerjaan itu dan dihapus setelahnya. HTTPS end-to-end.",
+    "aiTitle": "Alat AI",
+    "aiBody": "Premium AI hanya mengirim konten yang Anda kirimkan ke penyedia model — tidak pernah dijual atau dipakai untuk iklan.",
+    "badge": "Privasi diutamakan",
+    "readPolicy": "Baca kebijakan privasi lengkap"
+  },
   "nav": {
     "aiTools": "Alat AI",
     "tools": "Konverter",
-    "categories": "Converter categories",
+    "categories": "Kategori konverter",
+    "formats": "Format",
     "about": "Tentang",
     "contact": "Kontak",
     "cta": "Mulai",
@@ -15,11 +127,18 @@
     "allTools": "Semua alat",
     "signIn": "Masuk",
     "account": "Akun saya",
-    "downloader": "MP3 Downloader",
+    "downloader": "Pengunduh MP3",
+    "aboutMe": "Tentang saya",
+    "privacy": "Kebijakan privasi",
+    "terms": "Ketentuan layanan",
     "onlineTools": "Kalkulator",
     "converters": "Konverter",
     "calculators": "Kalkulator",
-    "developer": "Alat pengembang"
+    "developer": "Alat pengembang",
+    "premium": "Premium",
+    "guides": "Panduan",
+    "faq": "FAQ",
+    "more": "Lainnya"
   },
   "hero": {
     "badge": "Ekosistem alat online yang baru",
@@ -27,7 +146,68 @@
     "titleHighlight": "satu tempat",
     "subtitle": "Konverter, generator, PDF, AI — semuanya dalam satu ekosistem.",
     "browse": "Jelajahi alat",
-    "learnMore": "Pelajari lebih lanjut"
+    "learnMore": "Pelajari lebih lanjut",
+    "convertCta": "Konversikan file sekarang"
+  },
+  "search": {
+    "placeholder": "Cari konverter (misalnya mp3 wav, pdf jpg)…",
+    "noResults": "Tidak ada konverter yang ditemukan. Coba kueri lain."
+  },
+  "share": {
+    "label": "Bagikan",
+    "copy": "Salin tautan",
+    "copied": "Tersalin"
+  },
+  "feedback": {
+    "question": "Apakah artikel ini bermanfaat?",
+    "yes": "Ya",
+    "no": "Tidak",
+    "thanks": "Terima kasih atas tanggapan Anda!"
+  },
+  "recommender": {
+    "title": "Format mana yang harus saya pilih?",
+    "subtitle": "Jawab dua pertanyaan singkat dan kami akan merekomendasikan format terbaik.",
+    "step1": "Jenis file apa yang Anda miliki?",
+    "step2": "Apa yang ingin Anda lakukan dengannya?",
+    "categories": {
+      "image": "Gambar / foto",
+      "audio": "Audio/musik",
+      "video": "Video",
+      "document": "Dokumen"
+    },
+    "goals": {
+      "image_web": "Publikasikan di situs web",
+      "image_email": "Kirim melalui email",
+      "image_print": "Cetak",
+      "image_iphone": "Foto dari iPhone (HEIC)",
+      "audio_listen": "Dengarkan di ponsel atau pemutar",
+      "audio_edit": "Edit di DAW",
+      "audio_archive": "Arsip tanpa kehilangan kualitas",
+      "video_social": "Posting di media sosial",
+      "video_web": "Sematkan di situs web",
+      "video_audio": "Ekstrak audio saja",
+      "document_share": "Kirim untuk dibaca (tanpa pengeditan)",
+      "document_edit": "Sunting teksnya"
+    },
+    "resultTitle": "Format yang disarankan:",
+    "readFormat": "Panduan format",
+    "openConverter": "Buka konverter",
+    "back": "Kembali",
+    "tryAgain": "Mulai dari awal",
+    "reasons": {
+      "webp-web": "WebP berukuran 25–35% lebih kecil dari JPG dengan kualitas yang sama — ideal untuk situs web yang lebih cepat.",
+      "jpg-email": "JPG bersifat universal dan kecil — cocok untuk lampiran email.",
+      "png-print": "PNG bersifat lossless dan memiliki tepi yang tajam — bagus untuk grafis dan pencetakan jangka pendek.",
+      "heic-jpg": "HEIC dari iPhone memerlukan konversi ke JPG agar kompatibel dengan Windows dan sebagian besar layanan.",
+      "mp3-listen": "MP3 berfungsi di setiap perangkat dan menjaga file tetap kecil.",
+      "wav-edit": "WAV bersifat lossless — terbaik untuk pengeditan tanpa kehilangan kualitas.",
+      "flac-archive": "FLAC mengompres tanpa kehilangan kualitas — ideal untuk pengarsipan musik.",
+      "mp4-social": "MP4 (H.264 + AAC) adalah standar untuk Instagram, TikTok, dan YouTube.",
+      "webm-web": "WebM dioptimalkan untuk video HTML5 di browser.",
+      "mp3-audio": "Ekstrak audio dari video Anda sebagai MP3 untuk podcast atau nada dering.",
+      "pdf-share": "Tata letak kunci PDF — penerima melihat apa yang Anda inginkan.",
+      "docx-edit": "DOCX memungkinkan Anda mengedit teks, gaya, dan judul di Word."
+    }
   },
   "opener": {
     "title": "Pembuka berkas universal",
@@ -37,26 +217,26 @@
     "kindVideo": "Video",
     "kindAudio": "Audio",
     "kindDocs": "PDF, kode, dan data",
-    "readError": "Couldn't read the file contents.",
-    "dropAny": "Drag any file here or click to choose",
-    "dropHint": "Images, video, audio, PDF, documents, code, data — any format. Files are opened locally in your browser and never uploaded anywhere.",
-    "noConverter": "We don't have a converter for this format yet — but you can preview and download the file below.",
-    "convertTo": "Convert to another format",
-    "optionOne": "option",
-    "optionMany": "options",
-    "downloadedOk": "Done! The file has been downloaded.",
-    "download": "Download",
-    "close": "Close",
-    "emptyFile": "(empty file)",
-    "textTruncated": "Preview truncated to the first 200,000 characters. Download the file to see everything.",
-    "binaryPreview": "Binary preview (first bytes in hexadecimal)",
+    "readError": "Tidak dapat membaca isi berkas.",
+    "dropAny": "Seret berkas ke sini atau klik untuk memilih",
+    "dropHint": "Gambar, video, audio, PDF, dokumen, kode, data — format apa pun. Berkas dibuka secara lokal di peramban dan tidak pernah diunggah ke mana pun.",
+    "noConverter": "Kami belum punya konverter untuk format ini — tetapi Anda bisa melihat pratinjau dan mengunduh berkas di bawah.",
+    "convertTo": "Konversi ke format lain",
+    "optionOne": "opsi",
+    "optionMany": "opsi",
+    "downloadedOk": "Selesai! Berkas telah diunduh.",
+    "download": "Unduh",
+    "close": "Tutup",
+    "emptyFile": "(berkas kosong)",
+    "textTruncated": "Pratinjau dipotong hingga 200.000 karakter pertama. Unduh berkas untuk melihat semuanya.",
+    "binaryPreview": "Pratinjau biner (byte pertama dalam heksadesimal)",
     "kinds": {
-      "image": "Image",
+      "image": "Gambar",
       "video": "Video",
       "audio": "Audio",
-      "pdf": "PDF document",
-      "text": "Text / code",
-      "binary": "Binary file"
+      "pdf": "Dokumen PDF",
+      "text": "Teks / kode",
+      "binary": "Berkas biner"
     }
   },
   "ai": {
@@ -76,6 +256,41 @@
     "title": "Kategori alat",
     "subtitle": "Pilih kategori untuk melihat semua konverter yang tersedia.",
     "browse": "Jelajahi"
+  },
+  "toolsIndex": {
+    "intro": "Setiap alat mengonversi file di server — tidak perlu menginstal perangkat lunak. Tidak yakin format mana yang harus dipilih? Telusuri ensiklopedia format atau panduan konversi.",
+    "formatsLink": "Format ensiklopedia",
+    "guidesLink": "Panduan konversi"
+  },
+  "knowledgeHub": {
+    "title": "Pengetahuan format & konversi",
+    "subtitle": "Jangan hanya mengonversi — pahami kapan harus memilih MP3 daripada FLAC, WebP melalui JPG, atau PDF melalui DOCX. Panduan kami membantu Anda menghindari kehilangan kualitas dan konversi yang tidak perlu.",
+    "formatsTitle": "Ensiklopedia format file",
+    "formatsDesc": "40+ format: audio, video, gambar, dokumen, data, dan arsip. Pro, kontra, kompatibilitas, dan perbandingan dengan alternatif.",
+    "formatsCta": "Telusuri format",
+    "guidesTitle": "Panduan konversi",
+    "guidesDesc": "Artikel praktis: kualitas audio, kompresi gambar, video untuk media sosial, PDF vs DOCX, dan keamanan file online.",
+    "guidesCta": "Baca panduan",
+    "comparisonsTitle": "Perbandingan format",
+    "comparisonsDesc": "MP3 vs FLAC, JPG vs WebP, PDF vs DOCX — perbandingan langsung dengan keputusan yang jelas.",
+    "comparisonsCta": "Telusuri perbandingan",
+    "glossaryTitle": "Glosarium",
+    "glossaryDesc": "Bitrate, codec, kompresi lossy, MIME — definisi dalam bahasa sederhana.",
+    "glossaryCta": "Buka glosarium"
+  },
+  "editorial": {
+    "title": "Siapa yang menjalankan Toolando.tech",
+    "body": "Saya Szymon — saya merancang, membangun, dan menguji setiap alat sendiri. Panduan berdasarkan konversi nyata, bukan spesifikasi copy-paste. Saya ingin Anda memahami berkas sebelum mengonversi, dan layanan tetap jujur kepada Anda.",
+    "aboutCta": "Tentang saya & metodologi",
+    "howCta": "Cara kerja alat",
+    "editorialCta": "Standar editorial",
+    "guidesCta": "Panduan"
+  },
+  "featuredGuides": {
+    "title": "Panduan unggulan",
+    "subtitle": "Artikel praktis tentang format berkas, keamanan, dan konversi — ditulis dari uji nyata, bukan template SEO.",
+    "readArticle": "Baca panduan",
+    "allGuides": "Semua panduan"
   },
   "why": {
     "title": "Mengapa Toolando.tech?",
@@ -100,9 +315,25 @@
     "privacy": "Kebijakan privasi",
     "terms": "Ketentuan layanan",
     "rights": "© 2026 Toolando.tech. Semua hak dilindungi.",
-    "aboutMe": "About me",
-    "howItWorks": "How it works",
-    "faq": "FAQ"
+    "aboutMe": "Tentang saya",
+    "howItWorks": "Cara kerjanya",
+    "faq": "FAQ",
+    "guides": "Panduan",
+    "editorial": "Editorial",
+    "formats": "Format file",
+    "comparisons": "Perbandingan",
+    "glossary": "Glosarium",
+    "rss": "Feed RSS",
+    "cookieSettings": "Pengaturan cookie",
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "messenger": "Messenger",
+    "youtube": "YouTube",
+    "emailAria": "Membuka aplikasi email untuk menulis kepada kami"
+  },
+  "ad": {
+    "label": "Iklan",
+    "placeholder": "Ruang iklan"
   },
   "language": {
     "label": "Bahasa"
@@ -111,6 +342,10 @@
     "eyebrow": "Dukung proyek ini",
     "title": "Bantu Toolando.tech tetap berjalan",
     "subtitle": "Toolando.tech dikembangkan dan ditawarkan secara gratis. Jika menghemat waktu Anda, pertimbangkan untuk mendukung pengembangannya.",
+    "body1": "Saya mengelola layanan ini sendiri — kode, server, konten hukum, dan panduan. Dukungan Anda membantu mencakup hosting (Vercel), pemrosesan file, domain, dan pengembangan alat baru.",
+    "body2": "Dukungan sepenuhnya bersifat sukarela. Alat gratis tidak memerlukan pembayaran. Premium adalah langganan opsional terpisah dengan fitur tambahan — lihat Ketentuan Layanan untuk detailnya.",
+    "body3": "Punya pertanyaan, ide alat, atau menemukan bug? Tulis ke badyltech@outlook.com atau gunakan formulir kontak — itu juga merupakan dukungan yang berharga.",
+    "legalNote": "Donasi tidak memberikan akses Premium atau merupakan kontrak layanan kecuali dinyatakan lain secara eksplisit. Syarat dan Kebijakan Privasi berlaku terlepas dari donasinya.",
     "coffee": "Belikan saya kopi",
     "donate": "Beri donasi",
     "back": "Kembali ke beranda",
@@ -155,32 +390,47 @@
     "merge": "Gabungkan berkas",
     "result": "Hasil",
     "notFound": "Alat tidak ditemukan",
-    "convertFailed": "Conversion failed.",
-    "connectionError": "Couldn't connect to the server. Please try again.",
-    "unavailable": "This converter is currently unavailable",
-    "dropClick": "Drag a file here or click to choose",
-    "dropClickMulti": "Drag files here or click to choose",
-    "supportedFormat": "Supported format",
-    "supported": "Supported",
-    "maxSize": "max. 500 MB",
-    "removeFile": "Remove file",
-    "convertDone": "Conversion complete",
-    "downloadNamed": "Download",
-    "convertAnother": "Convert another file",
-    "uploadingFile": "Uploading file…",
-    "uploadingFiles": "Uploading files…",
-    "uploading": "Uploading…",
-    "converting": "Converting…",
-    "convertToPrefix": "Convert to",
-    "needTwoPdf": "Add at least two PDF files to merge.",
-    "operationFailed": "The operation failed.",
-    "compressionQuality": "Compression quality",
-    "qualityHint": "Lower value = smaller file. Higher value = better quality.",
-    "done": "Done",
-    "less": "less",
-    "resultPreview": "Result preview",
-    "startOver": "Start over",
-    "processingLong": "Processing (this may take a few seconds)…"
+    "convertFailed": "Konversi gagal.",
+    "connectionError": "Tidak dapat terhubung ke server. Silakan coba lagi.",
+    "unavailable": "Konverter ini saat ini tidak tersedia",
+    "dropClick": "Seret berkas ke sini atau klik untuk memilih",
+    "dropClickMulti": "Seret berkas ke sini atau klik untuk memilih",
+    "supportedFormat": "Format didukung",
+    "supported": "Didukung",
+    "maxSize": "maks. 500 MB",
+    "removeFile": "Hapus berkas",
+    "convertDone": "Konversi selesai",
+    "downloadNamed": "Unduh",
+    "convertAnother": "Konversi berkas lain",
+    "uploadingFile": "Mengunggah berkas…",
+    "uploadingFiles": "Mengunggah berkas…",
+    "uploading": "Mengunggah…",
+    "converting": "Mengonversi…",
+    "convertToPrefix": "Konversi ke",
+    "needTwoPdf": "Tambahkan minimal dua berkas PDF untuk digabung.",
+    "operationFailed": "Operasi gagal.",
+    "compressionQuality": "Kualitas kompresi",
+    "qualityHint": "Nilai lebih rendah = berkas lebih kecil. Nilai lebih tinggi = kualitas lebih baik.",
+    "done": "Selesai",
+    "less": "lebih sedikit",
+    "resultPreview": "Pratinjau hasil",
+    "startOver": "Mulai ulang",
+    "processingLong": "Memproses (ini mungkin memakan beberapa detik)…",
+    "howToTitle": "Cara mengonversi file — langkah demi langkah",
+    "aboutSource": "Tentang format sumber",
+    "aboutTarget": "Tentang format target",
+    "whenToUseTitle": "Kapan menggunakan konverter ini",
+    "faqTitle": "Pertanyaan yang sering diajukan",
+    "qualityTitle": "Kualitas konversi — apa yang perlu diketahui",
+    "tipsTitle": "Kiat praktis",
+    "readFormatGuide": "Panduan format lengkap"
+  },
+  "cookieConsent": {
+    "title": "Cookie",
+    "description": "Toolando.tech menggunakan cookie yang diperlukan dan, dengan persetujuan Anda, cookie analitik (Google Analytics) dan iklan (Google AdSense). Anda dapat menerima semua atau hanya yang esensial.",
+    "acceptAll": "Terima semua",
+    "necessaryOnly": "Hanya esensial",
+    "privacyLink": "Kebijakan privasi"
   },
   "aiTool": {
     "prompt": "Teks Anda",
@@ -208,44 +458,44 @@
     "thinking": "Berpikir…",
     "aiError": "Tidak dapat memperoleh respons AI. Silakan coba lagi.",
     "emptyChat": "Ajukan pertanyaan untuk memulai percakapan.",
-    "generateFailed": "Couldn't generate a response.",
-    "noContent": "The AI service returned no content. Check that AI Gateway is active (requires a payment card).",
-    "connectionError": "A connection error occurred. Please try again.",
-    "dropDoc": "Drag a document here or click to choose",
-    "removeFile": "Remove file",
-    "translatePlaceholder": "Paste the text to translate…",
-    "copyPlaceholder": "Describe what the AI should write, e.g. \"a product description for an eco-friendly water bottle\"…",
-    "toneLabel": "Tone",
-    "targetLangLabel": "Target language",
-    "translate": "Translate",
-    "summarizeDoc": "Summarize document",
-    "generateText": "Generate text",
-    "imageFailed": "Couldn't generate the image.",
-    "imagePromptPlaceholder": "Describe the image, e.g. \"a futuristic city at sunset, watercolor style\"…",
-    "ratioSquare": "Square 1:1",
-    "ratioLandscape": "Landscape 3:2",
-    "ratioPortrait": "Portrait 2:3",
-    "generatingImage": "Generating image (this may take several seconds)…",
-    "generateImage": "Generate image",
-    "generatedImageAlt": "Generated image",
-    "downloadImage": "Download image",
+    "generateFailed": "Tidak dapat menghasilkan respons.",
+    "noContent": "Layanan AI tidak mengembalikan konten. Periksa AI Gateway aktif (memerlukan kartu pembayaran).",
+    "connectionError": "Terjadi kesalahan koneksi. Silakan coba lagi.",
+    "dropDoc": "Seret dokumen ke sini atau klik untuk memilih",
+    "removeFile": "Hapus berkas",
+    "translatePlaceholder": "Tempel teks yang akan diterjemahkan…",
+    "copyPlaceholder": "Jelaskan apa yang harus ditulis AI, mis. \"deskripsi produk untuk botol air ramah lingkungan\"…",
+    "toneLabel": "Nada",
+    "targetLangLabel": "Bahasa target",
+    "translate": "Terjemahkan",
+    "summarizeDoc": "Ringkas dokumen",
+    "generateText": "Hasilkan teks",
+    "imageFailed": "Tidak dapat menghasilkan gambar.",
+    "imagePromptPlaceholder": "Jelaskan gambar, mis. \"kota futuristik saat matahari terbenam, gaya cat air\"…",
+    "ratioSquare": "Persegi 1:1",
+    "ratioLandscape": "Lanskap 3:2",
+    "ratioPortrait": "Potret 2:3",
+    "generatingImage": "Menghasilkan gambar (ini mungkin memakan beberapa detik)…",
+    "generateImage": "Hasilkan gambar",
+    "generatedImageAlt": "Gambar yang dihasilkan",
+    "downloadImage": "Unduh gambar",
     "tones": {
-      "professional": "professional",
-      "friendly": "friendly",
-      "energetic": "energetic",
+      "professional": "profesional",
+      "friendly": "ramah",
+      "energetic": "energik",
       "formal": "formal",
-      "playful": "playful",
-      "persuasive": "persuasive"
+      "playful": "lucu",
+      "persuasive": "persuasif"
     },
     "languages": {
-      "english": "English",
-      "german": "German",
-      "spanish": "Spanish",
-      "french": "French",
-      "italian": "Italian",
-      "ukrainian": "Ukrainian",
-      "polish": "Polish",
-      "japanese": "Japanese"
+      "english": "Inggris",
+      "german": "Jerman",
+      "spanish": "Spanyol",
+      "french": "Prancis",
+      "italian": "Italia",
+      "ukrainian": "Ukraina",
+      "polish": "Polandia",
+      "japanese": "Jepang"
     }
   },
   "category": {
@@ -259,64 +509,64 @@
     "notFound": "Kategori tidak ditemukan"
   },
   "paywall": {
-    "unlockTitle": "Unlock \"{tool}\" with Premium",
-    "description": "Unlock all Toolando.tech AI tools — text and image generation, translation, summaries and the assistant — in one subscription.",
-    "feature1": "Unlimited access to all AI tools",
-    "feature2": "Text generator, image generator and translator",
-    "feature3": "Priority request processing",
-    "goPremium": "Upgrade to Premium",
-    "redirecting": "Redirecting…",
-    "signInToBuy": "Sign in to buy Premium",
-    "noAccount": "Don't have an account?",
-    "signUp": "Sign up"
+    "unlockTitle": "Buka \"{tool}\" dengan Premium",
+    "description": "Buka semua alat AI Toolando.tech — generasi teks dan gambar, terjemahan, ringkasan, dan asisten — dalam satu langganan.",
+    "feature1": "Akses tanpa batas ke semua alat AI",
+    "feature2": "Generator teks, generator gambar, dan penerjemah",
+    "feature3": "Pemrosesan permintaan prioritas",
+    "goPremium": "Upgrade ke Premium",
+    "redirecting": "Mengalihkan…",
+    "signInToBuy": "Masuk untuk membeli Premium",
+    "noAccount": "Belum punya akun?",
+    "signUp": "Daftar"
   },
   "account": {
-    "backToHome": "Back to homepage",
-    "yourAccount": "Your account",
+    "backToHome": "Kembali ke beranda",
+    "yourAccount": "Akun Anda",
     "premiumBadge": "Premium",
-    "freeBadge": "Free account",
-    "premiumActiveTitle": "You have active Premium",
-    "premiumActiveDesc": "Thank you for your support! You have full access to all AI tools without limits.",
-    "manageSubscription": "Manage subscription",
-    "manageOpening": "Opening…",
-    "managePortalError": "Could not open the portal.",
-    "manageGenericError": "An error occurred.",
-    "goPremiumTitle": "Go Premium",
-    "feature1": "Unlimited access to AI tools",
-    "feature2": "Background removal, image and text generation",
-    "feature3": "Priority processing",
-    "buyPremium": "Buy Premium",
-    "buyRedirecting": "Redirecting…",
-    "refreshHint": "Paid but Premium still inactive? Refresh your status:",
-    "refreshStatus": "Refresh Premium status",
-    "refreshChecking": "Checking...",
-    "refreshNoSub": "No active subscription found. If you just paid, wait a moment and try again.",
-    "refreshFailed": "Could not refresh status.",
-    "refreshNetworkError": "A network error occurred. Please try again.",
-    "signOut": "Sign out"
+    "freeBadge": "Akun gratis",
+    "premiumActiveTitle": "Premium Anda aktif",
+    "premiumActiveDesc": "Terima kasih atas dukungannya! Anda punya akses penuh ke semua alat AI tanpa batas.",
+    "manageSubscription": "Kelola langganan",
+    "manageOpening": "Membuka…",
+    "managePortalError": "Tidak dapat membuka portal.",
+    "manageGenericError": "Terjadi kesalahan.",
+    "goPremiumTitle": "Pilih Premium",
+    "feature1": "Akses tanpa batas ke alat AI",
+    "feature2": "Penghapusan latar, generasi gambar dan teks",
+    "feature3": "Pemrosesan prioritas",
+    "buyPremium": "Beli Premium",
+    "buyRedirecting": "Mengalihkan…",
+    "refreshHint": "Sudah bayar tapi Premium masih nonaktif? Segarkan status:",
+    "refreshStatus": "Segarkan status Premium",
+    "refreshChecking": "Memeriksa...",
+    "refreshNoSub": "Tidak ada langganan aktif. Jika baru bayar, tunggu sebentar dan coba lagi.",
+    "refreshFailed": "Tidak dapat menyegarkan status.",
+    "refreshNetworkError": "Terjadi kesalahan jaringan. Silakan coba lagi.",
+    "signOut": "Keluar"
   },
   "downloader": {
     "eyebrow": "Video → MP3",
-    "title": "Multi-Platform → MP3 Downloader",
-    "subtitle": "Paste a link from TikTok, Instagram, Facebook, Twitter/X, Vimeo or SoundCloud and grab the audio.",
-    "metaDescription": "Multi-platform Video to MP3 Downloader — TikTok, Instagram, Facebook, Twitter, Vimeo, SoundCloud. Paste a link and download the audio.",
-    "back": "All tools",
-    "inputLabel": "Video link",
+    "title": "Pengunduh Multi-Platform → MP3",
+    "subtitle": "Tempel tautan dari TikTok, Instagram, Facebook, Twitter/X, Vimeo, atau SoundCloud dan ambil audionya.",
+    "metaDescription": "Multi-platform Video to MP3 Downloader — TikTok, Instagram, Facebook, Twitter, Vimeo, SoundCloud. Tempel tautan dan unduh audio.",
+    "back": "Semua alat",
+    "inputLabel": "Tautan video",
     "inputPlaceholder": "https://www.tiktok.com/@user/video/...",
-    "detected": "detected",
+    "detected": "terdeteksi",
     "idLabel": "ID",
-    "invalidLink": "Enter a valid link from a supported platform.",
-    "download": "Download MP3",
-    "preparing": "Preparing your link…",
-    "ready": "Your link is ready.",
-    "openPage": "Open download page",
-    "resultTitle": "Ready to download",
-    "resultsBack": "Back to downloader",
-    "thumbnailAlt": "Video thumbnail",
-    "viewSource": "View original",
-    "faqTitle": "Frequently asked questions",
-    "disclaimer": "Toolando.tech does not host or download any media. It only detects the platform and the public video ID and hands off to an external service or your browser. Only download content you have the rights to.",
-    "externalNote": "Download happens on an external service or in your browser. Toolando.tech only captured the public platform and video ID. Please respect copyright and each platform's terms of service.",
+    "invalidLink": "Masukkan tautan valid dari platform yang didukung.",
+    "download": "Unduh MP3",
+    "preparing": "Menyiapkan tautan Anda…",
+    "ready": "Tautan Anda siap.",
+    "openPage": "Buka halaman unduhan",
+    "resultTitle": "Siap diunduh",
+    "resultsBack": "Kembali ke pengunduh",
+    "thumbnailAlt": "Thumbnail video",
+    "viewSource": "Lihat asli",
+    "faqTitle": "Pertanyaan yang sering diajukan",
+    "disclaimer": "Toolando.tech tidak menghosting atau mengunduh media apa pun. Hanya mendeteksi platform dan ID video publik lalu menyerahkan ke layanan eksternal atau peramban Anda. Hanya unduh konten yang Anda punya haknya.",
+    "externalNote": "Unduhan terjadi di layanan eksternal atau di peramban Anda. Toolando.tech hanya menangkap platform publik dan ID video. Hormati hak cipta dan ketentuan layanan setiap platform.",
     "faq": [
       {
         "q": "Which platforms are supported?",
@@ -339,18 +589,320 @@
         "a": "Only download content you own or have permission to use. Downloading copyrighted material without permission may violate the platform's terms of service and copyright law."
       }
     ],
-    "platformDisabled": "Downloading from {platform} is temporarily unavailable — {platform} actively blocks downloaders, so we've paused it until our own converter is ready. All other platforms still work."
+    "platformDisabled": "Unduhan dari {platform} sementara tidak tersedia — {platform} secara aktif memblokir pengunduh, jadi kami jeda hingga konverter kami sendiri siap. Platform lain tetap berfungsi."
+  },
+  "pages": {
+    "contact": {
+      "eyebrow": "Kontak",
+      "title": "Formulir kontak",
+      "intro": "Punya pertanyaan, ide kemitraan, atau ingin melaporkan masalah? Isi formulirnya — Saya akan membalasnya sesegera mungkin.",
+      "name": "Nama",
+      "namePlaceholder": "Namamu",
+      "email": "Surel",
+      "emailPlaceholder": "Alamat email Anda",
+      "message": "Pesan",
+      "messagePlaceholder": "Jelaskan masalah atau pertanyaan Anda...",
+      "submit": "Kirim pesan",
+      "sent": "Terima kasih! Pesan Anda telah disiapkan di aplikasi email Anda.",
+      "subject": "Pertanyaan dari Toolando.tech"
+    },
+    "about": {
+      "eyebrow": "Tentang saya",
+      "title": "Hai, saya Szymon — pencipta Toolando",
+      "intro": "Toolando.tech adalah proyek saya sendiri yang saya bangun sendiri. Dari ide, melalui kode, hingga konten yang Anda baca sekarang — semuanya berasal dari sepasang tangan. Saya ingin tugas sederhana, seperti mengonversi file atau alat online cepat, tersedia untuk semua orang, tanpa perlu menginstal perangkat lunak dan tanpa komplikasi yang tidak perlu.",
+      "whyTitle": "Mengapa Toolando dibuat",
+      "whyP1": "Saya bekerja dengan komputer setiap hari dan saya telah melihat berkali-kali berapa banyak waktu yang terbuang ketika seseorang melakukan tugas-tugas yang seharusnya memakan waktu sejenak — mengubah format file, mengekstrak audio dari rekaman, atau operasi cepat yang memaksa Anda mencari situs acak yang penuh dengan iklan dan jebakan.",
+      "whyP2": "Toolando diciptakan untuk mengumpulkan alat-alat tersebut di satu tempat yang jelas dan aman. Saya peduli dengan layanan yang cepat, mudah dibaca, dan jujur ​​terhadap pengguna — tanpa trik dan tanpa hambatan tersembunyi.",
+      "howTitle": "Bagaimana Toolando bekerja",
+      "howIntro": "Layanan ini menyediakan alat online dalam dua varian: gratis dan premium.",
+      "howFreeTerm": "Alat gratis",
+      "howFreeDesc": "tersedia untuk semua orang, tanpa akun. Ini adalah fitur sehari-hari yang paling sering digunakan dan saya ingin tetap terbuka untuk semua orang.",
+      "howPremiumTerm": "Alat premium",
+      "howPremiumDesc": "fitur yang lebih canggih atau batasan yang lebih tinggi yang membantu mempertahankan dan mengembangkan proyek. Pendapatan premium langsung masuk ke server, pengembangan, dan alat baru.",
+      "howOutro": "Apa pun variannya, saya berpegang pada aturan yang sama: file yang diunggah hanya digunakan untuk melakukan konversi dan tidak saya simpan.",
+      "outsideTitle": "Apa yang saya lakukan di luar Toolando",
+      "outsideP1": "Saya menyediakan layanan TI — membantu individu dan perusahaan dengan masalah perangkat keras dan perangkat lunak sehari-hari.",
+      "outsideList": [
+        "servis dan perbaikan laptop dan komputer,",
+        "Layanan TI dan dukungan teknis,",
+        "membangun alat dan aplikasi web."
+      ],
+      "outsideP2": "Pengalaman dari perbaikan dan bekerja dengan pengguna diterjemahkan langsung ke dalam cara saya mendesain Toolando — sederhana, langsung pada sasaran, dan dengan mempertimbangkan kebutuhan nyata.",
+      "contactTitle": "Kontak",
+      "contactP1": "Punya pertanyaan, ide alat baru, atau ingin melaporkan masalah? Kirimkan surat kepada saya — saya akan dengan senang hati membalasnya.",
+      "emailLabel": "Surel:",
+      "methodologyTitle": "Bagaimana saya menguji konversi dan menulis panduan",
+      "methodologyP1": "Setiap panduan dan format profil di Toolando.tech didasarkan pada pengujian konversi nyata — bukan spesifikasi salin-tempel. Saya mengunggah file sampel, membandingkan ukuran dan kualitas keluaran, dan mencatat pengaturan mana yang paling berhasil.",
+      "methodologyList": [
+        "Saya menguji konverter dengan file dengan ukuran berbeda (kecil, sedang, besar).",
+        "Untuk audio/video saya membandingkan bitrate, durasi, dan kompatibilitas pemutaran.",
+        "Untuk gambar saya memeriksa ukuran file, kualitas visual, dan transparansi.",
+        "Panduan diperbarui ketika format atau persyaratan platform berubah."
+      ],
+      "methodologyP2": "Jika Anda menemukan kesalahan dalam panduan atau konverter yang tidak berfungsi seperti yang dijelaskan, kirim email ke badyltech@outlook.com — koreksi membantu semua orang.",
+      "updatedLabel": "Halaman terakhir diperbarui",
+      "updatedDate": "Juli 2026"
+    },
+    "editorial": {
+      "eyebrow": "Editorial",
+      "title": "Standar editorial Toolando.tech",
+      "intro": "Toolando.tech bukan hanya konverter — ada panduan, ensiklopedia format, dan perbandingan. Di bawah saya jelaskan cara konten dibuat, dari mana informasi berasal, dan kapan diperbarui.",
+      "whoTitle": "Siapa yang membuat konten",
+      "whoP1": "Saya menulis setiap panduan, profil format, dan perbandingan sendiri — Szymon Badyl, pencipta Toolando.tech. Saya tidak memakai content farm atau teks AI yang belum diverifikasi.",
+      "whoP2": "Setiap artikel berdasarkan uji konversi pada berkas saya sendiri. Jika sesuatu tidak bekerja seperti dijelaskan, saya perbaiki teks dan alatnya.",
+      "standardsTitle": "Prinsip editorial",
+      "standardsIntro": "Saya menerapkan aturan yang sama pada setiap panduan baru:",
+      "standardsList": [
+        "I test the converter with files of different sizes before publishing.",
+        "I give concrete scenarios (email, shop, social media), not vague generalities.",
+        "I distinguish compression from format conversion and lossy from lossless.",
+        "I write about tool limits — when not to convert online.",
+        "I update the date and content when platform or format requirements change."
+      ],
+      "sourcesTitle": "Sumber dan kejujuran",
+      "sourcesP1": "Saya verifikasi spesifikasi format (MIME, codec) terhadap IANA, FFmpeg, dan dokumentasi vendor. Perbandingan mengandalkan pengukuran ukuran dan kualitas saya sendiri, bukan tabel pemasaran.",
+      "sourcesP2": "Tautan eksternal hanya muncul jika benar-benar membantu (mis. dokumentasi resmi). Saya tidak mempromosikan alat kompetitor berbayar.",
+      "updatesTitle": "Pembaruan dan koreksi",
+      "updatesP1": "Menemukan kesalahan, info usang, atau saran topik? Email badyltech@outlook.com — perbaikan masuk ke artikel dengan tanggal pembaruan.",
+      "updatedLabel": "Terakhir diperbarui",
+      "updatedDate": "Agustus 2026",
+      "fullGuideCta": "Panduan lengkap standar editorial"
+    },
+    "howItWorks": {
+      "eyebrow": "Bagaimana cara kerjanya?",
+      "title": "Cara kerja alat di Toolando",
+      "intro": "Toolando.tech adalah seperangkat alat online yang Anda jalankan langsung di browser Anda — tanpa perlu menginstal apa pun. Di bawah ini saya menjelaskan cara kerja pemrosesan file, cara saya menjaga keamanan, dan perbedaan alat gratis dari premium.",
+      "browserTitle": "Alat yang dijalankan di browser",
+      "browserP": "Anda membuka alat, memilih file atau memasukkan data, dan Anda mendapatkan hasilnya langsung di halaman. Anda tidak memerlukan akun untuk menggunakan alat gratis ini, dan Anda tidak perlu menginstal apa pun di komputer Anda.",
+      "filesTitle": "Bagaimana file diproses",
+      "filesIntro": "Tergantung pada jenis alatnya, file diproses dengan dua cara:",
+      "filesLocalTerm": "Secara lokal di browser",
+      "filesLocalDesc": "beberapa operasi berjalan langsung di perangkat Anda, dan file tidak pernah meninggalkan komputer Anda sama sekali.",
+      "filesServerTerm": "Untuk sementara di server",
+      "filesServerDesc": "ketika suatu alat memerlukan lebih banyak daya komputasi, file diproses di server hanya selama durasi konversi, dan kemudian dihapus.",
+      "filesOutro": "Dalam kasus ini saya tidak menyimpan file Anda atau menggunakannya untuk tujuan lain apa pun.",
+      "securityTitle": "Keamanan",
+      "securityP": "Keamanan dan privasi adalah prioritas bagi saya. Koneksi ke situs dienkripsi, dan file digunakan semata-mata untuk melakukan tugas yang Anda minta.",
+      "securityList": [
+        "file yang diunggah tidak disimpan setelah operasi selesai,",
+        "Saya tidak menjual atau membagikan data Anda,",
+        "Anda tidak perlu memberikan data pribadi untuk menggunakan alat gratis."
+      ],
+      "tiersTitle": "Alat gratis vs premium",
+      "tiersP": "Toolando menawarkan alat dalam dua varian, namun prinsip keamanan keduanya sama.",
+      "tiersFreeTerm": "Gratis",
+      "tiersFreeDesc": "tersedia untuk semua orang, tanpa akun. Sempurna untuk tugas sehari-hari dan cepat.",
+      "tiersPremiumTerm": "Premi",
+      "tiersPremiumDesc": "fitur yang lebih canggih dan batas yang lebih tinggi atau file yang lebih besar. Premium mendukung pemeliharaan server dan pengembangan alat baru."
+    },
+    "faq": {
+      "eyebrow": "Pertanyaan Umum",
+      "title": "Pertanyaan yang sering diajukan",
+      "intro": "Di sini saya telah mengumpulkan jawaban atas pertanyaan yang paling sering muncul. Jika Anda tidak dapat menemukan apa yang Anda cari, kirimkan surat kepada saya di badyltech@outlook.com.",
+      "items": [
+        {
+          "q": "Apakah alat Toolando gratis?",
+          "a": "Sebagian besar alat sepenuhnya gratis dan tersedia tanpa membuat akun. Beberapa fitur yang lebih canggih dan batasan yang lebih tinggi tersedia pada varian premium, yang mendukung pemeliharaan dan pengembangan layanan."
+        },
+        {
+          "q": "Apa perbedaan alat gratis dan premium?",
+          "a": "Alat gratis mencakup tugas sehari-hari yang paling umum dan terbuka untuk semua orang. Premium menawarkan fitur yang lebih canggih dan file atau batasan yang lebih besar. Prinsip keamanan file sama di kedua varian."
+        },
+        {
+          "q": "Apakah file saya aman?",
+          "a": "Ya. File yang diunggah hanya digunakan untuk melakukan konversi dan tidak saya simpan. Beberapa operasi dijalankan secara lokal di browser, dan jika file masuk ke server, file tersebut hanya diproses selama durasi tugas dan kemudian dihapus."
+        },
+        {
+          "q": "Apakah Toolando menyimpan file yang saya unggah?",
+          "a": "Tidak. Saya tidak menyimpan file Anda setelah operasi selesai dan saya tidak menggunakannya untuk tujuan lain apa pun."
+        },
+        {
+          "q": "Bagaimana Anda melindungi privasi saya?",
+          "a": "Saya hanya memproses data teknis dan statistik (misalnya alamat IP, jenis browser, sistem, lalu lintas situs), sesuai dengan GDPR. Anda akan menemukan detailnya di Kebijakan Privasi. Anda tidak perlu memberikan data pribadi untuk menggunakan alat gratis ini."
+        },
+        {
+          "q": "Apakah saya harus membuat akun untuk menggunakan alat ini?",
+          "a": "Tidak. Alat gratis ini berfungsi tanpa akun. Akun mungkin hanya diperlukan untuk fitur premium."
+        },
+        {
+          "q": "Apakah ada iklan di situs?",
+          "a": "Ya, layanan ini mungkin menampilkan iklan Google AdSense, yang membantu menjaga agar alat gratis tetap tersedia bagi semua orang."
+        },
+        {
+          "q": "Bagaimana cara kerja alat online?",
+          "a": "Anda membuka alat di browser Anda, memilih file atau memasukkan data, dan langsung mendapatkan hasilnya — tanpa perlu menginstal apa pun. Saya telah menjelaskan lebih detail pada bagian “Bagaimana cara kerjanya?” halaman."
+        },
+        {
+          "q": "Bagaimana saya bisa menghubungi?",
+          "a": "Tulis ke badyltech@outlook.com atau gunakan formulir kontak. Saya membalas secepat mungkin."
+        }
+      ]
+    },
+    "privacy": {
+      "eyebrow": "Kebijakan Privasi",
+      "title": "Kebijakan Privasi Toolando.tech",
+      "intro": "Toolando.tech adalah layanan alat online dalam varian gratis dan premium. Saya peduli privasi pengguna dan memproses data sesuai peraturan yang berlaku, termasuk GDPR.",
+      "lastUpdated": "Terakhir diperbarui: 23 Juli 2026",
+      "s1Title": "1. Pengendali data",
+      "s1Pre": "Pengendali data adalah Szymon Badyl, pemilik Toolando.tech (Polandia). Untuk hal privasi hubungi saya di:",
+      "s1Address": "Korespondensi: badyltech@outlook.com",
+      "s2Title": "2. Data apa yang diproses",
+      "s2Intro": "Layanan memproses data teknis dan statistik yang dikumpulkan otomatis saat menggunakan situs:",
+      "s2List": [
+        "IP address,",
+        "browser type and version,",
+        "the device's operating system,",
+        "traffic and usage data (e.g. pages visited)."
+      ],
+      "s2Outro": "Jika Anda menghubungi via email atau formulir, saya juga memproses alamat email dan isi pesan Anda.",
+      "s3Title": "3. Berkas yang diunggah ke alat",
+      "s3P": "Berkas yang Anda unggah ke alat untuk konversi atau operasi lain tidak saya simpan. Hanya dipakai untuk menjalankan tugas yang Anda minta dan dihapus setelah selesai. Tidak dipakai untuk tujuan lain.",
+      "s4Title": "4. Cookie",
+      "s4Intro": "Layanan menggunakan jenis cookie berikut:",
+      "s4TechTerm": "Teknis",
+      "s4TechDesc": "diperlukan agar situs berfungsi dengan benar dan mengingat pengaturan (mis. bahasa).",
+      "s4AnalyticsTerm": "Analitik",
+      "s4AnalyticsDesc": "alat statistik (mis. Google Analytics) yang membantu memahami penggunaan situs, secara agregat dan anonim.",
+      "s4AdsTerm": "Periklanan",
+      "s4AdsDesc": "Google AdSense, yang dapat memakai cookie untuk menampilkan dan mempersonalisasi iklan.",
+      "s4Outro": "Anda dapat mengelola atau menonaktifkan cookie kapan saja di pengaturan peramban. Saat kunjungan pertama kami menampilkan banner persetujuan cookie di mana Anda bisa menerima semua atau hanya yang esensial.",
+      "s4ThirdPartyTitle": "Penyedia pihak ketiga",
+      "s4ThirdPartyP": "Layanan memakai layanan Google (Analytics, AdSense). Google dapat mengumpulkan data sesuai kebijakan privasinya. Info lebih lanjut: https://policies.google.com/technologies/partner-sites",
+      "s5Title": "5. Alat gratis dan premium",
+      "s5P": "Toolando menyediakan alat gratis (tanpa akun) dan premium. Aturan pemrosesan data dan perlindungan berkas sama di kedua varian — hanya cakupan fitur dan batas yang berbeda.",
+      "s6Title": "6. Tujuan pemrosesan data",
+      "s6Intro": "Saya memproses data hanya untuk tujuan berikut:",
+      "s6List": [
+        "ensuring the correct and secure operation of the service,",
+        "statistical traffic analysis and improving the tools,",
+        "displaying ads,",
+        "handling contact with the user."
+      ],
+      "s7Title": "7. Hak Anda",
+      "s7Intro": "Anda berhak untuk:",
+      "s7List": [
+        "access your data,",
+        "rectify or delete it,",
+        "restrict processing,",
+        "lodge a complaint with the relevant data protection authority."
+      ],
+      "s8Title": "8. Perubahan kebijakan",
+      "s8P": "Kebijakan privasi dapat diperbarui untuk mencerminkan perubahan layanan atau hukum. Versi terkini selalu tersedia di halaman ini."
+    },
+    "terms": {
+      "eyebrow": "Ketentuan Layanan",
+      "title": "Ketentuan Layanan Toolando.tech",
+      "intro": "Ketentuan di bawah menetapkan aturan penggunaan layanan Toolando.tech. Menggunakan layanan berarti Anda menerima aturan ini.",
+      "s1Title": "1. Ketentuan umum",
+      "s1P": "Pemilik Toolando.tech adalah Szymon. Layanan menyediakan alat online untuk konversi berkas, generasi konten, dan alat AI.",
+      "s2Title": "2. Alat gratis dan premium",
+      "s2Intro": "Toolando menawarkan alat dalam dua varian:",
+      "s2FreeTerm": "Gratis",
+      "s2FreeDesc": "tersedia untuk semua orang, tanpa perlu membuat akun.",
+      "s2PremiumTerm": "Premium",
+      "s2PremiumDesc": "dengan fitur lebih canggih dan batas lebih tinggi.",
+      "s2Outro": "Aturan pembayaran atau langganan untuk fitur premium disajikan di tempat yang relevan pada layanan.",
+      "s3Title": "3. Penggunaan atas risiko sendiri",
+      "s3P1": "Anda menggunakan layanan atas risiko sendiri. Saya berusaha agar alat berfungsi dengan benar, namun layanan disediakan \"apa adanya\", tanpa jaminan ketersediaan, kebenaran hasil, atau kesesuaian untuk tujuan tertentu.",
+      "s3P2": "Pemilik layanan tidak bertanggung jawab atas:",
+      "s3List": [
+        "the consequences of using the tools' results,",
+        "lost profits,",
+        "damage resulting from interruptions in the service."
+      ],
+      "s3Outro": "Pengguna berjanji menggunakan layanan sesuai hukum dan bertanggung jawab atas konten dan berkas yang diproses.",
+      "s4Title": "4. Berkas pengguna",
+      "s4P": "Berkas yang diunggah ke alat tidak disimpan. Hanya dipakai untuk menjalankan operasi yang diminta dan dihapus setelah selesai.",
+      "s5Title": "5. Iklan",
+      "s5P": "Layanan dapat menampilkan iklan Google AdSense. Iklan membantu mempertahankan alat gratis dan mengembangkan proyek. Penyedia iklan dapat memakai cookie sesuai Kebijakan Privasi.",
+      "s6Title": "6. Hak cipta",
+      "s6P": "Nama Toolando.tech, elemen grafis, dan konten layanan dilindungi secara hukum. Menyalin dan menggunakan tanpa persetujuan pemilik dilarang.",
+      "s7Title": "7. Kontak",
+      "s7Pre": "Untuk hal terkait ketentuan ini hubungi saya di:",
+      "s8Title": "8. Perubahan ketentuan",
+      "s8P": "Ketentuan dapat diperbarui untuk mencerminkan perubahan layanan atau hukum. Versi terkini selalu tersedia di halaman ini."
+    },
+    "guides": {
+      "eyebrow": "Panduan",
+      "title": "Panduan dan tutorial konversi berkas",
+      "intro": "Artikel praktis tentang format berkas, konversi, dan praktik terbaik. Setiap panduan menjelaskan kapan dan mengapa mengonversi berkas, dan cara aman dengan Toolando.tech.",
+      "articles": [
+        {
+          "title": "MP3 vs WAV — when to convert audio?",
+          "body": "MP3 is a lossy compression format — files are small but some audio data is lost. WAV preserves full quality but files can be 10 times larger. Convert MP3 → WAV when you need a file for editing in a DAW (e.g. Audacity, FL Studio) or when a platform requires a lossless format. Convert WAV → MP3 when you want to email a recording, publish a podcast, or save disk space. Toolando.tech supports both conversions — just upload your file and download the result."
+        },
+        {
+          "title": "How to convert PDF to JPG for print and the web",
+          "body": "PDF is a document format that preserves page layout. Sometimes you need individual pages as images — for a website, a PowerPoint presentation, or printing a single page. The PDF → JPG converter in Toolando.tech renders each PDF page as a separate high-resolution JPG image. PDF files are never stored — they are deleted immediately after conversion. If you need transparency, consider PDF → PNG instead."
+        },
+        {
+          "title": "WebP and AVIF — modern image formats for websites",
+          "body": "JPG and PNG have dominated the web for years, but newer formats offer better compression. WebP (Google) produces files 25–35% smaller than JPG at the same visual quality and is supported by all modern browsers. AVIF goes even further — files can be half the size of WebP. Convert JPG → WebP or PNG → AVIF in Toolando.tech to speed up your website. Remember that older browsers (e.g. IE) don't support these formats — keep a JPG version as a fallback."
+        },
+        {
+          "title": "Extracting audio from video — the legal alternative",
+          "body": "Sometimes you have a video file (e.g. a camera recording, presentation) and only need the audio track. Toolando.tech lets you extract audio from MP4, MOV, AVI, MKV and other video formats, saving it as MP3, WAV, FLAC, or AAC. This is a legal operation on your own file — unlike downloading music from YouTube or TikTok, which Toolando.tech deliberately does not offer. Upload your video file, choose an audio format, and download the result."
+        },
+        {
+          "title": "JSON, CSV, and XML — converting data between formats",
+          "body": "Developers and data analysts often work with different data formats. JSON is the standard in APIs and configs. CSV and TSV are used for importing into Excel and spreadsheets. XML is used in older enterprise systems and RSS. Toolando.tech converts between these formats while preserving data structure. For example: JSON → CSV lets you open an API response in Excel, and CSV → JSON prepares data for sending to a REST API."
+        },
+        {
+          "title": "File security in online tools",
+          "body": "Uploading files to online tools naturally raises privacy concerns. At Toolando.tech, files are used solely to perform the operation you request — conversion, compression, or preview. After the job completes, files are deleted from the server. Some tools (e.g. the universal file opener) run entirely in your browser — in that case the file never leaves your computer. The connection to the site is encrypted (HTTPS). We never sell or share your files with third parties."
+        },
+        {
+          "title": "Lossy vs lossless compression — a simple guide",
+          "body": "Lossy formats (MP3, JPG, AAC, H.264) discard some data to shrink file size. Lossless formats (FLAC, PNG, WAV, ZIP) keep all data but produce larger files. Rule of thumb: only convert from lossy to lossless when you must — you won't recover lost quality. Converting lossy to lossy (e.g. JPG → JPG at lower quality) should happen once; each re-conversion degrades the result. In Toolando.tech's format encyclopedia, every format is labeled with its compression type."
+        },
+        {
+          "title": "HEIC from iPhone — how to open and convert to JPG",
+          "body": "Apple saves photos in HEIC (HEIF) by default — smaller than JPG at the same quality. The catch: Windows without an extension, older apps, and many services don't support HEIC. Solution: convert HEIC → JPG or HEIC → PNG in Toolando.tech before emailing photos, uploading to a site, or printing. You can also set iPhone to \"Most Compatible\" (JPG) in Settings, but online conversion works on photos already saved as HEIC."
+        },
+        {
+          "title": "PDF vs DOCX — which format when?",
+          "body": "DOCX (Word) is for editing text — you change content, styles, and headings. PDF locks page layout — it looks identical on every device, ideal for invoices, contracts, and CVs sent to recruiters. Convert DOCX → PDF before sending a document \"for reading only.\" Convert PDF → DOCX only when you need to edit text — layout may break. For archiving and print, always choose PDF."
+        },
+        {
+          "title": "Video for social media — MP4, resolution, and bitrate",
+          "body": "Instagram, TikTok, YouTube, and Facebook prefer MP4 with H.264 video and AAC audio. Before publishing, convert MOV, AVI, or MKV to MP4 to avoid upload errors. 1080p (1920×1080) is enough for most platforms; 4K only when the platform supports it. Higher bitrate means better quality but a larger file. Toolando.tech converts video with no install — see the format encyclopedia for details on MP4, WebM, and MOV."
+        }
+      ]
+    }
   },
   "hub": {
-    "convertersTitle": "File converters",
-    "convertersDesc": "Audio, video, images, documents, data, fonts and archives — plus compress, merge PDF and background removal.",
-    "calculatorsTitle": "Calculators & converters",
-    "calculatorsDesc": "Currency, VAT, dates, timezones, units and bitrate.",
-    "developerTitle": "Developer & text tools",
-    "developerDesc": "Passwords, QR, Base64, UUID, hash, colors, timestamp and character counter.",
-    "specialTools": "File tools",
-    "browseConverters": "Browse converters",
-    "browseCalculators": "Browse calculators",
-    "browseDeveloper": "Browse tools"
+    "convertersTitle": "Konverter berkas",
+    "convertersDesc": "Audio, video, gambar, dokumen, data, font, dan arsip — plus kompres, gabung PDF, dan penghapusan latar.",
+    "calculatorsTitle": "Kalkulator & konverter",
+    "calculatorsDesc": "Mata uang, PPN, tanggal, zona waktu, satuan, dan bitrate.",
+    "developerTitle": "Alat pengembang & teks",
+    "developerDesc": "Kata sandi, QR, Base64, UUID, hash, warna, timestamp, dan penghitung karakter.",
+    "specialTools": "Alat berkas",
+    "browseConverters": "Jelajahi konverter",
+    "browseCalculators": "Jelajahi kalkulator",
+    "browseDeveloper": "Jelajahi alat"
+  },
+  "specialFields": {
+    "splitMode": "Mode pemisahan",
+    "everyPage": "Setiap halaman terpisah",
+    "pageRange": "Rentang terpilih",
+    "pagesHint": "Halaman (mis. 1-3,5)",
+    "rotation": "Sudut rotasi",
+    "width": "Lebar (px)",
+    "height": "Tinggi (px, opsional)",
+    "watermark": "Teks watermark",
+    "trimStart": "Mulai (detik atau MM:SS)",
+    "trimEnd": "Akhir (detik atau MM:SS)",
+    "pageNumberPos": "Posisi nomor halaman",
+    "bottom": "Bawah halaman",
+    "top": "Atas halaman"
+  },
+  "accountRecent": {
+    "title": "Baru-baru ini digunakan",
+    "subtitle": "Riwayat disimpan secara lokal di peramban ini."
+  },
+  "favorites": {
+    "add": "Tambahkan ke favorit",
+    "remove": "Favorit"
   }
 }

@@ -3,6 +3,7 @@ import {
   ContentPageShell,
   ContentSection,
 } from "@/components/content-page-shell"
+import { ContactEmailLink } from "@/components/contact-email-link"
 import { getDictionary } from "@/lib/i18n/dictionaries"
 
 export async function generateMetadata({
@@ -25,7 +26,8 @@ export default async function AboutMePage({
   params: Promise<{ locale: string }>
 }) {
   const { locale } = await params
-  const { about: p } = (await getDictionary(locale)).pages
+  const t = await getDictionary(locale)
+  const { about: p } = t.pages
 
   return (
     <ContentPageShell eyebrow={p.eyebrow} title={p.title} intro={p.intro}>
@@ -63,12 +65,11 @@ export default async function AboutMePage({
         <p>{p.contactP1}</p>
         <p>
           {p.emailLabel}{" "}
-          <a
-            href="mailto:badyltech@outlook.com"
+          <ContactEmailLink
+            subject={t.pages.contact.subject}
+            ariaLabel={t.footer.emailAria}
             className="font-medium text-foreground underline underline-offset-4 hover:text-primary"
-          >
-            badyltech@outlook.com
-          </a>
+          />
         </p>
       </ContentSection>
 

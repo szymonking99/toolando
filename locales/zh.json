@@ -3,10 +3,122 @@
     "title": "Toolando.tech — 你的在线工具尽在一处",
     "description": "转换器、生成器、PDF 和 AI 工具——全部集于一个优雅的生态系统。快速而简单。"
   },
+  "socialProof": {
+    "toolsCount": "{count}+ 个工具，尽在一个生态系统",
+    "usesToday": "今日 {uses} 次使用"
+  },
+  "recent": {
+    "title": "最近使用",
+    "subtitle": "你最近使用的工具——保存在本浏览器的本地记录中。",
+    "favoritesHint": "在工具页面点击星标，即可固定在此处。"
+  },
+  "premiumUpsell": {
+    "title": "升级 Premium，解锁 AI 工具",
+    "description": "文本生成、摘要、图像、翻译与对话——一项订阅，无按次计费惊喜。",
+    "point1": "所有 AI 工具无限使用",
+    "point2": "繁忙时段优先处理",
+    "point3": "支持独立开发",
+    "cta": "升级 Premium",
+    "compare": "查看方案",
+    "trialHint": "登录即可免费预览——随时升级。"
+  },
+  "privacyBadge": {
+    "title": "隐私优先",
+    "local": "在浏览器中本地处理"
+  },
+  "onboarding": {
+    "skip": "关闭",
+    "next": "下一步",
+    "start": "浏览工具",
+    "learnMore": "Toolando 如何运作",
+    "step1": {
+      "title": "转换、计算、打开——一个生态系统",
+      "body": "287+ 款工具，涵盖文件、计算器、开发者实用工具和 AI——选择工具或使用 Ctrl+K 搜索。"
+    },
+    "step2": {
+      "title": "在重要之处保护隐私",
+      "body": "许多实用工具在浏览器中运行。服务器端转换在任务完成后会删除文件。"
+    },
+    "step3": {
+      "title": "Premium 解锁 AI 工具",
+      "body": "转换器免费使用。AI 功能采用简单的月度方案——在触达付费墙之前即可查看定价。"
+    }
+  },
+  "exitIntent": {
+    "title": "离开之前…",
+    "body": "需要其他转换器？搜索 287+ 款工具，或告诉我们下一步该做什么。",
+    "browse": "浏览工具",
+    "request": "申请新工具",
+    "close": "关闭"
+  },
+  "nextSteps": {
+    "title": "下一步",
+    "aiSummarizeTitle": "用 AI 总结文档",
+    "aiSummarizeBody": "几秒内生成 PDF 或 DOCX 摘要（Premium 或每日 1 次试用）。"
+  },
+  "newsletter": {
+    "title": "新工具与 Premium 更新",
+    "subtitle": "留下邮箱——我们会通知你重要功能（无垃圾邮件）。",
+    "placeholder": "name@example.com",
+    "cta": "订阅",
+    "thanks": "感谢！如需回复，请通过联系表单确认。",
+    "confirmViaContact": "通过联系表单完成订阅 →",
+    "error": "订阅失败，请重试。"
+  },
+  "toolRequest": {
+    "title": "缺少转换器？",
+    "body": "建议新工具或格式——我们优先处理用户请求。",
+    "cta": "建议工具"
+  },
+  "comparison": {
+    "title": "Toolando 对比云端上传工具",
+    "subtitle": "用户为何从通用在线转换器转向 Toolando。",
+    "feature": "功能",
+    "competitor": "典型云端转换器",
+    "rows": {
+      "privacy": "本地预览与隐私选项",
+      "offline": "离线可用（PWA 实用工具）",
+      "ai": "集成 AI 工作流",
+      "free": "免费核心转换器",
+      "limits": "基础功能无任意每日上传限制"
+    }
+  },
+  "premiumPage": {
+    "title": "Toolando Premium",
+    "subtitle": "AI 工具、清晰定价、随时取消。",
+    "freeTitle": "免费",
+    "freeDesc": "所有文件转换器、计算器和大多数实用工具。",
+    "premiumTitle": "Premium",
+    "premiumDesc": "完整 AI 套件——文本、图像、摘要、翻译、对话。",
+    "supporterTitle": "支持者",
+    "supporterDesc": "Premium + 无广告体验（即将推出）。",
+    "cta": "升级 Premium",
+    "signIn": "登录以订阅",
+    "faqTitle": "定价常见问题",
+    "faq1q": "积分如何运作？",
+    "faq1a": "没有按次积分——Premium 是固定月度订阅，AI 无限使用。",
+    "faq2q": "付费前可以试用吗？",
+    "faq2a": "创建免费账户，探索转换器，需要 AI 时再升级。",
+    "faq3q": "文件隐私如何保障？",
+    "faq3a": "服务器文件在处理后删除。浏览器工具不会上传你的数据。"
+  },
+  "privacyPage": {
+    "title": "隐私优先的设计理念",
+    "subtitle": "Toolando 如何保护你的文件和数据。",
+    "localTitle": "浏览器本地工具",
+    "localBody": "实用工具、通用打开器和许多计算器完全在浏览器中运行——数据不会离开你的设备。",
+    "serverTitle": "服务器端转换",
+    "serverBody": "上传转换时，文件仅用于该任务，完成后即删除。全程 HTTPS 加密。",
+    "aiTitle": "AI 工具",
+    "aiBody": "Premium AI 仅将你提交的内容发送给模型提供商——绝不出售或用于广告。",
+    "badge": "隐私优先",
+    "readPolicy": "阅读完整隐私政策"
+  },
   "nav": {
     "aiTools": "AI 工具",
     "tools": "转换器",
-    "categories": "Converter categories",
+    "categories": "转换器分类",
+    "formats": "格式",
     "about": "关于",
     "contact": "联系",
     "cta": "开始使用",
@@ -15,11 +127,18 @@
     "allTools": "所有工具",
     "signIn": "登录",
     "account": "我的账户",
-    "downloader": "MP3 Downloader",
+    "downloader": "MP3 下载器",
+    "aboutMe": "关于我",
+    "privacy": "隐私政策",
+    "terms": "服务条款",
     "onlineTools": "计算器",
     "converters": "转换器",
     "calculators": "计算器",
-    "developer": "开发者工具"
+    "developer": "开发者工具",
+    "premium": "Premium",
+    "guides": "指南",
+    "faq": "常见问题",
+    "more": "更多"
   },
   "hero": {
     "badge": "全新的在线工具生态系统",
@@ -27,7 +146,68 @@
     "titleHighlight": "尽在一处",
     "subtitle": "转换器、生成器、PDF、AI——全部集于一个生态系统。",
     "browse": "浏览工具",
-    "learnMore": "了解更多"
+    "learnMore": "了解更多",
+    "convertCta": "立即转换文件"
+  },
+  "search": {
+    "placeholder": "搜索转换器（例如 mp3 wav、pdf jpg）...",
+    "noResults": "未找到转换器。尝试不同的查询。"
+  },
+  "share": {
+    "label": "分享",
+    "copy": "复制链接",
+    "copied": "已复制"
+  },
+  "feedback": {
+    "question": "这篇文章有帮助吗？",
+    "yes": "是的",
+    "no": "否",
+    "thanks": "感谢您的反馈！"
+  },
+  "recommender": {
+    "title": "我应该选择哪种格式？",
+    "subtitle": "回答两个简单问题，我们将推荐最佳格式。",
+    "step1": "您有什么类型的文件？",
+    "step2": "你想用它做什么？",
+    "categories": {
+      "image": "图片/照片",
+      "audio": "音频/音乐",
+      "video": "视频",
+      "document": "文件"
+    },
+    "goals": {
+      "image_web": "在网站上发布",
+      "image_email": "通过电子邮件发送",
+      "image_print": "打印",
+      "image_iphone": "照片来自 iPhone (HEIC)",
+      "audio_listen": "通过手机或播放器收听",
+      "audio_edit": "在 DAW 中编辑",
+      "audio_archive": "存档无质量损失",
+      "video_social": "在社交媒体上发帖",
+      "video_web": "嵌入网站",
+      "video_audio": "仅提取音频",
+      "document_share": "发送以供阅读（无需编辑）",
+      "document_edit": "编辑文字"
+    },
+    "resultTitle": "推荐格式：",
+    "readFormat": "格式指南",
+    "openConverter": "打开转换器",
+    "back": "返回",
+    "tryAgain": "重新开始",
+    "reasons": {
+      "webp-web": "在相同质量下，WebP 比 JPG 小 25-35% — 非常适合速度更快的网站。",
+      "jpg-email": "JPG 通用且体积小 — 非常适合电子邮件附件。",
+      "png-print": "PNG 是无损的，边缘清晰，适合图形和短版印刷。",
+      "heic-jpg": "iPhone 中的 HEIC 需要转换为 JPG，以便与 Windows 和大多数服务兼容。",
+      "mp3-listen": "MP3 适用于所有设备并保持文件较小。",
+      "wav-edit": "WAV 是无损的 — 最适合在不损失质量的情况下进行编辑。",
+      "flac-archive": "FLAC 压缩时不会损失质量——非常适合音乐存档。",
+      "mp4-social": "MP4 (H.264 + AAC) 是 Instagram、TikTok 和 YouTube 的标准。",
+      "webm-web": "WebM 针对浏览器中的 HTML5 视频进行了优化。",
+      "mp3-audio": "从视频中提取音频作为 MP3 用于播客或铃声。",
+      "pdf-share": "PDF 锁定布局 — 收件人准确地看到您想要的内容。",
+      "docx-edit": "DOCX 允许您在 Word 中编辑文本、样式和标题。"
+    }
   },
   "opener": {
     "title": "通用文件打开器",
@@ -37,26 +217,26 @@
     "kindVideo": "视频",
     "kindAudio": "音频",
     "kindDocs": "PDF、代码和数据",
-    "readError": "Couldn't read the file contents.",
-    "dropAny": "Drag any file here or click to choose",
-    "dropHint": "Images, video, audio, PDF, documents, code, data — any format. Files are opened locally in your browser and never uploaded anywhere.",
-    "noConverter": "We don't have a converter for this format yet — but you can preview and download the file below.",
-    "convertTo": "Convert to another format",
-    "optionOne": "option",
-    "optionMany": "options",
-    "downloadedOk": "Done! The file has been downloaded.",
-    "download": "Download",
-    "close": "Close",
-    "emptyFile": "(empty file)",
-    "textTruncated": "Preview truncated to the first 200,000 characters. Download the file to see everything.",
-    "binaryPreview": "Binary preview (first bytes in hexadecimal)",
+    "readError": "无法读取文件内容。",
+    "dropAny": "将任意文件拖放到此处，或点击选择",
+    "dropHint": "图片、视频、音频、PDF、文档、代码、数据——任意格式。文件在浏览器中本地打开，不会上传到任何地方。",
+    "noConverter": "我们暂时还没有此格式的转换器——但你仍可在下方预览并下载该文件。",
+    "convertTo": "转换为其他格式",
+    "optionOne": "个选项",
+    "optionMany": "个选项",
+    "downloadedOk": "完成！文件已下载。",
+    "download": "下载",
+    "close": "关闭",
+    "emptyFile": "（空文件）",
+    "textTruncated": "预览已截断至前 200,000 个字符。下载文件以查看完整内容。",
+    "binaryPreview": "二进制预览（前若干字节的十六进制）",
     "kinds": {
-      "image": "Image",
-      "video": "Video",
-      "audio": "Audio",
-      "pdf": "PDF document",
-      "text": "Text / code",
-      "binary": "Binary file"
+      "image": "图片",
+      "video": "视频",
+      "audio": "音频",
+      "pdf": "PDF 文档",
+      "text": "文本 / 代码",
+      "binary": "二进制文件"
     }
   },
   "ai": {
@@ -76,6 +256,41 @@
     "title": "工具分类",
     "subtitle": "选择一个分类以查看所有可用的转换器。",
     "browse": "浏览"
+  },
+  "toolsIndex": {
+    "intro": "每个工具都可以转换服务器上的文件 - 无需安装软件。不确定选择哪种格式？浏览格式百科全书或转换指南。",
+    "formatsLink": "格式百科全书",
+    "guidesLink": "转换指南"
+  },
+  "knowledgeHub": {
+    "title": "格式与转换知识",
+    "subtitle": "不仅仅是转换 - 了解何时选择 MP3 而不是 FLAC、WebP 而不是 JPG、或 PDF 而不是 DOCX。我们的指南可帮助您避免质量损失和不必要的转换。",
+    "formatsTitle": "文件格式百科全书",
+    "formatsDesc": "40 多种格式：音频、视频、图像、文档、数据和档案。优点、缺点、兼容性以及与替代方案的比较。",
+    "formatsCta": "浏览格式",
+    "guidesTitle": "转换指南",
+    "guidesDesc": "实用文章：音频质量、图像压缩、社交媒体视频、PDF 与 DOCX 以及在线文件安全。",
+    "guidesCta": "阅读指南",
+    "comparisonsTitle": "格式比较",
+    "comparisonsDesc": "MP3 与 FLAC、JPG 与 WebP、PDF 与 DOCX — 面对面的比较，得出明确的结论。",
+    "comparisonsCta": "浏览比较",
+    "glossaryTitle": "术语表",
+    "glossaryDesc": "比特率、编解码器、有损压缩、MIME——通俗易懂的定义。",
+    "glossaryCta": "打开术语表"
+  },
+  "editorial": {
+    "title": "谁在运营 Toolando.tech",
+    "body": "我是 Szymon——我亲自设计、开发并测试每一款工具。指南基于真实转换测试，而非照搬规格说明。我希望你在转换文件之前先理解它们，也希望这项服务对你始终诚实透明。",
+    "aboutCta": "关于我与方法",
+    "howCta": "工具如何运作",
+    "editorialCta": "编辑标准",
+    "guidesCta": "指南"
+  },
+  "featuredGuides": {
+    "title": "精选指南",
+    "subtitle": "关于文件格式、安全与转换的实用文章——基于真实测试撰写，而非 SEO 模板。",
+    "readArticle": "阅读指南",
+    "allGuides": "全部指南"
   },
   "why": {
     "title": "为什么选择 Toolando.tech？",
@@ -100,9 +315,25 @@
     "privacy": "隐私政策",
     "terms": "服务条款",
     "rights": "© 2026 Toolando.tech。保留所有权利。",
-    "aboutMe": "About me",
-    "howItWorks": "How it works",
-    "faq": "FAQ"
+    "aboutMe": "关于我",
+    "howItWorks": "如何运作",
+    "faq": "常见问题",
+    "guides": "指南",
+    "editorial": "编辑",
+    "formats": "文件格式",
+    "comparisons": "比较",
+    "glossary": "词汇表",
+    "rss": "RSS 订阅",
+    "cookieSettings": "Cookie 设置",
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "messenger": "Messenger",
+    "youtube": "YouTube",
+    "emailAria": "打开邮件应用给我们写信"
+  },
+  "ad": {
+    "label": "广告",
+    "placeholder": "广告位"
   },
   "language": {
     "label": "语言"
@@ -111,6 +342,10 @@
     "eyebrow": "支持本项目",
     "title": "帮助 Toolando.tech 持续运营",
     "subtitle": "Toolando.tech 免费开发并提供。如果它为你节省了时间，欢迎支持它的发展。",
+    "body1": "我自己维护服务——代码、服务器、法律内容和指南。您的支持涵盖托管 (Vercel)、文件处理、域和新工具开发。",
+    "body2": "支持完全是自愿的。免费工具无需付费。高级版是具有扩展功能的单独可选订阅 - 有关详细信息，请参阅服务条款。",
+    "body3": "有疑问、工具想法或发现错误吗？写信给 badyltech@outlook.com 或使用联系表格 — 这也是宝贵的支持。",
+    "legalNote": "除非另有明确说明，捐赠并不授予高级访问权限或构成服务合同。无论捐赠如何，条款和隐私政策均适用。",
     "coffee": "请我喝杯咖啡",
     "donate": "进行捐赠",
     "back": "返回首页",
@@ -155,32 +390,47 @@
     "merge": "合并文件",
     "result": "结果",
     "notFound": "未找到工具",
-    "convertFailed": "Conversion failed.",
-    "connectionError": "Couldn't connect to the server. Please try again.",
-    "unavailable": "This converter is currently unavailable",
-    "dropClick": "Drag a file here or click to choose",
-    "dropClickMulti": "Drag files here or click to choose",
-    "supportedFormat": "Supported format",
-    "supported": "Supported",
-    "maxSize": "max. 500 MB",
-    "removeFile": "Remove file",
-    "convertDone": "Conversion complete",
-    "downloadNamed": "Download",
-    "convertAnother": "Convert another file",
-    "uploadingFile": "Uploading file…",
-    "uploadingFiles": "Uploading files…",
-    "uploading": "Uploading…",
-    "converting": "Converting…",
-    "convertToPrefix": "Convert to",
-    "needTwoPdf": "Add at least two PDF files to merge.",
-    "operationFailed": "The operation failed.",
-    "compressionQuality": "Compression quality",
-    "qualityHint": "Lower value = smaller file. Higher value = better quality.",
-    "done": "Done",
-    "less": "less",
-    "resultPreview": "Result preview",
-    "startOver": "Start over",
-    "processingLong": "Processing (this may take a few seconds)…"
+    "convertFailed": "转换失败。",
+    "connectionError": "无法连接服务器，请重试。",
+    "unavailable": "此转换器当前不可用",
+    "dropClick": "将文件拖放到此处，或点击选择",
+    "dropClickMulti": "将文件拖放到此处，或点击选择",
+    "supportedFormat": "支持的格式",
+    "supported": "支持",
+    "maxSize": "最大 500 MB",
+    "removeFile": "移除文件",
+    "convertDone": "转换完成",
+    "downloadNamed": "下载",
+    "convertAnother": "转换另一个文件",
+    "uploadingFile": "正在上传文件…",
+    "uploadingFiles": "正在上传文件…",
+    "uploading": "正在上传…",
+    "converting": "正在转换…",
+    "convertToPrefix": "转换为",
+    "needTwoPdf": "合并至少需要两个 PDF 文件。",
+    "operationFailed": "操作失败。",
+    "compressionQuality": "压缩质量",
+    "qualityHint": "数值越低 = 文件越小。数值越高 = 质量越好。",
+    "done": "完成",
+    "less": "更少",
+    "resultPreview": "结果预览",
+    "startOver": "重新开始",
+    "processingLong": "处理中（可能需要几秒钟）…",
+    "howToTitle": "如何转换文件 - 一步一步",
+    "aboutSource": "关于源格式",
+    "aboutTarget": "关于目标格式",
+    "whenToUseTitle": "何时使用此转换器",
+    "faqTitle": "常见问题",
+    "qualityTitle": "转化质量——需要了解的内容",
+    "tipsTitle": "实用技巧",
+    "readFormatGuide": "完整格式指南"
+  },
+  "cookieConsent": {
+    "title": "Cookie",
+    "description": "Toolando.tech 使用必要的 Cookie，并在您同意后使用分析 Cookie（Google Analytics）和广告 Cookie（Google AdSense）。您可以接受全部或仅接受必要 Cookie。",
+    "acceptAll": "接受全部",
+    "necessaryOnly": "仅必要",
+    "privacyLink": "隐私政策"
   },
   "aiTool": {
     "prompt": "你的文本",
@@ -208,44 +458,44 @@
     "thinking": "思考中…",
     "aiError": "无法获取 AI 回复，请重试。",
     "emptyChat": "提出问题以开始对话。",
-    "generateFailed": "Couldn't generate a response.",
-    "noContent": "The AI service returned no content. Check that AI Gateway is active (requires a payment card).",
-    "connectionError": "A connection error occurred. Please try again.",
-    "dropDoc": "Drag a document here or click to choose",
-    "removeFile": "Remove file",
-    "translatePlaceholder": "Paste the text to translate…",
-    "copyPlaceholder": "Describe what the AI should write, e.g. \"a product description for an eco-friendly water bottle\"…",
-    "toneLabel": "Tone",
-    "targetLangLabel": "Target language",
-    "translate": "Translate",
-    "summarizeDoc": "Summarize document",
-    "generateText": "Generate text",
-    "imageFailed": "Couldn't generate the image.",
-    "imagePromptPlaceholder": "Describe the image, e.g. \"a futuristic city at sunset, watercolor style\"…",
-    "ratioSquare": "Square 1:1",
-    "ratioLandscape": "Landscape 3:2",
-    "ratioPortrait": "Portrait 2:3",
-    "generatingImage": "Generating image (this may take several seconds)…",
-    "generateImage": "Generate image",
-    "generatedImageAlt": "Generated image",
-    "downloadImage": "Download image",
+    "generateFailed": "无法生成回复。",
+    "noContent": "AI 服务未返回内容。请确认 AI Gateway 已启用（需要绑定支付卡）。",
+    "connectionError": "发生连接错误，请重试。",
+    "dropDoc": "将文档拖放到此处，或点击选择",
+    "removeFile": "移除文件",
+    "translatePlaceholder": "粘贴要翻译的文本…",
+    "copyPlaceholder": "描述 AI 应撰写的内容，例如「一款环保水瓶的产品描述」…",
+    "toneLabel": "语气",
+    "targetLangLabel": "目标语言",
+    "translate": "翻译",
+    "summarizeDoc": "总结文档",
+    "generateText": "生成文本",
+    "imageFailed": "无法生成图像。",
+    "imagePromptPlaceholder": "描述图像，例如「日落时分的未来城市，水彩风格」…",
+    "ratioSquare": "正方形 1:1",
+    "ratioLandscape": "横向 3:2",
+    "ratioPortrait": "纵向 2:3",
+    "generatingImage": "正在生成图像（可能需要数秒）…",
+    "generateImage": "生成图像",
+    "generatedImageAlt": "生成的图像",
+    "downloadImage": "下载图像",
     "tones": {
-      "professional": "professional",
-      "friendly": "friendly",
-      "energetic": "energetic",
-      "formal": "formal",
-      "playful": "playful",
-      "persuasive": "persuasive"
+      "professional": "专业",
+      "friendly": "友好",
+      "energetic": "活力",
+      "formal": "正式",
+      "playful": "轻松",
+      "persuasive": "说服"
     },
     "languages": {
-      "english": "English",
-      "german": "German",
-      "spanish": "Spanish",
-      "french": "French",
-      "italian": "Italian",
-      "ukrainian": "Ukrainian",
-      "polish": "Polish",
-      "japanese": "Japanese"
+      "english": "英语",
+      "german": "德语",
+      "spanish": "西班牙语",
+      "french": "法语",
+      "italian": "意大利语",
+      "ukrainian": "乌克兰语",
+      "polish": "波兰语",
+      "japanese": "日语"
     }
   },
   "category": {
@@ -259,64 +509,64 @@
     "notFound": "未找到分类"
   },
   "paywall": {
-    "unlockTitle": "Unlock \"{tool}\" with Premium",
-    "description": "Unlock all Toolando.tech AI tools — text and image generation, translation, summaries and the assistant — in one subscription.",
-    "feature1": "Unlimited access to all AI tools",
-    "feature2": "Text generator, image generator and translator",
-    "feature3": "Priority request processing",
-    "goPremium": "Upgrade to Premium",
-    "redirecting": "Redirecting…",
-    "signInToBuy": "Sign in to buy Premium",
-    "noAccount": "Don't have an account?",
-    "signUp": "Sign up"
+    "unlockTitle": "升级 Premium 解锁「{tool}」",
+    "description": "一项订阅解锁 Toolando.tech 全部 AI 工具——文本与图像生成、翻译、摘要和助手。",
+    "feature1": "无限访问所有 AI 工具",
+    "feature2": "文本生成器、图像生成器和翻译器",
+    "feature3": "优先处理请求",
+    "goPremium": "升级 Premium",
+    "redirecting": "正在跳转…",
+    "signInToBuy": "登录以购买 Premium",
+    "noAccount": "还没有账户？",
+    "signUp": "注册"
   },
   "account": {
-    "backToHome": "Back to homepage",
-    "yourAccount": "Your account",
+    "backToHome": "返回首页",
+    "yourAccount": "你的账户",
     "premiumBadge": "Premium",
-    "freeBadge": "Free account",
-    "premiumActiveTitle": "You have active Premium",
-    "premiumActiveDesc": "Thank you for your support! You have full access to all AI tools without limits.",
-    "manageSubscription": "Manage subscription",
-    "manageOpening": "Opening…",
-    "managePortalError": "Could not open the portal.",
-    "manageGenericError": "An error occurred.",
-    "goPremiumTitle": "Go Premium",
-    "feature1": "Unlimited access to AI tools",
-    "feature2": "Background removal, image and text generation",
-    "feature3": "Priority processing",
-    "buyPremium": "Buy Premium",
-    "buyRedirecting": "Redirecting…",
-    "refreshHint": "Paid but Premium still inactive? Refresh your status:",
-    "refreshStatus": "Refresh Premium status",
-    "refreshChecking": "Checking...",
-    "refreshNoSub": "No active subscription found. If you just paid, wait a moment and try again.",
-    "refreshFailed": "Could not refresh status.",
-    "refreshNetworkError": "A network error occurred. Please try again.",
-    "signOut": "Sign out"
+    "freeBadge": "免费账户",
+    "premiumActiveTitle": "你已开通 Premium",
+    "premiumActiveDesc": "感谢你的支持！你可无限使用所有 AI 工具。",
+    "manageSubscription": "管理订阅",
+    "manageOpening": "正在打开…",
+    "managePortalError": "无法打开管理门户。",
+    "manageGenericError": "发生错误。",
+    "goPremiumTitle": "升级 Premium",
+    "feature1": "无限访问 AI 工具",
+    "feature2": "背景移除、图像与文本生成",
+    "feature3": "优先处理",
+    "buyPremium": "购买 Premium",
+    "buyRedirecting": "正在跳转…",
+    "refreshHint": "已付款但 Premium 仍未激活？刷新状态：",
+    "refreshStatus": "刷新 Premium 状态",
+    "refreshChecking": "正在检查…",
+    "refreshNoSub": "未找到有效订阅。如刚完成付款，请稍等片刻后重试。",
+    "refreshFailed": "无法刷新状态。",
+    "refreshNetworkError": "发生网络错误，请重试。",
+    "signOut": "退出登录"
   },
   "downloader": {
-    "eyebrow": "Video → MP3",
-    "title": "Multi-Platform → MP3 Downloader",
-    "subtitle": "Paste a link from TikTok, Instagram, Facebook, Twitter/X, Vimeo or SoundCloud and grab the audio.",
-    "metaDescription": "Multi-platform Video to MP3 Downloader — TikTok, Instagram, Facebook, Twitter, Vimeo, SoundCloud. Paste a link and download the audio.",
-    "back": "All tools",
-    "inputLabel": "Video link",
+    "eyebrow": "视频 → MP3",
+    "title": "多平台 → MP3 Downloader",
+    "subtitle": "粘贴来自 TikTok、Instagram、Facebook、Twitter/X、Vimeo 或 SoundCloud 的链接，提取音频。",
+    "metaDescription": "多平台视频转 MP3 Downloader——TikTok、Instagram、Facebook、Twitter、Vimeo、SoundCloud。粘贴链接即可下载音频。",
+    "back": "所有工具",
+    "inputLabel": "视频链接",
     "inputPlaceholder": "https://www.tiktok.com/@user/video/...",
-    "detected": "detected",
+    "detected": "已识别",
     "idLabel": "ID",
-    "invalidLink": "Enter a valid link from a supported platform.",
-    "download": "Download MP3",
-    "preparing": "Preparing your link…",
-    "ready": "Your link is ready.",
-    "openPage": "Open download page",
-    "resultTitle": "Ready to download",
-    "resultsBack": "Back to downloader",
-    "thumbnailAlt": "Video thumbnail",
-    "viewSource": "View original",
-    "faqTitle": "Frequently asked questions",
-    "disclaimer": "Toolando.tech does not host or download any media. It only detects the platform and the public video ID and hands off to an external service or your browser. Only download content you have the rights to.",
-    "externalNote": "Download happens on an external service or in your browser. Toolando.tech only captured the public platform and video ID. Please respect copyright and each platform's terms of service.",
+    "invalidLink": "请输入来自支持平台的有效链接。",
+    "download": "下载 MP3",
+    "preparing": "正在准备你的链接…",
+    "ready": "你的链接已就绪。",
+    "openPage": "打开下载页面",
+    "resultTitle": "可以下载",
+    "resultsBack": "返回下载器",
+    "thumbnailAlt": "视频缩略图",
+    "viewSource": "查看原视频",
+    "faqTitle": "常见问题",
+    "disclaimer": "Toolando.tech 不托管也不下载任何媒体。它仅识别平台和公开视频 ID，然后交由外部服务或你的浏览器处理。请仅下载你有权使用的内容。",
+    "externalNote": "下载在外部服务或你的浏览器中进行。Toolando.tech 仅捕获公开的平台和视频 ID。请尊重版权及各平台的服务条款。",
     "faq": [
       {
         "q": "Which platforms are supported?",
@@ -339,18 +589,320 @@
         "a": "Only download content you own or have permission to use. Downloading copyrighted material without permission may violate the platform's terms of service and copyright law."
       }
     ],
-    "platformDisabled": "Downloading from {platform} is temporarily unavailable — {platform} actively blocks downloaders, so we've paused it until our own converter is ready. All other platforms still work."
+    "platformDisabled": "从 {platform} 下载暂时不可用——{platform} 会主动拦截下载器，因此我们已暂停该功能，直至自研转换器就绪。其他平台仍可正常使用。"
+  },
+  "pages": {
+    "contact": {
+      "eyebrow": "联系方式",
+      "title": "联系表",
+      "intro": "有疑问、合作想法或想要报告问题吗？填写表格——我会尽快回复。",
+      "name": "名称",
+      "namePlaceholder": "你的名字",
+      "email": "电子邮件",
+      "emailPlaceholder": "您的电子邮件地址",
+      "message": "留言",
+      "messagePlaceholder": "描述您的问题或疑问...",
+      "submit": "发送消息",
+      "sent": "谢谢！您的消息已在您的电子邮件应用程序中准备好。",
+      "subject": "Toolando.tech 询价"
+    },
+    "about": {
+      "eyebrow": "关于我",
+      "title": "大家好，我是 Szymon — Toolando 的创建者",
+      "intro": "Toolando.tech 是我自己构建的项目。从想法，到代码，再到你现在正在阅读的内容——这一切都来自于一双手。我希望每个人都可以完成简单的任务，例如转换文件或快速在线工具，无需安装软件，也没有不必要的复杂性。",
+      "whyTitle": "为什么创建 Toolando",
+      "whyP1": "我每天都与计算机打交道，我多次看到人们在那些应该花点时间的任务上浪费了多少时间——更改文件格式、从录音中提取音频，或者迫使你寻找一些充满广告和陷阱的随机网站的快速操作。",
+      "whyP2": "Toolando 的创建是为了将这些工具收集在一个干净且安全的地方。我关心的是服务是否快速、可读且对用户诚实——没有任何技巧，也没有隐藏的陷阱。",
+      "howTitle": "Toolando 的工作原理",
+      "howIntro": "该服务提供两种在线工具：免费和付费。",
+      "howFreeTerm": "免费工具",
+      "howFreeDesc": "所有人都可以使用，无需帐户。这些是日常、最常用的功能，我希望向所有人开放。",
+      "howPremiumTerm": "高级工具",
+      "howPremiumDesc": "更高级的功能或更高的限制有助于维护和发展项目。溢价收入直接用于服务器、开发和新工具。",
+      "howOutro": "无论哪种变体，我都遵循相同的规则：上传的文件仅用于执行转换，并且不会由我存储。",
+      "outsideTitle": "除了 Toolando 我还做什么",
+      "outsideP1": "我提供 IT 服务——帮助个人和公司解决日常硬件和软件问题。",
+      "outsideList": [
+        "维修和修理笔记本电脑和电脑，",
+        "IT服务和技术支持，",
+        "构建网络工具和应用程序。"
+      ],
+      "outsideP2": "维修和与用户合作的经验直接转化为我设计 Toolando 的方式——简单、切中要点，并考虑到真正的需求。",
+      "contactTitle": "联系方式",
+      "contactP1": "有疑问、对新工具有想法，或者想要报告问题吗？写信给我——我很乐意回复。",
+      "emailLabel": "电子邮件：",
+      "methodologyTitle": "我如何测试转化并编写指南",
+      "methodologyP1": "Toolando.tech 上的每个指南和格式配置文件均基于真实的转换测试，而不是复制粘贴的规范。我上传示例文件，比较输出大小和质量，并记下哪些设置效果最好。",
+      "methodologyList": [
+        "我使用不同大小（小、中、大）的文件测试转换器。",
+        "对于音频/视频，我会比较比特率、持续时间和播放兼容性。",
+        "对于图像，我检查文件大小、视觉质量和透明度。",
+        "当格式或平台要求发生变化时，指南也会更新。"
+      ],
+      "methodologyP2": "如果您发现指南中存在错误或转换器无法按描述工作，请发送电子邮件至 badyltech@outlook.com — 更正对每个人都有帮助。",
+      "updatedLabel": "页面上次更新",
+      "updatedDate": "2026 年 7 月"
+    },
+    "editorial": {
+      "eyebrow": "编辑",
+      "title": "Toolando.tech 编辑标准",
+      "intro": "Toolando.tech 不只是转换器——还有指南、格式百科和对比文章。下文说明内容如何创作、信息来源，以及何时更新。",
+      "whoTitle": "内容由谁创作",
+      "whoP1": "每一篇指南、格式简介和对比文章都由我亲自撰写——Szymon Badyl，Toolando.tech 的创建者。我不使用内容农场，也不使用未经核验的 AI 生成文案。",
+      "whoP2": "每篇文章都基于对我自有文件的转换测试。若某处与描述不符，我会同时修正文章和工具。",
+      "standardsTitle": "编辑原则",
+      "standardsIntro": "每篇新指南都遵循相同规则：",
+      "standardsList": [
+        "I test the converter with files of different sizes before publishing.",
+        "I give concrete scenarios (email, shop, social media), not vague generalities.",
+        "I distinguish compression from format conversion and lossy from lossless.",
+        "I write about tool limits — when not to convert online.",
+        "I update the date and content when platform or format requirements change."
+      ],
+      "sourcesTitle": "来源与诚实",
+      "sourcesP1": "我会对照 IANA、FFmpeg 和厂商文档核验格式规格（MIME、编解码器）。对比基于我自己的大小与质量测量，而非营销表格。",
+      "sourcesP2": "外部链接仅在确实有帮助时出现（例如官方文档）。我不推广付费竞品工具。",
+      "updatesTitle": "更新与勘误",
+      "updatesP1": "发现错误、过时信息或有主题建议？请发邮件至 badyltech@outlook.com——修正会写入文章并标注更新日期。",
+      "updatedLabel": "最后更新",
+      "updatedDate": "2026 年 8 月",
+      "fullGuideCta": "编辑标准完整指南"
+    },
+    "howItWorks": {
+      "eyebrow": "它是如何运作的？",
+      "title": "Toolando 中的工具如何工作",
+      "intro": "Toolando.tech 是一组可以直接在浏览器中运行的在线工具，无需安装任何内容。下面我将解释文件处理的工作原理、如何保护安全性以及免费工具与高级工具的区别。",
+      "browserTitle": "在浏览器中运行的工具",
+      "browserP": "您打开一个工具，选择一个文件或输入数据，然后您就可以在页面上得到结果。您不需要帐户即可使用免费工具，也不需要在计算机上安装任何内容。",
+      "filesTitle": "文件是如何处理的",
+      "filesIntro": "根据工具的类型，文件以两种方式处理：",
+      "filesLocalTerm": "在浏览器本地",
+      "filesLocalDesc": "有些操作直接在您的设备上运行，文件永远不会离开您的计算机。",
+      "filesServerTerm": "暂时在服务器上",
+      "filesServerDesc": "当工具需要更多计算能力时，仅在转换期间在服务器上处理文件，然后将其删除。",
+      "filesOutro": "在这些情况下，我都不会存储您的文件或将它们用于任何其他目的。",
+      "securityTitle": "安全性",
+      "securityP": "安全和隐私是我的首要任务。与站点的连接是加密的，文件仅用于执行您请求的任务。",
+      "securityList": [
+        "操作完成后上传的文件不会被存储，",
+        "我不会出售或分享您的数据，",
+        "您无需提供个人数据即可使用免费工具。"
+      ],
+      "tiersTitle": "免费工具与高级工具",
+      "tiersP": "Toolando 提供两种变体的工具，但两者的安全原理是相同的。",
+      "tiersFreeTerm": "免费",
+      "tiersFreeDesc": "所有人都可以使用，无需帐户。非常适合日常快速任务。",
+      "tiersPremiumTerm": "高级版",
+      "tiersPremiumDesc": "更高级的功能和更高的限制或更大的文件。 Premium 支持服务器维护和新工具的开发。"
+    },
+    "faq": {
+      "eyebrow": "常见问题解答",
+      "title": "常见问题",
+      "intro": "我在这里收集了最常出现的问题的答案。如果您找不到所需内容，请写信给我 badyltech@outlook.com。",
+      "items": [
+        {
+          "q": "Toolando的工具是免费的吗？",
+          "a": "大多数工具都是完全免费的，无需创建帐户即可使用。高级版本提供了一些更高级的功能和更高的限制，支持维护和开发服务。"
+        },
+        {
+          "q": "免费工具与高级工具有何不同？",
+          "a": "免费工具涵盖日常、最常见的任务，并向所有人开放。高级版提供更高级的功能和更大的文件或限制。两种变体的文件安全原理是相同的。"
+        },
+        {
+          "q": "我的文件安全吗？",
+          "a": "是的。上传的文件仅用于执行转换，我不会存储。某些操作在浏览器本地运行，如果文件发送到服务器，则仅在任务期间对其进行处理，然后将其删除。"
+        },
+        {
+          "q": "Toolando 是否存储我上传的文件？",
+          "a": "不会。操作完成后我不会保存您的文件，也不会将它们用于任何其他目的。"
+        },
+        {
+          "q": "你们如何保护我的隐私？",
+          "a": "我仅根据 GDPR 处理技术和统计数据（例如 IP 地址、浏览器类型、系统、网站流量）。您可以在隐私政策中找到详细信息。您无需提供个人数据即可使用免费工具。"
+        },
+        {
+          "q": "我必须创建一个帐户才能使用这些工具吗？",
+          "a": "不需要。免费工具无需帐户即可使用。可能只有高级功能才需要帐户。"
+        },
+        {
+          "q": "网站上有广告吗？",
+          "a": "是的，该服务可能会显示 Google AdSense 广告，这有助于让每个人都可以使用免费工具。"
+        },
+        {
+          "q": "在线工具如何工作？",
+          "a": "您在浏览器中打开一个工具，选择一个文件或输入数据，然后立即获得结果 - 无需安装任何内容。我已经在“它是如何工作的？”中描述了更多细节。页。"
+        },
+        {
+          "q": "我怎样才能取得联系？",
+          "a": "写信给 badyltech@outlook.com 或使用联系表。我尽快回复。"
+        }
+      ]
+    },
+    "privacy": {
+      "eyebrow": "隐私政策",
+      "title": "Toolando.tech 隐私政策",
+      "intro": "Toolando.tech 提供免费与 Premium 两种在线工具服务。我重视用户隐私，并依据适用法规（包括 GDPR）处理数据。",
+      "lastUpdated": "最后更新：2026 年 7 月 23 日",
+      "s1Title": "1. 数据控制者",
+      "s1Pre": "数据控制者为 Szymon Badyl，Toolando.tech 的所有者（波兰）。有关隐私事宜，可通过以下方式联系我：",
+      "s1Address": "通信地址：badyltech@outlook.com",
+      "s2Title": "2. 处理哪些数据",
+      "s2Intro": "服务会处理在使用网站时自动收集的技术与统计数据：",
+      "s2List": [
+        "IP address,",
+        "browser type and version,",
+        "the device's operating system,",
+        "traffic and usage data (e.g. pages visited)."
+      ],
+      "s2Outro": "若你通过电子邮件或表单联系我，我还会处理你提供的邮箱地址及消息内容。",
+      "s3Title": "3. 上传到工具的文件",
+      "s3P": "你上传到工具用于转换或其他操作的文件不会被存储。它们仅用于执行你请求的任务，完成后即删除。我不会将其用于任何其他目的。",
+      "s4Title": "4. Cookie",
+      "s4Intro": "服务使用以下类型的 Cookie：",
+      "s4TechTerm": "技术性",
+      "s4TechDesc": "网站正常运行及记住设置（例如语言）所必需。",
+      "s4AnalyticsTerm": "分析性",
+      "s4AnalyticsDesc": "统计工具（例如 Google Analytics），以汇总匿名方式帮助了解网站使用情况。",
+      "s4AdsTerm": "广告性",
+      "s4AdsDesc": "Google AdSense，可能使用 Cookie 展示和个性化广告。",
+      "s4Outro": "你可随时在浏览器设置中管理或禁用 Cookie。首次访问时，我们会显示 Cookie 同意横幅，你可接受全部 Cookie 或仅保留必要 Cookie。",
+      "s4ThirdPartyTitle": "第三方提供商",
+      "s4ThirdPartyP": "服务使用 Google 服务（Analytics、AdSense）。Google 可能根据其隐私政策收集数据。更多信息：https://policies.google.com/technologies/partner-sites",
+      "s5Title": "5. 免费与 Premium 工具",
+      "s5P": "Toolando 提供免费工具（无需账户）和 Premium 工具。两种版本的数据处理与文件保护规则相同——仅在功能范围和限制上有所不同。",
+      "s6Title": "6. 数据处理目的",
+      "s6Intro": "我仅在以下目的处理数据：",
+      "s6List": [
+        "ensuring the correct and secure operation of the service,",
+        "statistical traffic analysis and improving the tools,",
+        "displaying ads,",
+        "handling contact with the user."
+      ],
+      "s7Title": "7. 你的权利",
+      "s7Intro": "你有权：",
+      "s7List": [
+        "access your data,",
+        "rectify or delete it,",
+        "restrict processing,",
+        "lodge a complaint with the relevant data protection authority."
+      ],
+      "s8Title": "8. 政策变更",
+      "s8P": "隐私政策可能因服务或法律变更而更新。当前版本始终可在本页查看。"
+    },
+    "terms": {
+      "eyebrow": "服务条款",
+      "title": "Toolando.tech 服务条款",
+      "intro": "以下条款规定使用 Toolando.tech 服务的规则。使用本服务即表示你接受这些规则。",
+      "s1Title": "1. 一般规定",
+      "s1P": "Toolando.tech 的所有者为 Szymon。服务提供文件转换、内容生成及 AI 驱动的在线工具。",
+      "s2Title": "2. 免费与 Premium 工具",
+      "s2Intro": "Toolando 提供两种工具版本：",
+      "s2FreeTerm": "免费",
+      "s2FreeDesc": "面向所有人，无需创建账户。",
+      "s2PremiumTerm": "Premium",
+      "s2PremiumDesc": "功能更高级，限制更宽松。",
+      "s2Outro": "有关 Premium 功能付款或订阅的规则，会在服务的相应位置说明。",
+      "s3Title": "3. 自行承担风险使用",
+      "s3P1": "你自行承担使用服务的风险。我尽力确保工具正常运行，但服务按「现状」提供，不保证可用性、结果正确性或适用于特定目的。",
+      "s3P2": "服务所有者不对以下情况负责：",
+      "s3List": [
+        "the consequences of using the tools' results,",
+        "lost profits,",
+        "damage resulting from interruptions in the service."
+      ],
+      "s3Outro": "用户承诺依法使用服务，并对所处理的内容和文件负责。",
+      "s4Title": "4. 用户文件",
+      "s4P": "上传到工具的文件不会被存储。它们仅用于执行相应操作，完成后即删除。",
+      "s5Title": "5. 广告",
+      "s5P": "服务可能展示 Google AdSense 广告。广告有助于维持免费工具并支持项目发展。广告提供商可能依据隐私政策使用 Cookie。",
+      "s6Title": "6. 版权",
+      "s6P": "Toolando.tech 名称、图形元素及服务内容受法律保护。未经所有者同意，禁止复制和使用。",
+      "s7Title": "7. 联系",
+      "s7Pre": "有关本条款的事宜，可通过以下方式联系我：",
+      "s8Title": "8. 条款变更",
+      "s8P": "条款可能因服务或法律变更而更新。当前版本始终可在本页查看。"
+    },
+    "guides": {
+      "eyebrow": "指南",
+      "title": "文件转换指南与教程",
+      "intro": "关于文件格式、转换和最佳实践的实用文章。每篇指南说明何时以及为何转换文件，以及如何使用 Toolando.tech 安全完成转换。",
+      "articles": [
+        {
+          "title": "MP3 vs WAV — when to convert audio?",
+          "body": "MP3 is a lossy compression format — files are small but some audio data is lost. WAV preserves full quality but files can be 10 times larger. Convert MP3 → WAV when you need a file for editing in a DAW (e.g. Audacity, FL Studio) or when a platform requires a lossless format. Convert WAV → MP3 when you want to email a recording, publish a podcast, or save disk space. Toolando.tech supports both conversions — just upload your file and download the result."
+        },
+        {
+          "title": "How to convert PDF to JPG for print and the web",
+          "body": "PDF is a document format that preserves page layout. Sometimes you need individual pages as images — for a website, a PowerPoint presentation, or printing a single page. The PDF → JPG converter in Toolando.tech renders each PDF page as a separate high-resolution JPG image. PDF files are never stored — they are deleted immediately after conversion. If you need transparency, consider PDF → PNG instead."
+        },
+        {
+          "title": "WebP and AVIF — modern image formats for websites",
+          "body": "JPG and PNG have dominated the web for years, but newer formats offer better compression. WebP (Google) produces files 25–35% smaller than JPG at the same visual quality and is supported by all modern browsers. AVIF goes even further — files can be half the size of WebP. Convert JPG → WebP or PNG → AVIF in Toolando.tech to speed up your website. Remember that older browsers (e.g. IE) don't support these formats — keep a JPG version as a fallback."
+        },
+        {
+          "title": "Extracting audio from video — the legal alternative",
+          "body": "Sometimes you have a video file (e.g. a camera recording, presentation) and only need the audio track. Toolando.tech lets you extract audio from MP4, MOV, AVI, MKV and other video formats, saving it as MP3, WAV, FLAC, or AAC. This is a legal operation on your own file — unlike downloading music from YouTube or TikTok, which Toolando.tech deliberately does not offer. Upload your video file, choose an audio format, and download the result."
+        },
+        {
+          "title": "JSON, CSV, and XML — converting data between formats",
+          "body": "Developers and data analysts often work with different data formats. JSON is the standard in APIs and configs. CSV and TSV are used for importing into Excel and spreadsheets. XML is used in older enterprise systems and RSS. Toolando.tech converts between these formats while preserving data structure. For example: JSON → CSV lets you open an API response in Excel, and CSV → JSON prepares data for sending to a REST API."
+        },
+        {
+          "title": "File security in online tools",
+          "body": "Uploading files to online tools naturally raises privacy concerns. At Toolando.tech, files are used solely to perform the operation you request — conversion, compression, or preview. After the job completes, files are deleted from the server. Some tools (e.g. the universal file opener) run entirely in your browser — in that case the file never leaves your computer. The connection to the site is encrypted (HTTPS). We never sell or share your files with third parties."
+        },
+        {
+          "title": "Lossy vs lossless compression — a simple guide",
+          "body": "Lossy formats (MP3, JPG, AAC, H.264) discard some data to shrink file size. Lossless formats (FLAC, PNG, WAV, ZIP) keep all data but produce larger files. Rule of thumb: only convert from lossy to lossless when you must — you won't recover lost quality. Converting lossy to lossy (e.g. JPG → JPG at lower quality) should happen once; each re-conversion degrades the result. In Toolando.tech's format encyclopedia, every format is labeled with its compression type."
+        },
+        {
+          "title": "HEIC from iPhone — how to open and convert to JPG",
+          "body": "Apple saves photos in HEIC (HEIF) by default — smaller than JPG at the same quality. The catch: Windows without an extension, older apps, and many services don't support HEIC. Solution: convert HEIC → JPG or HEIC → PNG in Toolando.tech before emailing photos, uploading to a site, or printing. You can also set iPhone to \"Most Compatible\" (JPG) in Settings, but online conversion works on photos already saved as HEIC."
+        },
+        {
+          "title": "PDF vs DOCX — which format when?",
+          "body": "DOCX (Word) is for editing text — you change content, styles, and headings. PDF locks page layout — it looks identical on every device, ideal for invoices, contracts, and CVs sent to recruiters. Convert DOCX → PDF before sending a document \"for reading only.\" Convert PDF → DOCX only when you need to edit text — layout may break. For archiving and print, always choose PDF."
+        },
+        {
+          "title": "Video for social media — MP4, resolution, and bitrate",
+          "body": "Instagram, TikTok, YouTube, and Facebook prefer MP4 with H.264 video and AAC audio. Before publishing, convert MOV, AVI, or MKV to MP4 to avoid upload errors. 1080p (1920×1080) is enough for most platforms; 4K only when the platform supports it. Higher bitrate means better quality but a larger file. Toolando.tech converts video with no install — see the format encyclopedia for details on MP4, WebM, and MOV."
+        }
+      ]
+    }
   },
   "hub": {
-    "convertersTitle": "File converters",
-    "convertersDesc": "Audio, video, images, documents, data, fonts and archives — plus compress, merge PDF and background removal.",
-    "calculatorsTitle": "Calculators & converters",
-    "calculatorsDesc": "Currency, VAT, dates, timezones, units and bitrate.",
-    "developerTitle": "Developer & text tools",
-    "developerDesc": "Passwords, QR, Base64, UUID, hash, colors, timestamp and character counter.",
-    "specialTools": "File tools",
-    "browseConverters": "Browse converters",
-    "browseCalculators": "Browse calculators",
-    "browseDeveloper": "Browse tools"
+    "convertersTitle": "文件转换器",
+    "convertersDesc": "音频、视频、图片、文档、数据、字体和压缩包——还有压缩、合并 PDF 和背景移除。",
+    "calculatorsTitle": "计算器与转换器",
+    "calculatorsDesc": "货币、增值税、日期、时区、单位和比特率。",
+    "developerTitle": "开发者与文本工具",
+    "developerDesc": "密码、QR、Base64、UUID、哈希、颜色、时间戳和字符计数。",
+    "specialTools": "文件工具",
+    "browseConverters": "浏览转换器",
+    "browseCalculators": "浏览计算器",
+    "browseDeveloper": "浏览工具"
+  },
+  "specialFields": {
+    "splitMode": "拆分模式",
+    "everyPage": "每页单独拆分",
+    "pageRange": "选定范围",
+    "pagesHint": "页码（例如 1-3,5）",
+    "rotation": "旋转角度",
+    "width": "宽度（px）",
+    "height": "高度（px，可选）",
+    "watermark": "水印文字",
+    "trimStart": "起始（秒或 MM:SS）",
+    "trimEnd": "结束（秒或 MM:SS）",
+    "pageNumberPos": "页码位置",
+    "bottom": "页面底部",
+    "top": "页面顶部"
+  },
+  "accountRecent": {
+    "title": "最近使用",
+    "subtitle": "历史记录保存在本浏览器的本地存储中。"
+  },
+  "favorites": {
+    "add": "添加到收藏",
+    "remove": "已收藏"
   }
 }

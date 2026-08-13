@@ -3,10 +3,122 @@
     "title": "Toolando.tech — あなたのオンラインツールを一か所に",
     "description": "コンバーター、ジェネレーター、PDF・AI ツール——すべてを一つの洗練されたエコシステムに。速く、シンプルに。"
   },
+  "socialProof": {
+    "toolsCount": "1つのエコシステムに {count}+ ツール",
+    "usesToday": "本日 {uses} 回利用"
+  },
+  "recent": {
+    "title": "最近使ったツール",
+    "subtitle": "最後に使ったツール — このブラウザーにローカル保存されています。",
+    "favoritesHint": "ツールページで星を付けると、ここに固定表示されます。"
+  },
+  "premiumUpsell": {
+    "title": "Premium で AI ツールを解放",
+    "description": "テキスト生成、要約、画像、翻訳、チャット — 1 つのサブスクリプション、リクエストごとの追加料金なし。",
+    "point1": "すべての AI ツールを無制限に",
+    "point2": "混雑時も優先処理",
+    "point3": "独立した開発を支援",
+    "cta": "Premium にする",
+    "compare": "プランを見る",
+    "trialHint": "ログインして無料プレビュー — いつでもアップグレードできます。"
+  },
+  "privacyBadge": {
+    "title": "プライバシー優先",
+    "local": "ブラウザー内でローカル処理"
+  },
+  "onboarding": {
+    "skip": "閉じる",
+    "next": "次へ",
+    "start": "ツールを見る",
+    "learnMore": "Toolando の仕組み",
+    "step1": {
+      "title": "変換、計算、開く — 1 つのエコシステム",
+      "body": "ファイル、計算機、開発者向けユーティリティ、AI 向けの 287+ ツール — ツールを選ぶか Ctrl+K で検索。"
+    },
+    "step2": {
+      "title": "大切なときのプライバシー",
+      "body": "多くのユーティリティはブラウザー内で動作します。サーバー変換は処理完了後にファイルを削除します。"
+    },
+    "step3": {
+      "title": "Premium の AI ツール",
+      "body": "コンバーターは無料でお試しください。AI 機能はシンプルな月額プラン — ペイウォールの前に料金を確認できます。"
+    }
+  },
+  "exitIntent": {
+    "title": "お帰りの前に…",
+    "body": "別のコンバーターが必要ですか？287+ ツールを検索するか、次に作ってほしいものを教えてください。",
+    "browse": "ツールを見る",
+    "request": "ツールをリクエスト",
+    "close": "閉じる"
+  },
+  "nextSteps": {
+    "title": "次のステップ",
+    "aiSummarizeTitle": "AI でドキュメントを要約",
+    "aiSummarizeBody": "数秒で PDF または DOCX の要約を生成（Premium または 1 日 1 回）。"
+  },
+  "newsletter": {
+    "title": "新ツール & Premium の更新",
+    "subtitle": "メールアドレスを残してください — 主要な機能についてお知らせします（スパムなし）。",
+    "placeholder": "name@example.com",
+    "cta": "登録する",
+    "thanks": "ありがとうございます！返信が必要な場合はお問い合わせで確認してください。",
+    "confirmViaContact": "お問い合わせフォームで登録を完了 →",
+    "error": "登録に失敗しました。もう一度お試しください。"
+  },
+  "toolRequest": {
+    "title": "コンバーターが見つかりませんか？",
+    "body": "新しいツールや形式を提案してください — ユーザーの要望を優先します。",
+    "cta": "ツールを提案"
+  },
+  "comparison": {
+    "title": "Toolando vs クラウドアップロードツール",
+    "subtitle": "一般的なアップロード型コンバーターから乗り換える理由。",
+    "feature": "機能",
+    "competitor": "一般的なクラウドコンバーター",
+    "rows": {
+      "privacy": "ローカルプレビュー & プライバシーオプション",
+      "offline": "オフラインでも動作（PWA ユーティリティ）",
+      "ai": "統合 AI ワークフロー",
+      "free": "無料の基本コンバーター",
+      "limits": "基本機能に恣意的な日次アップロード上限なし"
+    }
+  },
+  "premiumPage": {
+    "title": "Toolando Premium",
+    "subtitle": "AI ツール、明確な料金、いつでも解約可能。",
+    "freeTitle": "無料",
+    "freeDesc": "すべてのファイルコンバーター、計算機、ほとんどのユーティリティ。",
+    "premiumTitle": "Premium",
+    "premiumDesc": "フル AI スイート — テキスト、画像、要約、翻訳、チャット。",
+    "supporterTitle": "サポーター",
+    "supporterDesc": "Premium + 広告なし体験（近日公開）。",
+    "cta": "Premium を始める",
+    "signIn": "ログインして登録",
+    "faqTitle": "料金 FAQ",
+    "faq1q": "クレジットはどう機能しますか？",
+    "faq1a": "リクエストごとのクレジットはありません — Premium は AI を無制限に使える定額月額サブスクリプションです。",
+    "faq2q": "支払い前に試せますか？",
+    "faq2a": "無料アカウントを作成し、コンバーターを試してから、AI が必要になったらアップグレードしてください。",
+    "faq3q": "ファイルのプライバシーは？",
+    "faq3a": "サーバー上のファイルは処理後に削除されます。ブラウザーツールはデータをアップロードしません。"
+  },
+  "privacyPage": {
+    "title": "設計段階からのプライバシー優先",
+    "subtitle": "Toolando がファイルとデータを保護する方法。",
+    "localTitle": "ブラウザーローカルツール",
+    "localBody": "ユーティリティ、ユニバーサルオープナー、多くの計算機は完全にブラウザー内で動作 — データはデバイスから出ません。",
+    "serverTitle": "サーバー変換",
+    "serverBody": "変換のためにアップロードしたファイルは、その処理のみに使用され、完了後に削除されます。HTTPS エンドツーエンド。",
+    "aiTitle": "AI ツール",
+    "aiBody": "Premium AI は送信したコンテンツのみをモデルプロバイダーに送ります — 販売や広告には使用しません。",
+    "badge": "プライバシー第一",
+    "readPolicy": "プライバシーポリシー全文を読む"
+  },
   "nav": {
     "aiTools": "AI ツール",
     "tools": "コンバーター",
-    "categories": "Converter categories",
+    "categories": "コンバーターカテゴリー",
+    "formats": "フォーマット",
     "about": "概要",
     "contact": "お問い合わせ",
     "cta": "はじめる",
@@ -15,11 +127,18 @@
     "allTools": "すべてのツール",
     "signIn": "ログイン",
     "account": "マイアカウント",
-    "downloader": "MP3 Downloader",
+    "downloader": "MP3ダウンローダー",
+    "aboutMe": "自己紹介",
+    "privacy": "プライバシーポリシー",
+    "terms": "利用規約",
     "onlineTools": "計算機",
     "converters": "コンバーター",
     "calculators": "計算機",
-    "developer": "開発者ツール"
+    "developer": "開発者ツール",
+    "premium": "Premium",
+    "guides": "ガイド",
+    "faq": "FAQ",
+    "more": "その他"
   },
   "hero": {
     "badge": "新しいオンラインツールのエコシステム",
@@ -27,7 +146,68 @@
     "titleHighlight": "一か所に",
     "subtitle": "コンバーター、ジェネレーター、PDF、AI——すべてを一つのエコシステムに。",
     "browse": "ツールを見る",
-    "learnMore": "詳しく見る"
+    "learnMore": "詳しく見る",
+    "convertCta": "今すぐファイルを変換する"
+  },
+  "search": {
+    "placeholder": "検索コンバータ (例: mp3 wav、pdf jpg)…",
+    "noResults": "コンバーターが見つかりませんでした。別のクエリを試してください。"
+  },
+  "share": {
+    "label": "共有",
+    "copy": "リンクをコピー",
+    "copied": "コピーしました"
+  },
+  "feedback": {
+    "question": "この記事は役に立ちましたか?",
+    "yes": "はい",
+    "no": "いいえ",
+    "thanks": "フィードバックをいただきありがとうございます。"
+  },
+  "recommender": {
+    "title": "どの形式を選択すればよいですか?",
+    "subtitle": "2 つの簡単な質問に答えると、最適な形式をお勧めします。",
+    "step1": "どのような種類のファイルがありますか?",
+    "step2": "それを使って何をしたいですか?",
+    "categories": {
+      "image": "画像・写真",
+      "audio": "オーディオ/音楽",
+      "video": "ビデオ",
+      "document": "書類"
+    },
+    "goals": {
+      "image_web": "ウェブサイトで公開する",
+      "image_email": "電子メールで送信する",
+      "image_print": "印刷する",
+      "image_iphone": "iPhone からの写真 (HEIC)",
+      "audio_listen": "携帯電話またはプレーヤーで聴く",
+      "audio_edit": "DAWで編集する",
+      "audio_archive": "品質を損なうことなくアーカイブする",
+      "video_social": "ソーシャルメディアに投稿する",
+      "video_web": "ウェブサイトに埋め込む",
+      "video_audio": "音声のみを抽出する",
+      "document_share": "閲覧用に送信（編集なし）",
+      "document_edit": "テキストを編集する"
+    },
+    "resultTitle": "推奨フォーマット:",
+    "readFormat": "フォーマットガイド",
+    "openConverter": "オープンコンバータ",
+    "back": "戻る",
+    "tryAgain": "やり直す",
+    "reasons": {
+      "webp-web": "WebP は、同じ品質の JPG よりも 25 ～ 35% 小さく、高速な Web サイトに最適です。",
+      "jpg-email": "JPG は汎用的で小さいため、電子メールの添付ファイルに最適です。",
+      "png-print": "PNG はロスレスでシャープなエッジを備えているため、グラフィックスや短期間の印刷に適しています。",
+      "heic-jpg": "Windows およびほとんどのサービスとの互換性を確保するには、iPhone の HEIC を JPG に変換する必要があります。",
+      "mp3-listen": "MP3 はあらゆるデバイスで動作し、ファイルのサイズを小さく保ちます。",
+      "wav-edit": "WAV はロスレスです。品質を損なうことなく編集するのに最適です。",
+      "flac-archive": "FLAC は品質を損なうことなく圧縮できるため、音楽のアーカイブに最適です。",
+      "mp4-social": "MP4 (H.264 + AAC) は、Instagram、TikTok、YouTube の標準です。",
+      "webm-web": "WebM は、ブラウザーでの HTML5 ビデオ用に最適化されています。",
+      "mp3-audio": "ビデオからオーディオを MP3 として抽出し、ポッドキャストや着信音として使用します。",
+      "pdf-share": "PDF はレイアウトをロックします - 受信者には意図したものが正確に表示されます。",
+      "docx-edit": "DOCX を使用すると、Word でテキスト、スタイル、見出しを編集できます。"
+    }
   },
   "opener": {
     "title": "ユニバーサルファイルオープナー",
@@ -37,26 +217,26 @@
     "kindVideo": "動画",
     "kindAudio": "音声",
     "kindDocs": "PDF・コード・データ",
-    "readError": "Couldn't read the file contents.",
-    "dropAny": "Drag any file here or click to choose",
-    "dropHint": "Images, video, audio, PDF, documents, code, data — any format. Files are opened locally in your browser and never uploaded anywhere.",
-    "noConverter": "We don't have a converter for this format yet — but you can preview and download the file below.",
-    "convertTo": "Convert to another format",
-    "optionOne": "option",
-    "optionMany": "options",
-    "downloadedOk": "Done! The file has been downloaded.",
-    "download": "Download",
-    "close": "Close",
-    "emptyFile": "(empty file)",
-    "textTruncated": "Preview truncated to the first 200,000 characters. Download the file to see everything.",
-    "binaryPreview": "Binary preview (first bytes in hexadecimal)",
+    "readError": "ファイルの内容を読み取れませんでした。",
+    "dropAny": "ファイルをここにドラッグするか、クリックして選択",
+    "dropHint": "画像、動画、音声、PDF、ドキュメント、コード、データ — あらゆる形式。ファイルはブラウザー内でローカルに開かれ、どこにもアップロードされません。",
+    "noConverter": "この形式のコンバーターはまだありません — ただし、下でファイルのプレビューとダウンロードができます。",
+    "convertTo": "別の形式に変換",
+    "optionOne": "個のオプション",
+    "optionMany": "個のオプション",
+    "downloadedOk": "完了！ファイルをダウンロードしました。",
+    "download": "ダウンロード",
+    "close": "閉じる",
+    "emptyFile": "（空のファイル）",
+    "textTruncated": "プレビューは最初の 200,000 文字に切り詰められています。ファイル全体を見るにはダウンロードしてください。",
+    "binaryPreview": "バイナリプレビュー（先頭バイトを 16 進数で表示）",
     "kinds": {
-      "image": "Image",
-      "video": "Video",
-      "audio": "Audio",
-      "pdf": "PDF document",
-      "text": "Text / code",
-      "binary": "Binary file"
+      "image": "画像",
+      "video": "動画",
+      "audio": "音声",
+      "pdf": "PDF ドキュメント",
+      "text": "テキスト / コード",
+      "binary": "バイナリファイル"
     }
   },
   "ai": {
@@ -76,6 +256,41 @@
     "title": "ツールのカテゴリー",
     "subtitle": "カテゴリーを選んで、利用可能なすべてのコンバーターを表示します。",
     "browse": "見る"
+  },
+  "toolsIndex": {
+    "intro": "各ツールはサーバー上のファイルを変換します。ソフトウェアをインストールする必要はありません。どの形式を選択すればよいかわからない場合は、フォーマット百科事典または変換ガイドを参照してください。",
+    "formatsLink": "フォーマット百科事典",
+    "guidesLink": "変換ガイド"
+  },
+  "knowledgeHub": {
+    "title": "フォーマットと変換の知識",
+    "subtitle": "ただ変換するだけではなく、FLAC より MP3、JPG より WebP、DOCX より PDF を選択するタイミングを理解してください。私たちのガイドは、品質の低下や不必要な変換を回避するのに役立ちます。",
+    "formatsTitle": "ファイル形式百科事典",
+    "formatsDesc": "40 以上のフォーマット: オーディオ、ビデオ、画像、ドキュメント、データ、アーカイブ。長所、短所、互換性、代替品との比較。",
+    "formatsCta": "フォーマットを参照する",
+    "guidesTitle": "変換ガイド",
+    "guidesDesc": "実用的な記事: オーディオ品質、画像圧縮、ソーシャル メディア用ビデオ、PDF と DOCX、オンライン ファイルの安全性。",
+    "guidesCta": "ガイドを読む",
+    "comparisonsTitle": "フォーマットの比較",
+    "comparisonsDesc": "MP3 と FLAC、JPG と WebP、PDF と DOCX を直接比較し、明確な判断を下します。",
+    "comparisonsCta": "比較を参照する",
+    "glossaryTitle": "用語集",
+    "glossaryDesc": "ビットレート、コーデック、非可逆圧縮、MIME — わかりやすい定義。",
+    "glossaryCta": "用語集を開く"
+  },
+  "editorial": {
+    "title": "Toolando.tech を運営している人",
+    "body": "Szymon です — すべてのツールを自分で設計、開発、テストしています。ガイドはコピペされた仕様ではなく、実際の変換に基づいています。変換前にファイルを理解してほしいし、サービスが誠実であり続けてほしいと思っています。",
+    "aboutCta": "自己紹介 & 方法論",
+    "howCta": "ツールの仕組み",
+    "editorialCta": "編集基準",
+    "guidesCta": "ガイド"
+  },
+  "featuredGuides": {
+    "title": "注目のガイド",
+    "subtitle": "ファイル形式、セキュリティ、変換に関する実践的な記事 — SEO テンプレートではなく、実際のテストに基づいて執筆。",
+    "readArticle": "ガイドを読む",
+    "allGuides": "すべてのガイド"
   },
   "why": {
     "title": "なぜ Toolando.tech なのか？",
@@ -99,10 +314,26 @@
     "support": "応援する",
     "privacy": "プライバシーポリシー",
     "terms": "利用規約",
-    "rights": "© 2026 Toolando.tech. All rights reserved.",
-    "aboutMe": "About me",
-    "howItWorks": "How it works",
-    "faq": "FAQ"
+    "rights": "© 2026 Toolando.tech. 無断転載を禁じます。",
+    "aboutMe": "自己紹介",
+    "howItWorks": "仕組み",
+    "faq": "FAQ",
+    "guides": "ガイド",
+    "editorial": "編集",
+    "formats": "ファイル形式",
+    "comparisons": "比較",
+    "glossary": "用語集",
+    "rss": "RSS フィード",
+    "cookieSettings": "Cookie 設定",
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "messenger": "Messenger",
+    "youtube": "YouTube",
+    "emailAria": "メールアプリを開いてお問い合わせ"
+  },
+  "ad": {
+    "label": "広告",
+    "placeholder": "広告スペース"
   },
   "language": {
     "label": "言語"
@@ -111,6 +342,10 @@
     "eyebrow": "プロジェクトを応援",
     "title": "Toolando.tech の運営を支えてください",
     "subtitle": "Toolando.tech は無料で開発・提供されています。時間の節約になったら、開発の支援をご検討ください。",
+    "body1": "私は、コード、サーバー、法的コンテンツ、ガイドなどのサービスを自分で保守しています。あなたのサポートは、ホスティング (Vercel)、ファイル処理、ドメイン、新しいツールの開発をカバーするのに役立ちます。",
+    "body2": "サポートは完全に任意です。無料のツールには支払いは必要ありません。プレミアムは、拡張機能を備えた別個のオプションのサブスクリプションです。詳細については、サービス利用規約を参照してください。",
+    "body3": "質問、ツールのアイデア、またはバグが見つかりましたか? badyltech@outlook.com にメールするか、お問い合わせフォームをご利用ください。これも貴重なサポートです。",
+    "legalNote": "特に明記されていない限り、寄付によってプレミアム アクセスが付与されたり、サービス契約が成立したりすることはありません。規約とプライバシーポリシーは寄付に関係なく適用されます。",
     "coffee": "コーヒーをおごる",
     "donate": "寄付する",
     "back": "ホームに戻る",
@@ -155,32 +390,47 @@
     "merge": "ファイルを結合",
     "result": "結果",
     "notFound": "ツールが見つかりません",
-    "convertFailed": "Conversion failed.",
-    "connectionError": "Couldn't connect to the server. Please try again.",
-    "unavailable": "This converter is currently unavailable",
-    "dropClick": "Drag a file here or click to choose",
-    "dropClickMulti": "Drag files here or click to choose",
-    "supportedFormat": "Supported format",
-    "supported": "Supported",
-    "maxSize": "max. 500 MB",
-    "removeFile": "Remove file",
-    "convertDone": "Conversion complete",
-    "downloadNamed": "Download",
-    "convertAnother": "Convert another file",
-    "uploadingFile": "Uploading file…",
-    "uploadingFiles": "Uploading files…",
-    "uploading": "Uploading…",
-    "converting": "Converting…",
-    "convertToPrefix": "Convert to",
-    "needTwoPdf": "Add at least two PDF files to merge.",
-    "operationFailed": "The operation failed.",
-    "compressionQuality": "Compression quality",
-    "qualityHint": "Lower value = smaller file. Higher value = better quality.",
-    "done": "Done",
-    "less": "less",
-    "resultPreview": "Result preview",
-    "startOver": "Start over",
-    "processingLong": "Processing (this may take a few seconds)…"
+    "convertFailed": "変換に失敗しました。",
+    "connectionError": "サーバーに接続できませんでした。もう一度お試しください。",
+    "unavailable": "このコンバーターは現在利用できません",
+    "dropClick": "ファイルをここにドラッグするか、クリックして選択",
+    "dropClickMulti": "ファイルをここにドラッグするか、クリックして選択",
+    "supportedFormat": "対応形式",
+    "supported": "対応",
+    "maxSize": "最大 500 MB",
+    "removeFile": "ファイルを削除",
+    "convertDone": "変換完了",
+    "downloadNamed": "ダウンロード",
+    "convertAnother": "別のファイルを変換",
+    "uploadingFile": "ファイルをアップロード中…",
+    "uploadingFiles": "ファイルをアップロード中…",
+    "uploading": "アップロード中…",
+    "converting": "変換中…",
+    "convertToPrefix": "変換先",
+    "needTwoPdf": "結合するには PDF ファイルを 2 つ以上追加してください。",
+    "operationFailed": "操作に失敗しました。",
+    "compressionQuality": "圧縮品質",
+    "qualityHint": "値が低い = ファイルが小さい。値が高い = 品質が良い。",
+    "done": "完了",
+    "less": "削減",
+    "resultPreview": "結果プレビュー",
+    "startOver": "最初からやり直す",
+    "processingLong": "処理中（数秒かかる場合があります）…",
+    "howToTitle": "ファイルを変換する方法 — ステップバイステップ",
+    "aboutSource": "ソースフォーマットについて",
+    "aboutTarget": "対象フォーマットについて",
+    "whenToUseTitle": "このコンバータを使用する場合",
+    "faqTitle": "よくある質問",
+    "qualityTitle": "変換品質 — 知っておくべきこと",
+    "tipsTitle": "実践的なヒント",
+    "readFormatGuide": "フルフォーマットガイド"
+  },
+  "cookieConsent": {
+    "title": "Cookie",
+    "description": "Toolando.tech は必要な Cookie を使用し、同意いただいた場合に分析（Google Analytics）および広告（Google AdSense）Cookie を使用します。すべて受け入れるか、必要なもののみに制限できます。",
+    "acceptAll": "すべて受け入れる",
+    "necessaryOnly": "必要なもののみ",
+    "privacyLink": "プライバシーポリシー"
   },
   "aiTool": {
     "prompt": "あなたのテキスト",
@@ -208,44 +458,44 @@
     "thinking": "考え中…",
     "aiError": "AI の応答を取得できませんでした。もう一度お試しください。",
     "emptyChat": "質問を入力して会話を始めましょう。",
-    "generateFailed": "Couldn't generate a response.",
-    "noContent": "The AI service returned no content. Check that AI Gateway is active (requires a payment card).",
-    "connectionError": "A connection error occurred. Please try again.",
-    "dropDoc": "Drag a document here or click to choose",
-    "removeFile": "Remove file",
-    "translatePlaceholder": "Paste the text to translate…",
-    "copyPlaceholder": "Describe what the AI should write, e.g. \"a product description for an eco-friendly water bottle\"…",
-    "toneLabel": "Tone",
-    "targetLangLabel": "Target language",
-    "translate": "Translate",
-    "summarizeDoc": "Summarize document",
-    "generateText": "Generate text",
-    "imageFailed": "Couldn't generate the image.",
-    "imagePromptPlaceholder": "Describe the image, e.g. \"a futuristic city at sunset, watercolor style\"…",
-    "ratioSquare": "Square 1:1",
-    "ratioLandscape": "Landscape 3:2",
-    "ratioPortrait": "Portrait 2:3",
-    "generatingImage": "Generating image (this may take several seconds)…",
-    "generateImage": "Generate image",
-    "generatedImageAlt": "Generated image",
-    "downloadImage": "Download image",
+    "generateFailed": "応答を生成できませんでした。",
+    "noContent": "AI サービスからコンテンツが返されませんでした。AI Gateway が有効か確認してください（支払いカードが必要です）。",
+    "connectionError": "接続エラーが発生しました。もう一度お試しください。",
+    "dropDoc": "ドキュメントをここにドラッグするか、クリックして選択",
+    "removeFile": "ファイルを削除",
+    "translatePlaceholder": "翻訳するテキストを貼り付け…",
+    "copyPlaceholder": "AI に書いてほしい内容を説明してください。例：「エコフレンドリーな水筒の商品説明」…",
+    "toneLabel": "トーン",
+    "targetLangLabel": "対象言語",
+    "translate": "翻訳",
+    "summarizeDoc": "ドキュメントを要約",
+    "generateText": "テキストを生成",
+    "imageFailed": "画像を生成できませんでした。",
+    "imagePromptPlaceholder": "画像を説明してください。例：「水彩風の夕暮れの未来都市」…",
+    "ratioSquare": "正方形 1:1",
+    "ratioLandscape": "横向き 3:2",
+    "ratioPortrait": "縦向き 2:3",
+    "generatingImage": "画像を生成中（数秒かかる場合があります）…",
+    "generateImage": "画像を生成",
+    "generatedImageAlt": "生成された画像",
+    "downloadImage": "画像をダウンロード",
     "tones": {
-      "professional": "professional",
-      "friendly": "friendly",
-      "energetic": "energetic",
-      "formal": "formal",
-      "playful": "playful",
-      "persuasive": "persuasive"
+      "professional": "プロフェッショナル",
+      "friendly": "フレンドリー",
+      "energetic": "エネルギッシュ",
+      "formal": "フォーマル",
+      "playful": "遊び心のある",
+      "persuasive": "説得力のある"
     },
     "languages": {
-      "english": "English",
-      "german": "German",
-      "spanish": "Spanish",
-      "french": "French",
-      "italian": "Italian",
-      "ukrainian": "Ukrainian",
-      "polish": "Polish",
-      "japanese": "Japanese"
+      "english": "英語",
+      "german": "ドイツ語",
+      "spanish": "スペイン語",
+      "french": "フランス語",
+      "italian": "イタリア語",
+      "ukrainian": "ウクライナ語",
+      "polish": "ポーランド語",
+      "japanese": "日本語"
     }
   },
   "category": {
@@ -259,64 +509,64 @@
     "notFound": "カテゴリーが見つかりません"
   },
   "paywall": {
-    "unlockTitle": "Unlock \"{tool}\" with Premium",
-    "description": "Unlock all Toolando.tech AI tools — text and image generation, translation, summaries and the assistant — in one subscription.",
-    "feature1": "Unlimited access to all AI tools",
-    "feature2": "Text generator, image generator and translator",
-    "feature3": "Priority request processing",
-    "goPremium": "Upgrade to Premium",
-    "redirecting": "Redirecting…",
-    "signInToBuy": "Sign in to buy Premium",
-    "noAccount": "Don't have an account?",
-    "signUp": "Sign up"
+    "unlockTitle": "Premium で「{tool}」を解放",
+    "description": "Toolando.tech のすべての AI ツール — テキスト・画像生成、翻訳、要約、アシスタント — を 1 つのサブスクリプションで。",
+    "feature1": "すべての AI ツールに無制限アクセス",
+    "feature2": "テキスト生成、画像生成、翻訳",
+    "feature3": "リクエストの優先処理",
+    "goPremium": "Premium にアップグレード",
+    "redirecting": "リダイレクト中…",
+    "signInToBuy": "ログインして Premium を購入",
+    "noAccount": "アカウントをお持ちでないですか？",
+    "signUp": "新規登録"
   },
   "account": {
-    "backToHome": "Back to homepage",
-    "yourAccount": "Your account",
+    "backToHome": "ホームページに戻る",
+    "yourAccount": "マイアカウント",
     "premiumBadge": "Premium",
-    "freeBadge": "Free account",
-    "premiumActiveTitle": "You have active Premium",
-    "premiumActiveDesc": "Thank you for your support! You have full access to all AI tools without limits.",
-    "manageSubscription": "Manage subscription",
-    "manageOpening": "Opening…",
-    "managePortalError": "Could not open the portal.",
-    "manageGenericError": "An error occurred.",
-    "goPremiumTitle": "Go Premium",
-    "feature1": "Unlimited access to AI tools",
-    "feature2": "Background removal, image and text generation",
-    "feature3": "Priority processing",
-    "buyPremium": "Buy Premium",
-    "buyRedirecting": "Redirecting…",
-    "refreshHint": "Paid but Premium still inactive? Refresh your status:",
-    "refreshStatus": "Refresh Premium status",
-    "refreshChecking": "Checking...",
-    "refreshNoSub": "No active subscription found. If you just paid, wait a moment and try again.",
-    "refreshFailed": "Could not refresh status.",
-    "refreshNetworkError": "A network error occurred. Please try again.",
-    "signOut": "Sign out"
+    "freeBadge": "無料アカウント",
+    "premiumActiveTitle": "Premium が有効です",
+    "premiumActiveDesc": "ご支援ありがとうございます！すべての AI ツールに無制限でアクセスできます。",
+    "manageSubscription": "サブスクリプションを管理",
+    "manageOpening": "開いています…",
+    "managePortalError": "ポータルを開けませんでした。",
+    "manageGenericError": "エラーが発生しました。",
+    "goPremiumTitle": "Premium にする",
+    "feature1": "AI ツールに無制限アクセス",
+    "feature2": "背景除去、画像・テキスト生成",
+    "feature3": "優先処理",
+    "buyPremium": "Premium を購入",
+    "buyRedirecting": "リダイレクト中…",
+    "refreshHint": "支払い済みなのに Premium が無効？ステータスを更新：",
+    "refreshStatus": "Premium ステータスを更新",
+    "refreshChecking": "確認中...",
+    "refreshNoSub": "有効なサブスクリプションが見つかりません。支払い直後の場合は、少々お待ちのうえ再試行してください。",
+    "refreshFailed": "ステータスを更新できませんでした。",
+    "refreshNetworkError": "ネットワークエラーが発生しました。もう一度お試しください。",
+    "signOut": "ログアウト"
   },
   "downloader": {
-    "eyebrow": "Video → MP3",
-    "title": "Multi-Platform → MP3 Downloader",
-    "subtitle": "Paste a link from TikTok, Instagram, Facebook, Twitter/X, Vimeo or SoundCloud and grab the audio.",
-    "metaDescription": "Multi-platform Video to MP3 Downloader — TikTok, Instagram, Facebook, Twitter, Vimeo, SoundCloud. Paste a link and download the audio.",
-    "back": "All tools",
-    "inputLabel": "Video link",
+    "eyebrow": "動画 → MP3",
+    "title": "マルチプラットフォーム → MP3ダウンローダー",
+    "subtitle": "TikTok、Instagram、Facebook、Twitter/X、Vimeo、SoundCloud のリンクを貼り付けて音声を取得。",
+    "metaDescription": "マルチプラットフォーム Video to MP3 Downloader — TikTok、Instagram、Facebook、Twitter、Vimeo、SoundCloud。リンクを貼り付けて音声をダウンロード。",
+    "back": "すべてのツール",
+    "inputLabel": "動画リンク",
     "inputPlaceholder": "https://www.tiktok.com/@user/video/...",
-    "detected": "detected",
+    "detected": "検出済み",
     "idLabel": "ID",
-    "invalidLink": "Enter a valid link from a supported platform.",
-    "download": "Download MP3",
-    "preparing": "Preparing your link…",
-    "ready": "Your link is ready.",
-    "openPage": "Open download page",
-    "resultTitle": "Ready to download",
-    "resultsBack": "Back to downloader",
-    "thumbnailAlt": "Video thumbnail",
-    "viewSource": "View original",
-    "faqTitle": "Frequently asked questions",
-    "disclaimer": "Toolando.tech does not host or download any media. It only detects the platform and the public video ID and hands off to an external service or your browser. Only download content you have the rights to.",
-    "externalNote": "Download happens on an external service or in your browser. Toolando.tech only captured the public platform and video ID. Please respect copyright and each platform's terms of service.",
+    "invalidLink": "対応プラットフォームの有効なリンクを入力してください。",
+    "download": "MP3 をダウンロード",
+    "preparing": "リンクを準備中…",
+    "ready": "リンクの準備ができました。",
+    "openPage": "ダウンロードページを開く",
+    "resultTitle": "ダウンロード準備完了",
+    "resultsBack": "ダウンローダーに戻る",
+    "thumbnailAlt": "動画サムネイル",
+    "viewSource": "元を表示",
+    "faqTitle": "よくある質問",
+    "disclaimer": "Toolando.tech はメディアをホストまたはダウンロードしません。プラットフォームと公開動画 ID のみを検出し、外部サービスまたはブラウザーに引き渡します。権利を持つコンテンツのみダウンロードしてください。",
+    "externalNote": "ダウンロードは外部サービスまたはブラウザーで行われます。Toolando.tech は公開プラットフォームと動画 ID のみを取得しました。著作権と各プラットフォームの利用規約を尊重してください。",
     "faq": [
       {
         "q": "Which platforms are supported?",
@@ -339,18 +589,320 @@
         "a": "Only download content you own or have permission to use. Downloading copyrighted material without permission may violate the platform's terms of service and copyright law."
       }
     ],
-    "platformDisabled": "Downloading from {platform} is temporarily unavailable — {platform} actively blocks downloaders, so we've paused it until our own converter is ready. All other platforms still work."
+    "platformDisabled": "{platform} からのダウンロードは一時的に利用できません — {platform} がダウンローダーを積極的にブロックしているため、独自コンバーターの準備ができるまで一時停止しています。他のプラットフォームは引き続き利用できます。"
+  },
+  "pages": {
+    "contact": {
+      "eyebrow": "接触",
+      "title": "お問い合わせフォーム",
+      "intro": "質問がある場合、パートナーシップに関するアイデアがある場合、または問題を報告したい場合は、フォームにご記入ください — できるだけ早く返信させていただきます。",
+      "name": "名前",
+      "namePlaceholder": "あなたの名前",
+      "email": "電子メール",
+      "emailPlaceholder": "あなたのメールアドレス",
+      "message": "メッセージ",
+      "messagePlaceholder": "問題や質問について説明してください...",
+      "submit": "メッセージを送信する",
+      "sent": "ありがとう！メッセージはメール アプリで準備されました。",
+      "subject": "Toolando.techからのお問い合わせ"
+    },
+    "about": {
+      "eyebrow": "私について",
+      "title": "こんにちは、私は Szymon — Toolando の作成者です",
+      "intro": "Toolando.tech は私が自分で構築する独自のプロジェクトです。アイデアからコード、そして今読んでいるコンテンツに至るまで、すべては 1 組の手から生まれます。ファイルの変換や簡単なオンライン ツールなどの単純なタスクを、ソフトウェアをインストールしたり、不必要に複雑にしたりすることなく、誰でも利用できるようにしたいと考えています。",
+      "whyTitle": "Toolandoが作られた理由",
+      "whyP1": "私は毎日コンピューターを使って仕事をしていますが、ファイル形式の変更、録音からの音声の抽出、または広告や罠が満載のランダムなサイトを探さなければならない簡単な操作など、一瞬かかるはずのタスクで人々がどれだけの時間を失っているかを何度も見てきました。",
+      "whyP2": "Toolando は、そのようなツールを 1 つの明確で安全な場所に集めるために作成されました。私が重視しているのは、サービスが高速で読みやすく、トリックや隠れた落とし穴がなく、ユーザーに対して誠実であることです。",
+      "howTitle": "Toolandoの仕組み",
+      "howIntro": "このサービスは、無料とプレミアムの 2 つのバージョンでオンライン ツールを提供します。",
+      "howFreeTerm": "無料ツール",
+      "howFreeDesc": "アカウントなしで誰でも利用できます。これらは、日常的に最もよく使用される機能であり、すべての人に公開しておきたいと考えています。",
+      "howPremiumTerm": "プレミアムツール",
+      "howPremiumDesc": "プロジェクトの維持と成長に役立つ、より高度な機能やより高い制限。プレミアム収益はサーバー、開発、新しいツールに直接当てられます。",
+      "howOutro": "バリエーションに関係なく、私は同じルールに従います。アップロードされたファイルは変換を実行するためにのみ使用され、私によって保存されるものではありません。",
+      "outsideTitle": "Toolando を超えて私がやること",
+      "outsideP1": "私は IT サービスを提供し、日常的なハードウェアやソフトウェアの問題を解決する個人や企業を支援しています。",
+      "outsideList": [
+        "ラップトップやコンピューターの整備と修理、",
+        "ITサービスとテクニカルサポート、",
+        "Web ツールとアプリケーションを構築します。"
+      ],
+      "outsideP2": "修理やユーザーとの協力から得た経験は、シンプルかつ要点を絞った、実際のニーズを念頭に置いた Toolando の設計に直接反映されています。",
+      "contactTitle": "接触",
+      "contactP1": "質問がある場合、新しいツールのアイデアがある場合、または問題を報告したい場合は、手紙を書いてください — 喜んで返信させていただきます。",
+      "emailLabel": "電子メール:",
+      "methodologyTitle": "変換をテストしてガイドを作成する方法",
+      "methodologyP1": "Toolando.tech のすべてのガイドとフォーマット プロファイルは、コピー＆ペーストされた仕様ではなく、実際の変換テストに基づいています。サンプル ファイルをアップロードし、出力サイズと品質を比較し、どの設定が最適であるかを記録します。",
+      "methodologyList": [
+        "さまざまなサイズ (小、中、大) のファイルを使用してコンバーターをテストします。",
+        "オーディオ/ビデオについては、ビットレート、再生時間、再生互換性を比較します。",
+        "画像の場合は、ファイル サイズ、見た目の品質、透明度をチェックします。",
+        "ガイドは、形式やプラットフォーム要件が変更されると更新されます。"
+      ],
+      "methodologyP2": "説明どおりに動作しないガイドまたはコンバーターに誤りを見つけた場合は、badyltech@outlook.com に電子メールを送信してください。修正はすべての人に役立ちます。",
+      "updatedLabel": "ページの最終更新日",
+      "updatedDate": "2026年7月"
+    },
+    "editorial": {
+      "eyebrow": "編集",
+      "title": "Toolando.tech 編集基準",
+      "intro": "Toolando.tech はコンバーターだけではありません — ガイド、形式百科事典、比較も提供しています。以下で、コンテンツの作成方法、情報の出所、更新タイミングを説明します。",
+      "whoTitle": "コンテンツの作成者",
+      "whoP1": "すべてのガイド、形式プロファイル、比較記事は私、Toolando.tech の創設者 Szymon Badyl が執筆しています。コンテンツファームや未検証の AI 生成テキストは使用しません。",
+      "whoP2": "すべての記事は自分のファイルでの変換テストに基づいています。説明どおりに動作しない場合は、テキストとツールの両方を修正します。",
+      "standardsTitle": "編集原則",
+      "standardsIntro": "新しいガイドには同じルールを適用します：",
+      "standardsList": [
+        "I test the converter with files of different sizes before publishing.",
+        "I give concrete scenarios (email, shop, social media), not vague generalities.",
+        "I distinguish compression from format conversion and lossy from lossless.",
+        "I write about tool limits — when not to convert online.",
+        "I update the date and content when platform or format requirements change."
+      ],
+      "sourcesTitle": "情報源と誠実さ",
+      "sourcesP1": "形式仕様（MIME、コーデック）は IANA、FFmpeg、ベンダードキュメントで検証します。比較はマーケティング表ではなく、自分のサイズ・品質測定に基づきます。",
+      "sourcesP2": "外部リンクは本当に役立つ場合（例：公式ドキュメント）のみ掲載します。有料の競合ツールは宣伝しません。",
+      "updatesTitle": "更新と修正",
+      "updatesP1": "誤り、古い情報、トピックの提案がありますか？badyltech@outlook.com までメール — 修正は更新日付付きで記事に反映されます。",
+      "updatedLabel": "最終更新",
+      "updatedDate": "2026 年 8 月",
+      "fullGuideCta": "編集基準の完全ガイド"
+    },
+    "howItWorks": {
+      "eyebrow": "仕組みは?",
+      "title": "Toolando のツールの仕組み",
+      "intro": "Toolando.tech は、インストールする必要がなく、ブラウザーで直接実行できる一連のオンライン ツールです。以下では、ファイル処理の仕組み、セキュリティへの配慮、無料ツールとプレミアムツールの違いについて説明します。",
+      "browserTitle": "ブラウザ上で動作するツール",
+      "browserP": "ツールを開いてファイルを選択するかデータを入力すると、結果がページ上に表示されます。無料ツールを使用するのにアカウントは必要ありません。また、コンピューターに何もインストールする必要もありません。",
+      "filesTitle": "ファイルの処理方法",
+      "filesIntro": "ツールの種類に応じて、ファイルは次の 2 つの方法で処理されます。",
+      "filesLocalTerm": "ブラウザでローカルに",
+      "filesLocalDesc": "一部の操作はデバイス上で直接実行され、ファイルがコンピューターから離れることはありません。",
+      "filesServerTerm": "一時的にサーバー上にある",
+      "filesServerDesc": "ツールがより多くの計算能力を必要とする場合、ファイルは変換中のみサーバー上で処理され、その後削除されます。",
+      "filesOutro": "これらのいずれの場合も、私はあなたのファイルを保存したり、他の目的に使用したりしません。",
+      "securityTitle": "安全",
+      "securityP": "私にとってセキュリティとプライバシーは最優先事項です。サイトへの接続は暗号化され、ファイルは要求されたタスクを実行するためにのみ使用されます。",
+      "securityList": [
+        "アップロードされたファイルは操作の完了後に保存されません。",
+        "私はあなたのデータを販売したり共有したりしません。",
+        "無料ツールを使用するために個人データを提供する必要はありません。"
+      ],
+      "tiersTitle": "無料ツールとプレミアムツール",
+      "tiersP": "Toolando は 2 つのバージョンのツールを提供しますが、セキュリティ原則はどちらも同じです。",
+      "tiersFreeTerm": "無料",
+      "tiersFreeDesc": "アカウントなしで誰でも利用できます。毎日の素早いタスクに最適です。",
+      "tiersPremiumTerm": "プレミアム",
+      "tiersPremiumDesc": "より高度な機能、より高い制限、またはより大きなファイル。プレミアムでは、サーバーのメンテナンスや新しいツールの開発をサポートします。"
+    },
+    "faq": {
+      "eyebrow": "よくある質問",
+      "title": "よくある質問",
+      "intro": "よく寄せられる質問に対する回答をここにまとめました。探しているものが見つからない場合は、badyltech@outlook.com までご連絡ください。",
+      "items": [
+        {
+          "q": "Toolando のツールは無料ですか?",
+          "a": "ほとんどのツールは完全に無料で、アカウントを作成しなくても利用できます。プレミアム バリアントでは、より高度な機能とより高い制限が利用可能で、サービスの維持と開発をサポートします。"
+        },
+        {
+          "q": "無料ツールとプレミアムツールはどう違うのですか?",
+          "a": "無料ツールは日常の最も一般的なタスクをカバーしており、誰でも利用できます。 Premium では、より高度な機能と、より大きなファイルまたは制限が提供されます。ファイル セキュリティの原則はどちらのバージョンでも同じです。"
+        },
+        {
+          "q": "私のファイルは安全ですか?",
+          "a": "はい。アップロードされたファイルは変換を実行するためにのみ使用され、私によって保存されるものではありません。一部の操作はブラウザーでローカルに実行され、ファイルがサーバーに送信されると、そのファイルはタスクの期間中のみ処理され、その後削除されます。"
+        },
+        {
+          "q": "Toolando はアップロードしたファイルを保存しますか?",
+          "a": "いいえ、操作の完了後にファイルを保存したり、他の目的に使用したりしません。"
+        },
+        {
+          "q": "私のプライバシーをどのように保護しますか?",
+          "a": "私は、GDPR に従って、技術的および統計的なデータ (IP アドレス、ブラウザの種類、システム、サイトのトラフィックなど) のみを処理します。詳細についてはプライバシー ポリシーをご覧ください。無料ツールを使用するために個人データを提供する必要はありません。"
+        },
+        {
+          "q": "ツールを使用するにはアカウントを作成する必要がありますか?",
+          "a": "いいえ。無料ツールはアカウントなしで使用できます。アカウントはプレミアム機能を使用する場合にのみ必要となる場合があります。"
+        },
+        {
+          "q": "サイトに広告はありますか?",
+          "a": "はい、サービスでは Google AdSense 広告が表示される場合があります。これにより、誰でも無料ツールを利用できるようになります。"
+        },
+        {
+          "q": "オンラインツールはどのように機能しますか?",
+          "a": "ブラウザでツールを開き、ファイルを選択するかデータを入力すると、何もインストールすることなく、すぐに結果が得られます。 「仕組みはどうなっているのか？」について詳しく説明しました。ページ。"
+        },
+        {
+          "q": "どうすれば連絡できますか?",
+          "a": "badyltech@outlook.com にメールするか、お問い合わせフォームをご利用ください。できるだけ早く返信します。"
+        }
+      ]
+    },
+    "privacy": {
+      "eyebrow": "プライバシーポリシー",
+      "title": "Toolando.tech プライバシーポリシー",
+      "intro": "Toolando.tech は無料版と Premium 版のオンラインツールを提供するサービスです。ユーザーのプライバシーを重視し、GDPR を含む適用される規制に従ってデータを処理します。",
+      "lastUpdated": "最終更新：2026 年 7 月 23 日",
+      "s1Title": "1. データ管理者",
+      "s1Pre": "データ管理者は Toolando.tech（ポーランド）の所有者 Szymon Badyl です。プライバシーに関するお問い合わせは以下まで：",
+      "s1Address": "連絡先：badyltech@outlook.com",
+      "s2Title": "2. 処理されるデータ",
+      "s2Intro": "本サービスは、サイト利用中に自動的に収集される技術的・統計的データを処理します：",
+      "s2List": [
+        "IP address,",
+        "browser type and version,",
+        "the device's operating system,",
+        "traffic and usage data (e.g. pages visited)."
+      ],
+      "s2Outro": "メールまたはフォームでお問い合わせいただいた場合、提供されたメールアドレスとメッセージ内容も処理します。",
+      "s3Title": "3. ツールにアップロードされたファイル",
+      "s3P": "変換やその他の操作のためにツールにアップロードしたファイルは保存しません。リクエストされたタスクの実行のみに使用し、完了後に削除します。他の目的には使用しません。",
+      "s4Title": "4. Cookie",
+      "s4Intro": "本サービスは以下の種類の Cookie を使用します：",
+      "s4TechTerm": "技術的",
+      "s4TechDesc": "サイトの正常な動作と設定（例：言語）の記憶に必要。",
+      "s4AnalyticsTerm": "分析",
+      "s4AnalyticsDesc": "サイトの利用状況を集計・匿名形式で把握するための統計ツール（例：Google Analytics）。",
+      "s4AdsTerm": "広告",
+      "s4AdsDesc": "広告の表示とパーソナライズに Cookie を使用する可能性がある Google AdSense。",
+      "s4Outro": "ブラウザー設定でいつでも Cookie を管理または無効にできます。初回訪問時に Cookie 同意バナーを表示し、すべての Cookie を受け入れるか、必須のみに制限できます。",
+      "s4ThirdPartyTitle": "第三者プロバイダー",
+      "s4ThirdPartyP": "本サービスは Google サービス（Analytics、AdSense）を使用します。Google は独自のプライバシーポリシーに従ってデータを収集する場合があります。詳細：https://policies.google.com/technologies/partner-sites",
+      "s5Title": "5. 無料ツールと Premium ツール",
+      "s5P": "Toolando は無料ツール（アカウント不要）と Premium ツールを提供します。データ処理とファイル保護のルールは両方で同じ — 機能範囲と制限のみが異なります。",
+      "s6Title": "6. データ処理の目的",
+      "s6Intro": "データは以下の目的のみで処理します：",
+      "s6List": [
+        "ensuring the correct and secure operation of the service,",
+        "statistical traffic analysis and improving the tools,",
+        "displaying ads,",
+        "handling contact with the user."
+      ],
+      "s7Title": "7. あなたの権利",
+      "s7Intro": "以下の権利があります：",
+      "s7List": [
+        "access your data,",
+        "rectify or delete it,",
+        "restrict processing,",
+        "lodge a complaint with the relevant data protection authority."
+      ],
+      "s8Title": "8. ポリシーの変更",
+      "s8P": "サービスまたは法律の変更を反映するため、プライバシーポリシーを更新する場合があります。最新版は常にこのページでご確認いただけます。"
+    },
+    "terms": {
+      "eyebrow": "利用規約",
+      "title": "Toolando.tech 利用規約",
+      "intro": "以下の規約は Toolando.tech サービスの利用ルールを定めています。サービスを利用することは、これらのルールに同意したことを意味します。",
+      "s1Title": "1. 一般規定",
+      "s1P": "Toolando.tech の所有者は Szymon です。本サービスはファイル変換、コンテンツ生成、AI ツールのオンラインツールを提供します。",
+      "s2Title": "2. 無料ツールと Premium ツール",
+      "s2Intro": "Toolando は 2 つのバリエーションでツールを提供します：",
+      "s2FreeTerm": "無料",
+      "s2FreeDesc": "アカウント作成不要で、誰でも利用可能。",
+      "s2PremiumTerm": "Premium",
+      "s2PremiumDesc": "より高度な機能と高い制限。",
+      "s2Outro": "Premium 機能の支払いまたはサブスクリプションに関するルールは、サービス内の該当箇所に記載されています。",
+      "s3Title": "3. 自己責任での利用",
+      "s3P1": "サービスは自己責任でご利用ください。ツールが正しく動作するよう最善を尽くしますが、サービスは「現状のまま」提供され、可用性、結果の正確性、特定目的への適合性について保証しません。",
+      "s3P2": "サービス所有者は以下について責任を負いません：",
+      "s3List": [
+        "the consequences of using the tools' results,",
+        "lost profits,",
+        "damage resulting from interruptions in the service."
+      ],
+      "s3Outro": "ユーザーは法令に従ってサービスを利用し、処理するコンテンツとファイルについて責任を負います。",
+      "s4Title": "4. ユーザーファイル",
+      "s4P": "ツールにアップロードされたファイルは保存されません。指定された操作の実行のみに使用され、完了後に削除されます。",
+      "s5Title": "5. 広告",
+      "s5P": "本サービスは Google AdSense 広告を表示する場合があります。広告は無料ツールの維持とプロジェクトの開発に役立ちます。広告提供者はプライバシーポリシーに従って Cookie を使用する場合があります。",
+      "s6Title": "6. 著作権",
+      "s6P": "Toolando.tech の名称、グラフィック要素、サービスのコンテンツは法的に保護されています。所有者の同意なく複製・使用することは禁止されています。",
+      "s7Title": "7. お問い合わせ",
+      "s7Pre": "本規約に関するお問い合わせは以下まで：",
+      "s8Title": "8. 規約の変更",
+      "s8P": "サービスまたは法律の変更を反映するため、規約を更新する場合があります。最新版は常にこのページでご確認いただけます。"
+    },
+    "guides": {
+      "eyebrow": "ガイド",
+      "title": "ファイル変換ガイドとチュートリアル",
+      "intro": "ファイル形式、変換、ベストプラクティスに関する実践的な記事。各ガイドでは、いつ・なぜファイルを変換するか、Toolando.tech で安全に行う方法を説明します。",
+      "articles": [
+        {
+          "title": "MP3 vs WAV — when to convert audio?",
+          "body": "MP3 is a lossy compression format — files are small but some audio data is lost. WAV preserves full quality but files can be 10 times larger. Convert MP3 → WAV when you need a file for editing in a DAW (e.g. Audacity, FL Studio) or when a platform requires a lossless format. Convert WAV → MP3 when you want to email a recording, publish a podcast, or save disk space. Toolando.tech supports both conversions — just upload your file and download the result."
+        },
+        {
+          "title": "How to convert PDF to JPG for print and the web",
+          "body": "PDF is a document format that preserves page layout. Sometimes you need individual pages as images — for a website, a PowerPoint presentation, or printing a single page. The PDF → JPG converter in Toolando.tech renders each PDF page as a separate high-resolution JPG image. PDF files are never stored — they are deleted immediately after conversion. If you need transparency, consider PDF → PNG instead."
+        },
+        {
+          "title": "WebP and AVIF — modern image formats for websites",
+          "body": "JPG and PNG have dominated the web for years, but newer formats offer better compression. WebP (Google) produces files 25–35% smaller than JPG at the same visual quality and is supported by all modern browsers. AVIF goes even further — files can be half the size of WebP. Convert JPG → WebP or PNG → AVIF in Toolando.tech to speed up your website. Remember that older browsers (e.g. IE) don't support these formats — keep a JPG version as a fallback."
+        },
+        {
+          "title": "Extracting audio from video — the legal alternative",
+          "body": "Sometimes you have a video file (e.g. a camera recording, presentation) and only need the audio track. Toolando.tech lets you extract audio from MP4, MOV, AVI, MKV and other video formats, saving it as MP3, WAV, FLAC, or AAC. This is a legal operation on your own file — unlike downloading music from YouTube or TikTok, which Toolando.tech deliberately does not offer. Upload your video file, choose an audio format, and download the result."
+        },
+        {
+          "title": "JSON, CSV, and XML — converting data between formats",
+          "body": "Developers and data analysts often work with different data formats. JSON is the standard in APIs and configs. CSV and TSV are used for importing into Excel and spreadsheets. XML is used in older enterprise systems and RSS. Toolando.tech converts between these formats while preserving data structure. For example: JSON → CSV lets you open an API response in Excel, and CSV → JSON prepares data for sending to a REST API."
+        },
+        {
+          "title": "File security in online tools",
+          "body": "Uploading files to online tools naturally raises privacy concerns. At Toolando.tech, files are used solely to perform the operation you request — conversion, compression, or preview. After the job completes, files are deleted from the server. Some tools (e.g. the universal file opener) run entirely in your browser — in that case the file never leaves your computer. The connection to the site is encrypted (HTTPS). We never sell or share your files with third parties."
+        },
+        {
+          "title": "Lossy vs lossless compression — a simple guide",
+          "body": "Lossy formats (MP3, JPG, AAC, H.264) discard some data to shrink file size. Lossless formats (FLAC, PNG, WAV, ZIP) keep all data but produce larger files. Rule of thumb: only convert from lossy to lossless when you must — you won't recover lost quality. Converting lossy to lossy (e.g. JPG → JPG at lower quality) should happen once; each re-conversion degrades the result. In Toolando.tech's format encyclopedia, every format is labeled with its compression type."
+        },
+        {
+          "title": "HEIC from iPhone — how to open and convert to JPG",
+          "body": "Apple saves photos in HEIC (HEIF) by default — smaller than JPG at the same quality. The catch: Windows without an extension, older apps, and many services don't support HEIC. Solution: convert HEIC → JPG or HEIC → PNG in Toolando.tech before emailing photos, uploading to a site, or printing. You can also set iPhone to \"Most Compatible\" (JPG) in Settings, but online conversion works on photos already saved as HEIC."
+        },
+        {
+          "title": "PDF vs DOCX — which format when?",
+          "body": "DOCX (Word) is for editing text — you change content, styles, and headings. PDF locks page layout — it looks identical on every device, ideal for invoices, contracts, and CVs sent to recruiters. Convert DOCX → PDF before sending a document \"for reading only.\" Convert PDF → DOCX only when you need to edit text — layout may break. For archiving and print, always choose PDF."
+        },
+        {
+          "title": "Video for social media — MP4, resolution, and bitrate",
+          "body": "Instagram, TikTok, YouTube, and Facebook prefer MP4 with H.264 video and AAC audio. Before publishing, convert MOV, AVI, or MKV to MP4 to avoid upload errors. 1080p (1920×1080) is enough for most platforms; 4K only when the platform supports it. Higher bitrate means better quality but a larger file. Toolando.tech converts video with no install — see the format encyclopedia for details on MP4, WebM, and MOV."
+        }
+      ]
+    }
   },
   "hub": {
-    "convertersTitle": "File converters",
-    "convertersDesc": "Audio, video, images, documents, data, fonts and archives — plus compress, merge PDF and background removal.",
-    "calculatorsTitle": "Calculators & converters",
-    "calculatorsDesc": "Currency, VAT, dates, timezones, units and bitrate.",
-    "developerTitle": "Developer & text tools",
-    "developerDesc": "Passwords, QR, Base64, UUID, hash, colors, timestamp and character counter.",
-    "specialTools": "File tools",
-    "browseConverters": "Browse converters",
-    "browseCalculators": "Browse calculators",
-    "browseDeveloper": "Browse tools"
+    "convertersTitle": "ファイルコンバーター",
+    "convertersDesc": "音声、動画、画像、ドキュメント、データ、フォント、アーカイブ — 圧縮、PDF 結合、背景除去も。",
+    "calculatorsTitle": "計算機 & 換算ツール",
+    "calculatorsDesc": "通貨、VAT、日付、タイムゾーン、単位、ビットレート。",
+    "developerTitle": "開発者 & テキストツール",
+    "developerDesc": "パスワード、QR、Base64、UUID、ハッシュ、色、タイムスタンプ、文字カウンター。",
+    "specialTools": "ファイルツール",
+    "browseConverters": "コンバーターを見る",
+    "browseCalculators": "計算機を見る",
+    "browseDeveloper": "ツールを見る"
+  },
+  "specialFields": {
+    "splitMode": "分割モード",
+    "everyPage": "各ページを個別に",
+    "pageRange": "選択範囲",
+    "pagesHint": "ページ（例：1-3,5）",
+    "rotation": "回転角度",
+    "width": "幅（px）",
+    "height": "高さ（px、任意）",
+    "watermark": "透かしテキスト",
+    "trimStart": "開始（秒または MM:SS）",
+    "trimEnd": "終了（秒または MM:SS）",
+    "pageNumberPos": "ページ番号の位置",
+    "bottom": "ページ下部",
+    "top": "ページ上部"
+  },
+  "accountRecent": {
+    "title": "最近使ったツール",
+    "subtitle": "このブラウザーにローカル保存された履歴。"
+  },
+  "favorites": {
+    "add": "お気に入りに追加",
+    "remove": "お気に入り"
   }
 }

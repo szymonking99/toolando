@@ -6,14 +6,17 @@ const NEXT_BY_TOOL: Record<string, string[]> = {
   "jpg-png": ["kompresor-obrazow", "usun-exif", "znak-wodny"],
   "png-jpg": ["kompresor-obrazow", "zmiana-rozmiaru-obrazu"],
   "mp4-mp3": ["kalkulator-bitrate", "wyciszenie-wideo"],
-  "mp4-webm": ["przyciecie-wideo", "wyciszenie-wideo"],
+  "mp4-webm": ["przyciecie-wideo", "kompresja-wideo", "wyciszenie-wideo"],
   "docx-pdf": ["podsumowanie", "pdf-do-tekstu", "laczenie-pdf"],
   "heic-jpg": ["kompresor-obrazow", "usun-exif"],
 }
 
 const NEXT_BY_SPECIAL: Record<string, string[]> = {
   "podzial-pdf": ["laczenie-pdf", "kompresja-pdf", "pdf-do-tekstu"],
-  "laczenie-pdf": ["podzial-pdf", "kompresja-pdf", "obrot-pdf"],
+  "laczenie-pdf": ["podzial-pdf", "kompresja-pdf", "numeracja-pdf"],
+  "kompresja-pdf": ["numeracja-pdf", "podzial-pdf", "pdf-do-tekstu"],
+  "numeracja-pdf": ["laczenie-pdf", "podsumowanie", "kompresja-pdf"],
+  "kompresja-wideo": ["przyciecie-wideo", "wyciszenie-wideo"],
   "pdf-do-tekstu": ["podsumowanie", "generator-tekstu"],
   "kompresor-obrazow": ["usun-exif", "znak-wodny", "zmiana-rozmiaru-obrazu"],
   "zmiana-rozmiaru-obrazu": ["kompresor-obrazow", "znak-wodny"],

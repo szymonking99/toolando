@@ -8,6 +8,7 @@ import { BuyPremiumButton } from "@/components/BuyPremiumButton"
 import { ManageSubscriptionButton } from "@/components/manage-subscription-button"
 import { RefreshPremiumButton } from "@/components/refresh-premium-button"
 import { SignOutButton } from "@/components/sign-out-button"
+import { AccountRecentTools } from "@/components/account-recent-tools"
 import { getDictionary } from "@/lib/i18n/dictionaries"
 import { fallbackLocale } from "@/lib/i18n/config"
 
@@ -116,6 +117,8 @@ export default async function AccountPage() {
           </div>
         )}
       </section>
+
+      <AccountRecentTools />
 
       <div className="flex justify-end">
         <SignOutButton label={t.signOut} />

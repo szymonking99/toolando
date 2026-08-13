@@ -3,6 +3,7 @@ import { normalizeToSupported, fallbackLocale, type Locale } from "./config"
 import en from "@/locales/en.json"
 import { mergeLocalePack, loadLocalePack } from "./locale-packs/merge"
 import { getPagesMeta } from "./locale-packs/pages"
+import { getFooterUiLabels } from "./footer-ui-labels"
 import type { LocalePack } from "./locale-packs/merge"
 
 /** The shape of a translation dictionary, inferred from the English base. */
@@ -102,5 +103,6 @@ export async function getDictionary(locale: Locale): Promise<Dictionary> {
   if (pages) {
     dict = mergeLocalePack(dict, { pages } as LocalePack)
   }
+  dict = mergeLocalePack(dict, { footer: getFooterUiLabels(supported) })
   return dict
 }

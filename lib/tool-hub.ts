@@ -30,9 +30,10 @@ const SPECIALS_BY_CATEGORY: Record<string, SpecialToolConfig["id"][]> = {
     "kompresja-pdf",
     "obrot-pdf",
     "pdf-do-tekstu",
+    "numeracja-pdf",
   ],
-  pdf: ["podzial-pdf", "kompresja-pdf", "obrot-pdf", "pdf-do-tekstu", "laczenie-pdf"],
-  video: ["wyciszenie-wideo", "przyciecie-wideo"],
+  pdf: ["podzial-pdf", "kompresja-pdf", "obrot-pdf", "pdf-do-tekstu", "laczenie-pdf", "numeracja-pdf"],
+  video: ["wyciszenie-wideo", "przyciecie-wideo", "kompresja-wideo"],
 }
 
 export const CALCULATOR_CATEGORIES: UtilityCategory[] = [
@@ -77,7 +78,7 @@ export const utilityBrowseGroups: UtilityBrowseGroup[] = [
   {
     id: "finance",
     hub: "calculators",
-    utilityIds: ["przelicznik-walut", "kalkulator-vat", "kalkulator-kredytu"],
+    utilityIds: ["przelicznik-walut", "kalkulator-vat", "kalkulator-kredytu", "kalkulator-b2b"],
   },
   {
     id: "time",
@@ -116,6 +117,7 @@ export const utilityBrowseGroups: UtilityBrowseGroup[] = [
       "json-formatter",
       "dekoder-jwt",
       "walidator-nip-pesel",
+      "walidator-iban",
       "konwerter-kolorow",
       "base64",
       "unix-timestamp",

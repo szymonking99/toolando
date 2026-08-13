@@ -81,6 +81,11 @@ export default uiPack({
     "comparisonsCta": "비교 찾아보기"
   },
   "footer": {
+    "emailAria": "이메일 앱을 열어 문의하기",
+    "youtube": "YouTube",
+    "messenger": "Messenger",
+    "instagram": "Instagram",
+    "facebook": "Facebook",
     "guides": "가이드",
     "formats": "파일 형식",
     "comparisons": "비교",

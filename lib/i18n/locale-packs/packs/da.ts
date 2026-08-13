@@ -81,6 +81,11 @@ export default uiPack({
     "comparisonsCta": "Gennemse sammenligninger"
   },
   "footer": {
+    "emailAria": "Åbner din e-mail-app for at skrive til os",
+    "youtube": "YouTube",
+    "messenger": "Messenger",
+    "instagram": "Instagram",
+    "facebook": "Facebook",
     "guides": "Vejledninger",
     "formats": "Filformater",
     "comparisons": "Sammenligninger",

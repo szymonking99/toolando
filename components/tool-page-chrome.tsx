@@ -3,6 +3,7 @@
 import { Star } from "lucide-react"
 import { RecordToolVisit } from "@/components/record-tool-visit"
 import { PrivacyFirstBadge } from "@/components/premium-upsell-card"
+import { useI18n } from "@/components/i18n-provider"
 import {
   isFavorite,
   toggleFavorite,
@@ -19,7 +20,10 @@ export function ToolPageChrome({
   title: string
   localOnly?: boolean
 }) {
+  const { t } = useI18n()
   const [fav, setFav] = useState(false)
+  const favorites = (t as { favorites?: { add: string; remove: string } })
+    .favorites ?? { add: "Add to favorites", remove: "Favorite" }
 
   useEffect(() => {
     function refresh() {
@@ -43,7 +47,7 @@ export function ToolPageChrome({
           <Star
             className={`size-3.5 ${fav ? "fill-amber-400 text-amber-400" : ""}`}
           />
-          {fav ? "Ulubione" : "Dodaj do ulubionych"}
+          {fav ? favorites.remove : favorites.add}
         </button>
       </div>
     </>

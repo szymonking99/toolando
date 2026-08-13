@@ -72,3 +72,39 @@ export async function sendWelcomeEmail(to: string, name?: string | null) {
     )
   }
 }
+
+/** Powiadomienie o nowym zapisie do newslettera (admin). */
+export async function sendNewsletterSignupEmail(email: string, locale: string) {
+  if (!resend) {
+    console.log("[newsletter] Brak RESEND_API_KEY — zapis:", email, locale)
+    return
+  }
+
+  const adminTo = REPLY_TO
+  const html = `
+  <div style="font-family:-apple-system,Segoe UI,Roboto,Arial,sans-serif;max-width:520px;margin:0 auto;padding:24px;color:#1a1a1a;">
+    <h1 style="font-size:18px;margin:0 0 12px;">Nowy zapis do newslettera</h1>
+    <p style="font-size:14px;line-height:1.6;margin:0;"><strong>E-mail:</strong> ${email}</p>
+    <p style="font-size:14px;line-height:1.6;margin:8px 0 0;"><strong>Locale:</strong> ${locale}</p>
+    <p style="font-size:13px;color:#666;margin:20px 0 0;">Toolando.tech — ${new Date().toISOString()}</p>
+  </div>`
+
+  try {
+    const { error } = await resend.emails.send({
+      from: EMAIL_FROM,
+      to: adminTo,
+      replyTo: email,
+      subject: `[Newsletter] ${email}`,
+      html,
+      text: `Nowy zapis: ${email} (${locale})`,
+    })
+    if (error) {
+      console.log("[newsletter] Błąd wysyłki:", error.message)
+    }
+  } catch (err) {
+    console.log(
+      "[newsletter] Wyjątek:",
+      err instanceof Error ? err.message : err,
+    )
+  }
+}

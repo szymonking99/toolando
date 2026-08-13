@@ -1,0 +1,159 @@
+{
+  "privacyPage": {
+    "title": "Privacidad desde el diseño",
+    "subtitle": "Cómo Toolando protege tus archivos y datos.",
+    "localTitle": "Herramientas locales en el navegador",
+    "localBody": "Utilidades, el abridor universal y muchas calculadoras funcionan enteramente en tu navegador — los datos no salen de tu dispositivo.",
+    "serverTitle": "Conversiones en servidor",
+    "serverBody": "Cuando subes un archivo para convertirlo, se usa solo para esa tarea y se elimina después. HTTPS de extremo a extremo.",
+    "aiTitle": "Herramientas de IA",
+    "aiBody": "La IA Premium envía al proveedor del modelo solo el contenido que tú envías — nunca se vende ni se usa para publicidad.",
+    "badge": "Privacy-First",
+    "readPolicy": "Leer la política de privacidad completa"
+  },
+  "nav": {
+    "privacy": "Política de privacidad",
+    "terms": "Términos de servicio"
+  },
+  "share": {
+    "label": "Compartir",
+    "copy": "Copiar enlace",
+    "copied": "Copiado"
+  },
+  "knowledgeHub": {
+    "glossaryTitle": "Glosario",
+    "glossaryDesc": "Bitrate, códec, compresión con pérdida, MIME — definiciones en lenguaje claro.",
+    "glossaryCta": "Abrir glosario"
+  },
+  "editorial": {
+    "title": "Quién está detrás de Toolando.tech",
+    "body": "Soy Szymon — diseño, desarrollo y pruebo cada herramienta yo mismo. Las guías se basan en conversiones reales, no en especificaciones copiadas. Quiero que entiendas tus archivos antes de convertirlos y que el servicio sea honesto contigo.",
+    "aboutCta": "Sobre mí y metodología",
+    "howCta": "Cómo funcionan las herramientas",
+    "editorialCta": "Estándares editoriales",
+    "guidesCta": "Guías"
+  },
+  "featuredGuides": {
+    "title": "Guías destacadas",
+    "subtitle": "Artículos prácticos sobre formatos de archivo, seguridad y conversión — escritos a partir de pruebas reales, no plantillas SEO.",
+    "readArticle": "Leer guía",
+    "allGuides": "Todas las guías"
+  },
+  "footer": {
+    "editorial": "Editorial",
+    "rss": "Feed RSS",
+    "cookieSettings": "Configuración de cookies",
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "messenger": "Messenger",
+    "youtube": "YouTube",
+    "emailAria": "Abre tu app de correo para escribirnos"
+  },
+  "ad": {
+    "label": "Anuncio",
+    "placeholder": "Espacio publicitario"
+  },
+  "support": {
+    "body1": "Mantengo el servicio por mi cuenta — código, servidores, contenido legal y guías. Tu apoyo ayuda a cubrir el hosting (Vercel), el procesamiento de archivos, el dominio y el desarrollo de nuevas herramientas.",
+    "body2": "El apoyo es totalmente voluntario. Las herramientas gratuitas no requieren pago. Premium es una suscripción opcional aparte con funciones ampliadas — consulta los Términos de servicio para más detalles.",
+    "body3": "¿Tienes una pregunta, idea para una herramienta o encontraste un error? Escribe a badyltech@outlook.com o usa el formulario de contacto — eso también es un apoyo valioso.",
+    "legalNote": "Las donaciones no dan acceso a Premium ni constituyen un contrato de servicio, salvo que se indique expresamente lo contrario. Los Términos de servicio y la Política de privacidad se aplican con independencia de las donaciones."
+  },
+  "tool": {
+    "howToTitle": "Cómo convertir un archivo — paso a paso",
+    "aboutSource": "Sobre el formato de origen",
+    "aboutTarget": "Sobre el formato de destino",
+    "whenToUseTitle": "Cuándo usar este conversor",
+    "faqTitle": "Preguntas frecuentes",
+    "qualityTitle": "Calidad de conversión — qué debes saber",
+    "tipsTitle": "Consejos prácticos",
+    "readFormatGuide": "Guía completa del formato"
+  },
+  "cookieConsent": {
+    "title": "Cookies",
+    "description": "Toolando.tech utiliza cookies necesarias para el funcionamiento del sitio y, con tu consentimiento, cookies analíticas (Google Analytics) y publicitarias (Google AdSense). Puedes aceptar todas las cookies o limitarte a las esenciales.",
+    "acceptAll": "Aceptar todas",
+    "necessaryOnly": "Solo esenciales",
+    "privacyLink": "Política de privacidad"
+  },
+  "pages": {
+    "editorial": {
+      "eyebrow": "Editorial",
+      "title": "Estándares editoriales de Toolando.tech",
+      "intro": "Toolando.tech no son solo conversores — también guías, una enciclopedia de formatos y comparaciones. A continuación explico cómo se crea el contenido, de dónde proviene la información y cuándo se actualiza.",
+      "whoTitle": "Quién crea el contenido",
+      "whoP1": "Escribo yo mismo cada guía, perfil de formato y comparación — Szymon Badyl, creador de Toolando.tech. No uso granjas de contenido ni textos generados por IA sin revisar.",
+      "whoP2": "Cada artículo se basa en pruebas de conversión con mis propios archivos. Si algo no funciona como se describe, corrijo tanto el texto como la herramienta.",
+      "standardsTitle": "Principios editoriales",
+      "standardsIntro": "Aplico las mismas reglas a cada nueva guía:",
+      "standardsList": [
+        "Pruebo el conversor con archivos de distintos tamaños antes de publicar.",
+        "Doy escenarios concretos (correo, tienda, redes sociales), no generalidades vagas.",
+        "Distingo compresión de conversión de formato y con pérdida de sin pérdida.",
+        "Escribo sobre los límites de las herramientas — cuándo no conviene convertir online.",
+        "Actualizo la fecha y el contenido cuando cambian los requisitos de plataformas o formatos."
+      ],
+      "sourcesTitle": "Fuentes y honestidad",
+      "sourcesP1": "Verifico las especificaciones de formatos (MIME, códecs) con IANA, FFmpeg y documentación de fabricantes. Las comparaciones se basan en mis propias mediciones de tamaño y calidad, no en tablas de marketing.",
+      "sourcesP2": "Los enlaces externos aparecen solo cuando ayudan de verdad (p. ej. documentación oficial). No promociono herramientas de pago de la competencia.",
+      "updatesTitle": "Actualizaciones y correcciones",
+      "updatesP1": "¿Encontraste un error, información desactualizada o tienes una sugerencia de tema? Escribe a badyltech@outlook.com — las correcciones se incorporan al artículo con fecha de actualización.",
+      "updatedLabel": "Última actualización",
+      "updatedDate": "agosto de 2026",
+      "fullGuideCta": "Guía completa sobre estándares editoriales"
+    },
+    "privacy": {
+      "lastUpdated": "Última actualización: 23 de julio de 2026",
+      "s1Address": "Correspondencia: badyltech@outlook.com",
+      "s4ThirdPartyTitle": "Proveedores externos",
+      "s4ThirdPartyP": "El servicio utiliza servicios de Google (Analytics, AdSense). Google puede recopilar datos según su propia política de privacidad. Más información: https://policies.google.com/technologies/partner-sites"
+    },
+    "guides": {
+      "eyebrow": "Guías",
+      "title": "Guías y tutoriales de conversión de archivos",
+      "intro": "Artículos prácticos sobre formatos de archivo, conversión y buenas prácticas. Cada guía explica cuándo y por qué convertir un archivo y cómo hacerlo de forma segura con Toolando.tech.",
+      "articles": [
+        {
+          "title": "MP3 vs WAV — ¿cuándo convertir audio?",
+          "body": "MP3 es un formato de compresión con pérdida — los archivos son pequeños, pero se pierden algunos datos de audio. WAV conserva la calidad completa, pero los archivos pueden ser 10 veces más grandes. Convierte MP3 → WAV cuando necesites un archivo para editar en una DAW (p. ej. Audacity, FL Studio) o cuando una plataforma exija un formato sin pérdida. Convierte WAV → MP3 cuando quieras enviar una grabación por correo, publicar un podcast o ahorrar espacio en disco. Toolando.tech admite ambas conversiones — solo sube tu archivo y descarga el resultado."
+        },
+        {
+          "title": "Cómo convertir PDF a JPG para impresión y web",
+          "body": "PDF es un formato de documento que conserva el diseño de la página. A veces necesitas páginas individuales como imágenes — para un sitio web, una presentación de PowerPoint o imprimir una sola página. El conversor PDF → JPG de Toolando.tech renderiza cada página PDF como una imagen JPG independiente en alta resolución. Los archivos PDF no se almacenan — se eliminan inmediatamente después de la conversión. Si necesitas transparencia, considera PDF → PNG."
+        },
+        {
+          "title": "WebP y AVIF — formatos de imagen modernos para sitios web",
+          "body": "JPG y PNG han dominado la web durante años, pero los formatos más nuevos ofrecen mejor compresión. WebP (Google) produce archivos un 25–35 % más pequeños que JPG con la misma calidad visual y es compatible con todos los navegadores modernos. AVIF va aún más lejos — los archivos pueden ser la mitad de tamaño que WebP. Convierte JPG → WebP o PNG → AVIF en Toolando.tech para acelerar tu sitio. Recuerda que los navegadores antiguos (p. ej. IE) no admiten estos formatos — conserva una versión JPG como respaldo."
+        },
+        {
+          "title": "Extraer audio de vídeo — la alternativa legal",
+          "body": "A veces tienes un archivo de vídeo (p. ej. grabación de cámara, presentación) y solo necesitas la pista de audio. Toolando.tech te permite extraer audio de MP4, MOV, AVI, MKV y otros formatos de vídeo, guardándolo como MP3, WAV, FLAC o AAC. Es una operación legal sobre tu propio archivo — a diferencia de descargar música de YouTube o TikTok, que Toolando.tech deliberadamente no ofrece. Sube tu archivo de vídeo, elige un formato de audio y descarga el resultado."
+        },
+        {
+          "title": "JSON, CSV y XML — convertir datos entre formatos",
+          "body": "Desarrolladores y analistas de datos suelen trabajar con distintos formatos. JSON es el estándar en APIs y configuraciones. CSV y TSV se usan para importar a Excel y hojas de cálculo. XML se utiliza en sistemas empresariales antiguos y RSS. Toolando.tech convierte entre estos formatos preservando la estructura de datos. Por ejemplo: JSON → CSV permite abrir una respuesta de API en Excel, y CSV → JSON prepara datos para enviarlos a una REST API."
+        },
+        {
+          "title": "Seguridad de archivos en herramientas online",
+          "body": "Subir archivos a herramientas online suscita naturalmente preocupaciones de privacidad. En Toolando.tech, los archivos se usan únicamente para la operación que solicitas — conversión, compresión o vista previa. Al terminar, se eliminan del servidor. Algunas herramientas (p. ej. el abridor universal de archivos) funcionan enteramente en tu navegador — en ese caso el archivo nunca sale de tu ordenador. La conexión al sitio está cifrada (HTTPS). Nunca vendemos ni compartimos tus archivos con terceros."
+        },
+        {
+          "title": "Compresión con pérdida vs sin pérdida — guía sencilla",
+          "body": "Los formatos con pérdida (MP3, JPG, AAC, H.264) descartan datos para reducir el tamaño. Los formatos sin pérdida (FLAC, PNG, WAV, ZIP) conservan todos los datos pero generan archivos más grandes. Regla general: solo convierte de con pérdida a sin pérdida cuando sea imprescindible — no recuperarás la calidad perdida. Convertir de con pérdida a con pérdida (p. ej. JPG → JPG con menor calidad) debe hacerse una sola vez; cada reconversión empeora el resultado. En la enciclopedia de formatos de Toolando.tech, cada formato está etiquetado con su tipo de compresión."
+        },
+        {
+          "title": "HEIC del iPhone — cómo abrir y convertir a JPG",
+          "body": "Apple guarda las fotos en HEIC (HEIF) por defecto — más pequeño que JPG con la misma calidad. El problema: Windows sin extensión, apps antiguas y muchos servicios no admiten HEIC. Solución: convierte HEIC → JPG o HEIC → PNG en Toolando.tech antes de enviar fotos por correo, subirlas a un sitio o imprimir. También puedes configurar el iPhone en «Más compatible» (JPG) en Ajustes, pero la conversión online funciona con fotos ya guardadas como HEIC."
+        },
+        {
+          "title": "PDF vs DOCX — ¿qué formato cuándo?",
+          "body": "DOCX (Word) sirve para editar texto — cambias contenido, estilos y encabezados. PDF fija el diseño de página — se ve idéntico en cualquier dispositivo, ideal para facturas, contratos y CV enviados a reclutadores. Convierte DOCX → PDF antes de enviar un documento «solo para lectura». Convierte PDF → DOCX solo cuando necesites editar el texto — el diseño puede romperse. Para archivo e impresión, elige siempre PDF."
+        },
+        {
+          "title": "Vídeo para redes sociales — MP4, resolución y bitrate",
+          "body": "Instagram, TikTok, YouTube y Facebook prefieren MP4 con vídeo H.264 y audio AAC. Antes de publicar, convierte MOV, AVI o MKV a MP4 para evitar errores de subida. 1080p (1920×1080) basta para la mayoría de plataformas; 4K solo si la plataforma lo admite. Un bitrate más alto significa mejor calidad pero un archivo más grande. Toolando.tech convierte vídeo sin instalación — consulta la enciclopedia de formatos para detalles sobre MP4, WebM y MOV."
+        }
+      ]
+    }
+  }
+}

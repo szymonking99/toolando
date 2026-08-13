@@ -81,6 +81,11 @@ export default uiPack({
     "comparisonsCta": "浏览比较"
   },
   "footer": {
+    "emailAria": "打开邮件应用给我们写信",
+    "youtube": "YouTube",
+    "messenger": "Messenger",
+    "instagram": "Instagram",
+    "facebook": "Facebook",
     "guides": "指南",
     "formats": "文件格式",
     "comparisons": "比较",

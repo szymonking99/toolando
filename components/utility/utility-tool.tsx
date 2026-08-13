@@ -27,6 +27,8 @@ import { MarkdownPreviewTool } from "./markdown-preview-tool"
 import { PasswordStrengthTool } from "./password-strength-tool"
 import { SubtitleTool } from "./subtitle-tool"
 import { BatchRenameTool } from "./batch-rename-tool"
+import { IbanTool } from "./iban-tool"
+import { B2bCalculatorTool } from "./b2b-calculator-tool"
 
 export function UtilityTool({ tool }: { tool: UtilityToolConfig }) {
   switch (tool.id) {
@@ -44,6 +46,8 @@ export function UtilityTool({ tool }: { tool: UtilityToolConfig }) {
       return <AgeTool />
     case "kalkulator-kredytu":
       return <LoanCalculatorTool />
+    case "kalkulator-b2b":
+      return <B2bCalculatorTool />
     case "generator-hasel":
       return <PasswordTool />
     case "sila-hasla":
@@ -68,6 +72,8 @@ export function UtilityTool({ tool }: { tool: UtilityToolConfig }) {
       return <JwtTool />
     case "walidator-nip-pesel":
       return <PolishIdTool />
+    case "walidator-iban":
+      return <IbanTool />
     case "konwerter-napisow":
       return <SubtitleTool />
     case "kalkulator-bitrate":

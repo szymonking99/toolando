@@ -3,10 +3,122 @@
     "title": "Toolando.tech — Alle dine onlineværktøjer ét sted",
     "description": "Konvertere, generatorer, PDF- og AI-værktøjer — alt i ét elegant økosystem. Hurtigt og enkelt."
   },
+  "socialProof": {
+    "toolsCount": "{count}+ værktøjer i ét økosystem",
+    "usesToday": "{uses} brug i dag"
+  },
+  "recent": {
+    "title": "Senest brugt",
+    "subtitle": "Dine seneste værktøjer — gemt lokalt i denne browser.",
+    "favoritesHint": "Giv et værktøj en stjerne på værktøjsiden for at fastgøre det her."
+  },
+  "premiumUpsell": {
+    "title": "Lås AI-værktøjer op med Premium",
+    "description": "Tekstgenerering, resuméer, billeder, oversættelse og chat — ét abonnement, ingen overraskelser pr. anmodning.",
+    "point1": "Alle AI-værktøjer uden begrænsninger",
+    "point2": "Prioriteret behandling på travle dage",
+    "point3": "Støt uafhængig udvikling",
+    "cta": "Få Premium",
+    "compare": "Se abonnementer",
+    "trialHint": "Log ind for en gratis forhåndsvisning — opgrader når som helst."
+  },
+  "privacyBadge": {
+    "title": "Privatliv først",
+    "local": "Behandles lokalt i din browser"
+  },
+  "onboarding": {
+    "skip": "Luk",
+    "next": "Næste",
+    "start": "Gennemse værktøjer",
+    "learnMore": "Sådan fungerer Toolando",
+    "step1": {
+      "title": "Konverter, beregn, åbn — ét økosystem",
+      "body": "287+ værktøjer til filer, lommeregnere, udviklerværktøjer og AI — vælg et værktøj eller søg med Ctrl+K."
+    },
+    "step2": {
+      "title": "Privatliv når det betyder noget",
+      "body": "Mange værktøjer kører i din browser. Serverkonverteringer sletter filer, når jobbet er færdigt."
+    },
+    "step3": {
+      "title": "AI-værktøjer med Premium",
+      "body": "Prøv konvertere gratis. AI-funktioner bruger en simpel månedlig plan — se priser, før du rammer en betalingsmur."
+    }
+  },
+  "exitIntent": {
+    "title": "Før du går…",
+    "body": "Brug for en anden konverter? Søg blandt 287+ værktøjer, eller fortæl os, hvad vi skal bygge næste.",
+    "browse": "Gennemse værktøjer",
+    "request": "Anmod om et værktøj",
+    "close": "Luk"
+  },
+  "nextSteps": {
+    "title": "Næste skridt",
+    "aiSummarizeTitle": "Opsummer dokument med AI",
+    "aiSummarizeBody": "Generer et PDF- eller DOCX-resumé på få sekunder (Premium eller 1 forsøg/dag)."
+  },
+  "newsletter": {
+    "title": "Nye værktøjer & Premium-opdateringer",
+    "subtitle": "Efterlad din e-mail — vi giver besked om større funktioner (ingen spam).",
+    "placeholder": "dig@example.com",
+    "cta": "Abonner",
+    "thanks": "Tak! Bekræft via kontakt, hvis du vil have svar.",
+    "confirmViaContact": "Fuldfør tilmelding via kontaktformular →",
+    "error": "Tilmelding mislykkedes. Prøv igen."
+  },
+  "toolRequest": {
+    "title": "Mangler du en konverter?",
+    "body": "Foreslå et nyt værktøj eller format — vi prioriterer det, brugerne efterspørger.",
+    "cta": "Foreslå et værktøj"
+  },
+  "comparison": {
+    "title": "Toolando vs cloud-uploadværktøjer",
+    "subtitle": "Hvorfor brugere skifter fra generiske uploadkonvertere.",
+    "feature": "Funktion",
+    "competitor": "Typisk cloudkonverter",
+    "rows": {
+      "privacy": "Lokal forhåndsvisning & privatlivsvalg",
+      "offline": "Fungerer offline (PWA-værktøjer)",
+      "ai": "Integreret AI-arbejdsgang",
+      "free": "Gratis kernekonvertere",
+      "limits": "Ingen vilkårlige daglige uploadgrænser for grundfunktioner"
+    }
+  },
+  "premiumPage": {
+    "title": "Toolando Premium",
+    "subtitle": "AI-værktøjer, tydelige priser, opsig når som helst.",
+    "freeTitle": "Gratis",
+    "freeDesc": "Alle filkonvertere, lommeregnere og de fleste værktøjer.",
+    "premiumTitle": "Premium",
+    "premiumDesc": "Fuld AI-pakke — tekst, billeder, resuméer, oversættelse, chat.",
+    "supporterTitle": "Supporter",
+    "supporterDesc": "Premium + reklamefri oplevelse (kommer snart).",
+    "cta": "Aktivér Premium",
+    "signIn": "Log ind for at abonnere",
+    "faqTitle": "Ofte stillede spørgsmål om priser",
+    "faq1q": "Hvordan fungerer credits?",
+    "faq1a": "Der er ingen credits pr. anmodning — Premium er et fast månedligt abonnement til ubegrænset AI-brug.",
+    "faq2q": "Kan jeg prøve, før jeg betaler?",
+    "faq2a": "Opret en gratis konto, udforsk konvertere, og opgrader, når du har brug for AI.",
+    "faq3q": "Hvad med filprivatliv?",
+    "faq3a": "Serverfiler slettes efter behandling. Browserværktøjer uploader aldrig dine data."
+  },
+  "privacyPage": {
+    "title": "Privatliv bygget ind fra starten",
+    "subtitle": "Sådan beskytter Toolando dine filer og data.",
+    "localTitle": "Værktøjer lokalt i browseren",
+    "localBody": "Værktøjer, den universelle åbner og mange lommeregnere kører helt i din browser — data forlader aldrig din enhed.",
+    "serverTitle": "Serverkonverteringer",
+    "serverBody": "Når du uploader til konvertering, bruges filer kun til det job og slettes bagefter. HTTPS end-to-end.",
+    "aiTitle": "AI-værktøjer",
+    "aiBody": "Premium AI sender kun det indhold, du indsender, til modelleverandøren — aldrig solgt eller brugt til reklame.",
+    "badge": "Privatliv først",
+    "readPolicy": "Læs fuld privatlivspolitik"
+  },
   "nav": {
     "aiTools": "AI-værktøjer",
     "tools": "Konvertere",
-    "categories": "Converter categories",
+    "categories": "Konverterkategorier",
+    "formats": "Formater",
     "about": "Om",
     "contact": "Kontakt",
     "cta": "Kom i gang",
@@ -15,11 +127,18 @@
     "allTools": "Alle værktøjer",
     "signIn": "Log ind",
     "account": "Min konto",
-    "downloader": "MP3 Downloader",
+    "downloader": "MP3-henter",
+    "aboutMe": "Om mig",
+    "privacy": "Privatlivspolitik",
+    "terms": "Servicevilkår",
     "onlineTools": "Beregnere",
     "converters": "Konvertere",
     "calculators": "Beregnere",
-    "developer": "Udviklerværktøjer"
+    "developer": "Udviklerværktøjer",
+    "premium": "Premium",
+    "guides": "Guider",
+    "faq": "FAQ",
+    "more": "Mere"
   },
   "hero": {
     "badge": "Et nyt økosystem af onlineværktøjer",
@@ -27,7 +146,68 @@
     "titleHighlight": "ét sted",
     "subtitle": "Konvertere, generatorer, PDF, AI — alt i ét økosystem.",
     "browse": "Gennemse værktøjer",
-    "learnMore": "Læs mere"
+    "learnMore": "Læs mere",
+    "convertCta": "Konverter en fil nu"
+  },
+  "search": {
+    "placeholder": "Søgekonvertere (f.eks. mp3 wav, pdf jpg)...",
+    "noResults": "Ingen konvertere fundet. Prøv en anden forespørgsel."
+  },
+  "share": {
+    "label": "Del",
+    "copy": "Kopiér link",
+    "copied": "Kopieret"
+  },
+  "feedback": {
+    "question": "Var denne artikel nyttig?",
+    "yes": "Ja",
+    "no": "Nej",
+    "thanks": "Tak for din feedback!"
+  },
+  "recommender": {
+    "title": "Hvilket format skal jeg vælge?",
+    "subtitle": "Besvar to hurtige spørgsmål, og vi vil anbefale det bedste format.",
+    "step1": "Hvilken type fil har du?",
+    "step2": "Hvad vil du med det?",
+    "categories": {
+      "image": "Billede / foto",
+      "audio": "Lyd/musik",
+      "video": "Video",
+      "document": "Dokument"
+    },
+    "goals": {
+      "image_web": "Udgiv på en hjemmeside",
+      "image_email": "Send via e-mail",
+      "image_print": "Udskriv",
+      "image_iphone": "Foto fra iPhone (HEIC)",
+      "audio_listen": "Lyt på telefon eller afspiller",
+      "audio_edit": "Rediger i en DAW",
+      "audio_archive": "Arkiv uden kvalitetstab",
+      "video_social": "Post på sociale medier",
+      "video_web": "Integrer på en hjemmeside",
+      "video_audio": "Uddrag kun lyd",
+      "document_share": "Send til læsning (ingen redigering)",
+      "document_edit": "Rediger teksten"
+    },
+    "resultTitle": "Anbefalet format:",
+    "readFormat": "Formatguide",
+    "openConverter": "Åbn konverter",
+    "back": "Tilbage",
+    "tryAgain": "Start forfra",
+    "reasons": {
+      "webp-web": "WebP er 25–35 % mindre end JPG i samme kvalitet – ideel til hurtigere websteder.",
+      "jpg-email": "JPG er universel og lille - perfekt til vedhæftede filer i e-mails.",
+      "png-print": "PNG er tabsfrit med skarpe kanter - god til grafik og kortsigtede print.",
+      "heic-jpg": "HEIC fra iPhone skal konverteres til JPG for kompatibilitet med Windows og de fleste tjenester.",
+      "mp3-listen": "MP3 fungerer på alle enheder og holder filer små.",
+      "wav-edit": "WAV er tabsfri – bedst til redigering uden kvalitetstab.",
+      "flac-archive": "FLAC komprimerer uden at miste kvalitet - ideel til musikarkivering.",
+      "mp4-social": "MP4 (H.264 + AAC) er standarden for Instagram, TikTok og YouTube.",
+      "webm-web": "WebM er optimeret til HTML5-video i browsere.",
+      "mp3-audio": "Uddrag lyd fra din video som MP3 til podcasts eller ringetoner.",
+      "pdf-share": "PDF låser layout - modtageren ser præcis, hvad du havde til hensigt.",
+      "docx-edit": "DOCX lader dig redigere tekst, typografier og overskrifter i Word."
+    }
   },
   "opener": {
     "title": "Universel filåbner",
@@ -37,26 +217,26 @@
     "kindVideo": "Video",
     "kindAudio": "Lyd",
     "kindDocs": "PDF, kode og data",
-    "readError": "Couldn't read the file contents.",
-    "dropAny": "Drag any file here or click to choose",
-    "dropHint": "Images, video, audio, PDF, documents, code, data — any format. Files are opened locally in your browser and never uploaded anywhere.",
-    "noConverter": "We don't have a converter for this format yet — but you can preview and download the file below.",
-    "convertTo": "Convert to another format",
-    "optionOne": "option",
-    "optionMany": "options",
-    "downloadedOk": "Done! The file has been downloaded.",
-    "download": "Download",
-    "close": "Close",
-    "emptyFile": "(empty file)",
-    "textTruncated": "Preview truncated to the first 200,000 characters. Download the file to see everything.",
-    "binaryPreview": "Binary preview (first bytes in hexadecimal)",
+    "readError": "Kunne ikke læse filindholdet.",
+    "dropAny": "Træk en fil hertil, eller klik for at vælge",
+    "dropHint": "Billeder, video, lyd, PDF, dokumenter, kode, data — alle formater. Filer åbnes lokalt i din browser og uploades aldrig nogen steder.",
+    "noConverter": "Vi har endnu ingen konverter til dette format — men du kan forhåndsvise og downloade filen nedenfor.",
+    "convertTo": "Konverter til et andet format",
+    "optionOne": "mulighed",
+    "optionMany": "muligheder",
+    "downloadedOk": "Færdig! Filen er blevet downloadet.",
+    "download": "Hent",
+    "close": "Luk",
+    "emptyFile": "(tom fil)",
+    "textTruncated": "Forhåndsvisning afkortet til de første 200.000 tegn. Download filen for at se alt.",
+    "binaryPreview": "Binær forhåndsvisning (første bytes i hexadecimal)",
     "kinds": {
-      "image": "Image",
+      "image": "Billede",
       "video": "Video",
-      "audio": "Audio",
-      "pdf": "PDF document",
-      "text": "Text / code",
-      "binary": "Binary file"
+      "audio": "Lyd",
+      "pdf": "PDF-dokument",
+      "text": "Tekst / kode",
+      "binary": "Binær fil"
     }
   },
   "ai": {
@@ -76,6 +256,41 @@
     "title": "Værktøjskategorier",
     "subtitle": "Vælg en kategori for at se alle tilgængelige konvertere.",
     "browse": "Gennemse"
+  },
+  "toolsIndex": {
+    "intro": "Hvert værktøj konverterer filer på serveren - ingen software at installere. Ikke sikker på hvilket format du skal vælge? Gennemse formaten encyklopædi eller konverteringsvejledninger.",
+    "formatsLink": "Format encyklopædi",
+    "guidesLink": "Konverteringsvejledninger"
+  },
+  "knowledgeHub": {
+    "title": "Format & konvertering viden",
+    "subtitle": "Konverter ikke bare - forstå, hvornår du skal vælge MP3 frem for FLAC, WebP over JPG eller PDF over DOCX. Vores guider hjælper dig med at undgå kvalitetstab og unødvendige konverteringer.",
+    "formatsTitle": "Encyklopædi i filformat",
+    "formatsDesc": "40+ formater: lyd, video, billeder, dokumenter, data og arkiver. Fordele, ulemper, kompatibilitet og sammenligninger med alternativer.",
+    "formatsCta": "Gennemse formater",
+    "guidesTitle": "Konverteringsvejledninger",
+    "guidesDesc": "Praktiske artikler: lydkvalitet, billedkomprimering, video til sociale medier, PDF vs DOCX og online filsikkerhed.",
+    "guidesCta": "Læs vejledninger",
+    "comparisonsTitle": "Formatsammenligninger",
+    "comparisonsDesc": "MP3 vs FLAC, JPG vs WebP, PDF vs DOCX - head-to-head sammenligninger med en klar dom.",
+    "comparisonsCta": "Gennemse sammenligninger",
+    "glossaryTitle": "Ordliste",
+    "glossaryDesc": "Bitrate, codec, tabsgivende komprimering, MIME — definitioner på enkelt sprog.",
+    "glossaryCta": "Åbn ordliste"
+  },
+  "editorial": {
+    "title": "Hvem driver Toolando.tech",
+    "body": "Jeg er Szymon — jeg designer, bygger og tester hvert værktøj selv. Guider er baseret på rigtige konverteringer, ikke kopierede specifikationer. Jeg vil have, at du forstår dine filer, før du konverterer dem, og at tjenesten er ærlig over for dig.",
+    "aboutCta": "Om mig & metode",
+    "howCta": "Sådan fungerer værktøjerne",
+    "editorialCta": "Redaktionelle standarder",
+    "guidesCta": "Guider"
+  },
+  "featuredGuides": {
+    "title": "Udvalgte guider",
+    "subtitle": "Praktiske artikler om filformater, sikkerhed og konvertering — skrevet ud fra rigtige tests, ikke SEO-skabeloner.",
+    "readArticle": "Læs guide",
+    "allGuides": "Alle guider"
   },
   "why": {
     "title": "Hvorfor Toolando.tech?",
@@ -100,9 +315,25 @@
     "privacy": "Privatlivspolitik",
     "terms": "Servicevilkår",
     "rights": "© 2026 Toolando.tech. Alle rettigheder forbeholdes.",
-    "aboutMe": "About me",
-    "howItWorks": "How it works",
-    "faq": "FAQ"
+    "aboutMe": "Om mig",
+    "howItWorks": "Sådan fungerer det",
+    "faq": "FAQ",
+    "guides": "Vejledninger",
+    "editorial": "Redaktion",
+    "formats": "Filformater",
+    "comparisons": "Sammenligninger",
+    "glossary": "Ordliste",
+    "rss": "RSS-feed",
+    "cookieSettings": "Cookieindstillinger",
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "messenger": "Messenger",
+    "youtube": "YouTube",
+    "emailAria": "Åbner din e-mail-app for at skrive til os"
+  },
+  "ad": {
+    "label": "Annonce",
+    "placeholder": "Annonceplads"
   },
   "language": {
     "label": "Sprog"
@@ -111,6 +342,10 @@
     "eyebrow": "Støt projektet",
     "title": "Hjælp Toolando.tech videre",
     "subtitle": "Toolando.tech udvikles og tilbydes gratis. Hvis det sparer dig tid, så overvej at støtte udviklingen.",
+    "body1": "Jeg vedligeholder tjenesten på egen hånd - kode, servere, juridisk indhold og vejledninger. Din support hjælper med at dække hosting (Vercel), filbehandling, domænet og udvikling af nyt værktøj.",
+    "body2": "Støtten er helt frivillig. Gratis værktøjer kræver ingen betaling. Premium er et separat valgfrit abonnement med udvidede funktioner - se Servicevilkårene for detaljer.",
+    "body3": "Har du et spørgsmål, værktøjsidé eller fundet en fejl? Skriv til badyltech@outlook.com eller brug kontaktformularen - det er også værdifuld support.",
+    "legalNote": "Donationer giver ikke Premium-adgang eller udgør en servicekontrakt, medmindre andet er udtrykkeligt angivet. Vilkår og privatlivspolitik gælder uanset donationer.",
     "coffee": "Giv mig en kaffe",
     "donate": "Giv en donation",
     "back": "Tilbage til forsiden",
@@ -130,7 +365,7 @@
     "noConverter": "Vi har ikke en konverter til dette format endnu — men du kan stadig forhåndsvise og downloade filen nedenfor.",
     "downloaded": "Færdig! Filen er downloadet.",
     "convertError": "Konverteringen mislykkedes.",
-    "download": "Download",
+    "download": "Hent",
     "remove": "Fjern fil",
     "previewUnavailable": "Forhåndsvisning er ikke tilgængelig for dette format.",
     "binaryNote": "Binær (hexadecimal) forhåndsvisning af filens første bytes."
@@ -155,44 +390,59 @@
     "merge": "Flet filer",
     "result": "Resultat",
     "notFound": "Værktøj ikke fundet",
-    "convertFailed": "Conversion failed.",
-    "connectionError": "Couldn't connect to the server. Please try again.",
-    "unavailable": "This converter is currently unavailable",
-    "dropClick": "Drag a file here or click to choose",
-    "dropClickMulti": "Drag files here or click to choose",
-    "supportedFormat": "Supported format",
-    "supported": "Supported",
-    "maxSize": "max. 500 MB",
-    "removeFile": "Remove file",
-    "convertDone": "Conversion complete",
-    "downloadNamed": "Download",
-    "convertAnother": "Convert another file",
-    "uploadingFile": "Uploading file…",
-    "uploadingFiles": "Uploading files…",
-    "uploading": "Uploading…",
-    "converting": "Converting…",
-    "convertToPrefix": "Convert to",
-    "needTwoPdf": "Add at least two PDF files to merge.",
-    "operationFailed": "The operation failed.",
-    "compressionQuality": "Compression quality",
-    "qualityHint": "Lower value = smaller file. Higher value = better quality.",
-    "done": "Done",
-    "less": "less",
-    "resultPreview": "Result preview",
-    "startOver": "Start over",
-    "processingLong": "Processing (this may take a few seconds)…"
+    "convertFailed": "Konvertering mislykkedes.",
+    "connectionError": "Kunne ikke oprette forbindelse til serveren. Prøv igen.",
+    "unavailable": "Denne konverter er i øjeblikket utilgængelig",
+    "dropClick": "Træk en fil hertil, eller klik for at vælge",
+    "dropClickMulti": "Træk filer hertil, eller klik for at vælge",
+    "supportedFormat": "Understøttet format",
+    "supported": "Understøttet",
+    "maxSize": "maks. 500 MB",
+    "removeFile": "Fjern fil",
+    "convertDone": "Konvertering fuldført",
+    "downloadNamed": "Hent",
+    "convertAnother": "Konverter en anden fil",
+    "uploadingFile": "Uploader fil…",
+    "uploadingFiles": "Uploader filer…",
+    "uploading": "Uploader…",
+    "converting": "Konverterer…",
+    "convertToPrefix": "Konverter til",
+    "needTwoPdf": "Tilføj mindst to PDF-filer for at flette.",
+    "operationFailed": "Handlingen mislykkedes.",
+    "compressionQuality": "Komprimeringskvalitet",
+    "qualityHint": "Lavere værdi = mindre fil. Højere værdi = bedre kvalitet.",
+    "done": "Færdig",
+    "less": "mindre",
+    "resultPreview": "Forhåndsvisning af resultat",
+    "startOver": "Start forfra",
+    "processingLong": "Behandler (dette kan tage et par sekunder)…",
+    "howToTitle": "Sådan konverteres en fil - trin for trin",
+    "aboutSource": "Om kildeformatet",
+    "aboutTarget": "Om målformatet",
+    "whenToUseTitle": "Hvornår skal denne konverter bruges",
+    "faqTitle": "Ofte stillede spørgsmål",
+    "qualityTitle": "Konverteringskvalitet - hvad du skal vide",
+    "tipsTitle": "Praktiske tips",
+    "readFormatGuide": "Fuldt format guide"
+  },
+  "cookieConsent": {
+    "title": "Cookies",
+    "description": "Toolando.tech bruger nødvendige cookies og, med dit samtykke, analyse- (Google Analytics) og annoncercookies (Google AdSense). Du kan acceptere alle eller kun nødvendige.",
+    "acceptAll": "Acceptér alle",
+    "necessaryOnly": "Kun nødvendige",
+    "privacyLink": "Privatlivspolitik"
   },
   "aiTool": {
     "prompt": "Din tekst",
     "promptPlaceholder": "Indtast din tekst…",
-    "tone": "Tone",
+    "tone": "Stil",
     "targetLang": "Målsprog",
     "generate": "Generer",
     "generating": "Genererer…",
     "result": "Resultat",
     "copy": "Kopier",
     "copied": "Kopieret",
-    "download": "Download",
+    "download": "Hent",
     "regenerate": "Generer igen",
     "uploadDoc": "Upload et dokument (PDF, DOCX, TXT)",
     "summarize": "Opsummer",
@@ -208,44 +458,44 @@
     "thinking": "Tænker…",
     "aiError": "Kunne ikke få et AI-svar. Prøv igen.",
     "emptyChat": "Stil et spørgsmål for at starte samtalen.",
-    "generateFailed": "Couldn't generate a response.",
-    "noContent": "The AI service returned no content. Check that AI Gateway is active (requires a payment card).",
-    "connectionError": "A connection error occurred. Please try again.",
-    "dropDoc": "Drag a document here or click to choose",
-    "removeFile": "Remove file",
-    "translatePlaceholder": "Paste the text to translate…",
-    "copyPlaceholder": "Describe what the AI should write, e.g. \"a product description for an eco-friendly water bottle\"…",
-    "toneLabel": "Tone",
-    "targetLangLabel": "Target language",
-    "translate": "Translate",
-    "summarizeDoc": "Summarize document",
-    "generateText": "Generate text",
-    "imageFailed": "Couldn't generate the image.",
-    "imagePromptPlaceholder": "Describe the image, e.g. \"a futuristic city at sunset, watercolor style\"…",
-    "ratioSquare": "Square 1:1",
-    "ratioLandscape": "Landscape 3:2",
-    "ratioPortrait": "Portrait 2:3",
-    "generatingImage": "Generating image (this may take several seconds)…",
-    "generateImage": "Generate image",
-    "generatedImageAlt": "Generated image",
-    "downloadImage": "Download image",
+    "generateFailed": "Kunne ikke generere et svar.",
+    "noContent": "AI-tjenesten returnerede intet indhold. Tjek at AI Gateway er aktiv (kræver betalingskort).",
+    "connectionError": "Der opstod en forbindelsesfejl. Prøv igen.",
+    "dropDoc": "Træk et dokument hertil, eller klik for at vælge",
+    "removeFile": "Fjern fil",
+    "translatePlaceholder": "Indsæt teksten, der skal oversættes…",
+    "copyPlaceholder": "Beskriv, hvad AI skal skrive, f.eks. \"en produktbeskrivelse af en miljøvenlig vandflaske\"…",
+    "toneLabel": "Stil",
+    "targetLangLabel": "Målsprog",
+    "translate": "Oversæt",
+    "summarizeDoc": "Opsummer dokument",
+    "generateText": "Generer tekst",
+    "imageFailed": "Kunne ikke generere billedet.",
+    "imagePromptPlaceholder": "Beskriv billedet, f.eks. \"en futuristisk by ved solnedgang, akvarelstil\"…",
+    "ratioSquare": "Kvadrat 1:1",
+    "ratioLandscape": "Landskab 3:2",
+    "ratioPortrait": "Portræt 2:3",
+    "generatingImage": "Genererer billede (dette kan tage flere sekunder)…",
+    "generateImage": "Generer billede",
+    "generatedImageAlt": "Genereret billede",
+    "downloadImage": "Download billede",
     "tones": {
-      "professional": "professional",
-      "friendly": "friendly",
-      "energetic": "energetic",
-      "formal": "formal",
-      "playful": "playful",
-      "persuasive": "persuasive"
+      "professional": "professionel",
+      "friendly": "venlig",
+      "energetic": "energisk",
+      "formal": "formel",
+      "playful": "legende",
+      "persuasive": "overbevisende"
     },
     "languages": {
-      "english": "English",
-      "german": "German",
-      "spanish": "Spanish",
-      "french": "French",
-      "italian": "Italian",
-      "ukrainian": "Ukrainian",
-      "polish": "Polish",
-      "japanese": "Japanese"
+      "english": "Engelsk",
+      "german": "Tysk",
+      "spanish": "Spansk",
+      "french": "Fransk",
+      "italian": "Italiensk",
+      "ukrainian": "Ukrainsk",
+      "polish": "Polsk",
+      "japanese": "Japansk"
     }
   },
   "category": {
@@ -259,64 +509,64 @@
     "notFound": "Kategori ikke fundet"
   },
   "paywall": {
-    "unlockTitle": "Unlock \"{tool}\" with Premium",
-    "description": "Unlock all Toolando.tech AI tools — text and image generation, translation, summaries and the assistant — in one subscription.",
-    "feature1": "Unlimited access to all AI tools",
-    "feature2": "Text generator, image generator and translator",
-    "feature3": "Priority request processing",
-    "goPremium": "Upgrade to Premium",
-    "redirecting": "Redirecting…",
-    "signInToBuy": "Sign in to buy Premium",
-    "noAccount": "Don't have an account?",
-    "signUp": "Sign up"
+    "unlockTitle": "Lås \"{tool}\" op med Premium",
+    "description": "Lås alle Toolando.tech AI-værktøjer op — tekst- og billedgenerering, oversættelse, resuméer og assistenten — i ét abonnement.",
+    "feature1": "Ubegrænset adgang til alle AI-værktøjer",
+    "feature2": "Tekstgenerator, billedgenerator og oversætter",
+    "feature3": "Prioriteret behandling af anmodninger",
+    "goPremium": "Opgrader til Premium",
+    "redirecting": "Omdirigerer…",
+    "signInToBuy": "Log ind for at købe Premium",
+    "noAccount": "Har du ikke en konto?",
+    "signUp": "Tilmeld dig"
   },
   "account": {
-    "backToHome": "Back to homepage",
-    "yourAccount": "Your account",
+    "backToHome": "Tilbage til forsiden",
+    "yourAccount": "Din konto",
     "premiumBadge": "Premium",
-    "freeBadge": "Free account",
-    "premiumActiveTitle": "You have active Premium",
-    "premiumActiveDesc": "Thank you for your support! You have full access to all AI tools without limits.",
-    "manageSubscription": "Manage subscription",
-    "manageOpening": "Opening…",
-    "managePortalError": "Could not open the portal.",
-    "manageGenericError": "An error occurred.",
-    "goPremiumTitle": "Go Premium",
-    "feature1": "Unlimited access to AI tools",
-    "feature2": "Background removal, image and text generation",
-    "feature3": "Priority processing",
-    "buyPremium": "Buy Premium",
-    "buyRedirecting": "Redirecting…",
-    "refreshHint": "Paid but Premium still inactive? Refresh your status:",
-    "refreshStatus": "Refresh Premium status",
-    "refreshChecking": "Checking...",
-    "refreshNoSub": "No active subscription found. If you just paid, wait a moment and try again.",
-    "refreshFailed": "Could not refresh status.",
-    "refreshNetworkError": "A network error occurred. Please try again.",
-    "signOut": "Sign out"
+    "freeBadge": "Gratis konto",
+    "premiumActiveTitle": "Du har aktivt Premium",
+    "premiumActiveDesc": "Tak for din støtte! Du har fuld adgang til alle AI-værktøjer uden begrænsninger.",
+    "manageSubscription": "Administrer abonnement",
+    "manageOpening": "Åbner…",
+    "managePortalError": "Kunne ikke åbne portalen.",
+    "manageGenericError": "Der opstod en fejl.",
+    "goPremiumTitle": "Få Premium",
+    "feature1": "Ubegrænset adgang til AI-værktøjer",
+    "feature2": "Baggrundsfjernelse, billede- og tekstgenerering",
+    "feature3": "Prioriteret behandling",
+    "buyPremium": "Køb Premium",
+    "buyRedirecting": "Omdirigerer…",
+    "refreshHint": "Betalt, men Premium stadig inaktivt? Opdater din status:",
+    "refreshStatus": "Opdater Premium-status",
+    "refreshChecking": "Tjekker...",
+    "refreshNoSub": "Intet aktivt abonnement fundet. Hvis du lige har betalt, vent et øjeblik og prøv igen.",
+    "refreshFailed": "Kunne ikke opdatere status.",
+    "refreshNetworkError": "Der opstod en netværksfejl. Prøv igen.",
+    "signOut": "Log ud"
   },
   "downloader": {
     "eyebrow": "Video → MP3",
-    "title": "Multi-Platform → MP3 Downloader",
-    "subtitle": "Paste a link from TikTok, Instagram, Facebook, Twitter/X, Vimeo or SoundCloud and grab the audio.",
-    "metaDescription": "Multi-platform Video to MP3 Downloader — TikTok, Instagram, Facebook, Twitter, Vimeo, SoundCloud. Paste a link and download the audio.",
-    "back": "All tools",
-    "inputLabel": "Video link",
+    "title": "Multiplatform → MP3-henter",
+    "subtitle": "Indsæt et link fra TikTok, Instagram, Facebook, Twitter/X, Vimeo eller SoundCloud, og hent lyden.",
+    "metaDescription": "Multi-platform Video to MP3 Downloader — TikTok, Instagram, Facebook, Twitter, Vimeo, SoundCloud. Indsæt et link og download lyden.",
+    "back": "Alle værktøjer",
+    "inputLabel": "Videolink",
     "inputPlaceholder": "https://www.tiktok.com/@user/video/...",
-    "detected": "detected",
+    "detected": "registreret",
     "idLabel": "ID",
-    "invalidLink": "Enter a valid link from a supported platform.",
-    "download": "Download MP3",
-    "preparing": "Preparing your link…",
-    "ready": "Your link is ready.",
-    "openPage": "Open download page",
-    "resultTitle": "Ready to download",
-    "resultsBack": "Back to downloader",
-    "thumbnailAlt": "Video thumbnail",
-    "viewSource": "View original",
-    "faqTitle": "Frequently asked questions",
-    "disclaimer": "Toolando.tech does not host or download any media. It only detects the platform and the public video ID and hands off to an external service or your browser. Only download content you have the rights to.",
-    "externalNote": "Download happens on an external service or in your browser. Toolando.tech only captured the public platform and video ID. Please respect copyright and each platform's terms of service.",
+    "invalidLink": "Indtast et gyldigt link fra en understøttet platform.",
+    "download": "Hent MP3",
+    "preparing": "Forbereder dit link…",
+    "ready": "Dit link er klar.",
+    "openPage": "Åbn downloadside",
+    "resultTitle": "Klar til download",
+    "resultsBack": "Tilbage til downloader",
+    "thumbnailAlt": "Videominiature",
+    "viewSource": "Vis original",
+    "faqTitle": "Ofte stillede spørgsmål",
+    "disclaimer": "Toolando.tech hoster eller downloader ikke medier. Den registrerer kun platformen og det offentlige video-ID og videregiver til en ekstern tjeneste eller din browser. Download kun indhold, du har rettigheder til.",
+    "externalNote": "Download sker via en ekstern tjeneste eller i din browser. Toolando.tech registrerede kun den offentlige platform og video-ID. Respekter ophavsret og hver platforms servicevilkår.",
     "faq": [
       {
         "q": "Which platforms are supported?",
@@ -339,18 +589,320 @@
         "a": "Only download content you own or have permission to use. Downloading copyrighted material without permission may violate the platform's terms of service and copyright law."
       }
     ],
-    "platformDisabled": "Downloading from {platform} is temporarily unavailable — {platform} actively blocks downloaders, so we've paused it until our own converter is ready. All other platforms still work."
+    "platformDisabled": "Download fra {platform} er midlertidigt utilgængelig — {platform} blokerer aktivt downloadere, så vi har sat det på pause, indtil vores egen konverter er klar. Alle andre platforme fungerer stadig."
+  },
+  "pages": {
+    "contact": {
+      "eyebrow": "Kontakt",
+      "title": "Kontaktformular",
+      "intro": "Har du et spørgsmål, en partnerskabsidé eller vil du rapportere et problem? Udfyld formularen - jeg svarer hurtigst muligt.",
+      "name": "Navn",
+      "namePlaceholder": "Dit navn",
+      "email": "E-mail",
+      "emailPlaceholder": "Din e-mailadresse",
+      "message": "Besked",
+      "messagePlaceholder": "Beskriv dit problem eller spørgsmål...",
+      "submit": "Send besked",
+      "sent": "Tak! Din besked er blevet forberedt i din e-mail-app.",
+      "subject": "Forespørgsel fra Toolando.tech"
+    },
+    "about": {
+      "eyebrow": "Om mig",
+      "title": "Hej, jeg hedder Szymon — skaberen af Toolando",
+      "intro": "Toolando.tech er mit eget projekt, som jeg bygger på min egen. Fra idéen, gennem koden, til det indhold, du læser nu - det hele kommer fra et par hænder. Jeg ønsker, at enkle opgaver, som at konvertere en fil eller et hurtigt onlineværktøj, skal være tilgængelige for alle, uden software at installere og uden unødvendige komplikationer.",
+      "whyTitle": "Hvorfor Toolando blev oprettet",
+      "whyP1": "Jeg arbejder med computere hver dag, og jeg har mange gange set, hvor meget tid folk taber på opgaver, der burde tage et øjeblik - at ændre et filformat, udtrække lyd fra en optagelse eller en hurtig handling, der tvinger dig til at lede efter et tilfældigt websted fuld af annoncer og fælder.",
+      "whyP2": "Toolando blev skabt for at samle sådanne værktøjer på ét overskueligt og sikkert sted. Jeg interesserer mig for, at tjenesten er hurtig, læsbar og ærlig over for brugeren - uden tricks og uden skjulte fangster.",
+      "howTitle": "Hvordan Toolando virker",
+      "howIntro": "Tjenesten leverer onlineværktøjer i to varianter: gratis og premium.",
+      "howFreeTerm": "Gratis værktøjer",
+      "howFreeDesc": "tilgængelig for alle uden en konto. Dette er de daglige, mest brugte funktioner, som jeg ønsker at holde åbne for alle.",
+      "howPremiumTerm": "Premium værktøjer",
+      "howPremiumDesc": "mere avancerede funktioner eller højere grænser, der hjælper med at vedligeholde og udvikle projektet. Premium-indtægter går direkte til servere, udvikling og nye værktøjer.",
+      "howOutro": "Uanset varianten holder jeg mig til samme regel: uploadede filer bruges udelukkende til at udføre konverteringen og gemmes ikke af mig.",
+      "outsideTitle": "Hvad jeg gør ud over Toolando",
+      "outsideP1": "Jeg leverer IT-tjenester — hjælper enkeltpersoner og virksomheder med daglige hardware- og softwareproblemer.",
+      "outsideList": [
+        "servicering og reparation af bærbare computere og computere,",
+        "IT-tjenester og teknisk support,",
+        "opbygning af webværktøjer og applikationer."
+      ],
+      "outsideP2": "Erfaring fra reparationer og arbejde med brugere udmønter sig direkte i, hvordan jeg designer Toolando — enkelt, konkret og med reelle behov i tankerne.",
+      "contactTitle": "Kontakt",
+      "contactP1": "Har du et spørgsmål, en idé til et nyt værktøj eller vil du rapportere et problem? Skriv til mig - jeg svarer gerne.",
+      "emailLabel": "E-mail:",
+      "methodologyTitle": "Hvordan jeg tester konverteringer og skriver vejledninger",
+      "methodologyP1": "Hver guide og formatprofil på Toolando.tech er baseret på rigtige konverteringstests - ikke copy-pasted specifikationer. Jeg uploader eksempelfiler, sammenligner outputstørrelse og kvalitet og noterer, hvilke indstillinger der fungerer bedst.",
+      "methodologyList": [
+        "Jeg tester konvertere med filer i forskellige størrelser (små, mellemstore, store).",
+        "For lyd/video sammenligner jeg bitrate, varighed og afspilningskompatibilitet.",
+        "For billeder tjekker jeg filstørrelse, visuel kvalitet og gennemsigtighed.",
+        "Vejledninger opdateres, når formater eller platformskrav ændres."
+      ],
+      "methodologyP2": "Hvis du finder en fejl i en guide eller en konverter, der ikke virker som beskrevet, send en e-mail til badyltech@outlook.com — rettelser hjælper alle.",
+      "updatedLabel": "Siden sidst opdateret",
+      "updatedDate": "juli 2026"
+    },
+    "editorial": {
+      "eyebrow": "Redaktion",
+      "title": "Redaktionelle standarder for Toolando.tech",
+      "intro": "Toolando.tech er ikke kun konvertere — det er guider, en formatencyklopædi og sammenligninger. Nedenfor forklarer jeg, hvordan indhold skabes, hvor informationen kommer fra, og hvornår den opdateres.",
+      "whoTitle": "Hvem skaber indholdet",
+      "whoP1": "Jeg skriver hver guide, formatprofil og sammenligning selv — Szymon Badyl, skaber af Toolando.tech. Jeg bruger ikke indholdsfabrikker eller ukontrollerede AI-tekster.",
+      "whoP2": "Hver artikel er baseret på konverteringstests med mine egne filer. Hvis noget ikke fungerer som beskrevet, retter jeg både teksten og værktøjet.",
+      "standardsTitle": "Redaktionelle principper",
+      "standardsIntro": "Jeg anvender de samme regler for hver ny guide:",
+      "standardsList": [
+        "I test the converter with files of different sizes before publishing.",
+        "I give concrete scenarios (email, shop, social media), not vague generalities.",
+        "I distinguish compression from format conversion and lossy from lossless.",
+        "I write about tool limits — when not to convert online.",
+        "I update the date and content when platform or format requirements change."
+      ],
+      "sourcesTitle": "Kilder og ærlighed",
+      "sourcesP1": "Jeg verificerer formatspecifikationer (MIME, codecs) mod IANA, FFmpeg og leverandørdokumentation. Sammenligninger bygger på mine egne målinger af størrelse og kvalitet, ikke marketingtabeller.",
+      "sourcesP2": "Eksterne links vises kun, når de virkelig hjælper (f.eks. officiel dokumentation). Jeg promoverer ikke betalte konkurrentværktøjer.",
+      "updatesTitle": "Opdateringer og rettelser",
+      "updatesP1": "Fundet en fejl, forældet info eller har du et emneforslag? Send e-mail til badyltech@outlook.com — rettelser indsættes i artiklen med opdateringsdato.",
+      "updatedLabel": "Sidst opdateret",
+      "updatedDate": "august 2026",
+      "fullGuideCta": "Fuld guide om redaktionelle standarder"
+    },
+    "howItWorks": {
+      "eyebrow": "Hvordan virker det?",
+      "title": "Sådan fungerer værktøjerne i Toolando",
+      "intro": "Toolando.tech er et sæt onlineværktøjer, du kører direkte i din browser - uden at der skal installeres noget. Nedenfor forklarer jeg, hvordan filbehandling fungerer, hvordan jeg tager mig af sikkerheden, og hvordan gratis værktøjer adskiller sig fra premium.",
+      "browserTitle": "Værktøjer, der kører i browseren",
+      "browserP": "Du åbner et værktøj, vælger en fil eller indtaster data, og du får resultatet direkte på siden. Du behøver ikke en konto for at bruge de gratis værktøjer, og du behøver ikke installere noget på din computer.",
+      "filesTitle": "Hvordan filer behandles",
+      "filesIntro": "Afhængigt af typen af værktøj behandles filer på to måder:",
+      "filesLocalTerm": "Lokalt i browseren",
+      "filesLocalDesc": "nogle handlinger kører direkte på din enhed, og filen forlader aldrig din computer overhovedet.",
+      "filesServerTerm": "Midlertidigt på serveren",
+      "filesServerDesc": "når et værktøj har brug for mere computerkraft, behandles filen kun på serveren under konverteringens varighed og slettes derefter.",
+      "filesOutro": "I ingen af disse tilfælde gemmer jeg dine filer eller bruger dem til andre formål.",
+      "securityTitle": "Sikkerhed",
+      "securityP": "Sikkerhed og privatliv er en prioritet for mig. Forbindelsen til siden er krypteret, og filer bruges udelukkende til at udføre den opgave, du anmoder om.",
+      "securityList": [
+        "uploadede filer gemmes ikke efter handlingen er fuldført,",
+        "Jeg sælger eller deler ikke dine data,",
+        "du behøver ikke oplyse personlige data for at bruge de gratis værktøjer."
+      ],
+      "tiersTitle": "Gratis værktøjer vs premium",
+      "tiersP": "Toolando tilbyder værktøjer i to varianter, men sikkerhedsprincippet er det samme i begge.",
+      "tiersFreeTerm": "Gratis",
+      "tiersFreeDesc": "tilgængelig for alle uden en konto. Perfekt til hverdagens hurtige opgaver.",
+      "tiersPremiumTerm": "Premium",
+      "tiersPremiumDesc": "mere avancerede funktioner og højere grænser eller større filer. Premium understøtter servervedligeholdelse og udvikling af nye værktøjer."
+    },
+    "faq": {
+      "eyebrow": "FAQ",
+      "title": "Ofte stillede spørgsmål",
+      "intro": "Jeg har her samlet svarene på de spørgsmål, der dukker op oftest. Hvis du ikke kan finde det, du leder efter, så skriv til mig på badyltech@outlook.com.",
+      "items": [
+        {
+          "q": "Er Toolando's værktøjer gratis?",
+          "a": "De fleste værktøjer er helt gratis og tilgængelige uden at oprette en konto. Nogle mere avancerede funktioner og højere grænser er tilgængelige i premium-varianten, som understøtter vedligeholdelse og udvikling af tjenesten."
+        },
+        {
+          "q": "Hvordan adskiller gratis værktøjer sig fra premium?",
+          "a": "Gratis værktøjer dækker daglige, mest almindelige opgaver og er åbne for alle. Premium tilbyder mere avancerede funktioner og større filer eller begrænsninger. Filsikkerhedsprincippet er det samme i begge varianter."
+        },
+        {
+          "q": "Er mine filer sikre?",
+          "a": "Ja. Uploadede filer bruges udelukkende til at udføre konverteringen og gemmes ikke af mig. Nogle operationer kører lokalt i browseren, og hvis en fil går til serveren, behandles den kun under opgavens varighed og slettes derefter."
+        },
+        {
+          "q": "Gemmer Toolando de filer, jeg uploader?",
+          "a": "Nej. Jeg gemmer ikke dine filer, efter at handlingen er fuldført, og jeg bruger dem ikke til andre formål."
+        },
+        {
+          "q": "Hvordan beskytter du mit privatliv?",
+          "a": "Jeg behandler kun tekniske og statistiske data (f.eks. IP-adresse, browsertype, system, webstedstrafik) i overensstemmelse med GDPR. Du finder detaljerne i privatlivspolitikken. Du behøver ikke oplyse personlige data for at bruge de gratis værktøjer."
+        },
+        {
+          "q": "Skal jeg oprette en konto for at bruge værktøjerne?",
+          "a": "Nej. De gratis værktøjer fungerer uden en konto. En konto er muligvis kun nødvendig for premium-funktioner."
+        },
+        {
+          "q": "Er der annoncer på siden?",
+          "a": "Ja, tjenesten viser muligvis Google AdSense-annoncer, som hjælper med at holde de gratis værktøjer tilgængelige for alle."
+        },
+        {
+          "q": "Hvordan fungerer onlineværktøjerne?",
+          "a": "Du åbner et værktøj i din browser, vælger en fil eller indtaster data, og får resultatet med det samme - uden noget at installere. Jeg har beskrevet flere detaljer om \"Hvordan virker det?\" side."
+        },
+        {
+          "q": "Hvordan kan jeg komme i kontakt?",
+          "a": "Skriv til badyltech@outlook.com eller brug kontaktformularen. Jeg svarer så hurtigt som muligt."
+        }
+      ]
+    },
+    "privacy": {
+      "eyebrow": "Privatlivspolitik",
+      "title": "Privatlivspolitik for Toolando.tech",
+      "intro": "Toolando.tech er en tjeneste med onlineværktøjer i en gratis og premium variant. Jeg værner om brugernes privatliv og behandler data i overensstemmelse med gældende regler, herunder GDPR.",
+      "lastUpdated": "Sidst opdateret: 23. juli 2026",
+      "s1Title": "1. Dataansvarlig",
+      "s1Pre": "Dataansvarlig er Szymon Badyl, ejer af Toolando.tech (Polen). For privatlivsspørgsmål kan du kontakte mig på:",
+      "s1Address": "Korrespondance: badyltech@outlook.com",
+      "s2Title": "2. Hvilke data behandles",
+      "s2Intro": "Tjenesten behandler tekniske og statistiske data, der indsamles automatisk ved brug af webstedet:",
+      "s2List": [
+        "IP address,",
+        "browser type and version,",
+        "the device's operating system,",
+        "traffic and usage data (e.g. pages visited)."
+      ],
+      "s2Outro": "Hvis du kontakter mig via e-mail eller formular, behandler jeg også den e-mailadresse, du angiver, og indholdet af din besked.",
+      "s3Title": "3. Filer uploadet til værktøjerne",
+      "s3P": "Filer, du uploader til værktøjerne til konvertering eller en anden handling, gemmes ikke af mig. De bruges udelukkende til at udføre den opgave, du anmoder om, og slettes, når den er fuldført. Jeg bruger dem ikke til noget andet formål.",
+      "s4Title": "4. Cookies og sporing",
+      "s4Intro": "Tjenesten bruger følgende typer cookies:",
+      "s4TechTerm": "Tekniske",
+      "s4TechDesc": "nødvendige for, at webstedet fungerer korrekt, og for at huske indstillinger (f.eks. sprog).",
+      "s4AnalyticsTerm": "Analytiske",
+      "s4AnalyticsDesc": "statistiske værktøjer (f.eks. Google Analytics), der hjælper med at forstå, hvordan webstedet bruges, i aggregeret og anonym form.",
+      "s4AdsTerm": "Reklame",
+      "s4AdsDesc": "Google AdSense, som kan bruge cookies til at vise og tilpasse annoncer.",
+      "s4Outro": "Du kan administrere eller deaktivere cookies når som helst i dine browserindstillinger. Ved dit første besøg viser vi et cookiebanner, hvor du kan acceptere alle cookies eller begrænse dig til nødvendige.",
+      "s4ThirdPartyTitle": "Tredjepartsudbydere",
+      "s4ThirdPartyP": "Tjenesten bruger Google-tjenester (Analytics, AdSense). Google kan indsamle data i henhold til sin egen privatlivspolitik. Mere information: https://policies.google.com/technologies/partner-sites",
+      "s5Title": "5. Gratis og premiumværktøjer",
+      "s5P": "Toolando tilbyder gratis værktøjer (tilgængelige uden konto) og premiumværktøjer. Reglerne for databehandling og filbeskyttelse er de samme i begge varianter — de adskiller sig kun i funktionsomfang og grænser.",
+      "s6Title": "6. Formål med databehandling",
+      "s6Intro": "Jeg behandler data udelukkende til følgende formål:",
+      "s6List": [
+        "ensuring the correct and secure operation of the service,",
+        "statistical traffic analysis and improving the tools,",
+        "displaying ads,",
+        "handling contact with the user."
+      ],
+      "s7Title": "7. Dine rettigheder",
+      "s7Intro": "Du har ret til at:",
+      "s7List": [
+        "access your data,",
+        "rectify or delete it,",
+        "restrict processing,",
+        "lodge a complaint with the relevant data protection authority."
+      ],
+      "s8Title": "8. Ændringer i politikken",
+      "s8P": "Privatlivspolitikken kan opdateres for at afspejle ændringer i tjenesten eller loven. Den aktuelle version er altid tilgængelig på denne side."
+    },
+    "terms": {
+      "eyebrow": "Servicevilkår",
+      "title": "Servicevilkår for Toolando.tech",
+      "intro": "Vilkårene nedenfor beskriver reglerne for brug af Toolando.tech-tjenesten. Ved at bruge tjenesten accepterer du disse regler.",
+      "s1Title": "1. Generelle bestemmelser",
+      "s1P": "Ejeren af Toolando.tech er Szymon. Tjenesten tilbyder onlineværktøjer til filkonvertering, indholdsgenerering og AI-værktøjer.",
+      "s2Title": "2. Gratis og premiumværktøjer",
+      "s2Intro": "Toolando tilbyder værktøjer i to varianter:",
+      "s2FreeTerm": "Gratis",
+      "s2FreeDesc": "tilgængelige for alle uden at oprette konto.",
+      "s2PremiumTerm": "Premium",
+      "s2PremiumDesc": "med mere avancerede funktioner og højere grænser.",
+      "s2Outro": "Regler for betalinger eller abonnementer på premiumfunktioner præsenteres på relevante steder i tjenesten.",
+      "s3Title": "3. Brug på egen risiko",
+      "s3P1": "Du bruger tjenesten på egen risiko. Jeg gør mit bedste for, at værktøjerne fungerer korrekt, men tjenesten leveres \"as is\" uden garanti for tilgængelighed, korrekthed af resultater eller egnethed til et bestemt formål.",
+      "s3P2": "Tjenesteejeren er ikke ansvarlig for:",
+      "s3List": [
+        "the consequences of using the tools' results,",
+        "lost profits,",
+        "damage resulting from interruptions in the service."
+      ],
+      "s3Outro": "Brugeren forpligter sig til at bruge tjenesten i overensstemmelse med loven og er ansvarlig for det indhold og de filer, der behandles.",
+      "s4Title": "4. Brugerfiler",
+      "s4P": "Filer uploadet til værktøjerne gemmes ikke. De bruges udelukkende til at udføre den anmodede handling og slettes, når den er fuldført.",
+      "s5Title": "5. Annoncer",
+      "s5P": "Tjenesten kan vise Google AdSense-annoncer. Annoncer hjælper med at vedligeholde de gratis værktøjer og udvikle projektet. Annonceudbyderen kan bruge cookies i overensstemmelse med privatlivspolitikken.",
+      "s6Title": "6. Ophavsret",
+      "s6P": "Navnet Toolando.tech, grafiske elementer og tjenestens indhold er juridisk beskyttet. Kopiering og brug uden ejerens samtykke er forbudt.",
+      "s7Title": "7. Kontakt",
+      "s7Pre": "For spørgsmål relateret til disse vilkår kan du kontakte mig på:",
+      "s8Title": "8. Ændringer i vilkårene",
+      "s8P": "Vilkårene kan opdateres for at afspejle ændringer i tjenesten eller loven. Den aktuelle version er altid tilgængelig på denne side."
+    },
+    "guides": {
+      "eyebrow": "Guider",
+      "title": "Guider og vejledninger til filkonvertering",
+      "intro": "Praktiske artikler om filformater, konvertering og bedste praksis. Hver guide forklarer, hvornår og hvorfor du konverterer en fil, og hvordan du gør det sikkert med Toolando.tech.",
+      "articles": [
+        {
+          "title": "MP3 vs WAV — when to convert audio?",
+          "body": "MP3 is a lossy compression format — files are small but some audio data is lost. WAV preserves full quality but files can be 10 times larger. Convert MP3 → WAV when you need a file for editing in a DAW (e.g. Audacity, FL Studio) or when a platform requires a lossless format. Convert WAV → MP3 when you want to email a recording, publish a podcast, or save disk space. Toolando.tech supports both conversions — just upload your file and download the result."
+        },
+        {
+          "title": "How to convert PDF to JPG for print and the web",
+          "body": "PDF is a document format that preserves page layout. Sometimes you need individual pages as images — for a website, a PowerPoint presentation, or printing a single page. The PDF → JPG converter in Toolando.tech renders each PDF page as a separate high-resolution JPG image. PDF files are never stored — they are deleted immediately after conversion. If you need transparency, consider PDF → PNG instead."
+        },
+        {
+          "title": "WebP and AVIF — modern image formats for websites",
+          "body": "JPG and PNG have dominated the web for years, but newer formats offer better compression. WebP (Google) produces files 25–35% smaller than JPG at the same visual quality and is supported by all modern browsers. AVIF goes even further — files can be half the size of WebP. Convert JPG → WebP or PNG → AVIF in Toolando.tech to speed up your website. Remember that older browsers (e.g. IE) don't support these formats — keep a JPG version as a fallback."
+        },
+        {
+          "title": "Extracting audio from video — the legal alternative",
+          "body": "Sometimes you have a video file (e.g. a camera recording, presentation) and only need the audio track. Toolando.tech lets you extract audio from MP4, MOV, AVI, MKV and other video formats, saving it as MP3, WAV, FLAC, or AAC. This is a legal operation on your own file — unlike downloading music from YouTube or TikTok, which Toolando.tech deliberately does not offer. Upload your video file, choose an audio format, and download the result."
+        },
+        {
+          "title": "JSON, CSV, and XML — converting data between formats",
+          "body": "Developers and data analysts often work with different data formats. JSON is the standard in APIs and configs. CSV and TSV are used for importing into Excel and spreadsheets. XML is used in older enterprise systems and RSS. Toolando.tech converts between these formats while preserving data structure. For example: JSON → CSV lets you open an API response in Excel, and CSV → JSON prepares data for sending to a REST API."
+        },
+        {
+          "title": "File security in online tools",
+          "body": "Uploading files to online tools naturally raises privacy concerns. At Toolando.tech, files are used solely to perform the operation you request — conversion, compression, or preview. After the job completes, files are deleted from the server. Some tools (e.g. the universal file opener) run entirely in your browser — in that case the file never leaves your computer. The connection to the site is encrypted (HTTPS). We never sell or share your files with third parties."
+        },
+        {
+          "title": "Lossy vs lossless compression — a simple guide",
+          "body": "Lossy formats (MP3, JPG, AAC, H.264) discard some data to shrink file size. Lossless formats (FLAC, PNG, WAV, ZIP) keep all data but produce larger files. Rule of thumb: only convert from lossy to lossless when you must — you won't recover lost quality. Converting lossy to lossy (e.g. JPG → JPG at lower quality) should happen once; each re-conversion degrades the result. In Toolando.tech's format encyclopedia, every format is labeled with its compression type."
+        },
+        {
+          "title": "HEIC from iPhone — how to open and convert to JPG",
+          "body": "Apple saves photos in HEIC (HEIF) by default — smaller than JPG at the same quality. The catch: Windows without an extension, older apps, and many services don't support HEIC. Solution: convert HEIC → JPG or HEIC → PNG in Toolando.tech before emailing photos, uploading to a site, or printing. You can also set iPhone to \"Most Compatible\" (JPG) in Settings, but online conversion works on photos already saved as HEIC."
+        },
+        {
+          "title": "PDF vs DOCX — which format when?",
+          "body": "DOCX (Word) is for editing text — you change content, styles, and headings. PDF locks page layout — it looks identical on every device, ideal for invoices, contracts, and CVs sent to recruiters. Convert DOCX → PDF before sending a document \"for reading only.\" Convert PDF → DOCX only when you need to edit text — layout may break. For archiving and print, always choose PDF."
+        },
+        {
+          "title": "Video for social media — MP4, resolution, and bitrate",
+          "body": "Instagram, TikTok, YouTube, and Facebook prefer MP4 with H.264 video and AAC audio. Before publishing, convert MOV, AVI, or MKV to MP4 to avoid upload errors. 1080p (1920×1080) is enough for most platforms; 4K only when the platform supports it. Higher bitrate means better quality but a larger file. Toolando.tech converts video with no install — see the format encyclopedia for details on MP4, WebM, and MOV."
+        }
+      ]
+    }
   },
   "hub": {
-    "convertersTitle": "File converters",
-    "convertersDesc": "Audio, video, images, documents, data, fonts and archives — plus compress, merge PDF and background removal.",
-    "calculatorsTitle": "Calculators & converters",
-    "calculatorsDesc": "Currency, VAT, dates, timezones, units and bitrate.",
-    "developerTitle": "Developer & text tools",
-    "developerDesc": "Passwords, QR, Base64, UUID, hash, colors, timestamp and character counter.",
-    "specialTools": "File tools",
-    "browseConverters": "Browse converters",
-    "browseCalculators": "Browse calculators",
-    "browseDeveloper": "Browse tools"
+    "convertersTitle": "Filkonvertere",
+    "convertersDesc": "Lyd, video, billeder, dokumenter, data, skrifttyper og arkiver — plus komprimere, flette PDF og fjerne baggrund.",
+    "calculatorsTitle": "Lommeregnere & omregnere",
+    "calculatorsDesc": "Valuta, moms, datoer, tidszoner, enheder og bitrate.",
+    "developerTitle": "Udvikler- & tekstværktøjer",
+    "developerDesc": "Adgangskoder, QR, Base64, UUID, hash, farver, tidsstempel og tegntæller.",
+    "specialTools": "Filværktøjer",
+    "browseConverters": "Gennemse konvertere",
+    "browseCalculators": "Gennemse lommeregnere",
+    "browseDeveloper": "Gennemse værktøjer"
+  },
+  "specialFields": {
+    "splitMode": "Opdelingstilstand",
+    "everyPage": "Hver side separat",
+    "pageRange": "Valgt interval",
+    "pagesHint": "Sider (f.eks. 1-3,5)",
+    "rotation": "Rotationsvinkel",
+    "width": "Bredde (px)",
+    "height": "Højde (px, valgfrit)",
+    "watermark": "Vandmærketekst",
+    "trimStart": "Start (sek eller MM:SS)",
+    "trimEnd": "Slut (sek eller MM:SS)",
+    "pageNumberPos": "Sidetalposition",
+    "bottom": "Bund af side",
+    "top": "Top af side"
+  },
+  "accountRecent": {
+    "title": "Senest brugt",
+    "subtitle": "Historik gemt lokalt i denne browser."
+  },
+  "favorites": {
+    "add": "Tilføj til favoritter",
+    "remove": "Favorit"
   }
 }

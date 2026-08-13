@@ -81,6 +81,11 @@ export default uiPack({
     "comparisonsCta": "Procházet srovnání"
   },
   "footer": {
+    "emailAria": "Otevře e-mailovou aplikaci pro napsání nám",
+    "youtube": "YouTube",
+    "messenger": "Messenger",
+    "instagram": "Instagram",
+    "facebook": "Facebook",
     "guides": "Průvodci",
     "formats": "Formáty souborů",
     "comparisons": "Srovnání",

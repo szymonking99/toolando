@@ -25,6 +25,8 @@ export type UtilityToolId =
   | "sila-hasla"
   | "konwerter-napisow"
   | "generator-nazw-plikow"
+  | "walidator-iban"
+  | "kalkulator-b2b"
 
 export type UtilityCategory =
   | "finance"
@@ -48,6 +50,7 @@ export const utilityTools: UtilityToolConfig[] = [
   { id: "kalkulator-vat", category: "finance", icon: "Percent" },
   { id: "kalkulator-wieku", category: "time", icon: "Cake" },
   { id: "kalkulator-kredytu", category: "finance", icon: "Landmark" },
+  { id: "kalkulator-b2b", category: "finance", icon: "Briefcase" },
   { id: "generator-hasel", category: "dev", icon: "KeyRound" },
   { id: "sila-hasla", category: "dev", icon: "ShieldCheck" },
   { id: "licznik-znakow", category: "text", icon: "Type" },
@@ -60,6 +63,7 @@ export const utilityTools: UtilityToolConfig[] = [
   { id: "json-formatter", category: "dev", icon: "Braces" },
   { id: "dekoder-jwt", category: "dev", icon: "Key" },
   { id: "walidator-nip-pesel", category: "dev", icon: "BadgeCheck" },
+  { id: "walidator-iban", category: "dev", icon: "Landmark" },
   { id: "konwerter-napisow", category: "media", icon: "Subtitles" },
   { id: "kalkulator-bitrate", category: "media", icon: "HardDrive" },
   { id: "konwerter-kolorow", category: "dev", icon: "Palette" },

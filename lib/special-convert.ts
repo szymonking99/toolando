@@ -562,3 +562,88 @@ export async function trimVideo(
     contentType: outExt === "webm" ? "video/webm" : "video/mp4",
   }
 }
+
+export async function compressVideo(
+  input: Buffer,
+  originalName: string,
+  quality: number,
+): Promise<SpecialResult> {
+  const q = Math.min(100, Math.max(1, Math.round(quality) || 75))
+  const crf = Math.round(51 - (q / 100) * 33)
+  const ext = extOf(originalName) || "mp4"
+  const outExt = "mp4"
+  const { ffmpegTransform } = await import("@/lib/ffmpeg-utils")
+
+  const out = await ffmpegTransform(input, ext, outExt, (inPath, outPath) => [
+    "-y",
+    "-i",
+    inPath,
+    "-c:v",
+    "libx264",
+    "-crf",
+    String(crf),
+    "-preset",
+    "medium",
+    "-c:a",
+    "aac",
+    "-b:a",
+    "128k",
+    "-movflags",
+    "+faststart",
+    outPath,
+  ])
+
+  const stem = stemOf(originalName)
+  return {
+    buffer: out,
+    filename: `${stem}-skompresowany.mp4`,
+    contentType: "video/mp4",
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* PDF page numbers (pdf-lib)                                          */
+/* ------------------------------------------------------------------ */
+
+export async function addPdfPageNumbers(
+  input: Buffer,
+  originalName: string,
+  position: "bottom" | "top",
+): Promise<SpecialResult> {
+  const { PDFDocument, rgb, StandardFonts } = await import("pdf-lib")
+
+  let doc
+  try {
+    doc = await PDFDocument.load(input, { ignoreEncryption: true })
+  } catch {
+    throw new ConversionError("Nie udało się otworzyć pliku PDF.")
+  }
+
+  const font = await doc.embedFont(StandardFonts.Helvetica)
+  const pages = doc.getPages()
+  const total = pages.length
+  const size = 10
+
+  pages.forEach((page, index) => {
+    const { width, height } = page.getSize()
+    const text = `${index + 1} / ${total}`
+    const textWidth = font.widthOfTextAtSize(text, size)
+    const x = (width - textWidth) / 2
+    const y = position === "top" ? height - 28 : 20
+    page.drawText(text, {
+      x,
+      y,
+      size,
+      font,
+      color: rgb(0.35, 0.35, 0.35),
+    })
+  })
+
+  const bytes = await doc.save()
+  const stem = stemOf(originalName)
+  return {
+    buffer: Buffer.from(bytes),
+    filename: `${stem}-numeracja.pdf`,
+    contentType: "application/pdf",
+  }
+}

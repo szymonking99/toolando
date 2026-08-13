@@ -52,7 +52,9 @@
     "close": "Zamknij"
   },
   "nextSteps": {
-    "title": "Kolejne kroki"
+    "title": "Kolejne kroki",
+    "aiSummarizeTitle": "Podsumuj dokument AI",
+    "aiSummarizeBody": "Wygeneruj streszczenie PDF lub DOCX w kilka sekund (Premium lub 1 próba/dzień)."
   },
   "newsletter": {
     "title": "Nowe narzędzia i aktualizacje Premium",
@@ -60,7 +62,8 @@
     "placeholder": "ty@example.com",
     "cta": "Zapisz się",
     "thanks": "Dzięki! Potwierdź przez formularz kontaktowy, jeśli chcesz odpowiedź.",
-    "confirmViaContact": "Dokończ zapis przez kontakt →"
+    "confirmViaContact": "Dokończ zapis przez kontakt →",
+    "error": "Nie udało się zapisać. Spróbuj ponownie."
   },
   "toolRequest": {
     "title": "Brakuje konwertera?",
@@ -87,7 +90,7 @@
     "freeDesc": "Wszystkie konwertery, kalkulatory i większość utility.",
     "premiumTitle": "Premium",
     "premiumDesc": "Pełny pakiet AI — tekst, obrazy, streszczenia, tłumaczenia, czat.",
-    "supporterTitle": "Supporter",
+    "supporterTitle": "Wspierający",
     "supporterDesc": "Premium + bez reklam (wkrótce).",
     "cta": "Wybierz Premium",
     "signIn": "Zaloguj się, aby subskrybować",
@@ -108,7 +111,7 @@
     "serverBody": "Przy uploadzie plik służy tylko do tej operacji i jest potem usuwany. HTTPS end-to-end.",
     "aiTitle": "Narzędzia AI",
     "aiBody": "Premium AI wysyła tylko treść, którą sam przekażesz — nigdy nie sprzedajemy ani nie używamy do reklam.",
-    "badge": "Privacy-First",
+    "badge": "Prywatność na pierwszym miejscu",
     "readPolicy": "Pełna polityka prywatności"
   },
   "nav": {
@@ -134,7 +137,7 @@
     "developer": "Dla developerów",
     "premium": "Premium",
     "guides": "Poradniki",
-    "faq": "FAQ",
+    "faq": "Pytania i odpowiedzi",
     "more": "Więcej"
   },
   "hero": {
@@ -212,7 +215,7 @@
     "cta": "Otwórz plik",
     "kindImages": "Obrazy",
     "kindVideo": "Wideo",
-    "kindAudio": "Audio",
+    "kindAudio": "Dźwięk",
     "kindDocs": "PDF, kod i dane",
     "readError": "Nie udało się odczytać zawartości pliku.",
     "dropAny": "Przeciągnij dowolny plik tutaj lub kliknij, aby wybrać",
@@ -230,14 +233,14 @@
     "kinds": {
       "image": "Obraz",
       "video": "Wideo",
-      "audio": "Audio",
+      "audio": "Dźwięk",
       "pdf": "Dokument PDF",
       "text": "Tekst / kod",
       "binary": "Plik binarny"
     }
   },
   "ai": {
-    "badge": "Premium AI",
+    "badge": "AI Premium",
     "title": "Inteligentne narzędzia AI",
     "subtitle": "Pisz, streszczaj, tłumacz i twórz obrazy dzięki najnowszym modelom sztucznej inteligencji — bezpośrednio w Toolando.tech, bez instalacji.",
     "openTool": "Otwórz narzędzie",
@@ -314,14 +317,19 @@
     "rights": "© 2026 Toolando.tech. Wszelkie prawa zastrzeżone.",
     "aboutMe": "O mnie",
     "howItWorks": "Jak to działa",
-    "faq": "FAQ",
+    "faq": "Pytania i odpowiedzi",
     "guides": "Poradniki",
     "editorial": "Redakcja",
     "formats": "Formaty plików",
     "comparisons": "Porównania",
     "glossary": "Słownik",
     "rss": "Kanał RSS",
-    "cookieSettings": "Ustawienia cookies"
+    "cookieSettings": "Ustawienia cookies",
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "messenger": "Messenger",
+    "youtube": "YouTube",
+    "emailAria": "Otwiera program pocztowy, aby napisać do nas"
   },
   "ad": {
     "label": "Reklama",
@@ -539,7 +547,7 @@
   },
   "downloader": {
     "eyebrow": "Wideo → MP3",
-    "title": "Multi-Platform → MP3 Downloader",
+    "title": "Pobieranie MP3 z wielu platform",
     "subtitle": "Wklej link z TikToka, Instagrama, Facebooka, Twittera/X, Vimeo lub SoundCloud i pobierz dźwięk.",
     "metaDescription": "Wieloplatformowy konwerter wideo na MP3 — TikTok, Instagram, Facebook, Twitter, Vimeo, SoundCloud. Wklej link i pobierz dźwięk.",
     "back": "Wszystkie narzędzia",
@@ -590,7 +598,7 @@
       "intro": "Masz pytanie, propozycję współpracy lub chcesz zgłosić problem? Wypełnij formularz — odpowiem tak szybko, jak to możliwe.",
       "name": "Imię",
       "namePlaceholder": "Twoje imię",
-      "email": "Email",
+      "email": "E-mail",
       "emailPlaceholder": "Twój adres e-mail",
       "message": "Wiadomość",
       "messagePlaceholder": "Opisz swój problem lub pytanie...",
@@ -688,7 +696,7 @@
       "tiersPremiumDesc": "bardziej zaawansowane funkcje oraz większe limity lub pliki. Premium wspiera utrzymanie serwerów i rozwój kolejnych narzędzi."
     },
     "faq": {
-      "eyebrow": "FAQ",
+      "eyebrow": "Pytania i odpowiedzi",
       "title": "Najczęściej zadawane pytania",
       "intro": "Zebrałem tu odpowiedzi na pytania, które pojawiają się najczęściej. Jeśli nie znajdziesz tego, czego szukasz, napisz do mnie na badyltech@outlook.com.",
       "items": [
@@ -873,5 +881,28 @@
     "browseConverters": "Przeglądaj konwertery",
     "browseCalculators": "Przeglądaj kalkulatory",
     "browseDeveloper": "Przeglądaj narzędzia"
+  },
+  "specialFields": {
+    "splitMode": "Tryb podziału",
+    "everyPage": "Każda strona osobno",
+    "pageRange": "Wybrany zakres",
+    "pagesHint": "Strony (np. 1-3,5)",
+    "rotation": "Kąt obrotu",
+    "width": "Szerokość (px)",
+    "height": "Wysokość (px, opcjonalnie)",
+    "watermark": "Tekst znaku wodnego",
+    "trimStart": "Początek (sek. lub MM:SS)",
+    "trimEnd": "Koniec (sek. lub MM:SS)",
+    "pageNumberPos": "Pozycja numeracji",
+    "bottom": "Na dole strony",
+    "top": "Na górze strony"
+  },
+  "accountRecent": {
+    "title": "Ostatnio używane",
+    "subtitle": "Historia zapisana lokalnie w tej przeglądarce."
+  },
+  "favorites": {
+    "add": "Dodaj do ulubionych",
+    "remove": "Ulubione"
   }
 }

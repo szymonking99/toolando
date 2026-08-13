@@ -3,10 +3,122 @@
     "title": "Toolando.tech — I tuoi strumenti online in un unico posto",
     "description": "Convertitori, generatori, strumenti PDF e IA — tutto in un elegante ecosistema. Veloce e semplice."
   },
+  "socialProof": {
+    "toolsCount": "{count}+ strumenti in un unico ecosistema",
+    "usesToday": "{uses} utilizzi oggi"
+  },
+  "recent": {
+    "title": "Usati di recente",
+    "subtitle": "I tuoi ultimi strumenti — salvati localmente in questo browser.",
+    "favoritesHint": "Aggiungi una stella a uno strumento dalla sua pagina per fissarlo qui."
+  },
+  "premiumUpsell": {
+    "title": "Sblocca gli strumenti IA con Premium",
+    "description": "Generazione di testo, riassunti, immagini, traduzione e chat — un abbonamento, senza sorprese per richiesta.",
+    "point1": "Tutti gli strumenti IA senza limiti",
+    "point2": "Elaborazione prioritaria nei giorni più affollati",
+    "point3": "Sostieni lo sviluppo indipendente",
+    "cta": "Passa a Premium",
+    "compare": "Vedi i piani",
+    "trialHint": "Accedi per un'anteprima gratuita — poi passa a Premium quando vuoi."
+  },
+  "privacyBadge": {
+    "title": "Privacy al primo posto",
+    "local": "Elaborato localmente nel tuo browser"
+  },
+  "onboarding": {
+    "skip": "Chiudi",
+    "next": "Avanti",
+    "start": "Esplora gli strumenti",
+    "learnMore": "Come funziona Toolando",
+    "step1": {
+      "title": "Converti, calcola, apri — un unico ecosistema",
+      "body": "287+ strumenti per file, calcolatori, utilità per sviluppatori e IA — scegli uno strumento o cerca con Ctrl+K."
+    },
+    "step2": {
+      "title": "Privacy quando conta",
+      "body": "Molte utilità funzionano nel tuo browser. Le conversioni server eliminano i file al termine dell'operazione."
+    },
+    "step3": {
+      "title": "Strumenti IA con Premium",
+      "body": "Prova i convertitori gratis. Le funzioni IA usano un piano mensile semplice — consulta i prezzi prima di raggiungere il paywall."
+    }
+  },
+  "exitIntent": {
+    "title": "Prima di andare…",
+    "body": "Ti serve un altro convertitore? Cerca tra 287+ strumenti o dicci cosa sviluppare dopo.",
+    "browse": "Esplora gli strumenti",
+    "request": "Richiedi uno strumento",
+    "close": "Chiudi"
+  },
+  "nextSteps": {
+    "title": "Prossimi passi",
+    "aiSummarizeTitle": "Riassumi un documento con l'IA",
+    "aiSummarizeBody": "Genera un riassunto PDF o DOCX in pochi secondi (Premium o 1 prova/giorno)."
+  },
+  "newsletter": {
+    "title": "Nuovi strumenti e aggiornamenti Premium",
+    "subtitle": "Lascia la tua e-mail — ti avvisiamo sulle novità importanti (niente spam).",
+    "placeholder": "tu@esempio.com",
+    "cta": "Iscriviti",
+    "thanks": "Grazie! Conferma tramite contatti se vuoi una risposta.",
+    "confirmViaContact": "Completa l'iscrizione tramite il modulo di contatto →",
+    "error": "Iscrizione non riuscita. Riprova."
+  },
+  "toolRequest": {
+    "title": "Manca un convertitore?",
+    "body": "Suggerisci un nuovo strumento o formato — diamo priorità a ciò che chiedono gli utenti.",
+    "cta": "Suggerisci uno strumento"
+  },
+  "comparison": {
+    "title": "Toolando vs strumenti cloud di upload",
+    "subtitle": "Perché gli utenti abbandonano i convertitori generici basati su upload.",
+    "feature": "Funzionalità",
+    "competitor": "Convertitore cloud tipico",
+    "rows": {
+      "privacy": "Anteprima locale e opzioni privacy",
+      "offline": "Funziona offline (utilità PWA)",
+      "ai": "Workflow IA integrato",
+      "free": "Convertitori base gratuiti",
+      "limits": "Nessun limite giornaliero arbitrario sulle funzioni base"
+    }
+  },
+  "premiumPage": {
+    "title": "Toolando Premium",
+    "subtitle": "Strumenti IA, prezzi chiari, disdici quando vuoi.",
+    "freeTitle": "Gratuito",
+    "freeDesc": "Tutti i convertitori di file, calcolatori e la maggior parte delle utilità.",
+    "premiumTitle": "Premium",
+    "premiumDesc": "Suite IA completa — testo, immagini, riassunti, traduzione, chat.",
+    "supporterTitle": "Supporter",
+    "supporterDesc": "Premium + esperienza senza pubblicità (in arrivo).",
+    "cta": "Inizia Premium",
+    "signIn": "Accedi per abbonarti",
+    "faqTitle": "FAQ sui prezzi",
+    "faq1q": "Come funzionano i crediti?",
+    "faq1a": "Non ci sono crediti per richiesta — Premium è un abbonamento mensile fisso per un uso IA illimitato.",
+    "faq2q": "Posso provare prima di pagare?",
+    "faq2a": "Crea un account gratuito, esplora i convertitori, poi passa a Premium quando ti serve l'IA.",
+    "faq3q": "E la privacy dei file?",
+    "faq3a": "I file sul server vengono eliminati dopo l'elaborazione. Gli strumenti nel browser non caricano mai i tuoi dati."
+  },
+  "privacyPage": {
+    "title": "Privacy integrata nel design",
+    "subtitle": "Come Toolando protegge i tuoi file e i tuoi dati.",
+    "localTitle": "Strumenti locali nel browser",
+    "localBody": "Utilità, apri-file universale e molti calcolatori funzionano interamente nel tuo browser — i dati non lasciano mai il dispositivo.",
+    "serverTitle": "Conversioni server",
+    "serverBody": "Quando carichi un file per convertirlo, viene usato solo per quell'operazione e eliminato dopo. HTTPS end-to-end.",
+    "aiTitle": "Strumenti IA",
+    "aiBody": "L'IA Premium invia al provider del modello solo i contenuti che invii tu — mai venduti né usati per pubblicità.",
+    "badge": "Privacy al primo posto",
+    "readPolicy": "Leggi l'informativa sulla privacy completa"
+  },
   "nav": {
     "aiTools": "Strumenti IA",
     "tools": "Convertitori",
-    "categories": "Converter categories",
+    "categories": "Categorie convertitori",
+    "formats": "Formati",
     "about": "Chi siamo",
     "contact": "Contatti",
     "cta": "Inizia",
@@ -15,11 +127,18 @@
     "allTools": "Tutti gli strumenti",
     "signIn": "Accedi",
     "account": "Il mio account",
-    "downloader": "MP3 Downloader",
+    "downloader": "Scaricatore MP3",
+    "aboutMe": "Chi sono",
+    "privacy": "Informativa sulla privacy",
+    "terms": "Termini di servizio",
     "onlineTools": "Calcolatori",
     "converters": "Convertitori",
     "calculators": "Calcolatori",
-    "developer": "Per sviluppatori"
+    "developer": "Per sviluppatori",
+    "premium": "Premium",
+    "guides": "Guide",
+    "faq": "FAQ",
+    "more": "Altro"
   },
   "hero": {
     "badge": "Un nuovo ecosistema di strumenti online",
@@ -27,7 +146,68 @@
     "titleHighlight": "un unico posto",
     "subtitle": "Convertitori, generatori, PDF, IA — tutto in un unico ecosistema.",
     "browse": "Esplora gli strumenti",
-    "learnMore": "Scopri di più"
+    "learnMore": "Scopri di più",
+    "convertCta": "Converti un file adesso"
+  },
+  "search": {
+    "placeholder": "Cerca convertitori (ad esempio mp3 wav, pdf jpg)…",
+    "noResults": "Nessun convertitore trovato. Prova una query diversa."
+  },
+  "share": {
+    "label": "Condividi",
+    "copy": "Copia link",
+    "copied": "Copiato"
+  },
+  "feedback": {
+    "question": "Questo articolo è stato utile?",
+    "yes": "Sì",
+    "no": "No",
+    "thanks": "Grazie per il tuo feedback!"
+  },
+  "recommender": {
+    "title": "Quale formato dovrei scegliere?",
+    "subtitle": "Rispondi a due brevi domande e ti consiglieremo il formato migliore.",
+    "step1": "Che tipo di file hai?",
+    "step2": "Cosa vuoi farne?",
+    "categories": {
+      "image": "Immagine/foto",
+      "audio": "Audio/musica",
+      "video": "Video",
+      "document": "Documento"
+    },
+    "goals": {
+      "image_web": "Pubblicare su un sito web",
+      "image_email": "Invia tramite e-mail",
+      "image_print": "Stampa",
+      "image_iphone": "Foto da iPhone (HEIC)",
+      "audio_listen": "Ascolta sul telefono o sul lettore",
+      "audio_edit": "Modifica in una DAW",
+      "audio_archive": "Archivio senza perdita di qualità",
+      "video_social": "Pubblica sui social media",
+      "video_web": "Incorpora in un sito web",
+      "video_audio": "Estrai solo l'audio",
+      "document_share": "Invia per lettura (nessuna modifica)",
+      "document_edit": "Modifica il testo"
+    },
+    "resultTitle": "Formato consigliato:",
+    "readFormat": "Guida al formato",
+    "openConverter": "Apri convertitore",
+    "back": "Indietro",
+    "tryAgain": "Ricominciare da capo",
+    "reasons": {
+      "webp-web": "WebP è più piccolo del 25–35% rispetto a JPG con la stessa qualità: ideale per siti Web più veloci.",
+      "jpg-email": "JPG è universale e piccolo, perfetto per gli allegati e-mail.",
+      "png-print": "PNG è senza perdite e con bordi netti: ottimo per la grafica e la stampa a breve termine.",
+      "heic-jpg": "HEIC da iPhone necessita della conversione in JPG per compatibilità con Windows e la maggior parte dei servizi.",
+      "mp3-listen": "MP3 funziona su ogni dispositivo e mantiene i file piccoli.",
+      "wav-edit": "WAV è senza perdita di dati: ideale per l'editing senza perdita di qualità.",
+      "flac-archive": "FLAC comprime senza perdere qualità: ideale per l'archiviazione musicale.",
+      "mp4-social": "MP4 (H.264 + AAC) è lo standard per Instagram, TikTok e YouTube.",
+      "webm-web": "WebM è ottimizzato per i video HTML5 nei browser.",
+      "mp3-audio": "Estrai l'audio dal tuo video come MP3 per podcast o suonerie.",
+      "pdf-share": "Layout dei blocchi PDF: il destinatario vede esattamente ciò che intendevi.",
+      "docx-edit": "DOCX ti consente di modificare testo, stili e intestazioni in Word."
+    }
   },
   "opener": {
     "title": "Apri-file universale",
@@ -37,26 +217,26 @@
     "kindVideo": "Video",
     "kindAudio": "Audio",
     "kindDocs": "PDF, codice e dati",
-    "readError": "Couldn't read the file contents.",
-    "dropAny": "Drag any file here or click to choose",
-    "dropHint": "Images, video, audio, PDF, documents, code, data — any format. Files are opened locally in your browser and never uploaded anywhere.",
-    "noConverter": "We don't have a converter for this format yet — but you can preview and download the file below.",
-    "convertTo": "Convert to another format",
-    "optionOne": "option",
-    "optionMany": "options",
-    "downloadedOk": "Done! The file has been downloaded.",
-    "download": "Download",
-    "close": "Close",
-    "emptyFile": "(empty file)",
-    "textTruncated": "Preview truncated to the first 200,000 characters. Download the file to see everything.",
-    "binaryPreview": "Binary preview (first bytes in hexadecimal)",
+    "readError": "Impossibile leggere il contenuto del file.",
+    "dropAny": "Trascina un file qui o clicca per scegliere",
+    "dropHint": "Immagini, video, audio, PDF, documenti, codice, dati — qualsiasi formato. I file si aprono localmente nel browser e non vengono mai caricati.",
+    "noConverter": "Non abbiamo ancora un convertitore per questo formato — ma puoi visualizzare l'anteprima e scaricare il file qui sotto.",
+    "convertTo": "Converti in un altro formato",
+    "optionOne": "opzione",
+    "optionMany": "opzioni",
+    "downloadedOk": "Fatto! Il file è stato scaricato.",
+    "download": "Scarica",
+    "close": "Chiudi",
+    "emptyFile": "(file vuoto)",
+    "textTruncated": "Anteprima troncata ai primi 200.000 caratteri. Scarica il file per vedere tutto.",
+    "binaryPreview": "Anteprima binaria (primi byte in esadecimale)",
     "kinds": {
-      "image": "Image",
+      "image": "Immagine",
       "video": "Video",
       "audio": "Audio",
-      "pdf": "PDF document",
-      "text": "Text / code",
-      "binary": "Binary file"
+      "pdf": "Documento PDF",
+      "text": "Testo / codice",
+      "binary": "File binario"
     }
   },
   "ai": {
@@ -76,6 +256,41 @@
     "title": "Categorie di strumenti",
     "subtitle": "Scegli una categoria per vedere tutti i convertitori disponibili.",
     "browse": "Esplora"
+  },
+  "toolsIndex": {
+    "intro": "Ciascuno strumento converte i file sul server, senza alcun software da installare. Non sai quale formato scegliere? Sfoglia l'enciclopedia dei formati o le guide alla conversione.",
+    "formatsLink": "Enciclopedia dei formati",
+    "guidesLink": "Guide alla conversione"
+  },
+  "knowledgeHub": {
+    "title": "Conoscenza di formati e conversioni",
+    "subtitle": "Non limitarti a convertire: scopri quando scegliere MP3 su FLAC, WebP su JPG o PDF su DOCX. Le nostre guide ti aiutano a evitare perdite di qualità e conversioni non necessarie.",
+    "formatsTitle": "Enciclopedia dei formati di file",
+    "formatsDesc": "Oltre 40 formati: audio, video, immagini, documenti, dati e archivi. Pro, contro, compatibilità e confronti con le alternative.",
+    "formatsCta": "Sfoglia i formati",
+    "guidesTitle": "Guide alla conversione",
+    "guidesDesc": "Articoli pratici: qualità audio, compressione delle immagini, video per i social media, PDF vs DOCX e sicurezza dei file online.",
+    "guidesCta": "Leggi le guide",
+    "comparisonsTitle": "Confronti di formati",
+    "comparisonsDesc": "MP3 vs FLAC, JPG vs WebP, PDF vs DOCX: confronti testa a testa con un verdetto chiaro.",
+    "comparisonsCta": "Sfoglia i confronti",
+    "glossaryTitle": "Glossario",
+    "glossaryDesc": "Bitrate, codec, compressione con perdita, MIME — definizioni in linguaggio chiaro.",
+    "glossaryCta": "Apri glossario"
+  },
+  "editorial": {
+    "title": "Chi gestisce Toolando.tech",
+    "body": "Sono Szymon — progetto, sviluppo e testo ogni strumento personalmente. Le guide si basano su conversioni reali, non su specifiche copiate. Voglio che tu capisca i tuoi file prima di convertirli e che il servizio resti onesto con te.",
+    "aboutCta": "Chi sono e metodologia",
+    "howCta": "Come funzionano gli strumenti",
+    "editorialCta": "Standard editoriali",
+    "guidesCta": "Guide"
+  },
+  "featuredGuides": {
+    "title": "Guide in evidenza",
+    "subtitle": "Articoli pratici su formati di file, sicurezza e conversione — scritti da test reali, non modelli SEO.",
+    "readArticle": "Leggi la guida",
+    "allGuides": "Tutte le guide"
   },
   "why": {
     "title": "Perché Toolando.tech?",
@@ -100,9 +315,25 @@
     "privacy": "Informativa sulla privacy",
     "terms": "Termini di servizio",
     "rights": "© 2026 Toolando.tech. Tutti i diritti riservati.",
-    "aboutMe": "About me",
-    "howItWorks": "How it works",
-    "faq": "FAQ"
+    "aboutMe": "Chi sono",
+    "howItWorks": "Come funziona",
+    "faq": "FAQ",
+    "guides": "Guide",
+    "editorial": "Editoriale",
+    "formats": "Formati di file",
+    "comparisons": "Confronti",
+    "glossary": "Glossario",
+    "rss": "Feed RSS",
+    "cookieSettings": "Impostazioni cookie",
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "messenger": "Messenger",
+    "youtube": "YouTube",
+    "emailAria": "Apre l'app e-mail per scriverci"
+  },
+  "ad": {
+    "label": "Pubblicità",
+    "placeholder": "Spazio pubblicitario"
   },
   "language": {
     "label": "Lingua"
@@ -111,6 +342,10 @@
     "eyebrow": "Sostieni il progetto",
     "title": "Aiuta Toolando.tech a continuare",
     "subtitle": "Toolando.tech è sviluppato e offerto gratuitamente. Se ti fa risparmiare tempo, valuta di sostenerne lo sviluppo.",
+    "body1": "Mantengo il servizio da solo: codice, server, contenuti legali e guide. Il tuo supporto aiuta a coprire l'hosting (Vercel), l'elaborazione dei file, il dominio e lo sviluppo di nuovi strumenti.",
+    "body2": "Il supporto è del tutto volontario. Gli strumenti gratuiti non richiedono alcun pagamento. Premium è un abbonamento opzionale separato con funzionalità estese: consulta i Termini di servizio per i dettagli.",
+    "body3": "Hai una domanda, un'idea su uno strumento o hai trovato un bug? Scrivi a badyltech@outlook.com o utilizza il modulo di contatto: anche questo è un supporto prezioso.",
+    "legalNote": "Le donazioni non garantiscono l'accesso Premium né costituiscono un contratto di servizio se non diversamente specificato. I termini e l'Informativa sulla privacy si applicano indipendentemente dalle donazioni.",
     "coffee": "Offrimi un caffè",
     "donate": "Fai una donazione",
     "back": "Torna alla home",
@@ -155,32 +390,47 @@
     "merge": "Unisci i file",
     "result": "Risultato",
     "notFound": "Strumento non trovato",
-    "convertFailed": "Conversion failed.",
-    "connectionError": "Couldn't connect to the server. Please try again.",
-    "unavailable": "This converter is currently unavailable",
-    "dropClick": "Drag a file here or click to choose",
-    "dropClickMulti": "Drag files here or click to choose",
-    "supportedFormat": "Supported format",
-    "supported": "Supported",
+    "convertFailed": "Conversione non riuscita.",
+    "connectionError": "Impossibile connettersi al server. Riprova.",
+    "unavailable": "Questo convertitore non è al momento disponibile",
+    "dropClick": "Trascina un file qui o clicca per scegliere",
+    "dropClickMulti": "Trascina i file qui o clicca per scegliere",
+    "supportedFormat": "Formato supportato",
+    "supported": "Supportato",
     "maxSize": "max. 500 MB",
-    "removeFile": "Remove file",
-    "convertDone": "Conversion complete",
-    "downloadNamed": "Download",
-    "convertAnother": "Convert another file",
-    "uploadingFile": "Uploading file…",
-    "uploadingFiles": "Uploading files…",
-    "uploading": "Uploading…",
-    "converting": "Converting…",
-    "convertToPrefix": "Convert to",
-    "needTwoPdf": "Add at least two PDF files to merge.",
-    "operationFailed": "The operation failed.",
-    "compressionQuality": "Compression quality",
-    "qualityHint": "Lower value = smaller file. Higher value = better quality.",
-    "done": "Done",
-    "less": "less",
-    "resultPreview": "Result preview",
-    "startOver": "Start over",
-    "processingLong": "Processing (this may take a few seconds)…"
+    "removeFile": "Rimuovi file",
+    "convertDone": "Conversione completata",
+    "downloadNamed": "Scarica",
+    "convertAnother": "Converti un altro file",
+    "uploadingFile": "Caricamento file…",
+    "uploadingFiles": "Caricamento file…",
+    "uploading": "Caricamento…",
+    "converting": "Conversione…",
+    "convertToPrefix": "Converti in",
+    "needTwoPdf": "Aggiungi almeno due file PDF da unire.",
+    "operationFailed": "Operazione non riuscita.",
+    "compressionQuality": "Qualità di compressione",
+    "qualityHint": "Valore più basso = file più piccolo. Valore più alto = qualità migliore.",
+    "done": "Fatto",
+    "less": "in meno",
+    "resultPreview": "Anteprima risultato",
+    "startOver": "Ricomincia",
+    "processingLong": "Elaborazione (potrebbe richiedere qualche secondo)…",
+    "howToTitle": "Come convertire un file: passo dopo passo",
+    "aboutSource": "Informazioni sul formato sorgente",
+    "aboutTarget": "Informazioni sul formato di destinazione",
+    "whenToUseTitle": "Quando utilizzare questo convertitore",
+    "faqTitle": "Domande frequenti",
+    "qualityTitle": "Qualità della conversione: cosa sapere",
+    "tipsTitle": "Consigli pratici",
+    "readFormatGuide": "Guida al formato completo"
+  },
+  "cookieConsent": {
+    "title": "Cookie",
+    "description": "Toolando.tech utilizza cookie necessari e, con il tuo consenso, cookie analitici (Google Analytics) e pubblicitari (Google AdSense). Puoi accettare tutti o limitarti a quelli essenziali.",
+    "acceptAll": "Accetta tutti",
+    "necessaryOnly": "Solo essenziali",
+    "privacyLink": "Informativa sulla privacy"
   },
   "aiTool": {
     "prompt": "Il tuo testo",
@@ -208,44 +458,44 @@
     "thinking": "Sto pensando…",
     "aiError": "Impossibile ottenere una risposta dall'IA. Riprova.",
     "emptyChat": "Fai una domanda per iniziare la conversazione.",
-    "generateFailed": "Couldn't generate a response.",
-    "noContent": "The AI service returned no content. Check that AI Gateway is active (requires a payment card).",
-    "connectionError": "A connection error occurred. Please try again.",
-    "dropDoc": "Drag a document here or click to choose",
-    "removeFile": "Remove file",
-    "translatePlaceholder": "Paste the text to translate…",
-    "copyPlaceholder": "Describe what the AI should write, e.g. \"a product description for an eco-friendly water bottle\"…",
-    "toneLabel": "Tone",
-    "targetLangLabel": "Target language",
-    "translate": "Translate",
-    "summarizeDoc": "Summarize document",
-    "generateText": "Generate text",
-    "imageFailed": "Couldn't generate the image.",
-    "imagePromptPlaceholder": "Describe the image, e.g. \"a futuristic city at sunset, watercolor style\"…",
-    "ratioSquare": "Square 1:1",
-    "ratioLandscape": "Landscape 3:2",
-    "ratioPortrait": "Portrait 2:3",
-    "generatingImage": "Generating image (this may take several seconds)…",
-    "generateImage": "Generate image",
-    "generatedImageAlt": "Generated image",
-    "downloadImage": "Download image",
+    "generateFailed": "Impossibile generare una risposta.",
+    "noContent": "Il servizio IA non ha restituito contenuti. Verifica che AI Gateway sia attivo (richiede una carta di pagamento).",
+    "connectionError": "Si è verificato un errore di connessione. Riprova.",
+    "dropDoc": "Trascina un documento qui o clicca per scegliere",
+    "removeFile": "Rimuovi file",
+    "translatePlaceholder": "Incolla il testo da tradurre…",
+    "copyPlaceholder": "Descrivi cosa deve scrivere l'IA, es. «una descrizione prodotto per una borraccia ecologica»…",
+    "toneLabel": "Tono",
+    "targetLangLabel": "Lingua di destinazione",
+    "translate": "Traduci",
+    "summarizeDoc": "Riassumi documento",
+    "generateText": "Genera testo",
+    "imageFailed": "Impossibile generare l'immagine.",
+    "imagePromptPlaceholder": "Descrivi l'immagine, es. «una città futuristica al tramonto, stile acquerello»…",
+    "ratioSquare": "Quadrato 1:1",
+    "ratioLandscape": "Orizzontale 3:2",
+    "ratioPortrait": "Verticale 2:3",
+    "generatingImage": "Generazione immagine (potrebbe richiedere diversi secondi)…",
+    "generateImage": "Genera immagine",
+    "generatedImageAlt": "Immagine generata",
+    "downloadImage": "Scarica immagine",
     "tones": {
-      "professional": "professional",
-      "friendly": "friendly",
-      "energetic": "energetic",
-      "formal": "formal",
-      "playful": "playful",
-      "persuasive": "persuasive"
+      "professional": "professionale",
+      "friendly": "amichevole",
+      "energetic": "energico",
+      "formal": "formale",
+      "playful": "giocoso",
+      "persuasive": "persuasivo"
     },
     "languages": {
-      "english": "English",
-      "german": "German",
-      "spanish": "Spanish",
-      "french": "French",
-      "italian": "Italian",
-      "ukrainian": "Ukrainian",
-      "polish": "Polish",
-      "japanese": "Japanese"
+      "english": "Inglese",
+      "german": "Tedesco",
+      "spanish": "Spagnolo",
+      "french": "Francese",
+      "italian": "Italiano",
+      "ukrainian": "Ucraino",
+      "polish": "Polacco",
+      "japanese": "Giapponese"
     }
   },
   "category": {
@@ -259,64 +509,64 @@
     "notFound": "Categoria non trovata"
   },
   "paywall": {
-    "unlockTitle": "Unlock \"{tool}\" with Premium",
-    "description": "Unlock all Toolando.tech AI tools — text and image generation, translation, summaries and the assistant — in one subscription.",
-    "feature1": "Unlimited access to all AI tools",
-    "feature2": "Text generator, image generator and translator",
-    "feature3": "Priority request processing",
-    "goPremium": "Upgrade to Premium",
-    "redirecting": "Redirecting…",
-    "signInToBuy": "Sign in to buy Premium",
-    "noAccount": "Don't have an account?",
-    "signUp": "Sign up"
+    "unlockTitle": "Sblocca «{tool}» con Premium",
+    "description": "Sblocca tutti gli strumenti IA Toolando.tech — generazione di testo e immagini, traduzione, riassunti e assistente — in un unico abbonamento.",
+    "feature1": "Accesso illimitato a tutti gli strumenti IA",
+    "feature2": "Generatore di testo, generatore di immagini e traduttore",
+    "feature3": "Elaborazione prioritaria delle richieste",
+    "goPremium": "Passa a Premium",
+    "redirecting": "Reindirizzamento…",
+    "signInToBuy": "Accedi per acquistare Premium",
+    "noAccount": "Non hai un account?",
+    "signUp": "Registrati"
   },
   "account": {
-    "backToHome": "Back to homepage",
-    "yourAccount": "Your account",
+    "backToHome": "Torna alla home",
+    "yourAccount": "Il tuo account",
     "premiumBadge": "Premium",
-    "freeBadge": "Free account",
-    "premiumActiveTitle": "You have active Premium",
-    "premiumActiveDesc": "Thank you for your support! You have full access to all AI tools without limits.",
-    "manageSubscription": "Manage subscription",
-    "manageOpening": "Opening…",
-    "managePortalError": "Could not open the portal.",
-    "manageGenericError": "An error occurred.",
-    "goPremiumTitle": "Go Premium",
-    "feature1": "Unlimited access to AI tools",
-    "feature2": "Background removal, image and text generation",
-    "feature3": "Priority processing",
-    "buyPremium": "Buy Premium",
-    "buyRedirecting": "Redirecting…",
-    "refreshHint": "Paid but Premium still inactive? Refresh your status:",
-    "refreshStatus": "Refresh Premium status",
-    "refreshChecking": "Checking...",
-    "refreshNoSub": "No active subscription found. If you just paid, wait a moment and try again.",
-    "refreshFailed": "Could not refresh status.",
-    "refreshNetworkError": "A network error occurred. Please try again.",
-    "signOut": "Sign out"
+    "freeBadge": "Account gratuito",
+    "premiumActiveTitle": "Hai Premium attivo",
+    "premiumActiveDesc": "Grazie per il tuo supporto! Hai accesso completo a tutti gli strumenti IA senza limiti.",
+    "manageSubscription": "Gestisci abbonamento",
+    "manageOpening": "Apertura…",
+    "managePortalError": "Impossibile aprire il portale.",
+    "manageGenericError": "Si è verificato un errore.",
+    "goPremiumTitle": "Passa a Premium",
+    "feature1": "Accesso illimitato agli strumenti IA",
+    "feature2": "Rimozione sfondo, generazione immagini e testo",
+    "feature3": "Elaborazione prioritaria",
+    "buyPremium": "Acquista Premium",
+    "buyRedirecting": "Reindirizzamento…",
+    "refreshHint": "Hai pagato ma Premium è ancora inattivo? Aggiorna lo stato:",
+    "refreshStatus": "Aggiorna stato Premium",
+    "refreshChecking": "Verifica…",
+    "refreshNoSub": "Nessun abbonamento attivo trovato. Se hai appena pagato, attendi un momento e riprova.",
+    "refreshFailed": "Impossibile aggiornare lo stato.",
+    "refreshNetworkError": "Si è verificato un errore di rete. Riprova.",
+    "signOut": "Esci"
   },
   "downloader": {
     "eyebrow": "Video → MP3",
-    "title": "Multi-Platform → MP3 Downloader",
-    "subtitle": "Paste a link from TikTok, Instagram, Facebook, Twitter/X, Vimeo or SoundCloud and grab the audio.",
-    "metaDescription": "Multi-platform Video to MP3 Downloader — TikTok, Instagram, Facebook, Twitter, Vimeo, SoundCloud. Paste a link and download the audio.",
-    "back": "All tools",
-    "inputLabel": "Video link",
+    "title": "Downloader Multi-Piattaforma → MP3",
+    "subtitle": "Incolla un link da TikTok, Instagram, Facebook, Twitter/X, Vimeo o SoundCloud e ottieni l'audio.",
+    "metaDescription": "Downloader video in MP3 multi-piattaforma — TikTok, Instagram, Facebook, Twitter, Vimeo, SoundCloud. Incolla un link e scarica l'audio.",
+    "back": "Tutti gli strumenti",
+    "inputLabel": "Link del video",
     "inputPlaceholder": "https://www.tiktok.com/@user/video/...",
-    "detected": "detected",
+    "detected": "rilevato",
     "idLabel": "ID",
-    "invalidLink": "Enter a valid link from a supported platform.",
-    "download": "Download MP3",
-    "preparing": "Preparing your link…",
-    "ready": "Your link is ready.",
-    "openPage": "Open download page",
-    "resultTitle": "Ready to download",
-    "resultsBack": "Back to downloader",
-    "thumbnailAlt": "Video thumbnail",
-    "viewSource": "View original",
-    "faqTitle": "Frequently asked questions",
-    "disclaimer": "Toolando.tech does not host or download any media. It only detects the platform and the public video ID and hands off to an external service or your browser. Only download content you have the rights to.",
-    "externalNote": "Download happens on an external service or in your browser. Toolando.tech only captured the public platform and video ID. Please respect copyright and each platform's terms of service.",
+    "invalidLink": "Inserisci un link valido da una piattaforma supportata.",
+    "download": "Scarica MP3",
+    "preparing": "Preparazione del link…",
+    "ready": "Il tuo link è pronto.",
+    "openPage": "Apri pagina di download",
+    "resultTitle": "Pronto per il download",
+    "resultsBack": "Torna al downloader",
+    "thumbnailAlt": "Miniatura del video",
+    "viewSource": "Vedi originale",
+    "faqTitle": "Domande frequenti",
+    "disclaimer": "Toolando.tech non ospita né scarica alcun media. Rileva solo la piattaforma e l'ID pubblico del video e passa a un servizio esterno o al tuo browser. Scarica solo contenuti di cui possiedi i diritti.",
+    "externalNote": "Il download avviene su un servizio esterno o nel tuo browser. Toolando.tech ha catturato solo la piattaforma pubblica e l'ID del video. Rispetta il copyright e i termini di servizio di ogni piattaforma.",
     "faq": [
       {
         "q": "Which platforms are supported?",
@@ -339,18 +589,320 @@
         "a": "Only download content you own or have permission to use. Downloading copyrighted material without permission may violate the platform's terms of service and copyright law."
       }
     ],
-    "platformDisabled": "Downloading from {platform} is temporarily unavailable — {platform} actively blocks downloaders, so we've paused it until our own converter is ready. All other platforms still work."
+    "platformDisabled": "Il download da {platform} è temporaneamente non disponibile — {platform} blocca attivamente i downloader, quindi l'abbiamo sospeso fino al nostro convertitore. Le altre piattaforme funzionano ancora."
+  },
+  "pages": {
+    "contact": {
+      "eyebrow": "Contatto",
+      "title": "Modulo di contatto",
+      "intro": "Hai una domanda, un'idea di partnership o vuoi segnalare un problema? Compila il modulo: ti risponderò il prima possibile.",
+      "name": "Nome",
+      "namePlaceholder": "Il tuo nome",
+      "email": "E-mail",
+      "emailPlaceholder": "Il tuo indirizzo email",
+      "message": "Messaggio",
+      "messagePlaceholder": "Descrivi il tuo problema o domanda...",
+      "submit": "Invia messaggio",
+      "sent": "Grazie! Il tuo messaggio è stato preparato nella tua app di posta elettronica.",
+      "subject": "Richiesta da Toolando.tech"
+    },
+    "about": {
+      "eyebrow": "Su di me",
+      "title": "Ciao, sono Szymon, il creatore di Toolando",
+      "intro": "Toolando.tech è il mio progetto che costruisco da solo. Dall'idea, attraverso il codice, fino al contenuto che stai leggendo adesso, tutto nasce da un paio di mani. Voglio che attività semplici, come la conversione di un file o un rapido strumento online, siano disponibili a tutti, senza software da installare e senza complicazioni inutili.",
+      "whyTitle": "Perché è stato creato Toolando",
+      "whyP1": "Lavoro con i computer ogni giorno e ho visto molte volte quanto tempo le persone perdono in attività che dovrebbero richiedere un momento: modificare il formato di un file, estrarre l'audio da una registrazione o un'operazione rapida che ti costringe a cercare qualche sito casuale pieno di pubblicità e trappole.",
+      "whyP2": "Toolando è stato creato per raccogliere tali strumenti in un unico luogo chiaro e sicuro. Mi interessa che il servizio sia veloce, leggibile e onesto nei confronti dell'utente, senza trucchi e senza trappole nascoste.",
+      "howTitle": "Come funziona Toolando",
+      "howIntro": "Il servizio fornisce strumenti online in due varianti: gratuita e premium.",
+      "howFreeTerm": "Strumenti gratuiti",
+      "howFreeDesc": "disponibile a tutti, senza un account. Queste sono le funzionalità più utilizzate tutti i giorni che voglio mantenere aperte a tutti.",
+      "howPremiumTerm": "Strumenti premium",
+      "howPremiumDesc": "funzionalità più avanzate o limiti più elevati che aiutano a mantenere e far crescere il progetto. Le entrate premium vanno direttamente ai server, allo sviluppo e ai nuovi strumenti.",
+      "howOutro": "Indipendentemente dalla variante, mi attengo alla stessa regola: i file caricati vengono utilizzati esclusivamente per eseguire la conversione e non vengono memorizzati da me.",
+      "outsideTitle": "Cosa faccio oltre Toolando",
+      "outsideP1": "Fornisco servizi IT, aiutando privati e aziende con problemi hardware e software quotidiani.",
+      "outsideList": [
+        "assistenza e riparazione laptop e computer,",
+        "Servizi IT e supporto tecnico,",
+        "creazione di strumenti e applicazioni web."
+      ],
+      "outsideP2": "L'esperienza derivante dalle riparazioni e dal lavoro con gli utenti si traduce direttamente nel modo in cui progetto Toolando: semplice, diretto e tenendo presente le esigenze reali.",
+      "contactTitle": "Contatto",
+      "contactP1": "Hai una domanda, un'idea per un nuovo strumento o vuoi segnalare un problema? Scrivimi, ti risponderò volentieri.",
+      "emailLabel": "E-mail:",
+      "methodologyTitle": "Come collaudo le conversioni e scrivo guide",
+      "methodologyP1": "Ogni guida e profilo di formato su Toolando.tech si basa su test di conversione reali, non su specifiche copiate e incollate. Carico file di esempio, confronto le dimensioni e la qualità dell'output e noto quali impostazioni funzionano meglio.",
+      "methodologyList": [
+        "Provo i convertitori con file di diverse dimensioni (piccolo, medio, grande).",
+        "Per audio/video confronto bitrate, durata e compatibilità di riproduzione.",
+        "Per le immagini controllo la dimensione del file, la qualità visiva e la trasparenza.",
+        "Le guide vengono aggiornate quando cambiano i formati o i requisiti della piattaforma."
+      ],
+      "methodologyP2": "Se trovi un errore in una guida o in un convertitore che non funziona come descritto, invia un'e-mail a badyltech@outlook.com: le correzioni aiutano tutti.",
+      "updatedLabel": "Ultimo aggiornamento della pagina",
+      "updatedDate": "Luglio 2026"
+    },
+    "editorial": {
+      "eyebrow": "Editoriale",
+      "title": "Standard editoriali di Toolando.tech",
+      "intro": "Toolando.tech non sono solo convertitori — ci sono guide, un'enciclopedia dei formati e confronti. Di seguito spiego come viene creato il contenuto, da dove provengono le informazioni e quando vengono aggiornate.",
+      "whoTitle": "Chi crea i contenuti",
+      "whoP1": "Scrivo personalmente ogni guida, profilo di formato e confronto — Szymon Badyl, creatore di Toolando.tech. Non uso content farm né testi generati da IA non verificati.",
+      "whoP2": "Ogni articolo si basa su test di conversione con i miei file. Se qualcosa non funziona come descritto, correggo sia il testo che lo strumento.",
+      "standardsTitle": "Principi editoriali",
+      "standardsIntro": "Applico le stesse regole a ogni nuova guida:",
+      "standardsList": [
+        "I test the converter with files of different sizes before publishing.",
+        "I give concrete scenarios (email, shop, social media), not vague generalities.",
+        "I distinguish compression from format conversion and lossy from lossless.",
+        "I write about tool limits — when not to convert online.",
+        "I update the date and content when platform or format requirements change."
+      ],
+      "sourcesTitle": "Fonti e onestà",
+      "sourcesP1": "Verifico le specifiche dei formati (MIME, codec) con IANA, FFmpeg e documentazione dei produttori. I confronti si basano sulle mie misurazioni di dimensione e qualità, non su tabelle di marketing.",
+      "sourcesP2": "I link esterni compaiono solo quando aiutano davvero (es. documentazione ufficiale). Non promuovo strumenti a pagamento della concorrenza.",
+      "updatesTitle": "Aggiornamenti e correzioni",
+      "updatesP1": "Hai trovato un errore, un'informazione obsoleta o un suggerimento di argomento? Scrivi a badyltech@outlook.com — le correzioni vengono inserite nell'articolo con data di aggiornamento.",
+      "updatedLabel": "Ultimo aggiornamento",
+      "updatedDate": "agosto 2026",
+      "fullGuideCta": "Guida completa sugli standard editoriali"
+    },
+    "howItWorks": {
+      "eyebrow": "Come funziona?",
+      "title": "Come funzionano gli strumenti in Toolando",
+      "intro": "Toolando.tech è un insieme di strumenti online che esegui direttamente nel tuo browser, senza nulla da installare. Di seguito spiego come funziona l'elaborazione dei file, come mi prendo cura della sicurezza e in che modo gli strumenti gratuiti differiscono da quelli premium.",
+      "browserTitle": "Strumenti eseguiti nel browser",
+      "browserP": "Apri uno strumento, scegli un file o inserisci dati e ottieni il risultato direttamente sulla pagina. Non hai bisogno di un account per utilizzare gli strumenti gratuiti e non devi installare nulla sul tuo computer.",
+      "filesTitle": "Come vengono elaborati i file",
+      "filesIntro": "A seconda del tipo di strumento, i file vengono elaborati in due modi:",
+      "filesLocalTerm": "Localmente nel browser",
+      "filesLocalDesc": "alcune operazioni vengono eseguite direttamente sul tuo dispositivo e il file non lascia mai il tuo computer.",
+      "filesServerTerm": "Temporaneamente sul server",
+      "filesServerDesc": "quando uno strumento necessita di maggiore potenza di calcolo, il file viene elaborato sul server solo per la durata della conversione, e poi cancellato.",
+      "filesOutro": "In nessuno di questi casi conservo i tuoi file o li utilizzo per altri scopi.",
+      "securityTitle": "Sicurezza",
+      "securityP": "La sicurezza e la privacy sono una priorità per me. La connessione al sito è crittografata e i file vengono utilizzati esclusivamente per eseguire l'attività richiesta.",
+      "securityList": [
+        "i file caricati non vengono archiviati al termine dell'operazione,",
+        "Non vendo né condivido i tuoi dati,",
+        "non è necessario fornire dati personali per utilizzare gli strumenti gratuiti."
+      ],
+      "tiersTitle": "Strumenti gratuiti vs premium",
+      "tiersP": "Toolando offre strumenti in due varianti, ma il principio di sicurezza è lo stesso in entrambe.",
+      "tiersFreeTerm": "Gratuito",
+      "tiersFreeDesc": "disponibile a tutti, senza un account. Perfetto per le attività quotidiane e veloci.",
+      "tiersPremiumTerm": "Premio",
+      "tiersPremiumDesc": "funzionalità più avanzate e limiti più elevati o file più grandi. Premium supporta la manutenzione del server e lo sviluppo di nuovi strumenti."
+    },
+    "faq": {
+      "eyebrow": "Domande frequenti",
+      "title": "Domande frequenti",
+      "intro": "Ho raccolto qui le risposte alle domande che ci vengono poste più spesso. Se non trovi quello che cerchi, scrivimi a badyltech@outlook.com.",
+      "items": [
+        {
+          "q": "Gli strumenti di Toolando sono gratuiti?",
+          "a": "La maggior parte degli strumenti sono completamente gratuiti e disponibili senza creare un account. Alcune funzionalità più avanzate e limiti più elevati sono disponibili nella variante premium, che supporta il mantenimento e lo sviluppo del servizio."
+        },
+        {
+          "q": "In cosa differiscono gli strumenti gratuiti da quelli premium?",
+          "a": "Gli strumenti gratuiti coprono le attività quotidiane più comuni e sono aperti a tutti. Premium offre funzionalità più avanzate e file o limiti più grandi. Il principio di sicurezza dei file è lo stesso in entrambe le varianti."
+        },
+        {
+          "q": "I miei file sono al sicuro?",
+          "a": "Sì. I file caricati vengono utilizzati esclusivamente per eseguire la conversione e non vengono archiviati da me. Alcune operazioni vengono eseguite localmente nel browser e, se un file viene inviato al server, viene elaborato solo per la durata dell'attività e quindi eliminato."
+        },
+        {
+          "q": "Toolando memorizza i file che carico?",
+          "a": "No. Non salvo i tuoi file una volta completata l'operazione e non li utilizzo per nessun altro scopo."
+        },
+        {
+          "q": "Come proteggi la mia privacy?",
+          "a": "Tratto solo dati tecnici e statistici (es. indirizzo IP, tipo di browser, sistema, traffico del sito), in linea con il GDPR. Troverai i dettagli nella Privacy Policy. Non è necessario fornire dati personali per utilizzare gli strumenti gratuiti."
+        },
+        {
+          "q": "Devo creare un account per utilizzare gli strumenti?",
+          "a": "No. Gli strumenti gratuiti funzionano senza un account. Potrebbe essere necessario un account solo per le funzionalità premium."
+        },
+        {
+          "q": "Ci sono annunci sul sito?",
+          "a": "Sì, il servizio potrebbe visualizzare annunci Google AdSense, che aiutano a mantenere gli strumenti gratuiti disponibili a tutti."
+        },
+        {
+          "q": "Come funzionano gli strumenti online?",
+          "a": "Apri uno strumento nel tuo browser, scegli un file o inserisci dati e ottieni subito il risultato, senza nulla da installare. Ho descritto maggiori dettagli nella sezione \"Come funziona?\" pagina."
+        },
+        {
+          "q": "Come posso mettermi in contatto?",
+          "a": "Scrivi a badyltech@outlook.com o utilizza il modulo di contatto. Rispondo il più velocemente possibile."
+        }
+      ]
+    },
+    "privacy": {
+      "eyebrow": "Informativa sulla privacy",
+      "title": "Informativa sulla privacy di Toolando.tech",
+      "intro": "Toolando.tech è un servizio che offre strumenti online in versione gratuita e premium. Tengo alla privacy degli utenti e tratto i dati conformemente alla normativa applicabile, incluso il GDPR.",
+      "lastUpdated": "Ultimo aggiornamento: 23 luglio 2026",
+      "s1Title": "1. Titolare del trattamento",
+      "s1Pre": "Il titolare del trattamento è Szymon Badyl, proprietario di Toolando.tech (Polonia). Per questioni relative alla privacy puoi contattarmi a:",
+      "s1Address": "Corrispondenza: badyltech@outlook.com",
+      "s2Title": "2. Quali dati vengono trattati",
+      "s2Intro": "Il servizio tratta dati tecnici e statistici raccolti automaticamente durante l'utilizzo del sito:",
+      "s2List": [
+        "IP address,",
+        "browser type and version,",
+        "the device's operating system,",
+        "traffic and usage data (e.g. pages visited)."
+      ],
+      "s2Outro": "Se mi contatti via e-mail o modulo, tratto anche l'indirizzo e-mail fornito e il contenuto del messaggio.",
+      "s3Title": "3. File caricati negli strumenti",
+      "s3P": "I file che carichi negli strumenti per una conversione o altra operazione non vengono da me archiviati. Sono usati esclusivamente per eseguire l'operazione richiesta e vengono eliminati al termine. Non li uso per altri scopi.",
+      "s4Title": "4. Cookie",
+      "s4Intro": "Il servizio utilizza i seguenti tipi di cookie:",
+      "s4TechTerm": "Tecnici",
+      "s4TechDesc": "necessari al corretto funzionamento del sito e alla memorizzazione delle impostazioni (es. lingua).",
+      "s4AnalyticsTerm": "Analitici",
+      "s4AnalyticsDesc": "strumenti statistici (es. Google Analytics) che aiutano a capire come viene usato il sito, in forma aggregata e anonima.",
+      "s4AdsTerm": "Pubblicitari",
+      "s4AdsDesc": "Google AdSense, che può usare cookie per mostrare e personalizzare gli annunci.",
+      "s4Outro": "Puoi gestire o disabilitare i cookie in qualsiasi momento nelle impostazioni del browser. Al primo accesso mostriamo un banner di consenso cookie dove puoi accettare tutti i cookie o limitarti a quelli essenziali.",
+      "s4ThirdPartyTitle": "Fornitori terzi",
+      "s4ThirdPartyP": "Il servizio utilizza servizi Google (Analytics, AdSense). Google può raccogliere dati secondo la propria informativa sulla privacy. Maggiori informazioni: https://policies.google.com/technologies/partner-sites",
+      "s5Title": "5. Strumenti gratuiti e premium",
+      "s5P": "Toolando offre strumenti gratuiti (disponibili senza account) e strumenti premium. Le regole sul trattamento dei dati e la protezione dei file sono le stesse in entrambe le varianti — differiscono solo per funzionalità e limiti.",
+      "s6Title": "6. Finalità del trattamento dei dati",
+      "s6Intro": "Tratto i dati esclusivamente per le seguenti finalità:",
+      "s6List": [
+        "ensuring the correct and secure operation of the service,",
+        "statistical traffic analysis and improving the tools,",
+        "displaying ads,",
+        "handling contact with the user."
+      ],
+      "s7Title": "7. I tuoi diritti",
+      "s7Intro": "Hai diritto a:",
+      "s7List": [
+        "access your data,",
+        "rectify or delete it,",
+        "restrict processing,",
+        "lodge a complaint with the relevant data protection authority."
+      ],
+      "s8Title": "8. Modifiche all'informativa",
+      "s8P": "L'informativa sulla privacy può essere aggiornata per riflettere cambiamenti nel servizio o nella legge. La versione attuale è sempre disponibile su questa pagina."
+    },
+    "terms": {
+      "eyebrow": "Termini di servizio",
+      "title": "Termini di servizio di Toolando.tech",
+      "intro": "I termini seguenti definiscono le regole per l'utilizzo del servizio Toolando.tech. Usando il servizio accetti queste regole.",
+      "s1Title": "1. Disposizioni generali",
+      "s1P": "Il proprietario di Toolando.tech è Szymon. Il servizio offre strumenti online per conversione file, generazione di contenuti e strumenti basati su IA.",
+      "s2Title": "2. Strumenti gratuiti e premium",
+      "s2Intro": "Toolando offre strumenti in due varianti:",
+      "s2FreeTerm": "Gratuito",
+      "s2FreeDesc": "disponibile per tutti, senza creazione di account.",
+      "s2PremiumTerm": "Premium",
+      "s2PremiumDesc": "con funzionalità più avanzate e limiti più elevati.",
+      "s2Outro": "Le regole su pagamenti o abbonamenti per funzionalità premium sono presentate nei punti pertinenti del servizio.",
+      "s3Title": "3. Utilizzo a proprio rischio",
+      "s3P1": "Usi il servizio a tuo rischio. Faccio ogni sforzo affinché gli strumenti funzionino correttamente, tuttavia il servizio è fornito «così com'è», senza garanzia di disponibilità, correttezza dei risultati o idoneità a uno scopo particolare.",
+      "s3P2": "Il proprietario del servizio non è responsabile di:",
+      "s3List": [
+        "the consequences of using the tools' results,",
+        "lost profits,",
+        "damage resulting from interruptions in the service."
+      ],
+      "s3Outro": "L'utente si impegna a usare il servizio conformemente alla legge ed è responsabile dei contenuti e dei file che elabora.",
+      "s4Title": "4. File dell'utente",
+      "s4P": "I file caricati negli strumenti non vengono archiviati. Sono usati esclusivamente per eseguire l'operazione richiesta e vengono eliminati al termine.",
+      "s5Title": "5. Pubblicità",
+      "s5P": "Il servizio può mostrare annunci Google AdSense. Gli annunci aiutano a mantenere gli strumenti gratuiti e a sviluppare il progetto. Il fornitore pubblicitario può usare cookie conformemente all'Informativa sulla privacy.",
+      "s6Title": "6. Diritti d'autore",
+      "s6P": "Il nome Toolando.tech, gli elementi grafici e i contenuti del servizio sono protetti legalmente. Copiarli o usarli senza consenso del proprietario è vietato.",
+      "s7Title": "7. Contatti",
+      "s7Pre": "Per questioni relative a questi termini puoi contattarmi a:",
+      "s8Title": "8. Modifiche ai termini",
+      "s8P": "I termini possono essere aggiornati per riflettere cambiamenti nel servizio o nella legge. La versione attuale è sempre disponibile su questa pagina."
+    },
+    "guides": {
+      "eyebrow": "Guide",
+      "title": "Guide e tutorial sulla conversione di file",
+      "intro": "Articoli pratici su formati di file, conversione e buone pratiche. Ogni guida spiega quando e perché convertire un file e come farlo in sicurezza con Toolando.tech.",
+      "articles": [
+        {
+          "title": "MP3 vs WAV — when to convert audio?",
+          "body": "MP3 is a lossy compression format — files are small but some audio data is lost. WAV preserves full quality but files can be 10 times larger. Convert MP3 → WAV when you need a file for editing in a DAW (e.g. Audacity, FL Studio) or when a platform requires a lossless format. Convert WAV → MP3 when you want to email a recording, publish a podcast, or save disk space. Toolando.tech supports both conversions — just upload your file and download the result."
+        },
+        {
+          "title": "How to convert PDF to JPG for print and the web",
+          "body": "PDF is a document format that preserves page layout. Sometimes you need individual pages as images — for a website, a PowerPoint presentation, or printing a single page. The PDF → JPG converter in Toolando.tech renders each PDF page as a separate high-resolution JPG image. PDF files are never stored — they are deleted immediately after conversion. If you need transparency, consider PDF → PNG instead."
+        },
+        {
+          "title": "WebP and AVIF — modern image formats for websites",
+          "body": "JPG and PNG have dominated the web for years, but newer formats offer better compression. WebP (Google) produces files 25–35% smaller than JPG at the same visual quality and is supported by all modern browsers. AVIF goes even further — files can be half the size of WebP. Convert JPG → WebP or PNG → AVIF in Toolando.tech to speed up your website. Remember that older browsers (e.g. IE) don't support these formats — keep a JPG version as a fallback."
+        },
+        {
+          "title": "Extracting audio from video — the legal alternative",
+          "body": "Sometimes you have a video file (e.g. a camera recording, presentation) and only need the audio track. Toolando.tech lets you extract audio from MP4, MOV, AVI, MKV and other video formats, saving it as MP3, WAV, FLAC, or AAC. This is a legal operation on your own file — unlike downloading music from YouTube or TikTok, which Toolando.tech deliberately does not offer. Upload your video file, choose an audio format, and download the result."
+        },
+        {
+          "title": "JSON, CSV, and XML — converting data between formats",
+          "body": "Developers and data analysts often work with different data formats. JSON is the standard in APIs and configs. CSV and TSV are used for importing into Excel and spreadsheets. XML is used in older enterprise systems and RSS. Toolando.tech converts between these formats while preserving data structure. For example: JSON → CSV lets you open an API response in Excel, and CSV → JSON prepares data for sending to a REST API."
+        },
+        {
+          "title": "File security in online tools",
+          "body": "Uploading files to online tools naturally raises privacy concerns. At Toolando.tech, files are used solely to perform the operation you request — conversion, compression, or preview. After the job completes, files are deleted from the server. Some tools (e.g. the universal file opener) run entirely in your browser — in that case the file never leaves your computer. The connection to the site is encrypted (HTTPS). We never sell or share your files with third parties."
+        },
+        {
+          "title": "Lossy vs lossless compression — a simple guide",
+          "body": "Lossy formats (MP3, JPG, AAC, H.264) discard some data to shrink file size. Lossless formats (FLAC, PNG, WAV, ZIP) keep all data but produce larger files. Rule of thumb: only convert from lossy to lossless when you must — you won't recover lost quality. Converting lossy to lossy (e.g. JPG → JPG at lower quality) should happen once; each re-conversion degrades the result. In Toolando.tech's format encyclopedia, every format is labeled with its compression type."
+        },
+        {
+          "title": "HEIC from iPhone — how to open and convert to JPG",
+          "body": "Apple saves photos in HEIC (HEIF) by default — smaller than JPG at the same quality. The catch: Windows without an extension, older apps, and many services don't support HEIC. Solution: convert HEIC → JPG or HEIC → PNG in Toolando.tech before emailing photos, uploading to a site, or printing. You can also set iPhone to \"Most Compatible\" (JPG) in Settings, but online conversion works on photos already saved as HEIC."
+        },
+        {
+          "title": "PDF vs DOCX — which format when?",
+          "body": "DOCX (Word) is for editing text — you change content, styles, and headings. PDF locks page layout — it looks identical on every device, ideal for invoices, contracts, and CVs sent to recruiters. Convert DOCX → PDF before sending a document \"for reading only.\" Convert PDF → DOCX only when you need to edit text — layout may break. For archiving and print, always choose PDF."
+        },
+        {
+          "title": "Video for social media — MP4, resolution, and bitrate",
+          "body": "Instagram, TikTok, YouTube, and Facebook prefer MP4 with H.264 video and AAC audio. Before publishing, convert MOV, AVI, or MKV to MP4 to avoid upload errors. 1080p (1920×1080) is enough for most platforms; 4K only when the platform supports it. Higher bitrate means better quality but a larger file. Toolando.tech converts video with no install — see the format encyclopedia for details on MP4, WebM, and MOV."
+        }
+      ]
+    }
   },
   "hub": {
-    "convertersTitle": "File converters",
-    "convertersDesc": "Audio, video, images, documents, data, fonts and archives — plus compress, merge PDF and background removal.",
-    "calculatorsTitle": "Calculators & converters",
-    "calculatorsDesc": "Currency, VAT, dates, timezones, units and bitrate.",
-    "developerTitle": "Developer & text tools",
-    "developerDesc": "Passwords, QR, Base64, UUID, hash, colors, timestamp and character counter.",
-    "specialTools": "File tools",
-    "browseConverters": "Browse converters",
-    "browseCalculators": "Browse calculators",
-    "browseDeveloper": "Browse tools"
+    "convertersTitle": "Convertitori di file",
+    "convertersDesc": "Audio, video, immagini, documenti, dati, font e archivi — più compressione, unione PDF e rimozione sfondo.",
+    "calculatorsTitle": "Calcolatori e convertitori",
+    "calculatorsDesc": "Valute, IVA, date, fusi orari, unità e bitrate.",
+    "developerTitle": "Strumenti per sviluppatori e testo",
+    "developerDesc": "Password, QR, Base64, UUID, hash, colori, timestamp e contatore caratteri.",
+    "specialTools": "Strumenti file",
+    "browseConverters": "Esplora convertitori",
+    "browseCalculators": "Esplora calcolatori",
+    "browseDeveloper": "Esplora strumenti"
+  },
+  "specialFields": {
+    "splitMode": "Modalità divisione",
+    "everyPage": "Ogni pagina separatamente",
+    "pageRange": "Intervallo selezionato",
+    "pagesHint": "Pagine (es. 1-3,5)",
+    "rotation": "Angolo di rotazione",
+    "width": "Larghezza (px)",
+    "height": "Altezza (px, opzionale)",
+    "watermark": "Testo filigrana",
+    "trimStart": "Inizio (sec o MM:SS)",
+    "trimEnd": "Fine (sec o MM:SS)",
+    "pageNumberPos": "Posizione numero pagina",
+    "bottom": "Fondo pagina",
+    "top": "Alto pagina"
+  },
+  "accountRecent": {
+    "title": "Usati di recente",
+    "subtitle": "Cronologia salvata localmente in questo browser."
+  },
+  "favorites": {
+    "add": "Aggiungi ai preferiti",
+    "remove": "Preferito"
   }
 }

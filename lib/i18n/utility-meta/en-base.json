@@ -1,0 +1,343 @@
+{
+  "przelicznik-walut": {
+    "cat": "finance",
+    "name": "Currency converter",
+    "desc": "Convert currencies online with current ECB reference rates. PLN, EUR, USD and dozens of other pairs — no sign-up.",
+    "steps": [
+      "Enter an amount and source currency.",
+      "Pick the target currency.",
+      "Read the result and daily rate."
+    ],
+    "faq": []
+  },
+  "kalkulator-dat": {
+    "cat": "time",
+    "name": "Date calculator",
+    "desc": "Calculate days between two dates, working days, and the day of the week — useful for contracts and deadlines.",
+    "steps": [
+      "Pick start and end dates.",
+      "See the difference in days and weeks.",
+      "Optionally count weekdays only."
+    ],
+    "faq": []
+  },
+  "strefy-czasowe": {
+    "cat": "time",
+    "name": "Timezone difference",
+    "desc": "Compare local times across cities, see the hour difference, and spot locations on a simple world map.",
+    "steps": [
+      "Choose source and target cities.",
+      "Compare current local times.",
+      "See the offset and map markers."
+    ],
+    "faq": []
+  },
+  "przelicznik-jednostek": {
+    "cat": "units",
+    "name": "Unit converter",
+    "desc": "Convert length, mass, temperature and volume: cm↔in, kg↔lb, °C↔°F and more.",
+    "steps": [
+      "Choose a unit category.",
+      "Enter a value and units.",
+      "Get the result instantly."
+    ],
+    "faq": []
+  },
+  "kalkulator-vat": {
+    "cat": "finance",
+    "name": "VAT & percentage calculator",
+    "desc": "Add or remove VAT (23%, 8%, 5%), compute net/gross, and simple percentages of an amount.",
+    "steps": [
+      "Enter a net or gross amount.",
+      "Pick a VAT rate or custom percent.",
+      "See net, VAT and gross breakdown."
+    ],
+    "faq": []
+  },
+  "kalkulator-wieku": {
+    "cat": "time",
+    "name": "Age & countdown calculator",
+    "desc": "Calculate exact age in years, months and days — or how many days remain until a date.",
+    "steps": [
+      "Enter a birth date or target date.",
+      "See age or countdown.",
+      "Check the next birthday too."
+    ],
+    "faq": []
+  },
+  "generator-hasel": {
+    "cat": "dev",
+    "name": "Password generator",
+    "desc": "Generate a strong password locally in your browser. Set length and character sets — nothing is sent to a server.",
+    "steps": [
+      "Set length and character options.",
+      "Click Generate.",
+      "Copy with one click."
+    ],
+    "faq": []
+  },
+  "licznik-znakow": {
+    "cat": "text",
+    "name": "Character & word counter",
+    "desc": "Count characters, words, sentences and paragraphs — handy for SEO, social posts and form limits.",
+    "steps": [
+      "Paste or type text.",
+      "Watch live stats.",
+      "Check length without spaces."
+    ],
+    "faq": []
+  },
+  "generator-qr": {
+    "cat": "dev",
+    "name": "QR code generator",
+    "desc": "Create a QR code from a link or text and download it as PNG. Runs locally in the browser.",
+    "steps": [
+      "Enter text or a URL.",
+      "Generate the QR preview.",
+      "Download a PNG image."
+    ],
+    "faq": []
+  },
+  "kalkulator-bitrate": {
+    "cat": "media",
+    "name": "File size & bitrate calculator",
+    "desc": "Estimate how large an audio/video file will be at a given bitrate and duration — or the bitrate that fits a MB limit.",
+    "steps": [
+      "Choose size-from-bitrate or bitrate-from-limit.",
+      "Enter duration and values.",
+      "Read the result in MB / kbps."
+    ],
+    "faq": []
+  },
+  "konwerter-kolorow": {
+    "cat": "dev",
+    "name": "HEX RGB HSL color converter",
+    "desc": "Convert colors between HEX, RGB and HSL and check WCAG contrast against a background.",
+    "steps": [
+      "Enter a color in any format.",
+      "See HEX/RGB/HSL equivalents.",
+      "Check contrast against a background."
+    ],
+    "faq": []
+  },
+  "unix-timestamp": {
+    "cat": "dev",
+    "name": "Unix timestamp ↔ date",
+    "desc": "Convert a Unix timestamp (seconds/ms) to a date and back. Useful for logs and APIs.",
+    "steps": [
+      "Paste a timestamp or pick a date.",
+      "See ISO and local results.",
+      "Copy the value."
+    ],
+    "faq": []
+  },
+  "generator-uuid": {
+    "cat": "dev",
+    "name": "UUID generator",
+    "desc": "Generate UUID v4 (random) with one click. Create many at once if you need.",
+    "steps": [
+      "Set how many UUIDs.",
+      "Click Generate.",
+      "Copy the list."
+    ],
+    "faq": []
+  },
+  "generator-hash": {
+    "cat": "dev",
+    "name": "SHA / MD5 hash",
+    "desc": "Compute SHA-1, SHA-256, SHA-512 or MD5 of text. Locally via Web Crypto.",
+    "steps": [
+      "Paste text.",
+      "Pick an algorithm.",
+      "Copy the hex hash."
+    ],
+    "faq": []
+  },
+  "json-formatter": {
+    "cat": "dev",
+    "name": "JSON formatter",
+    "desc": "Format and minify JSON in the browser — no server upload.",
+    "steps": [
+      "Paste JSON.",
+      "Click Format or Minify.",
+      "Copy the result."
+    ],
+    "faq": [
+      {
+        "q": "Is data uploaded?",
+        "a": "No — processing happens locally in your browser."
+      }
+    ]
+  },
+  "diff-tekstu": {
+    "cat": "text",
+    "name": "Text diff",
+    "desc": "Compare two text snippets line by line and highlight differences.",
+    "steps": [
+      "Paste text A and B.",
+      "Review highlighted differences."
+    ],
+    "faq": [
+      {
+        "q": "Is this a full diff?",
+        "a": "It is a line-by-line comparison — great for short snippets and lists."
+      }
+    ]
+  },
+  "konwerter-wielkosci-liter": {
+    "cat": "text",
+    "name": "Case converter",
+    "desc": "Convert text to upper, lower, Title Case or sentence case.",
+    "steps": [
+      "Paste text.",
+      "Pick a mode.",
+      "Copy the result."
+    ],
+    "faq": []
+  },
+  "usun-duplikaty-linii": {
+    "cat": "text",
+    "name": "Remove duplicate lines",
+    "desc": "Remove repeated lines from email lists, SKUs or tags.",
+    "steps": [
+      "Paste a list.",
+      "Set options.",
+      "Copy the cleaned list."
+    ],
+    "faq": []
+  },
+  "dekoder-jwt": {
+    "cat": "dev",
+    "name": "JWT decoder",
+    "desc": "Read the header and payload of a JWT without verifying the signature.",
+    "steps": [
+      "Paste a token.",
+      "Inspect header and payload."
+    ],
+    "faq": [
+      {
+        "q": "Does it verify the signature?",
+        "a": "No — it only Base64URL-decodes the token."
+      }
+    ]
+  },
+  "walidator-nip-pesel": {
+    "cat": "dev",
+    "name": "NIP / PESEL / REGON validator",
+    "desc": "Validate Polish tax and ID numbers using checksum rules.",
+    "steps": [
+      "Enter a number.",
+      "See the validation result."
+    ],
+    "faq": [
+      {
+        "q": "Does it query GUS?",
+        "a": "No — checksum and length only."
+      }
+    ]
+  },
+  "kalkulator-kredytu": {
+    "cat": "finance",
+    "name": "Loan calculator",
+    "desc": "Calculate annuity payments, total repayment and interest cost.",
+    "steps": [
+      "Enter amount, rate and term.",
+      "Read the monthly payment."
+    ],
+    "faq": [
+      {
+        "q": "Does it include bank fees?",
+        "a": "This is a simplified simulation without fees or insurance."
+      }
+    ]
+  },
+  "markdown-preview": {
+    "cat": "text",
+    "name": "Markdown preview",
+    "desc": "Write Markdown and see a live HTML preview in the browser.",
+    "steps": [
+      "Type Markdown.",
+      "Preview updates automatically."
+    ],
+    "faq": []
+  },
+  "sila-hasla": {
+    "cat": "dev",
+    "name": "Password strength",
+    "desc": "Score password strength by length, character variety and common patterns.",
+    "steps": [
+      "Enter a password.",
+      "See the score and tips."
+    ],
+    "faq": [
+      {
+        "q": "Is the password uploaded?",
+        "a": "No — scoring happens locally in your browser."
+      }
+    ]
+  },
+  "konwerter-napisow": {
+    "cat": "media",
+    "name": "SRT / VTT subtitle converter",
+    "desc": "Convert subtitles between SRT and WebVTT formats.",
+    "steps": [
+      "Paste subtitles.",
+      "Pick direction or auto.",
+      "Copy the result."
+    ],
+    "faq": []
+  },
+  "generator-nazw-plikow": {
+    "cat": "text",
+    "name": "Batch file renamer",
+    "desc": "Bulk-rename files using a pattern with {name}, {ext}, {index}.",
+    "steps": [
+      "Paste a file list.",
+      "Set a pattern.",
+      "Copy new names."
+    ],
+    "faq": []
+  },
+  "walidator-iban": {
+    "cat": "dev",
+    "name": "IBAN validator",
+    "desc": "Validate IBAN checksum (mod 97) and country-specific length.",
+    "steps": [
+      "Paste an IBAN.",
+      "See formatted output and validation."
+    ],
+    "faq": [
+      {
+        "q": "Does it verify the bank account?",
+        "a": "No — format and checksum only."
+      }
+    ]
+  },
+  "kalkulator-b2b": {
+    "cat": "finance",
+    "name": "B2B vs employment calculator",
+    "desc": "Compare net employment salary vs B2B invoice income (flat or linear tax).",
+    "steps": [
+      "Enter gross salary and B2B revenue.",
+      "Pick tax form.",
+      "Compare results."
+    ],
+    "faq": [
+      {
+        "q": "Is this tax advice?",
+        "a": "No — a simplified simulation for discussion with an accountant."
+      }
+    ]
+  },
+  "base64": {
+    "cat": "dev",
+    "name": "Base64 encode / decode",
+    "desc": "Encode text to Base64 or decode Base64 back. Locally, without uploading data.",
+    "steps": [
+      "Paste text or Base64.",
+      "Choose Encode or Decode.",
+      "Copy the result."
+    ],
+    "faq": []
+  }
+}

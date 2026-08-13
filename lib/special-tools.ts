@@ -7,9 +7,11 @@ export type SpecialToolId =
   | "obrot-pdf"
   | "zmiana-rozmiaru-obrazu"
   | "usun-exif"
+  | "znak-wodny"
   | "wyciszenie-wideo"
   | "przyciecie-wideo"
-  | "znak-wodny"
+  | "kompresja-wideo"
+  | "numeracja-pdf"
   | "pdf-do-tekstu"
 
 export type SpecialEngine =
@@ -23,6 +25,8 @@ export type SpecialEngine =
   | "strip-exif"
   | "mute-video"
   | "trim-video"
+  | "compress-video"
+  | "pdf-page-numbers"
   | "watermark-image"
   | "pdf-to-text"
 
@@ -207,6 +211,34 @@ export const specialTools: SpecialToolConfig[] = [
     acceptLabel: "MP4, WebM, MOV, MKV",
     multiple: false,
     actionLabel: "Przytnij wideo",
+    hasQuality: false,
+    previewImage: false,
+  },
+  {
+    id: "kompresja-wideo",
+    engine: "compress-video",
+    category: "Wideo",
+    name: "Kompresja wideo",
+    description:
+      "Zmniejsz rozmiar pliku wideo przez ponowne kodowanie H.264. Dostosuj jakość suwakiem.",
+    accept: ".mp4,.webm,.mov,.mkv",
+    acceptLabel: "MP4, WebM, MOV, MKV",
+    multiple: false,
+    actionLabel: "Kompresuj wideo",
+    hasQuality: true,
+    previewImage: false,
+  },
+  {
+    id: "numeracja-pdf",
+    engine: "pdf-page-numbers",
+    category: "Dokumenty",
+    name: "Numeracja stron PDF",
+    description:
+      "Dodaj numerację „1 / N” na dole lub górze każdej strony dokumentu PDF.",
+    accept: ".pdf",
+    acceptLabel: "PDF",
+    multiple: false,
+    actionLabel: "Dodaj numery stron",
     hasQuality: false,
     previewImage: false,
   },

@@ -15,6 +15,8 @@ import {
   watermarkImage,
   muteVideo,
   trimVideo,
+  compressVideo,
+  addPdfPageNumbers,
   type SpecialResult,
 } from "@/lib/special-convert"
 import { parseTimeToSeconds } from "@/lib/ffmpeg-utils"
@@ -139,6 +141,17 @@ export async function POST(req: NextRequest) {
           startSec,
           endSec,
         )
+        break
+      }
+      case "compress-video": {
+        const quality = Number(intake.field("quality") ?? 75)
+        result = await compressVideo(files[0].buffer, files[0].name, quality)
+        break
+      }
+      case "pdf-page-numbers": {
+        const pos =
+          intake.field("pageNumberPosition") === "top" ? "top" : "bottom"
+        result = await addPdfPageNumbers(files[0].buffer, files[0].name, pos)
         break
       }
       default:

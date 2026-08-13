@@ -204,12 +204,435 @@ const termsEn: Record<GlossarySlug, GlossaryTerm> = {
   encryption: { ...termsPl.encryption, term: "Encryption (HTTPS/TLS)", definition: "Toolando.tech uses HTTPS — files sent to the server are encrypted in transit. Files are deleted after conversion. Encryption doesn't replace caution with sensitive documents." },
 }
 
+const termsDe: Record<GlossarySlug, GlossaryTerm> = {
+  bitrate: {
+    slug: "bitrate",
+    term: "Bitrate",
+    definition:
+      "Datenmenge pro Sekunde Audio oder Video (z. B. 128 kbps, 320 kbps). Höherer Bitrate = bessere Qualität, aber größere Datei. Bei MP3-Konvertierung mindestens 192–256 kbps verwenden.",
+    relatedFormats: ["mp3", "aac", "mp4"],
+  },
+  codec: {
+    slug: "codec",
+    term: "Codec",
+    definition:
+      "Algorithmus zum Kodieren/Dekodieren multimedialer Daten (z. B. H.264 Video, AAC Audio, JPEG Bild). Das Dateiformat (MP4, JPG) ist ein Container — der Codec bestimmt die Kompression.",
+    relatedFormats: ["mp4", "mp3", "jpg"],
+  },
+  "lossy-compression": {
+    slug: "lossy-compression",
+    term: "Verlustbehaftete Kompression",
+    definition:
+      "Verkleinert Dateien durch dauerhaftes Entfernen von Daten (MP3, JPG, AAC). Jede erneute Konvertierung verschlechtert die Qualität. Verlorene Informationen können nicht wiederhergestellt werden.",
+    relatedFormats: ["mp3", "jpg", "aac"],
+  },
+  "lossless-compression": {
+    slug: "lossless-compression",
+    term: "Verlustfreie Kompression",
+    definition:
+      "Verkleinert Dateien ohne Datenverlust (FLAC, PNG, ZIP). Nach dem Dekodieren erhalten Sie eine identische Kopie. Größer als verlustbehaftete Kompression.",
+    relatedFormats: ["flac", "png", "wav"],
+  },
+  "container-format": {
+    slug: "container-format",
+    term: "Containerformat",
+    definition:
+      "Hülle, die Video-, Audio- und Untertitelströme kombiniert (MP4, MKV, AVI). Der Container bestimmt nicht die Qualität — der Codec darin schon (H.264, AAC).",
+    relatedFormats: ["mp4", "mkv", "avi"],
+  },
+  "mime-type": {
+    slug: "mime-type",
+    term: "MIME-Typ",
+    definition:
+      "Standard-Dateitypkennung, die von Servern gesendet wird (z. B. image/jpeg, application/pdf). Browser und Betriebssysteme nutzen MIME, um die öffnende App auszuwählen.",
+    relatedFormats: ["pdf", "jpg", "json"],
+  },
+  resolution: {
+    slug: "resolution",
+    term: "Auflösung",
+    definition:
+      "Pixelanzahl in einem Bild oder Videobild (z. B. 1920×1080 = Full HD). Höhere Auflösung = mehr Details, aber größere Datei. Herunterskalieren (4K → 1080p) verliert Details dauerhaft.",
+    relatedFormats: ["mp4", "jpg", "png"],
+  },
+  dpi: {
+    slug: "dpi",
+    term: "DPI (Punkte pro Zoll)",
+    definition:
+      "Pixeldichte für den Druck. 72 DPI reichen für Bildschirme, 300 DPI ist Standard für Fotodruck. DPI ändern ohne Pixel zu ändern verbessert die Bildqualität nicht.",
+    relatedFormats: ["jpg", "png", "pdf"],
+  },
+  "alpha-channel": {
+    slug: "alpha-channel",
+    term: "Alphakanal (Transparenz)",
+    definition:
+      "Zusätzliche Bildebene, die die Pixeltransparenz definiert. PNG und WebP unterstützen Alpha, JPG nicht. Logos und Icons sollten alpha-fähige Formate verwenden.",
+    relatedFormats: ["png", "webp"],
+  },
+  metadata: {
+    slug: "metadata",
+    term: "Metadaten",
+    definition:
+      "Daten, die eine Datei beschreiben: Aufnahmedatum, Kameramodell, Autor, GPS. EXIF in JPG, ID3 in MP3. Konvertierung kann Metadaten entfernen oder ändern.",
+    relatedFormats: ["jpg", "mp3", "mp4"],
+  },
+  transcoding: {
+    slug: "transcoding",
+    term: "Transcodierung",
+    definition:
+      "Konvertierung von einem Codec/Format in ein anderes (z. B. H.265 → H.264, FLAC → MP3). Erfordert vollständiges Dekodieren und erneutes Kodieren — beeinflusst Qualität und Verarbeitungszeit.",
+    relatedFormats: ["mp4", "mp3", "webm"],
+  },
+  "sample-rate": {
+    slug: "sample-rate",
+    term: "Abtastrate",
+    definition:
+      "Audioproben pro Sekunde (Hz). CD: 44100 Hz, professionelle Aufnahmen: 48000 oder 96000 Hz. Höhere Rate = breiteres Frequenzband, größere Datei.",
+    relatedFormats: ["wav", "mp3", "flac"],
+  },
+  "aspect-ratio": {
+    slug: "aspect-ratio",
+    term: "Seitenverhältnis",
+    definition:
+      "Verhältnis von Breite zu Höhe (z. B. 16:9, 4:3, 1:1). Instagram Stories: 9:16, YouTube: 16:9. Falsches Verhältnis verursacht schwarze Balken oder Beschnitt.",
+    relatedFormats: ["mp4", "jpg"],
+  },
+  "color-space": {
+    slug: "color-space",
+    term: "Farbraum",
+    definition:
+      "System zur Farbbeschreibung (sRGB, Adobe RGB, CMYK). sRGB ist Web-/Bildschirmstandard. CMYK für den Druck. Konvertierung zwischen Räumen kann Farben verschieben.",
+    relatedFormats: ["jpg", "png", "pdf"],
+  },
+  "vector-graphic": {
+    slug: "vector-graphic",
+    term: "Vektorgrafik",
+    definition:
+      "Mathematisch definiertes Bild (SVG, EPS) — skaliert ohne Unschärfe. Nicht für Fotos. Logos, Icons und technische Illustrationen sollten vektoriell sein.",
+    relatedFormats: ["svg"],
+  },
+  "raster-graphic": {
+    slug: "raster-graphic",
+    term: "Rastergrafik",
+    definition:
+      "Pixelbasiertes Bild (JPG, PNG, WebP). Vergrößern verursacht Unschärfe. Fotos und 3D-Renderings sind Rastergrafiken.",
+    relatedFormats: ["jpg", "png", "webp"],
+  },
+  ocr: {
+    slug: "ocr",
+    term: "OCR (Texterkennung)",
+    definition:
+      "Technologie zum Extrahieren von Text aus Bildern oder PDF. PDF → DOCX nutzt oft OCR. Qualität hängt von der Lesbarkeit des Originals und der Sprache ab.",
+    relatedFormats: ["pdf", "docx"],
+  },
+  "dpi-print": {
+    slug: "dpi-print",
+    term: "Druckauflösung",
+    definition:
+      "Minimum für qualitativ hochwertigen Druck: 300 DPI für Fotos, 150 DPI für Text. Ein 1000×1000 px Bild bei 300 DPI druckt auf ca. 8,5×8,5 cm.",
+    relatedFormats: ["jpg", "png", "pdf"],
+  },
+  hash: {
+    slug: "hash",
+    term: "Datei-Hash",
+    definition:
+      "Eindeutiger Datei-Fingerabdruck (MD5, SHA-256). Zwei identische Dateien haben denselben Hash. Wird zur Integritätsprüfung nach Download oder Konvertierung verwendet.",
+  },
+  encryption: {
+    slug: "encryption",
+    term: "Verschlüsselung (HTTPS/TLS)",
+    definition:
+      "Toolando.tech nutzt HTTPS — an den Server gesendete Dateien werden während der Übertragung verschlüsselt. Dateien werden nach der Konvertierung gelöscht. Verschlüsselung ersetzt keine Vorsicht bei sensiblen Dokumenten.",
+  },
+}
+
+const termsEs: Record<GlossarySlug, GlossaryTerm> = {
+  bitrate: {
+    slug: "bitrate",
+    term: "Bitrate",
+    definition:
+      "Cantidad de datos almacenados por segundo de audio o video (p. ej. 128 kbps, 320 kbps). Mayor bitrate = mejor calidad, pero archivo más grande. Para conversión MP3 use al menos 192–256 kbps.",
+    relatedFormats: ["mp3", "aac", "mp4"],
+  },
+  codec: {
+    slug: "codec",
+    term: "Códec",
+    definition:
+      "Algoritmo de codificación/decodificación de datos multimedia (p. ej. H.264 video, AAC audio, JPEG imagen). El formato de archivo (MP4, JPG) es un contenedor — el códec define la compresión.",
+    relatedFormats: ["mp4", "mp3", "jpg"],
+  },
+  "lossy-compression": {
+    slug: "lossy-compression",
+    term: "Compresión con pérdida",
+    definition:
+      "Reduce el tamaño del archivo eliminando datos de forma permanente (MP3, JPG, AAC). Cada reconversión degrada la calidad. La información perdida no se puede recuperar.",
+    relatedFormats: ["mp3", "jpg", "aac"],
+  },
+  "lossless-compression": {
+    slug: "lossless-compression",
+    term: "Compresión sin pérdida",
+    definition:
+      "Reduce el tamaño del archivo sin perder datos (FLAC, PNG, ZIP). Tras decodificar obtiene una copia idéntica. Archivos más grandes que con compresión con pérdida.",
+    relatedFormats: ["flac", "png", "wav"],
+  },
+  "container-format": {
+    slug: "container-format",
+    term: "Formato contenedor",
+    definition:
+      "Envoltorio que combina flujos de video, audio y subtítulos (MP4, MKV, AVI). El contenedor no define la calidad — lo hace el códec interno (H.264, AAC).",
+    relatedFormats: ["mp4", "mkv", "avi"],
+  },
+  "mime-type": {
+    slug: "mime-type",
+    term: "Tipo MIME",
+    definition:
+      "Identificador estándar del tipo de archivo enviado por servidores (p. ej. image/jpeg, application/pdf). Navegadores y sistemas operativos usan MIME para elegir la app de apertura.",
+    relatedFormats: ["pdf", "jpg", "json"],
+  },
+  resolution: {
+    slug: "resolution",
+    term: "Resolución",
+    definition:
+      "Número de píxeles en una imagen o fotograma de video (p. ej. 1920×1080 = Full HD). Mayor resolución = más detalle, pero archivo más grande. Reducir (4K → 1080p) pierde detalle de forma permanente.",
+    relatedFormats: ["mp4", "jpg", "png"],
+  },
+  dpi: {
+    slug: "dpi",
+    term: "DPI (puntos por pulgada)",
+    definition:
+      "Densidad de píxeles para impresión. 72 DPI basta para pantallas, 300 DPI es el estándar de impresión fotográfica. Cambiar el DPI sin cambiar los píxeles no mejora la calidad de la imagen.",
+    relatedFormats: ["jpg", "png", "pdf"],
+  },
+  "alpha-channel": {
+    slug: "alpha-channel",
+    term: "Canal alfa (transparencia)",
+    definition:
+      "Capa adicional de imagen que define la transparencia de los píxeles. PNG y WebP admiten alfa, JPG no. Logos e iconos deben usar formatos con canal alfa.",
+    relatedFormats: ["png", "webp"],
+  },
+  metadata: {
+    slug: "metadata",
+    term: "Metadatos",
+    definition:
+      "Datos que describen un archivo: fecha de la foto, modelo de cámara, autor, GPS. EXIF en JPG, ID3 en MP3. La conversión puede eliminar o modificar metadatos.",
+    relatedFormats: ["jpg", "mp3", "mp4"],
+  },
+  transcoding: {
+    slug: "transcoding",
+    term: "Transcodificación",
+    definition:
+      "Conversión de un códec/formato a otro (p. ej. H.265 → H.264, FLAC → MP3). Requiere decodificación completa y recodificación — afecta la calidad y el tiempo de procesamiento.",
+    relatedFormats: ["mp4", "mp3", "webm"],
+  },
+  "sample-rate": {
+    slug: "sample-rate",
+    term: "Frecuencia de muestreo",
+    definition:
+      "Muestras de audio por segundo (Hz). CD: 44100 Hz, grabaciones profesionales: 48000 o 96000 Hz. Mayor frecuencia = mayor ancho de banda, archivo más grande.",
+    relatedFormats: ["wav", "mp3", "flac"],
+  },
+  "aspect-ratio": {
+    slug: "aspect-ratio",
+    term: "Relación de aspecto",
+    definition:
+      "Proporción ancho/alto (p. ej. 16:9, 4:3, 1:1). Instagram Stories: 9:16, YouTube: 16:9. Una relación incorrecta causa bandas negras o recorte.",
+    relatedFormats: ["mp4", "jpg"],
+  },
+  "color-space": {
+    slug: "color-space",
+    term: "Espacio de color",
+    definition:
+      "Sistema de descripción del color (sRGB, Adobe RGB, CMYK). sRGB es el estándar web/pantalla. CMYK para impresión. Convertir entre espacios puede alterar los colores.",
+    relatedFormats: ["jpg", "png", "pdf"],
+  },
+  "vector-graphic": {
+    slug: "vector-graphic",
+    term: "Gráfico vectorial",
+    definition:
+      "Imagen definida matemáticamente (SVG, EPS) — escala sin desenfoque. No apta para fotos. Logos, iconos e ilustraciones técnicas deben ser vectoriales.",
+    relatedFormats: ["svg"],
+  },
+  "raster-graphic": {
+    slug: "raster-graphic",
+    term: "Gráfico raster",
+    definition:
+      "Imagen basada en píxeles (JPG, PNG, WebP). Ampliar causa desenfoque. Fotos y renders 3D son gráficos raster.",
+    relatedFormats: ["jpg", "png", "webp"],
+  },
+  ocr: {
+    slug: "ocr",
+    term: "OCR (reconocimiento de texto)",
+    definition:
+      "Tecnología que extrae texto de imágenes o PDF. PDF → DOCX suele usar OCR. La calidad depende de la claridad del original y del idioma.",
+    relatedFormats: ["pdf", "docx"],
+  },
+  "dpi-print": {
+    slug: "dpi-print",
+    term: "Resolución de impresión",
+    definition:
+      "Mínimo para impresión de calidad: 300 DPI para fotos, 150 DPI para texto. Una imagen de 1000×1000 px a 300 DPI imprime aproximadamente 8,5×8,5 cm.",
+    relatedFormats: ["jpg", "png", "pdf"],
+  },
+  hash: {
+    slug: "hash",
+    term: "Hash del archivo",
+    definition:
+      "Huella digital única del archivo (MD5, SHA-256). Dos archivos idénticos comparten el mismo hash. Se usa para verificar la integridad tras descarga o conversión.",
+  },
+  encryption: {
+    slug: "encryption",
+    term: "Cifrado (HTTPS/TLS)",
+    definition:
+      "Toolando.tech usa HTTPS — los archivos enviados al servidor se cifran en tránsito. Se eliminan tras la conversión. El cifrado no sustituye la precaución con documentos sensibles.",
+  },
+}
+
+const termsUk: Record<GlossarySlug, GlossaryTerm> = {
+  bitrate: {
+    slug: "bitrate",
+    term: "Бітрейт",
+    definition:
+      "Обсяг даних на секунду аудіо або відео (напр. 128 kbps, 320 kbps). Вищий бітрейт = краща якість, але більший файл. Для конвертації MP3 використовуйте щонайменше 192–256 kbps.",
+    relatedFormats: ["mp3", "aac", "mp4"],
+  },
+  codec: {
+    slug: "codec",
+    term: "Кодек",
+    definition:
+      "Алгоритм кодування/декодування мультимедійних даних (напр. H.264 відео, AAC аудіо, JPEG зображення). Формат файлу (MP4, JPG) — це контейнер; кодек визначає стиснення.",
+    relatedFormats: ["mp4", "mp3", "jpg"],
+  },
+  "lossy-compression": {
+    slug: "lossy-compression",
+    term: "Стиснення з втратами",
+    definition:
+      "Зменшує розмір файлу через остаточне видалення даних (MP3, JPG, AAC). Кожна повторна конвертація погіршує якість. Втрачену інформацію неможливо відновити.",
+    relatedFormats: ["mp3", "jpg", "aac"],
+  },
+  "lossless-compression": {
+    slug: "lossless-compression",
+    term: "Стиснення без втрат",
+    definition:
+      "Зменшує розмір файлу без втрати даних (FLAC, PNG, ZIP). Після декодування отримуєте ідентичну копію. Файли більші, ніж при стисненні з втратами.",
+    relatedFormats: ["flac", "png", "wav"],
+  },
+  "container-format": {
+    slug: "container-format",
+    term: "Формат контейнера",
+    definition:
+      "Обгортка, що об'єднує відео-, аудіо- та субтитрові потоки (MP4, MKV, AVI). Контейнер не визначає якість — це робить кодек всередині (H.264, AAC).",
+    relatedFormats: ["mp4", "mkv", "avi"],
+  },
+  "mime-type": {
+    slug: "mime-type",
+    term: "Тип MIME",
+    definition:
+      "Стандартний ідентифікатор типу файлу, який надсилає сервер (напр. image/jpeg, application/pdf). Браузери та ОС використовують MIME для вибору програми відкриття.",
+    relatedFormats: ["pdf", "jpg", "json"],
+  },
+  resolution: {
+    slug: "resolution",
+    term: "Роздільна здатність",
+    definition:
+      "Кількість пікселів у зображенні або кадрі відео (напр. 1920×1080 = Full HD). Вища роздільна здатність = більше деталей, але більший файл. Зменшення (4K → 1080p) назавжди втрачає деталі.",
+    relatedFormats: ["mp4", "jpg", "png"],
+  },
+  dpi: {
+    slug: "dpi",
+    term: "DPI (точок на дюйм)",
+    definition:
+      "Щільність пікселів для друку. 72 DPI достатньо для екрана, 300 DPI — стандарт фотодруку. Зміна DPI без зміни пікселів не покращує якість зображення.",
+    relatedFormats: ["jpg", "png", "pdf"],
+  },
+  "alpha-channel": {
+    slug: "alpha-channel",
+    term: "Альфа-канал (прозорість)",
+    definition:
+      "Додатковий шар зображення, що визначає прозорість пікселів. PNG і WebP підтримують альфа, JPG — ні. Логотипи та іконки слід зберігати у форматах з альфа-каналом.",
+    relatedFormats: ["png", "webp"],
+  },
+  metadata: {
+    slug: "metadata",
+    term: "Метадані",
+    definition:
+      "Дані, що описують файл: дата знімка, модель камери, автор, GPS. EXIF у JPG, ID3 у MP3. Конвертація може видалити або змінити метадані.",
+    relatedFormats: ["jpg", "mp3", "mp4"],
+  },
+  transcoding: {
+    slug: "transcoding",
+    term: "Транскодування",
+    definition:
+      "Конвертація з одного кодека/формату в інший (напр. H.265 → H.264, FLAC → MP3). Потребує повного декодування та повторного кодування — впливає на якість і час обробки.",
+    relatedFormats: ["mp4", "mp3", "webm"],
+  },
+  "sample-rate": {
+    slug: "sample-rate",
+    term: "Частота дискретизації",
+    definition:
+      "Аудіовибірок на секунду (Гц). CD: 44100 Гц, професійні записи: 48000 або 96000 Гц. Вища частота = ширша смуга пропускання, більший файл.",
+    relatedFormats: ["wav", "mp3", "flac"],
+  },
+  "aspect-ratio": {
+    slug: "aspect-ratio",
+    term: "Співвідношення сторін",
+    definition:
+      "Співвідношення ширини до висоти (напр. 16:9, 4:3, 1:1). Instagram Stories: 9:16, YouTube: 16:9. Неправильне співвідношення спричиняє чорні смуги або обрізання.",
+    relatedFormats: ["mp4", "jpg"],
+  },
+  "color-space": {
+    slug: "color-space",
+    term: "Колірний простір",
+    definition:
+      "Система опису кольорів (sRGB, Adobe RGB, CMYK). sRGB — стандарт вебу та екранів. CMYK — для друку. Конвертація між просторами може змінити відтінки.",
+    relatedFormats: ["jpg", "png", "pdf"],
+  },
+  "vector-graphic": {
+    slug: "vector-graphic",
+    term: "Векторна графіка",
+    definition:
+      "Зображення, описане математично (SVG, EPS) — масштабується без розмиття. Не підходить для фотографій. Логотипи, іконки та технічні ілюстрації мають бути векторними.",
+    relatedFormats: ["svg"],
+  },
+  "raster-graphic": {
+    slug: "raster-graphic",
+    term: "Растрова графіка",
+    definition:
+      "Зображення з пікселів (JPG, PNG, WebP). Збільшення спричиняє розмиття. Фотографії та 3D-рендери — растрова графіка.",
+    relatedFormats: ["jpg", "png", "webp"],
+  },
+  ocr: {
+    slug: "ocr",
+    term: "OCR (розпізнавання тексту)",
+    definition:
+      "Технологія витягування тексту зі зображень або PDF. PDF → DOCX часто використовує OCR. Якість залежить від чіткості оригіналу та мови документа.",
+    relatedFormats: ["pdf", "docx"],
+  },
+  "dpi-print": {
+    slug: "dpi-print",
+    term: "Роздільна здатність друку",
+    definition:
+      "Мінімум для якісного друку: 300 DPI для фото, 150 DPI для тексту. Зображення 1000×1000 px при 300 DPI друкується приблизно 8,5×8,5 см.",
+    relatedFormats: ["jpg", "png", "pdf"],
+  },
+  hash: {
+    slug: "hash",
+    term: "Хеш файлу",
+    definition:
+      "Унікальний «відбиток» файлу (MD5, SHA-256). Два однакові файли мають однаковий хеш. Використовується для перевірки цілісності після завантаження або конвертації.",
+  },
+  encryption: {
+    slug: "encryption",
+    term: "Шифрування (HTTPS/TLS)",
+    definition:
+      "Toolando.tech використовує HTTPS — файли, надіслані на сервер, шифруються під час передачі. Після конвертації файли видаляються. Шифрування не замінює обережність із конфіденційними документами.",
+  },
+}
+
 const byLocale: Record<string, Record<GlossarySlug, GlossaryTerm>> = {
   pl: termsPl,
   en: termsEn,
-  de: Object.fromEntries(GLOSSARY_SLUGS.map((s) => [s, { ...termsEn[s], term: termsPl[s].term }])) as Record<GlossarySlug, GlossaryTerm>,
-  es: Object.fromEntries(GLOSSARY_SLUGS.map((s) => [s, termsEn[s]])) as Record<GlossarySlug, GlossaryTerm>,
-  uk: Object.fromEntries(GLOSSARY_SLUGS.map((s) => [s, termsEn[s]])) as Record<GlossarySlug, GlossaryTerm>,
+  de: termsDe,
+  es: termsEs,
+  uk: termsUk,
   ...localizedGlossaryTerms,
 }
 

@@ -1,5 +1,6 @@
 import type { Locale } from "./config"
 import type { UtilityToolId, UtilityCategory } from "@/lib/utility-tools"
+import { extraCategoryLabels, extraUtilityMaps } from "./utility-meta/extra-locales"
 
 export type UtilityMeta = {
   category: string
@@ -52,6 +53,7 @@ const categoryLabels: Record<string, Record<UtilityCategory, string>> = {
     dev: "Для розробників",
     media: "Медіа",
   },
+  ...extraCategoryLabels,
 }
 
 const pl: UtilityMetaMap = {
@@ -390,6 +392,20 @@ const pl: UtilityMetaMap = {
     description: "Masowo zmieniaj nazwy plików według wzorca z {name}, {ext}, {index}.",
     steps: ["Wklej listę plików.", "Ustaw wzorzec.", "Skopiuj nowe nazwy."],
     faq: [],
+  },
+  "walidator-iban": {
+    category: "Dla developerów",
+    name: "Walidator IBAN",
+    description: "Sprawdź poprawność numeru IBAN (suma kontrolna mod 97 i długość dla kraju).",
+    steps: ["Wklej numer IBAN.", "Zobacz sformatowany wynik i walidację."],
+    faq: [{ q: "Czy sprawdza konto w banku?", a: "Nie — tylko format i sumę kontrolną IBAN." }],
+  },
+  "kalkulator-b2b": {
+    category: "Finanse",
+    name: "Kalkulator B2B vs etat",
+    description: "Porównaj „na rękę” etat brutto z fakturą B2B (ryczałt lub liniowy).",
+    steps: ["Podaj brutto etatu i przychód B2B.", "Wybierz formę opodatkowania.", "Porównaj wyniki."],
+    faq: [{ q: "Czy to porada podatkowa?", a: "Nie — uproszczona symulacja do rozmowy z księgowym." }],
   },
 }
 
@@ -730,6 +746,20 @@ const en: UtilityMetaMap = {
     steps: ["Paste a file list.", "Set a pattern.", "Copy new names."],
     faq: [],
   },
+  "walidator-iban": {
+    category: "Developer",
+    name: "IBAN validator",
+    description: "Validate IBAN checksum (mod 97) and country-specific length.",
+    steps: ["Paste an IBAN.", "See formatted output and validation."],
+    faq: [{ q: "Does it verify the bank account?", a: "No — format and checksum only." }],
+  },
+  "kalkulator-b2b": {
+    category: "Finance",
+    name: "B2B vs employment calculator",
+    description: "Compare net employment salary vs B2B invoice income (flat or linear tax).",
+    steps: ["Enter gross salary and B2B revenue.", "Pick tax form.", "Compare results."],
+    faq: [{ q: "Is this tax advice?", a: "No — a simplified simulation for discussion with an accountant." }],
+  },
 }
 
 const maps: Record<string, UtilityMetaMap> = {
@@ -738,243 +768,1123 @@ const maps: Record<string, UtilityMetaMap> = {
   de: {
     ...en,
     "przelicznik-walut": {
-      ...en["przelicznik-walut"],
       category: "Finanzen",
       name: "Währungsrechner",
       description:
-        "Währungen online mit aktuellen EZB-Referenzkursen umrechnen. PLN, EUR, USD und viele weitere Paare.",
+        "Währungen online mit aktuellen EZB-Referenzkursen umrechnen. PLN, EUR, USD und Dutzende weiterer Paare — ohne Anmeldung.",
+      steps: [
+        "Betrag und Quellwährung eingeben.",
+        "Zielwährung wählen.",
+        "Ergebnis und Tageskurs ablesen.",
+      ],
+      faq: [
+        {
+          q: "Woher kommen die Kurse?",
+          a: "Referenzkurse der Europäischen Zentralbank über die Frankfurter API, aktualisiert an Werktagen.",
+        },
+        {
+          q: "Sind die Kurse in Echtzeit?",
+          a: "Das sind EZB-Referenzkurse, keine Bank- oder Wechselstubenkurse.",
+        },
+      ],
     },
     "kalkulator-dat": {
-      ...en["kalkulator-dat"],
       category: "Zeit & Daten",
       name: "Datumsrechner",
       description:
-        "Tage zwischen zwei Daten, Werktage und Wochentag berechnen — nützlich für Fristen und Verträge.",
+        "Tage zwischen zwei Daten, Werktage und Wochentag berechnen — nützlich für Verträge und Fristen.",
+      steps: [
+        "Start- und Enddatum wählen.",
+        "Differenz in Tagen und Wochen ansehen.",
+        "Optional nur Werktage zählen.",
+      ],
+      faq: [
+        {
+          q: "Werden Feiertage ausgeschlossen?",
+          a: "Standardmäßig schließen wir Samstage und Sonntage aus. Feiertage hängen vom Land ab.",
+        },
+      ],
     },
     "strefy-czasowe": {
-      ...en["strefy-czasowe"],
       category: "Zeit & Daten",
       name: "Zeitzonenunterschied",
       description:
-        "Ortszeiten vergleichen, Stundenunterschied sehen und Städte auf einer einfachen Weltkarte markieren.",
+        "Ortszeiten in Städten vergleichen, Stundenunterschied sehen und Orte auf einer einfachen Weltkarte markieren.",
+      steps: [
+        "Quell- und Zielstadt wählen.",
+        "Aktuelle Ortszeiten vergleichen.",
+        "Offset und Kartenmarkierungen ansehen.",
+      ],
+      faq: [
+        {
+          q: "Berücksichtigt ihr die Sommerzeit?",
+          a: "Ja — wir nutzen IANA-Zonen (z. B. Europe/Warsaw), die die Sommerzeit automatisch anwenden.",
+        },
+      ],
     },
     "przelicznik-jednostek": {
-      ...en["przelicznik-jednostek"],
       category: "Einheiten",
       name: "Einheitenumrechner",
+      description:
+        "Länge, Masse, Temperatur und Volumen umrechnen: cm↔Zoll, kg↔lb, °C↔°F und mehr.",
+      steps: [
+        "Einheitenkategorie wählen.",
+        "Wert und Einheiten eingeben.",
+        "Ergebnis sofort ablesen.",
+      ],
+      faq: [
+        {
+          q: "Sind die Umrechnungen genau?",
+          a: "Ja — Standard-SI-Faktoren. Temperatur nutzt eigene Formeln, keine einfache Multiplikation.",
+        },
+      ],
     },
     "kalkulator-vat": {
-      ...en["kalkulator-vat"],
       category: "Finanzen",
       name: "MwSt- und Prozentrechner",
+      description:
+        "MwSt hinzufügen oder abziehen (23 %, 8 %, 5 %), Netto/Brutto und einfache Prozente eines Betrags berechnen.",
+      steps: [
+        "Netto- oder Bruttobetrag eingeben.",
+        "MwSt-Satz oder eigenen Prozentsatz wählen.",
+        "Aufschlüsselung Netto, MwSt und Brutto sehen.",
+      ],
+      faq: [
+        {
+          q: "Welche MwSt-Sätze gibt es in Polen?",
+          a: "Standard 23 %, ermäßigt 8 % und 5 %. Sie können auch einen eigenen Satz eingeben.",
+        },
+      ],
     },
     "kalkulator-wieku": {
-      ...en["kalkulator-wieku"],
       category: "Zeit & Daten",
       name: "Alters- und Countdown-Rechner",
+      description:
+        "Genaues Alter in Jahren, Monaten und Tagen berechnen — oder wie viele Tage bis zu einem Datum bleiben.",
+      steps: [
+        "Geburtsdatum oder Zieldatum eingeben.",
+        "Alter oder Countdown ansehen.",
+        "Auch den nächsten Geburtstag prüfen.",
+      ],
+      faq: [
+        {
+          q: "Wie wird das Alter berechnet?",
+          a: "Vom Geburtsdatum bis heute, mit Jahren, Monaten und Tagen — nicht nur Kalenderjahre.",
+        },
+      ],
     },
     "generator-hasel": {
-      ...en["generator-hasel"],
       category: "Entwickler",
       name: "Passwortgenerator",
+      description:
+        "Starkes Passwort lokal im Browser erzeugen. Länge und Zeichensätze einstellen — nichts wird an einen Server gesendet.",
+      steps: [
+        "Länge und Zeichenoptionen einstellen.",
+        "Auf Generieren klicken.",
+        "Mit einem Klick kopieren.",
+      ],
+      faq: [
+        {
+          q: "Wird das Passwort hochgeladen?",
+          a: "Nein — die Erzeugung läuft vollständig in Ihrem Browser.",
+        },
+      ],
     },
     "licznik-znakow": {
-      ...en["licznik-znakow"],
       category: "Text",
       name: "Zeichen- und Wortzähler",
+      description:
+        "Zeichen, Wörter, Sätze und Absätze zählen — praktisch für SEO, Social-Media-Posts und Formularlimits.",
+      steps: [
+        "Text einfügen oder tippen.",
+        "Live-Statistiken ansehen.",
+        "Länge ohne Leerzeichen prüfen.",
+      ],
+      faq: [
+        {
+          q: "Wie werden Wörter gezählt?",
+          a: "Wörter sind durch Leerzeichen oder Zeilenumbrüche getrennte Zeichenfolgen.",
+        },
+      ],
     },
     "generator-qr": {
-      ...en["generator-qr"],
       category: "Entwickler",
       name: "QR-Code-Generator",
+      description:
+        "QR-Code aus Link oder Text erstellen und als PNG herunterladen. Läuft lokal im Browser.",
+      steps: [
+        "Text oder URL eingeben.",
+        "QR-Vorschau erzeugen.",
+        "PNG-Bild herunterladen.",
+      ],
+      faq: [
+        {
+          q: "Wird der QR-Inhalt hochgeladen?",
+          a: "Nein — der Code entsteht lokal. Wir speichern den Inhalt nicht.",
+        },
+      ],
     },
     "kalkulator-bitrate": {
-      ...en["kalkulator-bitrate"],
       category: "Medien",
       name: "Dateigrößen- und Bitrate-Rechner",
+      description:
+        "Schätzen, wie groß eine Audio-/Videodatei bei gegebener Bitrate und Dauer wird — oder welche Bitrate in ein MB-Limit passt.",
+      steps: [
+        "Modus wählen: Größe aus Bitrate oder Bitrate aus Limit.",
+        "Dauer und Werte eingeben.",
+        "Ergebnis in MB / kbps ablesen.",
+      ],
+      faq: [
+        {
+          q: "Enthält das den Container?",
+          a: "Es schätzt den Rohstream. Container und zusätzliche Spuren addieren meist einige Prozent.",
+        },
+      ],
     },
     "konwerter-kolorow": {
-      ...en["konwerter-kolorow"],
       category: "Entwickler",
       name: "Farbkonverter HEX RGB HSL",
+      description:
+        "Farben zwischen HEX, RGB und HSL konvertieren und WCAG-Kontrast gegen einen Hintergrund prüfen.",
+      steps: [
+        "Farbe in beliebigem Format eingeben.",
+        "HEX-/RGB-/HSL-Äquivalente sehen.",
+        "Kontrast gegen einen Hintergrund prüfen.",
+      ],
+      faq: [
+        {
+          q: "Was bedeuten AA / AAA?",
+          a: "WCAG-Barrierefreiheitsstufen für Textkontrast gegenüber einem Hintergrund.",
+        },
+      ],
     },
-    base64: { ...en.base64, category: "Entwickler", name: "Base64 kodieren / dekodieren" },
+    base64: {
+      category: "Entwickler",
+      name: "Base64 kodieren / dekodieren",
+      description:
+        "Text zu Base64 kodieren oder Base64 zurück dekodieren. Lokal, ohne Datenupload.",
+      steps: [
+        "Text oder Base64 einfügen.",
+        "Encode oder Decode wählen.",
+        "Ergebnis kopieren.",
+      ],
+      faq: [
+        {
+          q: "Unterstützt es UTF-8?",
+          a: "Ja — Unicode-Zeichen werden unterstützt.",
+        },
+      ],
+    },
     "unix-timestamp": {
-      ...en["unix-timestamp"],
       category: "Entwickler",
       name: "Unix-Zeitstempel ↔ Datum",
+      description:
+        "Unix-Zeitstempel (Sekunden/ms) in ein Datum und zurück umrechnen. Nützlich für Logs und APIs.",
+      steps: [
+        "Zeitstempel einfügen oder Datum wählen.",
+        "ISO- und lokale Ergebnisse sehen.",
+        "Wert kopieren.",
+      ],
+      faq: [
+        {
+          q: "Sekunden oder Millisekunden?",
+          a: "Wir erkennen die Einheit automatisch anhand der Länge. Sie können sie auch erzwingen.",
+        },
+      ],
     },
     "generator-uuid": {
-      ...en["generator-uuid"],
       category: "Entwickler",
       name: "UUID-Generator",
+      description:
+        "UUID v4 (zufällig) mit einem Klick erzeugen. Bei Bedarf viele auf einmal.",
+      steps: [
+        "Anzahl der UUIDs festlegen.",
+        "Auf Generieren klicken.",
+        "Liste kopieren.",
+      ],
+      faq: [
+        {
+          q: "Welche UUID-Version?",
+          a: "UUID v4 — zufällig, RFC 4122, im Browser erzeugt.",
+        },
+      ],
     },
     "generator-hash": {
-      ...en["generator-hash"],
       category: "Entwickler",
       name: "SHA- / MD5-Hash",
+      description:
+        "SHA-1, SHA-256, SHA-512 oder MD5 eines Texts berechnen. Lokal über Web Crypto.",
+      steps: [
+        "Text einfügen.",
+        "Algorithmus wählen.",
+        "Hex-Hash kopieren.",
+      ],
+      faq: [
+        {
+          q: "Ist MD5 sicher?",
+          a: "MD5 eignet sich nicht für Passwörter. Für Sicherheit SHA-256+ nutzen; MD5 nur für Prüfsummen.",
+        },
+      ],
+    },
+    "json-formatter": {
+      category: "Entwickler",
+      name: "JSON-Formatter",
+      description: "JSON im Browser formatieren und minifizieren — ohne Server-Upload.",
+      steps: ["JSON einfügen.", "Formatieren oder Minifizieren klicken.", "Ergebnis kopieren."],
+      faq: [{ q: "Werden Daten hochgeladen?", a: "Nein — die Verarbeitung läuft lokal in Ihrem Browser." }],
+    },
+    "diff-tekstu": {
+      category: "Text",
+      name: "Text-Diff",
+      description: "Zwei Textausschnitte Zeile für Zeile vergleichen und Unterschiede hervorheben.",
+      steps: ["Text A und B einfügen.", "Hervorgehobene Unterschiede prüfen."],
+      faq: [
+        {
+          q: "Ist das ein vollständiger Diff?",
+          a: "Es ist ein Zeilenvergleich — ideal für kurze Ausschnitte und Listen.",
+        },
+      ],
+    },
+    "konwerter-wielkosci-liter": {
+      category: "Text",
+      name: "Groß-/Kleinschreibung",
+      description: "Text in Groß-, Kleinbuchstaben, Title Case oder Sentence Case umwandeln.",
+      steps: ["Text einfügen.", "Modus wählen.", "Ergebnis kopieren."],
+      faq: [],
+    },
+    "usun-duplikaty-linii": {
+      category: "Text",
+      name: "Doppelte Zeilen entfernen",
+      description: "Wiederholte Zeilen aus E-Mail-Listen, SKUs oder Tags entfernen.",
+      steps: ["Liste einfügen.", "Optionen setzen.", "Bereinigte Liste kopieren."],
+      faq: [],
+    },
+    "dekoder-jwt": {
+      category: "Entwickler",
+      name: "JWT-Decoder",
+      description: "Header und Payload eines JWT lesen, ohne die Signatur zu prüfen.",
+      steps: ["Token einfügen.", "Header und Payload prüfen."],
+      faq: [
+        {
+          q: "Wird die Signatur geprüft?",
+          a: "Nein — es wird nur Base64URL dekodiert.",
+        },
+      ],
+    },
+    "walidator-nip-pesel": {
+      category: "Entwickler",
+      name: "NIP- / PESEL- / REGON-Validator",
+      description: "Polnische Steuer- und Ausweisnummern anhand der Prüfziffern validieren.",
+      steps: ["Nummer eingeben.", "Validierungsergebnis ansehen."],
+      faq: [{ q: "Wird GUS abgefragt?", a: "Nein — nur Prüfziffer und Länge." }],
+    },
+    "kalkulator-kredytu": {
+      category: "Finanzen",
+      name: "Kreditrechner",
+      description: "Annuitätenrate, Gesamtrückzahlung und Zinskosten berechnen.",
+      steps: ["Betrag, Zinssatz und Laufzeit eingeben.", "Monatliche Rate ablesen."],
+      faq: [
+        {
+          q: "Enthält das Bankgebühren?",
+          a: "Das ist eine vereinfachte Simulation ohne Gebühren oder Versicherungen.",
+        },
+      ],
+    },
+    "markdown-preview": {
+      category: "Text",
+      name: "Markdown-Vorschau",
+      description: "Markdown schreiben und eine Live-HTML-Vorschau im Browser sehen.",
+      steps: ["Markdown tippen.", "Vorschau aktualisiert sich automatisch."],
+      faq: [],
+    },
+    "sila-hasla": {
+      category: "Entwickler",
+      name: "Passwortstärke",
+      description: "Passwortstärke nach Länge, Zeichenvielfalt und typischen Mustern bewerten.",
+      steps: ["Passwort eingeben.", "Bewertung und Tipps ansehen."],
+      faq: [{ q: "Wird das Passwort hochgeladen?", a: "Nein — die Bewertung läuft lokal in Ihrem Browser." }],
+    },
+    "konwerter-napisow": {
+      category: "Medien",
+      name: "SRT- / VTT-Untertitelkonverter",
+      description: "Untertitel zwischen SRT und WebVTT konvertieren.",
+      steps: ["Untertitel einfügen.", "Richtung oder Auto wählen.", "Ergebnis kopieren."],
+      faq: [],
+    },
+    "generator-nazw-plikow": {
+      category: "Text",
+      name: "Batch-Dateiumbenennung",
+      description: "Dateien massenhaft mit einem Muster aus {name}, {ext}, {index} umbenennen.",
+      steps: ["Dateiliste einfügen.", "Muster festlegen.", "Neue Namen kopieren."],
+      faq: [],
+    },
+    "walidator-iban": {
+      category: "Entwickler",
+      name: "IBAN-Validator",
+      description: "IBAN-Prüfsumme (mod 97) und länderspezifische Länge prüfen.",
+      steps: ["IBAN einfügen.", "Formatiertes Ergebnis und Validierung ansehen."],
+      faq: [{ q: "Wird das Bankkonto geprüft?", a: "Nein — nur Format und Prüfsumme." }],
+    },
+    "kalkulator-b2b": {
+      category: "Finanzen",
+      name: "B2B- vs. Anstellungsrechner",
+      description: "Netto-Gehalt aus Anstellung mit B2B-Rechnungseinkommen (Pauschal- oder Linearsteuer) vergleichen.",
+      steps: ["Bruttogehalt und B2B-Umsatz eingeben.", "Steuerform wählen.", "Ergebnisse vergleichen."],
+      faq: [
+        {
+          q: "Ist das Steuerberatung?",
+          a: "Nein — eine vereinfachte Simulation zur Besprechung mit einem Buchhalter.",
+        },
+      ],
     },
   },
   es: {
     ...en,
     "przelicznik-walut": {
-      ...en["przelicznik-walut"],
       category: "Finanzas",
       name: "Conversor de divisas",
       description:
-        "Convierte divisas online con tipos de referencia del BCE. PLN, EUR, USD y muchas más pares.",
+        "Convierte divisas online con tipos de referencia del BCE. PLN, EUR, USD y docenas de otros pares — sin registro.",
+      steps: [
+        "Introduce un importe y la moneda de origen.",
+        "Elige la moneda de destino.",
+        "Consulta el resultado y el tipo del día.",
+      ],
+      faq: [
+        {
+          q: "¿De dónde salen los tipos?",
+          a: "Tipos de referencia del Banco Central Europeo a través de la API Frankfurter, actualizados en días laborables.",
+        },
+        {
+          q: "¿Son tipos en tiempo real?",
+          a: "Son tipos de referencia del BCE, no cotizaciones de bancos ni casas de cambio.",
+        },
+      ],
     },
     "kalkulator-dat": {
-      ...en["kalkulator-dat"],
       category: "Tiempo y fechas",
       name: "Calculadora de fechas",
+      description:
+        "Calcula los días entre dos fechas, los días laborables y el día de la semana — útil para contratos y plazos.",
+      steps: [
+        "Elige las fechas de inicio y fin.",
+        "Consulta la diferencia en días y semanas.",
+        "Opcionalmente cuenta solo días laborables.",
+      ],
+      faq: [
+        {
+          q: "¿Se excluyen los festivos?",
+          a: "Por defecto excluimos sábados y domingos. Los festivos dependen del país.",
+        },
+      ],
     },
     "strefy-czasowe": {
-      ...en["strefy-czasowe"],
       category: "Tiempo y fechas",
       name: "Diferencia de husos horarios",
+      description:
+        "Compara horas locales entre ciudades, ve la diferencia horaria y ubica los lugares en un mapa sencillo.",
+      steps: [
+        "Elige las ciudades de origen y destino.",
+        "Compara las horas locales actuales.",
+        "Consulta el desfase y los marcadores del mapa.",
+      ],
+      faq: [
+        {
+          q: "¿Tenéis en cuenta el horario de verano?",
+          a: "Sí — usamos zonas IANA (p. ej. Europe/Warsaw) que aplican el DST automáticamente.",
+        },
+      ],
     },
     "przelicznik-jednostek": {
-      ...en["przelicznik-jednostek"],
       category: "Unidades",
       name: "Conversor de unidades",
+      description:
+        "Convierte longitud, masa, temperatura y volumen: cm↔pulgadas, kg↔lb, °C↔°F y más.",
+      steps: [
+        "Elige una categoría de unidades.",
+        "Introduce un valor y las unidades.",
+        "Obtén el resultado al instante.",
+      ],
+      faq: [
+        {
+          q: "¿Las conversiones son exactas?",
+          a: "Sí — factores SI estándar. La temperatura usa fórmulas propias, no una simple multiplicación.",
+        },
+      ],
     },
     "kalkulator-vat": {
-      ...en["kalkulator-vat"],
       category: "Finanzas",
       name: "Calculadora de IVA y porcentajes",
+      description:
+        "Añade o quita IVA (23 %, 8 %, 5 %), calcula neto/bruto y porcentajes sencillos de un importe.",
+      steps: [
+        "Introduce un importe neto o bruto.",
+        "Elige un tipo de IVA o un porcentaje personalizado.",
+        "Consulta el desglose de neto, IVA y bruto.",
+      ],
+      faq: [
+        {
+          q: "¿Qué tipos de IVA hay en Polonia?",
+          a: "Estándar 23 %, reducidos 8 % y 5 %. También puedes introducir un tipo personalizado.",
+        },
+      ],
     },
     "kalkulator-wieku": {
-      ...en["kalkulator-wieku"],
       category: "Tiempo y fechas",
       name: "Calculadora de edad y cuenta atrás",
+      description:
+        "Calcula la edad exacta en años, meses y días — o cuántos días faltan hasta una fecha.",
+      steps: [
+        "Introduce una fecha de nacimiento o de destino.",
+        "Consulta la edad o la cuenta atrás.",
+        "Comprueba también el próximo cumpleaños.",
+      ],
+      faq: [
+        {
+          q: "¿Cómo se calcula la edad?",
+          a: "Desde la fecha de nacimiento hasta hoy, contando años, meses y días — no solo años calendario.",
+        },
+      ],
     },
     "generator-hasel": {
-      ...en["generator-hasel"],
       category: "Desarrolladores",
       name: "Generador de contraseñas",
+      description:
+        "Genera una contraseña segura localmente en el navegador. Define longitud y conjuntos de caracteres — nada se envía a un servidor.",
+      steps: [
+        "Define la longitud y las opciones de caracteres.",
+        "Haz clic en Generar.",
+        "Copia con un clic.",
+      ],
+      faq: [
+        {
+          q: "¿Se sube la contraseña?",
+          a: "No — la generación ocurre por completo en tu navegador.",
+        },
+      ],
     },
     "licznik-znakow": {
-      ...en["licznik-znakow"],
       category: "Texto",
       name: "Contador de caracteres y palabras",
+      description:
+        "Cuenta caracteres, palabras, oraciones y párrafos — útil para SEO, publicaciones sociales y límites de formularios.",
+      steps: [
+        "Pega o escribe texto.",
+        "Observa las estadísticas en vivo.",
+        "Comprueba la longitud sin espacios.",
+      ],
+      faq: [
+        {
+          q: "¿Cómo se cuentan las palabras?",
+          a: "Las palabras son secuencias separadas por espacios o saltos de línea.",
+        },
+      ],
     },
     "generator-qr": {
-      ...en["generator-qr"],
       category: "Desarrolladores",
       name: "Generador de códigos QR",
+      description:
+        "Crea un código QR a partir de un enlace o texto y descárgalo como PNG. Funciona localmente en el navegador.",
+      steps: [
+        "Introduce texto o una URL.",
+        "Genera la vista previa del QR.",
+        "Descarga una imagen PNG.",
+      ],
+      faq: [
+        {
+          q: "¿Se sube el contenido del QR?",
+          a: "No — el código se crea localmente. No almacenamos el contenido.",
+        },
+      ],
     },
     "kalkulator-bitrate": {
-      ...en["kalkulator-bitrate"],
       category: "Medios",
       name: "Calculadora de tamaño y bitrate",
+      description:
+        "Estima cuánto ocupará un archivo de audio/vídeo con un bitrate y duración dados — o el bitrate que cabe en un límite de MB.",
+      steps: [
+        "Elige tamaño desde bitrate o bitrate desde límite.",
+        "Introduce la duración y los valores.",
+        "Consulta el resultado en MB / kbps.",
+      ],
+      faq: [
+        {
+          q: "¿Incluye el contenedor?",
+          a: "Estima el flujo bruto. Los contenedores y pistas extra suelen añadir unos pocos porcentajes.",
+        },
+      ],
     },
     "konwerter-kolorow": {
-      ...en["konwerter-kolorow"],
       category: "Desarrolladores",
       name: "Conversor de color HEX RGB HSL",
+      description:
+        "Convierte colores entre HEX, RGB y HSL y comprueba el contraste WCAG respecto a un fondo.",
+      steps: [
+        "Introduce un color en cualquier formato.",
+        "Consulta los equivalentes HEX/RGB/HSL.",
+        "Comprueba el contraste respecto a un fondo.",
+      ],
+      faq: [
+        {
+          q: "¿Qué significan AA / AAA?",
+          a: "Niveles de accesibilidad WCAG para el contraste del texto respecto a un fondo.",
+        },
+      ],
     },
     base64: {
-      ...en.base64,
       category: "Desarrolladores",
       name: "Base64 codificar / decodificar",
+      description:
+        "Codifica texto a Base64 o decodifica Base64 de vuelta. Localmente, sin subir datos.",
+      steps: [
+        "Pega texto o Base64.",
+        "Elige Encode o Decode.",
+        "Copia el resultado.",
+      ],
+      faq: [
+        {
+          q: "¿Admite UTF-8?",
+          a: "Sí — se admiten caracteres Unicode.",
+        },
+      ],
     },
     "unix-timestamp": {
-      ...en["unix-timestamp"],
       category: "Desarrolladores",
       name: "Timestamp Unix ↔ fecha",
+      description:
+        "Convierte un timestamp Unix (segundos/ms) a fecha y viceversa. Útil para logs y APIs.",
+      steps: [
+        "Pega un timestamp o elige una fecha.",
+        "Consulta resultados ISO y locales.",
+        "Copia el valor.",
+      ],
+      faq: [
+        {
+          q: "¿Segundos o milisegundos?",
+          a: "Detectamos la unidad por la longitud. También puedes forzarla.",
+        },
+      ],
     },
     "generator-uuid": {
-      ...en["generator-uuid"],
       category: "Desarrolladores",
       name: "Generador UUID",
+      description:
+        "Genera UUID v4 (aleatorio) con un clic. Crea muchos a la vez si lo necesitas.",
+      steps: [
+        "Define cuántos UUID.",
+        "Haz clic en Generar.",
+        "Copia la lista.",
+      ],
+      faq: [
+        {
+          q: "¿Qué versión de UUID?",
+          a: "UUID v4 — aleatorio, RFC 4122, generado en el navegador.",
+        },
+      ],
     },
     "generator-hash": {
-      ...en["generator-hash"],
       category: "Desarrolladores",
       name: "Hash SHA / MD5",
+      description:
+        "Calcula SHA-1, SHA-256, SHA-512 o MD5 de un texto. Localmente mediante Web Crypto.",
+      steps: [
+        "Pega el texto.",
+        "Elige un algoritmo.",
+        "Copia el hash en hex.",
+      ],
+      faq: [
+        {
+          q: "¿Es seguro MD5?",
+          a: "MD5 no sirve para contraseñas. Usa SHA-256+ para seguridad; MD5 solo para sumas de comprobación.",
+        },
+      ],
+    },
+    "json-formatter": {
+      category: "Desarrolladores",
+      name: "Formateador JSON",
+      description: "Formatea y minifica JSON en el navegador — sin subir datos al servidor.",
+      steps: ["Pega JSON.", "Haz clic en Formatear o Minificar.", "Copia el resultado."],
+      faq: [{ q: "¿Se suben los datos?", a: "No — el procesamiento ocurre localmente en tu navegador." }],
+    },
+    "diff-tekstu": {
+      category: "Texto",
+      name: "Diff de texto",
+      description: "Compara dos fragmentos de texto línea a línea y resalta las diferencias.",
+      steps: ["Pega el texto A y B.", "Revisa las diferencias resaltadas."],
+      faq: [
+        {
+          q: "¿Es un diff completo?",
+          a: "Es una comparación línea a línea — ideal para fragmentos cortos y listas.",
+        },
+      ],
+    },
+    "konwerter-wielkosci-liter": {
+      category: "Texto",
+      name: "Conversor de mayúsculas/minúsculas",
+      description: "Convierte texto a mayúsculas, minúsculas, Title Case o sentence case.",
+      steps: ["Pega el texto.", "Elige un modo.", "Copia el resultado."],
+      faq: [],
+    },
+    "usun-duplikaty-linii": {
+      category: "Texto",
+      name: "Eliminar líneas duplicadas",
+      description: "Elimina líneas repetidas de listas de correos, SKU o etiquetas.",
+      steps: ["Pega una lista.", "Configura las opciones.", "Copia la lista limpia."],
+      faq: [],
+    },
+    "dekoder-jwt": {
+      category: "Desarrolladores",
+      name: "Decodificador JWT",
+      description: "Lee el encabezado y el payload de un JWT sin verificar la firma.",
+      steps: ["Pega un token.", "Inspecciona el header y el payload."],
+      faq: [
+        {
+          q: "¿Verifica la firma?",
+          a: "No — solo decodifica Base64URL del token.",
+        },
+      ],
+    },
+    "walidator-nip-pesel": {
+      category: "Desarrolladores",
+      name: "Validador NIP / PESEL / REGON",
+      description: "Valida números fiscales e identificativos polacos según las reglas de dígito de control.",
+      steps: ["Introduce un número.", "Consulta el resultado de la validación."],
+      faq: [{ q: "¿Consulta GUS?", a: "No — solo dígito de control y longitud." }],
+    },
+    "kalkulator-kredytu": {
+      category: "Finanzas",
+      name: "Calculadora de préstamos",
+      description: "Calcula cuotas de anualidad, reembolso total y coste de intereses.",
+      steps: ["Introduce importe, tipo y plazo.", "Consulta la cuota mensual."],
+      faq: [
+        {
+          q: "¿Incluye comisiones bancarias?",
+          a: "Es una simulación simplificada sin comisiones ni seguros.",
+        },
+      ],
+    },
+    "markdown-preview": {
+      category: "Texto",
+      name: "Vista previa de Markdown",
+      description: "Escribe Markdown y ve una vista previa HTML en vivo en el navegador.",
+      steps: ["Escribe Markdown.", "La vista previa se actualiza automáticamente."],
+      faq: [],
+    },
+    "sila-hasla": {
+      category: "Desarrolladores",
+      name: "Fortaleza de contraseña",
+      description: "Evalúa la fortaleza de una contraseña según longitud, variedad de caracteres y patrones comunes.",
+      steps: ["Introduce una contraseña.", "Consulta la puntuación y los consejos."],
+      faq: [{ q: "¿Se sube la contraseña?", a: "No — la evaluación ocurre localmente en tu navegador." }],
+    },
+    "konwerter-napisow": {
+      category: "Medios",
+      name: "Conversor de subtítulos SRT / VTT",
+      description: "Convierte subtítulos entre los formatos SRT y WebVTT.",
+      steps: ["Pega los subtítulos.", "Elige la dirección o auto.", "Copia el resultado."],
+      faq: [],
+    },
+    "generator-nazw-plikow": {
+      category: "Texto",
+      name: "Renombrador de archivos por lotes",
+      description: "Renombra archivos en masa con un patrón que usa {name}, {ext}, {index}.",
+      steps: ["Pega una lista de archivos.", "Define un patrón.", "Copia los nuevos nombres."],
+      faq: [],
+    },
+    "walidator-iban": {
+      category: "Desarrolladores",
+      name: "Validador IBAN",
+      description: "Valida la suma de comprobación IBAN (mod 97) y la longitud específica del país.",
+      steps: ["Pega un IBAN.", "Consulta la salida formateada y la validación."],
+      faq: [{ q: "¿Verifica la cuenta bancaria?", a: "No — solo formato y suma de comprobación." }],
+    },
+    "kalkulator-b2b": {
+      category: "Finanzas",
+      name: "Calculadora B2B vs empleo",
+      description: "Compara el salario neto de empleo con ingresos por factura B2B (impuesto fijo o lineal).",
+      steps: ["Introduce el bruto del empleo y los ingresos B2B.", "Elige la forma fiscal.", "Compara los resultados."],
+      faq: [
+        {
+          q: "¿Es asesoramiento fiscal?",
+          a: "No — una simulación simplificada para hablarlo con un contable.",
+        },
+      ],
     },
   },
   uk: {
     ...en,
     "przelicznik-walut": {
-      ...en["przelicznik-walut"],
       category: "Фінанси",
       name: "Конвертер валют",
       description:
-        "Конвертуйте валюти онлайн за курсами ЄЦБ. PLN, EUR, USD та десятки інших пар.",
+        "Конвертуйте валюти онлайн за поточними довідковими курсами ЄЦБ. PLN, EUR, USD та десятки інших пар — без реєстрації.",
+      steps: [
+        "Введіть суму та валюту джерела.",
+        "Оберіть цільову валюту.",
+        "Перегляньте результат і денний курс.",
+      ],
+      faq: [
+        {
+          q: "Звідки беруться курси?",
+          a: "Довідкові курси Європейського центрального банку через API Frankfurter, оновлюються в робочі дні.",
+        },
+        {
+          q: "Чи курси в реальному часі?",
+          a: "Це довідкові курси ЄЦБ, а не котирування банків чи обмінників.",
+        },
+      ],
     },
     "kalkulator-dat": {
-      ...en["kalkulator-dat"],
       category: "Час і дати",
       name: "Калькулятор дат",
+      description:
+        "Обчисліть кількість днів між двома датами, робочі дні та день тижня — корисно для договорів і дедлайнів.",
+      steps: [
+        "Оберіть початкову та кінцеву дати.",
+        "Перегляньте різницю в днях і тижнях.",
+        "За бажанням рахуйте лише робочі дні.",
+      ],
+      faq: [
+        {
+          q: "Чи виключаються державні свята?",
+          a: "За замовчуванням ми виключаємо суботи та неділі. Свята залежать від країни.",
+        },
+      ],
     },
     "strefy-czasowe": {
-      ...en["strefy-czasowe"],
       category: "Час і дати",
       name: "Різниця часових поясів",
+      description:
+        "Порівнюйте місцевий час у містах, дивіться різницю годин і позначки на простій карті світу.",
+      steps: [
+        "Оберіть місто джерела та призначення.",
+        "Порівняйте поточний місцевий час.",
+        "Перегляньте зміщення та маркери на карті.",
+      ],
+      faq: [
+        {
+          q: "Чи враховуєте літній час?",
+          a: "Так — ми використовуємо зони IANA (напр. Europe/Warsaw), які автоматично застосовують DST.",
+        },
+      ],
     },
     "przelicznik-jednostek": {
-      ...en["przelicznik-jednostek"],
       category: "Одиниці",
       name: "Конвертер одиниць",
+      description:
+        "Конвертуйте довжину, масу, температуру та об’єм: см↔дюйми, кг↔lb, °C↔°F тощо.",
+      steps: [
+        "Оберіть категорію одиниць.",
+        "Введіть значення та одиниці.",
+        "Отримайте результат миттєво.",
+      ],
+      faq: [
+        {
+          q: "Чи точні перетворення?",
+          a: "Так — стандартні коефіцієнти SI. Температура використовує окремі формули, а не просте множення.",
+        },
+      ],
     },
     "kalkulator-vat": {
-      ...en["kalkulator-vat"],
       category: "Фінанси",
       name: "Калькулятор ПДВ і відсотків",
+      description:
+        "Додайте або відніміть ПДВ (23%, 8%, 5%), обчисліть нетто/брутто та прості відсотки від суми.",
+      steps: [
+        "Введіть суму нетто або брутто.",
+        "Оберіть ставку ПДВ або власний відсоток.",
+        "Перегляньте розбивку нетто, ПДВ і брутто.",
+      ],
+      faq: [
+        {
+          q: "Які ставки ПДВ у Польщі?",
+          a: "Стандартна 23%, знижені 8% і 5%. Також можна ввести власну ставку.",
+        },
+      ],
     },
     "kalkulator-wieku": {
-      ...en["kalkulator-wieku"],
       category: "Час і дати",
       name: "Калькулятор віку та зворотного відліку",
+      description:
+        "Обчисліть точний вік у роках, місяцях і днях — або скільки днів залишилось до дати.",
+      steps: [
+        "Введіть дату народження або цільову дату.",
+        "Перегляньте вік або зворотний відлік.",
+        "Також перевірте наступний день народження.",
+      ],
+      faq: [
+        {
+          q: "Як обчислюється вік?",
+          a: "Від дати народження до сьогодні, з урахуванням років, місяців і днів — не лише календарних років.",
+        },
+      ],
     },
     "generator-hasel": {
-      ...en["generator-hasel"],
       category: "Для розробників",
       name: "Генератор паролів",
+      description:
+        "Згенеруйте надійний пароль локально в браузері. Встановіть довжину та набори символів — нічого не надсилається на сервер.",
+      steps: [
+        "Встановіть довжину та параметри символів.",
+        "Натисніть Згенерувати.",
+        "Скопіюйте одним кліком.",
+      ],
+      faq: [
+        {
+          q: "Чи завантажується пароль?",
+          a: "Ні — генерація відбувається повністю у вашому браузері.",
+        },
+      ],
     },
     "licznik-znakow": {
-      ...en["licznik-znakow"],
       category: "Текст",
       name: "Лічильник символів і слів",
+      description:
+        "Підрахуйте символи, слова, речення та абзаци — зручно для SEO, соцмереж і лімітів форм.",
+      steps: [
+        "Вставте або введіть текст.",
+        "Дивіться статистику наживо.",
+        "Перевірте довжину без пробілів.",
+      ],
+      faq: [
+        {
+          q: "Як рахуються слова?",
+          a: "Слова — це послідовності, розділені пробілами або новими рядками.",
+        },
+      ],
     },
     "generator-qr": {
-      ...en["generator-qr"],
       category: "Для розробників",
       name: "Генератор QR-кодів",
+      description:
+        "Створіть QR-код із посилання чи тексту та завантажте його як PNG. Працює локально в браузері.",
+      steps: [
+        "Введіть текст або URL.",
+        "Згенеруйте попередній перегляд QR.",
+        "Завантажте зображення PNG.",
+      ],
+      faq: [
+        {
+          q: "Чи завантажується вміст QR?",
+          a: "Ні — код створюється локально. Ми не зберігаємо вміст.",
+        },
+      ],
     },
     "kalkulator-bitrate": {
-      ...en["kalkulator-bitrate"],
       category: "Медіа",
       name: "Калькулятор розміру файлу та бітрейту",
+      description:
+        "Оцініть, який розмір матиме аудіо-/відеофайл за заданим бітрейтом і тривалістю — або який бітрейт вміститься в ліміт МБ.",
+      steps: [
+        "Оберіть режим: розмір з бітрейту або бітрейт з ліміту.",
+        "Введіть тривалість і значення.",
+        "Перегляньте результат у МБ / кбіт/с.",
+      ],
+      faq: [
+        {
+          q: "Чи враховується контейнер?",
+          a: "Це оцінка «сирого» потоку. Контейнери та додаткові доріжки зазвичай додають кілька відсотків.",
+        },
+      ],
     },
     "konwerter-kolorow": {
-      ...en["konwerter-kolorow"],
       category: "Для розробників",
       name: "Конвертер кольорів HEX RGB HSL",
+      description:
+        "Конвертуйте кольори між HEX, RGB і HSL та перевіряйте контраст WCAG відносно фону.",
+      steps: [
+        "Введіть колір у будь-якому форматі.",
+        "Перегляньте еквіваленти HEX/RGB/HSL.",
+        "Перевірте контраст відносно фону.",
+      ],
+      faq: [
+        {
+          q: "Що означають AA / AAA?",
+          a: "Рівні доступності WCAG для контрасту тексту відносно фону.",
+        },
+      ],
     },
     base64: {
-      ...en.base64,
       category: "Для розробників",
       name: "Base64 кодування / декодування",
+      description:
+        "Закодуйте текст у Base64 або декодуйте Base64 назад. Локально, без завантаження даних.",
+      steps: [
+        "Вставте текст або Base64.",
+        "Оберіть Encode або Decode.",
+        "Скопіюйте результат.",
+      ],
+      faq: [
+        {
+          q: "Чи підтримується UTF-8?",
+          a: "Так — підтримуються символи Unicode.",
+        },
+      ],
     },
     "unix-timestamp": {
-      ...en["unix-timestamp"],
       category: "Для розробників",
       name: "Unix timestamp ↔ дата",
+      description:
+        "Перетворюйте Unix timestamp (секунди/мс) на дату і навпаки. Корисно для логів і API.",
+      steps: [
+        "Вставте timestamp або оберіть дату.",
+        "Перегляньте результати ISO та локальні.",
+        "Скопіюйте значення.",
+      ],
+      faq: [
+        {
+          q: "Секунди чи мілісекунди?",
+          a: "Ми автоматично визначаємо одиницю за довжиною. Можна також примусово задати.",
+        },
+      ],
     },
     "generator-uuid": {
-      ...en["generator-uuid"],
       category: "Для розробників",
       name: "Генератор UUID",
+      description:
+        "Згенеруйте UUID v4 (випадковий) одним кліком. За потреби створіть багато одразу.",
+      steps: [
+        "Встановіть кількість UUID.",
+        "Натисніть Згенерувати.",
+        "Скопіюйте список.",
+      ],
+      faq: [
+        {
+          q: "Яка версія UUID?",
+          a: "UUID v4 — випадковий, RFC 4122, генерується в браузері.",
+        },
+      ],
     },
     "generator-hash": {
-      ...en["generator-hash"],
       category: "Для розробників",
       name: "Хеш SHA / MD5",
+      description:
+        "Обчисліть SHA-1, SHA-256, SHA-512 або MD5 тексту. Локально через Web Crypto.",
+      steps: [
+        "Вставте текст.",
+        "Оберіть алгоритм.",
+        "Скопіюйте hex-хеш.",
+      ],
+      faq: [
+        {
+          q: "Чи безпечний MD5?",
+          a: "MD5 не підходить для паролів. Для безпеки використовуйте SHA-256+; MD5 лише для контрольних сум.",
+        },
+      ],
+    },
+    "json-formatter": {
+      category: "Для розробників",
+      name: "Форматувальник JSON",
+      description: "Форматуйте та мініфікуйте JSON у браузері — без завантаження на сервер.",
+      steps: ["Вставте JSON.", "Натисніть Форматувати або Мініфікувати.", "Скопіюйте результат."],
+      faq: [{ q: "Чи завантажуються дані?", a: "Ні — обробка відбувається локально у вашому браузері." }],
+    },
+    "diff-tekstu": {
+      category: "Текст",
+      name: "Порівняння тексту (diff)",
+      description: "Порівняйте два фрагменти тексту рядок за рядком і підсвітіть відмінності.",
+      steps: ["Вставте текст A і B.", "Перегляньте підсвічені відмінності."],
+      faq: [
+        {
+          q: "Чи це повний diff?",
+          a: "Це порівняння рядок за рядком — ідеально для коротких фрагментів і списків.",
+        },
+      ],
+    },
+    "konwerter-wielkosci-liter": {
+      category: "Текст",
+      name: "Конвертер регістру",
+      description: "Перетворюйте текст на великі, малі літери, Title Case або sentence case.",
+      steps: ["Вставте текст.", "Оберіть режим.", "Скопіюйте результат."],
+      faq: [],
+    },
+    "usun-duplikaty-linii": {
+      category: "Текст",
+      name: "Видалити дублікати рядків",
+      description: "Видаліть повторювані рядки зі списків email, SKU або тегів.",
+      steps: ["Вставте список.", "Встановіть параметри.", "Скопіюйте очищений список."],
+      faq: [],
+    },
+    "dekoder-jwt": {
+      category: "Для розробників",
+      name: "Декодер JWT",
+      description: "Прочитайте заголовок і payload токена JWT без перевірки підпису.",
+      steps: ["Вставте токен.", "Перегляньте header і payload."],
+      faq: [
+        {
+          q: "Чи перевіряється підпис?",
+          a: "Ні — лише декодується Base64URL токена.",
+        },
+      ],
+    },
+    "walidator-nip-pesel": {
+      category: "Для розробників",
+      name: "Валідатор NIP / PESEL / REGON",
+      description: "Перевірте польські податкові та ідентифікаційні номери за правилами контрольної суми.",
+      steps: ["Введіть номер.", "Перегляньте результат валідації."],
+      faq: [{ q: "Чи запитує GUS?", a: "Ні — лише контрольна сума та довжина." }],
+    },
+    "kalkulator-kredytu": {
+      category: "Фінанси",
+      name: "Калькулятор кредиту",
+      description: "Обчисліть ануїтетний платіж, загальну суму погашення та вартість відсотків.",
+      steps: ["Введіть суму, ставку та строк.", "Перегляньте щомісячний платіж."],
+      faq: [
+        {
+          q: "Чи враховуються банківські комісії?",
+          a: "Це спрощена симуляція без комісій і страхування.",
+        },
+      ],
+    },
+    "markdown-preview": {
+      category: "Текст",
+      name: "Попередній перегляд Markdown",
+      description: "Пишіть Markdown і дивіться живий HTML-попередній перегляд у браузері.",
+      steps: ["Введіть Markdown.", "Попередній перегляд оновлюється автоматично."],
+      faq: [],
+    },
+    "sila-hasla": {
+      category: "Для розробників",
+      name: "Надійність пароля",
+      description: "Оцініть надійність пароля за довжиною, різноманітністю символів і типовими шаблонами.",
+      steps: ["Введіть пароль.", "Перегляньте оцінку та поради."],
+      faq: [{ q: "Чи завантажується пароль?", a: "Ні — оцінка відбувається локально у вашому браузері." }],
+    },
+    "konwerter-napisow": {
+      category: "Медіа",
+      name: "Конвертер субтитрів SRT / VTT",
+      description: "Конвертуйте субтитри між форматами SRT і WebVTT.",
+      steps: ["Вставте субтитри.", "Оберіть напрямок або auto.", "Скопіюйте результат."],
+      faq: [],
+    },
+    "generator-nazw-plikow": {
+      category: "Текст",
+      name: "Пакетне перейменування файлів",
+      description: "Масово перейменовуйте файли за шаблоном з {name}, {ext}, {index}.",
+      steps: ["Вставте список файлів.", "Встановіть шаблон.", "Скопіюйте нові імена."],
+      faq: [],
+    },
+    "walidator-iban": {
+      category: "Для розробників",
+      name: "Валідатор IBAN",
+      description: "Перевірте контрольну суму IBAN (mod 97) і довжину для країни.",
+      steps: ["Вставте IBAN.", "Перегляньте відформатований результат і валідацію."],
+      faq: [{ q: "Чи перевіряється банківський рахунок?", a: "Ні — лише формат і контрольна сума." }],
+    },
+    "kalkulator-b2b": {
+      category: "Фінанси",
+      name: "Калькулятор B2B vs працевлаштування",
+      description: "Порівняйте «на руки» зарплату з працевлаштування з доходом за рахунком B2B (паушальний або лінійний податок).",
+      steps: ["Введіть брутто зарплати та дохід B2B.", "Оберіть форму оподаткування.", "Порівняйте результати."],
+      faq: [
+        {
+          q: "Чи це податкова консультація?",
+          a: "Ні — спрощена симуляція для обговорення з бухгалтером.",
+        },
+      ],
     },
   },
+  ...extraUtilityMaps,
 }
 
 export function getUtilityCategoryLabel(

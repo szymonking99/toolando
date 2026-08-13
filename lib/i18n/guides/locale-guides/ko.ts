@@ -1,0 +1,835 @@
+import type { GuideArticle } from "../types"
+import type { GuideSlug } from "../slugs"
+import { guidesEn } from "../guides-en"
+
+export const guidesKo: Record<GuideSlug, GuideArticle> = {
+  "choose-audio-bitrate": {
+    ...guidesEn["choose-audio-bitrate"],
+    title: "MP3 또는 AAC 비트레이트는 얼마로?",
+    description: "128 vs 192 vs 320 kbps — 팟캐스트, 음악, 동영상의 실용적 선택.",
+    sections: [
+      {
+        paragraphs: [
+          "비트레이트는 초당 오디오 데이터량입니다. 높을수록 음질은 좋지만 파일도 큽니다. MP3에서 128과 320 kbps 차이는 좋은 스피커와 복잡한 음악에서 가장 잘 들립니다.",
+          "음성(팟캐스트, 인터뷰)은 모노 96–128 kbps로 충분한 경우가 많습니다. 헤드폰 음악은 스테레오 192–256 kbps가 균형 좋습니다. 320 kbps는 MP3의 실질 상한 — 형식이 손실이므로 더 올려도 거의 도움이 안 됩니다.",
+        ],
+      },
+      {
+        title: "MP3, AAC, Opus — 빠른 비교",
+        paragraphs: [
+          "같은 비트레이트에서 AAC(M4A)가 보통 MP3보다 낫습니다 — YouTube와 Apple Music이 쓰는 이유.",
+          "Opus는 낮은 비트레이트(64–128 kbps) VoIP·스트리밍에 강합니다.",
+          "스튜디오 아카이브는 WAV 또는 FLAC — 손실 비트레이트로는 사라진 데이터를 복구할 수 없습니다.",
+        ],
+      },
+      {
+        title: "흔한 실수",
+        paragraphs: [
+          "저품질 MP3를 더 높은 비트레이트로 올려도 소리는 나아지지 않 — 파일만 커집니다.",
+          "같은 트랙을 여러 번 재인코딩(MP3 → AAC → MP3)하면 매번 품질 저하.",
+          "동영상 프로젝트는 남의 음악을 받지 말고 자신의 MP4에서 오디오 추출 — 저작권 중요.",
+        ],
+      },
+    ],
+  },
+  "compress-images-without-quality-loss": {
+    ...guidesEn["compress-images-without-quality-loss"],
+    title: "JPG·PNG 이미지를 눈에 띄는 품질 손실 없이 압축",
+    description: "압축기 사용 시점, 품질 수준, 압축 vs 형식 변환.",
+    sections: [
+      {
+        paragraphs: [
+          "이미지 압축은 형식을 바꾸지 않고 크기만 줄입니다 — 여전히 JPG 또는 PNG, 더 가벼울 뿐. JPG → WebP는 형식 변경으로 웹에 종종 더 좋지만 인쇄 워크플로는 JPG를 요구할 수 있습니다.",
+          "Toolando.tech에서 2000×2000 제품 사진으로 압축기 테스트: 품질 80%에서 크기 40–60% 감소, 화면에서 아티팩트 없음.",
+        ],
+      },
+      {
+        title: "압축 vs 변환",
+        paragraphs: [
+          "형식은 괜찮지만(예: 쇼핑몰이 JPG 요구) 이메일/CMS에 너무 무거울 때 — 압축.",
+          "자체 사이트에 <picture> 폴백과 함께 게시 — WebP/AVIF 변환.",
+          "같은 JPG를 여러 번 저장하지 마세요 — 매번 아티팩트.",
+        ],
+      },
+      {
+        title: "일반적인 시나리오",
+        paragraphs: [
+          "이메일 첨부: JPG 품질 ~75–85, 최대 너비 1600 px.",
+          "이커머스: WebP + JPG 폴백, 썸네일 800 px.",
+          "텍스트 있는 UI 스크린샷: PNG 또는 무손실 WebP — 강한 JPG 피하기.",
+        ],
+      },
+    ],
+  },
+  "convert-video-to-gif-properly": {
+    ...guidesEn["convert-video-to-gif-properly"],
+    title: "동영상에서 좋은 GIF 만들기 — 해상도, FPS, 길이",
+    description: "거대 파일 없이 MP4/MOV → GIF: 실용 한계와 대안.",
+    sections: [
+      {
+        paragraphs: [
+          "GIF는 소리 없고 H.264 미사용 — 각 프레임이 풀 비트맵(256색 팔레트 흔함). 10초 1080p GIF가 원본보다 클 수 있음. 목표: 짧고, 작고, 저해상도.",
+          "MP4 → GIF 전 외부 편집기에서 2–4초 트림, 30 대신 10–15 FPS — GIF는 영화급 부드러움 불가.",
+        ],
+      },
+      {
+        title: "시작 파라미터",
+        paragraphs: [
+          "밈·리액션 최대 너비 480–640 px.",
+          "최대 5초 — 그 이상은 루프 MP4.",
+          "단순 배경(그린스크린)이 그라데이션·노이즈보다 압축 쉬움.",
+        ],
+      },
+      {
+        title: "변환 후",
+        paragraphs: [
+          "크기 확인 — 5 MB 초과 GIF는 페이지에서 거의 의미 없음.",
+          "너무 크면 GIF → MP4 + <video> 임베드.",
+          "Toolando는 변환 중만 처리 — 완성 GIF 공개 호스팅 안 함.",
+        ],
+      },
+    ],
+  },
+  "docx-pdf-workflow": {
+    ...guidesEn["docx-pdf-workflow"],
+    title: "사무용 DOCX → PDF — 언제, 어떻게 변환",
+    description: "이력서, 청구서, 계약 발송: PDF가 DOCX보다 나은 이유와 글꼴 깨짐 방지.",
+    sections: [
+      {
+        paragraphs: [
+          "DOCX는 편집용 — 수신자가 Word를 갖고 텍스트를 바꿔야 할 때 좋습니다. PDF는 읽기용 — 레이아웃, 글꼴, 여백이 Windows, Mac, 휴대폰에서 동일.",
+          "이력서, 제안서, 계약을 보내기 전 DOCX → PDF. 실수로 내용이 바뀌지 않고 대체 글꼴로 브랜딩이 깨지는 것도 방지.",
+        ],
+      },
+      {
+        title: "PDF → DOCX 하지 말 때",
+        paragraphs: [
+          "스캔 청구서와 서명된 계약 — PDF를 아카이브로 보관, OCR은 별도 단계.",
+          "복잡한 다중 페이지 레이아웃(카탈로그, 브로슈어) — DOCX 변환 시 페이지 나눔이 깨지기 쉬움.",
+          "텍스트 일부만 필요하면 전체 변환 대신 PDF에서 복사.",
+        ],
+      },
+      {
+        title: "보안과 개인정보",
+        paragraphs: [
+          "Toolando.tech에서 DOCX와 PDF는 변환에만 사용되며 작업 후 삭제됩니다.",
+          "민감 문서(신분증, 계좌)는 HTTPS 사용, 암호화 없는 공개 클라우드에 사본 남기지 마세요.",
+        ],
+      },
+    ],
+  },
+  "extract-audio-from-video": {
+    ...guidesEn["extract-audio-from-video"],
+    title: "동영상에서 오디오 추출 — 합법적인 대안",
+    description: "자신의 동영상 파일(MP4, MOV, MKV)에서 합법적으로 오디오 트랙을 추출하는 방법.",
+    sections: [
+      {
+        paragraphs: [
+          "동영상 파일은 있는데 오디오만 필요한 경우가 있습니다. Toolando.tech는 MP4, MOV, AVI, MKV에서 오디오를 추출해 MP3, WAV, FLAC, AAC로 저장합니다.",
+          "자신의 파일에 대해서는 합법적입니다 — YouTube나 TikTok에서 음악을 받는 것과 달리, Toolando.tech는 의도적으로 제공하지 않습니다.",
+        ],
+      },
+    ],
+  },
+  "extract-images-from-pdf-pages": {
+    ...guidesEn["extract-images-from-pdf-pages"],
+    title: "PDF 페이지에서 이미지 추출(JPG, PNG, WebP)",
+    description: "슬라이드, 카탈로그, 스캔 — 페이지를 이미지로 내보낼 때와 해상도.",
+    sections: [
+      {
+        paragraphs: [
+          "PDF는 컨테이너 — 내부에 벡터, 폰트, 임베드 비트맵. PDF → JPG는 각 페이지를 래스터로. 단일 로고 추출(PDF 편집기 필요)과 다르지만 슬라이드·포스터·스캔에 효과적.",
+          "16:9 덱을 너비 1920 px PNG로 내보내면 화면에서 선명. A4 인쇄는 고해상도 지원 시 ~2480×3508 px(300 DPI).",
+        ],
+      },
+      {
+        title: "JPG vs PNG vs WebP",
+        paragraphs: [
+          "사진 배경 슬라이드 → JPG/WebP.",
+          "차트·텍스트 슬라이드 → PNG(글자 선명).",
+          "웹 썸네일 → WebP, 추가 변환 후 JPG 폴백.",
+        ],
+      },
+      {
+        title: "다중 페이지 PDF",
+        paragraphs: [
+          "5·12페이지만 필요하면 단일 페이지 내보내기.",
+          "전체 갤러리 — 파일 전체 변환 후 파일명 번호 정렬.",
+          "저작권 존중 — 타인 PDF 자유 게시 금지.",
+        ],
+      },
+    ],
+  },
+  "flac-music-archive-guide": {
+    ...guidesEn["flac-music-archive-guide"],
+    title: "음악 아카이브로 FLAC — MP3 대비 가치",
+    description: "무손실 FLAC vs MP3 320 kbps: 백업, 홈 스트리밍, 차량 플레이어.",
+    sections: [
+      {
+        paragraphs: [
+          "FLAC(Free Lossless Audio Codec)은 무손실 압축 — 오디오용 ZIP. 디코딩하면 WAV와 같은 신호, 크기는 약 절반. MP3는 데이터를 영구 삭제, 320 kbps도 CD rip과 비트 동일 아님.",
+          "실무: 무손실 음원 구매나 자신의 디스크 rip이면 FLAC이 합리적 아카이브. Bluetooth 헤드폰 휴대폰에서 FLAC vs MP3 256 kbps는 종종 구분 불가 — MP3 변환으로 GB 절약.",
+        ],
+      },
+      {
+        title: "아카이브 워크플로",
+        paragraphs: [
+          "1) NAS/클라우드 백업에 FLAC(또는 WAV) 마스터.",
+          "2) 휴대폰·차량용 MP3/AAC 작업 복사.",
+          "3) MP3 → FLAC 「품질 위해」 절대 금지 — 파일만 커지고 데이터 복구 안 됨.",
+          "Toolando.tech FLAC → MP3를 40–60분 앨범으로 테스트, 변환 후 플레이어에서 메타데이터(제목, 아티스트) 확인.",
+        ],
+      },
+      {
+        title: "호환성",
+        paragraphs: [
+          "FLAC: VLC, Foobar2000, 대부분 Android 플레이어; 네이티브 Apple Music 약함(Apple은 ALAC).",
+          "차량 오디오는 USB에서 MP3/WMA/AAC만 — FLAC → MP3 필요.",
+          "홈 스트리밍(Plex, Jellyfin)은 FLAC 문제없음.",
+        ],
+      },
+    ],
+  },
+  "font-woff2-for-websites": {
+    ...guidesEn["font-woff2-for-websites"],
+    title: "TTF, OTF, WOFF, WOFF2 — 웹 폰트",
+    description: "@font-face용 변환, 라이선스, 페이지 속도 영향.",
+    sections: [
+      {
+        paragraphs: [
+          "브라우저는 CSS(@font-face)의 WOFF/WOFF2가 필요하며 raw Windows 폰트 파일은 아닙니다. WOFF2가 전송 크기 최소.",
+          "Toolando TTF/OTF → WOFF2는 웹 준비 파일 생성. 임베드 전 폰트 라이선스 확인.",
+        ],
+      },
+      {
+        title: "성능",
+        paragraphs: [
+          "파일이 크면 프로 도구에서 사용 글리프만 서브셋.",
+          "above-the-fold 텍스트용 <head>에서 중요 WOFF2 preload.",
+          "font-display: swap으로 로딩 중에도 글자 읽기 가능.",
+        ],
+      },
+    ],
+  },
+  "gif-vs-mp4-for-animations": {
+    ...guidesEn["gif-vs-mp4-for-animations"],
+    title: "GIF vs MP4 — 사이트·SNS 애니메이션",
+    description: "구식 GIF가 맞을 때 vs 짧은 MP4/WebM으로 MB 절약.",
+    sections: [
+      {
+        paragraphs: [
+          "GIF는 어디서나 재생되지만 기술적으로는 모던 영상 압축 없는 프레임 시퀀스 — 5초 720p가 10–20 MB. 같은 내용 MP4(H.264)는 500 KB–1 MB.",
+          "Toolando.tech MP4 → GIF는 플랫폼이 영상 임베드 불가일 때 짧은 루프(로더, Slack 반응). 자체 사이트는 <video autoplay loop muted playsinline> + MP4/WebM 우선.",
+        ],
+      },
+      {
+        title: "GIF",
+        paragraphs: [
+          "짧은 루프(<5초), 작은 해상도(너비 ≤480 px).",
+          "플랫폼 요구(GIF만 포럼).",
+          "색 적은 단순 그래픽 — GIF가 정말 가벼울 수 있음.",
+        ],
+      },
+      {
+        title: "MP4/WebM",
+        paragraphs: [
+          "다색, 그라데이션, 영상 클립 애니메이션.",
+          "웹사이트 — LCP·대역폭 개선.",
+          "Instagram/TikTok은 GIF 아닌 영상 필수.",
+        ],
+      },
+      {
+        title: "MP4 → GIF 팁",
+        paragraphs: [
+          "길이 자르기 — 1초가 수십 프레임.",
+          "변환 전 해상도 낮추기.",
+          "도구 지원 시 색 팔레트 제한(밴딩 감소).",
+        ],
+      },
+    ],
+  },
+  "heic-iphone-jpg": {
+    ...guidesEn["heic-iphone-jpg"],
+    title: "iPhone HEIC — 열고 JPG로 변환하는 방법",
+    description: "iPhone이 HEIC로 저장하는 이유, 호환성 문제, JPG/PNG 변환.",
+    sections: [
+      {
+        paragraphs: [
+          "Apple은 기본적으로 HEIC로 사진을 저장합니다 — 같은 품질에서 JPG보다 작습니다. 문제: 확장 없는 Windows, 구형 앱, 많은 서비스가 HEIC 미지원.",
+          "해결: 이메일, 업로드, 인쇄 전 Toolando.tech에서 HEIC → JPG 또는 HEIC → PNG. iPhone 설정에서 「호환성 우선」(JPG)도 가능합니다.",
+        ],
+      },
+    ],
+  },
+  "json-csv-xml": {
+    ...guidesEn["json-csv-xml"],
+    title: "JSON, CSV, XML — 형식 간 데이터 변환",
+    description: "JSON, CSV, TSV, XML 사용 시점과 구조 손실 없이 변환하는 방법.",
+    sections: [
+      {
+        paragraphs: [
+          "JSON은 REST API와 앱 설정의 표준입니다. CSV와 TSV는 Excel 가져오기에 사용됩니다. XML은 구형 엔터프라이즈 시스템과 RSS에 쓰입니다.",
+          "JSON → CSV는 API 응답을 Excel에서 엽니다. CSV → JSON은 REST API용 데이터를 준비합니다. Toolando.tech는 변환 시 데이터 구조를 유지합니다.",
+        ],
+      },
+    ],
+  },
+  "jwt-decode-safely-guide": {
+    ...guidesEn["jwt-decode-safely-guide"],
+    title: "JWT — 서명 검증 없이 토큰 읽기",
+    description: "Header, payload, Base64URL — 로컬 디코드 시점과 금지 사항.",
+    sections: [
+      {
+        paragraphs: [
+          "JSON Web Token은 점으로 구분된 3부: header, payload, signature. Toolando JWT 디코더는 Base64URL 후 header/payload 표시 — 서버 미전송(브라우저).",
+          "백엔드 서명 검증 대체 아님. 디코드는 디버깅(만료 `exp`, 잘못된 `aud`) — payload만 신원 증명으로 쓰지 마세요.",
+        ],
+      },
+      {
+        title: "안전한 실천",
+        paragraphs: [
+          "개인정보 포함 프로덕션 토큰 공개 사이트 붙여넣기 금지 — 로컬 디코더·테스트 환경.",
+          "401 디버깅 전 `exp`, `nbf` 확인.",
+          "분석 후 클립보드·로그에서 토큰 삭제.",
+        ],
+      },
+    ],
+  },
+  "lossy-vs-lossless": {
+    ...guidesEn["lossy-vs-lossless"],
+    title: "손실 vs 무손실 압축 — 간단 가이드",
+    description: "손실과 무손실 압축의 차이, 변환 시 품질 손실 방지.",
+    sections: [
+      {
+        paragraphs: [
+          "손실 형식(MP3, JPG, AAC, H.264)은 데이터를 버려 파일을 줄입니다. 무손실 형식(FLAC, PNG, WAV, ZIP)은 모든 데이터를 유지하지만 파일이 더 큽니다.",
+          "원칙: 필요할 때만 손실 → 무손실 — 잃은 품질은 돌아오지 않습니다. 손실 → 손실은 한 번만 — 재변환할 때마다 품질이 떨어집니다.",
+        ],
+      },
+    ],
+  },
+  "markdown-to-pdf-workflow": {
+    ...guidesEn["markdown-to-pdf-workflow"],
+    title: "Markdown → PDF — 문서, README, 메모",
+    description: "MD → HTML → PDF/DOCX: 에디터 내보내기 vs 온라인 변환기.",
+    sections: [
+      {
+        paragraphs: [
+          "Markdown은 WYSIWYG 없이 제목·목록·코드 작성. 개발자는 README.md를 repo에 두고 고객·인쇄용 PDF 필요. 일반: MD → HTML → 브라우저 PDF 인쇄, 또는 MD → DOCX → PDF로 페이지 헤더 제어.",
+          "Toolando.tech MD → HTML, DOCX → PDF 20–40 KB 파일 테스트, MD UTF-8이면 한글·코드 블록 정상.",
+        ],
+      },
+      {
+        title: "경로 선택",
+        paragraphs: [
+          "빠른 미리보기: MD → HTML, 브라우저.",
+          "페이지 번호 formal 문서: MD → DOCX, 회사 스타일, DOCX → PDF.",
+          "스타일 없는 메모: MD → TXT 충분.",
+        ],
+      },
+      {
+        title: "좋은 MD 습관",
+        paragraphs: [
+          "파일 하나 = 주제 하나, 긴 문서는 장 분리.",
+          "이미지 상대 링크 — 변환 후 경로 확인.",
+          "MD 표는 PDF에서 깨지기 쉬움 — 표 데이터는 CSV/DOCX.",
+        ],
+      },
+    ],
+  },
+  "merge-pdf-online-guide": {
+    ...guidesEn["merge-pdf-online-guide"],
+    title: "여러 PDF를 하나로 병합 — 의미 있는 경우",
+    description: "청구서, 스캔, 첨부 통합 — 페이지 순서, 품질, 개인정보.",
+    sections: [
+      {
+        paragraphs: [
+          "PDF 병합은 일상적인 사무 작업: 청구서 + 계약 + 신분증 스캔을 한 첨부로. Toolando.tech는 선택한 순서대로 병합합니다.",
+          "PDF는 벡터 텍스트와 비트맵 스캔을 유지 — 원본이 과도하게 압축되지 않았다면 병합으로 스캔 해상도가 떨어지지 않습니다.",
+        ],
+      },
+      {
+        title: "보내기 전",
+        paragraphs: [
+          "논리적 순서(표지 → 본문 → 첨부).",
+          "스캔 중복 페이지 제거.",
+          "수신자가 모바일이면 ≤10–15 MB 목표 또는 클라우드 링크.",
+        ],
+      },
+      {
+        title: "개인정보",
+        paragraphs: [
+          "업무·개인 문서는 기밀로 취급. Toolando는 처리 후 삭제. 민감 데이터는 회사 정책도 준수.",
+        ],
+      },
+    ],
+  },
+  "mortgage-loan-calculator-guide": {
+    ...guidesEn["mortgage-loan-calculator-guide"],
+    title: "대출 계산기 — 상환액, 이자, 주의점",
+    description: "원리금 균등, 수수료, 보험 — 주택담보대출 계산 결과 읽기.",
+    sections: [
+      {
+        paragraphs: [
+          "Toolando 대출 계산기는 원리금 균등 상환: 매월 고정 원금+이자. 기간 길수록 월 상환↓ — 총 이자↑.",
+          "은행 대화 출발점이지 오퍼 아님. 실제 상환은 기준금리, 가산금리, 수수료, 생명보험, 계약금에 따름.",
+        ],
+      },
+      {
+        title: "계산기 외 추가",
+        paragraphs: [
+          "취급 수수료, 중도상환 수수료(계약 시).",
+          "화재·생명 보험 — 은행 요구 흔함.",
+          "주택 구매 공증비, 취득세 등.",
+        ],
+      },
+    ],
+  },
+  "mp3-vs-wav": {
+    ...guidesEn["mp3-vs-wav"],
+    title: "MP3 vs WAV — 언제 오디오를 변환할까?",
+    description: "MP3와 WAV 비교: 손실/무손실 압축, 파일 크기, DAW 편집, 어떤 형식을 선택할지.",
+    sections: [
+      {
+        paragraphs: [
+          "MP3는 손실 압축을 사용합니다 — 파일은 작지만 일부 오디오 데이터는 영구적으로 사라집니다. WAV는 전체 품질(무손실 또는 비압축)을 유지하지만 MP3보다 최대 10배 클 수 있습니다.",
+          "실무에서는: 휴대폰으로 듣기 → MP3로 충분. Audacity에서 팟캐스트를 편집하거나 FL Studio에서 믹싱 → WAV 또는 FLAC로 작업하세요.",
+        ],
+      },
+      {
+        title: "MP3 → WAV로 변환할 때",
+        paragraphs: [
+          "플랫폼이나 앱이 추가 편집을 위해 무손실 형식을 요구할 때.",
+          "여러 번 자르기, 이펙트, 마스터링을 할 예정일 때 — MP3에서 작업할 때마다 품질이 떨어집니다.",
+          "참고: MP3 → WAV는 잃어버린 품질을 복구하지 않지만, 편집 중 추가 열화는 막을 수 있습니다.",
+        ],
+      },
+      {
+        title: "WAV → MP3로 변환할 때",
+        paragraphs: [
+          "이메일이나 채팅으로 녹음을 보낼 때 — 작은 파일 = 더 빠른 전송.",
+          "편집이 아닌 청취용으로 팟캐스트나 음악을 게시할 때.",
+          "대형 오디오 라이브러리에서 디스크 공간을 절약할 때.",
+        ],
+      },
+    ],
+  },
+  "online-file-security": {
+    ...guidesEn["online-file-security"],
+    title: "온라인 도구의 파일 보안",
+    description: "Toolando.tech의 파일 처리 방식, 브라우저 로컬 실행 도구, 개인정보 세부사항.",
+    sections: [
+      {
+        paragraphs: [
+          "온라인 도구에 파일을 업로드하면 당연히 걱정이 됩니다. Toolando.tech에서는 요청한 작업(변환, 압축, 미리보기)에만 파일을 사용합니다.",
+          "작업이 끝나면 서버에서 파일이 삭제됩니다. 일부 도구(범용 뷰어)는 브라우저에서만 실행 — 파일이 PC를 떠나지 않습니다. 연결은 HTTPS로 암호화됩니다.",
+        ],
+      },
+    ],
+  },
+  "pdf-to-jpg": {
+    ...guidesEn["pdf-to-jpg"],
+    title: "인쇄와 웹용 PDF를 JPG로 변환하는 방법",
+    description: "PDF 페이지를 JPG로 내보낼 때, 해상도 선택, PNG가 나은 경우.",
+    sections: [
+      {
+        paragraphs: [
+          "PDF는 페이지 레이아웃을 유지합니다. 웹사이트, PowerPoint, 한 페이지만 인쇄할 때처럼 개별 이미지 페이지가 필요한 경우가 있습니다.",
+          "Toolando.tech의 PDF → JPG 변환기는 각 페이지를 별도 JPG로 렌더링합니다. 파일은 저장되지 않으며 변환 직후 삭제됩니다.",
+        ],
+      },
+      {
+        title: "PDF에서 JPG vs PNG?",
+        paragraphs: [
+          "JPG — 더 작은 파일, 투명도 없는 사진과 문서에 적합.",
+          "PNG — 투명도가 있는 무손실, 텍스트와 선명한 가장자리가 있는 그래픽에 더 좋음.",
+        ],
+      },
+    ],
+  },
+  "pdf-vs-docx": {
+    ...guidesEn["pdf-vs-docx"],
+    title: "PDF vs DOCX — 언제 어떤 형식?",
+    description: "PDF vs DOCX 차이: 편집, 인쇄, 보관, 어느 방향으로 변환할지.",
+    sections: [
+      {
+        paragraphs: [
+          "DOCX(Word)는 텍스트 편집용 — 내용, 스타일, 제목. PDF는 레이아웃 고정 — 모든 기기에서 동일, 청구서·계약·이력서에 적합.",
+          "「읽기 전용」으로 보내기 전 DOCX → PDF. 텍스트를 편집해야 할 때만 PDF → DOCX — 레이아웃이 깨질 수 있습니다. 보관과 인쇄는 항상 PDF.",
+        ],
+      },
+    ],
+  },
+  "png-vs-jpg-photos-and-graphics": {
+    ...guidesEn["png-vs-jpg-photos-and-graphics"],
+    title: "PNG vs JPG — 사진 vs 텍스트 그래픽",
+    description: "실용적 선택: 사진, 스크린샷, 투명 로고, 인쇄.",
+    sections: [
+      {
+        paragraphs: [
+          "PNG와 JPG는 가장 혼동되는 형식입니다. JPG는 사진(하늘, 피부, 풍경)을 잘 압축하지만 선명한 가장자리와 텍스트를 망칩니다. PNG는 투명도(알파) 포함 모든 픽셀을 정확히 유지하지만 같은 해상도에서 JPG의 5–10배 크기인 경우가 많습니다.",
+          "Toolando.tech 테스트 원칙: 갤러리·SNS 사진 → JPG(또는 WebP + JPG 폴백). 아이콘, 로고, 도표, UI 스크린샷 → PNG. 사진+텍스트(견적 표지 등) → 종종 PNG 또는 무손실 WebP.",
+        ],
+      },
+      {
+        title: "JPG 선택",
+        paragraphs: [
+          "투명 없는 카메라·휴대폰 사진.",
+          "배경 단색이고 알파 불필요한 제품 썸네일.",
+          "이메일 첨부 — JPG 품질 80–85가 합리적 타협.",
+          "가정 사진 인쇄 — 고해상도 JPG(300 DPI 상당) 받는 곳 많음.",
+        ],
+      },
+      {
+        title: "PNG 선택",
+        paragraphs: [
+          "투명 배경 웹 로고 — JPG는 항상 흰/검으로 채움.",
+          "UI, 차트, 코드 스크린샷 — 텍스트 선명.",
+          "색 적은 플랫 그래픽(인포그래픽, 앱 아이콘).",
+          "추가 레이어 편집 예정 — 무손실 PNG는 저장마다 아티팩트 없음(반복 JPG와 대조).",
+        ],
+      },
+      {
+        title: "흔한 실수",
+        paragraphs: [
+          "로고를 JPG로 — 톱니 가장자리, 투명 없음.",
+          "4000×3000 사진을 「품질 위해」PNG — 불필요 15 MB, JPG면 2 MB.",
+          "PNG → JPG → PNG 루프 — JPG마다 품질 손실, 마스터는 PNG.",
+        ],
+      },
+    ],
+  },
+  "podcast-export-mp3-aac-settings": {
+    ...guidesEn["podcast-export-mp3-aac-settings"],
+    title: "팟캐스트 내보내기 — MP3 vs AAC, 비트레이트",
+    description: "Audacity, Reaper, 휴대폰 녹음 후 설정: 모노, 44.1 kHz, 합리적 압축.",
+    sections: [
+      {
+        paragraphs: [
+          "팟캐스트는 주로 음성 — 스튜디오 음악 같은 스테레오 320 kbps 불필요. Spotify, Apple Podcasts, RSS 호스트는 업로드를 재인코딩. 그래도 좋은 마스터 전송: 모노/스테레오, 44.1 또는 48 kHz, MP3 128–192 kbps 또는 AAC/M4A 128 kbps.",
+          "WAV/FLAC 녹음? 최종 내보내기는 거의 항상 MP3/AAC — Toolando.tech 30–60분 WAV → MP3 테스트, ~30 MB WAV가 128 kbps 스테레오 ~28 MB(모노 음성 ~15 MB).",
+        ],
+      },
+      {
+        title: "권장 설정",
+        paragraphs: [
+          "솔로/단일 음성 인터뷰: 모노 MP3 96–128 kbps.",
+          "별 트랙 2음성: 스테레오 128 kbps.",
+          "인트로/아웃트로 음악 스테레오, 나머지 모노 — 단순화를 위해 전체 스테레오 128 kbps.",
+          "64 kbps 피하기 — 저가 마이크에서 치찰음·노이즈.",
+        ],
+      },
+      {
+        title: "MP3 vs AAC(M4A)",
+        paragraphs: [
+          "같은 비트레이트에서 AAC가 보통 MP3보다 나음 — Apple은 M4A 선호.",
+          "MP3는 구형 플레이어·차량 호환 최대.",
+          "팟캐스트 호스트에 raw WAV 업로드 금지 — 업로드 끝없음.",
+        ],
+      },
+    ],
+  },
+  "prepare-images-for-web": {
+    ...guidesEn["prepare-images-for-web"],
+    title: "웹용 이미지 준비(JPG, WebP, AVIF)",
+    description: "해상도, 압축, 형식 — 눈에 띄는 품질 손실 없이 사이트 속도 향상.",
+    sections: [
+      {
+        paragraphs: [
+          "거대한 카메라 사진(4000×3000 px)은 모든 페이지를 느리게 합니다. 블로그나 스토어 업로드 전 실제 표시 크기로 리사이즈 — 예: 히어로 배너 너비 1600 px.",
+          "JPG는 여전히 안전한 범용 선택. WebP와 AVIF는 같은 시각 품질에서 더 작습니다 — 최신 스택에서 <picture> 폴백과 함께 사용.",
+        ],
+      },
+      {
+        title: "JPG 대신 PNG",
+        paragraphs: [
+          "로고, 아이콘, UI 스크린샷 — PNG 또는 무손실 WebP로 선명한 가장자리.",
+          "흰 배경 제품 사진은 JPG 품질 80–85로 잘 압축되는 경우가 많음.",
+          "같은 배너를 JPG로 반복 저장하지 마세요 — 저장할 때마다 아티팩트 증가.",
+        ],
+      },
+      {
+        title: "게시 전 체크리스트",
+        paragraphs: [
+          "1) 목표 너비(px)로 리사이즈. 2) 형식 선택(JPG/WebP/AVIF). 3) 파일 크기 확인(썸네일 <200 KB, 큰 블로그 이미지 <500 KB). 4) PageSpeed Insights로 LCP 전후 비교.",
+        ],
+      },
+    ],
+  },
+  "remove-exif-privacy-guide": {
+    ...guidesEn["remove-exif-privacy-guide"],
+    title: "사진 EXIF — 게시 전 삭제할 것",
+    description: "EXIF 메타데이터 GPS, 카메라 모델, 날짜 — 프라이버시 위험과 제거.",
+    sections: [
+      {
+        paragraphs: [
+          "EXIF는 JPEG, PNG, HEIC 숨은 메타: GPS, 기기 모델, 방향, 때로 미리보기 썸네일. SNS는 종종 제거하지만 자체 사이트·뉴스레터·메일 첨부는 아닐 수 있음.",
+          "아이·실내·책상 문서 사진 게시 전 EXIF 삭제 — Toolando 서버 처리, 외부 AI 클라우드 미전송.",
+        ],
+      },
+      {
+        title: "EXIF 삭제 후",
+        paragraphs: [
+          "픽셀은 변경되지 않습니다. 메타만 삭제 — 해상도 영향 없음.",
+          "EXIF 제거 후 압축·워터마크 추가 가능.",
+        ],
+      },
+    ],
+  },
+  "split-pdf-pages-guide": {
+    ...guidesEn["split-pdf-pages-guide"],
+    title: "PDF를 개별 페이지로 온라인 분할",
+    description: "분할 시점, 페이지 범위, ZIP 결과 처리.",
+    sections: [
+      {
+        paragraphs: [
+          "다중 페이지 계약·청구서 스캔 후 PDF 분할은 흔함 — 한 페이지만 메일하거나 다른 문서에 일부 첨부.",
+          "Toolando.tech에서 각 페이지 개별 내보내기 또는 범위(예 1-3,5). 결과는 PDF ZIP — 각 파일 원본 벡터/스캔 품질 유지.",
+        ],
+      },
+      {
+        title: "분할 vs 병합",
+        paragraphs: [
+          "분할 — 수신자가 일부만 필요(서명 페이지, 첨부, 표지).",
+          "병합 — 스캔을 하나의 아카이브/발송 파일로.",
+          "분할 후 페이지 번호·대형 스캔 압축 고려.",
+        ],
+      },
+    ],
+  },
+  "spreadsheet-csv-json-guide": {
+    ...guidesEn["spreadsheet-csv-json-guide"],
+    title: "CSV, JSON, Excel — 시트와 API 간 데이터 이동",
+    description: "CSV vs JSON 선택, 소수점·인코딩 깨짐 방지.",
+    sections: [
+      {
+        paragraphs: [
+          "CSV는 일반 텍스트 — Excel, Google Sheets, BI에서 열림. JSON은 중첩 구조(API, 설정). XLSX는 셀 타입과 여러 시트.",
+          "일반 흐름: API JSON 내보내기 → JSON to CSV → Excel 분석. 역방향: 고객 CSV → JSON → REST API.",
+        ],
+      },
+      {
+        title: "인코딩과 Excel",
+        paragraphs: [
+          "비 ASCII는 UTF-8 CSV. Excel이 깨지면 데이터 → 텍스트에서 가져오기로 UTF-8 선택.",
+          "CSV 구분자는 로케일에 따라 쉼표/세미콜론. 설명에 쉼표가 있으면 TSV(탭)가 더 안전.",
+        ],
+      },
+      {
+        title: "변환 후 검증",
+        paragraphs: [
+          "변환 전후 행 수 비교.",
+          "JSON은 키와 타입 확인 — 따옴표 하나 빠지면 전체 파일 손상.",
+        ],
+      },
+    ],
+  },
+  "svg-vs-png-logos-and-icons": {
+    ...guidesEn["svg-vs-png-logos-and-icons"],
+    title: "SVG vs PNG — 웹 로고와 아이콘",
+    description: "벡터 vs 래스터: SVG vs @2x PNG.",
+    sections: [
+      {
+        paragraphs: [
+          "SVG는 수학적으로 기술된 벡터 — 어떤 화면에서도 픽셀화 적음. PNG는 고정 해상도 비트맵, Retina에 2× 필요한 경우 많음. 웹 로고·단순 아이콘은 거의 항상 SVG(또는 아이콘 폰트), 사진 임베드 아니면.",
+          "Toolando.tech SVG → PNG는 인쇄소 300 DPI PNG 요구나 SVG 거부 시스템에 유용.",
+        ],
+      },
+      {
+        title: "SVG 장점",
+        paragraphs: [
+          "모바일·데스크톱 한 파일 — CSS 적고 srcset 불필요.",
+          "단순 아이콘 CSS fill로 색 변경 쉬움.",
+          "무거운 PNG 히어로보다 Lighthouse 점수 좋음.",
+        ],
+      },
+      {
+        title: "PNG가 SVG 대신",
+        paragraphs: [
+          "그라데이션·그림자·벡터 export가 나쁜 효과 로고.",
+          "Open Graph/SNS 미리보기 — 플랫폼이 어차피 래스터화.",
+          "SVG 엔진 없는 데스크톱 앱.",
+          "인라인 SVG 옆 <img> 폴백 @2x PNG(예 512×512).",
+        ],
+      },
+    ],
+  },
+  "tiff-and-png-for-document-scans": {
+    ...guidesEn["tiff-and-png-for-document-scans"],
+    title: "문서 스캔 — TIFF, PNG, JPG",
+    description: "청구서·계약: 무손실 보관, 다중 페이지, PDF로 충분할 때.",
+    sections: [
+      {
+        paragraphs: [
+          "청구서·계약 스캔은 휴가 사진과 다릅니다. 텍스트·도장은 선명한 가장자리 필요 — 강한 JPG는 글자 흐림. TIFF(LZW 무손실 흔함)와 PNG가 아카이브에 안전. 발송·OCR은 결국 PDF나 중간 품질 JPG.",
+          "다중 페이지 TIFF는 한 파일 다층 — 모든 뷰어 미지원. 관공서·고객에는 다중 페이지 PDF가 명확(Toolando.tech PDF 병합).",
+        ],
+      },
+      {
+        title: "권장 워크플로",
+        paragraphs: [
+          "스캐너 → 페이지별 PNG/TIFF(인쇄 300 DPI, 미리보기 150 DPI).",
+          "편집기에서 회전/크롭.",
+          "발송용 하나의 PDF로 병합.",
+          "수신자가 PDF 거부할 때만 JPG 품질 90.",
+        ],
+      },
+      {
+        title: "피할 것",
+        paragraphs: [
+          "청구서 JPG 품질 60 — 금액 판독 불가.",
+          "TIFF → JPG → TIFF 반복.",
+          "A4 텍스트 「만일을 위해」600 DPI 컬러 — GB 낭비.",
+        ],
+      },
+    ],
+  },
+  "toolando-editorial-standards": {
+    ...guidesEn["toolando-editorial-standards"],
+    title: "Toolando.tech 편집 기준 — 가이드 작성 방식",
+    description: "기사, 변환기 테스트, 형식 백과 작성 — 독자와 검토자를 위한 투명성.",
+    sections: [
+      {
+        paragraphs: [
+          "Toolando.tech는 Szymon Badyl(Badyl-Tech)이 단독 구축. 가이드는 대량 생성이나 Wikipedia 복사가 아니라 실제 변환 테스트 기반.",
+          "각 기사에 게시·업데이트 날짜. 플랫폼 요구나 라이브러리 변경 시 본문 수정.",
+        ],
+      },
+      {
+        title: "테스트 항목",
+        paragraphs: [
+          "오디오/비디오 변환기: 시간, 출력 크기, VLC·휴대폰 재생.",
+          "이미지: 전후 시각 비교, PNG 투명, WebP vs JPG 크기.",
+          "문서: PDF ↔ DOCX 후 레이아웃, CSV/JSON 인코딩.",
+        ],
+      },
+      {
+        title: "약속하지 않는 것",
+        paragraphs: [
+          "손실 → 손실 변환에 「100% 품질」 약속 없음.",
+          "타인 YouTube/TikTok 다운로드 없음 — 본인 파일의 합법적 작업만.",
+          "Google 광고는 있을 수 있으나 편집 콘텐츠는 광고주와 무관.",
+        ],
+      },
+    ],
+  },
+  "video-compress-before-sharing": {
+    ...guidesEn["video-compress-before-sharing"],
+    title: "이메일·WhatsApp 전 동영상 줄이기",
+    description: "MP4, 해상도, 비트레이트 — 실용적 크기 한도와 컨테이너 변환.",
+    sections: [
+      {
+        paragraphs: [
+          "휴대폰 MOV/MKV 녹화는 수백 MB일 수 있습니다. 많은 메일함이 >25 MB 첨부를 차단. 해결: MP4(H.264 + AAC) 변환, 필요 시 해상도 낮추기.",
+          "720p는 휴대폰 미리보기에 종종 충분. TV 시청은 1080p 유지.",
+        ],
+      },
+      {
+        title: "보내기 전 단계",
+        paragraphs: [
+          "1) MOV/MKV → MP4. 2) 파일 크기 확인. 3) 여전히 크면 편집기에서 불필요한 앞뒤 트림. 4) >25 MB면 클라우드 링크.",
+        ],
+      },
+    ],
+  },
+  "video-social-media": {
+    ...guidesEn["video-social-media"],
+    title: "소셜 미디어용 동영상 — MP4, 해상도, 비트레이트",
+    description: "Instagram, TikTok, YouTube용 준비: MP4, H.264, 1080p.",
+    sections: [
+      {
+        paragraphs: [
+          "Instagram, TikTok, YouTube, Facebook은 H.264 영상 + AAC 오디오 MP4를 선호합니다. 업로드 오류를 피하려 게시 전 MOV, AVI, MKV를 MP4로 변환하세요.",
+          "1080p(1920×1080)면 대부분 플랫폼에 충분합니다. 비트레이트가 높을수록 품질은 좋지만 파일도 커집니다. 형식 백과사전에서 MP4, WebM, MOV 세부 정보를 확인하세요.",
+        ],
+      },
+    ],
+  },
+  "webp-avif-images": {
+    ...guidesEn["webp-avif-images"],
+    title: "WebP와 AVIF — 웹사이트용 최신 이미지 형식",
+    description: "WebP와 AVIF vs JPG/PNG: 압축, 브라우저 지원, PageSpeed 최적화.",
+    sections: [
+      {
+        paragraphs: [
+          "JPG와 PNG가 웹을 오래 지배했지만, WebP는 같은 시각적 품질에서 JPG보다 25–35% 작습니다. AVIF는 더 나아가 WebP 크기의 절반이 될 수 있습니다.",
+          "모든 최신 브라우저가 WebP를 지원합니다. AVIF는 구형 Safari에서 지원이 약간 약합니다.",
+        ],
+      },
+      {
+        title: "배포 전략",
+        paragraphs: [
+          "제품 사진과 배너는 JPG → WebP — 페이지 로딩 속도 향상.",
+          "구형 브라우저용 JPG 폴백 유지(HTML <picture> 태그).",
+          "투명 로고: JPG 대신 PNG → WebP.",
+        ],
+      },
+    ],
+  },
+  "when-not-to-convert-files": {
+    ...guidesEn["when-not-to-convert-files"],
+    title: "파일을 변환하지 말아야 할 때 — 품질을 해치는 7가지",
+    description: "불필요한 변환 피하기: 원본 유지, 무손실 아카이브, 실험 전 백업.",
+    sections: [
+      {
+        paragraphs: [
+          "온라인 변환기는 편하지만 모든 작업이 도움이 되는 것은 아닙니다. 원본을 유지하거나 무손실 아카이브(ZIP, FLAC)가 나을 때도.",
+          "원칙: 손실 → 무손실로 기적을 기대하지 마세요 — MP3 → WAV는 잃은 데이터를 복구하지 않습니다.",
+        ],
+      },
+      {
+        title: "그대로 두기",
+        paragraphs: [
+          "투명 PNG가 이미 있음 — 이유 없이 JPG로 바꾸지 마세요.",
+          "디자인 프로젝트 — 레이어 원본(PSD, SVG) 유지, 마지막에 JPG 내보내기.",
+          "스튜디오 WAV/FLAC — 최종 믹스 전 MP3로 뭉개지 마세요.",
+          "디지털 서명 PDF — 변환 시 서명 무효 가능.",
+        ],
+      },
+      {
+        title: "변환 클릭 전",
+        paragraphs: [
+          "원본 사본 보관.",
+          "대상 플랫폼이 이미 소스 형식을 받는지 확인.",
+          "Toolando 형식 백과 비교 읽고 불필요한 단계 생략.",
+        ],
+      },
+    ],
+  },
+  "zip-7z-rar-when-to-use": {
+    ...guidesEn["zip-7z-rar-when-to-use"],
+    title: "ZIP, 7z, RAR — 어떤 아카이브를 보낼까",
+    description: "크기, 호환성, 암호화 — ZIP으로 충분할 때와 7z/RAR이 도움될 때.",
+    sections: [
+      {
+        paragraphs: [
+          "아카이브는 여러 파일을 하나로 — 이메일, 클라우드, 폴더 백업에 편리. ZIP은 universal: Windows, macOS, Linux 추가 소프트 없이 열림. 7z는 보통 더 작지만 수신자에게 7-Zip 필요할 수 있음. RAR은 레거시 워크플로, 온라인 RAR 생성은 라이선스 제한 — RAR → ZIP이 더 흔함.",
+        ],
+      },
+      {
+        title: "ZIP",
+        paragraphs: [
+          "고객·관공서 발송 — 「안 열림」 위험 최소.",
+          "코드, 사무 문서, JPG 세트 아카이브.",
+          ".zip 업로드만 받는 시스템.",
+        ],
+      },
+      {
+        title: "7z",
+        paragraphs: [
+          "대형 게임 폴더, 영상 프로젝트, 외장 HDD 전 백업 — 작을수록 업로드 빠름.",
+          "수신자가 기술적이고 7-Zip 있음.",
+          "ZIP → 7z는 한 번이면 충분 — 같은 데이터 반복 패킹 금지.",
+        ],
+      },
+      {
+        title: "보안",
+        paragraphs: [
+          "아카이브 비밀번호는 우발적 열람 방지, 민감 문서 E2E 암호 대체 아님.",
+          "출처 불명 아카이브는 AV 스캔 없이 풀지 마세요.",
+          "Toolando는 컨테이너 변환 기간만 처리 — 내용은 합법적이고 본인 것.",
+        ],
+      },
+    ],
+  },
+}

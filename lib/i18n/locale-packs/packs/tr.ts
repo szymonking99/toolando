@@ -81,6 +81,11 @@ export default uiPack({
     "comparisonsCta": "Karşılaştırmalara göz atın"
   },
   "footer": {
+    "emailAria": "Bize yazmak için e-posta uygulamanızı açar",
+    "youtube": "YouTube",
+    "messenger": "Messenger",
+    "instagram": "Instagram",
+    "facebook": "Facebook",
     "guides": "Kılavuzlar",
     "formats": "Dosya formatları",
     "comparisons": "Karşılaştırmalar",

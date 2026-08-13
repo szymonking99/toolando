@@ -3,6 +3,7 @@ import {
   ContentPageShell,
   ContentSection,
 } from "@/components/content-page-shell"
+import { ContactEmailLink } from "@/components/contact-email-link"
 
 export type LegalBlock = {
   title: string
@@ -22,12 +23,7 @@ export type LegalDocumentData = {
 }
 
 const emailLink = (
-  <a
-    href="mailto:badyltech@outlook.com"
-    className="font-medium text-foreground underline underline-offset-4 hover:text-primary"
-  >
-    badyltech@outlook.com
-  </a>
+  <ContactEmailLink className="font-medium text-foreground underline underline-offset-4 hover:text-primary" />
 )
 
 /** Renders {{email}} placeholder as a mailto link. */

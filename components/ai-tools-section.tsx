@@ -29,7 +29,7 @@ const ICONS: Record<string, LucideIcon> = {
 export function AiToolsSection() {
   const { t, locale, href } = useI18n()
   const meta = getAiMeta(locale)
-  const { isPremium } = useUser()
+  const { isPremium, isLoggedIn } = useUser()
   return (
     <section id="ai" className="relative px-4 py-20 sm:py-28">
       <div className="mx-auto max-w-6xl">
@@ -62,7 +62,15 @@ export function AiToolsSection() {
                 {!isPremium && (
                   <span className="absolute right-4 top-4 inline-flex items-center gap-1 rounded-full border border-amber-400/30 bg-amber-400/10 px-2 py-0.5 text-xs font-semibold text-amber-300">
                     <Crown className="size-3" aria-hidden="true" />
-                    Premium
+                    {isLoggedIn
+                      ? ({
+                          pl: "1/dzień free",
+                          en: "1/day free",
+                          de: "1/Tag gratis",
+                          es: "1/día gratis",
+                          uk: "1/день безкоштовно",
+                        }[locale] ?? "1/day free")
+                      : "Premium"}
                   </span>
                 )}
                 <span className="inline-flex size-12 items-center justify-center rounded-xl bg-primary/15 text-primary ring-1 ring-primary/25 transition-colors group-hover:bg-primary/25">

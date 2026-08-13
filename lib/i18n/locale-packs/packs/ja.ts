@@ -81,6 +81,11 @@ export default uiPack({
     "comparisonsCta": "比較を参照する"
   },
   "footer": {
+    "emailAria": "メールアプリを開いてお問い合わせ",
+    "youtube": "YouTube",
+    "messenger": "Messenger",
+    "instagram": "Instagram",
+    "facebook": "Facebook",
     "guides": "ガイド",
     "formats": "ファイル形式",
     "comparisons": "比較",

@@ -1,0 +1,450 @@
+{
+  "socialProof": {
+    "toolsCount": "{count}+ työkalua yhdessä ekosysteemissä",
+    "usesToday": "{uses} käyttökertaa tänään"
+  },
+  "recent": {
+    "title": "Viimeksi käytetyt",
+    "subtitle": "Viimeisimmät työkalusi — tallennettu paikallisesti tähän selaimeen.",
+    "favoritesHint": "Kiinnitä työkalu tähän antamalla sille tähti työkalusivulla."
+  },
+  "premiumUpsell": {
+    "title": "Avaa AI-työkalut Premiumilla",
+    "description": "Tekstin generointi, yhteenvedot, kuvat, käännös ja chat — yksi tilaus, ei yllätyksiä pyyntöä kohden.",
+    "point1": "Kaikki AI-työkalut ilman rajoituksia",
+    "point2": "Priorisoitu käsittely kiireisinä päivinä",
+    "point3": "Tue itsenäistä kehitystä",
+    "cta": "Hanki Premium",
+    "compare": "Katso tilaukset",
+    "trialHint": "Kirjaudu sisään ilmaiseen esikatseluun — päivitä milloin tahansa."
+  },
+  "privacyBadge": {
+    "title": "Yksityisyys ensin",
+    "local": "Käsitellään paikallisesti selaimessasi"
+  },
+  "onboarding": {
+    "skip": "Sulje",
+    "next": "Seuraava",
+    "start": "Selaa työkaluja",
+    "learnMore": "Miten Toolando toimii",
+    "step1": {
+      "title": "Muunna, laske, avaa — yksi ekosysteemi",
+      "body": "287+ työkalua tiedostoille, laskimille, kehittäjätyökaluille ja AI:lle — valitse työkalu tai hae Ctrl+K:lla."
+    },
+    "step2": {
+      "title": "Yksityisyys kun sillä on merkitystä",
+      "body": "Monet apuohjelmat toimivat selaimessasi. Palvelinmuunnokset poistavat tiedostot työn valmistuttua."
+    },
+    "step3": {
+      "title": "AI-työkalut Premiumilla",
+      "body": "Kokeile muuntimia ilmaiseksi. AI-ominaisuudet käyttävät yksinkertaista kuukausitilausta — katso hinnat ennen maksuseinää."
+    }
+  },
+  "exitIntent": {
+    "title": "Ennen kuin lähdet…",
+    "body": "Tarvitsetko toisen muuntimen? Etsi 287+ työkalusta tai kerro, mitä meidän pitäisi rakentaa seuraavaksi.",
+    "browse": "Selaa työkaluja",
+    "request": "Pyydä työkalua",
+    "close": "Sulje"
+  },
+  "nextSteps": {
+    "title": "Seuraavat askeleet",
+    "aiSummarizeTitle": "Tiivistä asiakirja AI:lla",
+    "aiSummarizeBody": "Luo PDF- tai DOCX-yhteenveto sekunneissa (Premium tai 1 yritys/päivä)."
+  },
+  "newsletter": {
+    "title": "Uudet työkalut & Premium-päivitykset",
+    "subtitle": "Jätä sähköpostisi — ilmoitamme tärkeistä ominaisuuksista (ei roskapostia).",
+    "placeholder": "you@example.com",
+    "cta": "Tilaa",
+    "thanks": "Kiitos! Vahvista yhteydenoton kautta, jos haluat vastauksen.",
+    "confirmViaContact": "Viimeistele tilaus yhteydenottolomakkeella →",
+    "error": "Tilaus epäonnistui. Yritä uudelleen."
+  },
+  "toolRequest": {
+    "title": "Puuttuuko muunnin?",
+    "body": "Ehdota uutta työkalua tai formaattia — priorisoimme käyttäjien toiveet.",
+    "cta": "Ehdota työkalua"
+  },
+  "comparison": {
+    "title": "Toolando vs pilvilataustyökalut",
+    "subtitle": "Miksi käyttäjät vaihtavat yleisistä latausmuuntimista.",
+    "feature": "Ominaisuus",
+    "competitor": "Tyypillinen pilvimuunnin",
+    "rows": {
+      "privacy": "Paikallinen esikatselu & yksityisyysasetukset",
+      "offline": "Toimii offline-tilassa (PWA-apuohjelmat)",
+      "ai": "Integroitu AI-työnkulku",
+      "free": "Ilmaiset ydinmuuntimet",
+      "limits": "Ei mielivaltaisia päivittäisiä latausrajoja perustoiminnoissa"
+    }
+  },
+  "premiumPage": {
+    "title": "Toolando Premium",
+    "subtitle": "AI-työkalut, selkeät hinnat, peruuta milloin tahansa.",
+    "freeTitle": "Ilmainen",
+    "freeDesc": "Kaikki tiedostomuuntimet, laskimet ja useimmat apuohjelmat.",
+    "premiumTitle": "Premium",
+    "premiumDesc": "Täysi AI-paketti — teksti, kuvat, yhteenvedot, käännös, chat.",
+    "supporterTitle": "Supporter",
+    "supporterDesc": "Premium + mainokseton kokemus (tulossa pian).",
+    "cta": "Aloita Premium",
+    "signIn": "Kirjaudu sisään tilataksesi",
+    "faqTitle": "Usein kysytyt kysymykset hinnoittelusta",
+    "faq1q": "Miten krediitit toimivat?",
+    "faq1a": "Ei krediittejä pyyntöä kohden — Premium on kiinteä kuukausitilaus rajoittamattomaan AI-käyttöön.",
+    "faq2q": "Voinko kokeilla ennen maksamista?",
+    "faq2a": "Luo ilmainen tili, tutustu muuntimiin ja päivitä, kun tarvitset AI:ta.",
+    "faq3q": "Entä tiedostojen yksityisyys?",
+    "faq3a": "Palvelintiedostot poistetaan käsittelyn jälkeen. Selaintyökalut eivät koskaan lataa tietojasi."
+  },
+  "privacyPage": {
+    "title": "Yksityisyys suunniteltu alusta alkaen",
+    "subtitle": "Miten Toolando suojaa tiedostojasi ja tietojasi.",
+    "localTitle": "Työkalut paikallisesti selaimessa",
+    "localBody": "Apuohjelmat, yleisavaaja ja monet laskimet toimivat kokonaan selaimessasi — tiedot eivät koskaan poistu laitteeltasi.",
+    "serverTitle": "Palvelinmuunnokset",
+    "serverBody": "Kun lataat muunnosta varten, tiedostoja käytetään vain siihen työhön ja poistetaan sen jälkeen. HTTPS päästä päähän.",
+    "aiTitle": "AI-työkalut",
+    "aiBody": "Premium AI lähettää mallin tarjoajalle vain lähettämäsi sisällön — ei koskaan myydä tai käytetä mainontaan.",
+    "badge": "Privacy-First",
+    "readPolicy": "Lue täydellinen tietosuojakäytäntö"
+  },
+  "nav": {
+    "categories": "Muunninkategoriat",
+    "downloader": "MP3 Downloader",
+    "aboutMe": "Tietoa minusta",
+    "privacy": "Tietosuojakäytäntö",
+    "terms": "Käyttöehdot",
+    "premium": "Premium",
+    "guides": "Oppaat",
+    "faq": "FAQ",
+    "more": "Lisää"
+  },
+  "share": {
+    "label": "Jaa",
+    "copy": "Kopioi linkki",
+    "copied": "Kopioitu"
+  },
+  "recommender": {
+    "categories": {
+      "video": "Video"
+    }
+  },
+  "opener": {
+    "kindVideo": "Video",
+    "readError": "Tiedoston sisältöä ei voitu lukea.",
+    "dropAny": "Vedä tiedosto tähän tai napsauta valitaksesi",
+    "dropHint": "Kuvat, video, ääni, PDF, asiakirjat, koodi, data — mikä tahansa formaatti. Tiedostot avataan paikallisesti selaimessasi eikä niitä ladata minnekään.",
+    "noConverter": "Meillä ei ole vielä muunninta tälle formaatille — mutta voit esikatsella ja ladata tiedoston alla.",
+    "convertTo": "Muunna toiseen formaattiin",
+    "optionOne": "vaihtoehto",
+    "optionMany": "vaihtoehtoa",
+    "downloadedOk": "Valmis! Tiedosto on ladattu.",
+    "download": "Lataa",
+    "close": "Sulje",
+    "emptyFile": "(tyhjä tiedosto)",
+    "textTruncated": "Esikatselu katkaistu ensimmäisiin 200 000 merkkiin. Lataa tiedosto nähdäksesi kaiken.",
+    "binaryPreview": "Binääriesikatselu (ensimmäiset tavut heksadesimaalina)",
+    "kinds": {
+      "image": "Kuva",
+      "video": "Video",
+      "audio": "Ääni",
+      "pdf": "PDF-asiakirja",
+      "text": "Teksti / koodi",
+      "binary": "Binääritiedosto"
+    }
+  },
+  "knowledgeHub": {
+    "glossaryTitle": "Sanasto",
+    "glossaryDesc": "Bittinopeus, koodekki, häviöllinen pakkaus, MIME — selkeät määritelmät.",
+    "glossaryCta": "Avaa sanasto"
+  },
+  "editorial": {
+    "title": "Kuka pyörittää Toolando.techia",
+    "body": "Olen Szymon — suunnittelen, rakennan ja testaan jokaisen työkalun itse. Oppaat perustuvat oikeisiin muunnoksiin, eivät kopioituihin spesifikaatioihin. Haluan, että ymmärrät tiedostosi ennen muuntamista ja että palvelu pysyy rehellisenä.",
+    "aboutCta": "Tietoa minusta & metodologia",
+    "howCta": "Miten työkalut toimivat",
+    "editorialCta": "Toimitukselliset standardit",
+    "guidesCta": "Oppaat"
+  },
+  "featuredGuides": {
+    "title": "Suositellut oppaat",
+    "subtitle": "Käytännön artikkeleita tiedostomuodoista, turvallisuudesta ja muunnoksesta — kirjoitettu oikeista testeistä, ei SEO-malleista.",
+    "readArticle": "Lue opas",
+    "allGuides": "Kaikki oppaat"
+  },
+  "footer": {
+    "aboutMe": "Tietoa minusta",
+    "howItWorks": "Miten se toimii",
+    "faq": "FAQ",
+    "editorial": "Toimitus",
+    "rss": "RSS-syöte",
+    "cookieSettings": "Evästeasetukset",
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "messenger": "Messenger",
+    "youtube": "YouTube"
+  },
+  "ad": {
+    "label": "Mainos",
+    "placeholder": "Mainostila"
+  },
+  "tool": {
+    "convertFailed": "Muunnos epäonnistui.",
+    "connectionError": "Yhteyttä palvelimeen ei voitu muodostaa. Yritä uudelleen.",
+    "unavailable": "Tämä muunnin ei ole tällä hetkellä saatavilla",
+    "dropClick": "Vedä tiedosto tähän tai napsauta valitaksesi",
+    "dropClickMulti": "Vedä tiedostot tähän tai napsauta valitaksesi",
+    "supportedFormat": "Tuettu formaatti",
+    "supported": "Tuettu",
+    "maxSize": "enint. 500 MB",
+    "removeFile": "Poista tiedosto",
+    "convertDone": "Muunnos valmis",
+    "downloadNamed": "Lataa",
+    "convertAnother": "Muunna toinen tiedosto",
+    "uploadingFile": "Ladataan tiedostoa…",
+    "uploadingFiles": "Ladataan tiedostoja…",
+    "uploading": "Ladataan…",
+    "converting": "Muunnetaan…",
+    "convertToPrefix": "Muunna muotoon",
+    "needTwoPdf": "Lisää vähintään kaksi PDF-tiedostoa yhdistämistä varten.",
+    "operationFailed": "Toiminto epäonnistui.",
+    "compressionQuality": "Pakkauslaatu",
+    "qualityHint": "Pienempi arvo = pienempi tiedosto. Suurempi arvo = parempi laatu.",
+    "done": "Valmis",
+    "less": "vähemmän",
+    "resultPreview": "Tuloksen esikatselu",
+    "startOver": "Aloita alusta",
+    "processingLong": "Käsitellään (tämä voi kestää muutaman sekunnin)…"
+  },
+  "aiTool": {
+    "generateFailed": "Vastausta ei voitu generoida.",
+    "noContent": "AI-palvelu ei palauttanut sisältöä. Tarkista, että AI Gateway on aktiivinen (vaatii maksukortin).",
+    "connectionError": "Yhteysvirhe tapahtui. Yritä uudelleen.",
+    "dropDoc": "Vedä asiakirja tähän tai napsauta valitaksesi",
+    "removeFile": "Poista tiedosto",
+    "translatePlaceholder": "Liitä käännettävä teksti…",
+    "copyPlaceholder": "Kuvaile, mitä AI:n pitäisi kirjoittaa, esim. \"tuotekuvaus ekologiselle vesipullolle\"…",
+    "toneLabel": "Sävy",
+    "targetLangLabel": "Kohdekieli",
+    "translate": "Käännä",
+    "summarizeDoc": "Tiivistä asiakirja",
+    "generateText": "Generoi teksti",
+    "imageFailed": "Kuvaa ei voitu generoida.",
+    "imagePromptPlaceholder": "Kuvaile kuvaa, esim. \"futuristinen kaupunki auringonlaskussa, akvarellityyli\"…",
+    "ratioSquare": "Neliö 1:1",
+    "ratioLandscape": "Vaaka 3:2",
+    "ratioPortrait": "Pysty 2:3",
+    "generatingImage": "Generoidaan kuvaa (tämä voi kestää useita sekunteja)…",
+    "generateImage": "Generoi kuva",
+    "generatedImageAlt": "Generoitu kuva",
+    "downloadImage": "Lataa kuva",
+    "tones": {
+      "professional": "ammattimainen",
+      "friendly": "ystävällinen",
+      "energetic": "energinen",
+      "formal": "muodollinen",
+      "playful": "leikkisä",
+      "persuasive": "vakuuttava"
+    },
+    "languages": {
+      "english": "Englanti",
+      "german": "Saksa",
+      "spanish": "Espanja",
+      "french": "Ranska",
+      "italian": "Italia",
+      "ukrainian": "Ukraina",
+      "polish": "Puola",
+      "japanese": "Japani"
+    }
+  },
+  "paywall": {
+    "unlockTitle": "Avaa \"{tool}\" Premiumilla",
+    "description": "Avaa kaikki Toolando.tech AI-työkalut — teksti- ja kuvagenerointi, käännös, yhteenvedot ja avustaja — yhdellä tilauksella.",
+    "feature1": "Rajoittamaton pääsy kaikkiin AI-työkaluihin",
+    "feature2": "Tekstigeneraattori, kuvageneraattori ja kääntäjä",
+    "feature3": "Priorisoitu pyyntöjen käsittely",
+    "goPremium": "Päivitä Premiumiin",
+    "redirecting": "Ohjataan…",
+    "signInToBuy": "Kirjaudu sisään ostaaksesi Premiumin",
+    "noAccount": "Eikö sinulla ole tiliä?",
+    "signUp": "Rekisteröidy"
+  },
+  "account": {
+    "backToHome": "Takaisin etusivulle",
+    "yourAccount": "Tilisi",
+    "premiumBadge": "Premium",
+    "freeBadge": "Ilmainen tili",
+    "premiumActiveTitle": "Sinulla on aktiivinen Premium",
+    "premiumActiveDesc": "Kiitos tuestasi! Sinulla on täysi pääsy kaikkiin AI-työkaluihin ilman rajoituksia.",
+    "manageSubscription": "Hallitse tilausta",
+    "manageOpening": "Avataan…",
+    "managePortalError": "Portaalia ei voitu avata.",
+    "manageGenericError": "Tapahtui virhe.",
+    "goPremiumTitle": "Hanki Premium",
+    "feature1": "Rajoittamaton pääsy AI-työkaluihin",
+    "feature2": "Taustan poisto, kuva- ja tekstigenerointi",
+    "feature3": "Priorisoitu käsittely",
+    "buyPremium": "Osta Premium",
+    "buyRedirecting": "Ohjataan…",
+    "refreshHint": "Maksoitko mutta Premium on yhä passiivinen? Päivitä tilasi:",
+    "refreshStatus": "Päivitä Premium-tila",
+    "refreshChecking": "Tarkistetaan...",
+    "refreshNoSub": "Aktiivista tilausta ei löytynyt. Jos maksoit juuri, odota hetki ja yritä uudelleen.",
+    "refreshFailed": "Tilaa ei voitu päivittää.",
+    "refreshNetworkError": "Verkkovirhe tapahtui. Yritä uudelleen.",
+    "signOut": "Kirjaudu ulos"
+  },
+  "downloader": {
+    "eyebrow": "Video → MP3",
+    "title": "Multi-Platform → MP3 Downloader",
+    "subtitle": "Liitä linkki TikTokista, Instagramista, Facebookista, Twitter/X:stä, Vimeosta tai SoundCloudista ja hae ääni.",
+    "metaDescription": "Multi-platform Video to MP3 Downloader — TikTok, Instagram, Facebook, Twitter, Vimeo, SoundCloud. Liitä linkki ja lataa ääni.",
+    "back": "Kaikki työkalut",
+    "inputLabel": "Videolinkki",
+    "inputPlaceholder": "https://www.tiktok.com/@user/video/...",
+    "detected": "tunnistettu",
+    "idLabel": "ID",
+    "invalidLink": "Syötä kelvollinen linkki tuetulta alustalta.",
+    "download": "Lataa MP3",
+    "preparing": "Valmistellaan linkkiäsi…",
+    "ready": "Linkkisi on valmis.",
+    "openPage": "Avaa lataussivu",
+    "resultTitle": "Valmis ladattavaksi",
+    "resultsBack": "Takaisin lataajaan",
+    "thumbnailAlt": "Videon pikkukuva",
+    "viewSource": "Näytä alkuperäinen",
+    "faqTitle": "Usein kysytyt kysymykset",
+    "disclaimer": "Toolando.tech ei isännöi tai lataa mediaa. Se tunnistaa vain alustan ja julkisen video-ID:n ja ohjaa ulkoiseen palveluun tai selaimeesi. Lataa vain sisältöä, johon sinulla on oikeudet.",
+    "externalNote": "Lataus tapahtuu ulkoisessa palvelussa tai selaimessasi. Toolando.tech tallensi vain julkisen alustan ja video-ID:n. Kunnioita tekijänoikeuksia ja kunkin alustan käyttöehtoja.",
+    "platformDisabled": "Lataus alustalta {platform} on tilapäisesti poissa käytöstä — {platform} estää aktiivisesti lataajia, joten olemme keskeyttäneet sen, kunnes oma muuntimemme on valmis. Kaikki muut alustat toimivat edelleen."
+  },
+  "pages": {
+    "editorial": {
+      "eyebrow": "Toimitus",
+      "title": "Toolando.techin toimitukselliset standardit",
+      "intro": "Toolando.tech ei ole vain muuntimia — se on oppaita, formaattien tietosanakirjaa ja vertailuja. Alla selitän, miten sisältö luodaan, mistä tieto tulee ja milloin sitä päivitetään.",
+      "whoTitle": "Kuka luo sisällön",
+      "whoP1": "Kirjoitan jokaisen oppaan, formaattiprofiilin ja vertailun itse — Szymon Badyl, Toolando.techin luoja. En käytä sisältötehtaita tai tarkistamattomia AI-tekstejä.",
+      "whoP2": "Jokainen artikkeli perustuu muunnostesteihin omilla tiedostoillani. Jos jokin ei toimi kuten kuvattu, korjaan sekä tekstin että työkalun.",
+      "standardsTitle": "Toimitukselliset periaatteet",
+      "standardsIntro": "Soveltan samoja sääntöjä jokaiseen uuteen oppaaseen:",
+      "sourcesTitle": "Lähteet ja rehellisyys",
+      "sourcesP1": "Varmistan formaattispesifikaatiot (MIME, koodekit) IANA:n, FFmpeg:n ja valmistajien dokumentaation avulla. Vertailut perustuvat omiin koko- ja laatumittauksiini, eivät markkinointitaulukoihin.",
+      "sourcesP2": "Ulkoiset linkit näkyvät vain, kun ne todella auttavat (esim. virallinen dokumentaatio). En mainosta maksullisia kilpailijatyökaluja.",
+      "updatesTitle": "Päivitykset ja korjaukset",
+      "updatesP1": "Löysitkö virheen, vanhentuneen tiedon tai aihe-ehdotuksen? Lähetä sähköpostia badyltech@outlook.com — korjaukset lisätään artikkeliin päivityspäivämäärällä.",
+      "updatedLabel": "Viimeksi päivitetty",
+      "updatedDate": "elokuu 2026",
+      "fullGuideCta": "Täydellinen opas toimituksellisista standardeista"
+    },
+    "howItWorks": {
+      "tiersPremiumTerm": "Premium"
+    },
+    "faq": {
+      "eyebrow": "FAQ"
+    },
+    "privacy": {
+      "eyebrow": "Tietosuojakäytäntö",
+      "title": "Toolando.techin tietosuojakäytäntö",
+      "intro": "Toolando.tech on palvelu, joka tarjoaa verkkotyökaluja ilmaisessa ja premium-versiossa. Välitän käyttäjien yksityisyydestä ja käsittelen tietoja sovellettavien säädösten, mukaan lukien GDPR:n, mukaisesti.",
+      "lastUpdated": "Viimeksi päivitetty: 23. heinäkuuta 2026",
+      "s1Title": "1. Rekisterinpitäjä",
+      "s1Pre": "Rekisterinpitäjä on Szymon Badyl, Toolando.techin omistaja (Puola). Yksityisyysasioissa voit ottaa yhteyttä:",
+      "s1Address": "Kirjeenvaihto: badyltech@outlook.com",
+      "s2Title": "2. Mitä tietoja käsitellään",
+      "s2Intro": "Palvelu käsittelee teknisiä ja tilastollisia tietoja, jotka kerätään automaattisesti sivustoa käytettäessä:",
+      "s2Outro": "Jos otat yhteyttä sähköpostitse tai lomakkeella, käsittelen myös antamasi sähköpostiosoitteen ja viestisi sisällön.",
+      "s3Title": "3. Työkaluihin ladatut tiedostot",
+      "s3P": "Työkaluihin muunnosta tai muuta toimintoa varten lataamiasi tiedostoja en tallenna. Niitä käytetään ainoastaan pyytämäsi tehtävän suorittamiseen ja poistetaan sen valmistuttua. En käytä niitä mihinkään muuhun tarkoitukseen.",
+      "s4Title": "4. Evästeet",
+      "s4Intro": "Palvelu käyttää seuraavia evästetyyppejä:",
+      "s4TechTerm": "Tekniset",
+      "s4TechDesc": "tarpeellisia sivuston oikealle toiminnalle ja asetusten muistamiseksi (esim. kieli).",
+      "s4AnalyticsTerm": "Analyyttiset",
+      "s4AnalyticsDesc": "tilastolliset työkalut (esim. Google Analytics), jotka auttavat ymmärtämään sivuston käyttöä aggregoidussa ja anonyymissä muodossa.",
+      "s4AdsTerm": "Mainonta",
+      "s4AdsDesc": "Google AdSense, joka voi käyttää evästeitä mainosten näyttämiseen ja personointiin.",
+      "s4Outro": "Voit hallita tai poistaa evästeet käytöstä milloin tahansa selaimen asetuksista. Ensimmäisellä vierailullasi näytämme evästesuostumusbannerin, jossa voit hyväksyä kaikki evästeet tai rajoittua olennaisiin.",
+      "s4ThirdPartyTitle": "Kolmannen osapuolen palveluntarjoajat",
+      "s4ThirdPartyP": "Palvelu käyttää Google-palveluja (Analytics, AdSense). Google voi kerätä tietoja oman tietosuojakäytäntönsä mukaisesti. Lisätietoja: https://policies.google.com/technologies/partner-sites",
+      "s5Title": "5. Ilmaiset ja premium-työkalut",
+      "s5P": "Toolando tarjoaa ilmaisia työkaluja (saatavilla ilman tiliä) ja premium-työkaluja. Tietojenkäsittelyn ja tiedostosuojauksen säännöt ovat samat molemmissa versioissa — ne eroavat vain ominaisuuksien laajuudessa ja rajoissa.",
+      "s6Title": "6. Tietojenkäsittelyn tarkoitus",
+      "s6Intro": "Käsittelen tietoja ainoastaan seuraaviin tarkoituksiin:",
+      "s7Title": "7. Oikeutesi",
+      "s7Intro": "Sinulla on oikeus:",
+      "s8Title": "8. Muutokset käytäntöön",
+      "s8P": "Tietosuojakäytäntöä voidaan päivittää palvelun tai lainsäädännön muutosten vuoksi. Ajankohtainen versio on aina saatavilla tällä sivulla."
+    },
+    "terms": {
+      "eyebrow": "Käyttöehdot",
+      "title": "Toolando.techin käyttöehdot",
+      "intro": "Alla olevat ehdot määrittävät Toolando.tech-palvelun käyttösäännöt. Palvelua käyttämällä hyväksyt nämä säännöt.",
+      "s1Title": "1. Yleiset määräykset",
+      "s1P": "Toolando.techin omistaja on Szymon. Palvelu tarjoaa verkkotyökaluja tiedostomuunnokseen, sisällöntuotantoon ja AI-työkaluihin.",
+      "s2Title": "2. Ilmaiset ja premium-työkalut",
+      "s2Intro": "Toolando tarjoaa työkaluja kahdessa versiossa:",
+      "s2FreeTerm": "Ilmainen",
+      "s2FreeDesc": "saatavilla kaikille ilman tilin luomista.",
+      "s2PremiumTerm": "Premium",
+      "s2PremiumDesc": "edistyneemmillä ominaisuuksilla ja korkeammilla rajoilla.",
+      "s2Outro": "Premium-ominaisuuksien maksuja ja tilauksia koskevat säännöt esitetään palvelun asianmukaisissa kohdissa.",
+      "s3Title": "3. Käyttö omalla vastuulla",
+      "s3P1": "Käytät palvelua omalla vastuullasi. Pyrin siihen, että työkalut toimivat oikein, mutta palvelu tarjotaan \"sellaisenaan\" ilman takuuta saatavuudesta, tulosten oikeellisuudesta tai soveltuvuudesta tiettyyn tarkoitukseen.",
+      "s3P2": "Palvelun omistaja ei ole vastuussa:",
+      "s3Outro": "Käyttäjä sitoutuu käyttämään palvelua lain mukaisesti ja on vastuussa käsittelemästään sisällöstä ja tiedostoista.",
+      "s4Title": "4. Käyttäjien tiedostot",
+      "s4P": "Työkaluihin ladattuja tiedostoja ei tallenneta. Niitä käytetään ainoastaan pyydetyn toimen suorittamiseen ja poistetaan sen valmistuttua.",
+      "s5Title": "5. Mainokset",
+      "s5P": "Palvelu voi näyttää Google AdSense -mainoksia. Mainokset auttavat ylläpitämään ilmaisia työkaluja ja kehittämään projektia. Mainontapalvelu voi käyttää evästeitä tietosuojakäytännön mukaisesti.",
+      "s6Title": "6. Tekijänoikeudet",
+      "s6P": "Nimi Toolando.tech, graafiset elementit ja palvelun sisältö ovat laillisesti suojattuja. Kopiointi ja käyttö ilman omistajan suostumusta on kielletty.",
+      "s7Title": "7. Yhteystiedot",
+      "s7Pre": "Näihin ehtoihin liittyvissä asioissa voit ottaa yhteyttä:",
+      "s8Title": "8. Muutokset ehtoihin",
+      "s8P": "Ehtoja voidaan päivittää palvelun tai lainsäädännön muutosten vuoksi. Ajankohtainen versio on aina saatavilla tällä sivulla."
+    },
+    "guides": {
+      "eyebrow": "Oppaat",
+      "title": "Tiedostomuunnosoppaat ja -ohjeet",
+      "intro": "Käytännön artikkeleita tiedostomuodoista, muunnoksesta ja parhaista käytännöistä. Jokainen opas selittää, milloin ja miksi tiedosto muunnetaan ja miten se tehdään turvallisesti Toolando.techilla."
+    }
+  },
+  "hub": {
+    "convertersTitle": "Tiedostomuuntimet",
+    "convertersDesc": "Ääni, video, kuvat, asiakirjat, data, fontit ja arkistot — plus pakkaus, PDF-yhdistäminen ja taustan poisto.",
+    "calculatorsTitle": "Laskimet & muuntimet",
+    "calculatorsDesc": "Valuutta, ALV, päivämäärät, aikavyöhykkeet, yksiköt ja bittinopeus.",
+    "developerTitle": "Kehittäjä- & tekstityökalut",
+    "developerDesc": "Salasanat, QR, Base64, UUID, hash, värit, aikaleima ja merkkilaskuri.",
+    "specialTools": "Tiedostotyökalut",
+    "browseConverters": "Selaa muuntimia",
+    "browseCalculators": "Selaa laskimia",
+    "browseDeveloper": "Selaa työkaluja"
+  },
+  "specialFields": {
+    "splitMode": "Jakotila",
+    "everyPage": "Jokainen sivu erikseen",
+    "pageRange": "Valittu alue",
+    "pagesHint": "Sivut (esim. 1-3,5)",
+    "rotation": "Kiertokulma",
+    "width": "Leveys (px)",
+    "height": "Korkeus (px, valinnainen)",
+    "watermark": "Vesileimateksti",
+    "trimStart": "Alku (sek tai MM:SS)",
+    "trimEnd": "Loppu (sek tai MM:SS)",
+    "pageNumberPos": "Sivunumeron sijainti",
+    "bottom": "Sivun alareuna",
+    "top": "Sivun yläreuna"
+  },
+  "accountRecent": {
+    "title": "Viimeksi käytetyt",
+    "subtitle": "Historia tallennettu paikallisesti tähän selaimeen."
+  },
+  "favorites": {
+    "add": "Lisää suosikkeihin",
+    "remove": "Suosikki"
+  }
+}

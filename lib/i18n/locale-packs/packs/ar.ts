@@ -81,6 +81,11 @@ export default uiPack({
     "comparisonsCta": "تصفح المقارنات"
   },
   "footer": {
+    "emailAria": "يفتح تطبيق البريد للكتابة إلينا",
+    "youtube": "YouTube",
+    "messenger": "Messenger",
+    "instagram": "Instagram",
+    "facebook": "Facebook",
     "guides": "أدلة",
     "formats": "تنسيقات الملفات",
     "comparisons": "مقارنات",

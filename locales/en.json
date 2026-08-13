@@ -52,7 +52,9 @@
     "close": "Close"
   },
   "nextSteps": {
-    "title": "Next steps"
+    "title": "Next steps",
+    "aiSummarizeTitle": "Summarize document with AI",
+    "aiSummarizeBody": "Generate a PDF or DOCX summary in seconds (Premium or 1 try/day)."
   },
   "newsletter": {
     "title": "New tools & Premium updates",
@@ -60,7 +62,8 @@
     "placeholder": "you@example.com",
     "cta": "Subscribe",
     "thanks": "Thanks! Confirm via contact if you want a reply.",
-    "confirmViaContact": "Complete signup via contact form →"
+    "confirmViaContact": "Complete signup via contact form →",
+    "error": "Signup failed. Please try again."
   },
   "toolRequest": {
     "title": "Missing a converter?",
@@ -321,7 +324,12 @@
     "comparisons": "Comparisons",
     "glossary": "Glossary",
     "rss": "RSS feed",
-    "cookieSettings": "Cookie settings"
+    "cookieSettings": "Cookie settings",
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "messenger": "Messenger",
+    "youtube": "YouTube",
+    "emailAria": "Opens your email app to write to us"
   },
   "ad": {
     "label": "Advertisement",
@@ -873,5 +881,28 @@
     "browseConverters": "Browse converters",
     "browseCalculators": "Browse calculators",
     "browseDeveloper": "Browse tools"
+  },
+  "specialFields": {
+    "splitMode": "Split mode",
+    "everyPage": "Every page separately",
+    "pageRange": "Selected range",
+    "pagesHint": "Pages (e.g. 1-3,5)",
+    "rotation": "Rotation angle",
+    "width": "Width (px)",
+    "height": "Height (px, optional)",
+    "watermark": "Watermark text",
+    "trimStart": "Start (sec or MM:SS)",
+    "trimEnd": "End (sec or MM:SS)",
+    "pageNumberPos": "Page number position",
+    "bottom": "Bottom of page",
+    "top": "Top of page"
+  },
+  "accountRecent": {
+    "title": "Recently used",
+    "subtitle": "History saved locally in this browser."
+  },
+  "favorites": {
+    "add": "Add to favorites",
+    "remove": "Favorite"
   }
 }

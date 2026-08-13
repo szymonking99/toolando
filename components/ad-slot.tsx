@@ -6,6 +6,7 @@ import { hasAnalyticsConsent } from "@/lib/consent"
 import { useI18n } from "@/components/i18n-provider"
 import { EzoicAd } from "@/components/ezoic-ad"
 import { PremiumUpsellCard } from "@/components/premium-upsell-card"
+import { useUser } from "@/hooks/use-user"
 import {
   adSlotEnabled,
   getAdNetwork,
@@ -41,6 +42,7 @@ export function AdSlot({
   minHeight = 120,
 }: AdSlotProps) {
   const { t } = useI18n()
+  const { isPremium, isLoading } = useUser()
   const adLabel = label ?? t.ad.label
   const pushedRef = useRef(false)
   const [consented, setConsented] = useState(false)
@@ -80,6 +82,7 @@ export function AdSlot({
   }, [isAdSense, consented])
 
   if (!placementEnabled) return null
+  if (!isLoading && isPremium) return null
 
   return (
     <div

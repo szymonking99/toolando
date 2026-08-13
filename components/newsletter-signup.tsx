@@ -2,26 +2,48 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import { Mail, Check } from "lucide-react"
+import { Mail, Check, Loader2 } from "lucide-react"
 import { useI18n } from "@/components/i18n-provider"
 
 export function NewsletterSignup() {
-  const { t, href } = useI18n()
+  const { t, href, locale } = useI18n()
   const [email, setEmail] = useState("")
-  const [done, setDone] = useState(false)
+  const [status, setStatus] = useState<"idle" | "loading" | "done" | "error">("idle")
+  const [error, setError] = useState<string | null>(null)
 
-  function submit(e: React.FormEvent) {
+  async function submit(e: React.FormEvent) {
     e.preventDefault()
-    if (!email.trim()) return
+    const trimmed = email.trim()
+    if (!trimmed) return
+
+    setStatus("loading")
+    setError(null)
+
     try {
-      localStorage.setItem("toolando-newsletter-pending", email.trim())
+      const res = await fetch("/api/newsletter", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: trimmed, locale }),
+      })
+      const data = (await res.json()) as { error?: string }
+      if (!res.ok) {
+        setError(data.error ?? t.newsletter.error)
+        setStatus("error")
+        return
+      }
+      try {
+        localStorage.setItem("toolando-newsletter-pending", trimmed)
+      } catch {
+        /* ignore */
+      }
+      setStatus("done")
     } catch {
-      /* ignore */
+      setError(t.newsletter.error)
+      setStatus("error")
     }
-    setDone(true)
   }
 
-  if (done) {
+  if (status === "done") {
     return (
       <div className="mx-auto max-w-xl rounded-2xl border border-primary/25 bg-primary/[0.06] p-6 text-center">
         <Check className="mx-auto size-8 text-primary" aria-hidden="true" />
@@ -51,15 +73,25 @@ export function NewsletterSignup() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder={t.newsletter.placeholder}
-            className="flex-1 rounded-xl border border-white/10 bg-white/[0.04] px-4 py-2.5 text-sm text-foreground focus:border-primary/40 focus:outline-none focus:ring-1 focus:ring-primary/30"
+            disabled={status === "loading"}
+            className="flex-1 rounded-xl border border-white/10 bg-white/[0.04] px-4 py-2.5 text-sm text-foreground focus:border-primary/40 focus:outline-none focus:ring-1 focus:ring-primary/30 disabled:opacity-60"
           />
           <button
             type="submit"
-            className="rounded-xl bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground"
+            disabled={status === "loading"}
+            className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground disabled:opacity-60"
           >
+            {status === "loading" && (
+              <Loader2 className="size-4 animate-spin" aria-hidden="true" />
+            )}
             {t.newsletter.cta}
           </button>
         </form>
+        {error && (
+          <p className="mt-3 text-sm text-destructive" role="alert">
+            {error}
+          </p>
+        )}
       </div>
     </section>
   )

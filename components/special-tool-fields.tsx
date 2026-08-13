@@ -1,6 +1,7 @@
 "use client"
 
 import type { SpecialEngine } from "@/lib/special-tools"
+import { useI18n } from "@/components/i18n-provider"
 
 export type SpecialFieldValues = {
   splitMode: "all" | "range"
@@ -11,6 +12,7 @@ export type SpecialFieldValues = {
   watermarkText: string
   trimStart: string
   trimEnd: string
+  pageNumberPosition: "bottom" | "top"
 }
 
 export const defaultSpecialFields: SpecialFieldValues = {
@@ -22,6 +24,7 @@ export const defaultSpecialFields: SpecialFieldValues = {
   watermarkText: "toolando.tech",
   trimStart: "0",
   trimEnd: "30",
+  pageNumberPosition: "bottom",
 }
 
 export function buildSpecialFields(
@@ -48,9 +51,43 @@ export function buildSpecialFields(
         trimStart: values.trimStart,
         trimEnd: values.trimEnd,
       }
+    case "pdf-page-numbers":
+      return { pageNumberPosition: values.pageNumberPosition }
     default:
       return undefined
   }
+}
+
+type SpecialFieldsCopy = {
+  splitMode: string
+  everyPage: string
+  pageRange: string
+  pagesHint: string
+  rotation: string
+  width: string
+  height: string
+  watermark: string
+  trimStart: string
+  trimEnd: string
+  pageNumberPos: string
+  bottom: string
+  top: string
+}
+
+const FALLBACK_FIELDS: SpecialFieldsCopy = {
+  splitMode: "Split mode",
+  everyPage: "Every page separately",
+  pageRange: "Selected range",
+  pagesHint: "Pages (e.g. 1-3,5)",
+  rotation: "Rotation angle",
+  width: "Width (px)",
+  height: "Height (px, optional)",
+  watermark: "Watermark text",
+  trimStart: "Start (sec or MM:SS)",
+  trimEnd: "End (sec or MM:SS)",
+  pageNumberPos: "Page number position",
+  bottom: "Bottom of page",
+  top: "Top of page",
 }
 
 export function SpecialToolFields({
@@ -62,6 +99,10 @@ export function SpecialToolFields({
   values: SpecialFieldValues
   onChange: (patch: Partial<SpecialFieldValues>) => void
 }) {
+  const { t } = useI18n()
+  const f =
+    ((t as { specialFields?: SpecialFieldsCopy }).specialFields) ?? FALLBACK_FIELDS
+
   const box =
     "rounded-xl border border-white/10 bg-white/[0.03] px-4 py-4 space-y-3"
   const label = "text-sm font-medium text-foreground"
@@ -72,7 +113,7 @@ export function SpecialToolFields({
     case "split-pdf":
       return (
         <div className={box}>
-          <p className={label}>Tryb podziału</p>
+          <p className={label}>{f.splitMode}</p>
           <div className="flex flex-wrap gap-3 text-sm">
             <label className="flex items-center gap-2">
               <input
@@ -81,7 +122,7 @@ export function SpecialToolFields({
                 checked={values.splitMode === "all"}
                 onChange={() => onChange({ splitMode: "all" })}
               />
-              Każda strona osobno
+              {f.everyPage}
             </label>
             <label className="flex items-center gap-2">
               <input
@@ -90,12 +131,12 @@ export function SpecialToolFields({
                 checked={values.splitMode === "range"}
                 onChange={() => onChange({ splitMode: "range" })}
               />
-              Wybrany zakres
+              {f.pageRange}
             </label>
           </div>
           {values.splitMode === "range" && (
             <label className="block text-sm text-muted-foreground">
-              Strony (np. 1-3,5)
+              {f.pagesHint}
               <input
                 className={input}
                 value={values.pageRange}
@@ -109,7 +150,7 @@ export function SpecialToolFields({
       return (
         <div className={box}>
           <label className={label}>
-            Kąt obrotu
+            {f.rotation}
             <select
               className={input}
               value={values.rotation}
@@ -129,7 +170,7 @@ export function SpecialToolFields({
         <div className={box}>
           <div className="grid gap-3 sm:grid-cols-2">
             <label className={label}>
-              Szerokość (px)
+              {f.width}
               <input
                 className={input}
                 type="number"
@@ -139,7 +180,7 @@ export function SpecialToolFields({
               />
             </label>
             <label className={label}>
-              Wysokość (px, opcjonalnie)
+              {f.height}
               <input
                 className={input}
                 type="number"
@@ -156,7 +197,7 @@ export function SpecialToolFields({
       return (
         <div className={box}>
           <label className={label}>
-            Tekst znaku wodnego
+            {f.watermark}
             <input
               className={input}
               value={values.watermarkText}
@@ -170,7 +211,7 @@ export function SpecialToolFields({
         <div className={box}>
           <div className="grid gap-3 sm:grid-cols-2">
             <label className={label}>
-              Początek (sek. lub MM:SS)
+              {f.trimStart}
               <input
                 className={input}
                 value={values.trimStart}
@@ -178,7 +219,7 @@ export function SpecialToolFields({
               />
             </label>
             <label className={label}>
-              Koniec (sek. lub MM:SS)
+              {f.trimEnd}
               <input
                 className={input}
                 value={values.trimEnd}
@@ -186,6 +227,27 @@ export function SpecialToolFields({
               />
             </label>
           </div>
+        </div>
+      )
+    case "pdf-page-numbers":
+      return (
+        <div className={box}>
+          <label className={label}>
+            {f.pageNumberPos}
+            <select
+              className={input}
+              value={values.pageNumberPosition}
+              onChange={(e) =>
+                onChange({
+                  pageNumberPosition: e.target
+                    .value as SpecialFieldValues["pageNumberPosition"],
+                })
+              }
+            >
+              <option value="bottom">{f.bottom}</option>
+              <option value="top">{f.top}</option>
+            </select>
+          </label>
         </div>
       )
     default:

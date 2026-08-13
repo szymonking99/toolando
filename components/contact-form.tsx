@@ -3,6 +3,7 @@
 import { useState } from "react"
 import { ContentPageShell } from "@/components/content-page-shell"
 import { useI18n } from "@/components/i18n-provider"
+import { buildMailtoUrl } from "@/lib/contact-email"
 
 export function ContactForm() {
   const { t } = useI18n()
@@ -20,11 +21,10 @@ export function ContactForm() {
     const message = data.get("message")
 
     // mailto — działa bez backendu
-    window.location.href = `mailto:badyltech@outlook.com?subject=${encodeURIComponent(
-      c.subject,
-    )}&body=${encodeURIComponent(
-      `${c.name}: ${name}\n${c.email}: ${email}\n${c.message}:\n${message}`,
-    )}`
+    window.location.href = buildMailtoUrl({
+      subject: c.subject,
+      body: `${c.name}: ${name}\n${c.email}: ${email}\n${c.message}:\n${message}`,
+    })
 
     setStatus("sent")
   }

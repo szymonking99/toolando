@@ -11,6 +11,7 @@ import { useI18n } from "@/components/i18n-provider"
 import { openCookiePreferences } from "@/lib/consent"
 
 import { AdSlot } from "@/components/ad-slot"
+import { ContactEmailLink } from "@/components/contact-email-link"
 
 
 
@@ -127,36 +128,43 @@ export function SiteFooter() {
 
           <p className="text-sm text-muted-foreground">{t.footer.rights}</p>
 
-          <a
-            href="mailto:badyltech@outlook.com"
-            className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
-          >
-            badyltech@outlook.com
-          </a>
+          <ContactEmailLink
+            subject={t.pages.contact.subject}
+            ariaLabel={t.footer.emailAria}
+            className="text-sm font-medium text-muted-foreground underline underline-offset-4 transition-colors hover:text-foreground"
+          />
           <div className="mt-2 flex flex-wrap justify-center gap-3 md:justify-end">
             <a
-              href="https://twitter.com/toolando"
+              href="https://www.facebook.com/badyltech"
               target="_blank"
               rel="noopener noreferrer"
               className="text-xs text-muted-foreground hover:text-foreground"
             >
-              X / Twitter
+              {t.footer.facebook}
             </a>
             <a
-              href="https://www.youtube.com/@toolando"
+              href="https://www.instagram.com/badyltech/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-xs text-muted-foreground hover:text-foreground"
             >
-              YouTube
+              {t.footer.instagram}
             </a>
             <a
-              href="https://www.linkedin.com/company/toolando"
+              href="https://m.me/badyltech"
               target="_blank"
               rel="noopener noreferrer"
               className="text-xs text-muted-foreground hover:text-foreground"
             >
-              LinkedIn
+              {t.footer.messenger}
+            </a>
+            <a
+              href="https://www.youtube.com/@badyltech"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs text-muted-foreground hover:text-foreground"
+            >
+              {t.footer.youtube}
             </a>
           </div>
         </div>

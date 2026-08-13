@@ -1,0 +1,453 @@
+{
+  "socialProof": {
+    "toolsCount": "{count}+ nástrojů v jednom ekosystému",
+    "usesToday": "{uses} použití dnes"
+  },
+  "recent": {
+    "title": "Nedávno použité",
+    "subtitle": "Vaše poslední nástroje — uložené lokálně v tomto prohlížeči.",
+    "favoritesHint": "Označte nástroj hvězdičkou na jeho stránce a připněte ho sem."
+  },
+  "premiumUpsell": {
+    "title": "Odemkněte AI nástroje s Premium",
+    "description": "Generování textu, shrnutí, obrázky, překlad a chat — jedno předplatné, bez překvapení za jednotlivé požadavky.",
+    "point1": "Všechny AI nástroje bez limitů",
+    "point2": "Prioritní zpracování ve špičkách",
+    "point3": "Podpora nezávislého vývoje",
+    "cta": "Zvolit Premium",
+    "compare": "Zobrazit plány",
+    "trialHint": "Přihlaste se pro bezplatný náhled — poté můžete kdykoli upgradovat."
+  },
+  "privacyBadge": {
+    "title": "Soukromí na prvním místě",
+    "local": "Zpracováváno lokálně ve vašem prohlížeči"
+  },
+  "onboarding": {
+    "skip": "Zavřít",
+    "next": "Další",
+    "start": "Procházet nástroje",
+    "learnMore": "Jak Toolando funguje",
+    "step1": {
+      "title": "Převádějte, počítejte, otevírejte — jeden ekosystém",
+      "body": "287+ nástrojů pro soubory, kalkulačky, utility pro vývojáře a AI — vyberte nástroj nebo hledejte pomocí Ctrl+K."
+    },
+    "step2": {
+      "title": "Soukromí tam, kde na tom záleží",
+      "body": "Mnoho utilit běží ve vašem prohlížeči. Serverové konverze soubory po dokončení úlohy mažou."
+    },
+    "step3": {
+      "title": "AI nástroje s Premium",
+      "body": "Převodníky vyzkoušejte zdarma. AI funkce mají jednoduchý měsíční plán — ceny uvidíte dřív, než narazíte na paywall."
+    }
+  },
+  "exitIntent": {
+    "title": "Než odejdete…",
+    "body": "Potřebujete jiný převodník? Prohledejte 287+ nástrojů nebo nám napište, co máme vytvořit dál.",
+    "browse": "Procházet nástroje",
+    "request": "Navrhnout nástroj",
+    "close": "Zavřít"
+  },
+  "nextSteps": {
+    "title": "Další kroky",
+    "aiSummarizeTitle": "Shrnout dokument pomocí AI",
+    "aiSummarizeBody": "Vygenerujte shrnutí PDF nebo DOCX během několika sekund (Premium nebo 1 pokus/den)."
+  },
+  "newsletter": {
+    "title": "Nové nástroje a aktualizace Premium",
+    "subtitle": "Zanechte e-mail — dáme vědět o důležitých novinkách (bez spamu).",
+    "placeholder": "you@example.com",
+    "cta": "Odebírat",
+    "thanks": "Díky! Pokud chcete odpověď, potvrďte přes kontakt.",
+    "confirmViaContact": "Dokončit registraci přes kontaktní formulář →",
+    "error": "Registrace se nezdařila. Zkuste to znovu."
+  },
+  "toolRequest": {
+    "title": "Chybí vám převodník?",
+    "body": "Navrhněte nový nástroj nebo formát — upřednostňujeme to, o co uživatelé žádají.",
+    "cta": "Navrhnout nástroj"
+  },
+  "comparison": {
+    "title": "Toolando vs. cloudové upload nástroje",
+    "subtitle": "Proč uživatelé přecházejí z běžných online převodníků.",
+    "feature": "Funkce",
+    "competitor": "Typický cloudový převodník",
+    "rows": {
+      "privacy": "Lokální náhled a možnosti soukromí",
+      "offline": "Funguje offline (PWA utility)",
+      "ai": "Integrovaný AI workflow",
+      "free": "Zdarma základní převodníky",
+      "limits": "Bez libovolných denních limitů uploadu u základů"
+    }
+  },
+  "premiumPage": {
+    "title": "Toolando Premium",
+    "subtitle": "AI nástroje, jasné ceny, zrušení kdykoli.",
+    "freeTitle": "Zdarma",
+    "freeDesc": "Všechny převodníky souborů, kalkulačky a většina utilit.",
+    "premiumTitle": "Premium",
+    "premiumDesc": "Kompletní AI balíček — text, obrázky, shrnutí, překlad, chat.",
+    "supporterTitle": "Supporter",
+    "supporterDesc": "Premium + bez reklam (již brzy).",
+    "cta": "Zvolit Premium",
+    "signIn": "Přihlaste se k odběru",
+    "faqTitle": "FAQ k cenám",
+    "faq1q": "Jak fungují kredity?",
+    "faq1a": "Nejsou žádné kredity za požadavek — Premium je paušální měsíční předplatné s neomezeným využitím AI.",
+    "faq2q": "Mohu vyzkoušet před platbou?",
+    "faq2a": "Vytvořte si bezplatný účet, vyzkoušejte převodníky a upgradujte, až budete potřebovat AI.",
+    "faq3q": "A co soukromí souborů?",
+    "faq3a": "Serverové soubory se po zpracování mažou. Nástroje v prohlížeči vaše data nikdy nenahrávají."
+  },
+  "privacyPage": {
+    "title": "Soukromí zakotvené v návrhu",
+    "subtitle": "Jak Toolando chrání vaše soubory a data.",
+    "localTitle": "Nástroje lokálně v prohlížeči",
+    "localBody": "Utility, univerzální otvírač a mnoho kalkulaček běží zcela ve vašem prohlížeči — data neopouštějí vaše zařízení.",
+    "serverTitle": "Serverové konverze",
+    "serverBody": "Když nahrajete soubor ke konverzi, použije se pouze pro tuto operaci a poté se smaže. HTTPS end-to-end.",
+    "aiTitle": "AI nástroje",
+    "aiBody": "Premium AI posílá poskytovateli modelu pouze obsah, který sami odešlete — nikdy se neprodává ani nepoužívá pro reklamu.",
+    "badge": "Privacy-First",
+    "readPolicy": "Přečíst úplné zásady ochrany osobních údajů"
+  },
+  "nav": {
+    "categories": "Kategorie převodníků",
+    "downloader": "MP3 Downloader",
+    "aboutMe": "O mně",
+    "privacy": "Zásady ochrany osobních údajů",
+    "terms": "Podmínky služby",
+    "premium": "Premium",
+    "guides": "Průvodci",
+    "faq": "FAQ",
+    "more": "Více"
+  },
+  "share": {
+    "label": "Sdílet",
+    "copy": "Kopírovat odkaz",
+    "copied": "Zkopírováno"
+  },
+  "recommender": {
+    "categories": {
+      "video": "Video"
+    }
+  },
+  "opener": {
+    "kindVideo": "Video",
+    "readError": "Nepodařilo se načíst obsah souboru.",
+    "dropAny": "Přetáhněte libovolný soubor sem nebo klikněte pro výběr",
+    "dropHint": "Obrázky, video, audio, PDF, dokumenty, kód, data — jakýkoli formát. Soubory se otevírají lokálně ve vašem prohlížeči a nikam se nenahrávají.",
+    "noConverter": "Pro tento formát zatím nemáme převodník — soubor si ale můžete níže prohlédnout a stáhnout.",
+    "convertTo": "Převést do jiného formátu",
+    "optionOne": "možnost",
+    "optionMany": "možností",
+    "downloadedOk": "Hotovo! Soubor byl stažen.",
+    "download": "Stáhnout",
+    "close": "Zavřít",
+    "emptyFile": "(prázdný soubor)",
+    "textTruncated": "Náhled zkrácen na prvních 200 000 znaků. Stáhněte soubor, abyste viděli vše.",
+    "binaryPreview": "Binární náhled (první bajty v hexadecimálním formátu)",
+    "kinds": {
+      "image": "Obrázek",
+      "video": "Video",
+      "audio": "Zvuk",
+      "pdf": "PDF dokument",
+      "text": "Text / kód",
+      "binary": "Binární soubor"
+    }
+  },
+  "knowledgeHub": {
+    "glossaryTitle": "Glosář",
+    "glossaryDesc": "Bitrate, kodek, ztrátová komprese, MIME — vysvětlení srozumitelnou řečí.",
+    "glossaryCta": "Otevřít glosář"
+  },
+  "editorial": {
+    "title": "Kdo stojí za Toolando.tech",
+    "body": "Jsem Szymon — každý nástroj navrhuji, vyvíjím a testuji sám. Průvodci vycházejí z reálných konverzí, ne z kopírovaných specifikací. Chci, abyste rozuměli svým souborům dřív, než je převedete — a aby služba k vám byla upřímná.",
+    "aboutCta": "O mně a metodologii",
+    "howCta": "Jak nástroje fungují",
+    "editorialCta": "Redakční standardy",
+    "guidesCta": "Průvodci"
+  },
+  "featuredGuides": {
+    "title": "Doporučené průvodce",
+    "subtitle": "Praktické články o formátech souborů, bezpečnosti a konverzi — psané na základě reálných testů, ne SEO šablon.",
+    "readArticle": "Číst průvodce",
+    "allGuides": "Všechny průvodce"
+  },
+  "footer": {
+    "aboutMe": "O mně",
+    "howItWorks": "Jak to funguje",
+    "faq": "FAQ",
+    "editorial": "Redakce",
+    "rss": "RSS kanál",
+    "cookieSettings": "Nastavení cookies",
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "messenger": "Messenger",
+    "youtube": "YouTube"
+  },
+  "ad": {
+    "label": "Reklama",
+    "placeholder": "Reklamní prostor"
+  },
+  "tool": {
+    "convertFailed": "Konverze se nezdařila.",
+    "connectionError": "Nepodařilo se připojit k serveru. Zkuste to znovu.",
+    "unavailable": "Tento převodník je momentálně nedostupný",
+    "dropClick": "Přetáhněte soubor sem nebo klikněte pro výběr",
+    "dropClickMulti": "Přetáhněte soubory sem nebo klikněte pro výběr",
+    "supportedFormat": "Podporovaný formát",
+    "supported": "Podporováno",
+    "maxSize": "max. 500 MB",
+    "removeFile": "Odebrat soubor",
+    "convertDone": "Konverze dokončena",
+    "downloadNamed": "Stáhnout",
+    "convertAnother": "Převést další soubor",
+    "uploadingFile": "Nahrávání souboru…",
+    "uploadingFiles": "Nahrávání souborů…",
+    "uploading": "Nahrávání…",
+    "converting": "Převádění…",
+    "convertToPrefix": "Převést na",
+    "needTwoPdf": "Přidejte alespoň dva soubory PDF ke sloučení.",
+    "operationFailed": "Operace se nezdařila.",
+    "compressionQuality": "Kvalita komprese",
+    "qualityHint": "Nižší hodnota = menší soubor. Vyšší hodnota = lepší kvalita.",
+    "done": "Hotovo",
+    "less": "méně",
+    "resultPreview": "Náhled výsledku",
+    "startOver": "Začít znovu",
+    "processingLong": "Zpracování (může trvat několik sekund)…"
+  },
+  "aiTool": {
+    "generateFailed": "Nepodařilo se vygenerovat odpověď.",
+    "noContent": "AI služba nevrátila žádný obsah. Zkontrolujte, zda je AI Gateway aktivní (vyžaduje platební kartu).",
+    "connectionError": "Došlo k chybě připojení. Zkuste to znovu.",
+    "dropDoc": "Přetáhněte dokument sem nebo klikněte pro výběr",
+    "removeFile": "Odebrat soubor",
+    "translatePlaceholder": "Vložte text k překladu…",
+    "copyPlaceholder": "Popište, co má AI napsat, např. „popis produktu pro ekologickou láhev na vodu“…",
+    "toneLabel": "Tón",
+    "targetLangLabel": "Cílový jazyk",
+    "translate": "Přeložit",
+    "summarizeDoc": "Shrnout dokument",
+    "generateText": "Generovat text",
+    "imageFailed": "Nepodařilo se vygenerovat obrázek.",
+    "imagePromptPlaceholder": "Popište obrázek, např. „futuristické město při západu slunce, akvarelový styl“…",
+    "ratioSquare": "Čtverec 1:1",
+    "ratioLandscape": "Na šířku 3:2",
+    "ratioPortrait": "Na výšku 2:3",
+    "generatingImage": "Generování obrázku (může trvat několik sekund)…",
+    "generateImage": "Generovat obrázek",
+    "generatedImageAlt": "Vygenerovaný obrázek",
+    "downloadImage": "Stáhnout obrázek",
+    "tones": {
+      "professional": "profesionální",
+      "friendly": "přátelský",
+      "energetic": "energický",
+      "formal": "formální",
+      "playful": "hravý",
+      "persuasive": "přesvědčivý"
+    },
+    "languages": {
+      "english": "angličtina",
+      "german": "němčina",
+      "spanish": "španělština",
+      "french": "francouzština",
+      "italian": "italština",
+      "ukrainian": "ukrajinština",
+      "polish": "polština",
+      "japanese": "japonština"
+    }
+  },
+  "paywall": {
+    "unlockTitle": "Odemkněte „{tool}“ s Premium",
+    "description": "Odemkněte všechny AI nástroje Toolando.tech — generování textu a obrázků, překlad, shrnutí a asistenta — v jednom předplatném.",
+    "feature1": "Neomezený přístup ke všem AI nástrojům",
+    "feature2": "Generátor textu, generátor obrázků a překladač",
+    "feature3": "Prioritní zpracování požadavků",
+    "goPremium": "Přejít na Premium",
+    "redirecting": "Přesměrování…",
+    "signInToBuy": "Přihlaste se pro nákup Premium",
+    "noAccount": "Nemáte účet?",
+    "signUp": "Registrovat se"
+  },
+  "account": {
+    "backToHome": "Zpět na úvodní stránku",
+    "yourAccount": "Váš účet",
+    "premiumBadge": "Premium",
+    "freeBadge": "Bezplatný účet",
+    "premiumActiveTitle": "Máte aktivní Premium",
+    "premiumActiveDesc": "Děkujeme za podporu! Máte plný přístup ke všem AI nástrojům bez limitů.",
+    "manageSubscription": "Spravovat předplatné",
+    "manageOpening": "Otevírání…",
+    "managePortalError": "Nepodařilo se otevřít portál.",
+    "manageGenericError": "Došlo k chybě.",
+    "goPremiumTitle": "Zvolit Premium",
+    "feature1": "Neomezený přístup k AI nástrojům",
+    "feature2": "Odstranění pozadí, generování obrázků a textu",
+    "feature3": "Prioritní zpracování",
+    "buyPremium": "Koupit Premium",
+    "buyRedirecting": "Přesměrování…",
+    "refreshHint": "Zaplatili jste, ale Premium stále neaktivní? Obnovte stav:",
+    "refreshStatus": "Obnovit stav Premium",
+    "refreshChecking": "Kontroluji…",
+    "refreshNoSub": "Nebylo nalezeno aktivní předplatné. Pokud jste právě zaplatili, chvíli počkejte a zkuste to znovu.",
+    "refreshFailed": "Nepodařilo se obnovit stav.",
+    "refreshNetworkError": "Došlo k chybě sítě. Zkuste to znovu.",
+    "signOut": "Odhlásit se"
+  },
+  "downloader": {
+    "eyebrow": "Video → MP3",
+    "title": "Multi-Platform → MP3 Downloader",
+    "subtitle": "Vložte odkaz z TikToku, Instagramu, Facebooku, Twitteru/X, Vimeo nebo SoundCloud a stáhněte si audio.",
+    "metaDescription": "Multi-platform Video to MP3 Downloader — TikTok, Instagram, Facebook, Twitter, Vimeo, SoundCloud. Vložte odkaz a stáhněte audio.",
+    "back": "Všechny nástroje",
+    "inputLabel": "Odkaz na video",
+    "inputPlaceholder": "https://www.tiktok.com/@user/video/...",
+    "detected": "rozpoznáno",
+    "idLabel": "ID",
+    "invalidLink": "Zadejte platný odkaz z podporované platformy.",
+    "download": "Stáhnout MP3",
+    "preparing": "Připravuji váš odkaz…",
+    "ready": "Váš odkaz je připraven.",
+    "openPage": "Otevřít stránku ke stažení",
+    "resultTitle": "Připraveno ke stažení",
+    "resultsBack": "Zpět ke stahovači",
+    "thumbnailAlt": "Miniatura videa",
+    "viewSource": "Zobrazit originál",
+    "faqTitle": "Často kladené otázky",
+    "disclaimer": "Toolando.tech nehostuje ani nestahuje žádná média. Pouze rozpozná platformu a veřejné ID videa a předá úlohu externí službě nebo vašemu prohlížeči. Stahujte pouze obsah, ke kterému máte práva.",
+    "externalNote": "Stahování probíhá na externí službě nebo ve vašem prohlížeči. Toolando.tech zachytilo pouze veřejnou platformu a ID videa. Respektujte autorská práva a podmínky jednotlivých platforem.",
+    "platformDisabled": "Stahování z {platform} je dočasně nedostupné — {platform} aktivně blokuje stahovače, proto jsme tuto možnost pozastavili, dokud nebude připraven náš vlastní převodník. Ostatní platformy stále fungují."
+  },
+  "pages": {
+    "contact": {
+      "email": "E-mail"
+    },
+    "editorial": {
+      "eyebrow": "Redakce",
+      "title": "Redakční standardy Toolando.tech",
+      "intro": "Toolando.tech nejsou jen převodníky — jsou to průvodci, encyklopedie formátů a srovnání. Níže vysvětluji, jak vzniká obsah, odkud pocházejí informace a kdy se aktualizují.",
+      "whoTitle": "Kdo vytváří obsah",
+      "whoP1": "Každý průvodce, profil formátu a srovnání píšu sám — Szymon Badyl, tvůrce Toolando.tech. Nepoužívám content farmy ani neověřené texty generované AI.",
+      "whoP2": "Každý článek vychází z testů konverze na vlastních souborech. Pokud něco nefunguje tak, jak je popsáno, opravím text i nástroj.",
+      "standardsTitle": "Redakční zásady",
+      "standardsIntro": "Ke každému novému průvodci uplatňuji stejná pravidla:",
+      "sourcesTitle": "Zdroje a poctivost",
+      "sourcesP1": "Specifikace formátů (MIME, kodeky) ověřuji podle IANA, FFmpeg a dokumentace výrobců. Srovnání vycházejí z vlastních měření velikosti a kvality, ne z marketingových tabulek.",
+      "sourcesP2": "Externí odkazy se objevují pouze tehdy, když skutečně pomohou (např. oficiální dokumentace). Nepropaguji placené konkurenční nástroje.",
+      "updatesTitle": "Aktualizace a opravy",
+      "updatesP1": "Našli jste chybu, zastaralé informace nebo máte návrh tématu? Napište na badyltech@outlook.com — opravy se zapíší do článku s datem aktualizace.",
+      "updatedLabel": "Naposledy aktualizováno",
+      "updatedDate": "srpen 2026",
+      "fullGuideCta": "Úplný průvodce redakčními standardy"
+    },
+    "howItWorks": {
+      "tiersPremiumTerm": "Premium"
+    },
+    "faq": {
+      "eyebrow": "FAQ"
+    },
+    "privacy": {
+      "eyebrow": "Zásady ochrany osobních údajů",
+      "title": "Zásady ochrany osobních údajů Toolando.tech",
+      "intro": "Toolando.tech je služba poskytující online nástroje v bezplatné a prémiové variantě. Dbám na soukromí uživatelů a zpracovávám data v souladu s platnými předpisy, včetně GDPR.",
+      "lastUpdated": "Naposledy aktualizováno: 23. července 2026",
+      "s1Title": "1. Správce údajů",
+      "s1Pre": "Správcem údajů je Szymon Badyl, vlastník Toolando.tech (Polsko). Ve věcech soukromí mě můžete kontaktovat na:",
+      "s1Address": "Korespondence: badyltech@outlook.com",
+      "s2Title": "2. Jaká data se zpracovávají",
+      "s2Intro": "Služba zpracovává technická a statistická data, která se automaticky shromažďují při používání webu:",
+      "s2Outro": "Pokud mě kontaktujete e-mailem nebo formulářem, zpracovávám také vámi uvedenou e-mailovou adresu a obsah zprávy.",
+      "s3Title": "3. Soubory nahrané do nástrojů",
+      "s3P": "Soubory, které nahrajete do nástrojů ke konverzi nebo jiné operaci, neukládám. Slouží výhradně k provedení požadované úlohy a po jejím dokončení se smažou. Nepoužívám je k žádnému jinému účelu.",
+      "s4Title": "4. Cookies",
+      "s4Intro": "Služba používá následující typy cookies:",
+      "s4TechTerm": "Technické",
+      "s4TechDesc": "nezbytné pro správné fungování webu a zapamatování nastavení (např. jazyka).",
+      "s4AnalyticsTerm": "Analytické",
+      "s4AnalyticsDesc": "statistické nástroje (např. Google Analytics), které pomáhají pochopit, jak je web používán, v souhrnné a anonymní podobě.",
+      "s4AdsTerm": "Reklamní",
+      "s4AdsDesc": "Google AdSense, který může používat cookies k zobrazování a personalizaci reklam.",
+      "s4Outro": "Cookies můžete kdykoli spravovat nebo vypnout v nastavení prohlížeče. Při první návštěvě zobrazíme banner se souhlasem, kde můžete přijmout všechny cookies nebo se omezit na nezbytné.",
+      "s4ThirdPartyTitle": "Externí poskytovatelé",
+      "s4ThirdPartyP": "Služba využívá služby Google (Analytics, AdSense). Google může shromažďovat data podle svých zásad ochrany osobních údajů. Více informací: https://policies.google.com/technologies/partner-sites",
+      "s5Title": "5. Bezplatné a prémiové nástroje",
+      "s5P": "Toolando poskytuje bezplatné nástroje (dostupné bez účtu) a prémiové nástroje. Pravidla zpracování dat a ochrany souborů jsou v obou variantách stejná — liší se pouze rozsah funkcí a limity.",
+      "s6Title": "6. Účel zpracování dat",
+      "s6Intro": "Data zpracovávám výhradně pro následující účely:",
+      "s7Title": "7. Vaše práva",
+      "s7Intro": "Máte právo:",
+      "s8Title": "8. Změny zásad",
+      "s8P": "Zásady ochrany osobních údajů mohou být aktualizovány, aby odrážely změny ve službě nebo v právních předpisech. Aktuální verze je vždy k dispozici na této stránce."
+    },
+    "terms": {
+      "eyebrow": "Podmínky služby",
+      "title": "Podmínky služby Toolando.tech",
+      "intro": "Níže uvedené podmínky stanovují pravidla používání služby Toolando.tech. Používáním služby tyto podmínky přijímáte.",
+      "s1Title": "1. Obecná ustanovení",
+      "s1P": "Vlastníkem Toolando.tech je Szymon. Služba poskytuje online nástroje pro konverzi souborů, generování obsahu a nástroje s podporou AI.",
+      "s2Title": "2. Bezplatné a prémiové nástroje",
+      "s2Intro": "Toolando nabízí nástroje ve dvou variantách:",
+      "s2FreeTerm": "Bezplatné",
+      "s2FreeDesc": "dostupné všem, bez nutnosti vytvořit účet.",
+      "s2PremiumTerm": "Premium",
+      "s2PremiumDesc": "s pokročilejšími funkcemi a vyššími limity.",
+      "s2Outro": "Pravidla týkající se případných plateb nebo předplatného prémiových funkcí jsou uvedena na příslušných místech služby.",
+      "s3Title": "3. Používání na vlastní riziko",
+      "s3P1": "Službu používáte na vlastní riziko. Vynakládám veškeré úsilí, aby nástroje fungovaly správně, avšak služba je poskytována „tak jak je“, bez záruky dostupnosti, správnosti výsledků nebo vhodnosti pro konkrétní účel.",
+      "s3P2": "Vlastník služby nenese odpovědnost za:",
+      "s3Outro": "Uživatel se zavazuje používat službu v souladu se zákonem a nese odpovědnost za obsah a soubory, které zpracovává.",
+      "s4Title": "4. Uživatelské soubory",
+      "s4P": "Soubory nahrané do nástrojů se neukládají. Slouží výhradně k provedení dané operace a po jejím dokončení se smažou.",
+      "s5Title": "5. Reklamy",
+      "s5P": "Služba může zobrazovat reklamy Google AdSense. Reklamy pomáhají udržovat bezplatné nástroje a rozvíjet projekt. Poskytovatel reklam může používat cookies v souladu se Zásadami ochrany osobních údajů.",
+      "s6Title": "6. Autorská práva",
+      "s6P": "Název Toolando.tech, grafické prvky a obsah služby jsou právně chráněny. Je zakázáno je kopírovat a používat bez souhlasu vlastníka.",
+      "s7Title": "7. Kontakt",
+      "s7Pre": "Ve věcech týkajících se těchto podmínek mě můžete kontaktovat na:",
+      "s8Title": "8. Změny podmínek",
+      "s8P": "Podmínky mohou být aktualizovány, aby odrážely změny ve službě nebo v právních předpisech. Aktuální verze je vždy k dispozici na této stránce."
+    },
+    "guides": {
+      "eyebrow": "Průvodci",
+      "title": "Průvodci a návody ke konverzi souborů",
+      "intro": "Praktické články o formátech souborů, konverzi a osvědčených postupech. Každý průvodce vysvětluje, kdy a proč soubor převést a jak to bezpečně provést pomocí Toolando.tech."
+    }
+  },
+  "hub": {
+    "convertersTitle": "Převodníky souborů",
+    "convertersDesc": "Audio, video, obrázky, dokumenty, data, fonty a archivy — plus komprese, sloučení PDF a odstranění pozadí.",
+    "calculatorsTitle": "Kalkulačky a převodníky",
+    "calculatorsDesc": "Měny, DPH, data, časová pásma, jednotky a bitrate.",
+    "developerTitle": "Nástroje pro vývojáře a text",
+    "developerDesc": "Hesla, QR, Base64, UUID, hash, barvy, timestamp a počítadlo znaků.",
+    "specialTools": "Nástroje pro soubory",
+    "browseConverters": "Procházet převodníky",
+    "browseCalculators": "Procházet kalkulačky",
+    "browseDeveloper": "Procházet nástroje"
+  },
+  "specialFields": {
+    "splitMode": "Režim rozdělení",
+    "everyPage": "Každá stránka zvlášť",
+    "pageRange": "Vybraný rozsah",
+    "pagesHint": "Stránky (např. 1-3,5)",
+    "rotation": "Úhel natočení",
+    "width": "Šířka (px)",
+    "height": "Výška (px, volitelné)",
+    "watermark": "Text vodoznaku",
+    "trimStart": "Začátek (sek. nebo MM:SS)",
+    "trimEnd": "Konec (sek. nebo MM:SS)",
+    "pageNumberPos": "Pozice čísla stránky",
+    "bottom": "Dole na stránce",
+    "top": "Nahoře na stránce"
+  },
+  "accountRecent": {
+    "title": "Nedávno použité",
+    "subtitle": "Historie uložená lokálně v tomto prohlížeči."
+  },
+  "favorites": {
+    "add": "Přidat do oblíbených",
+    "remove": "Oblíbené"
+  }
+}

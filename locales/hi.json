@@ -3,10 +3,122 @@
     "title": "Toolando.tech — आपके सभी ऑनलाइन टूल एक ही जगह",
     "description": "कन्वर्टर, जनरेटर, PDF और AI टूल — सब कुछ एक सुंदर इकोसिस्टम में। तेज़ और आसान।"
   },
+  "socialProof": {
+    "toolsCount": "एक इकोसिस्टम में {count}+ टूल",
+    "usesToday": "आज {uses} बार उपयोग"
+  },
+  "recent": {
+    "title": "हाल में उपयोग किए गए",
+    "subtitle": "आपके अंतिम टूल — इस ब्राउज़र में स्थानीय रूप से सहेजे गए।",
+    "favoritesHint": "किसी टूल के पेज पर स्टार लगाएँ ताकि वह यहाँ पिन हो जाए।"
+  },
+  "premiumUpsell": {
+    "title": "Premium के साथ AI टूल अनलॉक करें",
+    "description": "टेक्स्ट जनरेशन, सारांश, छवियाँ, अनुवाद और चैट — एक सब्सक्रिप्शन, प्रति अनुरोध कोई आश्चर्य नहीं।",
+    "point1": "सभी AI टूल बिना सीमा के",
+    "point2": "व्यस्त दिनों में प्राथमिकता प्रोसेसिंग",
+    "point3": "स्वतंत्र विकास का समर्थन करें",
+    "cta": "Premium लें",
+    "compare": "प्लान देखें",
+    "trialHint": "मुफ़्त पूर्वावलोकन के लिए साइन इन करें — फिर कभी भी अपग्रेड करें।"
+  },
+  "privacyBadge": {
+    "title": "प्राइवेसी-प्रथम",
+    "local": "आपके ब्राउज़र में स्थानीय रूप से प्रोसेस किया गया"
+  },
+  "onboarding": {
+    "skip": "बंद करें",
+    "next": "अगला",
+    "start": "टूल ब्राउज़ करें",
+    "learnMore": "Toolando कैसे काम करता है",
+    "step1": {
+      "title": "कन्वर्ट, गणना, खोलें — एक इकोसिस्टम",
+      "body": "फ़ाइलों, कैलकुलेटर, डेवलपर यूटिलिटी और AI के लिए 287+ टूल — टूल चुनें या Ctrl+K से खोजें।"
+    },
+    "step2": {
+      "title": "जब मायने रखे, प्राइवेसी",
+      "body": "कई यूटिलिटी आपके ब्राउज़र में चलती हैं। सर्वर रूपांतरण कार्य पूरा होने के बाद फ़ाइलें हटा देता है।"
+    },
+    "step3": {
+      "title": "Premium के साथ AI टूल",
+      "body": "कन्वर्टर मुफ़्त आज़माएँ। AI सुविधाएँ सरल मासिक प्लान पर — पेवॉल से पहले कीमत देखें।"
+    }
+  },
+  "exitIntent": {
+    "title": "जाने से पहले…",
+    "body": "कोई दूसरा कन्वर्टर चाहिए? 287+ टूल खोजें या बताएँ आगे क्या बनाएँ।",
+    "browse": "टूल ब्राउज़ करें",
+    "request": "टूल का अनुरोध करें",
+    "close": "बंद करें"
+  },
+  "nextSteps": {
+    "title": "अगले कदम",
+    "aiSummarizeTitle": "AI से दस्तावेज़ का सारांश",
+    "aiSummarizeBody": "सेकंडों में PDF या DOCX सारांश बनाएँ (Premium या 1 प्रयास/दिन)।"
+  },
+  "newsletter": {
+    "title": "नए टूल और Premium अपडेट",
+    "subtitle": "अपना ईमेल छोड़ें — हम प्रमुख सुविधाओं की सूचना देंगे (कोई स्पैम नहीं)।",
+    "placeholder": "aap@example.com",
+    "cta": "सब्सक्राइब करें",
+    "thanks": "धन्यवाद! जवाब चाहिए तो संपर्क के माध्यम से पुष्टि करें।",
+    "confirmViaContact": "संपर्क फ़ॉर्म के माध्यम से साइनअप पूरा करें →",
+    "error": "साइनअप विफल। कृपया फिर से प्रयास करें।"
+  },
+  "toolRequest": {
+    "title": "कोई कन्वर्टर गायब है?",
+    "body": "नया टूल या फ़ॉर्मैट सुझाएँ — हम उपयोगकर्ताओं के अनुरोध को प्राथमिकता देते हैं।",
+    "cta": "टूल सुझाएँ"
+  },
+  "comparison": {
+    "title": "Toolando बनाम क्लाउड अपलोड टूल",
+    "subtitle": "उपयोगकर्ता सामान्य अपलोड कन्वर्टर से क्यों बदलते हैं।",
+    "feature": "सुविधा",
+    "competitor": "सामान्य क्लाउड कन्वर्टर",
+    "rows": {
+      "privacy": "स्थानीय पूर्वावलोकन और प्राइवेसी विकल्प",
+      "offline": "ऑफ़लाइन काम करता है (PWA यूटिलिटी)",
+      "ai": "एकीकृत AI वर्कफ़्लो",
+      "free": "मुफ़्त मुख्य कन्वर्टर",
+      "limits": "बुनियादी पर कोई मनमाना दैनिक अपलोड सीमा नहीं"
+    }
+  },
+  "premiumPage": {
+    "title": "Toolando Premium",
+    "subtitle": "AI टूल, स्पष्ट कीमत, कभी भी रद्द करें।",
+    "freeTitle": "मुफ़्त",
+    "freeDesc": "सभी फ़ाइल कन्वर्टर, कैलकुलेटर और अधिकांश यूटिलिटी।",
+    "premiumTitle": "Premium",
+    "premiumDesc": "पूर्ण AI सुइट — टेक्स्ट, छवियाँ, सारांश, अनुवाद, चैट।",
+    "supporterTitle": "समर्थक",
+    "supporterDesc": "Premium + विज्ञापन-मुक्त अनुभव (जल्द आ रहा है)।",
+    "cta": "Premium शुरू करें",
+    "signIn": "सब्सक्राइब करने के लिए साइन इन करें",
+    "faqTitle": "मूल्य निर्धारण FAQ",
+    "faq1q": "क्रेडिट कैसे काम करते हैं?",
+    "faq1a": "प्रति अनुरोध कोई क्रेडिट नहीं — Premium असीमित AI उपयोग के लिए एक निश्चित मासिक सब्सक्रिप्शन है।",
+    "faq2q": "भुगतान से पहले आज़मा सकता हूँ?",
+    "faq2a": "मुफ़्त खाता बनाएँ, कन्वर्टर देखें, फिर AI चाहिए तो अपग्रेड करें।",
+    "faq3q": "फ़ाइल प्राइवेसी कैसी है?",
+    "faq3a": "सर्वर फ़ाइलें प्रोसेसिंग के बाद हटा दी जाती हैं। ब्राउज़र टूल आपका डेटा कभी अपलोड नहीं करते।"
+  },
+  "privacyPage": {
+    "title": "डिज़ाइन से प्राइवेसी-प्रथम",
+    "subtitle": "Toolando आपकी फ़ाइलों और डेटा की सुरक्षा कैसे करता है।",
+    "localTitle": "ब्राउज़र-स्थानीय टूल",
+    "localBody": "यूटिलिटी, यूनिवर्सल ओपनर और कई कैलकुलेटर पूरी तरह आपके ब्राउज़र में चलते हैं — डेटा आपके डिवाइस से बाहर नहीं जाता।",
+    "serverTitle": "सर्वर रूपांतरण",
+    "serverBody": "रूपांतरण के लिए अपलोड की गई फ़ाइलें केवल उस कार्य के लिए उपयोग होती हैं और बाद में हटा दी जाती हैं। HTTPS एंड-टू-एंड।",
+    "aiTitle": "AI टूल",
+    "aiBody": "Premium AI केवल आपके द्वारा भेजी गई सामग्री मॉडल प्रदाता को भेजता है — कभी बेची या विज्ञापन के लिए उपयोग नहीं होती।",
+    "badge": "गोपनीयता पहले",
+    "readPolicy": "पूर्ण गोपनीयता नीति पढ़ें"
+  },
   "nav": {
     "aiTools": "AI टूल",
     "tools": "कन्वर्टर्स",
-    "categories": "Converter categories",
+    "categories": "कन्वर्टर श्रेणियाँ",
+    "formats": "प्रारूप",
     "about": "परिचय",
     "contact": "संपर्क",
     "cta": "शुरू करें",
@@ -15,11 +127,18 @@
     "allTools": "सभी टूल",
     "signIn": "साइन इन करें",
     "account": "मेरा खाता",
-    "downloader": "MP3 Downloader",
+    "downloader": "MP3 डाउनलोडर",
+    "aboutMe": "मेरे बारे में",
+    "privacy": "गोपनीयता नीति",
+    "terms": "सेवा की शर्तें",
     "onlineTools": "कैलकुलेटर",
     "converters": "कन्वर्टर्स",
     "calculators": "कैलकुलेटर",
-    "developer": "डेवलपर टूल"
+    "developer": "डेवलपर टूल",
+    "premium": "Premium",
+    "guides": "गाइड",
+    "faq": "FAQ",
+    "more": "और"
   },
   "hero": {
     "badge": "ऑनलाइन टूल का एक नया इकोसिस्टम",
@@ -27,7 +146,68 @@
     "titleHighlight": "एक ही जगह",
     "subtitle": "कन्वर्टर, जनरेटर, PDF, AI — सब कुछ एक ही इकोसिस्टम में।",
     "browse": "टूल ब्राउज़ करें",
-    "learnMore": "और जानें"
+    "learnMore": "और जानें",
+    "convertCta": "अभी एक फ़ाइल कनवर्ट करें"
+  },
+  "search": {
+    "placeholder": "कन्वर्टर्स खोजें (उदाहरण के लिए एमपी3 वेव, पीडीएफ जेपीजी)…",
+    "noResults": "कोई कन्वर्टर नहीं मिला. कोई भिन्न क्वेरी आज़माएँ."
+  },
+  "share": {
+    "label": "साझा करें",
+    "copy": "लिंक कॉपी करें",
+    "copied": "कॉपी हो गया"
+  },
+  "feedback": {
+    "question": "क्या यह लेख मददगार था?",
+    "yes": "हाँ",
+    "no": "नहीं",
+    "thanks": "आपकी प्रतिक्रिया के लिए धन्यवाद!"
+  },
+  "recommender": {
+    "title": "मुझे कौन सा प्रारूप चुनना चाहिए?",
+    "subtitle": "दो त्वरित प्रश्नों के उत्तर दें और हम सर्वोत्तम प्रारूप की अनुशंसा करेंगे।",
+    "step1": "आपके पास किस प्रकार की फ़ाइल है?",
+    "step2": "आप इसके साथ क्या करना चाहते हैं?",
+    "categories": {
+      "image": "छवि/फोटो",
+      "audio": "ऑडियो/संगीत",
+      "video": "वीडियो",
+      "document": "दस्तावेज़"
+    },
+    "goals": {
+      "image_web": "किसी वेबसाइट पर प्रकाशित करें",
+      "image_email": "ईमेल द्वारा भेजें",
+      "image_print": "प्रिंट करें",
+      "image_iphone": "आईफोन से फोटो (HEIC)",
+      "audio_listen": "फ़ोन या प्लेयर पर सुनें",
+      "audio_edit": "DAW में संपादित करें",
+      "audio_archive": "गुणवत्ता हानि के बिना पुरालेख",
+      "video_social": "सोशल मीडिया पर पोस्ट करें",
+      "video_web": "किसी वेबसाइट पर एम्बेड करें",
+      "video_audio": "केवल ऑडियो निकालें",
+      "document_share": "पढ़ने के लिए भेजें (कोई संपादन नहीं)",
+      "document_edit": "पाठ संपादित करें"
+    },
+    "resultTitle": "अनुशंसित प्रारूप:",
+    "readFormat": "प्रारूप मार्गदर्शिका",
+    "openConverter": "कनवर्टर खोलें",
+    "back": "वापस",
+    "tryAgain": "फिर से शुरू करें",
+    "reasons": {
+      "webp-web": "WebP समान गुणवत्ता में JPG से 25-35% छोटा है - तेज़ वेबसाइटों के लिए आदर्श।",
+      "jpg-email": "JPG सार्वभौमिक और छोटा है - ईमेल अनुलग्नकों के लिए बिल्कुल उपयुक्त।",
+      "png-print": "पीएनजी तेज किनारों के साथ दोषरहित है - ग्राफिक्स और शॉर्ट-रन प्रिंट के लिए अच्छा है।",
+      "heic-jpg": "विंडोज़ और अधिकांश सेवाओं के साथ अनुकूलता के लिए iPhone के HEIC को JPG में रूपांतरण की आवश्यकता है।",
+      "mp3-listen": "एमपी3 हर डिवाइस पर काम करता है और फाइलों को छोटा रखता है।",
+      "wav-edit": "WAV हानि रहित है - गुणवत्ता हानि के बिना संपादन के लिए सर्वोत्तम।",
+      "flac-archive": "FLAC गुणवत्ता खोए बिना संपीड़ित करता है - संगीत संग्रह के लिए आदर्श।",
+      "mp4-social": "MP4 (H.264 + AAC) इंस्टाग्राम, टिकटॉक और यूट्यूब के लिए मानक है।",
+      "webm-web": "WebM ब्राउज़र में HTML5 वीडियो के लिए अनुकूलित है।",
+      "mp3-audio": "पॉडकास्ट या रिंगटोन के लिए अपने वीडियो से एमपी3 के रूप में ऑडियो निकालें।",
+      "pdf-share": "पीडीएफ लेआउट को लॉक कर देता है - प्राप्तकर्ता वही देखता है जो आप चाहते थे।",
+      "docx-edit": "DOCX आपको Word में टेक्स्ट, शैलियों और शीर्षकों को संपादित करने देता है।"
+    }
   },
   "opener": {
     "title": "यूनिवर्सल फ़ाइल ओपनर",
@@ -37,26 +217,26 @@
     "kindVideo": "वीडियो",
     "kindAudio": "ऑडियो",
     "kindDocs": "PDF, कोड और डेटा",
-    "readError": "Couldn't read the file contents.",
-    "dropAny": "Drag any file here or click to choose",
-    "dropHint": "Images, video, audio, PDF, documents, code, data — any format. Files are opened locally in your browser and never uploaded anywhere.",
-    "noConverter": "We don't have a converter for this format yet — but you can preview and download the file below.",
-    "convertTo": "Convert to another format",
-    "optionOne": "option",
-    "optionMany": "options",
-    "downloadedOk": "Done! The file has been downloaded.",
-    "download": "Download",
-    "close": "Close",
-    "emptyFile": "(empty file)",
-    "textTruncated": "Preview truncated to the first 200,000 characters. Download the file to see everything.",
-    "binaryPreview": "Binary preview (first bytes in hexadecimal)",
+    "readError": "फ़ाइल की सामग्री पढ़ नहीं सकी।",
+    "dropAny": "फ़ाइल यहाँ खींचें या चुनने के लिए क्लिक करें",
+    "dropHint": "छवियाँ, वीडियो, ऑडियो, PDF, दस्तावेज़, कोड, डेटा — कोई भी फ़ॉर्मैट। फ़ाइलें स्थानीय रूप से आपके ब्राउज़र में खुलती हैं और कहीं अपलोड नहीं होतीं।",
+    "noConverter": "इस फ़ॉर्मैट के लिए अभी कन्वर्टर नहीं है — लेकिन नीचे फ़ाइल का पूर्वावलोकन और डाउनलोड कर सकते हैं।",
+    "convertTo": "दूसरे फ़ॉर्मैट में बदलें",
+    "optionOne": "विकल्प",
+    "optionMany": "विकल्प",
+    "downloadedOk": "हो गया! फ़ाइल डाउनलोड हो गई।",
+    "download": "डाउनलोड",
+    "close": "बंद करें",
+    "emptyFile": "(खाली फ़ाइल)",
+    "textTruncated": "पूर्वावलोकन पहले 200,000 अक्षरों तक सीमित है। सब कुछ देखने के लिए फ़ाइल डाउनलोड करें।",
+    "binaryPreview": "बाइनरी पूर्वावलोकन (हेक्साडेसिमल में पहले बाइट)",
     "kinds": {
-      "image": "Image",
-      "video": "Video",
-      "audio": "Audio",
-      "pdf": "PDF document",
-      "text": "Text / code",
-      "binary": "Binary file"
+      "image": "छवि",
+      "video": "वीडियो",
+      "audio": "ऑडियो",
+      "pdf": "PDF दस्तावेज़",
+      "text": "टेक्स्ट / कोड",
+      "binary": "बाइनरी फ़ाइल"
     }
   },
   "ai": {
@@ -76,6 +256,41 @@
     "title": "टूल श्रेणियाँ",
     "subtitle": "सभी उपलब्ध कन्वर्टर देखने के लिए एक श्रेणी चुनें।",
     "browse": "ब्राउज़ करें"
+  },
+  "toolsIndex": {
+    "intro": "प्रत्येक उपकरण सर्वर पर फ़ाइलों को परिवर्तित करता है - इंस्टॉल करने के लिए कोई सॉफ़्टवेयर नहीं। निश्चित नहीं कि कौन सा प्रारूप चुनें? प्रारूप विश्वकोश या रूपांतरण मार्गदर्शिकाएँ ब्राउज़ करें।",
+    "formatsLink": "विश्वकोश को प्रारूपित करें",
+    "guidesLink": "रूपांतरण मार्गदर्शिकाएँ"
+  },
+  "knowledgeHub": {
+    "title": "प्रारूप एवं रूपांतरण ज्ञान",
+    "subtitle": "केवल रूपांतरित न करें - समझें कि कब FLAC के स्थान पर MP3, JPG के स्थान पर WebP, या DOCX के स्थान पर PDF को चुनना है। हमारे मार्गदर्शक आपको गुणवत्ता हानि और अनावश्यक रूपांतरणों से बचने में मदद करते हैं।",
+    "formatsTitle": "फ़ाइल स्वरूप विश्वकोश",
+    "formatsDesc": "40+ प्रारूप: ऑडियो, वीडियो, चित्र, दस्तावेज़, डेटा और अभिलेखागार। पक्ष, विपक्ष, अनुकूलता और विकल्पों के साथ तुलना।",
+    "formatsCta": "प्रारूप ब्राउज़ करें",
+    "guidesTitle": "रूपांतरण मार्गदर्शिकाएँ",
+    "guidesDesc": "व्यावहारिक लेख: ऑडियो गुणवत्ता, छवि संपीड़न, सोशल मीडिया के लिए वीडियो, पीडीएफ बनाम DOCX, और ऑनलाइन फ़ाइल सुरक्षा।",
+    "guidesCta": "गाइड पढ़ें",
+    "comparisonsTitle": "प्रारूप तुलना",
+    "comparisonsDesc": "एमपी3 बनाम एफएलएसी, जेपीजी बनाम वेबपी, पीडीएफ बनाम डीओसीएक्स - स्पष्ट फैसले के साथ आमने-सामने की तुलना।",
+    "comparisonsCta": "तुलना ब्राउज़ करें",
+    "glossaryTitle": "शब्दकोश",
+    "glossaryDesc": "बिटरेट, कोडेक, हानिपूर्ण संपीड़न, MIME — सरल भाषा में परिभाषाएँ।",
+    "glossaryCta": "शब्दकोश खोलें"
+  },
+  "editorial": {
+    "title": "Toolando.tech कौन चलाता है",
+    "body": "मैं Szymon हूँ — हर टूल स्वयं डिज़ाइन, बनाता और परीक्षण करता हूँ। गाइड वास्तविक रूपांतरण पर आधारित हैं, कॉपी-पेस्ट स्पेक नहीं। मैं चाहता हूँ आप रूपांतरण से पहले अपनी फ़ाइलें समझें, और सेवा आपके प्रति ईमानदार रहे।",
+    "aboutCta": "मेरे बारे में और कार्यप्रणाली",
+    "howCta": "टूल कैसे काम करते हैं",
+    "editorialCta": "संपादकीय मानक",
+    "guidesCta": "गाइड"
+  },
+  "featuredGuides": {
+    "title": "विशेष गाइड",
+    "subtitle": "फ़ाइल फ़ॉर्मैट, सुरक्षा और रूपांतरण पर व्यावहारिक लेख — SEO टेम्पलेट नहीं, वास्तविक परीक्षणों से लिखे गए।",
+    "readArticle": "गाइड पढ़ें",
+    "allGuides": "सभी गाइड"
   },
   "why": {
     "title": "Toolando.tech क्यों?",
@@ -100,9 +315,25 @@
     "privacy": "गोपनीयता नीति",
     "terms": "सेवा की शर्तें",
     "rights": "© 2026 Toolando.tech. सर्वाधिकार सुरक्षित।",
-    "aboutMe": "About me",
-    "howItWorks": "How it works",
-    "faq": "FAQ"
+    "aboutMe": "मेरे बारे में",
+    "howItWorks": "यह कैसे काम करता है",
+    "faq": "FAQ",
+    "guides": "मार्गदर्शक",
+    "editorial": "संपादकीय",
+    "formats": "फ़ाइल स्वरूप",
+    "comparisons": "तुलना",
+    "glossary": "शब्दावली",
+    "rss": "RSS फ़ीड",
+    "cookieSettings": "Cookie सेटिंग",
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "messenger": "Messenger",
+    "youtube": "YouTube",
+    "emailAria": "हमें लिखने के लिए ईमेल ऐप खोलता है"
+  },
+  "ad": {
+    "label": "विज्ञापन",
+    "placeholder": "विज्ञापन स्थान"
   },
   "language": {
     "label": "भाषा"
@@ -111,6 +342,10 @@
     "eyebrow": "परियोजना का समर्थन करें",
     "title": "Toolando.tech को चलाए रखने में मदद करें",
     "subtitle": "Toolando.tech मुफ़्त में विकसित और उपलब्ध कराया जाता है। अगर यह आपका समय बचाता है, तो इसके विकास में सहयोग करने पर विचार करें।",
+    "body1": "मैं सेवा को अपने दम पर बनाए रखता हूं - कोड, सर्वर, कानूनी सामग्री और गाइड। आपका समर्थन होस्टिंग (वर्सेल), फ़ाइल प्रोसेसिंग, डोमेन और नए टूल डेवलपमेंट को कवर करने में मदद करता है।",
+    "body2": "समर्थन पूरी तरह से स्वैच्छिक है. मुफ़्त टूल के लिए किसी भुगतान की आवश्यकता नहीं है। प्रीमियम विस्तारित सुविधाओं के साथ एक अलग वैकल्पिक सदस्यता है - विवरण के लिए सेवा की शर्तें देखें।",
+    "body3": "क्या आपके पास कोई प्रश्न, टूल आइडिया या कोई बग मिला है? badyltech@outlook.com पर लिखें या संपर्क फ़ॉर्म का उपयोग करें - यह भी मूल्यवान समर्थन है।",
+    "legalNote": "जब तक स्पष्ट रूप से अन्यथा न कहा गया हो, दान प्रीमियम पहुंच प्रदान नहीं करता है या सेवा अनुबंध का गठन नहीं करता है। शर्तें और गोपनीयता नीति दान की परवाह किए बिना लागू होती हैं।",
     "coffee": "मुझे एक कॉफ़ी पिलाएँ",
     "donate": "दान करें",
     "back": "होम पर वापस",
@@ -155,32 +390,47 @@
     "merge": "फ़ाइलें मर्ज करें",
     "result": "परिणाम",
     "notFound": "टूल नहीं मिला",
-    "convertFailed": "Conversion failed.",
-    "connectionError": "Couldn't connect to the server. Please try again.",
-    "unavailable": "This converter is currently unavailable",
-    "dropClick": "Drag a file here or click to choose",
-    "dropClickMulti": "Drag files here or click to choose",
-    "supportedFormat": "Supported format",
-    "supported": "Supported",
-    "maxSize": "max. 500 MB",
-    "removeFile": "Remove file",
-    "convertDone": "Conversion complete",
-    "downloadNamed": "Download",
-    "convertAnother": "Convert another file",
-    "uploadingFile": "Uploading file…",
-    "uploadingFiles": "Uploading files…",
-    "uploading": "Uploading…",
-    "converting": "Converting…",
-    "convertToPrefix": "Convert to",
-    "needTwoPdf": "Add at least two PDF files to merge.",
-    "operationFailed": "The operation failed.",
-    "compressionQuality": "Compression quality",
-    "qualityHint": "Lower value = smaller file. Higher value = better quality.",
-    "done": "Done",
-    "less": "less",
-    "resultPreview": "Result preview",
-    "startOver": "Start over",
-    "processingLong": "Processing (this may take a few seconds)…"
+    "convertFailed": "रूपांतरण विफल रहा।",
+    "connectionError": "सर्वर से कनेक्ट नहीं हो सका। कृपया फिर से प्रयास करें।",
+    "unavailable": "यह कन्वर्टर अभी उपलब्ध नहीं है",
+    "dropClick": "फ़ाइल यहाँ खींचें या चुनने के लिए क्लिक करें",
+    "dropClickMulti": "फ़ाइलें यहाँ खींचें या चुनने के लिए क्लिक करें",
+    "supportedFormat": "समर्थित फ़ॉर्मैट",
+    "supported": "समर्थित",
+    "maxSize": "अधिकतम 500 MB",
+    "removeFile": "फ़ाइल हटाएँ",
+    "convertDone": "रूपांतरण पूर्ण",
+    "downloadNamed": "डाउनलोड",
+    "convertAnother": "दूसरी फ़ाइल बदलें",
+    "uploadingFile": "फ़ाइल अपलोड हो रही है…",
+    "uploadingFiles": "फ़ाइलें अपलोड हो रही हैं…",
+    "uploading": "अपलोड हो रहा है…",
+    "converting": "रूपांतरण हो रहा है…",
+    "convertToPrefix": "इसमें बदलें",
+    "needTwoPdf": "मर्ज करने के लिए कम से कम दो PDF फ़ाइलें जोड़ें।",
+    "operationFailed": "ऑपरेशन विफल रहा।",
+    "compressionQuality": "संपीड़न गुणवत्ता",
+    "qualityHint": "कम मान = छोटी फ़ाइल। अधिक मान = बेहतर गुणवत्ता।",
+    "done": "हो गया",
+    "less": "कम",
+    "resultPreview": "परिणाम पूर्वावलोकन",
+    "startOver": "फिर से शुरू करें",
+    "processingLong": "प्रोसेस हो रहा है (कुछ सेकंड लग सकते हैं)…",
+    "howToTitle": "किसी फ़ाइल को कैसे कनवर्ट करें - चरण दर चरण",
+    "aboutSource": "स्रोत प्रारूप के बारे में",
+    "aboutTarget": "लक्ष्य प्रारूप के बारे में",
+    "whenToUseTitle": "इस कनवर्टर का उपयोग कब करें",
+    "faqTitle": "अक्सर पूछे जाने वाले प्रश्न",
+    "qualityTitle": "रूपांतरण गुणवत्ता - क्या जानना है",
+    "tipsTitle": "व्यावहारिक सुझाव",
+    "readFormatGuide": "पूर्ण प्रारूप मार्गदर्शिका"
+  },
+  "cookieConsent": {
+    "title": "कुकीज़",
+    "description": "Toolando.tech आवश्यक कुकीज़ उपयोग करता है और आपकी सहमति पर विश्लेषण (Google Analytics) और विज्ञापन (Google AdSense) कुकीज़। आप सभी स्वीकार कर सकते हैं या केवल आवश्यक तक सीमित रख सकते हैं।",
+    "acceptAll": "सभी स्वीकार करें",
+    "necessaryOnly": "केवल आवश्यक",
+    "privacyLink": "गोपनीयता नीति"
   },
   "aiTool": {
     "prompt": "आपका टेक्स्ट",
@@ -208,44 +458,44 @@
     "thinking": "सोच रहा है…",
     "aiError": "AI से उत्तर नहीं मिल सका। कृपया फिर से प्रयास करें।",
     "emptyChat": "बातचीत शुरू करने के लिए एक प्रश्न पूछें।",
-    "generateFailed": "Couldn't generate a response.",
-    "noContent": "The AI service returned no content. Check that AI Gateway is active (requires a payment card).",
-    "connectionError": "A connection error occurred. Please try again.",
-    "dropDoc": "Drag a document here or click to choose",
-    "removeFile": "Remove file",
-    "translatePlaceholder": "Paste the text to translate…",
-    "copyPlaceholder": "Describe what the AI should write, e.g. \"a product description for an eco-friendly water bottle\"…",
-    "toneLabel": "Tone",
-    "targetLangLabel": "Target language",
-    "translate": "Translate",
-    "summarizeDoc": "Summarize document",
-    "generateText": "Generate text",
-    "imageFailed": "Couldn't generate the image.",
-    "imagePromptPlaceholder": "Describe the image, e.g. \"a futuristic city at sunset, watercolor style\"…",
-    "ratioSquare": "Square 1:1",
-    "ratioLandscape": "Landscape 3:2",
-    "ratioPortrait": "Portrait 2:3",
-    "generatingImage": "Generating image (this may take several seconds)…",
-    "generateImage": "Generate image",
-    "generatedImageAlt": "Generated image",
-    "downloadImage": "Download image",
+    "generateFailed": "प्रतिक्रिया जनरेट नहीं हो सकी।",
+    "noContent": "AI सेवा ने कोई सामग्री नहीं लौटाई। जाँचें कि AI Gateway सक्रिय है (भुगतान कार्ड आवश्यक)।",
+    "connectionError": "कनेक्शन त्रुटि हुई। कृपया फिर से प्रयास करें।",
+    "dropDoc": "दस्तावेज़ यहाँ खींचें या चुनने के लिए क्लिक करें",
+    "removeFile": "फ़ाइल हटाएँ",
+    "translatePlaceholder": "अनुवाद के लिए टेक्स्ट पेस्ट करें…",
+    "copyPlaceholder": "बताएँ AI को क्या लिखना है, जैसे \"पर्यावरण-अनुकूल पानी की बोतल का उत्पाद विवरण\"…",
+    "toneLabel": "टोन",
+    "targetLangLabel": "लक्ष्य भाषा",
+    "translate": "अनुवाद",
+    "summarizeDoc": "दस्तावेज़ का सारांश",
+    "generateText": "टेक्स्ट जनरेट करें",
+    "imageFailed": "छवि जनरेट नहीं हो सकी।",
+    "imagePromptPlaceholder": "छवि का वर्णन करें, जैसे \"सूर्यास्त पर भविष्य का शहर, वॉटरकलर शैली\"…",
+    "ratioSquare": "वर्ग 1:1",
+    "ratioLandscape": "लैंडस्केप 3:2",
+    "ratioPortrait": "पोर्ट्रेट 2:3",
+    "generatingImage": "छवि जनरेट हो रही है (कुछ सेकंड लग सकते हैं)…",
+    "generateImage": "छवि जनरेट करें",
+    "generatedImageAlt": "जनरेट की गई छवि",
+    "downloadImage": "छवि डाउनलोड करें",
     "tones": {
-      "professional": "professional",
-      "friendly": "friendly",
-      "energetic": "energetic",
-      "formal": "formal",
-      "playful": "playful",
-      "persuasive": "persuasive"
+      "professional": "पेशेवर",
+      "friendly": "मित्रवत",
+      "energetic": "ऊर्जावान",
+      "formal": "औपचारिक",
+      "playful": "चंचल",
+      "persuasive": "प्रेरक"
     },
     "languages": {
-      "english": "English",
-      "german": "German",
-      "spanish": "Spanish",
-      "french": "French",
-      "italian": "Italian",
-      "ukrainian": "Ukrainian",
-      "polish": "Polish",
-      "japanese": "Japanese"
+      "english": "अंग्रेज़ी",
+      "german": "जर्मन",
+      "spanish": "स्पेनिश",
+      "french": "फ़्रेंच",
+      "italian": "इतालवी",
+      "ukrainian": "यूक्रेनी",
+      "polish": "पोलिश",
+      "japanese": "जापानी"
     }
   },
   "category": {
@@ -259,64 +509,64 @@
     "notFound": "श्रेणी नहीं मिली"
   },
   "paywall": {
-    "unlockTitle": "Unlock \"{tool}\" with Premium",
-    "description": "Unlock all Toolando.tech AI tools — text and image generation, translation, summaries and the assistant — in one subscription.",
-    "feature1": "Unlimited access to all AI tools",
-    "feature2": "Text generator, image generator and translator",
-    "feature3": "Priority request processing",
-    "goPremium": "Upgrade to Premium",
-    "redirecting": "Redirecting…",
-    "signInToBuy": "Sign in to buy Premium",
-    "noAccount": "Don't have an account?",
-    "signUp": "Sign up"
+    "unlockTitle": "Premium के साथ \"{tool}\" अनलॉक करें",
+    "description": "Toolando.tech के सभी AI टूल — टेक्स्ट और छवि जनरेशन, अनुवाद, सारांश और असिस्टेंट — एक सब्सक्रिप्शन में।",
+    "feature1": "सभी AI टूल तक असीमित पहुँच",
+    "feature2": "टेक्स्ट जनरेटर, छवि जनरेटर और अनुवादक",
+    "feature3": "अनुरोध की प्राथमिकता प्रोसेसिंग",
+    "goPremium": "Premium में अपग्रेड करें",
+    "redirecting": "रीडायरेक्ट हो रहा है…",
+    "signInToBuy": "Premium खरीदने के लिए साइन इन करें",
+    "noAccount": "खाता नहीं है?",
+    "signUp": "साइन अप करें"
   },
   "account": {
-    "backToHome": "Back to homepage",
-    "yourAccount": "Your account",
+    "backToHome": "होमपेज पर वापस",
+    "yourAccount": "आपका खाता",
     "premiumBadge": "Premium",
-    "freeBadge": "Free account",
-    "premiumActiveTitle": "You have active Premium",
-    "premiumActiveDesc": "Thank you for your support! You have full access to all AI tools without limits.",
-    "manageSubscription": "Manage subscription",
-    "manageOpening": "Opening…",
-    "managePortalError": "Could not open the portal.",
-    "manageGenericError": "An error occurred.",
-    "goPremiumTitle": "Go Premium",
-    "feature1": "Unlimited access to AI tools",
-    "feature2": "Background removal, image and text generation",
-    "feature3": "Priority processing",
-    "buyPremium": "Buy Premium",
-    "buyRedirecting": "Redirecting…",
-    "refreshHint": "Paid but Premium still inactive? Refresh your status:",
-    "refreshStatus": "Refresh Premium status",
-    "refreshChecking": "Checking...",
-    "refreshNoSub": "No active subscription found. If you just paid, wait a moment and try again.",
-    "refreshFailed": "Could not refresh status.",
-    "refreshNetworkError": "A network error occurred. Please try again.",
-    "signOut": "Sign out"
+    "freeBadge": "मुफ़्त खाता",
+    "premiumActiveTitle": "आपका Premium सक्रिय है",
+    "premiumActiveDesc": "आपके समर्थन के लिए धन्यवाद! सभी AI टूल तक बिना सीमा के पूर्ण पहुँच है।",
+    "manageSubscription": "सब्सक्रिप्शन प्रबंधित करें",
+    "manageOpening": "खोला जा रहा है…",
+    "managePortalError": "पोर्टल नहीं खुल सका।",
+    "manageGenericError": "कोई त्रुटि हुई।",
+    "goPremiumTitle": "Premium लें",
+    "feature1": "AI टूल तक असीमित पहुँच",
+    "feature2": "पृष्ठभूमि हटाना, छवि और टेक्स्ट जनरेशन",
+    "feature3": "प्राथमिकता प्रोसेसिंग",
+    "buyPremium": "Premium खरीदें",
+    "buyRedirecting": "रीडायरेक्ट हो रहा है…",
+    "refreshHint": "भुगतान किया लेकिन Premium अभी भी निष्क्रिय? स्थिति रीफ़्रेश करें:",
+    "refreshStatus": "Premium स्थिति रीफ़्रेश करें",
+    "refreshChecking": "जाँच हो रही है...",
+    "refreshNoSub": "कोई सक्रिय सब्सक्रिप्शन नहीं मिला। अभी भुगतान किया है तो थोड़ा इंतज़ार करके फिर प्रयास करें।",
+    "refreshFailed": "स्थिति रीफ़्रेश नहीं हो सकी।",
+    "refreshNetworkError": "नेटवर्क त्रुटि हुई। कृपया फिर से प्रयास करें।",
+    "signOut": "साइन आउट"
   },
   "downloader": {
-    "eyebrow": "Video → MP3",
-    "title": "Multi-Platform → MP3 Downloader",
-    "subtitle": "Paste a link from TikTok, Instagram, Facebook, Twitter/X, Vimeo or SoundCloud and grab the audio.",
-    "metaDescription": "Multi-platform Video to MP3 Downloader — TikTok, Instagram, Facebook, Twitter, Vimeo, SoundCloud. Paste a link and download the audio.",
-    "back": "All tools",
-    "inputLabel": "Video link",
+    "eyebrow": "वीडियो → MP3",
+    "title": "मल्टी-प्लेटफ़ॉर्म → MP3 डाउनलोडर",
+    "subtitle": "TikTok, Instagram, Facebook, Twitter/X, Vimeo या SoundCloud का लिंक पेस्ट करें और ऑडियो प्राप्त करें।",
+    "metaDescription": "मल्टी-प्लेटफ़ॉर्म Video to MP3 Downloader — TikTok, Instagram, Facebook, Twitter, Vimeo, SoundCloud। लिंक पेस्ट करें और ऑडियो डाउनलोड करें।",
+    "back": "सभी टूल",
+    "inputLabel": "वीडियो लिंक",
     "inputPlaceholder": "https://www.tiktok.com/@user/video/...",
-    "detected": "detected",
+    "detected": "पहचाना गया",
     "idLabel": "ID",
-    "invalidLink": "Enter a valid link from a supported platform.",
-    "download": "Download MP3",
-    "preparing": "Preparing your link…",
-    "ready": "Your link is ready.",
-    "openPage": "Open download page",
-    "resultTitle": "Ready to download",
-    "resultsBack": "Back to downloader",
-    "thumbnailAlt": "Video thumbnail",
-    "viewSource": "View original",
-    "faqTitle": "Frequently asked questions",
-    "disclaimer": "Toolando.tech does not host or download any media. It only detects the platform and the public video ID and hands off to an external service or your browser. Only download content you have the rights to.",
-    "externalNote": "Download happens on an external service or in your browser. Toolando.tech only captured the public platform and video ID. Please respect copyright and each platform's terms of service.",
+    "invalidLink": "समर्थित प्लेटफ़ॉर्म का मान्य लिंक दर्ज करें।",
+    "download": "MP3 डाउनलोड",
+    "preparing": "आपका लिंक तैयार हो रहा है…",
+    "ready": "आपका लिंक तैयार है।",
+    "openPage": "डाउनलोड पेज खोलें",
+    "resultTitle": "डाउनलोड के लिए तैयार",
+    "resultsBack": "डाउनलोडर पर वापस",
+    "thumbnailAlt": "वीडियो थंबनेल",
+    "viewSource": "मूल देखें",
+    "faqTitle": "अक्सर पूछे जाने वाले प्रश्न",
+    "disclaimer": "Toolando.tech कोई मीडिया होस्ट या डाउनलोड नहीं करता। यह केवल प्लेटफ़ॉर्म और सार्वजनिक वीडियो ID पहचानता है और बाहरी सेवा या आपके ब्राउज़र को सौंपता है। केवल वही सामग्री डाउनलोड करें जिसके अधिकार आपके पास हैं।",
+    "externalNote": "डाउनलोड बाहरी सेवा या आपके ब्राउज़र में होता है। Toolando.tech ने केवल सार्वजनिक प्लेटफ़ॉर्म और वीडियो ID कैप्चर किया। कृपया कॉपीराइट और प्रत्येक प्लेटफ़ॉर्म की सेवा शर्तों का सम्मान करें।",
     "faq": [
       {
         "q": "Which platforms are supported?",
@@ -339,18 +589,320 @@
         "a": "Only download content you own or have permission to use. Downloading copyrighted material without permission may violate the platform's terms of service and copyright law."
       }
     ],
-    "platformDisabled": "Downloading from {platform} is temporarily unavailable — {platform} actively blocks downloaders, so we've paused it until our own converter is ready. All other platforms still work."
+    "platformDisabled": "{platform} से डाउनलोड अस्थायी रूप से अनुपलब्ध है — {platform} डाउनलोडर को सक्रिय रूप से ब्लॉक करता है, इसलिए हमारा अपना कन्वर्टर तैयार होने तक रोक दिया है। अन्य सभी प्लेटफ़ॉर्म काम करते रहते हैं।"
+  },
+  "pages": {
+    "contact": {
+      "eyebrow": "संपर्क करें",
+      "title": "संपर्क प्रपत्र",
+      "intro": "क्या आपके पास कोई प्रश्न है, कोई साझेदारी का विचार है, या आप किसी समस्या की रिपोर्ट करना चाहते हैं? फॉर्म भरें - मैं यथाशीघ्र उत्तर दूंगा।",
+      "name": "नाम",
+      "namePlaceholder": "आपका नाम",
+      "email": "ईमेल",
+      "emailPlaceholder": "आपका ईमेल पता",
+      "message": "संदेश",
+      "messagePlaceholder": "अपनी समस्या या प्रश्न का वर्णन करें...",
+      "submit": "संदेश भेजें",
+      "sent": "धन्यवाद! आपका संदेश आपके ईमेल ऐप में तैयार हो गया है.",
+      "subject": "Toolando.tech से पूछताछ"
+    },
+    "about": {
+      "eyebrow": "मेरे बारे में",
+      "title": "नमस्ते, मैं Szymon हूं - Toolando का निर्माता",
+      "intro": "Toolando.tech मेरा अपना प्रोजेक्ट है जिसे मैं स्वयं बनाता हूं। विचार से लेकर, कोड के माध्यम से, उस सामग्री तक जिसे आप अभी पढ़ रहे हैं - यह सब एक जोड़ी हाथों से आता है। मैं चाहता हूं कि सरल कार्य, जैसे किसी फ़ाइल को परिवर्तित करना या कोई त्वरित ऑनलाइन टूल, सभी के लिए उपलब्ध हो, जिसमें कोई सॉफ़्टवेयर इंस्टॉल न हो और कोई अनावश्यक जटिलताएँ न हों।",
+      "whyTitle": "Toolando क्यों बनाया गया",
+      "whyP1": "मैं हर दिन कंप्यूटर के साथ काम करता हूं और मैंने कई बार देखा है कि लोग उन कार्यों में कितना समय बर्बाद करते हैं जिनमें एक पल लगना चाहिए - फ़ाइल प्रारूप बदलना, रिकॉर्डिंग से ऑडियो निकालना, या एक त्वरित ऑपरेशन जो आपको विज्ञापनों और जाल से भरी कुछ यादृच्छिक साइट की तलाश करने के लिए मजबूर करता है।",
+      "whyP2": "Toolando ऐसे उपकरणों को एक स्पष्ट और सुरक्षित स्थान पर इकट्ठा करने के लिए बनाया गया था। मैं इस बात की परवाह करता हूं कि सेवा तेज, पठनीय और उपयोगकर्ता के प्रति ईमानदार हो - जिसमें कोई तरकीब न हो और कोई छिपा हुआ कैच न हो।",
+      "howTitle": "Toolando कैसे काम करता है",
+      "howIntro": "सेवा दो प्रकारों में ऑनलाइन टूल प्रदान करती है: निःशुल्क और प्रीमियम।",
+      "howFreeTerm": "मुफ़्त उपकरण",
+      "howFreeDesc": "बिना किसी खाते के सभी के लिए उपलब्ध। ये रोजमर्रा की, सबसे अधिक उपयोग की जाने वाली सुविधाएं हैं जिन्हें मैं सभी के लिए खुला रखना चाहता हूं।",
+      "howPremiumTerm": "प्रीमियम उपकरण",
+      "howPremiumDesc": "अधिक उन्नत सुविधाएँ या उच्च सीमाएँ जो परियोजना को बनाए रखने और विकसित करने में मदद करती हैं। प्रीमियम राजस्व सीधे सर्वर, विकास और नए टूल को जाता है।",
+      "howOutro": "प्रकार के बावजूद, मैं एक ही नियम पर कायम हूं: अपलोड की गई फ़ाइलें केवल रूपांतरण करने के लिए उपयोग की जाती हैं और मेरे द्वारा संग्रहीत नहीं की जाती हैं।",
+      "outsideTitle": "मैं Toolando से आगे क्या करता हूँ",
+      "outsideP1": "मैं आईटी सेवाएँ प्रदान करता हूँ - व्यक्तियों और कंपनियों को रोजमर्रा की हार्डवेयर और सॉफ्टवेयर समस्याओं से निपटने में मदद करता हूँ।",
+      "outsideList": [
+        "लैपटॉप और कंप्यूटर की सर्विसिंग और मरम्मत,",
+        "आईटी सेवाएँ और तकनीकी सहायता,",
+        "वेब टूल और एप्लिकेशन का निर्माण।"
+      ],
+      "outsideP2": "मरम्मत और उपयोगकर्ताओं के साथ काम करने का अनुभव सीधे तौर पर इस बात में बदल जाता है कि मैं Toolando को कैसे डिजाइन करता हूं - सरल, सटीक और वास्तविक जरूरतों को ध्यान में रखते हुए।",
+      "contactTitle": "संपर्क करें",
+      "contactP1": "क्या आपके पास कोई प्रश्न है, किसी नए टूल के बारे में कोई विचार है, या आप किसी समस्या की रिपोर्ट करना चाहते हैं? मुझे लिखें - मैं ख़ुशी से उत्तर दूंगा।",
+      "emailLabel": "ईमेल:",
+      "methodologyTitle": "मैं रूपांतरणों का परीक्षण कैसे करता हूँ और मार्गदर्शिकाएँ कैसे लिखता हूँ",
+      "methodologyP1": "Toolando.tech पर प्रत्येक गाइड और प्रारूप प्रोफ़ाइल वास्तविक रूपांतरण परीक्षणों पर आधारित है - कॉपी-पेस्ट किए गए विनिर्देशों पर नहीं। मैं नमूना फ़ाइलें अपलोड करता हूं, आउटपुट आकार और गुणवत्ता की तुलना करता हूं, और नोट करता हूं कि कौन सी सेटिंग्स सबसे अच्छा काम करती हैं।",
+      "methodologyList": [
+        "मैं विभिन्न आकारों (छोटे, मध्यम, बड़े) की फ़ाइलों के साथ कन्वर्टर्स का परीक्षण करता हूं।",
+        "ऑडियो/वीडियो के लिए मैं बिटरेट, अवधि और प्लेबैक अनुकूलता की तुलना करता हूं।",
+        "छवियों के लिए मैं फ़ाइल आकार, दृश्य गुणवत्ता और पारदर्शिता की जाँच करता हूँ।",
+        "प्रारूप या प्लेटफ़ॉर्म आवश्यकताएँ बदलने पर मार्गदर्शिकाएँ अद्यतन की जाती हैं।"
+      ],
+      "methodologyP2": "यदि आपको किसी गाइड या कनवर्टर में कोई त्रुटि मिलती है जो वर्णित अनुसार काम नहीं करता है, तो badyltech@outlook.com को ईमेल करें - सुधार से सभी को मदद मिलती है।",
+      "updatedLabel": "पृष्ठ अंतिम बार अद्यतन किया गया",
+      "updatedDate": "जुलाई 2026"
+    },
+    "editorial": {
+      "eyebrow": "संपादकीय",
+      "title": "Toolando.tech संपादकीय मानक",
+      "intro": "Toolando.tech सिर्फ कन्वर्टर नहीं — यह गाइड, फ़ॉर्मैट विश्वकोश और तुलना भी है। नीचे बताता हूँ सामग्री कैसे बनती है, जानकारी कहाँ से आती है और कब अपडेट होती है।",
+      "whoTitle": "सामग्री कौन बनाता है",
+      "whoP1": "हर गाइड, फ़ॉर्मैट प्रोफ़ाइल और तुलना मैं स्वयं लिखता हूँ — Szymon Badyl, Toolando.tech के निर्माता। मैं कंटेंट फ़ार्म या अनजाँच AI-जनित कॉपी का उपयोग नहीं करता।",
+      "whoP2": "हर लेख मेरी अपनी फ़ाइलों पर रूपांतरण परीक्षणों पर आधारित है। अगर कुछ वर्णन के अनुसार काम नहीं करता, मैं टेक्स्ट और टूल दोनों ठीक करता हूँ।",
+      "standardsTitle": "संपादकीय सिद्धांत",
+      "standardsIntro": "हर नई गाइड पर मैं वही नियम लागू करता हूँ:",
+      "standardsList": [
+        "I test the converter with files of different sizes before publishing.",
+        "I give concrete scenarios (email, shop, social media), not vague generalities.",
+        "I distinguish compression from format conversion and lossy from lossless.",
+        "I write about tool limits — when not to convert online.",
+        "I update the date and content when platform or format requirements change."
+      ],
+      "sourcesTitle": "स्रोत और ईमानदारी",
+      "sourcesP1": "फ़ॉर्मैट स्पेक (MIME, कोडेक) IANA, FFmpeg और विक्रेता दस्तावेज़ से सत्यापित करता हूँ। तुलना मार्केटिंग तालिकाओं नहीं, अपने आकार और गुणवत्ता माप पर आधारित है।",
+      "sourcesP2": "बाहरी लिंक केवल तभी जब वास्तव में मदद करें (जैसे आधिकारिक दस्तावेज़)। मैं सशुल्क प्रतिद्वंद्वी टूल का प्रचार नहीं करता।",
+      "updatesTitle": "अपडेट और सुधार",
+      "updatesP1": "त्रुटि, पुरानी जानकारी या विषय सुझाव? badyltech@outlook.com पर ईमेल करें — सुधार अपडेट तिथि के साथ लेख में जाते हैं।",
+      "updatedLabel": "अंतिम अपडेट",
+      "updatedDate": "अगस्त 2026",
+      "fullGuideCta": "संपादकीय मानकों पर पूर्ण गाइड"
+    },
+    "howItWorks": {
+      "eyebrow": "यह कैसे काम करता है?",
+      "title": "Toolando में उपकरण कैसे काम करते हैं",
+      "intro": "Toolando.tech ऑनलाइन टूल का एक सेट है जिसे आप सीधे अपने ब्राउज़र में चलाते हैं - इंस्टॉल करने के लिए कुछ भी नहीं। नीचे मैं समझाता हूं कि फ़ाइल प्रोसेसिंग कैसे काम करती है, मैं सुरक्षा का कैसे ध्यान रखता हूं, और मुफ़्त टूल प्रीमियम से कैसे भिन्न हैं।",
+      "browserTitle": "उपकरण जो ब्राउज़र में चलते हैं",
+      "browserP": "आप एक टूल खोलते हैं, एक फ़ाइल चुनते हैं या डेटा दर्ज करते हैं, और आपको परिणाम सीधे पृष्ठ पर मिलता है। मुफ़्त टूल का उपयोग करने के लिए आपको किसी खाते की आवश्यकता नहीं है, और आपको अपने कंप्यूटर पर कुछ भी इंस्टॉल करने की आवश्यकता नहीं है।",
+      "filesTitle": "फ़ाइलें कैसे संसाधित की जाती हैं",
+      "filesIntro": "टूल के प्रकार के आधार पर, फ़ाइलों को दो तरीकों से संसाधित किया जाता है:",
+      "filesLocalTerm": "ब्राउज़र में स्थानीय रूप से",
+      "filesLocalDesc": "कुछ ऑपरेशन सीधे आपके डिवाइस पर चलते हैं, और फ़ाइल आपके कंप्यूटर को कभी नहीं छोड़ती है।",
+      "filesServerTerm": "सर्वर पर अस्थायी रूप से",
+      "filesServerDesc": "जब किसी उपकरण को अधिक कंप्यूटिंग शक्ति की आवश्यकता होती है, तो फ़ाइल को केवल रूपांतरण की अवधि के लिए सर्वर पर संसाधित किया जाता है, और फिर हटा दिया जाता है।",
+      "filesOutro": "इनमें से किसी भी मामले में मैं आपकी फ़ाइलों को संग्रहीत नहीं करता या किसी अन्य उद्देश्य के लिए उनका उपयोग नहीं करता।",
+      "securityTitle": "सुरक्षा",
+      "securityP": "सुरक्षा और गोपनीयता मेरे लिए प्राथमिकता है। साइट से कनेक्शन एन्क्रिप्ट किया गया है, और फ़ाइलों का उपयोग केवल आपके द्वारा अनुरोधित कार्य को पूरा करने के लिए किया जाता है।",
+      "securityList": [
+        "ऑपरेशन पूरा होने के बाद अपलोड की गई फ़ाइलें संग्रहीत नहीं की जाती हैं,",
+        "मैं आपका डेटा बेचता या साझा नहीं करता,",
+        "मुफ़्त टूल का उपयोग करने के लिए आपको व्यक्तिगत डेटा प्रदान करने की आवश्यकता नहीं है।"
+      ],
+      "tiersTitle": "निःशुल्क उपकरण बनाम प्रीमियम",
+      "tiersP": "Toolando दो प्रकारों में उपकरण प्रदान करता है, लेकिन दोनों में सुरक्षा सिद्धांत समान है।",
+      "tiersFreeTerm": "निःशुल्क",
+      "tiersFreeDesc": "बिना किसी खाते के सभी के लिए उपलब्ध। रोजमर्रा के, त्वरित कार्यों के लिए बिल्कुल सही।",
+      "tiersPremiumTerm": "प्रीमियम",
+      "tiersPremiumDesc": "अधिक उन्नत सुविधाएँ और उच्च सीमाएँ या बड़ी फ़ाइलें। प्रीमियम सर्वर रखरखाव और नए टूल के विकास का समर्थन करता है।"
+    },
+    "faq": {
+      "eyebrow": "अक्सर पूछे जाने वाले प्रश्न",
+      "title": "अक्सर पूछे जाने वाले प्रश्न",
+      "intro": "मैंने यहां उन प्रश्नों के उत्तर एकत्र किए हैं जो अक्सर सामने आते हैं। यदि आप जो खोज रहे हैं वह आपको नहीं मिल रहा है, तो मुझे badyltech@outlook.com पर लिखें।",
+      "items": [
+        {
+          "q": "क्या Toolando के उपकरण निःशुल्क हैं?",
+          "a": "अधिकांश उपकरण पूरी तरह से मुफ़्त हैं और खाता बनाए बिना उपलब्ध हैं। प्रीमियम संस्करण में कुछ अधिक उन्नत सुविधाएँ और उच्च सीमाएँ उपलब्ध हैं, जो सेवा को बनाए रखने और विकसित करने में सहायता करती हैं।"
+        },
+        {
+          "q": "मुफ़्त टूल प्रीमियम से किस प्रकार भिन्न हैं?",
+          "a": "मुफ़्त टूल रोजमर्रा के, सबसे सामान्य कार्यों को कवर करते हैं और सभी के लिए खुले हैं। प्रीमियम अधिक उन्नत सुविधाएँ और बड़ी फ़ाइलें या सीमाएँ प्रदान करता है। फ़ाइल सुरक्षा सिद्धांत दोनों वेरिएंट में समान है।"
+        },
+        {
+          "q": "क्या मेरी फ़ाइलें सुरक्षित हैं?",
+          "a": "हाँ. अपलोड की गई फ़ाइलें केवल रूपांतरण करने के लिए उपयोग की जाती हैं और मेरे द्वारा संग्रहीत नहीं की जाती हैं। कुछ ऑपरेशन ब्राउज़र में स्थानीय रूप से चलते हैं, और यदि कोई फ़ाइल सर्वर पर जाती है, तो इसे केवल कार्य की अवधि के लिए संसाधित किया जाता है और फिर हटा दिया जाता है।"
+        },
+        {
+          "q": "क्या Toolando मेरे द्वारा अपलोड की गई फ़ाइलों को संग्रहीत करता है?",
+          "a": "नहीं, ऑपरेशन पूरा होने के बाद मैं आपकी फ़ाइलें सहेजता नहीं हूं और न ही उनका किसी अन्य उद्देश्य के लिए उपयोग करता हूं।"
+        },
+        {
+          "q": "आप मेरी गोपनीयता की रक्षा कैसे करते हैं?",
+          "a": "मैं जीडीपीआर के अनुरूप केवल तकनीकी और सांख्यिकीय डेटा (जैसे आईपी पता, ब्राउज़र प्रकार, सिस्टम, साइट ट्रैफ़िक) संसाधित करता हूं। आपको गोपनीयता नीति में विवरण मिलेगा। मुफ़्त टूल का उपयोग करने के लिए आपको व्यक्तिगत डेटा प्रदान करने की आवश्यकता नहीं है।"
+        },
+        {
+          "q": "क्या मुझे टूल का उपयोग करने के लिए एक खाता बनाना होगा?",
+          "a": "नहीं, मुफ़्त उपकरण बिना किसी खाते के काम करते हैं। किसी खाते की आवश्यकता केवल प्रीमियम सुविधाओं के लिए हो सकती है।"
+        },
+        {
+          "q": "क्या साइट पर विज्ञापन हैं?",
+          "a": "हां, सेवा Google AdSense विज्ञापन प्रदर्शित कर सकती है, जो सभी के लिए निःशुल्क टूल उपलब्ध रखने में मदद करती है।"
+        },
+        {
+          "q": "ऑनलाइन टूल कैसे काम करते हैं?",
+          "a": "आप अपने ब्राउज़र में एक टूल खोलते हैं, एक फ़ाइल चुनते हैं या डेटा दर्ज करते हैं, और तुरंत परिणाम प्राप्त करते हैं - इंस्टॉल करने के लिए कुछ भी नहीं। मैंने \"यह कैसे काम करता है?\" पर अधिक विवरण दिया है। पेज."
+        },
+        {
+          "q": "मैं कैसे संपर्क कर सकता हूँ?",
+          "a": "badyltech@outlook.com पर लिखें या संपर्क फ़ॉर्म का उपयोग करें। मैं यथाशीघ्र उत्तर देता हूँ।"
+        }
+      ]
+    },
+    "privacy": {
+      "eyebrow": "गोपनीयता नीति",
+      "title": "Toolando.tech गोपनीयता नीति",
+      "intro": "Toolando.tech मुफ़्त और Premium संस्करण में ऑनलाइन टूल प्रदान करने वाली सेवा है। मैं उपयोगकर्ताओं की प्राइवेसी का ध्यान रखता हूँ और GDPR सहित लागू नियमों के अनुसार डेटा प्रोसेस करता हूँ।",
+      "lastUpdated": "अंतिम अपडेट: 23 जुलाई 2026",
+      "s1Title": "1. डेटा नियंत्रक",
+      "s1Pre": "डेटा नियंत्रक Toolando.tech (पोलैंड) के स्वामी Szymon Badyl हैं। प्राइवेसी मामलों में संपर्क:",
+      "s1Address": "पत्राचार: badyltech@outlook.com",
+      "s2Title": "2. कौन सा डेटा प्रोसेस होता है",
+      "s2Intro": "सेवा तकनीकी और सांख्यिकीय डेटा प्रोसेस करती है जो साइट उपयोग के दौरान स्वचालित रूप से एकत्र होता है:",
+      "s2List": [
+        "IP address,",
+        "browser type and version,",
+        "the device's operating system,",
+        "traffic and usage data (e.g. pages visited)."
+      ],
+      "s2Outro": "यदि आप ईमेल या फ़ॉर्म से संपर्क करते हैं, तो आपका ईमेल पता और संदेश की सामग्री भी प्रोसेस होती है।",
+      "s3Title": "3. टूल में अपलोड की गई फ़ाइलें",
+      "s3P": "रूपांतरण या अन्य कार्य के लिए टूल में अपलोड की गई फ़ाइलें मैं संग्रहीत नहीं करता। वे केवल आपके अनुरोधित कार्य के लिए उपयोग होती हैं और पूर्ण होने पर हटा दी जाती हैं। किसी अन्य उद्देश्य के लिए उपयोग नहीं करता।",
+      "s4Title": "4. कुकीज़",
+      "s4Intro": "सेवा निम्न प्रकार के cookies उपयोग करती है:",
+      "s4TechTerm": "तकनीकी",
+      "s4TechDesc": "साइट के सही काम और सेटिंग (जैसे भाषा) याद रखने के लिए आवश्यक।",
+      "s4AnalyticsTerm": "विश्लेषणात्मक",
+      "s4AnalyticsDesc": "सांख्यिकीय टूल (जैसे Google Analytics) जो साइट उपयोग समझने में मदद करते हैं, समग्र और अनाम रूप में।",
+      "s4AdsTerm": "विज्ञापन",
+      "s4AdsDesc": "Google AdSense, जो विज्ञापन दिखाने और व्यक्तिगत बनाने के लिए cookies उपयोग कर सकता है।",
+      "s4Outro": "आप ब्राउज़र सेटिंग में कभी भी cookies प्रबंधित या अक्षम कर सकते हैं। पहली विज़िट पर cookie सहमति बैनर दिखाते हैं जहाँ सभी स्वीकार या केवल आवश्यक तक सीमित कर सकते हैं।",
+      "s4ThirdPartyTitle": "तृतीय-पक्ष प्रदाता",
+      "s4ThirdPartyP": "सेवा Google सेवाएँ (Analytics, AdSense) उपयोग करती है। Google अपनी गोपनीयता नीति के अनुसार डेटा एकत्र कर सकता है। अधिक जानकारी: https://policies.google.com/technologies/partner-sites",
+      "s5Title": "5. मुफ़्त और Premium टूल",
+      "s5P": "Toolando मुफ़्त टूल (खाते बिना) और Premium टूल प्रदान करता है। डेटा प्रोसेसिंग और फ़ाइल सुरक्षा के नियम दोनों में समान — केवल सुविधाओं की सीमा और प्रतिबंध अलग हैं।",
+      "s6Title": "6. डेटा प्रोसेसिंग का उद्देश्य",
+      "s6Intro": "मैं डेटा केवल निम्न उद्देश्यों के लिए प्रोसेस करता हूँ:",
+      "s6List": [
+        "ensuring the correct and secure operation of the service,",
+        "statistical traffic analysis and improving the tools,",
+        "displaying ads,",
+        "handling contact with the user."
+      ],
+      "s7Title": "7. आपके अधिकार",
+      "s7Intro": "आपको अधिकार है:",
+      "s7List": [
+        "access your data,",
+        "rectify or delete it,",
+        "restrict processing,",
+        "lodge a complaint with the relevant data protection authority."
+      ],
+      "s8Title": "8. नीति में परिवर्तन",
+      "s8P": "सेवा या कानून में परिवर्तन को दर्शाने के लिए गोपनीयता नीति अपडेट हो सकती है। वर्तमान संस्करण हमेशा इस पेज पर उपलब्ध है।"
+    },
+    "terms": {
+      "eyebrow": "सेवा की शर्तें",
+      "title": "Toolando.tech की सेवा की शर्तें",
+      "intro": "नीचे की शर्तें Toolando.tech सेवा उपयोग के नियम निर्धारित करती हैं। सेवा उपयोग का अर्थ है आप इन नियमों को स्वीकार करते हैं।",
+      "s1Title": "1. सामान्य प्रावधान",
+      "s1P": "Toolando.tech के स्वामी Szymon हैं। सेवा फ़ाइल रूपांतरण, सामग्री जनरेशन और AI-संचालित टूल के ऑनलाइन टूल प्रदान करती है।",
+      "s2Title": "2. मुफ़्त और Premium टूल",
+      "s2Intro": "Toolando दो संस्करणों में टूल प्रदान करता है:",
+      "s2FreeTerm": "मुफ़्त",
+      "s2FreeDesc": "सभी के लिए उपलब्ध, खाता बनाने की आवश्यकता नहीं।",
+      "s2PremiumTerm": "Premium",
+      "s2PremiumDesc": "अधिक उन्नत सुविधाएँ और उच्च सीमाएँ।",
+      "s2Outro": "Premium सुविधाओं के भुगतान या सब्सक्रिप्शन के नियम सेवा पर संबंधित स्थानों पर प्रस्तुत हैं।",
+      "s3Title": "3. अपने जोखिम पर उपयोग",
+      "s3P1": "आप सेवा अपने जोखिम पर उपयोग करते हैं। मैं टूल सही काम करें इसके लिए प्रयास करता हूँ, पर सेवा \"जैसी है\" प्रदान होती है, उपलब्धता, परिणाम की शुद्धता या किसी विशेष उद्देश्य के लिए उपयुक्तता की कोई गारंटी नहीं।",
+      "s3P2": "सेवा स्वामी जिम्मेदार नहीं है:",
+      "s3List": [
+        "the consequences of using the tools' results,",
+        "lost profits,",
+        "damage resulting from interruptions in the service."
+      ],
+      "s3Outro": "उपयोगकर्ता कानून के अनुसार सेवा उपयोग करने का वचन देता है और अपनी सामग्री और फ़ाइलों के लिए जिम्मेदार है।",
+      "s4Title": "4. उपयोगकर्ता फ़ाइलें",
+      "s4P": "टूल में अपलोड की गई फ़ाइलें संग्रहीत नहीं होतीं। वे केवल दिए गए ऑपरेशन के लिए उपयोग होती हैं और पूर्ण होने पर हटा दी जाती हैं।",
+      "s5Title": "5. विज्ञापन",
+      "s5P": "सेवा Google AdSense विज्ञापन दिखा सकती है। विज्ञापन मुफ़्त टूल बनाए रखने और परियोजना विकसित करने में मदद करते हैं। विज्ञापन प्रदाता गोपनीयता नीति के अनुसार cookies उपयोग कर सकता है।",
+      "s6Title": "6. कॉपीराइट",
+      "s6P": "Toolando.tech नाम, ग्राफ़िक तत्व और सेवा की सामग्री कानूनी रूप से सुरक्षित हैं। स्वामी की सहमति के बिना कॉपी और उपयोग निषिद्ध है।",
+      "s7Title": "7. संपर्क",
+      "s7Pre": "इन शर्तों से संबंधित मामलों में संपर्क:",
+      "s8Title": "8. शर्तों में परिवर्तन",
+      "s8P": "सेवा या कानून में परिवर्तन को दर्शाने के लिए शर्तें अपडेट हो सकती हैं। वर्तमान संस्करण हमेशा इस पेज पर उपलब्ध है।"
+    },
+    "guides": {
+      "eyebrow": "गाइड",
+      "title": "फ़ाइल रूपांतरण गाइड और ट्यूटोरियल",
+      "intro": "फ़ाइल फ़ॉर्मैट, रूपांतरण और सर्वोत्तम प्रथाओं पर व्यावहारिक लेख। हर गाइड बताती है कब और क्यों फ़ाइल बदलें, और Toolando.tech से सुरक्षित रूप से कैसे करें।",
+      "articles": [
+        {
+          "title": "MP3 vs WAV — when to convert audio?",
+          "body": "MP3 is a lossy compression format — files are small but some audio data is lost. WAV preserves full quality but files can be 10 times larger. Convert MP3 → WAV when you need a file for editing in a DAW (e.g. Audacity, FL Studio) or when a platform requires a lossless format. Convert WAV → MP3 when you want to email a recording, publish a podcast, or save disk space. Toolando.tech supports both conversions — just upload your file and download the result."
+        },
+        {
+          "title": "How to convert PDF to JPG for print and the web",
+          "body": "PDF is a document format that preserves page layout. Sometimes you need individual pages as images — for a website, a PowerPoint presentation, or printing a single page. The PDF → JPG converter in Toolando.tech renders each PDF page as a separate high-resolution JPG image. PDF files are never stored — they are deleted immediately after conversion. If you need transparency, consider PDF → PNG instead."
+        },
+        {
+          "title": "WebP and AVIF — modern image formats for websites",
+          "body": "JPG and PNG have dominated the web for years, but newer formats offer better compression. WebP (Google) produces files 25–35% smaller than JPG at the same visual quality and is supported by all modern browsers. AVIF goes even further — files can be half the size of WebP. Convert JPG → WebP or PNG → AVIF in Toolando.tech to speed up your website. Remember that older browsers (e.g. IE) don't support these formats — keep a JPG version as a fallback."
+        },
+        {
+          "title": "Extracting audio from video — the legal alternative",
+          "body": "Sometimes you have a video file (e.g. a camera recording, presentation) and only need the audio track. Toolando.tech lets you extract audio from MP4, MOV, AVI, MKV and other video formats, saving it as MP3, WAV, FLAC, or AAC. This is a legal operation on your own file — unlike downloading music from YouTube or TikTok, which Toolando.tech deliberately does not offer. Upload your video file, choose an audio format, and download the result."
+        },
+        {
+          "title": "JSON, CSV, and XML — converting data between formats",
+          "body": "Developers and data analysts often work with different data formats. JSON is the standard in APIs and configs. CSV and TSV are used for importing into Excel and spreadsheets. XML is used in older enterprise systems and RSS. Toolando.tech converts between these formats while preserving data structure. For example: JSON → CSV lets you open an API response in Excel, and CSV → JSON prepares data for sending to a REST API."
+        },
+        {
+          "title": "File security in online tools",
+          "body": "Uploading files to online tools naturally raises privacy concerns. At Toolando.tech, files are used solely to perform the operation you request — conversion, compression, or preview. After the job completes, files are deleted from the server. Some tools (e.g. the universal file opener) run entirely in your browser — in that case the file never leaves your computer. The connection to the site is encrypted (HTTPS). We never sell or share your files with third parties."
+        },
+        {
+          "title": "Lossy vs lossless compression — a simple guide",
+          "body": "Lossy formats (MP3, JPG, AAC, H.264) discard some data to shrink file size. Lossless formats (FLAC, PNG, WAV, ZIP) keep all data but produce larger files. Rule of thumb: only convert from lossy to lossless when you must — you won't recover lost quality. Converting lossy to lossy (e.g. JPG → JPG at lower quality) should happen once; each re-conversion degrades the result. In Toolando.tech's format encyclopedia, every format is labeled with its compression type."
+        },
+        {
+          "title": "HEIC from iPhone — how to open and convert to JPG",
+          "body": "Apple saves photos in HEIC (HEIF) by default — smaller than JPG at the same quality. The catch: Windows without an extension, older apps, and many services don't support HEIC. Solution: convert HEIC → JPG or HEIC → PNG in Toolando.tech before emailing photos, uploading to a site, or printing. You can also set iPhone to \"Most Compatible\" (JPG) in Settings, but online conversion works on photos already saved as HEIC."
+        },
+        {
+          "title": "PDF vs DOCX — which format when?",
+          "body": "DOCX (Word) is for editing text — you change content, styles, and headings. PDF locks page layout — it looks identical on every device, ideal for invoices, contracts, and CVs sent to recruiters. Convert DOCX → PDF before sending a document \"for reading only.\" Convert PDF → DOCX only when you need to edit text — layout may break. For archiving and print, always choose PDF."
+        },
+        {
+          "title": "Video for social media — MP4, resolution, and bitrate",
+          "body": "Instagram, TikTok, YouTube, and Facebook prefer MP4 with H.264 video and AAC audio. Before publishing, convert MOV, AVI, or MKV to MP4 to avoid upload errors. 1080p (1920×1080) is enough for most platforms; 4K only when the platform supports it. Higher bitrate means better quality but a larger file. Toolando.tech converts video with no install — see the format encyclopedia for details on MP4, WebM, and MOV."
+        }
+      ]
+    }
   },
   "hub": {
-    "convertersTitle": "File converters",
-    "convertersDesc": "Audio, video, images, documents, data, fonts and archives — plus compress, merge PDF and background removal.",
-    "calculatorsTitle": "Calculators & converters",
-    "calculatorsDesc": "Currency, VAT, dates, timezones, units and bitrate.",
-    "developerTitle": "Developer & text tools",
-    "developerDesc": "Passwords, QR, Base64, UUID, hash, colors, timestamp and character counter.",
-    "specialTools": "File tools",
-    "browseConverters": "Browse converters",
-    "browseCalculators": "Browse calculators",
-    "browseDeveloper": "Browse tools"
+    "convertersTitle": "फ़ाइल कन्वर्टर",
+    "convertersDesc": "ऑडियो, वीडियो, छवियाँ, दस्तावेज़, डेटा, फ़ॉन्ट और आर्काइव — साथ ही संपीड़न, PDF मर्ज और पृष्ठभूमि हटाना।",
+    "calculatorsTitle": "कैलकुलेटर और कन्वर्टर",
+    "calculatorsDesc": "मुद्रा, VAT, तिथियाँ, समय क्षेत्र, इकाइयाँ और बिटरेट।",
+    "developerTitle": "डेवलपर और टेक्स्ट टूल",
+    "developerDesc": "पासवर्ड, QR, Base64, UUID, हैश, रंग, टाइमस्टैम्प और वर्ण काउंटर।",
+    "specialTools": "फ़ाइल टूल",
+    "browseConverters": "कन्वर्टर ब्राउज़ करें",
+    "browseCalculators": "कैलकुलेटर ब्राउज़ करें",
+    "browseDeveloper": "टूल ब्राउज़ करें"
+  },
+  "specialFields": {
+    "splitMode": "विभाजन मोड",
+    "everyPage": "हर पेज अलग",
+    "pageRange": "चयनित सीमा",
+    "pagesHint": "पेज (जैसे 1-3,5)",
+    "rotation": "घुमाव कोण",
+    "width": "चौड़ाई (px)",
+    "height": "ऊँचाई (px, वैकल्पिक)",
+    "watermark": "वॉटरमार्क टेक्स्ट",
+    "trimStart": "शुरुआत (सेक या MM:SS)",
+    "trimEnd": "अंत (सेक या MM:SS)",
+    "pageNumberPos": "पेज नंबर की स्थिति",
+    "bottom": "पेज के नीचे",
+    "top": "पेज के ऊपर"
+  },
+  "accountRecent": {
+    "title": "हाल में उपयोग किए गए",
+    "subtitle": "इस ब्राउज़र में स्थानीय रूप से सहेजा इतिहास।"
+  },
+  "favorites": {
+    "add": "पसंदीदा में जोड़ें",
+    "remove": "पसंदीदा"
   }
 }

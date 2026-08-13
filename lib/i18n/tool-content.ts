@@ -5,6 +5,7 @@ import {
   getConversionTips,
 } from "./conversion-quality"
 import { getFormatProfile } from "./formats"
+import { extraContentStrings, extraExtraFaq } from "./tool-content/extra-locales"
 
 export type ToolPageContent = {
   extendedDescription: string
@@ -116,12 +117,147 @@ const formatInfo: Record<Locale, Record<string, FormatInfo>> = {
     woff: { name: "WOFF", description: "Web Open Font Format optimized for browser loading. WOFF is the standard web font format." },
     woff2: { name: "WOFF2", description: "Newer WOFF version with better compression. WOFF2 is the recommended web font format for modern sites." },
   },
-}
-
-// German, Spanish, Ukrainian — reuse English format descriptions for now;
-// category-specific prose is localized below.
-for (const loc of ["de", "es", "uk"] as const) {
-  formatInfo[loc] = formatInfo.en
+  de: {
+    mp3: { name: "MP3", description: "Das weltweit beliebteste verlustbehaftete Audioformat. MP3-Dateien sind klein und laufen auf praktisch jedem Gerät — ideal für Musik, Podcasts und Sprachaufnahmen." },
+    wav: { name: "WAV", description: "Unkomprimiertes, verlustfreies Audio. WAV-Dateien sind groß, bewahren aber die volle Klangqualität — bevorzugt in Tonstudios und beim Videoschnitt." },
+    flac: { name: "FLAC", description: "Verlustfreie Audiokompression. FLAC liefert WAV-Qualität bei kleinerer Dateigröße — beliebt bei Audiophilen und Musiksammlern." },
+    ogg: { name: "OGG", description: "Offenes Audioformat (Vorbis/Opus). OGG bietet gute Qualität bei geringer Größe und ist in Spielen und Open-Source-Anwendungen weit verbreitet." },
+    m4a: { name: "M4A", description: "AAC-basiertes Audioformat, das Apple und YouTube verwenden. M4A bietet bei ähnlicher Dateigröße bessere Qualität als MP3." },
+    aac: { name: "AAC", description: "Moderner verlustbehafteter Audio-Codec, der MP3 bei gleicher Bitrate übertrifft. Wird beim Streaming, in iTunes und auf vielen Videoplattformen eingesetzt." },
+    opus: { name: "Opus", description: "Effizienter Codec für Streaming und VoIP. Opus verarbeitet Sprache und Musik auch bei sehr niedrigen Bitraten hervorragend." },
+    aiff: { name: "AIFF", description: "Verlustfreies Audioformat von Apple. AIFF ist das Mac-Pendant zu WAV für professionelle Workstations." },
+    wma: { name: "WMA", description: "Microsofts Audioformat (Windows Media Audio). WMA war im Windows-Ökosystem verbreitet, wird heute aber meist durch MP3 und AAC ersetzt." },
+    mp4: { name: "MP4", description: "Universeller Video-Container mit H.264/H.265-Codecs. MP4 ist der Standard für Smartphones, YouTube, soziale Medien und die meisten Player." },
+    webm: { name: "WebM", description: "Offenes, fürs Web optimiertes Videoformat. WebM liefert gute Qualität bei geringer Dateigröße und wird von Browsern nativ unterstützt." },
+    mov: { name: "MOV", description: "Apples Videoformat (QuickTime). MOV ist der Standard für den Videoschnitt am Mac und wird häufig von Apple-Kameras genutzt." },
+    avi: { name: "AVI", description: "Älteres, aber vielseitiges Videoformat von Microsoft. AVI unterstützt viele Codecs, die Dateien sind jedoch meist größer als MP4." },
+    mkv: { name: "MKV", description: "Flexibler Video-Container (Matroska) mit Unterstützung für mehrere Tonspuren, Untertitel und Kapitel. Beliebt bei Filmen und Anime." },
+    flv: { name: "FLV", description: "Flash-Video-Format, das früher beim Online-Streaming verwendet wurde. FLV ist heute selten, findet sich aber noch in älteren Aufnahmen." },
+    wmv: { name: "WMV", description: "Microsofts Videoformat (Windows Media Video). WMV war unter Windows verbreitet, wird heute aber meist durch MP4 ersetzt." },
+    "3gp": { name: "3GP", description: "Leichtgewichtiges Videoformat für ältere Mobiltelefone. 3GP-Dateien sind klein, die Bildqualität ist jedoch begrenzt." },
+    m4v: { name: "M4V", description: "Apples MP4-Variante (iTunes, Apple TV). M4V kann DRM enthalten, ist ohne Kopierschutz aber MP4-kompatibel." },
+    mpg: { name: "MPG", description: "MPEG-1/MPEG-2-Videoformat aus älteren Kameras und von DVDs. MPG ist breit kompatibel, die Dateien können aber groß sein." },
+    gif: { name: "GIF", description: "Format für animierte Bilder ohne Ton. GIF eignet sich ideal für kurze Animationen, Memes und einfache Webgrafiken." },
+    png: { name: "PNG", description: "Verlustfreies Bildformat mit Transparenz. PNG ist ideal für Grafiken, Logos, Screenshots und scharfe Illustrationen." },
+    jpg: { name: "JPG", description: "Das beliebteste Fotoformat mit verlustbehafteter Kompression. JPG erzeugt kleine Dateien bei guter Qualität — der Standard für Web und Fotografie." },
+    webp: { name: "WebP", description: "Googles modernes Format mit verlustbehafteter und verlustfreier Kompression sowie Animationen. WebP-Dateien sind bei gleicher Qualität 25–35 % kleiner als JPG." },
+    avif: { name: "AVIF", description: "Neuestes Bildformat auf Basis von AV1. AVIF bietet hervorragende Kompression und wird von modernen Browsern unterstützt." },
+    tiff: { name: "TIFF", description: "Verlustfreies Bildformat für professionellen Druck und Fotografie. TIFF bewahrt die volle Qualität, die Dateien sind jedoch groß." },
+    svg: { name: "SVG", description: "Skalierbare Vektorgrafik auf XML-Basis. SVG eignet sich perfekt für Logos, Icons und Illustrationen, die in jeder Größe scharf bleiben müssen." },
+    heic: { name: "HEIC", description: "Apples Fotoformat (High Efficiency Image Container). HEIC komprimiert besser als JPG, muss für breitere Kompatibilität aber konvertiert werden." },
+    pdf: { name: "PDF", description: "Universelles Dokumentformat von Adobe. PDF bewahrt Layout, Schriften und Grafiken auf jedem Gerät — der Standard in Büro, Bildung und Druck." },
+    docx: { name: "DOCX", description: "Dokumentformat von Microsoft Word (Office Open XML). DOCX ist bearbeitbar und in Beruf und Bildung weit verbreitet." },
+    md: { name: "Markdown", description: "Leichtgewichtiges Textformat mit Formatierungssyntax. Markdown ist in Dokumentationen, GitHub-READMEs und CMS-Systemen beliebt." },
+    html: { name: "HTML", description: "Hypertext-Auszeichnungssprache für Webseiten. HTML definiert Struktur und Inhalt von Websites und wird von jedem Browser dargestellt." },
+    txt: { name: "TXT", description: "Reine Textdatei ohne Formatierung. TXT ist universell kompatibel und ideal für Notizen, Logs und einfache Dokumente." },
+    rtf: { name: "RTF", description: "Rich Text Format mit einfacher Formatierung. RTF ist mit vielen Texteditoren und Textverarbeitungen kompatibel." },
+    odt: { name: "ODT", description: "OpenDocument-Format (LibreOffice, OpenOffice). ODT ist die offene Standardalternative zu DOCX." },
+    json: { name: "JSON", description: "Textbasiertes Datenaustauschformat. JSON ist der Standard in APIs, Konfigurationen und Webanwendungen." },
+    csv: { name: "CSV", description: "Kommagetrennte Werte — der Standard für Tabellenkalkulationen und den Import und Export tabellarischer Daten." },
+    tsv: { name: "TSV", description: "Datei mit tabulatorgetrennten Werten. TSV ist eine CSV-Alternative, die in Datenanalyse und Bioinformatik beliebt ist." },
+    xml: { name: "XML", description: "Erweiterbare Auszeichnungssprache für strukturierte Daten. XML wird in Konfigurationen, RSS, SOAP und vielen Unternehmenssystemen eingesetzt." },
+    yaml: { name: "YAML", description: "Gut lesbares Format zur Datenserialisierung. YAML ist in DevOps-Konfigurationen beliebt (Docker, Kubernetes, CI/CD)." },
+    zip: { name: "ZIP", description: "Das beliebteste komprimierte Archivformat. ZIP wird von Windows, macOS und Linux nativ unterstützt." },
+    rar: { name: "RAR", description: "Archivformat mit stärkerer Kompression als ZIP. RAR benötigt zum Entpacken spezielle Software (z. B. WinRAR, 7-Zip)." },
+    ttf: { name: "TTF", description: "TrueType-Schriftformat — Standard unter Windows und macOS. TTF wird im Druck und auf Websites häufig verwendet." },
+    otf: { name: "OTF", description: "OpenType-Schrift mit erweiterten Typografie-Funktionen. OTF ist TTF-kompatibel und wird in professionellen Projekten bevorzugt." },
+    woff: { name: "WOFF", description: "Web Open Font Format, optimiert für das Laden im Browser. WOFF ist das Standardformat für Webschriften." },
+    woff2: { name: "WOFF2", description: "Neuere WOFF-Version mit besserer Kompression. WOFF2 ist das empfohlene Webfont-Format für moderne Websites." },
+  },
+  es: {
+    mp3: { name: "MP3", description: "El formato de audio con pérdida más popular del mundo. Los archivos MP3 son pequeños y funcionan en prácticamente cualquier dispositivo: ideales para música, pódcasts y grabaciones de voz." },
+    wav: { name: "WAV", description: "Audio sin comprimir y sin pérdida. Los archivos WAV son grandes, pero conservan toda la calidad de sonido: los preferidos en estudios de grabación y edición de vídeo." },
+    flac: { name: "FLAC", description: "Compresión de audio sin pérdida. FLAC ofrece calidad WAV en archivos más pequeños: popular entre audiófilos y coleccionistas de música." },
+    ogg: { name: "OGG", description: "Formato de audio abierto (Vorbis/Opus). OGG ofrece buena calidad en archivos pequeños y se usa mucho en videojuegos y aplicaciones de código abierto." },
+    m4a: { name: "M4A", description: "Formato de audio basado en AAC que usan Apple y YouTube. M4A ofrece mejor calidad que MP3 con un tamaño de archivo similar." },
+    aac: { name: "AAC", description: "Códec de audio con pérdida moderno que supera a MP3 con el mismo bitrate. Se usa en streaming, iTunes y muchas plataformas de vídeo." },
+    opus: { name: "Opus", description: "Códec eficiente diseñado para streaming y VoIP. Opus maneja bien tanto la voz como la música con bitrates muy bajos." },
+    aiff: { name: "AIFF", description: "Formato de audio sin pérdida creado por Apple. AIFF es el equivalente de WAV en Mac para estaciones de trabajo profesionales." },
+    wma: { name: "WMA", description: "Formato de audio de Microsoft (Windows Media Audio). WMA fue popular en el ecosistema Windows, pero hoy suele sustituirse por MP3 y AAC." },
+    mp4: { name: "MP4", description: "Contenedor de vídeo universal con códecs H.264/H.265. MP4 es el estándar para smartphones, YouTube, redes sociales y la mayoría de reproductores." },
+    webm: { name: "WebM", description: "Formato de vídeo abierto optimizado para la web. WebM ofrece buena calidad en archivos pequeños y los navegadores lo admiten de forma nativa." },
+    mov: { name: "MOV", description: "Formato de vídeo de Apple (QuickTime). MOV es el estándar para editar vídeo en Mac y lo usan habitualmente las cámaras de Apple." },
+    avi: { name: "AVI", description: "Formato de vídeo de Microsoft, antiguo pero versátil. AVI admite muchos códecs, aunque los archivos suelen ser más grandes que en MP4." },
+    mkv: { name: "MKV", description: "Contenedor de vídeo flexible (Matroska) compatible con varias pistas de audio, subtítulos y capítulos. Muy usado en películas y anime." },
+    flv: { name: "FLV", description: "Formato Flash Video que se usaba para el streaming en línea. Hoy FLV es poco frecuente, pero aún aparece en grabaciones antiguas." },
+    wmv: { name: "WMV", description: "Formato de vídeo de Microsoft (Windows Media Video). WMV fue popular en Windows, pero hoy suele sustituirse por MP4." },
+    "3gp": { name: "3GP", description: "Formato de vídeo ligero diseñado para móviles antiguos. Los archivos 3GP son pequeños, pero la calidad de imagen es limitada." },
+    m4v: { name: "M4V", description: "Variante de MP4 de Apple (iTunes, Apple TV). M4V puede incluir DRM, pero sin protección es compatible con MP4." },
+    mpg: { name: "MPG", description: "Formato de vídeo MPEG-1/MPEG-2 usado en cámaras antiguas y DVD. MPG es muy compatible, aunque los archivos pueden ser grandes." },
+    gif: { name: "GIF", description: "Formato de imagen animada sin sonido. GIF es ideal para animaciones cortas, memes y gráficos web sencillos." },
+    png: { name: "PNG", description: "Formato de imagen sin pérdida con soporte de transparencia. PNG es ideal para gráficos, logotipos, capturas de pantalla e ilustraciones nítidas." },
+    jpg: { name: "JPG", description: "El formato de foto más popular, con compresión con pérdida. JPG genera archivos pequeños con buena calidad: el estándar de la web y la fotografía." },
+    webp: { name: "WebP", description: "El formato moderno de Google que combina compresión con y sin pérdida y admite animación. Los archivos WebP son un 25–35 % más pequeños que JPG con la misma calidad." },
+    avif: { name: "AVIF", description: "El formato de imagen más reciente, basado en AV1. AVIF ofrece una compresión excelente y es compatible con los navegadores modernos." },
+    tiff: { name: "TIFF", description: "Formato de imagen sin pérdida usado en impresión y fotografía profesional. TIFF conserva toda la calidad, pero los archivos son grandes." },
+    svg: { name: "SVG", description: "Gráfico vectorial escalable basado en XML. SVG es perfecto para logotipos, iconos e ilustraciones que deben verse nítidos a cualquier tamaño." },
+    heic: { name: "HEIC", description: "Formato de foto de Apple (High Efficiency Image Container). HEIC comprime mejor que JPG, pero necesita conversión para una compatibilidad más amplia." },
+    pdf: { name: "PDF", description: "Formato de documento universal de Adobe. PDF conserva el diseño, las fuentes y los gráficos en cualquier dispositivo: el estándar en oficina, educación e impresión." },
+    docx: { name: "DOCX", description: "Formato de documento de Microsoft Word (Office Open XML). DOCX es editable y se usa mucho en el trabajo y la educación." },
+    md: { name: "Markdown", description: "Formato de texto ligero con sintaxis de formato. Markdown es popular en documentación, archivos README de GitHub y sistemas CMS." },
+    html: { name: "HTML", description: "Lenguaje de marcado de hipertexto para páginas web. HTML define la estructura y el contenido de los sitios que muestra cualquier navegador." },
+    txt: { name: "TXT", description: "Archivo de texto plano sin formato. TXT es compatible con todo y resulta ideal para notas, registros y documentos sencillos." },
+    rtf: { name: "RTF", description: "Rich Text Format, con formato básico. RTF es compatible con muchos editores y procesadores de texto." },
+    odt: { name: "ODT", description: "Formato OpenDocument (LibreOffice, OpenOffice). ODT es la alternativa abierta y estándar a DOCX." },
+    json: { name: "JSON", description: "Formato de intercambio de datos basado en texto. JSON es el estándar en API, archivos de configuración y aplicaciones web." },
+    csv: { name: "CSV", description: "Valores separados por comas: el estándar para hojas de cálculo y para importar o exportar datos tabulares." },
+    tsv: { name: "TSV", description: "Archivo de valores separados por tabulaciones. TSV es una alternativa a CSV muy usada en análisis de datos y bioinformática." },
+    xml: { name: "XML", description: "Lenguaje de marcado extensible para datos estructurados. XML se usa en configuraciones, RSS, SOAP y muchos sistemas empresariales." },
+    yaml: { name: "YAML", description: "Formato de serialización de datos fácil de leer. YAML es popular en configuraciones de DevOps (Docker, Kubernetes, CI/CD)." },
+    zip: { name: "ZIP", description: "El formato de archivo comprimido más popular. ZIP es compatible de forma nativa con Windows, macOS y Linux." },
+    rar: { name: "RAR", description: "Formato de archivo con más compresión que ZIP. RAR necesita software específico para extraerlo (por ejemplo, WinRAR o 7-Zip)." },
+    ttf: { name: "TTF", description: "Formato de fuente TrueType: el estándar en Windows y macOS. TTF se usa mucho en impresión y en sitios web." },
+    otf: { name: "OTF", description: "Fuente OpenType con funciones tipográficas ampliadas. OTF es compatible con TTF y se prefiere en proyectos profesionales." },
+    woff: { name: "WOFF", description: "Web Open Font Format, optimizado para cargarse en el navegador. WOFF es el formato estándar de fuentes web." },
+    woff2: { name: "WOFF2", description: "Versión más reciente de WOFF con mejor compresión. WOFF2 es el formato de fuente web recomendado para sitios modernos." },
+  },
+  uk: {
+    mp3: { name: "MP3", description: "Найпопулярніший у світі аудіоформат зі стисненням із втратами. Файли MP3 маленькі й відтворюються практично на будь-якому пристрої — ідеально для музики, подкастів і голосових записів." },
+    wav: { name: "WAV", description: "Нестиснене аудіо без втрат. Файли WAV великі, але зберігають повну якість звуку — їх обирають у студіях звукозапису та у відеомонтажі." },
+    flac: { name: "FLAC", description: "Стиснення аудіо без втрат. FLAC дає якість рівня WAV за меншого розміру файлу — популярний серед аудіофілів і колекціонерів музики." },
+    ogg: { name: "OGG", description: "Відкритий аудіоформат (Vorbis/Opus). OGG забезпечує хорошу якість за малого розміру й широко використовується в іграх та програмах з відкритим кодом." },
+    m4a: { name: "M4A", description: "Аудіоформат на основі AAC, який використовують Apple і YouTube. M4A дає кращу якість, ніж MP3, за схожого розміру файлу." },
+    aac: { name: "AAC", description: "Сучасний аудіокодек зі стисненням із втратами, який перевершує MP3 за однакового бітрейта. Використовується у стримінгу, iTunes і на багатьох відеоплатформах." },
+    opus: { name: "Opus", description: "Ефективний кодек, створений для стримінгу та VoIP. Opus добре передає і мовлення, і музику навіть за дуже низького бітрейта." },
+    aiff: { name: "AIFF", description: "Аудіоформат без втрат, створений Apple. AIFF — це відповідник WAV на Mac для професійних робочих станцій." },
+    wma: { name: "WMA", description: "Аудіоформат Microsoft (Windows Media Audio). WMA був популярним в екосистемі Windows, але сьогодні його здебільшого замінюють MP3 і AAC." },
+    mp4: { name: "MP4", description: "Універсальний відеоконтейнер із кодеками H.264/H.265. MP4 — стандарт для смартфонів, YouTube, соцмереж і більшості плеєрів." },
+    webm: { name: "WebM", description: "Відкритий відеоформат, оптимізований для вебу. WebM забезпечує хорошу якість за малого розміру й підтримується браузерами нативно." },
+    mov: { name: "MOV", description: "Відеоформат Apple (QuickTime). MOV — стандарт відеомонтажу на Mac, його часто використовують камери Apple." },
+    avi: { name: "AVI", description: "Старіший, але універсальний відеоформат Microsoft. AVI підтримує багато кодеків, проте файли зазвичай більші, ніж MP4." },
+    mkv: { name: "MKV", description: "Гнучкий відеоконтейнер (Matroska) з підтримкою кількох звукових доріжок, субтитрів і розділів. Популярний для фільмів та аніме." },
+    flv: { name: "FLV", description: "Формат Flash Video, який колись використовували для онлайн-стримінгу. Сьогодні FLV трапляється рідко, здебільшого у старих записах." },
+    wmv: { name: "WMV", description: "Відеоформат Microsoft (Windows Media Video). WMV був популярним у Windows, але сьогодні його переважно замінює MP4." },
+    "3gp": { name: "3GP", description: "Легкий відеоформат, створений для старих мобільних телефонів. Файли 3GP невеликі, але якість зображення обмежена." },
+    m4v: { name: "M4V", description: "Варіант MP4 від Apple (iTunes, Apple TV). M4V може містити DRM, але без захисту він сумісний із MP4." },
+    mpg: { name: "MPG", description: "Відеоформат MPEG-1/MPEG-2, який використовували в старих камерах і на DVD. MPG сумісний майже з усім, але файли бувають великими." },
+    gif: { name: "GIF", description: "Формат анімованих зображень без звуку. GIF ідеальний для коротких анімацій, мемів і простої вебграфіки." },
+    png: { name: "PNG", description: "Формат зображень без втрат із підтримкою прозорості. PNG ідеально підходить для графіки, логотипів, знімків екрана та чітких ілюстрацій." },
+    jpg: { name: "JPG", description: "Найпопулярніший формат фотографій зі стисненням із втратами. JPG дає невеликі файли з хорошою якістю — стандарт вебу та фотографії." },
+    webp: { name: "WebP", description: "Сучасний формат Google, що поєднує стиснення з втратами й без втрат та підтримує анімацію. Файли WebP на 25–35 % менші за JPG за тієї самої якості." },
+    avif: { name: "AVIF", description: "Найновіший формат зображень на основі AV1. AVIF пропонує чудове стиснення й підтримується сучасними браузерами." },
+    tiff: { name: "TIFF", description: "Формат зображень без втрат, який використовують у професійному друці та фотографії. TIFF зберігає повну якість, але файли великі." },
+    svg: { name: "SVG", description: "Масштабована векторна графіка на основі XML. SVG ідеально підходить для логотипів, іконок та ілюстрацій, які мають залишатися чіткими за будь-якого розміру." },
+    heic: { name: "HEIC", description: "Формат фотографій Apple (High Efficiency Image Container). HEIC стискає краще за JPG, але для ширшої сумісності його потрібно конвертувати." },
+    pdf: { name: "PDF", description: "Універсальний формат документів від Adobe. PDF зберігає макет, шрифти та графіку на будь-якому пристрої — стандарт в офісі, освіті й друці." },
+    docx: { name: "DOCX", description: "Формат документів Microsoft Word (Office Open XML). DOCX можна редагувати, його широко використовують у бізнесі та освіті." },
+    md: { name: "Markdown", description: "Легкий текстовий формат із синтаксисом форматування. Markdown популярний у документації, файлах README на GitHub і системах CMS." },
+    html: { name: "HTML", description: "Мова розмітки гіпертексту для вебсторінок. HTML визначає структуру та вміст сайтів, які відображає кожен браузер." },
+    txt: { name: "TXT", description: "Простий текстовий файл без форматування. TXT сумісний з усім і чудово підходить для нотаток, журналів і простих документів." },
+    rtf: { name: "RTF", description: "Формат тексту з базовим форматуванням (Rich Text Format). RTF сумісний з багатьма текстовими редакторами та процесорами." },
+    odt: { name: "ODT", description: "Формат OpenDocument (LibreOffice, OpenOffice). ODT — відкритий стандарт, альтернатива DOCX." },
+    json: { name: "JSON", description: "Текстовий формат обміну даними. JSON — стандарт для API, конфігурацій і вебзастосунків." },
+    csv: { name: "CSV", description: "Значення, розділені комами — стандарт для електронних таблиць та імпорту й експорту табличних даних." },
+    tsv: { name: "TSV", description: "Файл зі значеннями, розділеними табуляцією. TSV — альтернатива CSV, популярна в аналізі даних і біоінформатиці." },
+    xml: { name: "XML", description: "Розширювана мова розмітки для структурованих даних. XML використовують у конфігураціях, RSS, SOAP і багатьох корпоративних системах." },
+    yaml: { name: "YAML", description: "Зручний для читання формат серіалізації даних. YAML популярний у конфігураціях DevOps (Docker, Kubernetes, CI/CD)." },
+    zip: { name: "ZIP", description: "Найпопулярніший формат стиснутих архівів. ZIP підтримується нативно у Windows, macOS і Linux." },
+    rar: { name: "RAR", description: "Формат архівів із вищим ступенем стиснення, ніж ZIP. Для розпакування RAR потрібне спеціальне програмне забезпечення (наприклад, WinRAR або 7-Zip)." },
+    ttf: { name: "TTF", description: "Формат шрифтів TrueType — стандарт для Windows і macOS. TTF широко використовують у друці та на вебсайтах." },
+    otf: { name: "OTF", description: "Шрифт OpenType з розширеними типографічними можливостями. OTF сумісний із TTF, його обирають для професійних проєктів." },
+    woff: { name: "WOFF", description: "Формат вебшрифтів (Web Open Font Format), оптимізований для завантаження в браузері. WOFF — стандартний формат вебшрифтів." },
+    woff2: { name: "WOFF2", description: "Новіша версія WOFF із кращим стисненням. WOFF2 — рекомендований формат вебшрифтів для сучасних сайтів." },
+  },
 }
 
 type ContentStrings = {
@@ -222,6 +358,198 @@ const contentStrings: Record<string, ContentStrings> = {
       },
     ],
   },
+  de: {
+    extendedDesc: (from, to, fromName, toName) =>
+      `Dieser kostenlose Online-Konverter wandelt ${fromName}-Dateien (${from.toUpperCase()}) in das Format ${toName} (${to.toUpperCase()}) um — ganz ohne Software-Installation. Lade einfach deine Datei hoch: Toolando.tech verarbeitet sie auf dem Server und stellt dir das Ergebnis zum Download bereit. Deine Dateien werden nicht gespeichert — sie werden direkt nach der Konvertierung gelöscht.`,
+    whenToUse: (from, to, category) => {
+      const base = [
+        `Wenn du eine ${to.toUpperCase()}-Datei brauchst, sie aber nur im Format ${from.toUpperCase()} vorliegt.`,
+        `Wenn dein Gerät oder deine App das Format ${from.toUpperCase()} nicht unterstützt.`,
+      ]
+      const catSpecific: Record<string, string[]> = {
+        audio: [`Wenn du die Größe einer Audiodatei verringern oder die Kompatibilität mit deinem Player verbessern willst.`],
+        video: [`Wenn du ein Video in einem anderen Format auf einer Website oder in sozialen Medien veröffentlichen musst.`],
+        image: [`Wenn du ein Bild für Web, E-Mail oder Druck optimieren willst.`],
+        pdf: [`Wenn du PDF-Seiten als Bilder exportieren oder ein Dokument in ein bearbeitbares Format umwandeln musst.`],
+        doc: [`Wenn du mit Textdokumenten arbeitest und ein anderes Format zum Bearbeiten oder Veröffentlichen brauchst.`],
+        data: [`Wenn du Daten in einem anderen Format zwischen Systemen, APIs oder Tabellenkalkulationen überträgst.`],
+        font: [`Wenn du Webfonts für den Einsatz auf einer Website vorbereitest.`],
+        archive: [`Wenn du das Archivformat ändern musst, um es auf einem anderen System zu entpacken.`],
+      }
+      return [...base, ...(catSpecific[category] ?? [])]
+    },
+    steps: (from, to) => [
+      `Klicke auf „Datei auswählen“ oder zieh deine ${from.toUpperCase()}-Datei in den Upload-Bereich.`,
+      `Warte, bis Upload und Konvertierung abgeschlossen sind — das dauert meist nur wenige Sekunden.`,
+      `Lade die fertige ${to.toUpperCase()}-Datei mit einem Klick herunter.`,
+      `Die Quelldatei wird direkt nach Abschluss des Vorgangs vom Server gelöscht.`,
+    ],
+    faq: (from, to) => [
+      {
+        q: `Ist die Konvertierung ${from.toUpperCase()} → ${to.toUpperCase()} kostenlos?`,
+        a: `Ja. Dieser Konverter ist komplett kostenlos und du brauchst kein Konto. Du kannst beliebig viele Dateien konvertieren.`,
+      },
+      {
+        q: `Ist meine ${from.toUpperCase()}-Datei sicher?`,
+        a: `Ja. Deine Datei wird ausschließlich für die Konvertierung verarbeitet und danach sofort gelöscht. Wir speichern oder teilen deine Dateien niemals.`,
+      },
+      {
+        q: `Wie groß darf die Datei maximal sein?`,
+        a: `Du kannst Dateien bis zu 500 MB hochladen. Größere Dateien brauchen unter Umständen etwas länger.`,
+      },
+      {
+        q: `Wird die Qualität der ${to.toUpperCase()}-Datei gut sein?`,
+        a: `Toolando.tech nutzt professionelle Bibliotheken (FFmpeg, Sharp, MuPDF) für die Konvertierung. Die Qualität hängt vom Ausgangs- und Zielformat ab — von verlustbehaftet zu verlustfrei lassen sich verlorene Daten nicht zurückholen, das Ergebnis ist aber technisch einwandfrei.`,
+      },
+    ],
+  },
+  es: {
+    extendedDesc: (from, to, fromName, toName) =>
+      `Este conversor online gratuito transforma archivos ${fromName} (${from.toUpperCase()}) al formato ${toName} (${to.toUpperCase()}) sin instalar ningún programa. Sube tu archivo: Toolando.tech lo procesa en el servidor y te devuelve el resultado para descargar. Los archivos nunca se almacenan, se eliminan inmediatamente después de la conversión.`,
+    whenToUse: (from, to, category) => {
+      const base = [
+        `Cuando necesitas un archivo ${to.toUpperCase()} pero solo lo tienes en formato ${from.toUpperCase()}.`,
+        `Cuando el dispositivo o la aplicación que usas no admite archivos ${from.toUpperCase()}.`,
+      ]
+      const catSpecific: Record<string, string[]> = {
+        audio: [`Cuando quieres reducir el tamaño de un archivo de audio o mejorar la compatibilidad con tu reproductor.`],
+        video: [`Cuando necesitas publicar un vídeo en una web o en redes sociales en otro formato.`],
+        image: [`Cuando quieres optimizar una imagen para la web, el correo o la impresión.`],
+        pdf: [`Cuando necesitas extraer páginas de un PDF como imágenes o convertir un documento a un formato editable.`],
+        doc: [`Cuando trabajas con documentos de texto y necesitas otro formato para editarlos o publicarlos.`],
+        data: [`Cuando mueves datos entre sistemas, API u hojas de cálculo en otro formato.`],
+        font: [`Cuando preparas fuentes web para publicarlas en un sitio.`],
+        archive: [`Cuando necesitas cambiar el formato del archivo comprimido para extraerlo en otro sistema.`],
+      }
+      return [...base, ...(catSpecific[category] ?? [])]
+    },
+    steps: (from, to) => [
+      `Haz clic en «Elegir archivo» o arrastra tu archivo ${from.toUpperCase()} a la zona de subida.`,
+      `Espera a que terminen la subida y la conversión: normalmente tarda unos segundos.`,
+      `Descarga el archivo ${to.toUpperCase()} ya listo con un solo clic.`,
+      `El archivo de origen se elimina del servidor en cuanto termina la operación.`,
+    ],
+    faq: (from, to) => [
+      {
+        q: `¿La conversión ${from.toUpperCase()} → ${to.toUpperCase()} es gratis?`,
+        a: `Sí. Este conversor es totalmente gratuito y no necesitas crear una cuenta. Puedes convertir archivos sin límite.`,
+      },
+      {
+        q: `¿Mi archivo ${from.toUpperCase()} está seguro?`,
+        a: `Sí. Tu archivo se procesa únicamente para la conversión y se elimina justo después. Nunca almacenamos ni compartimos tus archivos.`,
+      },
+      {
+        q: `¿Cuál es el tamaño máximo de archivo?`,
+        a: `Puedes subir archivos de hasta 500 MB. Los archivos más grandes pueden tardar más en procesarse.`,
+      },
+      {
+        q: `¿La calidad del ${to.toUpperCase()} será buena?`,
+        a: `Toolando.tech usa bibliotecas profesionales (FFmpeg, Sharp, MuPDF) para la conversión. La calidad depende de los formatos de origen y destino: pasar de un formato con pérdida a uno sin pérdida no recupera los datos perdidos, pero el resultado será técnicamente correcto.`,
+      },
+    ],
+  },
+  uk: {
+    extendedDesc: (from, to, fromName, toName) =>
+      `Цей безкоштовний онлайн-конвертер перетворює файли ${fromName} (${from.toUpperCase()}) на формат ${toName} (${to.toUpperCase()}) без встановлення програм. Просто завантажте файл — Toolando.tech обробить його на сервері та поверне готовий результат. Файли не зберігаються: одразу після конвертації їх видаляють.`,
+    whenToUse: (from, to, category) => {
+      const base = [
+        `Коли вам потрібен файл ${to.toUpperCase()}, а він у вас лише у форматі ${from.toUpperCase()}.`,
+        `Коли пристрій або програма, якою ви користуєтеся, не підтримує формат ${from.toUpperCase()}.`,
+      ]
+      const catSpecific: Record<string, string[]> = {
+        audio: [`Коли потрібно зменшити розмір аудіофайлу або покращити сумісність із плеєром.`],
+        video: [`Коли потрібно опублікувати відео на сайті чи в соцмережах в іншому форматі.`],
+        image: [`Коли потрібно оптимізувати зображення для сайту, електронної пошти чи друку.`],
+        pdf: [`Коли потрібно зберегти сторінки PDF як зображення або перетворити документ на редагований формат.`],
+        doc: [`Коли ви працюєте з текстовими документами й потребуєте іншого формату для редагування чи публікації.`],
+        data: [`Коли ви переносите дані між системами, API чи електронними таблицями в іншому форматі.`],
+        font: [`Коли ви готуєте вебшрифти до розміщення на сайті.`],
+        archive: [`Коли потрібно змінити формат архіву, щоб розпакувати його в іншій системі.`],
+      }
+      return [...base, ...(catSpecific[category] ?? [])]
+    },
+    steps: (from, to) => [
+      `Натисніть «Вибрати файл» або перетягніть файл ${from.toUpperCase()} в область завантаження.`,
+      `Зачекайте, поки завершиться передавання та конвертація — зазвичай це триває кілька секунд.`,
+      `Завантажте готовий файл ${to.toUpperCase()} одним натисканням.`,
+      `Вихідний файл видаляється з сервера одразу після завершення операції.`,
+    ],
+    faq: (from, to) => [
+      {
+        q: `Чи конвертація ${from.toUpperCase()} → ${to.toUpperCase()} безкоштовна?`,
+        a: `Так. Цей конвертер повністю безкоштовний і не потребує реєстрації. Ви можете конвертувати файли без обмежень.`,
+      },
+      {
+        q: `Чи мій файл ${from.toUpperCase()} у безпеці?`,
+        a: `Так. Файл обробляється виключно для конвертації й видаляється одразу після її завершення. Ми не зберігаємо й нікому не передаємо ваші файли.`,
+      },
+      {
+        q: `Який максимальний розмір файлу?`,
+        a: `Ви можете завантажувати файли розміром до 500 МБ. Більші файли можуть оброблятися довше.`,
+      },
+      {
+        q: `Чи буде якість файлу ${to.toUpperCase()} хорошою?`,
+        a: `Toolando.tech використовує професійні бібліотеки (FFmpeg, Sharp, MuPDF). Якість залежить від вихідного та цільового форматів — конвертація з формату зі втратами у формат без втрат не поверне втрачених даних, але результат буде технічно коректним.`,
+      },
+    ],
+  },
+  ...extraContentStrings,
+}
+
+type ExtraFaqBuilder = (from: string, to: string) => { q: string; a: string }[]
+
+const extraFaqStrings: Record<string, ExtraFaqBuilder> = {
+  pl: (from, to) => [
+    {
+      q: `Gdzie dowiem się więcej o formacie ${from}?`,
+      a: `Przeczytaj pełny opis formatu ${from} w encyklopedii formatów Toolando.tech — znajdziesz tam zastosowania, zalety, wady i porównania.`,
+    },
+    {
+      q: `Czy mogę konwertować ${to} z powrotem na ${from}?`,
+      a: `Tak — wybierz konwerter ${to} → ${from} na liście narzędzi. Pamiętaj, że konwersja ze stratnego formatu na inny nie przywraca utraconej jakości.`,
+    },
+  ],
+  en: (from, to) => [
+    {
+      q: `Where can I learn more about ${from}?`,
+      a: `Read the full ${from} format guide in the Toolando.tech formats encyclopedia — use cases, pros, cons, and comparisons.`,
+    },
+    {
+      q: `Can I convert ${to} back to ${from}?`,
+      a: `Yes — pick the ${to} → ${from} converter in the tools list. Converting from a lossy format won't restore lost quality.`,
+    },
+  ],
+  de: (from, to) => [
+    {
+      q: `Wo erfahre ich mehr über das Format ${from}?`,
+      a: `Lies den vollständigen ${from}-Formatguide in der Formate-Enzyklopädie von Toolando.tech — mit Einsatzzwecken, Vorteilen, Nachteilen und Vergleichen.`,
+    },
+    {
+      q: `Kann ich ${to} wieder zurück in ${from} konvertieren?`,
+      a: `Ja — wähle in der Werkzeugliste den Konverter ${to} → ${from}. Beachte: Die Konvertierung aus einem verlustbehafteten Format stellt verlorene Qualität nicht wieder her.`,
+    },
+  ],
+  es: (from, to) => [
+    {
+      q: `¿Dónde puedo aprender más sobre el formato ${from}?`,
+      a: `Lee la guía completa del formato ${from} en la enciclopedia de formatos de Toolando.tech: usos, ventajas, desventajas y comparativas.`,
+    },
+    {
+      q: `¿Puedo convertir ${to} de nuevo a ${from}?`,
+      a: `Sí: elige el conversor ${to} → ${from} en la lista de herramientas. Ten en cuenta que convertir desde un formato con pérdida no restaura la calidad perdida.`,
+    },
+  ],
+  uk: (from, to) => [
+    {
+      q: `Де дізнатися більше про формат ${from}?`,
+      a: `Прочитайте повний опис формату ${from} в енциклопедії форматів Toolando.tech — там зібрані сфери застосування, переваги, недоліки та порівняння.`,
+    },
+    {
+      q: `Чи можна конвертувати ${to} назад у ${from}?`,
+      a: `Так — оберіть конвертер ${to} → ${from} у списку інструментів. Пам’ятайте, що конвертація з формату зі втратами не відновлює втраченої якості.`,
+    },
+  ],
+  ...extraExtraFaq,
 }
 
 function getFormat(locale: string, ext: string): FormatInfo {
@@ -252,28 +580,8 @@ export function getToolPageContent(
     ? { name: toProfile.name, description: toProfile.intro }
     : getFormat(locale, tool.to)
 
-  const extraFaq =
-    locale === "pl"
-      ? [
-          {
-            q: `Gdzie dowiem się więcej o formacie ${tool.from.toUpperCase()}?`,
-            a: `Przeczytaj pełny opis formatu ${tool.from.toUpperCase()} w encyklopedii formatów Toolando.tech — znajdziesz tam zastosowania, zalety, wady i porównania.`,
-          },
-          {
-            q: `Czy mogę konwertować ${tool.to.toUpperCase()} z powrotem na ${tool.from.toUpperCase()}?`,
-            a: `Tak — wybierz konwerter ${tool.to.toUpperCase()} → ${tool.from.toUpperCase()} na liście narzędzi. Pamiętaj, że konwersja ze stratnego formatu na inny nie przywraca utraconej jakości.`,
-          },
-        ]
-      : [
-          {
-            q: `Where can I learn more about ${tool.from.toUpperCase()}?`,
-            a: `Read the full ${tool.from.toUpperCase()} format guide in the Toolando.tech formats encyclopedia — use cases, pros, cons, and comparisons.`,
-          },
-          {
-            q: `Can I convert ${tool.to.toUpperCase()} back to ${tool.from.toUpperCase()}?`,
-            a: `Yes — pick the ${tool.to.toUpperCase()} → ${tool.from.toUpperCase()} converter in the tools list. Converting from a lossy format won't restore lost quality.`,
-          },
-        ]
+  const buildExtraFaq = extraFaqStrings[locale] ?? extraFaqStrings.en
+  const extraFaq = buildExtraFaq(tool.from.toUpperCase(), tool.to.toUpperCase())
 
   return {
     extendedDescription: strings.extendedDesc(

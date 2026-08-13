@@ -1,635 +1,43 @@
 import type { GuideArticle, GuidesHubMeta, GuideSection } from "./types"
 import { GUIDE_SLUGS, type GuideSlug } from "./slugs"
 import { contentLocales, resolveContentLocale } from "../content-locale"
-import { localizedGuideArticles } from "./localized-articles"
 import { getGuidesHubMeta } from "./hubs"
-import { guidesBatch2En, guidesBatch2Pl } from "./batch-2"
-import { guidesBatch3En, guidesBatch3Pl } from "./batch-3"
+import {
+  guidesBatch4De,
+  guidesBatch4Es,
+  guidesBatch4Uk,
+} from "./batch-4"
+import { guidesBatch23De, guidesBatch23Es, guidesBatch23Uk } from "./batch-2-3-locales"
+import { guidesPl } from "./guides-pl"
+import { guidesEn } from "./guides-en"
+import {
+  guidesAr,
+  guidesCs,
+  guidesDa,
+  guidesEl,
+  guidesFi,
+  guidesFr,
+  guidesHi,
+  guidesHu,
+  guidesId,
+  guidesIt,
+  guidesJa,
+  guidesKo,
+  guidesNl,
+  guidesNo,
+  guidesPt,
+  guidesRo,
+  guidesRu,
+  guidesSv,
+  guidesTr,
+  guidesZh,
+} from "./locale-guides"
+
 
 export { getGuidesHubMeta }
 export { GUIDE_SLUGS, type GuideSlug } from "./slugs"
 export type { GuideArticle, GuidesHubMeta, GuideSection } from "./types"
 
-const AUTHOR = "Szymon Badyl"
-
-const guidesPl: Record<GuideSlug, GuideArticle> = {
-  "mp3-vs-wav": {
-    slug: "mp3-vs-wav",
-    title: "MP3 vs WAV — kiedy konwertować audio?",
-    description:
-      "Porównanie MP3 i WAV: kompresja stratna vs bezstratna, rozmiar pliku, edycja w DAW i kiedy wybrać który format.",
-    published: "2026-01-15",
-    updated: "2026-07-23",
-    author: AUTHOR,
-    relatedFormats: ["mp3", "wav", "flac"],
-    relatedTools: ["mp3-to-wav", "wav-to-mp3"],
-    sections: [
-      {
-        paragraphs: [
-          "MP3 to format ze stratną kompresją — pliki są małe, ale część danych dźwiękowych jest tracona na zawsze. WAV zachowuje pełną jakość (bezstratny lub nieskompresowany), lecz pliki mogą być 10-krotnie większe niż MP3.",
-          "W praktyce: słuchasz muzyki na telefonie → MP3 w zupełności wystarczy. Edytujesz podcast w Audacity lub miksujesz w FL Studio → lepiej pracować na WAV lub FLAC.",
-        ],
-      },
-      {
-        title: "Kiedy konwertować MP3 → WAV",
-        paragraphs: [
-          "Gdy platforma lub program wymaga formatu bezstratnego do dalszej edycji.",
-          "Gdy planujesz wielokrotne cięcie, efekty i mastering — każda operacja na MP3 pogarsza jakość.",
-          "Pamiętaj: konwersja MP3 → WAV nie przywraca utraconej jakości, ale zatrzymuje dalszą degradację podczas edycji.",
-        ],
-      },
-      {
-        title: "Kiedy konwertować WAV → MP3",
-        paragraphs: [
-          "Wysyłka nagrania e-mailem lub komunikatorem — mniejszy plik = szybszy transfer.",
-          "Publikacja podcastu lub muzyki do słuchania, nie do edycji.",
-          "Oszczędność miejsca na dysku w dużej bibliotece audio.",
-        ],
-      },
-    ],
-  },
-  "pdf-to-jpg": {
-    slug: "pdf-to-jpg",
-    title: "Jak przekonwertować PDF na JPG do druku i internetu",
-    description:
-      "Kiedy warto wyeksportować strony PDF jako JPG, jaka rozdzielczość i kiedy lepiej wybrać PNG.",
-    published: "2026-01-20",
-    updated: "2026-07-23",
-    author: AUTHOR,
-    relatedFormats: ["pdf", "jpg", "png"],
-    relatedTools: ["pdf-to-jpg", "pdf-to-png"],
-    sections: [
-      {
-        paragraphs: [
-          "PDF to format dokumentów ze stałym układem strony. Czasem potrzebujesz poszczególnych stron jako obrazów — do wstawienia na stronę www, w prezentację PowerPoint lub do wydruku pojedynczej strony.",
-          "Konwerter PDF → JPG w Toolando.tech renderuje każdą stronę PDF jako osobny obraz JPG. Pliki nie są przechowywane — po konwersji są natychmiast usuwane.",
-        ],
-      },
-      {
-        title: "JPG czy PNG z PDF?",
-        paragraphs: [
-          "JPG — mniejsze pliki, idealne do zdjęć i dokumentów bez przezroczystości.",
-          "PNG — bezstratny, z przezroczystością; lepszy do grafik z tekstem i ostrymi krawędziami.",
-        ],
-      },
-    ],
-  },
-  "webp-avif-images": {
-    slug: "webp-avif-images",
-    title: "WebP i AVIF — nowoczesne formaty obrazów dla stron www",
-    description:
-      "Porównanie WebP i AVIF z JPG/PNG: kompresja, wsparcie przeglądarek i optymalizacja PageSpeed.",
-    published: "2026-02-01",
-    updated: "2026-07-23",
-    author: AUTHOR,
-    relatedFormats: ["webp", "avif", "jpg", "png"],
-    relatedTools: ["jpg-to-webp", "png-to-webp", "png-to-avif"],
-    sections: [
-      {
-        paragraphs: [
-          "JPG i PNG dominują w internecie od lat, ale WebP (Google) daje pliki o 25–35% mniejsze niż JPG przy tej samej jakości wizualnej. AVIF idzie jeszcze dalej — pliki mogą być o połowę mniejsze niż WebP.",
-          "Wszystkie nowoczesne przeglądarki (Chrome, Firefox, Edge, Safari 14+) obsługują WebP. AVIF ma nieco słabsze wsparcie w starszych wersjach Safari.",
-        ],
-      },
-      {
-        title: "Strategia wdrożenia",
-        paragraphs: [
-          "Konwertuj JPG → WebP dla zdjęć produktów i banerów — przyspieszy to ładowanie strony.",
-          "Zachowaj JPG jako fallback dla starszych przeglądarek (tag <picture> w HTML).",
-          "Do logo z przezroczystością: PNG → WebP zamiast JPG.",
-        ],
-      },
-    ],
-  },
-  "extract-audio-from-video": {
-    slug: "extract-audio-from-video",
-    title: "Wyciąganie dźwięku z wideo — legalna alternatywa",
-    description:
-      "Jak legalnie wyciągnąć ścieżkę audio z własnego nagrania wideo (MP4, MOV, MKV).",
-    published: "2026-02-10",
-    updated: "2026-07-23",
-    author: AUTHOR,
-    relatedFormats: ["mp4", "mp3", "wav", "flac"],
-    relatedTools: ["mp4-to-mp3", "mp4-to-wav"],
-    sections: [
-      {
-        paragraphs: [
-          "Czasem masz plik wideo (nagranie z kamery, prezentacja) i potrzebujesz tylko ścieżki audio. Toolando.tech pozwala wyciągnąć dźwięk z MP4, MOV, AVI, MKV i innych formatów, zapisując go jako MP3, WAV, FLAC lub AAC.",
-          "To legalna operacja na Twoim własnym pliku — w przeciwieństwie do pobierania muzyki z YouTube czy TikTok, czego Toolando.tech świadomie nie oferuje.",
-        ],
-      },
-    ],
-  },
-  "json-csv-xml": {
-    slug: "json-csv-xml",
-    title: "JSON, CSV i XML — konwersja danych między formatami",
-    description:
-      "Kiedy używać JSON, CSV, TSV i XML oraz jak konwertować dane między nimi bez utraty struktury.",
-    published: "2026-02-15",
-    updated: "2026-07-23",
-    author: AUTHOR,
-    relatedFormats: ["json", "csv", "xml", "tsv"],
-    relatedTools: ["json-to-csv", "csv-to-json", "json-to-xml"],
-    sections: [
-      {
-        paragraphs: [
-          "JSON jest standardem w API REST i konfiguracjach aplikacji. CSV i TSV służą do importu do Excela i arkuszy kalkulacyjnych. XML jest używany w starszych systemach enterprise i RSS.",
-          "JSON → CSV pozwala otworzyć odpowiedź API w Excelu. CSV → JSON przygotowuje dane do wysłania do REST API. Toolando.tech zachowuje strukturę danych podczas konwersji.",
-        ],
-      },
-    ],
-  },
-  "online-file-security": {
-    slug: "online-file-security",
-    title: "Bezpieczeństwo plików w narzędziach online",
-    description:
-      "Jak Toolando.tech przetwarza pliki, kiedy działają lokalnie w przeglądarce i co z prywatnością.",
-    published: "2026-03-01",
-    updated: "2026-07-23",
-    author: AUTHOR,
-    sections: [
-      {
-        paragraphs: [
-          "Przesyłanie plików do narzędzi online budzi naturalne obawy. W Toolando.tech pliki służą wyłącznie do wykonania operacji, o którą prosisz — konwersji, kompresji lub podglądu.",
-          "Po zakończeniu pracy pliki są usuwane z serwera. Część narzędzi (uniwersalny otwieracz) działa w całości w przeglądarce — wtedy plik w ogóle nie opuszcza Twojego komputera. Połączenie jest szyfrowane (HTTPS).",
-        ],
-      },
-      {
-        title: "Co NIE robimy z Twoimi plikami",
-        paragraphs: [
-          "Nie sprzedajemy plików ani metadanych osobom trzecim.",
-          "Nie używamy uploadów do trenowania modeli AI.",
-          "Nie trzymamy kopii „na wszelki wypadek” — po zakończeniu zadania plik znika z dysku serwera.",
-        ],
-      },
-      {
-        title: "Kiedy plik zostaje na serwerze dłużej",
-        paragraphs: [
-          "Tylko na czas trwania konwersji (zwykle sekundy do minuty). Przy dużych wideo do 500 MB operacja może trwać dłużej — plik nadal jest usuwany po zakończeniu.",
-          "Opcja premium z kontem może zapisywać historię operacji (metadane, nie pliki) — szczegóły w polityce prywatności.",
-        ],
-      },
-    ],
-  },
-  "lossy-vs-lossless": {
-    slug: "lossy-vs-lossless",
-    title: "Kompresja stratna vs bezstratna — prosty przewodnik",
-    description:
-      "Czym różni się kompresja stratna od bezstratnej i jak unikać utraty jakości przy konwersji.",
-    published: "2026-03-10",
-    updated: "2026-07-23",
-    author: AUTHOR,
-    relatedFormats: ["mp3", "flac", "jpg", "png", "wav"],
-    sections: [
-      {
-        paragraphs: [
-          "Formaty stratne (MP3, JPG, AAC, H.264) usuwają część danych, aby zmniejszyć rozmiar pliku. Formaty bezstratne (FLAC, PNG, WAV, ZIP) zachowują wszystkie dane, ale pliki są większe.",
-          "Zasada: konwertuj ze stratnego na bezstratny tylko gdy musisz — utraconej jakości nie odzyskasz. Konwertuj ze stratnego na stratny tylko raz — każda kolejna konwersja pogarsza wynik.",
-        ],
-      },
-      {
-        title: "Przykłady w praktyce",
-        paragraphs: [
-          "Muzyka: FLAC → MP3 przed wysłaniem znajomemu OK; MP3 → FLAC przed masteringiem NIE.",
-          "Zdjęcia: RAW/JPG z aparatu → eksport JPG do webu OK; wielokrotne JPG → JPG w messangerze psuje jakość.",
-          "Wideo: MP4 (H.264) jest stratny, ale standardem — nie przekodowuj bez powodu.",
-        ],
-      },
-      {
-        title: "Gdzie sprawdzić typ formatu",
-        paragraphs: [
-          "W encyklopedii formatów Toolando każdy format ma oznaczenie stratny/bezstratny/kontener.",
-          "Porównania MP3 vs FLAC i JPG vs WebP wyjaśniają werdykt w jednej stronie.",
-        ],
-      },
-    ],
-  },
-  "heic-iphone-jpg": {
-    slug: "heic-iphone-jpg",
-    title: "HEIC z iPhone — jak otworzyć i przekonwertować na JPG",
-    description:
-      "Dlaczego iPhone zapisuje HEIC, problemy z kompatybilnością i jak konwertować na JPG lub PNG.",
-    published: "2026-03-15",
-    updated: "2026-07-23",
-    author: AUTHOR,
-    relatedFormats: ["heic", "jpg", "png"],
-    relatedTools: ["heic-to-jpg", "heic-to-png"],
-    sections: [
-      {
-        paragraphs: [
-          "Apple domyślnie zapisuje zdjęcia w HEIC (HEIF) — mniejszy niż JPG przy tej samej jakości. Problem: Windows bez rozszerzenia, starsze programy i wiele serwisów nie obsługuje HEIC.",
-          "Rozwiązanie: konwertuj HEIC → JPG lub HEIC → PNG w Toolando.tech przed wysłaniem zdjęć mailem, wgraniem na stronę lub drukiem. W Ustawieniach iPhone możesz też włączyć „Najbardziej kompatybilne” (JPG).",
-        ],
-      },
-    ],
-  },
-  "pdf-vs-docx": {
-    slug: "pdf-vs-docx",
-    title: "PDF vs DOCX — kiedy który format?",
-    description:
-      "Różnice między PDF a DOCX: edycja, druk, archiwizacja i kiedy konwertować w którą stronę.",
-    published: "2026-04-01",
-    updated: "2026-07-23",
-    author: AUTHOR,
-    relatedFormats: ["pdf", "docx"],
-    relatedTools: ["docx-to-pdf", "pdf-to-docx"],
-    sections: [
-      {
-        paragraphs: [
-          "DOCX (Word) służy do edycji tekstu — zmieniasz treść, style, nagłówki. PDF zamraża układ strony: wygląda identycznie na każdym urządzeniu, idealny do faktur, umów i CV.",
-          "Konwertuj DOCX → PDF przed wysłaniem dokumentu „do odczytu”. Konwertuj PDF → DOCX tylko gdy musisz edytować tekst — layout może się rozjechać. Do archiwizacji i druku zawsze wybieraj PDF.",
-        ],
-      },
-    ],
-  },
-  "video-social-media": {
-    slug: "video-social-media",
-    title: "Wideo na social media — MP4, rozdzielczość i bitrate",
-    description:
-      "Jak przygotować wideo pod Instagram, TikTok, YouTube: format MP4, H.264, rozdzielczość 1080p.",
-    published: "2026-04-10",
-    updated: "2026-08-06",
-    author: AUTHOR,
-    relatedFormats: ["mp4", "webm", "mov"],
-    relatedTools: ["mov-to-mp4", "avi-to-mp4", "mp4-to-webm"],
-    sections: [
-      {
-        paragraphs: [
-          "Instagram, TikTok, YouTube i Facebook preferują MP4 z kodekiem H.264 i ścieżką AAC. Przed publikacją warto przekonwertować MOV, AVI lub MKV na MP4 — unikniesz błędów uploadu.",
-          "Rozdzielczość 1080p (1920×1080) wystarczy większości platform. Wyższy bitrate = lepsza jakość, ale większy plik. Szczegóły o MP4, WebM i MOV znajdziesz w encyklopedii formatów Toolando.tech.",
-        ],
-      },
-    ],
-  },
-  "choose-audio-bitrate": {
-    slug: "choose-audio-bitrate",
-    title: "Jaki bitrate MP3 lub AAC wybrać? Praktyczny przewodnik",
-    description:
-      "128 vs 192 vs 320 kbps — jak dobrać bitrate pod podcast, muzykę i wideo bez marnowania miejsca na dysku.",
-    published: "2026-05-01",
-    updated: "2026-08-06",
-    author: AUTHOR,
-    relatedFormats: ["mp3", "aac", "m4a", "opus"],
-    relatedTools: ["wav-to-mp3", "flac-to-mp3", "mp4-to-mp3"],
-    sections: [
-      {
-        paragraphs: [
-          "Bitrate to ilość danych na sekundę dźwięku. Wyższy bitrate zwykle oznacza lepszą jakość, ale też większy plik. Przy MP3 różnica między 128 a 320 kbps jest słyszalna głównie na dobrej aparaturze i w muzyce z dużą dynamiką.",
-          "Dla mowy (podcast, wywiad, notatka głosowa) 96–128 kbps mono często wystarczy. Dla muzyki do słuchania w słuchawkach sensowny kompromis to 192–256 kbps stereo. 320 kbps to praktyczny „sufit” MP3 — dalsze podnoszenie bitrate nie daje dużej korzyści, bo format i tak jest stratny.",
-        ],
-      },
-      {
-        title: "MP3, AAC i Opus — krótkie porównanie",
-        paragraphs: [
-          "AAC (M4A) przy tym samym bitrate brzmi zwykle lepiej niż MP3 — stąd popularność w YouTube i Apple Music.",
-          "Opus świetnie sprawdza się w VoIP i streamingu przy niskich bitrate (64–128 kbps).",
-          "Jeśli archiwizujesz nagrania studyjne, trzymaj WAV lub FLAC — bitrate stratnego formatu nie naprawi utraconych danych.",
-        ],
-      },
-      {
-        title: "Typowe błędy",
-        paragraphs: [
-          "Konwersja niskiej jakości MP3 → wyższy bitrate nie poprawia brzmienia — powstaje tylko większy plik.",
-          "Wielokrotne przekodowanie tego samego utworu (np. MP3 → AAC → MP3) za każdym razem pogarsza jakość.",
-          "Przed publikacją wideo wyciągnij audio z własnego pliku MP4 zamiast pobierać cudzą muzykę z internetu — to kwestia praw autorskich.",
-        ],
-      },
-    ],
-  },
-  "prepare-images-for-web": {
-    slug: "prepare-images-for-web",
-    title: "Jak przygotować obrazy pod stronę www (JPG, WebP, AVIF)",
-    description:
-      "Rozdzielczość, kompresja i format — jak przyspieszyć witrynę bez widocznej utraty jakości.",
-    published: "2026-05-15",
-    updated: "2026-08-06",
-    author: AUTHOR,
-    relatedFormats: ["jpg", "webp", "avif", "png"],
-    relatedTools: ["jpg-to-webp", "png-to-webp", "png-to-avif"],
-    sections: [
-      {
-        paragraphs: [
-          "Duże zdjęcia z aparatu (4000×3000 px) spowalniają każdą stronę. Zanim wgrasz je na blog lub sklep, zmniejsz rozdzielczość do realnego rozmiaru wyświetlania — np. 1600 px szerokości dla hero banera.",
-          "JPG nadal jest bezpiecznym wyborem uniwersalnym. WebP i AVIF dają mniejsze pliki przy tej samej jakości wizualnej — warto je stosować w nowoczesnych projektach z tagiem <picture> jako fallback dla starszych przeglądarek.",
-        ],
-      },
-      {
-        title: "Kiedy PNG zamiast JPG",
-        paragraphs: [
-          "Logo, ikony, zrzuty ekranu z tekstem i UI — PNG lub WebP bezstratny zachowają ostre krawędzie.",
-          "Zdjęcia produktów na białym tle często można spokojnie kompresować JPG quality 80–85 bez widocznych artefaktów.",
-          "Unikaj zapisywania tego samego banera wielokrotnie jako JPG — każde kolejne zapisanie pogarsza jakość.",
-        ],
-      },
-      {
-        title: "Checklist przed publikacją",
-        paragraphs: [
-          "1) Przeskaluj do docelowej szerokości w px. 2) Wybierz format (JPG/WebP/AVIF). 3) Sprawdź wagę pliku (<200 KB dla miniatur, <500 KB dla dużych zdjęć na blogu). 4) Otwórz stronę w PageSpeed Insights i porównaj LCP przed/po.",
-        ],
-      },
-    ],
-  },
-  "docx-pdf-workflow": {
-    slug: "docx-pdf-workflow",
-    title: "DOCX → PDF w pracy biurowej — kiedy i jak konwertować",
-    description:
-      "Wysyłka CV, faktur i umów: dlaczego PDF wygrywa z DOCX i jak uniknąć rozjechanych czcionek.",
-    published: "2026-06-01",
-    updated: "2026-08-06",
-    author: AUTHOR,
-    relatedFormats: ["docx", "pdf", "odt"],
-    relatedTools: ["docx-to-pdf", "pdf-to-docx", "odt-to-docx"],
-    sections: [
-      {
-        paragraphs: [
-          "DOCX to format do edycji — świetny, gdy odbiorca ma Worda i ma coś poprawić. PDF to format do odczytu — układ, czcionki i marginesy wyglądają tak samo na Windows, Macu i telefonie.",
-          "Przed wysłaniem CV, oferty lub umowy do klienta konwertuj DOCX → PDF. Odbiorca nie zmieni przypadkiem treści i nie zobaczysz „zastępczych czcionek” zamiast Twojego brandingowego kroju.",
-        ],
-      },
-      {
-        title: "Kiedy NIE konwertować PDF → DOCX",
-        paragraphs: [
-          "Skany faktur i umów podpisanych odręcznie — PDF zostaje archiwem; OCR to osobny proces.",
-          "Dokumenty wielostronicowe ze skomplikowanym układem (katalogi, broszury) — konwersja do DOCX często psuje paginację.",
-          "Jeśli potrzebujesz tylko fragmentu tekstu, skopiuj go z PDF zamiast konwertować cały plik.",
-        ],
-      },
-      {
-        title: "Bezpieczeństwo i prywatność",
-        paragraphs: [
-          "W Toolando.tech pliki DOCX i PDF służą wyłącznie do konwersji i są usuwane po zakończeniu zadania.",
-          "Dla dokumentów z danymi wrażliwymi (PESEL, numery kont) używaj HTTPS i nie przechowuj kopii na publicznych dyskach chmurowych bez szyfrowania.",
-        ],
-      },
-    ],
-  },
-  ...guidesBatch2Pl,
-  ...guidesBatch3Pl,
-}
-
-// English, German, Spanish, Ukrainian — translated titles/descriptions/sections
-const guidesEn: Record<GuideSlug, GuideArticle> = {
-  "mp3-vs-wav": {
-    ...guidesPl["mp3-vs-wav"],
-    title: "MP3 vs WAV — when to convert audio?",
-    description:
-      "MP3 vs WAV compared: lossy vs lossless compression, file size, DAW editing, and which format to pick.",
-    sections: [
-      {
-        paragraphs: [
-          "MP3 uses lossy compression — files are small but some audio data is lost forever. WAV preserves full quality (lossless or uncompressed) but files can be 10× larger than MP3.",
-          "In practice: listening on your phone → MP3 is fine. Editing a podcast in Audacity or mixing in FL Studio → work with WAV or FLAC.",
-        ],
-      },
-      {
-        title: "When to convert MP3 → WAV",
-        paragraphs: [
-          "When a platform or app requires a lossless format for further editing.",
-          "When you plan multiple cuts, effects, and mastering — every operation on MP3 degrades quality.",
-          "Note: MP3 → WAV won't recover lost quality but stops further degradation during editing.",
-        ],
-      },
-      {
-        title: "When to convert WAV → MP3",
-        paragraphs: [
-          "Sending a recording by email or chat — smaller file = faster transfer.",
-          "Publishing a podcast or music for listening, not editing.",
-          "Saving disk space in a large audio library.",
-        ],
-      },
-    ],
-  },
-  "pdf-to-jpg": {
-    ...guidesPl["pdf-to-jpg"],
-    title: "How to convert PDF to JPG for print and the web",
-    description:
-      "When to export PDF pages as JPG, what resolution to use, and when PNG is better.",
-    sections: [
-      {
-        paragraphs: [
-          "PDF preserves page layout. Sometimes you need individual pages as images — for a website, PowerPoint, or printing a single page.",
-          "The PDF → JPG converter in Toolando.tech renders each page as a separate JPG. Files are never stored — deleted immediately after conversion.",
-        ],
-      },
-      {
-        title: "JPG or PNG from PDF?",
-        paragraphs: [
-          "JPG — smaller files, ideal for photos and documents without transparency.",
-          "PNG — lossless with transparency; better for graphics with text and sharp edges.",
-        ],
-      },
-    ],
-  },
-  "webp-avif-images": {
-    ...guidesPl["webp-avif-images"],
-    title: "WebP and AVIF — modern image formats for websites",
-    description:
-      "WebP and AVIF vs JPG/PNG: compression, browser support, and PageSpeed optimization.",
-    sections: [
-      {
-        paragraphs: [
-          "JPG and PNG have dominated the web for years, but WebP produces files 25–35% smaller than JPG at the same visual quality. AVIF goes further — files can be half the size of WebP.",
-          "All modern browsers support WebP. AVIF has slightly weaker support in older Safari versions.",
-        ],
-      },
-      {
-        title: "Deployment strategy",
-        paragraphs: [
-          "Convert JPG → WebP for product photos and banners — speeds up page load.",
-          "Keep JPG as fallback for older browsers (HTML <picture> tag).",
-          "For logos with transparency: PNG → WebP instead of JPG.",
-        ],
-      },
-    ],
-  },
-  "extract-audio-from-video": {
-    ...guidesPl["extract-audio-from-video"],
-    title: "Extracting audio from video — the legal alternative",
-    description:
-      "How to legally extract an audio track from your own video file (MP4, MOV, MKV).",
-    sections: [
-      {
-        paragraphs: [
-          "Sometimes you have a video file and only need the audio. Toolando.tech extracts audio from MP4, MOV, AVI, MKV and saves it as MP3, WAV, FLAC, or AAC.",
-          "This is legal on your own file — unlike downloading music from YouTube or TikTok, which Toolando.tech deliberately does not offer.",
-        ],
-      },
-    ],
-  },
-  "json-csv-xml": {
-    ...guidesPl["json-csv-xml"],
-    title: "JSON, CSV, and XML — converting data between formats",
-    description:
-      "When to use JSON, CSV, TSV, and XML and how to convert between them without losing structure.",
-    sections: [
-      {
-        paragraphs: [
-          "JSON is the REST API and app config standard. CSV and TSV are used for Excel import. XML is used in older enterprise systems and RSS.",
-          "JSON → CSV opens an API response in Excel. CSV → JSON prepares data for a REST API. Toolando.tech preserves data structure during conversion.",
-        ],
-      },
-    ],
-  },
-  "online-file-security": {
-    ...guidesPl["online-file-security"],
-    title: "File security in online tools",
-    description:
-      "How Toolando.tech processes files, when tools run locally in the browser, and privacy details.",
-    sections: [
-      {
-        paragraphs: [
-          "Uploading files to online tools raises natural concerns. At Toolando.tech files are used solely for the operation you request — conversion, compression, or preview.",
-          "After the job completes, files are deleted from the server. Some tools (universal opener) run entirely in your browser — the file never leaves your computer. Connection is encrypted (HTTPS).",
-        ],
-      },
-    ],
-  },
-  "lossy-vs-lossless": {
-    ...guidesPl["lossy-vs-lossless"],
-    title: "Lossy vs lossless compression — a simple guide",
-    description:
-      "How lossy and lossless compression differ and how to avoid quality loss when converting.",
-    sections: [
-      {
-        paragraphs: [
-          "Lossy formats (MP3, JPG, AAC, H.264) discard data to shrink files. Lossless formats (FLAC, PNG, WAV, ZIP) keep all data but produce larger files.",
-          "Rule: only convert lossy → lossless when you must — you won't recover lost quality. Convert lossy → lossy only once — each re-conversion degrades the result.",
-        ],
-      },
-    ],
-  },
-  "heic-iphone-jpg": {
-    ...guidesPl["heic-iphone-jpg"],
-    title: "HEIC from iPhone — how to open and convert to JPG",
-    description:
-      "Why iPhone saves HEIC, compatibility issues, and how to convert to JPG or PNG.",
-    sections: [
-      {
-        paragraphs: [
-          "Apple saves photos in HEIC by default — smaller than JPG at the same quality. Problem: Windows without an extension, older apps, and many services don't support HEIC.",
-          "Solution: convert HEIC → JPG or HEIC → PNG in Toolando.tech before emailing, uploading, or printing. You can also set iPhone to \"Most Compatible\" (JPG) in Settings.",
-        ],
-      },
-    ],
-  },
-  "pdf-vs-docx": {
-    ...guidesPl["pdf-vs-docx"],
-    title: "PDF vs DOCX — which format when?",
-    description:
-      "PDF vs DOCX differences: editing, print, archiving, and when to convert which way.",
-    sections: [
-      {
-        paragraphs: [
-          "DOCX (Word) is for editing text — content, styles, headings. PDF locks layout — identical on every device, ideal for invoices, contracts, and CVs.",
-          "Convert DOCX → PDF before sending \"for reading only.\" Convert PDF → DOCX only when you need to edit text — layout may break. For archiving and print, always choose PDF.",
-        ],
-      },
-    ],
-  },
-  "video-social-media": {
-    ...guidesPl["video-social-media"],
-    title: "Video for social media — MP4, resolution, and bitrate",
-    description:
-      "How to prepare video for Instagram, TikTok, YouTube: MP4 format, H.264, 1080p resolution.",
-    sections: [
-      {
-        paragraphs: [
-          "Instagram, TikTok, YouTube, and Facebook prefer MP4 with H.264 video and AAC audio. Convert MOV, AVI, or MKV to MP4 before publishing to avoid upload errors.",
-          "1080p (1920×1080) is enough for most platforms. Higher bitrate = better quality but larger file. See the format encyclopedia for MP4, WebM, and MOV details.",
-        ],
-      },
-    ],
-  },
-  "choose-audio-bitrate": {
-    ...guidesPl["choose-audio-bitrate"],
-    title: "Which MP3 or AAC bitrate should you choose?",
-    description:
-      "128 vs 192 vs 320 kbps — practical picks for podcasts, music, and video without wasting disk space.",
-    sections: [
-      {
-        paragraphs: [
-          "Bitrate is the amount of data per second of audio. Higher bitrate usually means better sound but larger files. With MP3, the gap between 128 and 320 kbps is most audible on good speakers and dense music.",
-          "For speech (podcasts, interviews) 96–128 kbps mono is often enough. For music in headphones, 192–256 kbps stereo is a solid compromise. 320 kbps is the practical MP3 ceiling — going higher rarely helps because the format is still lossy.",
-        ],
-      },
-      {
-        title: "MP3, AAC, and Opus — quick comparison",
-        paragraphs: [
-          "AAC (M4A) at the same bitrate usually beats MP3 — that's why YouTube and Apple Music use it.",
-          "Opus shines in VoIP and streaming at low bitrates (64–128 kbps).",
-          "For studio archives keep WAV or FLAC — a lossy bitrate won't restore missing data.",
-        ],
-      },
-      {
-        title: "Common mistakes",
-        paragraphs: [
-          "Upscaling a low-quality MP3 to a higher bitrate does not improve sound — only file size grows.",
-          "Re-encoding the same track multiple times (MP3 → AAC → MP3) degrades quality each round.",
-          "For video projects extract audio from your own MP4 instead of downloading someone else's music — copyright matters.",
-        ],
-      },
-    ],
-  },
-  "prepare-images-for-web": {
-    ...guidesPl["prepare-images-for-web"],
-    title: "How to prepare images for the web (JPG, WebP, AVIF)",
-    description:
-      "Resolution, compression, and format — speed up your site without visible quality loss.",
-    sections: [
-      {
-        paragraphs: [
-          "Huge camera photos (4000×3000 px) slow every page. Before uploading to a blog or store, resize to the real display size — e.g. 1600 px width for a hero banner.",
-          "JPG remains the safe universal choice. WebP and AVIF produce smaller files at the same visual quality — use them in modern stacks with a <picture> fallback for older browsers.",
-        ],
-      },
-      {
-        title: "When PNG instead of JPG",
-        paragraphs: [
-          "Logos, icons, and UI screenshots — PNG or lossless WebP keep sharp edges.",
-          "Product photos on white backgrounds often compress fine as JPG quality 80–85.",
-          "Avoid re-saving the same banner as JPG repeatedly — each pass adds artifacts.",
-        ],
-      },
-      {
-        title: "Pre-publish checklist",
-        paragraphs: [
-          "1) Resize to target width in px. 2) Pick format (JPG/WebP/AVIF). 3) Check file weight (<200 KB thumbs, <500 KB large blog images). 4) Run PageSpeed Insights and compare LCP before/after.",
-        ],
-      },
-    ],
-  },
-  "docx-pdf-workflow": {
-    ...guidesPl["docx-pdf-workflow"],
-    title: "DOCX → PDF for office work — when and how to convert",
-    description:
-      "Sending CVs, invoices, and contracts: why PDF beats DOCX and how to avoid broken fonts.",
-    sections: [
-      {
-        paragraphs: [
-          "DOCX is for editing — great when the recipient has Word and needs to change text. PDF is for reading — layout, fonts, and margins look identical on Windows, Mac, and phone.",
-          "Before sending a CV, proposal, or contract convert DOCX → PDF. Recipients won't accidentally edit content and you avoid substitute fonts breaking your branding.",
-        ],
-      },
-      {
-        title: "When NOT to convert PDF → DOCX",
-        paragraphs: [
-          "Scanned invoices and signed contracts — keep PDF as the archive; OCR is a separate step.",
-          "Complex multi-page layouts (catalogs, brochures) — DOCX conversion often breaks pagination.",
-          "If you only need a text snippet, copy from PDF instead of converting the whole file.",
-        ],
-      },
-      {
-        title: "Security and privacy",
-        paragraphs: [
-          "At Toolando.tech DOCX and PDF files are used only for conversion and deleted when the job finishes.",
-          "For sensitive documents (IDs, bank numbers) use HTTPS and don't leave copies on public cloud drives without encryption.",
-        ],
-      },
-    ],
-  },
-  ...guidesBatch2En,
-  ...guidesBatch3En,
-}
 
 const guidesDe: Record<GuideSlug, GuideArticle> = {
   "mp3-vs-wav": {
@@ -637,114 +45,839 @@ const guidesDe: Record<GuideSlug, GuideArticle> = {
     title: "MP3 vs WAV — wann Audio konvertieren?",
     description:
       "MP3 vs WAV im Vergleich: verlustbehaftete vs verlustfreie Kompression, Dateigröße und DAW-Bearbeitung.",
-    sections: guidesEn["mp3-vs-wav"].sections.map((s) => ({
-      ...s,
-      title: s.title?.replace("When to convert MP3 → WAV", "Wann MP3 → WAV konvertieren")
-        .replace("When to convert WAV → MP3", "Wann WAV → MP3 konvertieren"),
-      paragraphs: s.paragraphs.map((p) =>
-        p
-          .replace("MP3 uses lossy", "MP3 nutzt verlustbehaftete")
-          .replace("In practice", "In der Praxis")
-          .replace("listening on your phone", "Hören auf dem Handy")
-          .replace("Editing a podcast", "Podcast bearbeiten"),
-      ),
-    })),
+    sections: [
+      {
+        paragraphs: [
+          "MP3 nutzt verlustbehaftete Kompression — Dateien sind klein, aber ein Teil der Audiodaten geht dauerhaft verloren. WAV bewahrt die volle Qualität (verlustfrei oder unkomprimiert), Dateien können aber 10× größer als MP3 sein.",
+          "In der Praxis: Hören auf dem Handy → MP3 reicht. Podcast in Audacity schneiden oder in FL Studio mischen → mit WAV oder FLAC arbeiten.",
+        ],
+      },
+      {
+        title: "Wann MP3 → WAV konvertieren",
+        paragraphs: [
+          "Wenn eine Plattform oder App ein verlustfreies Format für die weitere Bearbeitung verlangt.",
+          "Wenn Sie mehrere Schnitte, Effekte und Mastering planen — jede Operation an MP3 verschlechtert die Qualität.",
+          "Hinweis: MP3 → WAV stellt verlorene Qualität nicht wieder her, stoppt aber weitere Degradation während der Bearbeitung.",
+        ],
+      },
+      {
+        title: "Wann WAV → MP3 konvertieren",
+        paragraphs: [
+          "Aufnahme per E-Mail oder Chat senden — kleinere Datei = schnellerer Transfer.",
+          "Podcast oder Musik zum Anhören veröffentlichen, nicht zum Bearbeiten.",
+          "Speicherplatz in einer großen Audiobibliothek sparen.",
+        ],
+      },
+    ],
   },
-  "pdf-to-jpg": { ...guidesEn["pdf-to-jpg"], title: "PDF in JPG konvertieren — für Druck und Web", description: "Wann PDF-Seiten als JPG exportieren und wann PNG besser ist." },
-  "webp-avif-images": { ...guidesEn["webp-avif-images"], title: "WebP und AVIF — moderne Bildformate für Websites", description: "WebP und AVIF vs JPG/PNG: Kompression und Browser-Unterstützung." },
-  "extract-audio-from-video": { ...guidesEn["extract-audio-from-video"], title: "Audio aus Video extrahieren — die legale Alternative", description: "Wie Sie legal Audio aus eigenen Videodateien extrahieren." },
-  "json-csv-xml": { ...guidesEn["json-csv-xml"], title: "JSON, CSV und XML — Daten zwischen Formaten konvertieren", description: "Wann JSON, CSV, TSV und XML verwenden." },
-  "online-file-security": { ...guidesEn["online-file-security"], title: "Dateisicherheit in Online-Tools", description: "Wie Toolando.tech Dateien verarbeitet und Datenschutz." },
-  "lossy-vs-lossless": { ...guidesEn["lossy-vs-lossless"], title: "Verlustbehaftet vs verlustfrei — ein einfacher Leitfaden", description: "Unterschiede und wie Sie Qualitätsverlust vermeiden." },
-  "heic-iphone-jpg": { ...guidesEn["heic-iphone-jpg"], title: "HEIC vom iPhone — öffnen und in JPG konvertieren", description: "Kompatibilitätsprobleme und Konvertierung zu JPG/PNG." },
-  "pdf-vs-docx": { ...guidesEn["pdf-vs-docx"], title: "PDF vs DOCX — welches Format wann?", description: "Unterschiede bei Bearbeitung, Druck und Archivierung." },
-  "video-social-media": { ...guidesEn["video-social-media"], title: "Video für Social Media — MP4, Auflösung und Bitrate", description: "Vorbereitung für Instagram, TikTok, YouTube." },
-  "choose-audio-bitrate": { ...guidesEn["choose-audio-bitrate"], title: "Welche MP3- oder AAC-Bitrate wählen?", description: "128 vs 192 vs 320 kbps — praktische Empfehlungen." },
-  "prepare-images-for-web": { ...guidesEn["prepare-images-for-web"], title: "Bilder fürs Web vorbereiten (JPG, WebP, AVIF)", description: "Auflösung, Kompression und Formate für schnellere Seiten." },
-  "docx-pdf-workflow": { ...guidesEn["docx-pdf-workflow"], title: "DOCX → PDF im Büroalltag", description: "Wann PDF statt DOCX senden und typische Fehler vermeiden." },
-  "compress-images-without-quality-loss": { ...guidesEn["compress-images-without-quality-loss"] },
-  "merge-pdf-online-guide": { ...guidesEn["merge-pdf-online-guide"] },
-  "spreadsheet-csv-json-guide": { ...guidesEn["spreadsheet-csv-json-guide"] },
-  "video-compress-before-sharing": { ...guidesEn["video-compress-before-sharing"] },
-  "font-woff2-for-websites": { ...guidesEn["font-woff2-for-websites"] },
-  "toolando-editorial-standards": { ...guidesEn["toolando-editorial-standards"] },
-  "when-not-to-convert-files": { ...guidesEn["when-not-to-convert-files"] },
-  "png-vs-jpg-photos-and-graphics": { ...guidesEn["png-vs-jpg-photos-and-graphics"] },
-  "flac-music-archive-guide": { ...guidesEn["flac-music-archive-guide"] },
-  "zip-7z-rar-when-to-use": { ...guidesEn["zip-7z-rar-when-to-use"] },
-  "svg-vs-png-logos-and-icons": { ...guidesEn["svg-vs-png-logos-and-icons"] },
-  "podcast-export-mp3-aac-settings": { ...guidesEn["podcast-export-mp3-aac-settings"] },
-  "gif-vs-mp4-for-animations": { ...guidesEn["gif-vs-mp4-for-animations"] },
-  "tiff-and-png-for-document-scans": { ...guidesEn["tiff-and-png-for-document-scans"] },
-  "markdown-to-pdf-workflow": { ...guidesEn["markdown-to-pdf-workflow"] },
-  "extract-images-from-pdf-pages": { ...guidesEn["extract-images-from-pdf-pages"] },
-  "convert-video-to-gif-properly": { ...guidesEn["convert-video-to-gif-properly"] },
+  "pdf-to-jpg": {
+    ...guidesEn["pdf-to-jpg"],
+    title: "PDF in JPG konvertieren — für Druck und Web",
+    description: "Wann PDF-Seiten als JPG exportieren und wann PNG besser ist.",
+    sections: [
+      {
+        paragraphs: [
+          "PDF bewahrt das Seitenlayout. Manchmal brauchen Sie einzelne Seiten als Bilder — für eine Website, PowerPoint oder den Druck einer einzelnen Seite.",
+          "Der PDF → JPG-Konverter in Toolando.tech rendert jede Seite als separates JPG. Dateien werden nicht gespeichert — nach der Konvertierung sofort gelöscht.",
+        ],
+      },
+      {
+        title: "JPG oder PNG aus PDF?",
+        paragraphs: [
+          "JPG — kleinere Dateien, ideal für Fotos und Dokumente ohne Transparenz.",
+          "PNG — verlustfrei mit Transparenz; besser für Grafiken mit Text und scharfen Kanten.",
+        ],
+      },
+    ],
+  },
+  "webp-avif-images": {
+    ...guidesEn["webp-avif-images"],
+    title: "WebP und AVIF — moderne Bildformate für Websites",
+    description: "WebP und AVIF vs JPG/PNG: Kompression und Browser-Unterstützung.",
+    sections: [
+      {
+        paragraphs: [
+          "JPG und PNG dominieren das Web seit Jahren, aber WebP erzeugt Dateien 25–35 % kleiner als JPG bei gleicher visueller Qualität. AVIF geht weiter — Dateien können halb so groß wie WebP sein.",
+          "Alle modernen Browser unterstützen WebP. AVIF hat etwas schwächere Unterstützung in älteren Safari-Versionen.",
+        ],
+      },
+      {
+        title: "Einführungsstrategie",
+        paragraphs: [
+          "JPG → WebP für Produktfotos und Banner konvertieren — beschleunigt den Seitenaufbau.",
+          "JPG als Fallback für ältere Browser behalten (HTML-<picture>-Tag).",
+          "Für Logos mit Transparenz: PNG → WebP statt JPG.",
+        ],
+      },
+    ],
+  },
+  "extract-audio-from-video": {
+    ...guidesEn["extract-audio-from-video"],
+    title: "Audio aus Video extrahieren — die legale Alternative",
+    description: "Wie Sie legal Audio aus eigenen Videodateien extrahieren.",
+    sections: [
+      {
+        paragraphs: [
+          "Manchmal haben Sie eine Videodatei und brauchen nur den Ton. Toolando.tech extrahiert Audio aus MP4, MOV, AVI, MKV und speichert es als MP3, WAV, FLAC oder AAC.",
+          "Das ist legal an Ihrer eigenen Datei — anders als Musik von YouTube oder TikTok herunterzuladen, was Toolando.tech bewusst nicht anbietet.",
+        ],
+      },
+    ],
+  },
+  "json-csv-xml": {
+    ...guidesEn["json-csv-xml"],
+    title: "JSON, CSV und XML — Daten zwischen Formaten konvertieren",
+    description: "Wann JSON, CSV, TSV und XML verwenden.",
+    sections: [
+      {
+        paragraphs: [
+          "JSON ist der Standard für REST-APIs und App-Konfiguration. CSV und TSV dienen dem Excel-Import. XML kommt in älteren Enterprise-Systemen und RSS vor.",
+          "JSON → CSV öffnet eine API-Antwort in Excel. CSV → JSON bereitet Daten für eine REST-API vor. Toolando.tech erhält die Datenstruktur bei der Konvertierung.",
+        ],
+      },
+    ],
+  },
+  "online-file-security": {
+    ...guidesEn["online-file-security"],
+    title: "Dateisicherheit in Online-Tools",
+    description: "Wie Toolando.tech Dateien verarbeitet und Datenschutz.",
+    sections: [
+      {
+        paragraphs: [
+          "Dateien an Online-Tools zu senden wirft berechtigte Fragen auf. Bei Toolando.tech dienen Dateien ausschließlich der gewünschten Operation — Konvertierung, Kompression oder Vorschau.",
+          "Nach Abschluss werden Dateien vom Server gelöscht. Manche Tools (universeller Öffner) laufen komplett im Browser — die Datei verlässt Ihren Rechner nicht. Die Verbindung ist verschlüsselt (HTTPS).",
+        ],
+      },
+      {
+        title: "Was wir NICHT mit Ihren Dateien tun",
+        paragraphs: [
+          "Wir verkaufen keine Dateien oder Metadaten an Dritte.",
+          "Wir nutzen Uploads nicht zum Training von KI-Modellen.",
+          "Wir behalten keine Kopien „für alle Fälle“ — nach dem Job verschwindet die Datei vom Server.",
+        ],
+      },
+      {
+        title: "Wann die Datei länger auf dem Server bleibt",
+        paragraphs: [
+          "Nur während der Konvertierung (meist Sekunden bis eine Minute). Bei großen Videos bis 500 MB kann es länger dauern — die Datei wird danach trotzdem gelöscht.",
+          "Eine Premium-Option mit Konto kann Operationshistorie speichern (Metadaten, nicht Dateien) — Details in der Datenschutzrichtlinie.",
+        ],
+      },
+    ],
+  },
+  "lossy-vs-lossless": {
+    ...guidesEn["lossy-vs-lossless"],
+    title: "Verlustbehaftet vs verlustfrei — ein einfacher Leitfaden",
+    description: "Unterschiede und wie Sie Qualitätsverlust vermeiden.",
+    sections: [
+      {
+        paragraphs: [
+          "Verlustbehaftete Formate (MP3, JPG, AAC, H.264) verwerfen Daten, um Dateien zu verkleinern. Verlustfreie Formate (FLAC, PNG, WAV, ZIP) behalten alle Daten, erzeugen aber größere Dateien.",
+          "Regel: nur dann verlustbehaftet → verlustfrei konvertieren, wenn nötig — verlorene Qualität kommt nicht zurück. Verlustbehaftet → verlustbehaftet nur einmal — jede erneute Konvertierung verschlechtert das Ergebnis.",
+        ],
+      },
+      {
+        title: "Beispiele aus der Praxis",
+        paragraphs: [
+          "Musik: FLAC → MP3 vor dem Versand an Freunde OK; MP3 → FLAC vor dem Mastering NEIN.",
+          "Fotos: RAW/JPG aus der Kamera → JPG-Export fürs Web OK; wiederholtes JPG → JPG im Messenger verschlechtert die Qualität.",
+          "Video: MP4 (H.264) ist verlustbehaftet, aber Standard — nicht ohne Grund neu encodieren.",
+        ],
+      },
+      {
+        title: "Wo Sie den Formattyp prüfen",
+        paragraphs: [
+          "In der Format-Enzyklopädie von Toolando ist jedes Format als verlustbehaftet/verlustfrei/Container gekennzeichnet.",
+          "Vergleiche MP3 vs FLAC und JPG vs WebP erklären das Urteil auf einer Seite.",
+        ],
+      },
+    ],
+  },
+  "heic-iphone-jpg": {
+    ...guidesEn["heic-iphone-jpg"],
+    title: "HEIC vom iPhone — öffnen und in JPG konvertieren",
+    description: "Kompatibilitätsprobleme und Konvertierung zu JPG/PNG.",
+    sections: [
+      {
+        paragraphs: [
+          "Apple speichert Fotos standardmäßig als HEIC — kleiner als JPG bei gleicher Qualität. Problem: Windows ohne Erweiterung, ältere Apps und viele Dienste unterstützen HEIC nicht.",
+          "Lösung: HEIC → JPG oder HEIC → PNG in Toolando.tech konvertieren, bevor Sie per E-Mail senden, hochladen oder drucken. Im iPhone können Sie unter Einstellungen auch „Maximale Kompatibilität“ (JPG) aktivieren.",
+        ],
+      },
+    ],
+  },
+  "pdf-vs-docx": {
+    ...guidesEn["pdf-vs-docx"],
+    title: "PDF vs DOCX — welches Format wann?",
+    description: "Unterschiede bei Bearbeitung, Druck und Archivierung.",
+    sections: [
+      {
+        paragraphs: [
+          "DOCX (Word) dient der Textbearbeitung — Inhalt, Styles, Überschriften. PDF friert das Layout ein — identisch auf jedem Gerät, ideal für Rechnungen, Verträge und Lebensläufe.",
+          "DOCX → PDF konvertieren, bevor Sie „nur zum Lesen“ senden. PDF → DOCX nur, wenn Sie Text bearbeiten müssen — das Layout kann brechen. Für Archiv und Druck immer PDF wählen.",
+        ],
+      },
+    ],
+  },
+  "video-social-media": {
+    ...guidesEn["video-social-media"],
+    title: "Video für Social Media — MP4, Auflösung und Bitrate",
+    description: "Vorbereitung für Instagram, TikTok, YouTube.",
+    sections: [
+      {
+        paragraphs: [
+          "Instagram, TikTok, YouTube und Facebook bevorzugen MP4 mit H.264-Video und AAC-Audio. Konvertieren Sie MOV, AVI oder MKV vor dem Upload zu MP4, um Fehler zu vermeiden.",
+          "1080p (1920×1080) reicht für die meisten Plattformen. Höhere Bitrate = bessere Qualität, aber größere Datei. Details zu MP4, WebM und MOV finden Sie in der Format-Enzyklopädie.",
+        ],
+      },
+    ],
+  },
+  "choose-audio-bitrate": {
+    ...guidesEn["choose-audio-bitrate"],
+    title: "Welche MP3- oder AAC-Bitrate wählen?",
+    description: "128 vs 192 vs 320 kbps — praktische Empfehlungen.",
+    sections: [
+      {
+        paragraphs: [
+          "Bitrate ist die Datenmenge pro Sekunde Audio. Höhere Bitrate bedeutet meist besseren Klang, aber größere Dateien. Bei MP3 ist der Unterschied zwischen 128 und 320 kbps vor allem an guten Lautsprechern und dichter Musik hörbar.",
+          "Für Sprache (Podcasts, Interviews) reichen oft 96–128 kbps Mono. Für Musik mit Kopfhörern sind 192–256 kbps Stereo ein solider Kompromiss. 320 kbps ist die praktische MP3-Obergrenze — höher bringt selten Gewinn, weil das Format weiterhin verlustbehaftet ist.",
+        ],
+      },
+      {
+        title: "MP3, AAC und Opus — kurzer Vergleich",
+        paragraphs: [
+          "AAC (M4A) klingt bei gleicher Bitrate meist besser als MP3 — deshalb nutzen YouTube und Apple Music es.",
+          "Opus glänzt in VoIP und Streaming bei niedrigen Bitraten (64–128 kbps).",
+          "Für Studioarchive WAV oder FLAC behalten — eine verlustbehaftete Bitrate stellt fehlende Daten nicht wieder her.",
+        ],
+      },
+      {
+        title: "Typische Fehler",
+        paragraphs: [
+          "Ein niedriges MP3 auf höhere Bitrate hochzurechnen verbessert den Klang nicht — nur die Dateigröße wächst.",
+          "Mehrfaches Neuencodieren desselben Tracks (MP3 → AAC → MP3) verschlechtert die Qualität jedes Mal.",
+          "Für Videoprojekte Audio aus dem eigenen MP4 extrahieren statt fremde Musik herunterzuladen — Urheberrecht zählt.",
+        ],
+      },
+    ],
+  },
+  "prepare-images-for-web": {
+    ...guidesEn["prepare-images-for-web"],
+    title: "Bilder fürs Web vorbereiten (JPG, WebP, AVIF)",
+    description: "Auflösung, Kompression und Formate für schnellere Seiten.",
+    sections: [
+      {
+        paragraphs: [
+          "Riesige Kamerabilder (4000×3000 px) verlangsamen jede Seite. Vor dem Upload auf Blog oder Shop auf die echte Anzeigegröße skalieren — z. B. 1600 px Breite für ein Hero-Banner.",
+          "JPG bleibt die sichere Universalwahl. WebP und AVIF erzeugen kleinere Dateien bei gleicher visueller Qualität — in modernen Stacks mit <picture>-Fallback für ältere Browser nutzen.",
+        ],
+      },
+      {
+        title: "Wann PNG statt JPG",
+        paragraphs: [
+          "Logos, Icons und UI-Screenshots — PNG oder verlustfreies WebP halten Kanten scharf.",
+          "Produktfotos auf weißem Hintergrund komprimieren oft gut als JPG Qualität 80–85.",
+          "Denselben Banner nicht wiederholt als JPG speichern — jeder Durchgang erzeugt Artefakte.",
+        ],
+      },
+      {
+        title: "Checkliste vor der Veröffentlichung",
+        paragraphs: [
+          "1) Auf Zielbreite in px skalieren. 2) Format wählen (JPG/WebP/AVIF). 3) Dateigröße prüfen (<200 KB Thumbnails, <500 KB große Blogbilder). 4) PageSpeed Insights ausführen und LCP vor/nach vergleichen.",
+        ],
+      },
+    ],
+  },
+  "docx-pdf-workflow": {
+    ...guidesEn["docx-pdf-workflow"],
+    title: "DOCX → PDF im Büroalltag",
+    description: "Wann PDF statt DOCX senden und typische Fehler vermeiden.",
+    sections: [
+      {
+        paragraphs: [
+          "DOCX ist zum Bearbeiten — ideal, wenn der Empfänger Word hat und Text ändern soll. PDF ist zum Lesen — Layout, Schriften und Ränder wirken auf Windows, Mac und Handy identisch.",
+          "Vor dem Versand von Lebenslauf, Angebot oder Vertrag DOCX → PDF konvertieren. Empfänger ändern den Inhalt nicht versehentlich, und Ersatzschriften zerstören nicht Ihr Branding.",
+        ],
+      },
+      {
+        title: "Wann NICHT PDF → DOCX konvertieren",
+        paragraphs: [
+          "Gescannte Rechnungen und unterschriebene Verträge — PDF als Archiv behalten; OCR ist ein eigener Schritt.",
+          "Komplexe mehrseitige Layouts (Kataloge, Broschüren) — DOCX-Konvertierung zerstört oft die Paginierung.",
+          "Wenn Sie nur einen Textausschnitt brauchen, aus dem PDF kopieren statt die ganze Datei zu konvertieren.",
+        ],
+      },
+      {
+        title: "Sicherheit und Datenschutz",
+        paragraphs: [
+          "Bei Toolando.tech dienen DOCX- und PDF-Dateien nur der Konvertierung und werden nach dem Job gelöscht.",
+          "Bei sensiblen Dokumenten (Ausweise, Kontonummern) HTTPS nutzen und keine Kopien unverschlüsselt auf öffentlichen Cloud-Laufwerken lassen.",
+        ],
+      },
+    ],
+  },
+  ...guidesBatch23De,
+  ...guidesBatch4De,
 }
 
 const guidesEs: Record<GuideSlug, GuideArticle> = {
-  "mp3-vs-wav": { ...guidesEn["mp3-vs-wav"], title: "MP3 vs WAV — ¿cuándo convertir audio?", description: "Comparación MP3 y WAV: compresión con y sin pérdida." },
-  "pdf-to-jpg": { ...guidesEn["pdf-to-jpg"], title: "Cómo convertir PDF a JPG para impresión y web", description: "Cuándo exportar páginas PDF como JPG o PNG." },
-  "webp-avif-images": { ...guidesEn["webp-avif-images"], title: "WebP y AVIF — formatos modernos para sitios web", description: "WebP y AVIF vs JPG/PNG: compresión y compatibilidad." },
-  "extract-audio-from-video": { ...guidesEn["extract-audio-from-video"], title: "Extraer audio de video — la alternativa legal", description: "Cómo extraer audio legalmente de tus propios videos." },
-  "json-csv-xml": { ...guidesEn["json-csv-xml"], title: "JSON, CSV y XML — convertir datos entre formatos", description: "Cuándo usar JSON, CSV, TSV y XML." },
-  "online-file-security": { ...guidesEn["online-file-security"], title: "Seguridad de archivos en herramientas online", description: "Cómo Toolando.tech procesa archivos y privacidad." },
-  "lossy-vs-lossless": { ...guidesEn["lossy-vs-lossless"], title: "Compresión con vs sin pérdida — guía simple", description: "Diferencias y cómo evitar pérdida de calidad." },
-  "heic-iphone-jpg": { ...guidesEn["heic-iphone-jpg"], title: "HEIC del iPhone — abrir y convertir a JPG", description: "Problemas de compatibilidad y conversión a JPG/PNG." },
-  "pdf-vs-docx": { ...guidesEn["pdf-vs-docx"], title: "PDF vs DOCX — ¿qué formato cuándo?", description: "Diferencias en edición, impresión y archivo." },
-  "video-social-media": { ...guidesEn["video-social-media"], title: "Video para redes sociales — MP4, resolución y bitrate", description: "Preparación para Instagram, TikTok, YouTube." },
-  "choose-audio-bitrate": { ...guidesEn["choose-audio-bitrate"], title: "¿Qué bitrate MP3 o AAC elegir?", description: "128 vs 192 vs 320 kbps — guía práctica." },
-  "prepare-images-for-web": { ...guidesEn["prepare-images-for-web"], title: "Preparar imágenes para la web (JPG, WebP, AVIF)", description: "Resolución, compresión y formatos." },
-  "docx-pdf-workflow": { ...guidesEn["docx-pdf-workflow"], title: "DOCX → PDF en el trabajo de oficina", description: "Cuándo enviar PDF y evitar fuentes rotas." },
-  "compress-images-without-quality-loss": { ...guidesEn["compress-images-without-quality-loss"] },
-  "merge-pdf-online-guide": { ...guidesEn["merge-pdf-online-guide"] },
-  "spreadsheet-csv-json-guide": { ...guidesEn["spreadsheet-csv-json-guide"] },
-  "video-compress-before-sharing": { ...guidesEn["video-compress-before-sharing"] },
-  "font-woff2-for-websites": { ...guidesEn["font-woff2-for-websites"] },
-  "toolando-editorial-standards": { ...guidesEn["toolando-editorial-standards"] },
-  "when-not-to-convert-files": { ...guidesEn["when-not-to-convert-files"] },
-  "png-vs-jpg-photos-and-graphics": { ...guidesEn["png-vs-jpg-photos-and-graphics"] },
-  "flac-music-archive-guide": { ...guidesEn["flac-music-archive-guide"] },
-  "zip-7z-rar-when-to-use": { ...guidesEn["zip-7z-rar-when-to-use"] },
-  "svg-vs-png-logos-and-icons": { ...guidesEn["svg-vs-png-logos-and-icons"] },
-  "podcast-export-mp3-aac-settings": { ...guidesEn["podcast-export-mp3-aac-settings"] },
-  "gif-vs-mp4-for-animations": { ...guidesEn["gif-vs-mp4-for-animations"] },
-  "tiff-and-png-for-document-scans": { ...guidesEn["tiff-and-png-for-document-scans"] },
-  "markdown-to-pdf-workflow": { ...guidesEn["markdown-to-pdf-workflow"] },
-  "extract-images-from-pdf-pages": { ...guidesEn["extract-images-from-pdf-pages"] },
-  "convert-video-to-gif-properly": { ...guidesEn["convert-video-to-gif-properly"] },
+  "mp3-vs-wav": {
+    ...guidesEn["mp3-vs-wav"],
+    title: "MP3 vs WAV — ¿cuándo convertir audio?",
+    description: "Comparación MP3 y WAV: compresión con y sin pérdida.",
+    sections: [
+      {
+        paragraphs: [
+          "MP3 usa compresión con pérdida: los archivos son pequeños, pero parte de los datos de audio se pierde para siempre. WAV conserva la calidad completa (sin pérdida o sin comprimir), pero los archivos pueden ser 10× mayores que MP3.",
+          "En la práctica: escuchar en el móvil → MP3 basta. Editar un podcast en Audacity o mezclar en FL Studio → trabaje con WAV o FLAC.",
+        ],
+      },
+      {
+        title: "Cuándo convertir MP3 → WAV",
+        paragraphs: [
+          "Cuando una plataforma o app exige un formato sin pérdida para seguir editando.",
+          "Cuando planea varios cortes, efectos y mastering: cada operación sobre MP3 degrada la calidad.",
+          "Nota: MP3 → WAV no recupera la calidad perdida, pero detiene más degradación durante la edición.",
+        ],
+      },
+      {
+        title: "Cuándo convertir WAV → MP3",
+        paragraphs: [
+          "Enviar una grabación por correo o chat: archivo más pequeño = transferencia más rápida.",
+          "Publicar un podcast o música para escuchar, no para editar.",
+          "Ahorrar espacio en una biblioteca de audio grande.",
+        ],
+      },
+    ],
+  },
+  "pdf-to-jpg": {
+    ...guidesEn["pdf-to-jpg"],
+    title: "Cómo convertir PDF a JPG para impresión y web",
+    description: "Cuándo exportar páginas PDF como JPG o PNG.",
+    sections: [
+      {
+        paragraphs: [
+          "PDF conserva el diseño de página. A veces necesita páginas sueltas como imágenes: para una web, PowerPoint o imprimir una sola página.",
+          "El convertidor PDF → JPG de Toolando.tech renderiza cada página como un JPG aparte. Los archivos no se almacenan: se eliminan justo después de la conversión.",
+        ],
+      },
+      {
+        title: "¿JPG o PNG desde PDF?",
+        paragraphs: [
+          "JPG — archivos más pequeños, ideal para fotos y documentos sin transparencia.",
+          "PNG — sin pérdida y con transparencia; mejor para gráficos con texto y bordes nítidos.",
+        ],
+      },
+    ],
+  },
+  "webp-avif-images": {
+    ...guidesEn["webp-avif-images"],
+    title: "WebP y AVIF — formatos modernos para sitios web",
+    description: "WebP y AVIF vs JPG/PNG: compresión y compatibilidad.",
+    sections: [
+      {
+        paragraphs: [
+          "JPG y PNG dominan la web desde hace años, pero WebP genera archivos un 25–35 % más pequeños que JPG con la misma calidad visual. AVIF va más allá: los archivos pueden ser la mitad que WebP.",
+          "Todos los navegadores modernos admiten WebP. AVIF tiene un soporte algo más débil en versiones antiguas de Safari.",
+        ],
+      },
+      {
+        title: "Estrategia de despliegue",
+        paragraphs: [
+          "Convierta JPG → WebP para fotos de producto y banners: acelera la carga.",
+          "Mantenga JPG como alternativa para navegadores antiguos (etiqueta HTML <picture>).",
+          "Para logos con transparencia: PNG → WebP en lugar de JPG.",
+        ],
+      },
+    ],
+  },
+  "extract-audio-from-video": {
+    ...guidesEn["extract-audio-from-video"],
+    title: "Extraer audio de video — la alternativa legal",
+    description: "Cómo extraer audio legalmente de tus propios videos.",
+    sections: [
+      {
+        paragraphs: [
+          "A veces tiene un vídeo y solo necesita el audio. Toolando.tech extrae audio de MP4, MOV, AVI, MKV y lo guarda como MP3, WAV, FLAC o AAC.",
+          "Es legal sobre su propio archivo — a diferencia de descargar música de YouTube o TikTok, que Toolando.tech deliberadamente no ofrece.",
+        ],
+      },
+    ],
+  },
+  "json-csv-xml": {
+    ...guidesEn["json-csv-xml"],
+    title: "JSON, CSV y XML — convertir datos entre formatos",
+    description: "Cuándo usar JSON, CSV, TSV y XML.",
+    sections: [
+      {
+        paragraphs: [
+          "JSON es el estándar de APIs REST y configuración de apps. CSV y TSV sirven para importar a Excel. XML se usa en sistemas enterprise antiguos y RSS.",
+          "JSON → CSV abre una respuesta de API en Excel. CSV → JSON prepara datos para una API REST. Toolando.tech conserva la estructura de datos en la conversión.",
+        ],
+      },
+    ],
+  },
+  "online-file-security": {
+    ...guidesEn["online-file-security"],
+    title: "Seguridad de archivos en herramientas online",
+    description: "Cómo Toolando.tech procesa archivos y privacidad.",
+    sections: [
+      {
+        paragraphs: [
+          "Subir archivos a herramientas online genera dudas naturales. En Toolando.tech los archivos solo sirven para la operación que pide: conversión, compresión o vista previa.",
+          "Al terminar, se eliminan del servidor. Algunas herramientas (abridor universal) funcionan por completo en el navegador: el archivo no sale de su ordenador. La conexión va cifrada (HTTPS).",
+        ],
+      },
+      {
+        title: "Qué NO hacemos con sus archivos",
+        paragraphs: [
+          "No vendemos archivos ni metadatos a terceros.",
+          "No usamos las subidas para entrenar modelos de IA.",
+          "No guardamos copias «por si acaso»: tras el trabajo el archivo desaparece del disco del servidor.",
+        ],
+      },
+      {
+        title: "Cuándo el archivo permanece más tiempo en el servidor",
+        paragraphs: [
+          "Solo durante la conversión (suele ser de segundos a un minuto). Con vídeos grandes de hasta 500 MB puede tardar más; el archivo se elimina al terminar igual.",
+          "Una opción premium con cuenta puede guardar historial de operaciones (metadatos, no archivos): detalles en la política de privacidad.",
+        ],
+      },
+    ],
+  },
+  "lossy-vs-lossless": {
+    ...guidesEn["lossy-vs-lossless"],
+    title: "Compresión con vs sin pérdida — guía simple",
+    description: "Diferencias y cómo evitar pérdida de calidad.",
+    sections: [
+      {
+        paragraphs: [
+          "Los formatos con pérdida (MP3, JPG, AAC, H.264) descartan datos para reducir el tamaño. Los sin pérdida (FLAC, PNG, WAV, ZIP) conservan todos los datos, pero generan archivos mayores.",
+          "Regla: convierta con pérdida → sin pérdida solo cuando deba; no recupera la calidad perdida. Convierta con pérdida → con pérdida solo una vez; cada reconversión degrada el resultado.",
+        ],
+      },
+      {
+        title: "Ejemplos prácticos",
+        paragraphs: [
+          "Música: FLAC → MP3 antes de enviarlo a un amigo OK; MP3 → FLAC antes del mastering NO.",
+          "Fotos: RAW/JPG de la cámara → exportación JPG para la web OK; JPG → JPG repetido en el mensajero empeora la calidad.",
+          "Vídeo: MP4 (H.264) es con pérdida, pero es el estándar — no lo recodifique sin motivo.",
+        ],
+      },
+      {
+        title: "Dónde comprobar el tipo de formato",
+        paragraphs: [
+          "En la enciclopedia de formatos de Toolando cada formato indica con pérdida / sin pérdida / contenedor.",
+          "Las comparaciones MP3 vs FLAC y JPG vs WebP resumen el veredicto en una página.",
+        ],
+      },
+    ],
+  },
+  "heic-iphone-jpg": {
+    ...guidesEn["heic-iphone-jpg"],
+    title: "HEIC del iPhone — abrir y convertir a JPG",
+    description: "Problemas de compatibilidad y conversión a JPG/PNG.",
+    sections: [
+      {
+        paragraphs: [
+          "Apple guarda las fotos en HEIC por defecto: más pequeño que JPG con la misma calidad. Problema: Windows sin extensión, apps antiguas y muchos servicios no admiten HEIC.",
+          "Solución: convierta HEIC → JPG o HEIC → PNG en Toolando.tech antes de enviar por correo, subir o imprimir. También puede activar «Más compatible» (JPG) en Ajustes del iPhone.",
+        ],
+      },
+    ],
+  },
+  "pdf-vs-docx": {
+    ...guidesEn["pdf-vs-docx"],
+    title: "PDF vs DOCX — ¿qué formato cuándo?",
+    description: "Diferencias en edición, impresión y archivo.",
+    sections: [
+      {
+        paragraphs: [
+          "DOCX (Word) sirve para editar texto: contenido, estilos, encabezados. PDF fija el diseño: idéntico en cada dispositivo, ideal para facturas, contratos y CV.",
+          "Convierta DOCX → PDF antes de enviar «solo para lectura». Convierta PDF → DOCX solo si debe editar texto: el diseño puede romperse. Para archivo e impresión, elija siempre PDF.",
+        ],
+      },
+    ],
+  },
+  "video-social-media": {
+    ...guidesEn["video-social-media"],
+    title: "Video para redes sociales — MP4, resolución y bitrate",
+    description: "Preparación para Instagram, TikTok, YouTube.",
+    sections: [
+      {
+        paragraphs: [
+          "Instagram, TikTok, YouTube y Facebook prefieren MP4 con vídeo H.264 y audio AAC. Convierta MOV, AVI o MKV a MP4 antes de publicar para evitar errores de subida.",
+          "1080p (1920×1080) basta para la mayoría de plataformas. Mayor bitrate = mejor calidad, pero archivo más grande. Consulte la enciclopedia de formatos para MP4, WebM y MOV.",
+        ],
+      },
+    ],
+  },
+  "choose-audio-bitrate": {
+    ...guidesEn["choose-audio-bitrate"],
+    title: "¿Qué bitrate MP3 o AAC elegir?",
+    description: "128 vs 192 vs 320 kbps — guía práctica.",
+    sections: [
+      {
+        paragraphs: [
+          "El bitrate es la cantidad de datos por segundo de audio. Más bitrate suele sonar mejor, pero el archivo crece. En MP3, la diferencia entre 128 y 320 kbps se nota sobre todo en buenos altavoces y música densa.",
+          "Para voz (podcasts, entrevistas) suelen bastar 96–128 kbps mono. Para música con auriculares, 192–256 kbps estéreo es un buen equilibrio. 320 kbps es el techo práctico de MP3: subir más rara vez ayuda porque el formato sigue siendo con pérdida.",
+        ],
+      },
+      {
+        title: "MP3, AAC y Opus — comparación rápida",
+        paragraphs: [
+          "AAC (M4A) con el mismo bitrate suele superar a MP3: por eso lo usan YouTube y Apple Music.",
+          "Opus brilla en VoIP y streaming a bitrates bajos (64–128 kbps).",
+          "Para archivos de estudio conserve WAV o FLAC: un bitrate con pérdida no restaura datos faltantes.",
+        ],
+      },
+      {
+        title: "Errores habituales",
+        paragraphs: [
+          "Subir un MP3 de baja calidad a mayor bitrate no mejora el sonido: solo crece el archivo.",
+          "Recodificar la misma pista varias veces (MP3 → AAC → MP3) degrada la calidad en cada paso.",
+          "Para proyectos de vídeo extraiga audio de su propio MP4 en lugar de descargar música ajena: importa el copyright.",
+        ],
+      },
+    ],
+  },
+  "prepare-images-for-web": {
+    ...guidesEn["prepare-images-for-web"],
+    title: "Preparar imágenes para la web (JPG, WebP, AVIF)",
+    description: "Resolución, compresión y formatos.",
+    sections: [
+      {
+        paragraphs: [
+          "Fotos enormes de cámara (4000×3000 px) ralentizan cualquier página. Antes de subirlas a un blog o tienda, redimensione al tamaño real de visualización: p. ej. 1600 px de ancho para un banner hero.",
+          "JPG sigue siendo la opción universal segura. WebP y AVIF producen archivos más pequeños con la misma calidad visual: úselos en stacks modernos con fallback <picture> para navegadores antiguos.",
+        ],
+      },
+      {
+        title: "Cuándo PNG en lugar de JPG",
+        paragraphs: [
+          "Logos, iconos y capturas de UI: PNG o WebP sin pérdida mantienen bordes nítidos.",
+          "Fotos de producto sobre fondo blanco suelen comprimir bien como JPG calidad 80–85.",
+          "Evite guardar el mismo banner como JPG una y otra vez: cada pasada añade artefactos.",
+        ],
+      },
+      {
+        title: "Lista antes de publicar",
+        paragraphs: [
+          "1) Escale al ancho objetivo en px. 2) Elija formato (JPG/WebP/AVIF). 3) Compruebe el peso (<200 KB miniaturas, <500 KB imágenes grandes de blog). 4) Ejecute PageSpeed Insights y compare el LCP antes/después.",
+        ],
+      },
+    ],
+  },
+  "docx-pdf-workflow": {
+    ...guidesEn["docx-pdf-workflow"],
+    title: "DOCX → PDF en el trabajo de oficina",
+    description: "Cuándo enviar PDF y evitar fuentes rotas.",
+    sections: [
+      {
+        paragraphs: [
+          "DOCX es para editar: ideal cuando el destinatario tiene Word y debe cambiar el texto. PDF es para leer: maquetación, fuentes y márgenes se ven iguales en Windows, Mac y móvil.",
+          "Antes de enviar un CV, propuesta o contrato convierta DOCX → PDF. El destinatario no editará el contenido por accidente y evitará fuentes sustitutas que rompan su marca.",
+        ],
+      },
+      {
+        title: "Cuándo NO convertir PDF → DOCX",
+        paragraphs: [
+          "Facturas escaneadas y contratos firmados: conserve el PDF como archivo; el OCR es un paso aparte.",
+          "Maquetaciones multipágina complejas (catálogos, folletos): la conversión a DOCX suele romper la paginación.",
+          "Si solo necesita un fragmento de texto, cópielo del PDF en lugar de convertir todo el archivo.",
+        ],
+      },
+      {
+        title: "Seguridad y privacidad",
+        paragraphs: [
+          "En Toolando.tech los archivos DOCX y PDF solo se usan para la conversión y se eliminan al terminar el trabajo.",
+          "Con documentos sensibles (DNI, números de cuenta) use HTTPS y no deje copias en nubes públicas sin cifrado.",
+        ],
+      },
+    ],
+  },
+  ...guidesBatch23Es,
+  ...guidesBatch4Es,
 }
 
 const guidesUk: Record<GuideSlug, GuideArticle> = {
-  "mp3-vs-wav": { ...guidesEn["mp3-vs-wav"], title: "MP3 vs WAV — коли конвертувати аудіо?", description: "Порівняння MP3 і WAV: стиснення з втратами та без втрат." },
-  "pdf-to-jpg": { ...guidesEn["pdf-to-jpg"], title: "Як конвертувати PDF у JPG для друку та вебу", description: "Коли експортувати сторінки PDF як JPG або PNG." },
-  "webp-avif-images": { ...guidesEn["webp-avif-images"], title: "WebP і AVIF — сучасні формати зображень для сайтів", description: "WebP і AVIF vs JPG/PNG: стиснення та підтримка браузерів." },
-  "extract-audio-from-video": { ...guidesEn["extract-audio-from-video"], title: "Витягнути аудіо з відео — легальна альтернатива", description: "Як легально витягнути аудіо з власного відео." },
-  "json-csv-xml": { ...guidesEn["json-csv-xml"], title: "JSON, CSV і XML — конвертація даних між форматами", description: "Коли використовувати JSON, CSV, TSV і XML." },
-  "online-file-security": { ...guidesEn["online-file-security"], title: "Безпека файлів в онлайн-інструментах", description: "Як Toolando.tech обробляє файли та конфіденційність." },
-  "lossy-vs-lossless": { ...guidesEn["lossy-vs-lossless"], title: "Стиснення з втратами vs без втрат — простий посібник", description: "Відмінності та як уникнути втрати якості." },
-  "heic-iphone-jpg": { ...guidesEn["heic-iphone-jpg"], title: "HEIC з iPhone — відкрити та конвертувати в JPG", description: "Проблеми сумісності та конвертація в JPG/PNG." },
-  "pdf-vs-docx": { ...guidesEn["pdf-vs-docx"], title: "PDF vs DOCX — який формат коли?", description: "Відмінності в редагуванні, друку та архівуванні." },
-  "video-social-media": { ...guidesEn["video-social-media"], title: "Відео для соцмереж — MP4, роздільність і bitrate", description: "Підготовка для Instagram, TikTok, YouTube." },
-  "choose-audio-bitrate": { ...guidesEn["choose-audio-bitrate"], title: "Який bitrate MP3 або AAC обрати?", description: "128 vs 192 vs 320 kbps — практичний посібник." },
-  "prepare-images-for-web": { ...guidesEn["prepare-images-for-web"], title: "Підготовка зображень для вебу (JPG, WebP, AVIF)", description: "Роздільність, стиснення та формати." },
-  "docx-pdf-workflow": { ...guidesEn["docx-pdf-workflow"], title: "DOCX → PDF у офісній роботі", description: "Коли надсилати PDF і уникати зламаних шрифтів." },
-  "compress-images-without-quality-loss": { ...guidesEn["compress-images-without-quality-loss"] },
-  "merge-pdf-online-guide": { ...guidesEn["merge-pdf-online-guide"] },
-  "spreadsheet-csv-json-guide": { ...guidesEn["spreadsheet-csv-json-guide"] },
-  "video-compress-before-sharing": { ...guidesEn["video-compress-before-sharing"] },
-  "font-woff2-for-websites": { ...guidesEn["font-woff2-for-websites"] },
-  "toolando-editorial-standards": { ...guidesEn["toolando-editorial-standards"] },
-  "when-not-to-convert-files": { ...guidesEn["when-not-to-convert-files"] },
-  "png-vs-jpg-photos-and-graphics": { ...guidesEn["png-vs-jpg-photos-and-graphics"] },
-  "flac-music-archive-guide": { ...guidesEn["flac-music-archive-guide"] },
-  "zip-7z-rar-when-to-use": { ...guidesEn["zip-7z-rar-when-to-use"] },
-  "svg-vs-png-logos-and-icons": { ...guidesEn["svg-vs-png-logos-and-icons"] },
-  "podcast-export-mp3-aac-settings": { ...guidesEn["podcast-export-mp3-aac-settings"] },
-  "gif-vs-mp4-for-animations": { ...guidesEn["gif-vs-mp4-for-animations"] },
-  "tiff-and-png-for-document-scans": { ...guidesEn["tiff-and-png-for-document-scans"] },
-  "markdown-to-pdf-workflow": { ...guidesEn["markdown-to-pdf-workflow"] },
-  "extract-images-from-pdf-pages": { ...guidesEn["extract-images-from-pdf-pages"] },
-  "convert-video-to-gif-properly": { ...guidesEn["convert-video-to-gif-properly"] },
+  "mp3-vs-wav": {
+    ...guidesEn["mp3-vs-wav"],
+    title: "MP3 vs WAV — коли конвертувати аудіо?",
+    description: "Порівняння MP3 і WAV: стиснення з втратами та без втрат.",
+    sections: [
+      {
+        paragraphs: [
+          "MP3 використовує стиснення з втратами — файли малі, але частина аудіоданих втрачається назавжди. WAV зберігає повну якість (без втрат або несжатий), але файли можуть бути в 10 разів більші за MP3.",
+          "На практиці: слухаєте на телефоні → MP3 достатньо. Монтуєте подкаст у Audacity чи зводить у FL Studio → працюйте з WAV або FLAC.",
+        ],
+      },
+      {
+        title: "Коли конвертувати MP3 → WAV",
+        paragraphs: [
+          "Коли платформа чи програма вимагає формат без втрат для подальшого редагування.",
+          "Коли плануєте багато нарізок, ефектів і мастерінгу — кожна операція з MP3 погіршує якість.",
+          "Пам’ятайте: MP3 → WAV не повертає втрачену якість, але зупиняє подальшу деградацію під час редагування.",
+        ],
+      },
+      {
+        title: "Коли конвертувати WAV → MP3",
+        paragraphs: [
+          "Надсилання запису електронною поштою чи в месенджері — менший файл = швидша передача.",
+          "Публікація подкасту чи музики для прослуховування, а не для редагування.",
+          "Економія місця на диску у великій аудіобібліотеці.",
+        ],
+      },
+    ],
+  },
+  "pdf-to-jpg": {
+    ...guidesEn["pdf-to-jpg"],
+    title: "Як конвертувати PDF у JPG для друку та вебу",
+    description: "Коли експортувати сторінки PDF як JPG або PNG.",
+    sections: [
+      {
+        paragraphs: [
+          "PDF зберігає макет сторінки. Іноді потрібні окремі сторінки як зображення — для сайту, PowerPoint чи друку однієї сторінки.",
+          "Конвертер PDF → JPG у Toolando.tech рендерить кожну сторінку окремим JPG. Файли не зберігаються — одразу видаляються після конвертації.",
+        ],
+      },
+      {
+        title: "JPG чи PNG з PDF?",
+        paragraphs: [
+          "JPG — менші файли, ідеально для фото й документів без прозорості.",
+          "PNG — без втрат і з прозорістю; краще для графіки з текстом і чіткими краями.",
+        ],
+      },
+    ],
+  },
+  "webp-avif-images": {
+    ...guidesEn["webp-avif-images"],
+    title: "WebP і AVIF — сучасні формати зображень для сайтів",
+    description: "WebP і AVIF vs JPG/PNG: стиснення та підтримка браузерів.",
+    sections: [
+      {
+        paragraphs: [
+          "JPG і PNG домінують в інтернеті роками, але WebP дає файли на 25–35% менші за JPG за тієї ж візуальної якості. AVIF іде далі — файли можуть бути вдвічі менші за WebP.",
+          "Усі сучасні браузери підтримують WebP. AVIF має трохи слабшу підтримку в старих версіях Safari.",
+        ],
+      },
+      {
+        title: "Стратегія впровадження",
+        paragraphs: [
+          "Конвертуйте JPG → WebP для фото товарів і банерів — це прискорить завантаження сторінки.",
+          "Залиште JPG як запасний варіант для старих браузерів (тег HTML <picture>).",
+          "Для логотипів із прозорістю: PNG → WebP замість JPG.",
+        ],
+      },
+    ],
+  },
+  "extract-audio-from-video": {
+    ...guidesEn["extract-audio-from-video"],
+    title: "Витягнути аудіо з відео — легальна альтернатива",
+    description: "Як легально витягнути аудіо з власного відео.",
+    sections: [
+      {
+        paragraphs: [
+          "Іноді є відеофайл, а потрібна лише звукова доріжка. Toolando.tech витягує аудіо з MP4, MOV, AVI, MKV і зберігає як MP3, WAV, FLAC або AAC.",
+          "Це легальна операція з вашим власним файлом — на відміну від завантаження музики з YouTube чи TikTok, чого Toolando.tech свідомо не пропонує.",
+        ],
+      },
+    ],
+  },
+  "json-csv-xml": {
+    ...guidesEn["json-csv-xml"],
+    title: "JSON, CSV і XML — конвертація даних між форматами",
+    description: "Коли використовувати JSON, CSV, TSV і XML.",
+    sections: [
+      {
+        paragraphs: [
+          "JSON — стандарт REST API та конфігурацій застосунків. CSV і TSV служать для імпорту в Excel. XML використовують у старіших корпоративних системах і RSS.",
+          "JSON → CSV відкриває відповідь API в Excel. CSV → JSON готує дані для REST API. Toolando.tech зберігає структуру даних під час конвертації.",
+        ],
+      },
+    ],
+  },
+  "online-file-security": {
+    ...guidesEn["online-file-security"],
+    title: "Безпека файлів в онлайн-інструментах",
+    description: "Як Toolando.tech обробляє файли та конфіденційність.",
+    sections: [
+      {
+        paragraphs: [
+          "Завантаження файлів в онлайн-інструменти викликає природні занепокоєння. У Toolando.tech файли служать лише для операції, яку ви запитуєте — конвертації, стиснення чи перегляду.",
+          "Після завершення роботи файли видаляються з сервера. Деякі інструменти (універсальний відкривач) працюють повністю в браузері — тоді файл взагалі не покидає ваш комп’ютер. З’єднання шифрується (HTTPS).",
+        ],
+      },
+      {
+        title: "Чого ми НЕ робимо з вашими файлами",
+        paragraphs: [
+          "Не продаємо файли чи метадані третім сторонам.",
+          "Не використовуємо завантаження для навчання моделей ШІ.",
+          "Не тримаємо копії «про всяк випадок» — після завдання файл зникає з диска сервера.",
+        ],
+      },
+      {
+        title: "Коли файл залишається на сервері довше",
+        paragraphs: [
+          "Лише на час конвертації (зазвичай секунди до хвилини). Для великих відео до 500 МБ операція може тривати довше — файл усе одно видаляється після завершення.",
+          "Преміум-опція з обліковим записом може зберігати історію операцій (метадані, не файли) — деталі в політиці конфіденційності.",
+        ],
+      },
+    ],
+  },
+  "lossy-vs-lossless": {
+    ...guidesEn["lossy-vs-lossless"],
+    title: "Стиснення з втратами vs без втрат — простий посібник",
+    description: "Відмінності та як уникнути втрати якості.",
+    sections: [
+      {
+        paragraphs: [
+          "Формати з втратами (MP3, JPG, AAC, H.264) відкидають дані, щоб зменшити розмір. Формати без втрат (FLAC, PNG, WAV, ZIP) зберігають усі дані, але файли більші.",
+          "Правило: конвертуйте з втратами → без втрат лише коли мусите — втрачену якість не повернете. Конвертуйте з втратами → з втратами лише один раз — кожна повторна конвертація погіршує результат.",
+        ],
+      },
+      {
+        title: "Приклади на практиці",
+        paragraphs: [
+          "Музика: FLAC → MP3 перед надсиланням другу OK; MP3 → FLAC перед мастерінгом НІ.",
+          "Фото: RAW/JPG з камери → експорт JPG для вебу OK; багаторазове JPG → JPG у месенджері псує якість.",
+          "Відео: MP4 (H.264) зі стисненням з втратами, але це стандарт — не перекодовуйте без причини.",
+        ],
+      },
+      {
+        title: "Де перевірити тип формату",
+        paragraphs: [
+          "В енциклопедії форматів Toolando кожен формат має позначку з втратами / без втрат / контейнер.",
+          "Порівняння MP3 vs FLAC і JPG vs WebP пояснюють вердикт на одній сторінці.",
+        ],
+      },
+    ],
+  },
+  "heic-iphone-jpg": {
+    ...guidesEn["heic-iphone-jpg"],
+    title: "HEIC з iPhone — відкрити та конвертувати в JPG",
+    description: "Проблеми сумісності та конвертація в JPG/PNG.",
+    sections: [
+      {
+        paragraphs: [
+          "Apple за замовчуванням зберігає фото в HEIC — менший за JPG за тієї ж якості. Проблема: Windows без розширення, старі програми та багато сервісів не підтримують HEIC.",
+          "Рішення: конвертуйте HEIC → JPG або HEIC → PNG у Toolando.tech перед надсиланням поштою, завантаженням на сайт чи друком. У налаштуваннях iPhone також можна увімкнути «Найбільш сумісні» (JPG).",
+        ],
+      },
+    ],
+  },
+  "pdf-vs-docx": {
+    ...guidesEn["pdf-vs-docx"],
+    title: "PDF vs DOCX — який формат коли?",
+    description: "Відмінності в редагуванні, друку та архівуванні.",
+    sections: [
+      {
+        paragraphs: [
+          "DOCX (Word) служить для редагування тексту — зміст, стилі, заголовки. PDF фіксує макет — однаково на кожному пристрої, ідеально для рахунків, договорів і резюме.",
+          "Конвертуйте DOCX → PDF перед надсиланням «лише для читання». Конвертуйте PDF → DOCX лише коли потрібно редагувати текст — макет може роз’їхатися. Для архіву та друку завжди обирайте PDF.",
+        ],
+      },
+    ],
+  },
+  "video-social-media": {
+    ...guidesEn["video-social-media"],
+    title: "Відео для соцмереж — MP4, роздільність і bitrate",
+    description: "Підготовка для Instagram, TikTok, YouTube.",
+    sections: [
+      {
+        paragraphs: [
+          "Instagram, TikTok, YouTube і Facebook віддають перевагу MP4 з кодеком H.264 і аудіо AAC. Перед публікацією конвертуйте MOV, AVI чи MKV у MP4 — уникнете помилок завантаження.",
+          "Роздільність 1080p (1920×1080) достатня для більшості платформ. Вищий bitrate = краща якість, але більший файл. Деталі про MP4, WebM і MOV — в енциклопедії форматів Toolando.tech.",
+        ],
+      },
+    ],
+  },
+  "choose-audio-bitrate": {
+    ...guidesEn["choose-audio-bitrate"],
+    title: "Який bitrate MP3 або AAC обрати?",
+    description: "128 vs 192 vs 320 kbps — практичний посібник.",
+    sections: [
+      {
+        paragraphs: [
+          "Bitrate — це обсяг даних на секунду звуку. Вищий bitrate зазвичай означає кращу якість, але й більший файл. У MP3 різниця між 128 і 320 kbps чутна переважно на хорошій апаратурі та в музиці з великою динамікою.",
+          "Для мови (подкаст, інтерв’ю) часто вистачає 96–128 kbps моно. Для музики в навушниках розумний компроміс — 192–256 kbps стерео. 320 kbps — практична «стеля» MP3: подальше підвищення рідко дає вигоду, бо формат усе одно з втратами.",
+        ],
+      },
+      {
+        title: "MP3, AAC і Opus — коротке порівняння",
+        paragraphs: [
+          "AAC (M4A) за того ж bitrate зазвичай звучить краще за MP3 — звідси популярність у YouTube і Apple Music.",
+          "Opus чудово працює у VoIP і стримінгу на низьких bitrate (64–128 kbps).",
+          "Якщо архівуєте студійні записи, тримайте WAV або FLAC — bitrate формату з втратами не відновить втрачені дані.",
+        ],
+      },
+      {
+        title: "Типові помилки",
+        paragraphs: [
+          "Конвертація низькоякісного MP3 → вищий bitrate не покращує звучання — лише збільшує файл.",
+          "Багаторазове перекодування того самого треку (MP3 → AAC → MP3) щоразу погіршує якість.",
+          "Перед публікацією відео витягніть аудіо з власного MP4 замість завантажувати чужу музику з інтернету — це питання авторських прав.",
+        ],
+      },
+    ],
+  },
+  "prepare-images-for-web": {
+    ...guidesEn["prepare-images-for-web"],
+    title: "Підготовка зображень для вебу (JPG, WebP, AVIF)",
+    description: "Роздільність, стиснення та формати.",
+    sections: [
+      {
+        paragraphs: [
+          "Великі фото з камери (4000×3000 px) сповільнюють будь-яку сторінку. Перш ніж завантажувати на блог чи в магазин, зменште роздільність до реального розміру відображення — наприклад 1600 px ширини для hero-банера.",
+          "JPG лишається безпечним універсальним вибором. WebP і AVIF дають менші файли за тієї ж візуальної якості — варто використовувати в сучасних проєктах із тегом <picture> як запасний варіант для старих браузерів.",
+        ],
+      },
+      {
+        title: "Коли PNG замість JPG",
+        paragraphs: [
+          "Логотипи, іконки, знімки екрана з текстом і UI — PNG або WebP без втрат збережуть чіткі краї.",
+          "Фото товарів на білому тлі часто спокійно стискаються JPG quality 80–85 без помітних артефактів.",
+          "Уникайте багаторазового збереження того самого банера як JPG — кожне наступне збереження погіршує якість.",
+        ],
+      },
+      {
+        title: "Чекліст перед публікацією",
+        paragraphs: [
+          "1) Масштабуйте до цільової ширини в px. 2) Оберіть формат (JPG/WebP/AVIF). 3) Перевірте вагу файлу (<200 КБ для мініатюр, <500 КБ для великих фото блогу). 4) Відкрийте PageSpeed Insights і порівняйте LCP до/після.",
+        ],
+      },
+    ],
+  },
+  "docx-pdf-workflow": {
+    ...guidesEn["docx-pdf-workflow"],
+    title: "DOCX → PDF у офісній роботі",
+    description: "Коли надсилати PDF і уникати зламаних шрифтів.",
+    sections: [
+      {
+        paragraphs: [
+          "DOCX — формат для редагування: зручний, коли отримувач має Word і має щось виправити. PDF — формат для читання: макет, шрифти й поля виглядають однаково на Windows, Mac і телефоні.",
+          "Перед надсиланням резюме, пропозиції чи договору клієнту конвертуйте DOCX → PDF. Отримувач випадково не змінить зміст, і ви не побачите «замінних шрифтів» замість фірмового накреслення.",
+        ],
+      },
+      {
+        title: "Коли НЕ конвертувати PDF → DOCX",
+        paragraphs: [
+          "Скани рахунків і власноруч підписаних договорів — PDF лишається архівом; OCR — окремий процес.",
+          "Багатосторінкові документи зі складним макетом (каталоги, брошури) — конвертація в DOCX часто ламає пагінацію.",
+          "Якщо потрібен лише фрагмент тексту, скопіюйте його з PDF замість конвертувати весь файл.",
+        ],
+      },
+      {
+        title: "Безпека та конфіденційність",
+        paragraphs: [
+          "У Toolando.tech файли DOCX і PDF служать лише для конвертації й видаляються після завершення завдання.",
+          "Для документів із чутливими даними (паспорт, номери рахунків) використовуйте HTTPS і не зберігайте копії на публічних хмарних дисках без шифрування.",
+        ],
+      },
+    ],
+  },
+  ...guidesBatch23Uk,
+  ...guidesBatch4Uk,
 }
 
 const byLocale: Record<string, Record<GuideSlug, GuideArticle>> = {
@@ -753,7 +886,26 @@ const byLocale: Record<string, Record<GuideSlug, GuideArticle>> = {
   de: guidesDe,
   es: guidesEs,
   uk: guidesUk,
-  ...localizedGuideArticles,
+  fr: guidesFr,
+  it: guidesIt,
+  pt: guidesPt,
+  nl: guidesNl,
+  sv: guidesSv,
+  no: guidesNo,
+  da: guidesDa,
+  fi: guidesFi,
+  cs: guidesCs,
+  ro: guidesRo,
+  hu: guidesHu,
+  el: guidesEl,
+  tr: guidesTr,
+  ru: guidesRu,
+  ar: guidesAr,
+  zh: guidesZh,
+  ja: guidesJa,
+  ko: guidesKo,
+  hi: guidesHi,
+  id: guidesId,
 }
 
 for (const loc of contentLocales) {

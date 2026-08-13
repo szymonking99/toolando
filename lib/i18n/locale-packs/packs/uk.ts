@@ -81,6 +81,11 @@ export default uiPack({
     "comparisonsCta": "Перегляньте порівняння"
   },
   "footer": {
+    "emailAria": "Відкриває поштовий застосунок, щоб написати нам",
+    "youtube": "YouTube",
+    "messenger": "Messenger",
+    "instagram": "Instagram",
+    "facebook": "Facebook",
     "guides": "Посібники",
     "formats": "Формати файлів",
     "comparisons": "Порівняння",

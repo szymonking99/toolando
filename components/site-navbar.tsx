@@ -10,30 +10,34 @@ import { GlobalSearch } from "@/components/global-search"
 
 type NavLink = { label: string; href: string }
 
+const linkClass =
+  "shrink-0 whitespace-nowrap rounded-lg px-2 py-1.5 text-xs font-medium text-muted-foreground transition-colors hover:bg-white/[0.05] hover:text-foreground xl:px-2.5 xl:text-[13px] 2xl:text-sm"
+
 export function SiteNavbar() {
   const [open, setOpen] = useState(false)
   const [moreOpen, setMoreOpen] = useState(false)
   const moreRef = useRef<HTMLDivElement>(null)
   const { t, href } = useI18n()
 
-  // Always visible from lg up — enough room with full-bleed bar.
-  const primaryLinks: NavLink[] = [
+  const coreLinks: NavLink[] = [
     { label: t.nav.converters, href: href("/tools#konwertery") },
     { label: t.nav.calculators, href: href("/tools#kalkulatory") },
     { label: t.nav.aiTools, href: href("/#ai") },
     { label: t.nav.guides, href: href("/poradniki") },
+  ]
+
+  const extendedLinks: NavLink[] = [
     { label: t.nav.premium, href: href("/premium") },
     { label: t.nav.formats, href: href("/formaty") },
   ]
 
-  // Secondary — shown inline from xl, otherwise under "More"
   const moreLinks: NavLink[] = [
     { label: t.nav.faq, href: href("/faq") },
     { label: t.nav.aboutMe, href: href("/o-mnie") },
     { label: t.nav.contact, href: href("/kontakt") },
   ]
 
-  const allLinks = [...primaryLinks, ...moreLinks]
+  const allLinks = [...coreLinks, ...extendedLinks, ...moreLinks]
 
   useEffect(() => {
     function onClick(e: MouseEvent) {
@@ -56,54 +60,59 @@ export function SiteNavbar() {
     <header className="fixed inset-x-0 top-0 z-50 px-2 pt-3 sm:px-3 sm:pt-4">
       <nav
         aria-label="Main"
-        className="mx-auto flex w-full max-w-[100rem] items-center gap-1.5 rounded-2xl border border-white/10 bg-background/70 px-2.5 py-2 backdrop-blur-xl sm:gap-2 sm:px-4 sm:py-2.5"
+        className="mx-auto flex w-full max-w-[100rem] items-center gap-2 rounded-2xl border border-white/10 bg-background/70 px-2.5 py-2 backdrop-blur-xl sm:gap-3 sm:px-4 sm:py-2.5"
       >
         {/* Logo */}
-        <a href={href("/")} className="flex shrink-0 items-center gap-2 pr-1">
+        <a href={href("/")} className="flex shrink-0 items-center gap-2">
           <span className="flex size-8 items-center justify-center rounded-lg bg-primary/15 text-primary ring-1 ring-primary/30">
             <Wrench className="size-4" aria-hidden="true" />
           </span>
-          <span className="hidden text-sm font-semibold tracking-tight text-foreground min-[900px]:inline lg:text-base">
+          <span className="hidden text-sm font-semibold tracking-tight text-foreground lg:inline lg:text-base">
             Toolando
           </span>
         </a>
 
         {/* Search */}
-        <div className="relative hidden min-w-0 flex-[0_1_180px] md:block lg:flex-[0_1_220px] xl:flex-[0_1_280px]">
-          <GlobalSearch compact className="relative w-full" />
+        <div className="relative hidden w-[11rem] shrink-0 min-w-0 lg:block xl:w-[13rem] 2xl:w-[15rem]">
+          <GlobalSearch compact className="relative w-full max-w-full" />
         </div>
 
-        {/* Primary links */}
-        <div className="hidden min-w-0 flex-1 items-center justify-center gap-0 lg:flex">
-          {primaryLinks.map((link) => (
+        {/* Desktop links — zajmuje środek, nie wypycha akcji poza ekran */}
+        <div className="hidden min-w-0 flex-1 items-center justify-center gap-0.5 overflow-hidden lg:flex xl:gap-1">
+          {coreLinks.map((link) => (
+            <a key={link.href} href={link.href} className={linkClass}>
+              {link.label}
+            </a>
+          ))}
+
+          {/* Premium + Formaty — inline dopiero od 2xl */}
+          {extendedLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="shrink-0 rounded-lg px-1.5 py-1.5 text-[12px] font-medium text-muted-foreground transition-colors hover:bg-white/[0.05] hover:text-foreground xl:px-2.5 xl:text-[13px] 2xl:px-3 2xl:text-sm"
+              className={`${linkClass} hidden 2xl:inline-flex`}
             >
               {link.label}
             </a>
           ))}
 
-          {/* FAQ / O mnie / Kontakt — inline on xl+ */}
-          <div className="hidden items-center xl:flex">
-            {moreLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="shrink-0 rounded-lg px-2.5 py-1.5 text-[13px] font-medium text-muted-foreground transition-colors hover:bg-white/[0.05] hover:text-foreground 2xl:px-3 2xl:text-sm"
-              >
-                {link.label}
-              </a>
-            ))}
-          </div>
+          {/* FAQ / O mnie / Kontakt — tylko na bardzo szerokich ekranach */}
+          {moreLinks.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              className={`${linkClass} hidden min-[1700px]:inline-flex`}
+            >
+              {link.label}
+            </a>
+          ))}
 
-          {/* More menu — only below xl */}
-          <div ref={moreRef} className="relative xl:hidden">
+          {/* Więcej — ukryte gdy wszystkie linki są inline */}
+          <div ref={moreRef} className="relative min-[1700px]:hidden">
             <button
               type="button"
               onClick={() => setMoreOpen((v) => !v)}
-              className="inline-flex items-center gap-0.5 rounded-lg px-1.5 py-1.5 text-[12px] font-medium text-muted-foreground transition-colors hover:bg-white/[0.05] hover:text-foreground"
+              className="inline-flex items-center gap-0.5 rounded-lg px-2 py-1.5 text-xs font-medium text-muted-foreground transition-colors hover:bg-white/[0.05] hover:text-foreground xl:text-[13px]"
               aria-expanded={moreOpen}
               aria-haspopup="true"
             >
@@ -112,12 +121,22 @@ export function SiteNavbar() {
             </button>
             {moreOpen && (
               <div className="absolute right-0 top-full z-[70] mt-1 min-w-[11rem] rounded-xl border border-white/10 bg-background/95 py-1 shadow-xl backdrop-blur-md">
+                {extendedLinks.map((link) => (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    onClick={() => setMoreOpen(false)}
+                    className="block px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-white/[0.06] hover:text-foreground 2xl:hidden"
+                  >
+                    {link.label}
+                  </a>
+                ))}
                 {moreLinks.map((link) => (
                   <a
                     key={link.href}
                     href={link.href}
                     onClick={() => setMoreOpen(false)}
-                    className="block px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-white/[0.06] hover:text-foreground"
+                    className="block px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-white/[0.06] hover:text-foreground min-[1700px]:hidden"
                   >
                     {link.label}
                   </a>
@@ -127,25 +146,26 @@ export function SiteNavbar() {
           </div>
         </div>
 
-        {/* Desktop actions */}
-        <div className="ml-auto hidden shrink-0 items-center gap-1.5 lg:flex">
-          <LanguageSwitcher />
-          <AccountNavButton />
-          <SupportButton compact />
-        </div>
+        {/* Akcje — zawsze po prawej, bez zawijania */}
+        <div className="ml-auto flex shrink-0 items-center justify-end gap-1.5 sm:gap-2 lg:ml-0">
+          <div className="hidden items-center gap-1.5 sm:gap-2 lg:flex">
+            <LanguageSwitcher />
+            <AccountNavButton />
+            <SupportButton compact />
+          </div>
 
-        {/* Mobile / tablet */}
-        <div className="ml-auto flex shrink-0 items-center gap-2 lg:hidden">
-          <LanguageSwitcher />
-          <button
-            type="button"
-            onClick={() => setOpen((v) => !v)}
-            className="flex size-9 items-center justify-center rounded-lg border border-white/10 text-foreground"
-            aria-label={open ? t.nav.closeMenu : t.nav.openMenu}
-            aria-expanded={open}
-          >
-            {open ? <X className="size-5" /> : <Menu className="size-5" />}
-          </button>
+          <div className="flex items-center gap-2 lg:hidden">
+            <LanguageSwitcher />
+            <button
+              type="button"
+              onClick={() => setOpen((v) => !v)}
+              className="flex size-9 items-center justify-center rounded-lg border border-white/10 text-foreground"
+              aria-label={open ? t.nav.closeMenu : t.nav.openMenu}
+              aria-expanded={open}
+            >
+              {open ? <X className="size-5" /> : <Menu className="size-5" />}
+            </button>
+          </div>
         </div>
       </nav>
 
@@ -158,7 +178,7 @@ export function SiteNavbar() {
             onClick={() => setOpen(false)}
           />
           <div className="relative z-50 mx-auto mt-2 max-h-[calc(100dvh-5.5rem)] w-full max-w-[100rem] overflow-y-auto rounded-2xl border border-white/10 bg-background/95 p-4 shadow-xl backdrop-blur-xl lg:hidden">
-            <div className="mb-4 md:hidden">
+            <div className="mb-4">
               <GlobalSearch compact className="relative w-full" />
             </div>
             <div className="flex flex-col gap-0.5">

@@ -1,0 +1,49 @@
+{
+  "premiumPage": {
+    "title": "Toolando Premium",
+    "premiumTitle": "Premium",
+    "supporterTitle": "Supporter"
+  },
+  "nav": {
+    "premium": "Premium",
+    "faq": "FAQ"
+  },
+  "recommender": {
+    "categories": {
+      "video": "Video",
+      "document": "Document"
+    }
+  },
+  "ai": {
+    "badge": "Premium AI"
+  },
+  "footer": {
+    "faq": "FAQ",
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "messenger": "Messenger",
+    "youtube": "YouTube"
+  },
+  "cookieConsent": {
+    "title": "Cookies"
+  },
+  "account": {
+    "premiumBadge": "Premium"
+  },
+  "downloader": {
+    "eyebrow": "Video → MP3",
+    "inputPlaceholder": "https://www.tiktok.com/@user/video/...",
+    "idLabel": "ID"
+  },
+  "pages": {
+    "contact": {
+      "eyebrow": "Contact"
+    },
+    "about": {
+      "contactTitle": "Contact"
+    },
+    "terms": {
+      "s2PremiumTerm": "Premium"
+    }
+  }
+}

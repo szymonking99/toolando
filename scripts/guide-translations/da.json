@@ -1,0 +1,797 @@
+{
+  "mp3-vs-wav": {
+    "title": "MP3 vs WAV — hvornår skal man konvertere lyd?",
+    "description": "MP3 vs WAV sammenlignet: tabsgivende vs tabsfri komprimering, filstørrelse, DAW-redigering og hvilket format du skal vælge.",
+    "sections": [
+      {
+        "paragraphs": [
+          "MP3 bruger tabsgivende komprimering — filerne er små, men noget lyddata går tabt for altid. WAV bevarer fuld kvalitet (tabsfri eller ukomprimeret), men filerne kan være 10× større end MP3.",
+          "I praksis: lytte på mobilen → MP3 er fint. Redigere podcast i Audacity eller mixe i FL Studio → arbejd med WAV eller FLAC."
+        ]
+      },
+      {
+        "title": "Hvornår konvertere MP3 → WAV",
+        "paragraphs": [
+          "Når en platform eller app kræver tabsfrit format til videre redigering.",
+          "Når du planlægger flere klip, effekter og mastering — hver operation på MP3 forringer kvaliteten.",
+          "Bemærk: MP3 → WAV gendanner ikke tabt kvalitet, men stopper yderligere forringelse under redigering."
+        ]
+      },
+      {
+        "title": "Hvornår konvertere WAV → MP3",
+        "paragraphs": [
+          "Sende en optagelse via e-mail eller chat — mindre fil = hurtigere overførsel.",
+          "Publicere podcast eller musik til lytning, ikke redigering.",
+          "Spare diskplads i et stort lydbibliotek."
+        ]
+      }
+    ]
+  },
+  "pdf-to-jpg": {
+    "title": "Sådan konverterer du PDF til JPG til print og web",
+    "description": "Hvornår du skal eksportere PDF-sider som JPG, hvilken opløsning du skal bruge, og hvornår PNG er bedre.",
+    "sections": [
+      {
+        "paragraphs": [
+          "PDF bevarer sidelayout. Nogle gange har du brug for enkeltsider som billeder — til et website, PowerPoint eller udskrift af én side.",
+          "PDF → JPG-konverteren på Toolando.tech gengiver hver side som en separat JPG. Filer gemmes aldrig — de slettes straks efter konvertering."
+        ]
+      },
+      {
+        "title": "JPG eller PNG fra PDF?",
+        "paragraphs": [
+          "JPG — mindre filer, ideelt til fotos og dokumenter uden gennemsigtighed.",
+          "PNG — tabsfrit med gennemsigtighed; bedre til grafik med tekst og skarpe kanter."
+        ]
+      }
+    ]
+  },
+  "webp-avif-images": {
+    "title": "WebP og AVIF — moderne billedformater til websites",
+    "description": "WebP og AVIF vs JPG/PNG: komprimering, browserunderstøttelse og PageSpeed-optimering.",
+    "sections": [
+      {
+        "paragraphs": [
+          "JPG og PNG har domineret nettet i mange år, men WebP giver filer, der er 25–35 % mindre end JPG ved samme visuelle kvalitet. AVIF går længere — filerne kan være halvt så store som WebP.",
+          "Alle moderne browsere understøtter WebP. AVIF har noget svagere understøttelse i ældre Safari-versioner."
+        ]
+      },
+      {
+        "title": "Implementeringsstrategi",
+        "paragraphs": [
+          "Konverter JPG → WebP til produktfotos og bannere — hurtigere sidelindning.",
+          "Behold JPG som reserve til ældre browsere (HTML-tagget <picture>).",
+          "Til logoer med gennemsigtighed: PNG → WebP i stedet for JPG."
+        ]
+      }
+    ]
+  },
+  "extract-audio-from-video": {
+    "title": "Udtrække lyd fra video — det lovlige alternativ",
+    "description": "Hvordan du lovligt udtrækker et lydspor fra din egen videofil (MP4, MOV, MKV).",
+    "sections": [
+      {
+        "paragraphs": [
+          "Nogle gange har du en videofil og har kun brug for lyden. Toolando.tech udtrækker lyd fra MP4, MOV, AVI, MKV og gemmer det som MP3, WAV, FLAC eller AAC.",
+          "Det er lovligt på din egen fil — i modsætning til at downloade musik fra YouTube eller TikTok, hvilket Toolando.tech bevidst ikke tilbyder."
+        ]
+      }
+    ]
+  },
+  "json-csv-xml": {
+    "title": "JSON, CSV og XML — konvertere data mellem formater",
+    "description": "Hvornår du skal bruge JSON, CSV, TSV og XML, og hvordan du konverterer mellem dem uden at miste struktur.",
+    "sections": [
+      {
+        "paragraphs": [
+          "JSON er standard for REST API og appkonfiguration. CSV og TSV bruges til Excel-import. XML bruges i ældre virksomhedssystemer og RSS.",
+          "JSON → CSV åbner et API-svar i Excel. CSV → JSON forbereder data til et REST API. Toolando.tech bevarer datastrukturen under konvertering."
+        ]
+      }
+    ]
+  },
+  "online-file-security": {
+    "title": "Filsikkerhed i onlineværktøjer",
+    "description": "Hvordan Toolando.tech behandler filer, hvornår værktøjer kører lokalt i browseren, og privatliv.",
+    "sections": [
+      {
+        "paragraphs": [
+          "At uploade filer til onlineværktøjer vækker naturlige bekymringer. På Toolando.tech bruges filer udelukkende til den operation, du anmoder om — konvertering, komprimering eller forhåndsvisning.",
+          "Når jobbet er færdigt, slettes filer fra serveren. Nogle værktøjer (universalåbner) kører helt i browseren — filen forlader aldrig din computer. Forbindelsen er krypteret (HTTPS)."
+        ]
+      }
+    ]
+  },
+  "lossy-vs-lossless": {
+    "title": "Tabsgivende vs tabsfri komprimering — en enkel guide",
+    "description": "Hvordan tabsgivende og tabsfri komprimering adskiller sig, og hvordan du undgår kvalitetstab ved konvertering.",
+    "sections": [
+      {
+        "paragraphs": [
+          "Tabsgivende formater (MP3, JPG, AAC, H.264) kasserer data for at krympe filer. Tabsfrie formater (FLAC, PNG, WAV, ZIP) beholder alle data, men giver større filer.",
+          "Regel: konverter kun tabsgivende → tabsfri, når du må — du gendanner ikke tabt kvalitet. Konverter tabsgivende → tabsgivende kun én gang — hver omkonvertering forringer resultatet."
+        ]
+      }
+    ]
+  },
+  "heic-iphone-jpg": {
+    "title": "HEIC fra iPhone — sådan åbner og konverterer du til JPG",
+    "description": "Hvorfor iPhone gemmer HEIC, kompatibilitetsproblemer og hvordan du konverterer til JPG eller PNG.",
+    "sections": [
+      {
+        "paragraphs": [
+          "Apple gemmer fotos i HEIC som standard — mindre end JPG ved samme kvalitet. Problem: Windows uden udvidelse, ældre apps og mange tjenester understøtter ikke HEIC.",
+          "Løsning: konverter HEIC → JPG eller HEIC → PNG i Toolando.tech, før du sender e-mail, uploader eller printer. Du kan også indstille iPhone til «Mest kompatibel» (JPG) i Indstillinger."
+        ]
+      }
+    ]
+  },
+  "pdf-vs-docx": {
+    "title": "PDF vs DOCX — hvilket format hvornår?",
+    "description": "Forskelle mellem PDF og DOCX: redigering, print, arkivering og hvornår du skal konvertere hvilken vej.",
+    "sections": [
+      {
+        "paragraphs": [
+          "DOCX (Word) er til tekstredigering — indhold, stile, overskrifter. PDF låser layoutet — identisk på alle enheder, ideelt til fakturaer, kontrakter og CV.",
+          "Konverter DOCX → PDF, før du sender «kun til læsning». Konverter PDF → DOCX kun, når du skal redigere tekst — layoutet kan gå i stykker. Til arkivering og print, vælg altid PDF."
+        ]
+      }
+    ]
+  },
+  "video-social-media": {
+    "title": "Video til sociale medier — MP4, opløsning og bitrate",
+    "description": "Sådan forbereder du video til Instagram, TikTok, YouTube: MP4-format, H.264, 1080p-opløsning.",
+    "sections": [
+      {
+        "paragraphs": [
+          "Instagram, TikTok, YouTube og Facebook foretrækker MP4 med H.264-video og AAC-lyd. Konverter MOV, AVI eller MKV til MP4 før publicering for at undgå uploadfejl.",
+          "1080p (1920×1080) er nok til de fleste platforme. Højere bitrate = bedre kvalitet, men større fil. Se formatleksikonet for detaljer om MP4, WebM og MOV."
+        ]
+      }
+    ]
+  },
+  "choose-audio-bitrate": {
+    "title": "Hvilken MP3- eller AAC-bitrate skal du vælge?",
+    "description": "128 vs 192 vs 320 kbps — praktiske valg til podcasts, musik og video uden at spilde diskplads.",
+    "sections": [
+      {
+        "paragraphs": [
+          "Bitrate er mængden data pr. sekund lyd. Højere bitrate betyder normalt bedre lyd, men større filer. Med MP3 er forskellen mellem 128 og 320 kbps tydeligst på gode højttalere og tæt musik.",
+          "Til tale (podcast, interviews) rækker 96–128 kbps mono ofte. Til musik i hovedtelefoner er 192–256 kbps stereo et godt kompromis. 320 kbps er MP3s praktiske loft — højere hjælper sjældent, fordi formatet stadig er tabsgivende."
+        ]
+      },
+      {
+        "title": "MP3, AAC og Opus — hurtig sammenligning",
+        "paragraphs": [
+          "AAC (M4A) ved samme bitrate slår normalt MP3 — derfor bruger YouTube og Apple Music det.",
+          "Opus udmærker sig i VoIP og streaming ved lave bitrater (64–128 kbps).",
+          "Til studioarkiv, behold WAV eller FLAC — en tabsgivende bitrate gendanner ikke manglende data."
+        ]
+      },
+      {
+        "title": "Almindelige fejl",
+        "paragraphs": [
+          "At opskalere en lavkvalitets-MP3 til højere bitrate forbedrer ikke lyden — kun filstørrelsen vokser.",
+          "At omkode samme nummer flere gange (MP3 → AAC → MP3) forringer kvaliteten hver gang.",
+          "Til videoprojekter, udtræk lyd fra din egen MP4 i stedet for at downloade andres musik — ophavsret gælder."
+        ]
+      }
+    ]
+  },
+  "prepare-images-for-web": {
+    "title": "Sådan forbereder du billeder til web (JPG, WebP, AVIF)",
+    "description": "Opløsning, komprimering og format — hurtigere website uden synligt kvalitetstab.",
+    "sections": [
+      {
+        "paragraphs": [
+          "Store kamerabilleder (4000×3000 px) gør hver side langsom. Før upload til blog eller butik, tilpas størrelsen til den faktiske visningsstørrelse — f.eks. 1600 px bredde til en hero-banner.",
+          "JPG er stadig det sikre universelle valg. WebP og AVIF giver mindre filer ved samme visuelle kvalitet — brug dem i moderne stacks med <picture>-reserve til ældre browsere."
+        ]
+      },
+      {
+        "title": "Hvornår PNG i stedet for JPG",
+        "paragraphs": [
+          "Logoer, ikoner og UI-skærmbilleder — PNG eller tabsfri WebP bevarer skarpe kanter.",
+          "Produktfotos på hvid baggrund komprimeres ofte fint som JPG kvalitet 80–85.",
+          "Undgå at gemme samme banner som JPG igen og igen — hver runde tilføjer artefakter."
+        ]
+      },
+      {
+        "title": "Tjekliste før publicering",
+        "paragraphs": [
+          "1) Tilpas størrelse til målbredde i px. 2) Vælg format (JPG/WebP/AVIF). 3) Tjek filstørrelse (<200 KB thumbnails, <500 KB store blogbilleder). 4) Kør PageSpeed Insights og sammenlign LCP før/efter."
+        ]
+      }
+    ]
+  },
+  "docx-pdf-workflow": {
+    "title": "DOCX → PDF til kontorarbejde — hvornår og hvordan konvertere",
+    "description": "Sende CV, fakturaer og kontrakter: hvorfor PDF slår DOCX og hvordan du undgår ødelagte skrifttyper.",
+    "sections": [
+      {
+        "paragraphs": [
+          "DOCX er til redigering — godt når modtageren har Word og skal ændre tekst. PDF er til læsning — layout, skrifttyper og margener ser identiske ud på Windows, Mac og mobil.",
+          "Før du sender CV, tilbud eller kontrakt, konverter DOCX → PDF. Modtagere redigerer ikke indholdet ved et uheld, og du undgår, at erstatningsskrifttyper ødelægger dit brand."
+        ]
+      },
+      {
+        "title": "Hvornår du IKKE skal konvertere PDF → DOCX",
+        "paragraphs": [
+          "Skannede fakturaer og underskrevne kontrakter — behold PDF som arkiv; OCR er et separat trin.",
+          "Komplekse flersidede layouts (kataloger, brochurer) — DOCX-konvertering ødelægger ofte sideinddeling.",
+          "Hvis du kun har brug for et tekstuddrag, kopiér fra PDF i stedet for at konvertere hele filen."
+        ]
+      },
+      {
+        "title": "Sikkerhed og privatliv",
+        "paragraphs": [
+          "På Toolando.tech bruges DOCX- og PDF-filer kun til konvertering og slettes, når jobbet er færdigt.",
+          "Til følsomme dokumenter (ID, banknumre) brug HTTPS og efterlad ikke kopier på offentlige cloudtjenester uden kryptering."
+        ]
+      }
+    ]
+  },
+  "compress-images-without-quality-loss": {
+    "title": "Sådan komprimerer du JPG- og PNG-billeder uden synligt kvalitetstab",
+    "description": "Hvornår du skal bruge kompressoren, hvilket kvalitetsniveau du skal vælge, og komprimering vs formatkonvertering.",
+    "sections": [
+      {
+        "paragraphs": [
+          "At komprimere et billede reducerer filstørrelsen uden at ændre format — du har stadig JPG eller PNG, bare lettere. At konvertere JPG → WebP ændrer format og er ofte bedre til websites, men print-workflows kan kræve JPG.",
+          "På Toolando.tech testede jeg billedekompressoren på 2000×2000 produktfotos: ved kvalitet 80 % faldt filstørrelsen 40–60 % uden synlige artefakter på skærmen."
+        ]
+      },
+      {
+        "title": "Hvornår komprimere vs konvertere",
+        "paragraphs": [
+          "Komprimer, når formatet er OK (f.eks. butik kræver JPG), men filen er for tung til e-mail eller CMS.",
+          "Konverter til WebP/AVIF, når du publicerer på dit eget website med <picture>-reserve.",
+          "Gem aldrig samme JPG mange gange — hver runde tilføjer artefakter."
+        ]
+      },
+      {
+        "title": "Typiske scenarier",
+        "paragraphs": [
+          "E-mailvedhæftning: JPG-kvalitet ~75–85, maks bredde 1600 px.",
+          "E-handel: WebP med JPG-reserve; thumbnails 800 px.",
+          "UI-skærmbilleder med tekst: PNG eller tabsfri WebP — undgå aggressiv JPG."
+        ]
+      }
+    ]
+  },
+  "merge-pdf-online-guide": {
+    "title": "Flet flere PDF'er til én — hvornår det giver mening",
+    "description": "Kombinere fakturaer, scanninger og vedhæftninger — sideorden, kvalitet og privatliv.",
+    "sections": [
+      {
+        "paragraphs": [
+          "At flette PDF'er er dagligt kontorarbejde: faktura + kontrakt + ID-scanning i én vedhæftning. Toolando.tech fletter filer i den rækkefølge, du vælger.",
+          "PDF bevarer vektortekst og bitmap-scanninger — sammenlægning reducerer ikke scanningsopløsningen, hvis kilderne ikke var overkomprimeret."
+        ]
+      },
+      {
+        "title": "Før du sender",
+        "paragraphs": [
+          "Ordne filer logisk (forside → indhold → vedhæftninger).",
+          "Fjern dubletsider fra scanninger.",
+          "Hvis modtageren bruger mobil, sigt mod ≤10–15 MB eller del via cloud-link."
+        ]
+      },
+      {
+        "title": "Privatliv",
+        "paragraphs": [
+          "Behandl forretnings- og personlige dokumenter som fortrolige. Toolando sletter filer efter behandling; følg stadig virksomhedens retningslinjer for følsomme data."
+        ]
+      }
+    ]
+  },
+  "spreadsheet-csv-json-guide": {
+    "title": "CSV, JSON og Excel — flytte data mellem regneark og API'er",
+    "description": "Hvornår du skal vælge CSV vs JSON, og hvordan du undgår ødelagte decimaler og kodning.",
+    "sections": [
+      {
+        "paragraphs": [
+          "CSV er ren tekst — åbnes i Excel, Google Regneark og BI-værktøjer. JSON håndterer indlejrede strukturer (API'er, konfigurationer). XLSX tilføjer celletyper og flere ark.",
+          "Typisk flow: API-eksport som JSON → JSON til CSV → analyse i Excel. Omvendt: kundeliste CSV → JSON → REST API."
+        ]
+      },
+      {
+        "title": "Kodning og Excel",
+        "paragraphs": [
+          "Brug UTF-8 CSV til tegn uden for ASCII. Hvis Excel forvrænger tekst, importer via Data → Fra tekst og vælg UTF-8.",
+          "CSV-separatorer varierer efter sprog (komma vs semikolon). TSV (tabulator) er sikrere, når beskrivelser indeholder kommaer."
+        ]
+      },
+      {
+        "title": "Valider efter konvertering",
+        "paragraphs": [
+          "Sammenlign antal rækker før og efter.",
+          "For JSON, tjek nøgler og typer — ét manglende anførselstegn ødelægger hele filen."
+        ]
+      }
+    ]
+  },
+  "video-compress-before-sharing": {
+    "title": "Krymp video før e-mail eller WhatsApp",
+    "description": "MP4, opløsning, bitrate — praktiske størrelsesgrænser og containerkonvertering.",
+    "sections": [
+      {
+        "paragraphs": [
+          "Telefonoptagelser i MOV/MKV kan være hundredvis af MB. Mange e-mailkonti blokerer vedhæftninger >25 MB. Løsning: konverter til MP4 (H.264 + AAC) og sænk opløsningen ved behov.",
+          "720p er ofte nok til forhåndsvisning på mobil; behold 1080p til TV-visning."
+        ]
+      },
+      {
+        "title": "Trin før afsendelse",
+        "paragraphs": [
+          "1) Konverter MOV/MKV → MP4. 2) Tjek filstørrelse. 3) Klip unødvendig intro/outro i en editor, hvis stadig for stor. 4) Brug cloud-link, hvis >25 MB."
+        ]
+      }
+    ]
+  },
+  "font-woff2-for-websites": {
+    "title": "TTF, OTF, WOFF, WOFF2 — skrifttyper til web",
+    "description": "Konvertere skrifttyper til @font-face, licenser og påvirkning på sidehastighed.",
+    "sections": [
+      {
+        "paragraphs": [
+          "Browsere har brug for WOFF/WOFF2 i CSS (@font-face), ikke råe Windows-skrifttyper. WOFF2 giver den mindste overførselsstørrelse.",
+          "Toolandos TTF/OTF → WOFF2-konverterer forbereder webklare filer. Tjek skrifttypelicensen før indlejring."
+        ]
+      },
+      {
+        "title": "Ydelse",
+        "paragraphs": [
+          "Subset skrifttyper til brugte glyffer i proffeværktøjer, hvis filerne er store.",
+          "Forudindlæs kritisk WOFF2 i <head> til tekst above-the-fold.",
+          "Brug font-display: swap, så tekst forbliver læsbar under indlæsning."
+        ]
+      }
+    ]
+  },
+  "toolando-editorial-standards": {
+    "title": "Toolando.tech redaktionelle standarder — sådan skrives guider",
+    "description": "Hvordan artikler, konverterartests og formatleksikonet produceres — gennemsigtighed for læsere og anmeldere.",
+    "sections": [
+      {
+        "paragraphs": [
+          "Toolando.tech bygges alene af Szymon Badyl (Badyl-Tech). Guider massegenereres ikke og kopieres ikke fra Wikipedia — de følger rigtige konverteringstests.",
+          "Hver artikel har publicerings- og opdateringsdato. Når platformkrav eller biblioteker ændres, reviderer jeg teksten."
+        ]
+      },
+      {
+        "title": "Hvad jeg tester",
+        "paragraphs": [
+          "Lyd-/videokonverterere: tid, outputstørrelse, afspilning i VLC og på mobil.",
+          "Billeder: visuelt før/efter, PNG-gennemsigtighed, WebP vs JPG-størrelse.",
+          "Dokumenter: layout efter PDF ↔ DOCX, kodning i CSV/JSON."
+        ]
+      },
+      {
+        "title": "Hvad jeg ikke lover",
+        "paragraphs": [
+          "Ingen «100 % kvalitet» ved tabsgivende → tabsgivende konvertering.",
+          "Ingen download af andres YouTube/TikTok-videoer — kun lovlige operationer på dine filer.",
+          "Google-annoncer kan vises, men redaktionelt indhold skrives uafhængigt af annoncører."
+        ]
+      }
+    ]
+  },
+  "when-not-to-convert-files": {
+    "title": "Hvornår du IKKE skal konvertere en fil — 7 situationer, der skader kvaliteten",
+    "description": "Spring unødvendige konverteringer over: behold originaler, tabsfrie arkiver og sikkerhedskopier før eksperimenter.",
+    "sections": [
+      {
+        "paragraphs": [
+          "Onlinekonverterere er praktiske, men ikke hver operation hjælper. Nogle gange behold originalen eller brug tabsfrie arkiver (ZIP, FLAC).",
+          "Regel: forvent ikke mirakler ved tabsgivende → tabsfri — MP3 → WAV gendanner ikke tabte data."
+        ]
+      },
+      {
+        "title": "Lad det være",
+        "paragraphs": [
+          "Du har allerede PNG med gennemsigtighed — konverter ikke til JPG uden grund.",
+          "Designprojekter — behold lagkilder (PSD, SVG); eksporter JPG først til sidst.",
+          "Studio WAV/FLAC — flad ikke ud til MP3, før slutmixen.",
+          "Digitalt underskrevet PDF — konvertering kan ugyldiggøre signaturen."
+        ]
+      },
+      {
+        "title": "Før du klikker Konverter",
+        "paragraphs": [
+          "Behold en kopi af originalen.",
+          "Tjek om målplatformen allerede accepterer dit kildeformat.",
+          "Læs formatsammenligninger i Toolando-leksikonet for at springe et unødvendigt trin over."
+        ]
+      }
+    ]
+  },
+  "png-vs-jpg-photos-and-graphics": {
+    "title": "PNG vs JPG — fotos vs grafik med tekst",
+    "description": "Praktiske valg: fotos, skærmbilleder, logoer med gennemsigtighed og print.",
+    "sections": [
+      {
+        "paragraphs": [
+          "PNG og JPG er de to mest forvekslede formater. JPG komprimerer fotos godt — himmel, hud, landskaber — men ødelægger skarpe kanter og tekst. PNG bevarer hver pixel præcist, inklusive gennemsigtighed (alpha), men filer er ofte 5–10× større end JPG ved samme opløsning.",
+          "Regel jeg bruger i Toolando.tech-tests: galleri- eller socialt foto → JPG (eller WebP med JPG-reserve). Ikon, logo, diagram, UI-skærmbillede → PNG. Blandet foto + tekst (f.eks. omslag) → ofte PNG eller tabsfri WebP."
+        ]
+      },
+      {
+        "title": "Hvornår vælge JPG",
+        "paragraphs": [
+          "Kamera- eller telefonfotos uden gennemsigtighed.",
+          "Produkt-thumbnails, når baggrunden er ensfarvet, og du ikke har brug for alpha.",
+          "E-mailvedhæftninger — JPG-kvalitet 80–85 er normalt et godt kompromis.",
+          "Hjemmeprint af fotos — mange butikker accepterer højopløselig JPG (300 DPI tilsvarende)."
+        ]
+      },
+      {
+        "title": "Hvornår vælge PNG",
+        "paragraphs": [
+          "Websitelogo på transparent baggrund — JPG fylder altid med hvidt eller sort.",
+          "Skærmbilleder af UI, diagrammer, kode — tekst forbliver skarp.",
+          "Flad grafik med få farver (infografik, appikoner).",
+          "Når du planlægger videre lagredigering — tabsfri PNG tilføjer ikke artefakter ved hver gemning (i modsætning til gentagen JPG)."
+        ]
+      },
+      {
+        "title": "Almindelige fejl",
+        "paragraphs": [
+          "Gemme logo som JPG — takkede kanter og ingen gennemsigtighed.",
+          "Gemme 4000×3000-foto som PNG «for kvalitet» — unødvendigt 15 MB i stedet for 2 MB JPG.",
+          "PNG → JPG → PNG-løkker — hver JPG-runde mister kvalitet; behold master i PNG."
+        ]
+      }
+    ]
+  },
+  "flac-music-archive-guide": {
+    "title": "FLAC som musikarkiv — hvornår det betaler sig vs MP3",
+    "description": "Tabsfri FLAC vs MP3 320 kbps: sikkerhedskopier, hjemmestreaming og bilradio.",
+    "sections": [
+      {
+        "paragraphs": [
+          "FLAC (Free Lossless Audio Codec) er tabsfri komprimering — som ZIP for lyd. Ved afkodning får du samme signal som WAV, men filen tager cirka halvdelen af pladsen. MP3 fjerner data permanent; selv 320 kbps er ikke bitidentisk med en CD-rip.",
+          "I praksis: hvis du køber tabsfri musik eller ripper egne plader, er FLAC et fornuftigt arkivformat. På mobil med Bluetooth-hovedtelefoner er FLAC vs MP3 256 kbps ofte uhørbart — så sparer konvertering til MP3 gigabyte."
+        ]
+      },
+      {
+        "title": "Arkiv-workflow",
+        "paragraphs": [
+          "1) Master i FLAC (eller WAV) på NAS / cloudsikkerhedskopi.",
+          "2) Arbejdskopier MP3/AAC til mobil og bil.",
+          "3) Konverter aldrig MP3 → FLAC «for kvalitet» — det blæser kun filen op uden at gendanne data.",
+          "Jeg testede FLAC → MP3-konvertereren på Toolando.tech på 40–60 minutters album; tjek metadata (titel, kunstner) i afspilleren efter konvertering."
+        ]
+      },
+      {
+        "title": "Kompatibilitet",
+        "paragraphs": [
+          "FLAC: VLC, Foobar2000, de fleste Android-afspillere; svagere i native Apple Music (ALAC passer Apple bedre).",
+          "Bilradio læser ofte kun MP3/WMA/AAC fra USB — FLAC → MP3 er nødvendigt.",
+          "Hjemmestreaming (Plex, Jellyfin) håndterer FLAC fint."
+        ]
+      }
+    ]
+  },
+  "zip-7z-rar-when-to-use": {
+    "title": "ZIP, 7z og RAR — hvilket arkiv du skal sende",
+    "description": "Størrelse, kompatibilitet og kryptering — hvornår ZIP er nok, og hvornår 7z eller RAR hjælper.",
+    "sections": [
+      {
+        "paragraphs": [
+          "Et arkiv pakker mange filer i én — praktisk til e-mail, cloud og mappebackup. ZIP er universel standard: åbnes på Windows, macOS og Linux uden ekstra software. 7z giver normalt mindre resultat, men modtageren kan have brug for 7-Zip. RAR findes i ældre workflows; at oprette RAR online har licensbegrænsninger — du konverterer oftere RAR → ZIP end omvendt."
+        ]
+      },
+      {
+        "title": "Hvornår ZIP",
+        "paragraphs": [
+          "Sende til kunder eller myndigheder — lavest risiko for «kan ikke åbnes».",
+          "Arkivere kode, kontordokumenter, sæt af JPG-fotos.",
+          "Systemer, der kun accepterer .zip-uploads."
+        ]
+      },
+      {
+        "title": "Hvornår 7z",
+        "paragraphs": [
+          "Store spilmappers, videoprojekter, backup før ekstern disk — mindre fil = hurtigere upload.",
+          "Når modtageren er teknisk og har 7-Zip.",
+          "ZIP → 7z-konvertering giver mening én gang — pak ikke samme data om i loop."
+        ]
+      },
+      {
+        "title": "Sikkerhed",
+        "paragraphs": [
+          "Arkivadgangskoder stopper tilfældig åbning, men erstatter ikke end-to-end-kryptering til følsomme dokumenter.",
+          "Udpak ikke arkiver fra ukendte kilder uden antivirusskanning.",
+          "Toolando behandler arkiver kun under containerkonvertering — indholdet skal være lovligt og dit."
+        ]
+      }
+    ]
+  },
+  "svg-vs-png-logos-and-icons": {
+    "title": "SVG vs PNG — logoer og ikoner til web",
+    "description": "Vektor vs raster: hvornår du skal levere SVG og hvornår @2x PNG er nok.",
+    "sections": [
+      {
+        "paragraphs": [
+          "SVG er vektorgrafik beskrevet matematisk — skaleres på alle skærme uden pixelering. PNG er en bitmap med fast opløsning; på retina har du ofte brug for en 2×-version. Til websites bør logoer og simple ikoner næsten altid være SVG (eller ikonfont), medmindre filen indeholder indlejret foto.",
+          "SVG → PNG-konvertereren på Toolando.tech hjælper, når trykkeri vil have PNG 300 DPI eller et system afviser SVG."
+        ]
+      },
+      {
+        "title": "SVG-fordele",
+        "paragraphs": [
+          "Én fil til mobil og desktop — mindre CSS, intet srcset.",
+          "Nem farveændring via CSS fill på simple ikoner.",
+          "Bedre Lighthouse-resultater end tunge PNG-heroes."
+        ]
+      },
+      {
+        "title": "Hvornår PNG i stedet for SVG",
+        "paragraphs": [
+          "Logo med gradienter, skygger eller effekter, der eksporteres dårligt fra vektor.",
+          "Open Graph / sociale forhåndsvisninger — platforme rasteriserer alligevel.",
+          "Desktop-apps uden SVG-motor.",
+          "Eksporter @2x PNG (f.eks. 512×512) som reserve i <img> ved siden af inline SVG."
+        ]
+      }
+    ]
+  },
+  "podcast-export-mp3-aac-settings": {
+    "title": "Podcast-eksport — MP3 eller AAC og hvilken bitrate",
+    "description": "Indstillinger efter optagelse i Audacity, Reaper eller på mobil: mono, 44,1 kHz, fornuftig komprimering.",
+    "sections": [
+      {
+        "paragraphs": [
+          "Podcast er mest tale — du har ikke brug for stereo 320 kbps som studiemusik. De fleste platforme (Spotify, Apple Podcasts, RSS-værter) omkoder uploads alligevel. Send stadig en fornuftig master: mono eller stereo, 44,1 eller 48 kHz, MP3 128–192 kbps eller AAC/M4A 128 kbps.",
+          "Optaget i WAV eller FLAC? Sluteksport er næsten altid MP3 eller AAC — jeg testede WAV → MP3 på Toolando.tech på 30–60 minutters episoder; ~30 MB WAV falder til ~28 MB ved 128 kbps stereo (mono tale kan blive ~15 MB)."
+        ]
+      },
+      {
+        "title": "Anbefalede indstillinger",
+        "paragraphs": [
+          "Solo / enstemmig interview: mono, MP3 96–128 kbps.",
+          "To stemmer på separate spor: stereo 128 kbps.",
+          "Musik intro/outro i stereo, resten mono — eksporter alt stereo 128 kbps for enkelhed.",
+          "Undgå 64 kbps — hårde s-lyde og støj på billige mikrofoner."
+        ]
+      },
+      {
+        "title": "MP3 vs AAC (M4A)",
+        "paragraphs": [
+          "AAC ved samme bitrate slår normalt MP3 — Apple foretrækker M4A.",
+          "MP3 har bredest kompatibilitet i gamle afspillere og biler.",
+          "Upload ikke rå WAV til podcast-værter — upload tager evigheder."
+        ]
+      }
+    ]
+  },
+  "gif-vs-mp4-for-animations": {
+    "title": "GIF vs MP4 — animationer på websites og sociale medier",
+    "description": "Hvornår gammeldags GIF giver mening, og hvornår kort MP4 eller WebM sparer megabyte.",
+    "sections": [
+      {
+        "paragraphs": [
+          "GIF afspilles overalt, men er teknisk en billedsekvens uden moderne videokomprimering — en 5-sekunders 720p-animation kan veje 10–20 MB. Det samme i MP4 (H.264) får ofte plads i 500 KB–1 MB ved acceptabel kvalitet.",
+          "MP4 → GIF på Toolando.tech giver mening til korte loops (loader, Slack-reaktion), når platformen ikke tillader indlejret video. På dit eget website, foretræk <video autoplay loop muted playsinline> med MP4 eller WebM."
+        ]
+      },
+      {
+        "title": "Hvornår GIF",
+        "paragraphs": [
+          "Kort loop (<5 s), lille opløsning (≤480 px bredde).",
+          "Platformkrav (nogle fora er kun GIF).",
+          "Simpel grafik med få farver — så kan GIF være virkelig let."
+        ]
+      },
+      {
+        "title": "Hvornår MP4/WebM",
+        "paragraphs": [
+          "Animation med mange farver, gradienter eller videoklip.",
+          "Websites — bedre LCP og mindre båndbredde.",
+          "Instagram/TikTok kræver video, ikke GIF."
+        ]
+      },
+      {
+        "title": "Tips til MP4 → GIF",
+        "paragraphs": [
+          "Klip længden — hvert sekund er dusinvis af billeder.",
+          "Reducer opløsningen før konvertering.",
+          "Begræns farvepaletten, hvis værktøjet tilbyder det (mindre banding)."
+        ]
+      }
+    ]
+  },
+  "tiff-and-png-for-document-scans": {
+    "title": "Dokumentscanninger — TIFF, PNG eller JPG",
+    "description": "Fakturaer og kontrakter: tabsfri lagring, flersidethed og hvornår PDF er nok.",
+    "sections": [
+      {
+        "paragraphs": [
+          "At scanne faktura eller kontrakt adskiller sig fra feriefoto. Tekst og stempler kræver skarpe kanter — aggressiv JPG gør bogstaver uklare. TIFF (ofte LZW tabsfri) og PNG er sikrere til arkiv. Til afsendelse og OCR ender du ofte med PDF eller JPG med moderat kvalitet alligevel.",
+          "Flerstegs TIFF kan være én fil med mange lag — ikke alle visere håndterer det; til kontor og kunder er flersidet PDF tydeligere (flet PDF i Toolando.tech)."
+        ]
+      },
+      {
+        "title": "Anbefalet workflow",
+        "paragraphs": [
+          "Scanner → PNG eller TIFF pr. side (300 DPI til print, 150 DPI til forhåndsvisning).",
+          "Ret rotation/beskæring i editor.",
+          "Flet sider til én PDF til levering.",
+          "Valgfri JPG-kvalitet 90 kun hvis modtageren ikke accepterer PDF."
+        ]
+      },
+      {
+        "title": "Hvad du skal undgå",
+        "paragraphs": [
+          "JPG-kvalitet 60 på faktura — beløb kan blive ulæselige.",
+          "Gentagne TIFF → JPG → TIFF-cyklusser.",
+          "Farvescanning i 600 DPI «for en sikkerheds skyld» — gigabyte uden nytte for A4-tekst."
+        ]
+      }
+    ]
+  },
+  "markdown-to-pdf-workflow": {
+    "title": "Markdown til PDF — dokumentation, README og noter",
+    "description": "MD → HTML → PDF/DOCX: hvornår editor-eksport er nok, og hvornår en onlinekonverterer hjælper.",
+    "sections": [
+      {
+        "paragraphs": [
+          "Markdown er til skrivning — overskrifter, lister, kode — uden WYSIWYG-layout. Udviklere beholder README.md i repos; så har du brug for PDF til kunde eller print. Typisk vej: MD → HTML (render) → PDF via browserens Udskriv til PDF, eller MD → DOCX → PDF for bedre sidehoveder.",
+          "Jeg testede MD → HTML og DOCX → PDF-konverterere på Toolando.tech på 20–40 KB-filer; danske tegn og kodeblokke fungerer, hvis MD-filen er UTF-8."
+        ]
+      },
+      {
+        "title": "Hvilken vej hvornår",
+        "paragraphs": [
+          "Hurtig forhåndsvisning: MD → HTML, åbn i browser.",
+          "Formelt dokument med sidenumre: MD → DOCX (eller editor), virksomhedsstil, derefter DOCX → PDF.",
+          "Enkle noter uden styling: MD → TXT er nok."
+        ]
+      },
+      {
+        "title": "Gode MD-vaner",
+        "paragraphs": [
+          "Én fil = ét emne; del lange dokumenter i kapitler.",
+          "Link billeder relativt — tjek stier efter konvertering.",
+          "MD-tabeller kan gå i stykker i PDF — overvej CSV eller DOCX til tabulære data."
+        ]
+      }
+    ]
+  },
+  "extract-images-from-pdf-pages": {
+    "title": "Sådan udtrækker du billeder fra PDF-sider (JPG, PNG, WebP)",
+    "description": "Præsentationer, kataloger og scanninger — hvornår det giver mening at eksportere en side som billede og hvilken opløsning.",
+    "sections": [
+      {
+        "paragraphs": [
+          "PDF er en container — indeni kan der være vektorer, skrifttyper og indlejrede bitmaps. PDF → JPG gengiver hver side som rasterbillede. Det er ikke det samme som at udtrække et enkelt indlejret logo (det kræver PDF-editor), men til slides, plakater og scanninger fungerer det fint.",
+          "En 16:9-præsentation eksporteret til PNG med 1920 px bredde ser skarp ud på skærm; til A4-print sigt mod ~2480×3508 px (300 DPI), hvis værktøjet understøtter høj opløsning."
+        ]
+      },
+      {
+        "title": "JPG vs PNG vs WebP",
+        "paragraphs": [
+          "Slide med fotobaggrund → JPG eller WebP.",
+          "Slide med diagrammer og tekst → PNG (skarpere typografi).",
+          "Website-thumbnail → WebP med JPG-reserve efter videre konvertering."
+        ]
+      },
+      {
+        "title": "Flerstegs PDF'er",
+        "paragraphs": [
+          "Eksporter enkeltsider, hvis du kun har brug for slide 5 og 12.",
+          "Til galleri af alle sider — konverter hele filen og sorter efter nummer i filnavne.",
+          "Respekter ophavsret — andres PDF er ikke dit foto at publicere frit."
+        ]
+      }
+    ]
+  },
+  "convert-video-to-gif-properly": {
+    "title": "Sådan laver du en god GIF fra video — opløsning, FPS og længde",
+    "description": "MP4/MOV til GIF uden kæmpefil: praktiske grænser og alternativer.",
+    "sections": [
+      {
+        "paragraphs": [
+          "GIF har ingen lyd og bruger ikke H.264 — hvert billede er en fuld bitmap (ofte 256-farvepalet). Så et 10-sekunders 1080p-klip som GIF kan veje mere end originalvideoen. Mål: kort, lille, lav opløsning.",
+          "Før MP4 → GIF, klip klippet til 2–4 sekunder i en editor og brug 10–15 FPS i stedet for 30 — GIF gendanner alligevel ikke filmens jævnhed."
+        ]
+      },
+      {
+        "title": "Startparametre",
+        "paragraphs": [
+          "Maks bredde 480–640 px til memes og reaktioner.",
+          "Maks længde 5 s — over det, overvej loopende MP4.",
+          "Simple baggrunde (greenscreen) komprimeres lettere end gradienter og støj."
+        ]
+      },
+      {
+        "title": "Efter konvertering",
+        "paragraphs": [
+          "Tjek filstørrelse — GIF over 5 MB giver sjældent mening på en side.",
+          "Hvis GIF er for stor, GIF → MP4 og <video>-indlejring løser ofte problemet.",
+          "Toolando behandler din video kun under konvertering — den hoster ikke færdige GIF'er offentligt."
+        ]
+      }
+    ]
+  },
+  "split-pdf-pages-guide": {
+    "title": "Sådan deler du en PDF i separate sider online",
+    "description": "Hvornår du skal dele PDF'er, hvordan du vælger sideintervaller og hvad du gør med ZIP-resultatet.",
+    "sections": [
+      {
+        "paragraphs": [
+          "At dele PDF er almindeligt efter scanning af flersidig kontrakt eller faktura — du kan have brug for at sende én side via e-mail eller vedhæfte et fragment et andet sted.",
+          "På Toolando.tech kan du eksportere hver side separat eller angive interval (f.eks. 1-3,5). Resultatet er et ZIP med PDF-filer, hver beholder original vektor- eller scanningskvalitet."
+        ]
+      },
+      {
+        "title": "Hvornår dele vs flette",
+        "paragraphs": [
+          "Del — når modtageren kun har brug for et fragment (signaturside, vedhæftning, forside).",
+          "Flet — når du samler scanninger til ét arkiv eller udsendelse.",
+          "Efter opdeling, overvej sidenummer eller komprimer store scanninger."
+        ]
+      }
+    ]
+  },
+  "remove-exif-privacy-guide": {
+    "title": "EXIF i fotos — hvad du skal fjerne før publicering",
+    "description": "GPS, kameramodel og dato i EXIF-metadata — privatlivsrisici og fjernelse.",
+    "sections": [
+      {
+        "paragraphs": [
+          "EXIF er skjult metadata i JPEG-, PNG- eller HEIC-filer: GPS-placering, telefonmodel, orientering, nogle gange et forhåndsminiaturebillede. Sociale netværk fjerner det ofte, men dit eget website, nyhedsbrev eller e-mailvedhæftning gør det måske ikke.",
+          "Før du publicerer fotos af børn, hjemmeinteriør eller dokumenter på skrivebord, fjern EXIF med et dedikeret værktøj — på Toolando sker behandling på serveren, og filen sendes ikke til ekstern AI-cloud."
+        ]
+      },
+      {
+        "title": "Hvad der er tilbage efter fjernelse af EXIF",
+        "paragraphs": [
+          "Billedpixels forbliver uændrede. Kun metadata fjernes — opløsningen påvirkes ikke.",
+          "Efter EXIF-rensning kan du stadig komprimere filen eller tilføje vandmærke før porteføljepublicering."
+        ]
+      }
+    ]
+  },
+  "jwt-decode-safely-guide": {
+    "title": "JWT — sådan læser du en token uden at verificere signaturen",
+    "description": "Header, payload og Base64URL — hvornår du skal dekode lokalt og hvad du ikke skal gøre.",
+    "sections": [
+      {
+        "paragraphs": [
+          "En JSON Web Token har tre punktseparerede dele: header, payload og signature. JWT-dekoderen i Toolando viser header og payload efter Base64URL-dekodning — uden at sende token til server (kører i browseren).",
+          "Dette erstatter ikke signaturverificering på backend. Dekodning er til fejlfinding (f.eks. udløbet `exp`, forkert `aud`) — behandl aldrig payload alene som identitetsbevis."
+        ]
+      },
+      {
+        "title": "Sikre metoder",
+        "paragraphs": [
+          "Indsæt ikke produktionstokens med personoplysninger på offentlige sider — brug lokal dekoder eller testmiljø.",
+          "Tjek `exp` og `nbf`, før du fejlfinder 401-fejl.",
+          "Efter analyse, fjern token fra udklipsholderhistorik og logs."
+        ]
+      }
+    ]
+  },
+  "mortgage-loan-calculator-guide": {
+    "title": "Låneberegner — ydelse, renter og hvad du skal være opmærksom på",
+    "description": "Annuitet, gebyrer og forsikring — sådan læser du resultatet fra en boliglånsberegner.",
+    "sections": [
+      {
+        "paragraphs": [
+          "Låneberegneren på Toolando beregner en annuitetsydelse: et fast månedligt beløb af kapital plus renter. Længere løbetid sænker ydelsen — men øger den samlede renteomkostning.",
+          "Behandl dette som udgangspunkt for banksamtale, ikke som tilbud. Den faktiske ydelse afhænger af referencerente, margin, gebyrer, livsforsikring og udbetaling."
+        ]
+      },
+      {
+        "title": "Hvad du skal lægge til ud over beregneren",
+        "paragraphs": [
+          "Stiftelsesgebyrer og gebyr for tidlig indfrielse (hvis i aftalen).",
+          "Ejendoms- og livsforsikring — ofte krævet af banken.",
+          "Notargebyrer og tinglysningsafgift ved boligkøb."
+        ]
+      }
+    ]
+  }
+}

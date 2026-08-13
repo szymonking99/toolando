@@ -81,6 +81,11 @@ export default uiPack({
     "comparisonsCta": "Explorar comparaciones"
   },
   "footer": {
+    "emailAria": "Abre tu app de correo para escribirnos",
+    "youtube": "YouTube",
+    "messenger": "Messenger",
+    "instagram": "Instagram",
+    "facebook": "Facebook",
     "guides": "Guías",
     "formats": "Formatos de archivo",
     "comparisons": "Comparaciones",

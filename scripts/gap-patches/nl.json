@@ -1,0 +1,471 @@
+{
+  "socialProof": {
+    "toolsCount": "{count}+ tools in één ecosysteem",
+    "usesToday": "{uses} keer vandaag gebruikt"
+  },
+  "recent": {
+    "title": "Recent gebruikt",
+    "subtitle": "Je laatste tools — lokaal opgeslagen in deze browser.",
+    "favoritesHint": "Geef een tool een ster op de toolpagina om hem hier vast te pinnen."
+  },
+  "premiumUpsell": {
+    "title": "Ontgrendel AI-tools met Premium",
+    "description": "Tekstgeneratie, samenvattingen, afbeeldingen, vertaling en chat — één abonnement, geen verrassingen per verzoek.",
+    "point1": "Alle AI-tools zonder limieten",
+    "point2": "Prioriteitsverwerking op drukke dagen",
+    "point3": "Steun onafhankelijke ontwikkeling",
+    "cta": "Ga Premium",
+    "compare": "Bekijk abonnementen",
+    "trialHint": "Log in voor een gratis preview — upgrade wanneer je wilt."
+  },
+  "privacyBadge": {
+    "title": "Privacy-first",
+    "local": "Lokaal verwerkt in je browser"
+  },
+  "onboarding": {
+    "skip": "Sluiten",
+    "next": "Volgende",
+    "start": "Tools bekijken",
+    "learnMore": "Hoe Toolando werkt",
+    "step1": {
+      "title": "Converteren, berekenen, openen — één ecosysteem",
+      "body": "287+ tools voor bestanden, rekenmachines, ontwikkelaarsutilities en AI — kies een tool of zoek met Ctrl+K."
+    },
+    "step2": {
+      "title": "Privacy wanneer het ertoe doet",
+      "body": "Veel utilities draaien in je browser. Serverconversies verwijderen bestanden na afloop van de taak."
+    },
+    "step3": {
+      "title": "AI-tools met Premium",
+      "body": "Probeer converters gratis. AI-functies gebruiken een eenvoudig maandabonnement — bekijk prijzen voordat je een paywall bereikt."
+    }
+  },
+  "exitIntent": {
+    "title": "Voordat je gaat…",
+    "body": "Een andere converter nodig? Doorzoek 287+ tools of vertel ons wat we als volgende moeten bouwen.",
+    "browse": "Tools bekijken",
+    "request": "Tool aanvragen",
+    "close": "Sluiten"
+  },
+  "nextSteps": {
+    "title": "Volgende stappen",
+    "aiSummarizeTitle": "Document samenvatten met AI",
+    "aiSummarizeBody": "Genereer in seconden een PDF- of DOCX-samenvatting (Premium of 1 poging/dag)."
+  },
+  "newsletter": {
+    "title": "Nieuwe tools & Premium-updates",
+    "subtitle": "Laat je e-mail achter — we informeren je over belangrijke functies (geen spam).",
+    "placeholder": "you@example.com",
+    "cta": "Abonneren",
+    "thanks": "Bedankt! Bevestig via contact als je een antwoord wilt.",
+    "confirmViaContact": "Aanmelding afronden via contactformulier →",
+    "error": "Aanmelding mislukt. Probeer het opnieuw."
+  },
+  "toolRequest": {
+    "title": "Converter ontbreekt?",
+    "body": "Stel een nieuwe tool of een nieuw formaat voor — we geven prioriteit aan wat gebruikers vragen.",
+    "cta": "Tool voorstellen"
+  },
+  "comparison": {
+    "title": "Toolando vs cloud-uploadtools",
+    "subtitle": "Waarom gebruikers overstappen van generieke uploadconverters.",
+    "feature": "Functie",
+    "competitor": "Typische cloudconverter",
+    "rows": {
+      "privacy": "Lokale preview & privacyopties",
+      "offline": "Werkt offline (PWA-utilities)",
+      "ai": "Geïntegreerde AI-workflow",
+      "free": "Gratis kernconverters",
+      "limits": "Geen willekeurige dagelijkse uploadlimieten voor basis"
+    }
+  },
+  "premiumPage": {
+    "title": "Toolando Premium",
+    "subtitle": "AI-tools, duidelijke prijzen, op elk moment opzegbaar.",
+    "freeTitle": "Gratis",
+    "freeDesc": "Alle bestandsconverters, rekenmachines en de meeste utilities.",
+    "premiumTitle": "Premium",
+    "premiumDesc": "Volledige AI-suite — tekst, afbeeldingen, samenvattingen, vertaling, chat.",
+    "supporterTitle": "Supporter",
+    "supporterDesc": "Premium + advertentievrije ervaring (binnenkort).",
+    "cta": "Start Premium",
+    "signIn": "Inloggen om te abonneren",
+    "faqTitle": "Veelgestelde vragen over prijzen",
+    "faq1q": "Hoe werken credits?",
+    "faq1a": "Er zijn geen credits per verzoek — Premium is een vast maandabonnement voor onbeperkt AI-gebruik.",
+    "faq2q": "Kan ik het uitproberen voordat ik betaal?",
+    "faq2a": "Maak een gratis account, ontdek converters en upgrade wanneer je AI nodig hebt.",
+    "faq3q": "Hoe zit het met bestandsprivacy?",
+    "faq3a": "Serverbestanden worden na verwerking verwijderd. Browsertools uploaden je gegevens nooit."
+  },
+  "privacyPage": {
+    "title": "Privacy-first by design",
+    "subtitle": "Hoe Toolando je bestanden en gegevens beschermt.",
+    "localTitle": "Tools lokaal in de browser",
+    "localBody": "Utilities, de universele opener en veel rekenmachines draaien volledig in je browser — gegevens verlaten je apparaat nooit.",
+    "serverTitle": "Serverconversies",
+    "serverBody": "Wanneer je uploadt voor conversie, worden bestanden alleen voor die taak gebruikt en daarna verwijderd. HTTPS end-to-end.",
+    "aiTitle": "AI-tools",
+    "aiBody": "Premium AI stuurt alleen de inhoud die jij indient naar de modelprovider — nooit verkocht of gebruikt voor advertenties.",
+    "badge": "Privacy-First",
+    "readPolicy": "Volledige privacyverklaring lezen"
+  },
+  "nav": {
+    "tools": "Converters",
+    "categories": "Convertercategorieën",
+    "contact": "Contact",
+    "downloader": "MP3 Downloader",
+    "aboutMe": "Over mij",
+    "privacy": "Privacyverklaring",
+    "terms": "Servicevoorwaarden",
+    "converters": "Converters",
+    "developer": "Ontwikkelaarstools",
+    "premium": "Premium",
+    "guides": "Gidsen",
+    "faq": "FAQ",
+    "more": "Meer"
+  },
+  "share": {
+    "label": "Delen",
+    "copy": "Link kopiëren",
+    "copied": "Gekopieerd"
+  },
+  "recommender": {
+    "categories": {
+      "video": "Video",
+      "document": "Document"
+    }
+  },
+  "opener": {
+    "kindVideo": "Video",
+    "kindAudio": "Audio",
+    "readError": "Kon de bestandsinhoud niet lezen.",
+    "dropAny": "Sleep een bestand hierheen of klik om te kiezen",
+    "dropHint": "Afbeeldingen, video, audio, PDF, documenten, code, data — elk formaat. Bestanden worden lokaal in je browser geopend en nergens geüpload.",
+    "noConverter": "We hebben nog geen converter voor dit formaat — maar je kunt het bestand hieronder bekijken en downloaden.",
+    "convertTo": "Converteren naar een ander formaat",
+    "optionOne": "optie",
+    "optionMany": "opties",
+    "downloadedOk": "Klaar! Het bestand is gedownload.",
+    "download": "Downloaden",
+    "close": "Sluiten",
+    "emptyFile": "(leeg bestand)",
+    "textTruncated": "Preview ingekort tot de eerste 200.000 tekens. Download het bestand om alles te zien.",
+    "binaryPreview": "Binaire preview (eerste bytes in hexadecimaal)",
+    "kinds": {
+      "image": "Afbeelding",
+      "video": "Video",
+      "audio": "Audio",
+      "pdf": "PDF-document",
+      "text": "Tekst / code",
+      "binary": "Binair bestand"
+    }
+  },
+  "ai": {
+    "badge": "Premium AI"
+  },
+  "knowledgeHub": {
+    "glossaryTitle": "Woordenlijst",
+    "glossaryDesc": "Bitrate, codec, lossy compressie, MIME — definities in begrijpelijke taal.",
+    "glossaryCta": "Woordenlijst openen"
+  },
+  "editorial": {
+    "title": "Wie zit achter Toolando.tech",
+    "body": "Ik ben Szymon — ik ontwerp, bouw en test elke tool zelf. Gidsen zijn gebaseerd op echte conversies, niet op gekopieerde specificaties. Ik wil dat je je bestanden begrijpt voordat je ze converteert, en dat de service eerlijk met je blijft omgaan.",
+    "aboutCta": "Over mij & methodologie",
+    "howCta": "Hoe de tools werken",
+    "editorialCta": "Redactionele standaarden",
+    "guidesCta": "Gidsen"
+  },
+  "featuredGuides": {
+    "title": "Uitgelichte gidsen",
+    "subtitle": "Praktische artikelen over bestandsformaten, beveiliging en conversie — geschreven op basis van echte tests, geen SEO-sjablonen.",
+    "readArticle": "Gids lezen",
+    "allGuides": "Alle gidsen"
+  },
+  "why": {
+    "toolsTitle": "200+ online tools"
+  },
+  "footer": {
+    "tools": "Tools",
+    "contact": "Contact",
+    "aboutMe": "Over mij",
+    "howItWorks": "Hoe het werkt",
+    "faq": "FAQ",
+    "editorial": "Redactie",
+    "rss": "RSS-feed",
+    "cookieSettings": "Cookie-instellingen",
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "messenger": "Messenger",
+    "youtube": "YouTube"
+  },
+  "ad": {
+    "label": "Advertentie",
+    "placeholder": "Advertentieruimte"
+  },
+  "tool": {
+    "convertFailed": "Conversie mislukt.",
+    "connectionError": "Kon geen verbinding maken met de server. Probeer het opnieuw.",
+    "unavailable": "Deze converter is momenteel niet beschikbaar",
+    "dropClick": "Sleep een bestand hierheen of klik om te kiezen",
+    "dropClickMulti": "Sleep bestanden hierheen of klik om te kiezen",
+    "supportedFormat": "Ondersteund formaat",
+    "supported": "Ondersteund",
+    "maxSize": "max. 500 MB",
+    "removeFile": "Bestand verwijderen",
+    "convertDone": "Conversie voltooid",
+    "downloadNamed": "Downloaden",
+    "convertAnother": "Nog een bestand converteren",
+    "uploadingFile": "Bestand uploaden…",
+    "uploadingFiles": "Bestanden uploaden…",
+    "uploading": "Uploaden…",
+    "converting": "Converteren…",
+    "convertToPrefix": "Converteren naar",
+    "needTwoPdf": "Voeg minimaal twee PDF-bestanden toe om samen te voegen.",
+    "operationFailed": "De bewerking is mislukt.",
+    "compressionQuality": "Compressiekwaliteit",
+    "qualityHint": "Lagere waarde = kleiner bestand. Hogere waarde = betere kwaliteit.",
+    "done": "Klaar",
+    "less": "minder",
+    "resultPreview": "Resultaatpreview",
+    "startOver": "Opnieuw beginnen",
+    "processingLong": "Verwerken (dit kan enkele seconden duren)…"
+  },
+  "cookieConsent": {
+    "title": "Cookies"
+  },
+  "aiTool": {
+    "generateFailed": "Kon geen antwoord genereren.",
+    "noContent": "De AI-service gaf geen inhoud terug. Controleer of AI Gateway actief is (vereist een betaalkaart).",
+    "connectionError": "Er is een verbindingsfout opgetreden. Probeer het opnieuw.",
+    "dropDoc": "Sleep een document hierheen of klik om te kiezen",
+    "removeFile": "Bestand verwijderen",
+    "translatePlaceholder": "Plak de te vertalen tekst…",
+    "copyPlaceholder": "Beschrijf wat de AI moet schrijven, bijv. \"een productbeschrijving voor een milieuvriendelijke waterfles\"…",
+    "toneLabel": "Toon",
+    "targetLangLabel": "Doeltaal",
+    "translate": "Vertalen",
+    "summarizeDoc": "Document samenvatten",
+    "generateText": "Tekst genereren",
+    "imageFailed": "Kon de afbeelding niet genereren.",
+    "imagePromptPlaceholder": "Beschrijf de afbeelding, bijv. \"een futuristische stad bij zonsondergang, aquarelstijl\"…",
+    "ratioSquare": "Vierkant 1:1",
+    "ratioLandscape": "Landschap 3:2",
+    "ratioPortrait": "Portret 2:3",
+    "generatingImage": "Afbeelding genereren (dit kan enkele seconden duren)…",
+    "generateImage": "Afbeelding genereren",
+    "generatedImageAlt": "Gegenereerde afbeelding",
+    "downloadImage": "Afbeelding downloaden",
+    "tones": {
+      "professional": "professioneel",
+      "friendly": "vriendelijk",
+      "energetic": "energiek",
+      "formal": "formeel",
+      "playful": "speels",
+      "persuasive": "overtuigend"
+    },
+    "languages": {
+      "english": "Engels",
+      "german": "Duits",
+      "spanish": "Spaans",
+      "french": "Frans",
+      "italian": "Italiaans",
+      "ukrainian": "Oekraïens",
+      "polish": "Pools",
+      "japanese": "Japans"
+    }
+  },
+  "category": {
+    "back": "Home",
+    "toolsCount": "tools"
+  },
+  "paywall": {
+    "unlockTitle": "Ontgrendel \"{tool}\" met Premium",
+    "description": "Ontgrendel alle Toolando.tech AI-tools — tekst- en afbeeldingsgeneratie, vertaling, samenvattingen en de assistent — in één abonnement.",
+    "feature1": "Onbeperkte toegang tot alle AI-tools",
+    "feature2": "Tekstgenerator, afbeeldingsgenerator en vertaler",
+    "feature3": "Prioriteitsverwerking van verzoeken",
+    "goPremium": "Upgrade naar Premium",
+    "redirecting": "Doorverwijzen…",
+    "signInToBuy": "Inloggen om Premium te kopen",
+    "noAccount": "Nog geen account?",
+    "signUp": "Registreren"
+  },
+  "account": {
+    "backToHome": "Terug naar homepage",
+    "yourAccount": "Je account",
+    "premiumBadge": "Premium",
+    "freeBadge": "Gratis account",
+    "premiumActiveTitle": "Je hebt actief Premium",
+    "premiumActiveDesc": "Bedankt voor je steun! Je hebt volledige toegang tot alle AI-tools zonder limieten.",
+    "manageSubscription": "Abonnement beheren",
+    "manageOpening": "Openen…",
+    "managePortalError": "Kon het portaal niet openen.",
+    "manageGenericError": "Er is een fout opgetreden.",
+    "goPremiumTitle": "Ga Premium",
+    "feature1": "Onbeperkte toegang tot AI-tools",
+    "feature2": "Achtergrond verwijderen, afbeeldings- en tekstgeneratie",
+    "feature3": "Prioriteitsverwerking",
+    "buyPremium": "Premium kopen",
+    "buyRedirecting": "Doorverwijzen…",
+    "refreshHint": "Betaald maar Premium nog inactief? Vernieuw je status:",
+    "refreshStatus": "Premium-status vernieuwen",
+    "refreshChecking": "Controleren...",
+    "refreshNoSub": "Geen actief abonnement gevonden. Als je net hebt betaald, wacht even en probeer opnieuw.",
+    "refreshFailed": "Kon status niet vernieuwen.",
+    "refreshNetworkError": "Er is een netwerkfout opgetreden. Probeer het opnieuw.",
+    "signOut": "Uitloggen"
+  },
+  "downloader": {
+    "eyebrow": "Video → MP3",
+    "title": "Multi-Platform → MP3 Downloader",
+    "subtitle": "Plak een link van TikTok, Instagram, Facebook, Twitter/X, Vimeo of SoundCloud en pak de audio.",
+    "metaDescription": "Multi-platform Video to MP3 Downloader — TikTok, Instagram, Facebook, Twitter, Vimeo, SoundCloud. Plak een link en download de audio.",
+    "back": "Alle tools",
+    "inputLabel": "Videolink",
+    "inputPlaceholder": "https://www.tiktok.com/@user/video/...",
+    "detected": "gedetecteerd",
+    "idLabel": "ID",
+    "invalidLink": "Voer een geldige link van een ondersteund platform in.",
+    "download": "MP3 downloaden",
+    "preparing": "Je link voorbereiden…",
+    "ready": "Je link is klaar.",
+    "openPage": "Downloadpagina openen",
+    "resultTitle": "Klaar om te downloaden",
+    "resultsBack": "Terug naar downloader",
+    "thumbnailAlt": "Videominiatuur",
+    "viewSource": "Origineel bekijken",
+    "faqTitle": "Veelgestelde vragen",
+    "disclaimer": "Toolando.tech host of downloadt geen media. Het detecteert alleen het platform en de openbare video-ID en verwijst door naar een externe service of je browser. Download alleen content waarvoor je rechten hebt.",
+    "externalNote": "Downloaden gebeurt via een externe service of in je browser. Toolando.tech heeft alleen het openbare platform en de video-ID vastgelegd. Respecteer auteursrecht en de servicevoorwaarden van elk platform.",
+    "platformDisabled": "Downloaden van {platform} is tijdelijk niet beschikbaar — {platform} blokkeert downloaders actief, dus we hebben het gepauzeerd tot onze eigen converter klaar is. Alle andere platforms werken nog."
+  },
+  "pages": {
+    "contact": {
+      "eyebrow": "Contact"
+    },
+    "about": {
+      "contactTitle": "Contact"
+    },
+    "editorial": {
+      "eyebrow": "Redactie",
+      "title": "Redactionele standaarden van Toolando.tech",
+      "intro": "Toolando.tech is niet alleen converters — het zijn gidsen, een formaatencyclopedie en vergelijkingen. Hieronder leg ik uit hoe content wordt gemaakt, waar informatie vandaan komt en wanneer deze wordt bijgewerkt.",
+      "whoTitle": "Wie maakt de content",
+      "whoP1": "Ik schrijf elke gids, formaatprofiel en vergelijking zelf — Szymon Badyl, maker van Toolando.tech. Ik gebruik geen contentfabrieken of ongecontroleerde AI-teksten.",
+      "whoP2": "Elk artikel is gebaseerd op conversietests met mijn eigen bestanden. Als iets niet werkt zoals beschreven, corrigeer ik zowel de tekst als de tool.",
+      "standardsTitle": "Redactionele principes",
+      "standardsIntro": "Ik pas dezelfde regels toe op elke nieuwe gids:",
+      "sourcesTitle": "Bronnen en eerlijkheid",
+      "sourcesP1": "Ik verifieer formaatspecificaties (MIME, codecs) aan de hand van IANA, FFmpeg en documentatie van leveranciers. Vergelijkingen steunen op mijn eigen metingen van grootte en kwaliteit, niet op marketingtabellen.",
+      "sourcesP2": "Externe links verschijnen alleen wanneer ze echt helpen (bijv. officiële documentatie). Ik promoot geen betaalde concurrentietools.",
+      "updatesTitle": "Updates en correcties",
+      "updatesP1": "Fout, verouderde info of een onderwerpsuggestie? Mail badyltech@outlook.com — correcties komen in het artikel met een updatedatum.",
+      "updatedLabel": "Laatst bijgewerkt",
+      "updatedDate": "augustus 2026",
+      "fullGuideCta": "Volledige gids over redactionele standaarden"
+    },
+    "privacy": {
+      "eyebrow": "Privacyverklaring",
+      "title": "Privacyverklaring Toolando.tech",
+      "intro": "Toolando.tech is een dienst met online tools in een gratis en premium variant. Ik hecht waarde aan de privacy van gebruikers en verwerk gegevens in overeenstemming met de geldende regelgeving, waaronder de AVG.",
+      "lastUpdated": "Laatst bijgewerkt: 23 juli 2026",
+      "s1Title": "1. Verantwoordelijke voor verwerking",
+      "s1Pre": "De verantwoordelijke voor verwerking is Szymon Badyl, eigenaar van Toolando.tech (Polen). Voor privacyzaken kun je contact met me opnemen via:",
+      "s1Address": "Correspondentie: badyltech@outlook.com",
+      "s2Title": "2. Welke gegevens worden verwerkt",
+      "s2Intro": "De dienst verwerkt technische en statistische gegevens die automatisch worden verzameld tijdens het gebruik van de site:",
+      "s2Outro": "Als je contact met me opneemt per e-mail of formulier, verwerk ik ook het e-mailadres dat je opgeeft en de inhoud van je bericht.",
+      "s3Title": "3. Bestanden geüpload naar de tools",
+      "s3P": "Bestanden die je uploadt naar de tools voor conversie of een andere bewerking worden door mij niet opgeslagen. Ze worden uitsluitend gebruikt om de door jou gevraagde taak uit te voeren en worden verwijderd zodra deze is voltooid. Ik gebruik ze voor geen enkel ander doel.",
+      "s4Title": "4. Cookies",
+      "s4Intro": "De dienst gebruikt de volgende soorten cookies:",
+      "s4TechTerm": "Technisch",
+      "s4TechDesc": "noodzakelijk voor correcte werking van de site en om instellingen te onthouden (bijv. taal).",
+      "s4AnalyticsTerm": "Analytisch",
+      "s4AnalyticsDesc": "statistische tools (bijv. Google Analytics) die helpen begrijpen hoe de site wordt gebruikt, in geaggregeerde en anonieme vorm.",
+      "s4AdsTerm": "Advertentie",
+      "s4AdsDesc": "Google AdSense, dat cookies kan gebruiken om advertenties weer te geven en te personaliseren.",
+      "s4Outro": "Je kunt cookies op elk moment beheren of uitschakelen in je browserinstellingen. Bij je eerste bezoek tonen we een cookiebanner waarin je alle cookies kunt accepteren of je kunt beperken tot essentiële cookies.",
+      "s4ThirdPartyTitle": "Externe aanbieders",
+      "s4ThirdPartyP": "De dienst gebruikt Google-diensten (Analytics, AdSense). Google kan gegevens verzamelen volgens zijn eigen privacybeleid. Meer informatie: https://policies.google.com/technologies/partner-sites",
+      "s5Title": "5. Gratis en premium tools",
+      "s5P": "Toolando biedt gratis tools (beschikbaar zonder account) en premium tools. De regels voor gegevensverwerking en bestandsbescherming zijn hetzelfde in beide varianten — ze verschillen alleen in functieomvang en limieten.",
+      "s6Title": "6. Doel van gegevensverwerking",
+      "s6Intro": "Ik verwerk gegevens uitsluitend voor de volgende doeleinden:",
+      "s7Title": "7. Je rechten",
+      "s7Intro": "Je hebt het recht om:",
+      "s8Title": "8. Wijzigingen in het beleid",
+      "s8P": "De privacyverklaring kan worden bijgewerkt om wijzigingen in de dienst of de wetgeving weer te geven. De actuele versie is altijd beschikbaar op deze pagina."
+    },
+    "terms": {
+      "eyebrow": "Servicevoorwaarden",
+      "title": "Servicevoorwaarden voor Toolando.tech",
+      "intro": "De onderstaande voorwaarden beschrijven de regels voor het gebruik van de Toolando.tech-dienst. Door de dienst te gebruiken accepteer je deze regels.",
+      "s1Title": "1. Algemene bepalingen",
+      "s1P": "De eigenaar van Toolando.tech is Szymon. De dienst biedt online tools voor bestandsconversie, contentgeneratie en AI-tools.",
+      "s2Title": "2. Gratis en premium tools",
+      "s2Intro": "Toolando biedt tools in twee varianten:",
+      "s2FreeTerm": "Gratis",
+      "s2FreeDesc": "beschikbaar voor iedereen, zonder account aan te maken.",
+      "s2PremiumTerm": "Premium",
+      "s2PremiumDesc": "met geavanceerdere functies en hogere limieten.",
+      "s2Outro": "Regels voor betalingen of abonnementen voor premiumfuncties worden op de relevante plekken op de dienst gepresenteerd.",
+      "s3Title": "3. Gebruik op eigen risico",
+      "s3P1": "Je gebruikt de dienst op eigen risico. Ik doe mijn best om de tools correct te laten werken, maar de dienst wordt geleverd \"as is\", zonder garantie op beschikbaarheid, juistheid van resultaten of geschiktheid voor een bepaald doel.",
+      "s3P2": "De eigenaar van de dienst is niet aansprakelijk voor:",
+      "s3Outro": "De gebruiker verbindt zich ertoe de dienst in overeenstemming met de wet te gebruiken en is verantwoordelijk voor de content en bestanden die hij of zij verwerkt.",
+      "s4Title": "4. Gebruikersbestanden",
+      "s4P": "Bestanden geüpload naar de tools worden niet opgeslagen. Ze worden uitsluitend gebruikt om de gevraagde bewerking uit te voeren en worden verwijderd zodra deze is voltooid.",
+      "s5Title": "5. Advertenties",
+      "s5P": "De dienst kan Google AdSense-advertenties tonen. Advertenties helpen de gratis tools te onderhouden en het project te ontwikkelen. De advertentieaanbieder kan cookies gebruiken in overeenstemming met de Privacyverklaring.",
+      "s6Title": "6. Auteursrecht",
+      "s6P": "De naam Toolando.tech, grafische elementen en de content van de dienst zijn juridisch beschermd. Kopiëren en gebruiken zonder toestemming van de eigenaar is verboden.",
+      "s7Title": "7. Contact",
+      "s7Pre": "Voor zaken met betrekking tot deze voorwaarden kun je contact met me opnemen via:",
+      "s8Title": "8. Wijzigingen in de voorwaarden",
+      "s8P": "De voorwaarden kunnen worden bijgewerkt om wijzigingen in de dienst of de wetgeving weer te geven. De actuele versie is altijd beschikbaar op deze pagina."
+    },
+    "guides": {
+      "eyebrow": "Gidsen",
+      "title": "Gidsen en tutorials voor bestandsconversie",
+      "intro": "Praktische artikelen over bestandsformaten, conversie en best practices. Elke gids legt uit wanneer en waarom je een bestand converteert, en hoe je dat veilig doet met Toolando.tech."
+    }
+  },
+  "hub": {
+    "convertersTitle": "Bestandsconverters",
+    "convertersDesc": "Audio, video, afbeeldingen, documenten, data, lettertypen en archieven — plus comprimeren, PDF samenvoegen en achtergrond verwijderen.",
+    "calculatorsTitle": "Rekenmachines & omrekeners",
+    "calculatorsDesc": "Valuta, btw, datums, tijdzones, eenheden en bitrate.",
+    "developerTitle": "Ontwikkelaars- & teksttools",
+    "developerDesc": "Wachtwoorden, QR, Base64, UUID, hash, kleuren, timestamp en tekenteller.",
+    "specialTools": "Bestandstools",
+    "browseConverters": "Converters bekijken",
+    "browseCalculators": "Rekenmachines bekijken",
+    "browseDeveloper": "Tools bekijken"
+  },
+  "specialFields": {
+    "splitMode": "Splitsmodus",
+    "everyPage": "Elke pagina apart",
+    "pageRange": "Geselecteerd bereik",
+    "pagesHint": "Pagina's (bijv. 1-3,5)",
+    "rotation": "Rotatiehoek",
+    "width": "Breedte (px)",
+    "height": "Hoogte (px, optioneel)",
+    "watermark": "Watermerktekst",
+    "trimStart": "Start (sec of MM:SS)",
+    "trimEnd": "Einde (sec of MM:SS)",
+    "pageNumberPos": "Positie paginanummer",
+    "bottom": "Onderkant pagina",
+    "top": "Bovenkant pagina"
+  },
+  "accountRecent": {
+    "title": "Recent gebruikt",
+    "subtitle": "Geschiedenis lokaal opgeslagen in deze browser."
+  },
+  "favorites": {
+    "add": "Toevoegen aan favorieten",
+    "remove": "Favoriet"
+  }
+}

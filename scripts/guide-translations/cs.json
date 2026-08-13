@@ -1,0 +1,797 @@
+{
+  "mp3-vs-wav": {
+    "title": "MP3 vs WAV — kdy převádět audio?",
+    "description": "MP3 vs WAV: ztrátová vs bezeztrátová komprese, velikost souboru, úpravy v DAW a který formát zvolit.",
+    "sections": [
+      {
+        "paragraphs": [
+          "MP3 používá ztrátovou kompresi — soubory jsou malé, ale část audio dat je navždy ztracena. WAV zachovává plnou kvalitu (bezeztrátově nebo nekomprimovaně), ale soubory mohou být až 10× větší než MP3.",
+          "V praxi: poslech v telefonu → MP3 stačí. Úprava podcastu v Audacity nebo mix v FL Studio → pracujte s WAV nebo FLAC."
+        ]
+      },
+      {
+        "title": "Kdy převádět MP3 → WAV",
+        "paragraphs": [
+          "Když platforma nebo aplikace vyžaduje bezeztrátový formát pro další úpravy.",
+          "Když plánujete více střihů, efektů a mastering — každá operace na MP3 snižuje kvalitu.",
+          "Poznámka: MP3 → WAV neobnoví ztracenou kvalitu, ale zastaví další degradaci při úpravách."
+        ]
+      },
+      {
+        "title": "Kdy převádět WAV → MP3",
+        "paragraphs": [
+          "Odeslání nahrávky e-mailem nebo v chatu — menší soubor = rychlejší přenos.",
+          "Publikování podcastu nebo hudby k poslechu, ne k úpravám.",
+          "Úspora místa na disku ve velké audio knihovně."
+        ]
+      }
+    ]
+  },
+  "pdf-to-jpg": {
+    "title": "Jak převést PDF na JPG pro tisk a web",
+    "description": "Kdy exportovat stránky PDF jako JPG, jaké rozlišení zvolit a kdy je lepší PNG.",
+    "sections": [
+      {
+        "paragraphs": [
+          "PDF zachovává rozvržení stránky. Někdy potřebujete jednotlivé stránky jako obrázky — pro web, PowerPoint nebo tisk jedné stránky.",
+          "Konvertor PDF → JPG na Toolando.tech vykreslí každou stránku jako samostatný JPG. Soubory se nikdy neukládají — po převodu jsou okamžitě smazány."
+        ]
+      },
+      {
+        "title": "JPG nebo PNG z PDF?",
+        "paragraphs": [
+          "JPG — menší soubory, ideální pro fotografie a dokumenty bez průhlednosti.",
+          "PNG — bezeztrátově s průhledností; lepší pro grafiku s textem a ostrými hranami."
+        ]
+      }
+    ]
+  },
+  "webp-avif-images": {
+    "title": "WebP a AVIF — moderní formáty obrázků pro web",
+    "description": "WebP a AVIF vs JPG/PNG: komprese, podpora prohlížečů a optimalizace PageSpeed.",
+    "sections": [
+      {
+        "paragraphs": [
+          "JPG a PNG dominují webu roky, ale WebP vytváří soubory o 25–35 % menší než JPG při stejné vizuální kvalitě. AVIF jde ještě dál — soubory mohou být poloviční oproti WebP.",
+          "Všechny moderní prohlížeče podporují WebP. AVIF má o něco slabší podporu ve starších verzích Safari."
+        ]
+      },
+      {
+        "title": "Strategie nasazení",
+        "paragraphs": [
+          "Převádějte JPG → WebP u produktových fotek a bannerů — zrychlí načítání stránky.",
+          "Ponechte JPG jako zálohu pro starší prohlížeče (HTML tag <picture>).",
+          "U log s průhledností: PNG → WebP místo JPG."
+        ]
+      }
+    ]
+  },
+  "extract-audio-from-video": {
+    "title": "Extrakce zvuku z videa — legální alternativa",
+    "description": "Jak legálně extrahovat zvukovou stopu z vlastního video souboru (MP4, MOV, MKV).",
+    "sections": [
+      {
+        "paragraphs": [
+          "Někdy máte video soubor a potřebujete jen zvuk. Toolando.tech extrahuje zvuk z MP4, MOV, AVI, MKV a uloží ho jako MP3, WAV, FLAC nebo AAC.",
+          "U vlastního souboru je to legální — na rozdíl od stahování hudby z YouTube nebo TikTok, což Toolando.tech záměrně nenabízí."
+        ]
+      }
+    ]
+  },
+  "json-csv-xml": {
+    "title": "JSON, CSV a XML — převod dat mezi formáty",
+    "description": "Kdy použít JSON, CSV, TSV a XML a jak mezi nimi převádět bez ztráty struktury.",
+    "sections": [
+      {
+        "paragraphs": [
+          "JSON je standard pro REST API a konfiguraci aplikací. CSV a TSV se používají pro import do Excelu. XML se používá ve starších podnikových systémech a RSS.",
+          "JSON → CSV otevře odpověď API v Excelu. CSV → JSON připraví data pro REST API. Toolando.tech při převodu zachovává strukturu dat."
+        ]
+      }
+    ]
+  },
+  "online-file-security": {
+    "title": "Bezpečnost souborů v online nástrojích",
+    "description": "Jak Toolando.tech zpracovává soubory, kdy nástroje běží lokálně v prohlížeči a detaily o soukromí.",
+    "sections": [
+      {
+        "paragraphs": [
+          "Nahrávání souborů do online nástrojů vyvolává oprávněné obavy. Na Toolando.tech se soubory používají výhradně k operaci, kterou požadujete — převod, komprese nebo náhled.",
+          "Po dokončení úlohy jsou soubory ze serveru smazány. Některé nástroje (univerzální prohlížeč) běží celé ve vašem prohlížeči — soubor nikdy neopustí váš počítač. Připojení je šifrované (HTTPS)."
+        ]
+      }
+    ]
+  },
+  "lossy-vs-lossless": {
+    "title": "Ztrátová vs bezeztrátová komprese — jednoduchý průvodce",
+    "description": "Jak se liší ztrátová a bezeztrátová komprese a jak se vyhnout ztrátě kvality při převodu.",
+    "sections": [
+      {
+        "paragraphs": [
+          "Ztrátové formáty (MP3, JPG, AAC, H.264) odstraňují data kvůli menší velikosti. Bezeztrátové formáty (FLAC, PNG, WAV, ZIP) zachovávají všechna data, ale vytvářejí větší soubory.",
+          "Pravidlo: převádějte ztrátově → bezeztrátově jen když musíte — ztracenou kvalitu neobnovíte. Ztrátově → ztrátově převádějte jen jednou — každý další převod snižuje výsledek."
+        ]
+      }
+    ]
+  },
+  "heic-iphone-jpg": {
+    "title": "HEIC z iPhonu — jak otevřít a převést na JPG",
+    "description": "Proč iPhone ukládá HEIC, problémy s kompatibilitou a jak převést na JPG nebo PNG.",
+    "sections": [
+      {
+        "paragraphs": [
+          "Apple ukládá fotky ve výchozím nastavení jako HEIC — menší než JPG při stejné kvalitě. Problém: Windows bez rozšíření, starší aplikace a mnoho služeb HEIC nepodporují.",
+          "Řešení: převeďte HEIC → JPG nebo HEIC → PNG na Toolando.tech před odesláním e-mailem, nahráním nebo tiskem. V Nastavení iPhonu můžete také zvolit „Nejkompatibilnější“ (JPG)."
+        ]
+      }
+    ]
+  },
+  "pdf-vs-docx": {
+    "title": "PDF vs DOCX — který formát a kdy?",
+    "description": "Rozdíly PDF vs DOCX: úpravy, tisk, archivace a kdy převádět kterým směrem.",
+    "sections": [
+      {
+        "paragraphs": [
+          "DOCX (Word) slouží k úpravě textu — obsah, styly, nadpisy. PDF uzamkne rozvržení — vypadá stejně na každém zařízení, ideální pro faktury, smlouvy a životopisy.",
+          "Před odesláním „jen ke čtení“ převeďte DOCX → PDF. PDF → DOCX převádějte jen když potřebujete upravit text — rozvržení se může rozbít. Pro archivaci a tisk vždy volte PDF."
+        ]
+      }
+    ]
+  },
+  "video-social-media": {
+    "title": "Video pro sociální sítě — MP4, rozlišení a bitrate",
+    "description": "Jak připravit video pro Instagram, TikTok, YouTube: formát MP4, H.264, rozlišení 1080p.",
+    "sections": [
+      {
+        "paragraphs": [
+          "Instagram, TikTok, YouTube a Facebook preferují MP4 s videem H.264 a audiem AAC. Před publikováním převeďte MOV, AVI nebo MKV na MP4, abyste předešli chybám při nahrávání.",
+          "1080p (1920×1080) stačí pro většinu platforem. Vyšší bitrate = lepší kvalita, ale větší soubor. Podrobnosti o MP4, WebM a MOV najdete v encyklopedii formátů."
+        ]
+      }
+    ]
+  },
+  "choose-audio-bitrate": {
+    "title": "Jaký bitrate MP3 nebo AAC zvolit?",
+    "description": "128 vs 192 vs 320 kbps — praktické volby pro podcasty, hudbu a video bez plýtvání místem na disku.",
+    "sections": [
+      {
+        "paragraphs": [
+          "Bitrate je množství dat za sekundu audia. Vyšší bitrate obvykle znamená lepší zvuk, ale větší soubory. U MP3 je rozdíl mezi 128 a 320 kbps nejslyšitelnější na kvalitních reproduktorech a u hutné hudby.",
+          "Pro řeč (podcasty, rozhovory) často stačí 96–128 kbps mono. Pro hudbu ve sluchátkách je 192–256 kbps stereo rozumný kompromis. 320 kbps je praktický strop MP3 — vyšší hodnoty moc nepomohou, protože formát je stále ztrátový."
+        ]
+      },
+      {
+        "title": "MP3, AAC a Opus — rychlé srovnání",
+        "paragraphs": [
+          "AAC (M4A) při stejném bitrate obvykle překoná MP3 — proto ho používají YouTube a Apple Music.",
+          "Opus vyniká ve VoIP a streamingu při nízkých bitech (64–128 kbps).",
+          "Pro studiové archivy používejte WAV nebo FLAC — ztrátový bitrate neobnoví chybějící data."
+        ]
+      },
+      {
+        "title": "Časté chyby",
+        "paragraphs": [
+          "Zvýšení bitrate u nekvalitního MP3 nezlepší zvuk — jen naroste velikost souboru.",
+          "Opakované překódování stejné skladby (MP3 → AAC → MP3) snižuje kvalitu při každém kole.",
+          "U video projektů extrahujte zvuk z vlastního MP4 místo stahování cizí hudby — autorská práva jsou důležitá."
+        ]
+      }
+    ]
+  },
+  "prepare-images-for-web": {
+    "title": "Jak připravit obrázky pro web (JPG, WebP, AVIF)",
+    "description": "Rozlišení, komprese a formát — zrychlete web bez viditelné ztráty kvality.",
+    "sections": [
+      {
+        "paragraphs": [
+          "Obrovské fotky z fotoaparátu (4000×3000 px) zpomalují každou stránku. Před nahráním na blog nebo do obchodu změňte velikost na skutečnou zobrazovací — např. 1600 px šířky pro hero banner.",
+          "JPG zůstává bezpečnou univerzální volbou. WebP a AVIF vytvářejí menší soubory při stejné vizuální kvalitě — používejte je v moderních stacku se zálohou <picture> pro starší prohlížeče."
+        ]
+      },
+      {
+        "title": "Kdy PNG místo JPG",
+        "paragraphs": [
+          "Loga, ikony a screenshoty UI — PNG nebo bezeztrátový WebP zachová ostré hrany.",
+          "Produktové fotky na bílém pozadí se často dobře komprimují jako JPG kvalita 80–85.",
+          "Vyhněte se opakovanému ukládání stejného banneru jako JPG — každý průchod přidá artefakty."
+        ]
+      },
+      {
+        "title": "Kontrolní seznam před publikací",
+        "paragraphs": [
+          "1) Změňte velikost na cílovou šířku v px. 2) Zvolte formát (JPG/WebP/AVIF). 3) Zkontrolujte velikost souboru (<200 KB náhledy, <500 KB velké obrázky v blogu). 4) Spusťte PageSpeed Insights a porovnejte LCP před/po."
+        ]
+      }
+    ]
+  },
+  "docx-pdf-workflow": {
+    "title": "DOCX → PDF pro kancelář — kdy a jak převádět",
+    "description": "Odesílání životopisů, faktur a smluv: proč PDF překoná DOCX a jak se vyhnout rozbitým fontům.",
+    "sections": [
+      {
+        "paragraphs": [
+          "DOCX slouží k úpravám — skvělé, když příjemce má Word a potřebuje měnit text. PDF slouží ke čtení — rozvržení, fonty a okraje vypadají stejně na Windows, Macu i telefonu.",
+          "Před odesláním životopisu, nabídky nebo smlouvy převeďte DOCX → PDF. Příjemci omylem neupraví obsah a vy se vyhnete náhradním fontům, které rozbijí branding."
+        ]
+      },
+      {
+        "title": "Kdy NEPŘEVÁDĚT PDF → DOCX",
+        "paragraphs": [
+          "Naskenované faktury a podepsané smlouvy — ponechte PDF jako archiv; OCR je samostatný krok.",
+          "Složité vícestránkové rozvržení (katalogy, brožury) — převod do DOCX často rozbije stránkování.",
+          "Pokud potřebujete jen úryvek textu, zkopírujte z PDF místo převodu celého souboru."
+        ]
+      },
+      {
+        "title": "Bezpečnost a soukromí",
+        "paragraphs": [
+          "Na Toolando.tech se soubory DOCX a PDF používají jen k převodu a po dokončení jsou smazány.",
+          "U citlivých dokumentů (občanské průkazy, bankovní údaje) používejte HTTPS a neukládejte kopie na veřejné cloudové disky bez šifrování."
+        ]
+      }
+    ]
+  },
+  "compress-images-without-quality-loss": {
+    "title": "Jak komprimovat obrázky JPG a PNG bez viditelné ztráty kvality",
+    "description": "Kdy použít kompresor, jakou úroveň kvality zvolit a rozdíl mezi kompresí a převodem formátu.",
+    "sections": [
+      {
+        "paragraphs": [
+          "Komprese obrázku zmenší velikost souboru bez změny formátu — stále máte JPG nebo PNG, jen lehčí. Převod JPG → WebP mění formát a na webech často dává lepší výsledek, ale tiskové workflow může vyžadovat JPG.",
+          "Na Toolando.tech jsem testoval kompresor obrázků na produktových fotkách 2000×2000 px: při kvalitě 80 % klesla velikost o 40–60 % bez viditelných artefaktů na obrazovce."
+        ]
+      },
+      {
+        "title": "Kdy komprimovat vs převádět",
+        "paragraphs": [
+          "Komprimujte, když formát vyhovuje (např. obchod vyžaduje JPG), ale soubor je příliš těžký pro e-mail nebo CMS.",
+          "Převádějte na WebP/AVIF, když publikujete na vlastním webu se zálohou <picture>.",
+          "Nikdy neukládejte stejný JPG opakovaně — každý průchod přidá artefakty."
+        ]
+      },
+      {
+        "title": "Typické scénáře",
+        "paragraphs": [
+          "E-mailová příloha: JPG kvalita ~75–85, max. šířka 1600 px.",
+          "E-shop: WebP se zálohou JPG; náhledy 800 px.",
+          "Screenshoty UI s textem: PNG nebo bezeztrátový WebP — vyhněte se agresivnímu JPG."
+        ]
+      }
+    ]
+  },
+  "merge-pdf-online-guide": {
+    "title": "Sloučení více PDF do jednoho — kdy to dává smysl",
+    "description": "Spojení faktur, skenů a příloh — pořadí stránek, kvalita a soukromí.",
+    "sections": [
+      {
+        "paragraphs": [
+          "Slučování PDF je běžná kancelářská práce: faktura + smlouva + sken dokladu v jedné příloze. Toolando.tech spojí soubory v pořadí, které vyberete.",
+          "PDF zachovává vektorový text a bitmapové skeny — sloučení nesníží rozlišení skenů, pokud nebyly zdroje nadměrně komprimované."
+        ]
+      },
+      {
+        "title": "Před odesláním",
+        "paragraphs": [
+          "Seřaďte soubory logicky (obálka → obsah → přílohy).",
+          "Odstraňte duplicitní stránky ze skenů.",
+          "Pokud je příjemce na mobilu, cílte na ≤10–15 MB nebo sdílejte přes cloudový odkaz."
+        ]
+      },
+      {
+        "title": "Soukromí",
+        "paragraphs": [
+          "Firemní a osobní dokumenty považujte za důvěrné. Toolando soubory po zpracování maže; stále dodržujte firemní politiku pro citlivá data."
+        ]
+      }
+    ]
+  },
+  "spreadsheet-csv-json-guide": {
+    "title": "CSV, JSON a Excel — přesun dat mezi tabulkami a API",
+    "description": "Kdy zvolit CSV vs JSON a jak se vyhnout rozbitým desetinným místům a kódování.",
+    "sections": [
+      {
+        "paragraphs": [
+          "CSV je prostý text — otevře se v Excelu, Google Sheets a BI nástrojích. JSON zvládá vnořené struktury (API, konfigurace). XLSX přidává typy buněk a více listů.",
+          "Typický tok: export z API jako JSON → JSON do CSV → analýza v Excelu. Opačně: seznam klientů CSV → JSON → REST API."
+        ]
+      },
+      {
+        "title": "Kódování a Excel",
+        "paragraphs": [
+          "Pro ne-ASCII znaky používejte CSV UTF-8. Pokud Excel text rozhodí, importujte přes Data → Z textového souboru a zvolte UTF-8.",
+          "Oddělovače CSV se liší podle locale (čárka vs středník). TSV (tabulátor) je bezpečnější, když popisy obsahují čárky."
+        ]
+      },
+      {
+        "title": "Validace po převodu",
+        "paragraphs": [
+          "Porovnejte počet řádků před a po.",
+          "U JSON zkontrolujte klíče a typy — jedna chybějící uvozovka rozbije celý soubor."
+        ]
+      }
+    ]
+  },
+  "video-compress-before-sharing": {
+    "title": "Zmenšení videa před e-mailem nebo WhatsApp",
+    "description": "MP4, rozlišení, bitrate — praktické limity velikosti a převod kontejneru.",
+    "sections": [
+      {
+        "paragraphs": [
+          "Nahrávky z telefonu ve formátu MOV/MKV mohou mít stovky MB. Mnoho schránek blokuje přílohy >25 MB. Řešení: převod na MP4 (H.264 + AAC) a případně nižší rozlišení.",
+          "720p často stačí pro náhled v telefonu; 1080p ponechte pro televizi."
+        ]
+      },
+      {
+        "title": "Kroky před odesláním",
+        "paragraphs": [
+          "1) Převeďte MOV/MKV → MP4. 2) Zkontrolujte velikost souboru. 3) Pokud stále příliš velké — ořízněte zbytečný úvod/závěr v editoru. 4) Použijte cloudový odkaz, pokud >25 MB."
+        ]
+      }
+    ]
+  },
+  "font-woff2-for-websites": {
+    "title": "TTF, OTF, WOFF, WOFF2 — fonty pro web",
+    "description": "Převod fontů pro @font-face, licence a dopad na rychlost stránky.",
+    "sections": [
+      {
+        "paragraphs": [
+          "Prohlížeče potřebují WOFF/WOFF2 v CSS (@font-face), ne surové fontové soubory z Windows. WOFF2 nabízí nejmenší velikost přenosu.",
+          "Konvertor TTF/OTF → WOFF2 na Toolando připraví soubory připravené pro web. Před vložením zkontrolujte licenci fontu."
+        ]
+      },
+      {
+        "title": "Výkon",
+        "paragraphs": [
+          "Subsetujte fonty na používané glyfy v profesionálních nástrojích, pokud jsou soubory velké.",
+          "Přednačtěte kritický WOFF2 v <head> pro text above-the-fold.",
+          "Používejte font-display: swap, aby text zůstal čitelný během načítání."
+        ]
+      }
+    ]
+  },
+  "toolando-editorial-standards": {
+    "title": "Redakční standardy Toolando.tech — jak vznikají průvodci",
+    "description": "Jak vznikají články, testy konvertorů a encyklopedie formátů — transparentnost pro čtenáře a recenzenty.",
+    "sections": [
+      {
+        "paragraphs": [
+          "Toolando.tech vytvářím sám (Szymon Badyl / Badyl-Tech). Průvodci nejsou hromadně generovaní ani kopírovaní z Wikipedie — vycházejí z reálných testů převodu.",
+          "Každý článek má datum publikace a aktualizace. Když se změní požadavky platforem nebo knihovny, text reviduji."
+        ]
+      },
+      {
+        "title": "Co testuji",
+        "paragraphs": [
+          "Audio/video konvertory: čas, velikost výstupu, přehrávání ve VLC a v telefonu.",
+          "Obrázky: vizuální srovnání před/po, průhlednost PNG, velikost WebP vs JPG.",
+          "Dokumenty: rozvržení po PDF ↔ DOCX, kódování v CSV/JSON."
+        ]
+      },
+      {
+        "title": "Co neslibuji",
+        "paragraphs": [
+          "Žádných „100 % kvality“ při převodu ztrátově → ztrátově.",
+          "Žádné stahování cizích videí z YouTube/TikTok — jen legální operace s vašimi soubory.",
+          "Reklamy Google se mohou zobrazovat, ale redakční obsah je psán nezávisle na inzerentech."
+        ]
+      }
+    ]
+  },
+  "when-not-to-convert-files": {
+    "title": "Kdy NEPŘEVÁDĚT soubor — 7 situací, které snižují kvalitu",
+    "description": "Vyhněte se zbytečným převodům: ponechte originály, bezeztrátové archivy a zálohu před experimenty.",
+    "sections": [
+      {
+        "paragraphs": [
+          "Online konvertory jsou pohodlné, ale ne každá operace pomůže. Někdy ponechte originál nebo použijte bezeztrátové archivy (ZIP, FLAC).",
+          "Pravidlo: neupgradujte ztrátově → bezeztrátově v naději na zázrak — MP3 → WAV neobnoví ztracená data."
+        ]
+      },
+      {
+        "title": "Nechat tak, jak je",
+        "paragraphs": [
+          "Už máte PNG s průhledností — nepřevádějte na JPG bez důvodu.",
+          "Grafické projekty — ponechte vrstvené zdroje (PSD, SVG); JPG exportujte až na konci.",
+          "Studiové WAV/FLAC — nesplácněte na MP3 před finálním mixem.",
+          "Digitálně podepsané PDF — převod může zneplatnit podpis."
+        ]
+      },
+      {
+        "title": "Než kliknete na Převést",
+        "paragraphs": [
+          "Uschovejte kopii originálu.",
+          "Zkontrolujte, zda cílová platforma už akceptuje zdrojový formát.",
+          "Přečtěte si srovnání formátů v encyklopedii Toolando — vyhnete se zbytečnému kroku."
+        ]
+      }
+    ]
+  },
+  "png-vs-jpg-photos-and-graphics": {
+    "title": "PNG vs JPG — fotografie vs grafika s textem",
+    "description": "Praktické volby: fotografie, screenshoty, loga s průhledností a tisk.",
+    "sections": [
+      {
+        "paragraphs": [
+          "PNG a JPG jsou dva nejméně pochopené formáty. JPG dobře komprimuje fotografie — obloha, kůže, krajina — ale ničí ostré hrany a text. PNG zachová každý pixel přesně, včetně průhlednosti (alpha), ale soubory jsou často 5–10× větší než JPG při stejném rozlišení.",
+          "Pravidlo z testů na Toolando.tech: fotka do galerie nebo sociálních sítí → JPG (nebo WebP se zálohou JPG). Ikona, logo, diagram, screenshot UI → PNG. Mix fotky a textu (např. obálka nabídky) → často PNG nebo bezeztrátový WebP."
+        ]
+      },
+      {
+        "title": "Kdy zvolit JPG",
+        "paragraphs": [
+          "Fotografie z fotoaparátu nebo telefonu bez průhlednosti.",
+          "Produktové náhledy, když je pozadí jednolité a nepotřebujete alpha.",
+          "E-mailové přílohy — JPG kvalita 80–85 je obvykle rozumný kompromis.",
+          "Domácí tisk fotek — mnoho obchodů akceptuje JPG ve vysokém rozlišení (ekvivalent 300 DPI)."
+        ]
+      },
+      {
+        "title": "Kdy zvolit PNG",
+        "paragraphs": [
+          "Logo webu na průhledném pozadí — JPG vždy vyplní bílou nebo černou.",
+          "Screenshoty UI, grafů, kódu — text zůstane ostrý.",
+          "Plochá grafika s málo barvami (infografiky, ikony aplikací).",
+          "Když plánujete další vrstvené úpravy — bezeztrátový PNG nepřidává artefakty při každém uložení (na rozdíl od opakovaného JPG)."
+        ]
+      },
+      {
+        "title": "Časté chyby",
+        "paragraphs": [
+          "Uložení loga jako JPG — zubaté hrany a žádná průhlednost.",
+          "Uložení fotky 4000×3000 jako PNG „pro kvalitu“ — zbytečně 15 MB místo 2 MB JPG.",
+          "Smyčky PNG → JPG → PNG — každý průchod JPG ztrácí kvalitu; master držte v PNG."
+        ]
+      }
+    ]
+  },
+  "flac-music-archive-guide": {
+    "title": "FLAC jako hudební archiv — kdy se vyplatí vs MP3",
+    "description": "Bezeztrátový FLAC vs MP3 320 kbps: zálohy, domácí streaming a přehrávače v autě.",
+    "sections": [
+      {
+        "paragraphs": [
+          "FLAC (Free Lossless Audio Codec) je bezeztrátová komprese — jako ZIP pro audio. Po dekódování získáte stejný signál jako WAV, ale soubor zabere asi polovinu místa. MP3 trvale odstraňuje data; ani 320 kbps není bitově identické s CD rip.",
+          "V praxi: pokud kupujete hudbu bezeztrátově nebo ripujete vlastní disky, FLAC je rozumný archivní formát. V telefonu s Bluetooth sluchátky je FLAC vs MP3 256 kbps často neslyšitelný — převod na MP3 ušetří gigabajty."
+        ]
+      },
+      {
+        "title": "Archivní workflow",
+        "paragraphs": [
+          "1) Master ve FLAC (nebo WAV) na NAS / cloudové záloze.",
+          "2) Pracovní kopie MP3/AAC pro telefon a auto.",
+          "3) Nikdy nepřevádějte MP3 → FLAC „pro kvalitu“ — jen zvětší soubor bez obnovy dat.",
+          "Testoval jsem konvertor FLAC → MP3 na Toolando.tech na albech 40–60 min; po převodu zkontrolujte metadata (název, interpret) v přehrávači."
+        ]
+      },
+      {
+        "title": "Kompatibilita",
+        "paragraphs": [
+          "FLAC: VLC, Foobar2000, většina Android přehrávačů; slabší v nativním Apple Music (ALAC lépe sedí Apple ekosystému).",
+          "Autorádia často čtou jen MP3/WMA/AAC z USB — FLAC → MP3 je nutnost.",
+          "Domácí streaming (Plex, Jellyfin) FLAC zvládá bez problémů."
+        ]
+      }
+    ]
+  },
+  "zip-7z-rar-when-to-use": {
+    "title": "ZIP, 7z a RAR — které archivum poslat",
+    "description": "Velikost, kompatibilita a šifrování — kdy stačí ZIP a kdy pomůže 7z nebo RAR.",
+    "sections": [
+      {
+        "paragraphs": [
+          "Archivum zabalí mnoho souborů do jednoho — praktické pro e-mail, cloud a zálohu složek. ZIP je univerzální standard: otevřete na Windows, macOS a Linuxu bez dalšího softwaru. 7z obvykle dá menší výsledek, ale příjemce může potřebovat 7-Zip. RAR se objevuje ve starších workflow; vytváření RAR online má licenční limity — častěji převádíte RAR → ZIP než naopak."
+        ]
+      },
+      {
+        "title": "Kdy ZIP",
+        "paragraphs": [
+          "Odeslání klientům nebo úřadům — nejmenší riziko „neotevře se“.",
+          "Archivace kódu, kancelářských dokumentů, sady JPG fotek.",
+          "Systémy, které akceptují jen nahrávání .zip."
+        ]
+      },
+      {
+        "title": "Kdy 7z",
+        "paragraphs": [
+          "Velké složky her, video projektů, záloha před externím diskem — menší soubor = rychlejší upload.",
+          "Když je příjemce technický a má 7-Zip.",
+          "Převod ZIP → 7z dává smysl jen jednou — nebalte stejná data dokola."
+        ]
+      },
+      {
+        "title": "Bezpečnost",
+        "paragraphs": [
+          "Heslo archivu zabrání náhodnému otevření, ale nenahradí end-to-end šifrování pro citlivé dokumenty.",
+          "Nerozbalujte archivy z neznámých zdrojů bez antivirového skenu.",
+          "Toolando zpracovává archiva jen po dobu převodu kontejneru — obsah musí být legální a váš."
+        ]
+      }
+    ]
+  },
+  "svg-vs-png-logos-and-icons": {
+    "title": "SVG vs PNG — loga a ikony pro web",
+    "description": "Vektor vs raster: kdy dodat SVG a kdy stačí PNG @2x.",
+    "sections": [
+      {
+        "paragraphs": [
+          "SVG je vektorová grafika popsaná matematicky — škáluje se na každé obrazovce bez pixelizace. PNG je bitmapa s pevným rozlišením; na retina často potřebujete 2× verzi. Na webech by loga a jednoduché ikony měly být téměř vždy SVG (nebo icon font), pokud soubor neobsahuje vloženou fotografii.",
+          "Konvertor SVG → PNG na Toolando.tech pomůže, když tiskárna chce PNG 300 DPI nebo systém SVG odmítá."
+        ]
+      },
+      {
+        "title": "Výhody SVG",
+        "paragraphs": [
+          "Jeden soubor pro mobil i desktop — méně CSS, bez srcset.",
+          "Snadná změna barvy přes CSS fill u jednoduchých ikon.",
+          "Lepší skóre Lighthouse než těžké PNG hero."
+        ]
+      },
+      {
+        "title": "Kdy PNG místo SVG",
+        "paragraphs": [
+          "Logo s gradienty, stíny nebo efekty, které se špatně exportují z vektoru.",
+          "Náhledy Open Graph / sociální sítě — platformy stejně rasterizují.",
+          "Desktop aplikace bez SVG enginu.",
+          "Export PNG @2x (např. 512×512) jako záloha v <img> vedle inline SVG."
+        ]
+      }
+    ]
+  },
+  "podcast-export-mp3-aac-settings": {
+    "title": "Export podcastu — MP3 nebo AAC a jaký bitrate",
+    "description": "Nastavení po nahrání v Audacity, Reaper nebo v telefonu: mono, 44,1 kHz, rozumná komprese.",
+    "sections": [
+      {
+        "paragraphs": [
+          "Podcasty jsou hlavně řeč — nepotřebujete stereo 320 kbps jako u studiové hudby. Většina platforem (Spotify, Apple Podcasts, RSS hosty) stejně překóduje nahrávky. Přesto pošlete slušný master: mono nebo stereo, 44,1 nebo 48 kHz, MP3 128–192 kbps nebo AAC/M4A 128 kbps.",
+          "Nahráno ve WAV nebo FLAC? Finální export je téměř vždy MP3 nebo AAC — testoval jsem WAV → MP3 na Toolando.tech na epizodách 30–60 min; ~30 MB WAV klesne na ~28 MB při 128 kbps stereo (mono řeč může být ~15 MB)."
+        ]
+      },
+      {
+        "title": "Doporučená nastavení",
+        "paragraphs": [
+          "Solo / rozhovor jednoho hlasu: mono, MP3 96–128 kbps.",
+          "Dva hlasy na oddělených stopách: stereo 128 kbps.",
+          "Hudební intro/outro ve stereo, zbytek mono — exportujte vše stereo 128 kbps pro jednoduchost.",
+          "Vyhněte se 64 kbps — ostré sykavky a šum pozadí u levných mikrofonů."
+        ]
+      },
+      {
+        "title": "MP3 vs AAC (M4A)",
+        "paragraphs": [
+          "AAC při stejném bitrate obvykle překoná MP3 — Apple preferuje M4A.",
+          "MP3 má nejširší kompatibilitu ve starých přehrávačích a autech.",
+          "Nenahrávejte surový WAV na hosting podcastu — nahrání trvá příliš dlouho."
+        ]
+      }
+    ]
+  },
+  "gif-vs-mp4-for-animations": {
+    "title": "GIF vs MP4 — animace na webech a sociálních sítích",
+    "description": "Kdy dává smysl starý GIF a kdy krátké MP4 nebo WebM ušetří megabajty.",
+    "sections": [
+      {
+        "paragraphs": [
+          "GIF se přehraje všude, ale technicky jde o sekvenci snímků bez moderní video komprese — 5sekundová animace 720p může vážit 10–20 MB. Totéž v MP4 (H.264) se často vejde do 500 KB–1 MB při akceptovatelné kvalitě.",
+          "MP4 → GIF na Toolando.tech dává smysl u krátkých smyček (loader, Slack reakce), když platforma neumožní vložit video. Na vlastním webu preferujte <video autoplay loop muted playsinline> s MP4 nebo WebM."
+        ]
+      },
+      {
+        "title": "Kdy GIF",
+        "paragraphs": [
+          "Krátká smyčka (<5 s), malé rozlišení (≤480 px šířky).",
+          "Požadavek platformy (některá fóra jen GIF).",
+          "Jednoduchá grafika s málo barvami — pak může být GIF opravdu lehký."
+        ]
+      },
+      {
+        "title": "Kdy MP4/WebM",
+        "paragraphs": [
+          "Animace s mnoha barvami, gradienty nebo video klipy.",
+          "Weby — lepší LCP a menší přenos dat.",
+          "Instagram/TikTok vyžadují video, ne GIF."
+        ]
+      },
+      {
+        "title": "Tipy pro MP4 → GIF",
+        "paragraphs": [
+          "Zkratte délku — každá sekunda jsou desítky snímků.",
+          "Snižte rozlišení před převodem.",
+          "Omezte paletu barev, pokud to nástroj nabízí (méně bandingu)."
+        ]
+      }
+    ]
+  },
+  "tiff-and-png-for-document-scans": {
+    "title": "Skeny dokumentů — TIFF, PNG nebo JPG",
+    "description": "Faktury a smlouvy: bezeztrátové uložení, vícestránkovost a kdy stačí PDF.",
+    "sections": [
+      {
+        "paragraphs": [
+          "Sken faktury nebo smlouvy se liší od dovolenkové fotky. Text a razítka potřebují ostré hrany — agresivní JPG rozmazává písmena. TIFF (často LZW bezeztrátově) a PNG jsou bezpečnější pro archiv. Pro odeslání a OCR stejně často skončíte u PDF nebo JPG střední kvality.",
+          "Vícestránkový TIFF může být jeden soubor s více vrstvami — ne každý prohlížeč to zvládne; pro úřady a klienty je přehlednější vícestránkové PDF (slučte PDF na Toolando.tech)."
+        ]
+      },
+      {
+        "title": "Doporučený workflow",
+        "paragraphs": [
+          "Skener → PNG nebo TIFF na stránku (300 DPI pro tisk, 150 DPI pro náhled).",
+          "Opravte rotaci/ořez v editoru.",
+          "Sloučte stránky do jednoho PDF k odeslání.",
+          "Volitelně JPG kvalita 90 jen pokud příjemce PDF nepřijme."
+        ]
+      },
+      {
+        "title": "Čeho se vyhnout",
+        "paragraphs": [
+          "JPG kvalita 60 u faktury — částky mohou být nečitelné.",
+          "Opakované cykly TIFF → JPG → TIFF.",
+          "Barevný sken v 600 DPI „pro jistotu“ — gigabajty bez přínosu pro A4 text."
+        ]
+      }
+    ]
+  },
+  "markdown-to-pdf-workflow": {
+    "title": "Z Markdownu do PDF — dokumentace, README a poznámky",
+    "description": "MD → HTML → PDF/DOCX: kdy stačí export z editoru a kdy pomůže online konvertor.",
+    "sections": [
+      {
+        "paragraphs": [
+          "Markdown slouží k psaní — nadpisy, seznamy, kód — bez WYSIWYG rozvržení. Vývojáři drží README.md v repozitářích; pak potřebujete PDF pro klienta nebo tisk. Typická cesta: MD → HTML (render) → PDF přes tisk prohlížeče, nebo MD → DOCX → PDF pro lepší záhlaví stránek.",
+          "Testoval jsem konvertory MD → HTML a DOCX → PDF na Toolando.tech na souborech 20–40 KB; české znaky a bloky kódu projdou v pořádku, pokud je MD v UTF-8."
+        ]
+      },
+      {
+        "title": "Která cesta kdy",
+        "paragraphs": [
+          "Rychlý náhled: MD → HTML, otevřít v prohlížeči.",
+          "Formální dokument s číslováním stran: MD → DOCX (nebo editor), firemní styl, pak DOCX → PDF.",
+          "Prosté poznámky bez stylu: stačí MD → TXT."
+        ]
+      },
+      {
+        "title": "Dobré návyky MD",
+        "paragraphs": [
+          "Jeden soubor = jedno téma; dlouhé dokumenty rozdělte na kapitoly.",
+          "Obrázky odkazujte relativně — po převodu zkontrolujte cesty.",
+          "Tabulky v MD se v PDF mohou rozbít — zvažte CSV nebo DOCX pro tabulková data."
+        ]
+      }
+    ]
+  },
+  "extract-images-from-pdf-pages": {
+    "title": "Jak extrahovat obrázky ze stránek PDF (JPG, PNG, WebP)",
+    "description": "Prezentace, katalogy a skeny — kdy export stránky jako obrázku dává smysl a jaké rozlišení.",
+    "sections": [
+      {
+        "paragraphs": [
+          "PDF je kontejner — uvnitř mohou být vektory, fonty a vložené bitmapy. PDF → JPG vykreslí každou stránku jako rastrový obrázek. To není totéž jako extrakce jednoho vloženého loga (to vyžaduje PDF editor), ale u snímků, plakátů a skenů funguje skvěle.",
+          "Prezentace 16:9 exportovaná do PNG o šířce 1920 px vypadá na obrazovce ostře; pro tisk A4 cílte na ~2480×3508 px (300 DPI), pokud nástroj podporuje vysoké rozlišení."
+        ]
+      },
+      {
+        "title": "JPG vs PNG vs WebP",
+        "paragraphs": [
+          "Snímek s fotografickým pozadím → JPG nebo WebP.",
+          "Snímek s grafy a textem → PNG (ostřejší typografie).",
+          "Náhled na web → WebP se zálohou JPG po dalším převodu."
+        ]
+      },
+      {
+        "title": "Vícestránkové PDF",
+        "paragraphs": [
+          "Exportujte jednotlivé stránky, pokud potřebujete jen snímky 5 a 12.",
+          "Pro galerii všech stránek — převeďte celý soubor a seřaďte podle čísla v názvech.",
+          "Respektujte autorská práva — cizí PDF není váš obrázek k volné publikaci."
+        ]
+      }
+    ]
+  },
+  "convert-video-to-gif-properly": {
+    "title": "Jak udělat dobrý GIF z videa — rozlišení, FPS, délka",
+    "description": "MP4/MOV do GIF bez obřího souboru: praktické limity a alternativy.",
+    "sections": [
+      {
+        "paragraphs": [
+          "GIF nemá zvuk a nepoužívá H.264 — každý snímek je plná bitmapa (často paleta 256 barev). Desetisekundový klip 1080p jako GIF může vážit víc než původní video. Cíl: krátké, malé, nízké rozlišení.",
+          "Před MP4 → GIF ořízněte klip na 2–4 sekundy v externím editoru a použijte 10–15 FPS místo 30 — GIF stejně neobnoví plynulost filmu."
+        ]
+      },
+      {
+        "title": "Výchozí parametry",
+        "paragraphs": [
+          "Max. šířka 480–640 px pro memy a reakce.",
+          "Max. délka 5 s — nad tím zvažte smyčkové MP4.",
+          "Jednoduché pozadí (greenscreen) se lépe komprimuje než gradient a šum."
+        ]
+      },
+      {
+        "title": "Po převodu",
+        "paragraphs": [
+          "Zkontrolujte velikost souboru — GIF nad 5 MB na stránce málokdy dává smysl.",
+          "Pokud je GIF příliš velký, GIF → MP4 a vložení <video> často situaci zachrání.",
+          "Toolando zpracovává vaše video jen po dobu převodu — hotové GIFy veřejně nehostuje."
+        ]
+      }
+    ]
+  },
+  "split-pdf-pages-guide": {
+    "title": "Jak rozdělit PDF na jednotlivé stránky online",
+    "description": "Kdy PDF rozdělovat, jak zvolit rozsah stránek a co dělat s výstupem ZIP.",
+    "sections": [
+      {
+        "paragraphs": [
+          "Rozdělení PDF je běžné po skenování vícestránkové smlouvy nebo faktury — možná potřebujete poslat e-mailem jednu stránku nebo připojit fragment jinde.",
+          "Na Toolando.tech můžete exportovat každou stránku zvlášť nebo zadat rozsah (např. 1-3,5). Výsledkem je ZIP PDF souborů, každý zachová původní vektorovou nebo skenovou kvalitu."
+        ]
+      },
+      {
+        "title": "Kdy rozdělit vs sloučit",
+        "paragraphs": [
+          "Rozdělit — když příjemce potřebuje jen fragment (stránka s podpisem, příloha, obálka).",
+          "Sloučit — když skládáte skeny do jednoho archivu nebo odesílky.",
+          "Po rozdělení zvažte číslování stránek nebo kompresi velkých skenů."
+        ]
+      }
+    ]
+  },
+  "remove-exif-privacy-guide": {
+    "title": "EXIF ve fotkách — co odstranit před publikací",
+    "description": "GPS, model fotoaparátu a data v metadatech EXIF — rizika soukromí a odstranění.",
+    "sections": [
+      {
+        "paragraphs": [
+          "EXIF jsou skrytá metadata v JPEG, PNG nebo HEIC: GPS poloha, model telefonu, orientace, někdy náhledová miniatura. Sociální sítě je často odstraní, ale vlastní web, newsletter nebo e-mailová příloha ne vždy.",
+          "Před publikací fotek dětí, interiérů domova nebo dokumentů na stole odstraňte EXIF specializovaným nástrojem — na Toolando probíhá zpracování na serveru a soubor neputuje do externí AI cloudu."
+        ]
+      },
+      {
+        "title": "Co zůstane po odstranění EXIF",
+        "paragraphs": [
+          "Pixely obrázku zůstávají beze změny. Odstraní se jen metadata — rozlišení se nemění.",
+          "Po odstranění EXIF můžete soubor dále komprimovat nebo přidat vodoznak před publikací portfolia."
+        ]
+      }
+    ]
+  },
+  "jwt-decode-safely-guide": {
+    "title": "JWT — jak přečíst token bez ověření podpisu",
+    "description": "Header, payload a Base64URL — kdy dekódovat lokálně a co nedělat.",
+    "sections": [
+      {
+        "paragraphs": [
+          "JSON Web Token má tři části oddělené tečkami: header, payload a signature. JWT dekodér na Toolando zobrazí header a payload po dekódování Base64URL — bez odeslání tokenu na server (běží v prohlížeči).",
+          "To nenahrazuje ověření podpisu na backendu. Dekódování slouží k ladění (např. expirované `exp`, špatné `aud`) — nikdy nepovažujte samotný payload za důkaz identity."
+        ]
+      },
+      {
+        "title": "Bezpečné postupy",
+        "paragraphs": [
+          "Nevkládejte produkční tokeny s osobními daty na veřejné stránky — použijte lokální dekodér nebo testovací prostředí.",
+          "Před laděním chyb 401 zkontrolujte `exp` a `nbf`.",
+          "Po analýze smažte token z historie schránky a logů."
+        ]
+      }
+    ]
+  },
+  "mortgage-loan-calculator-guide": {
+    "title": "Kalkulačka úvěru — splátka, úroky a na co si dát pozor",
+    "description": "Anuita, poplatky a pojištění — jak číst výsledek hypoteční kalkulačky.",
+    "sections": [
+      {
+        "paragraphs": [
+          "Kalkulačka úvěru na Toolando počítá anuitní splátku: pevná měsíční částka jistiny plus úroků. Delší doba snižuje splátku — ale zvyšuje celkové náklady na úroky.",
+          "Berete to jako výchozí bod pro rozhovor s bankou, ne jako nabídku. Skutečná splátka závisí na referenční sazbě, marži, poplatcích, životním pojištění a akontaci."
+        ]
+      },
+      {
+        "title": "Co připočítat mimo kalkulačku",
+        "paragraphs": [
+          "Poplatek za poskytnutí a poplatek za předčasné splacení (pokud je ve smlouvě).",
+          "Pojištění nemovitosti a života — banka je často vyžaduje.",
+          "Notářské poplatky a daň z nabytí při koupi bytu."
+        ]
+      }
+    ]
+  }
+}

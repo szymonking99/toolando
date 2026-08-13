@@ -3,10 +3,122 @@
     "title": "Toolando.tech — Όλα τα διαδικτυακά σας εργαλεία σε ένα μέρος",
     "description": "Μετατροπείς, γεννήτριες, εργαλεία PDF και AI — όλα σε ένα κομψό οικοσύστημα. Γρήγορα και απλά."
   },
+  "socialProof": {
+    "toolsCount": "{count}+ εργαλεία σε ένα οικοσύστημα",
+    "usesToday": "{uses} χρήσεις σήμερα"
+  },
+  "recent": {
+    "title": "Χρησιμοποιήθηκαν πρόσφατα",
+    "subtitle": "Τα τελευταία σας εργαλεία — αποθηκευμένα τοπικά σε αυτόν τον browser.",
+    "favoritesHint": "Βάλτε αστέρι σε ένα εργαλείο από τη σελίδα του για να το καρφιτσώσετε εδώ."
+  },
+  "premiumUpsell": {
+    "title": "Ξεκλειδώστε εργαλεία AI με Premium",
+    "description": "Δημιουργία κειμένου, περιλήψεις, εικόνες, μετάφραση και chat — μία συνδρομή, χωρίς εκπλήξεις ανά αίτημα.",
+    "point1": "Όλα τα εργαλεία AI χωρίς όρια",
+    "point2": "Προτεραιότητα επεξεργασίας σε πολυάσχολες μέρες",
+    "point3": "Υποστήριξη ανεξάρτητης ανάπτυξης",
+    "cta": "Επιλογή Premium",
+    "compare": "Δείτε τα πλάνα",
+    "trialHint": "Συνδεθείτε για δωρεάν προεπισκόπηση — αναβαθμίστε όποτε θέλετε."
+  },
+  "privacyBadge": {
+    "title": "Απόρρητο πρώτα",
+    "local": "Επεξεργασία τοπικά στον browser σας"
+  },
+  "onboarding": {
+    "skip": "Κλείσιμο",
+    "next": "Επόμενο",
+    "start": "Περιήγηση εργαλείων",
+    "learnMore": "Πώς λειτουργεί το Toolando",
+    "step1": {
+      "title": "Μετατροπή, υπολογισμός, άνοιγμα — ένα οικοσύστημα",
+      "body": "287+ εργαλεία για αρχεία, αριθμομηχανές, εργαλεία developer και AI — επιλέξτε εργαλείο ή αναζητήστε με Ctrl+K."
+    },
+    "step2": {
+      "title": "Απόρρητο όπου έχει σημασία",
+      "body": "Πολλά εργαλεία τρέχουν στον browser σας. Οι μετατροπές στον server διαγράφουν τα αρχεία μετά το τέλος της εργασίας."
+    },
+    "step3": {
+      "title": "Εργαλεία AI με Premium",
+      "body": "Δοκιμάστε δωρεάν τους μετατροπείς. Οι λειτουργίες AI έχουν απλό μηνιαίο πλάνο — δείτε τιμές πριν φτάσετε στο paywall."
+    }
+  },
+  "exitIntent": {
+    "title": "Πριν φύγετε…",
+    "body": "Χρειάζεστε άλλον μετατροπέα; Αναζητήστε στα 287+ εργαλεία ή πείτε μας τι να φτιάξουμε στη συνέχεια.",
+    "browse": "Περιήγηση εργαλείων",
+    "request": "Αίτημα εργαλείου",
+    "close": "Κλείσιμο"
+  },
+  "nextSteps": {
+    "title": "Επόμενα βήματα",
+    "aiSummarizeTitle": "Περίληψη εγγράφου με AI",
+    "aiSummarizeBody": "Δημιουργήστε περίληψη PDF ή DOCX σε δευτερόλεπτα (Premium ή 1 δοκιμή/ημέρα)."
+  },
+  "newsletter": {
+    "title": "Νέα εργαλεία και ενημερώσεις Premium",
+    "subtitle": "Αφήστε το email σας — θα σας ενημερώνουμε για σημαντικά features (χωρίς spam).",
+    "placeholder": "name@example.com",
+    "cta": "Εγγραφή",
+    "thanks": "Ευχαριστούμε! Επιβεβαιώστε μέσω επικοινωνίας αν θέλετε απάντηση.",
+    "confirmViaContact": "Ολοκλήρωση εγγραφής μέσω φόρμας επικοινωνίας →",
+    "error": "Η εγγραφή απέτυχε. Δοκιμάστε ξανά."
+  },
+  "toolRequest": {
+    "title": "Λείπει κάποιος μετατροπέας;",
+    "body": "Προτείνετε νέο εργαλείο ή μορφή — δίνουμε προτεραιότητα σε ό,τι ζητούν οι χρήστες.",
+    "cta": "Πρόταση εργαλείου"
+  },
+  "comparison": {
+    "title": "Toolando vs. εργαλεία cloud upload",
+    "subtitle": "Γιατί οι χρήστες αλλάζουν από τους συνηθισμένους online μετατροπείς.",
+    "feature": "Λειτουργία",
+    "competitor": "Τυπικός cloud μετατροπέας",
+    "rows": {
+      "privacy": "Τοπική προεπισκόπηση και επιλογές απορρήτου",
+      "offline": "Λειτουργεί offline (PWA εργαλεία)",
+      "ai": "Ενσωματωμένη ροή εργασίας AI",
+      "free": "Δωρεάν βασικοί μετατροπείς",
+      "limits": "Χωρίς αυθαίρετα ημερήσια όρια upload στα βασικά"
+    }
+  },
+  "premiumPage": {
+    "title": "Toolando Premium",
+    "subtitle": "Εργαλεία AI, σαφείς τιμές, ακύρωση όποτε θέλετε.",
+    "freeTitle": "Δωρεάν",
+    "freeDesc": "Όλοι οι μετατροπείς αρχείων, αριθμομηχανές και τα περισσότερα εργαλεία.",
+    "premiumTitle": "Premium",
+    "premiumDesc": "Πλήρες πακέτο AI — κείμενο, εικόνες, περιλήψεις, μετάφραση, chat.",
+    "supporterTitle": "Υποστηρικτής",
+    "supporterDesc": "Premium + εμπειρία χωρίς διαφημίσεις (σύντομα).",
+    "cta": "Έναρξη Premium",
+    "signIn": "Συνδεθείτε για συνδρομή",
+    "faqTitle": "FAQ τιμών",
+    "faq1q": "Πώς λειτουργούν τα credits;",
+    "faq1a": "Δεν υπάρχουν credits ανά αίτημα — το Premium είναι σταθερή μηνιαία συνδρομή με απεριόριστη χρήση AI.",
+    "faq2q": "Μπορώ να δοκιμάσω πριν πληρώσω;",
+    "faq2a": "Δημιουργήστε δωρεάν λογαριασμό, δοκιμάστε μετατροπείς και αναβαθμίστε όταν χρειαστείτε AI.",
+    "faq3q": "Τι ισχύει για το απόρρητο αρχείων;",
+    "faq3a": "Τα αρχεία στον server διαγράφονται μετά την επεξεργασία. Τα εργαλεία browser δεν ανεβάζουν ποτέ τα δεδομένα σας."
+  },
+  "privacyPage": {
+    "title": "Απόρρητο ενσωματωμένο στο σχεδιασμό",
+    "subtitle": "Πώς το Toolando προστατεύει τα αρχεία και τα δεδομένα σας.",
+    "localTitle": "Εργαλεία τοπικά στον browser",
+    "localBody": "Utilities, ο καθολικός opener και πολλές αριθμομηχανές τρέχουν εξ ολοκλήρου στον browser — τα δεδομένα δεν φεύγουν από τη συσκευή.",
+    "serverTitle": "Μετατροπές στον server",
+    "serverBody": "Όταν ανεβάζετε για μετατροπή, τα αρχεία χρησιμοποιούνται μόνο για αυτή την εργασία και διαγράφονται μετά. HTTPS end-to-end.",
+    "aiTitle": "Εργαλεία AI",
+    "aiBody": "Το Premium AI στέλνει στον πάροχο μοντέλου μόνο το περιεχόμενο που υποβάλλετε εσείς — δεν πωλείται ούτε χρησιμοποιείται για διαφημίσεις.",
+    "badge": "Απόρρητο πρώτα",
+    "readPolicy": "Διαβάστε την πλήρη πολιτική απορρήτου"
+  },
   "nav": {
     "aiTools": "Εργαλεία AI",
     "tools": "Μετατροπείς",
-    "categories": "Converter categories",
+    "categories": "Κατηγορίες μετατροπέων",
+    "formats": "Μορφές",
     "about": "Σχετικά",
     "contact": "Επικοινωνία",
     "cta": "Ξεκινήστε",
@@ -15,11 +127,18 @@
     "allTools": "Όλα τα εργαλεία",
     "signIn": "Σύνδεση",
     "account": "Ο λογαριασμός μου",
-    "downloader": "MP3 Downloader",
+    "downloader": "Λήψη MP3",
+    "aboutMe": "Σχετικά με εμένα",
+    "privacy": "Πολιτική απορρήτου",
+    "terms": "Όροι χρήσης",
     "onlineTools": "Υπολογιστές",
     "converters": "Μετατροπείς",
     "calculators": "Υπολογιστές",
-    "developer": "Εργαλεία προγραμματιστών"
+    "developer": "Εργαλεία προγραμματιστών",
+    "premium": "Premium",
+    "guides": "Οδηγοί",
+    "faq": "FAQ",
+    "more": "Περισσότερα"
   },
   "hero": {
     "badge": "Ένα νέο οικοσύστημα διαδικτυακών εργαλείων",
@@ -27,7 +146,68 @@
     "titleHighlight": "ένα μέρος",
     "subtitle": "Μετατροπείς, γεννήτριες, PDF, AI — όλα σε ένα οικοσύστημα.",
     "browse": "Περιήγηση εργαλείων",
-    "learnMore": "Μάθετε περισσότερα"
+    "learnMore": "Μάθετε περισσότερα",
+    "convertCta": "Μετατρέψτε ένα αρχείο τώρα"
+  },
+  "search": {
+    "placeholder": "Αναζήτηση μετατροπέων (π.χ. mp3 wav, pdf jpg)…",
+    "noResults": "Δεν βρέθηκαν μετατροπείς. Δοκιμάστε ένα διαφορετικό ερώτημα."
+  },
+  "share": {
+    "label": "Κοινοποίηση",
+    "copy": "Αντιγραφή συνδέσμου",
+    "copied": "Αντιγράφηκε"
+  },
+  "feedback": {
+    "question": "Ήταν αυτό το άρθρο χρήσιμο;",
+    "yes": "Ναι",
+    "no": "Όχι",
+    "thanks": "Σας ευχαριστούμε για τα σχόλιά σας!"
+  },
+  "recommender": {
+    "title": "Ποια μορφή να επιλέξω;",
+    "subtitle": "Απαντήστε σε δύο γρήγορες ερωτήσεις και θα σας προτείνουμε την καλύτερη μορφή.",
+    "step1": "Τι τύπο αρχείου έχετε;",
+    "step2": "Τι θέλετε να κάνετε με αυτό;",
+    "categories": {
+      "image": "Εικόνα / φωτογραφία",
+      "audio": "Ήχος / μουσική",
+      "video": "Βίντεο",
+      "document": "Έγγραφο"
+    },
+    "goals": {
+      "image_web": "Δημοσίευση σε ιστότοπο",
+      "image_email": "Αποστολή με email",
+      "image_print": "Εκτύπωση",
+      "image_iphone": "Φωτογραφία από iPhone (HEIC)",
+      "audio_listen": "Ακούστε στο τηλέφωνο ή στη συσκευή αναπαραγωγής",
+      "audio_edit": "Επεξεργασία σε DAW",
+      "audio_archive": "Αρχειοθέτηση χωρίς απώλεια ποιότητας",
+      "video_social": "Δημοσίευση στα μέσα κοινωνικής δικτύωσης",
+      "video_web": "Ενσωμάτωση σε ιστότοπο",
+      "video_audio": "Εξαγωγή ήχου μόνο",
+      "document_share": "Αποστολή για ανάγνωση (χωρίς επεξεργασία)",
+      "document_edit": "Επεξεργαστείτε το κείμενο"
+    },
+    "resultTitle": "Προτεινόμενη μορφή:",
+    "readFormat": "Οδηγός μορφής",
+    "openConverter": "Ανοίξτε τον μετατροπέα",
+    "back": "Πίσω",
+    "tryAgain": "Ξεκινήστε από την αρχή",
+    "reasons": {
+      "webp-web": "Το WebP είναι 25–35% μικρότερο από το JPG στην ίδια ποιότητα — ιδανικό για ταχύτερους ιστότοπους.",
+      "jpg-email": "Το JPG είναι καθολικό και μικρό — ιδανικό για συνημμένα email.",
+      "png-print": "Το PNG είναι χωρίς απώλειες με αιχμηρές άκρες — καλό για γραφικά και εκτύπωση μικρής διάρκειας.",
+      "heic-jpg": "Το HEIC από το iPhone χρειάζεται μετατροπή σε JPG για συμβατότητα με τα Windows και τις περισσότερες υπηρεσίες.",
+      "mp3-listen": "Το MP3 λειτουργεί σε κάθε συσκευή και διατηρεί μικρά αρχεία.",
+      "wav-edit": "Το WAV είναι χωρίς απώλειες — το καλύτερο για επεξεργασία χωρίς απώλεια ποιότητας.",
+      "flac-archive": "Το FLAC συμπιέζει χωρίς απώλεια ποιότητας — ιδανικό για αρχειοθέτηση μουσικής.",
+      "mp4-social": "Το MP4 (H.264 + AAC) είναι το πρότυπο για το Instagram, το TikTok και το YouTube.",
+      "webm-web": "Το WebM είναι βελτιστοποιημένο για βίντεο HTML5 σε προγράμματα περιήγησης.",
+      "mp3-audio": "Εξάγετε ήχο από το βίντεό σας ως MP3 για podcast ή ήχους κλήσης.",
+      "pdf-share": "Διάταξη κλειδώματος PDF — ο παραλήπτης βλέπει ακριβώς αυτό που σκοπεύατε.",
+      "docx-edit": "Το DOCX σάς επιτρέπει να επεξεργάζεστε κείμενο, στυλ και επικεφαλίδες στο Word."
+    }
   },
   "opener": {
     "title": "Καθολικό άνοιγμα αρχείων",
@@ -37,26 +217,26 @@
     "kindVideo": "Βίντεο",
     "kindAudio": "Ήχος",
     "kindDocs": "PDF, κώδικας και δεδομένα",
-    "readError": "Couldn't read the file contents.",
-    "dropAny": "Drag any file here or click to choose",
-    "dropHint": "Images, video, audio, PDF, documents, code, data — any format. Files are opened locally in your browser and never uploaded anywhere.",
-    "noConverter": "We don't have a converter for this format yet — but you can preview and download the file below.",
-    "convertTo": "Convert to another format",
-    "optionOne": "option",
-    "optionMany": "options",
-    "downloadedOk": "Done! The file has been downloaded.",
-    "download": "Download",
-    "close": "Close",
-    "emptyFile": "(empty file)",
-    "textTruncated": "Preview truncated to the first 200,000 characters. Download the file to see everything.",
-    "binaryPreview": "Binary preview (first bytes in hexadecimal)",
+    "readError": "Δεν ήταν δυνατή η ανάγνωση του περιεχομένου του αρχείου.",
+    "dropAny": "Σύρετε οποιοδήποτε αρχείο εδώ ή κάντε κλικ για επιλογή",
+    "dropHint": "Εικόνες, βίντεο, ήχος, PDF, έγγραφα, κώδικας, δεδομένα — κάθε μορφή. Τα αρχεία ανοίγουν τοπικά στον browser και δεν ανεβαίνουν πουθενά.",
+    "noConverter": "Δεν έχουμε ακόμη μετατροπέα για αυτή τη μορφή — αλλά μπορείτε να κάνετε προεπισκόπηση και λήψη του αρχείου παρακάτω.",
+    "convertTo": "Μετατροπή σε άλλη μορφή",
+    "optionOne": "επιλογή",
+    "optionMany": "επιλογές",
+    "downloadedOk": "Έτοιμο! Το αρχείο λήφθηκε.",
+    "download": "Λήψη",
+    "close": "Κλείσιμο",
+    "emptyFile": "(κενό αρχείο)",
+    "textTruncated": "Η προεπισκόπηση περικόπηκε στους πρώτους 200.000 χαρακτήρες. Κάντε λήψη του αρχείου για να δείτε τα πάντα.",
+    "binaryPreview": "Δυαδική προεπισκόπηση (πρώτα byte σε δεκαεξαδικό)",
     "kinds": {
-      "image": "Image",
-      "video": "Video",
-      "audio": "Audio",
-      "pdf": "PDF document",
-      "text": "Text / code",
-      "binary": "Binary file"
+      "image": "Εικόνα",
+      "video": "Βίντεο",
+      "audio": "Ήχος",
+      "pdf": "Έγγραφο PDF",
+      "text": "Κείμενο / κώδικας",
+      "binary": "Δυαδικό αρχείο"
     }
   },
   "ai": {
@@ -76,6 +256,41 @@
     "title": "Κατηγορίες εργαλείων",
     "subtitle": "Επιλέξτε μια κατηγορία για να δείτε όλους τους διαθέσιμους μετατροπείς.",
     "browse": "Περιήγηση"
+  },
+  "toolsIndex": {
+    "intro": "Κάθε εργαλείο μετατρέπει αρχεία στον διακομιστή — δεν υπάρχει λογισμικό για εγκατάσταση. Δεν είστε σίγουροι ποια μορφή να επιλέξετε; Περιηγηθείτε στην εγκυκλοπαίδεια μορφής ή στους οδηγούς μετατροπής.",
+    "formatsLink": "Μορφή εγκυκλοπαίδειας",
+    "guidesLink": "Οδηγοί μετατροπής"
+  },
+  "knowledgeHub": {
+    "title": "Γνώσεις μορφής και μετατροπής",
+    "subtitle": "Μην κάνετε απλώς μετατροπή — κατανοήστε πότε να επιλέξετε MP3 μέσω FLAC, WebP μέσω JPG ή PDF μέσω DOCX. Οι οδηγοί μας σάς βοηθούν να αποφύγετε απώλεια ποιότητας και περιττές μετατροπές.",
+    "formatsTitle": "Εγκυκλοπαίδεια μορφής αρχείου",
+    "formatsDesc": "40+ μορφές: ήχος, βίντεο, εικόνες, έγγραφα, δεδομένα και αρχεία. Πλεονεκτήματα, μειονεκτήματα, συμβατότητα και συγκρίσεις με εναλλακτικές.",
+    "formatsCta": "Περιήγηση σε μορφές",
+    "guidesTitle": "Οδηγοί μετατροπής",
+    "guidesDesc": "Πρακτικά άρθρα: ποιότητα ήχου, συμπίεση εικόνας, βίντεο για μέσα κοινωνικής δικτύωσης, PDF εναντίον DOCX και ασφάλεια αρχείων στο διαδίκτυο.",
+    "guidesCta": "Διαβάστε οδηγούς",
+    "comparisonsTitle": "Μορφοποίηση συγκρίσεων",
+    "comparisonsDesc": "MP3 vs FLAC, JPG vs WebP, PDF vs DOCX — κατ' ιδίαν συγκρίσεις με σαφή ετυμηγορία.",
+    "comparisonsCta": "Περιηγηθείτε σε συγκρίσεις",
+    "glossaryTitle": "Γλωσσάρι",
+    "glossaryDesc": "Bitrate, codec, συμπιεσία με απώλειες, MIME — ορισμοί σε απλή γλώσσα.",
+    "glossaryCta": "Άνοιγμα γλωσσαρίου"
+  },
+  "editorial": {
+    "title": "Ποιος βρίσκεται πίσω από το Toolando.tech",
+    "body": "Είμαι ο Szymon — σχεδιάζω, φτιάχνω και δοκιμάζω κάθε εργαλείο μόνος μου. Οι οδηγοί βασίζονται σε πραγματικές μετατροπές, όχι σε αντιγραμμένες προδιαγραφές. Θέλω να κατανοείτε τα αρχεία σας πριν τα μετατρέψετε — και η υπηρεσία να παραμένει ειλικρινής μαζί σας.",
+    "aboutCta": "Σχετικά με εμένα και μεθοδολογία",
+    "howCta": "Πώς λειτουργούν τα εργαλεία",
+    "editorialCta": "Συντακτικά πρότυπα",
+    "guidesCta": "Οδηγοί"
+  },
+  "featuredGuides": {
+    "title": "Προτεινόμενοι οδηγοί",
+    "subtitle": "Πρακτικά άρθρα για μορφές αρχείων, ασφάλεια και μετατροπή — γραμμένα από πραγματικές δοκιμές, όχι SEO πρότυπα.",
+    "readArticle": "Διαβάστε τον οδηγό",
+    "allGuides": "Όλοι οι οδηγοί"
   },
   "why": {
     "title": "Γιατί Toolando.tech;",
@@ -100,9 +315,25 @@
     "privacy": "Πολιτική απορρήτου",
     "terms": "Όροι χρήσης",
     "rights": "© 2026 Toolando.tech. Με επιφύλαξη παντός δικαιώματος.",
-    "aboutMe": "About me",
-    "howItWorks": "How it works",
-    "faq": "FAQ"
+    "aboutMe": "Σχετικά με εμένα",
+    "howItWorks": "Πώς λειτουργεί",
+    "faq": "FAQ",
+    "guides": "Οδηγοί",
+    "editorial": "Σύνταξη",
+    "formats": "Μορφές αρχείων",
+    "comparisons": "Συγκρίσεις",
+    "glossary": "Γλωσσάρι",
+    "rss": "Ροή RSS",
+    "cookieSettings": "Ρυθμίσεις cookie",
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "messenger": "Messenger",
+    "youtube": "YouTube",
+    "emailAria": "Ανοίγει την εφαρμογή email για να μας γράψετε"
+  },
+  "ad": {
+    "label": "Διαφήμιση",
+    "placeholder": "Χώρος διαφήμισης"
   },
   "language": {
     "label": "Γλώσσα"
@@ -111,6 +342,10 @@
     "eyebrow": "Υποστηρίξτε το έργο",
     "title": "Βοηθήστε το Toolando.tech να συνεχίσει",
     "subtitle": "Το Toolando.tech αναπτύσσεται και προσφέρεται δωρεάν. Αν σας εξοικονομεί χρόνο, σκεφτείτε να υποστηρίξετε την ανάπτυξή του.",
+    "body1": "Διατηρώ την υπηρεσία μόνος μου — κωδικός, διακομιστές, νομικό περιεχόμενο και οδηγοί. Η υποστήριξή σας βοηθά στην κάλυψη της φιλοξενίας (Vercel), της επεξεργασίας αρχείων, του τομέα και της ανάπτυξης νέων εργαλείων.",
+    "body2": "Η υποστήριξη είναι εντελώς εθελοντική. Τα δωρεάν εργαλεία δεν απαιτούν πληρωμή. Το Premium είναι μια ξεχωριστή προαιρετική συνδρομή με εκτεταμένες δυνατότητες — ανατρέξτε στους Όρους Παροχής Υπηρεσιών για λεπτομέρειες.",
+    "body3": "Έχετε μια ερώτηση, ιδέα εργαλείου ή βρήκατε ένα σφάλμα; Γράψτε στο badyltech@outlook.com ή χρησιμοποιήστε τη φόρμα επικοινωνίας — αυτή είναι επίσης πολύτιμη υποστήριξη.",
+    "legalNote": "Οι δωρεές δεν παρέχουν πρόσβαση Premium ούτε συνιστούν σύμβαση παροχής υπηρεσιών, εκτός εάν ρητά αναφέρεται διαφορετικά. Οι όροι και η πολιτική απορρήτου ισχύουν ανεξάρτητα από τις δωρεές.",
     "coffee": "Κεράστε μου έναν καφέ",
     "donate": "Κάντε μια δωρεά",
     "back": "Επιστροφή στην αρχική",
@@ -155,32 +390,47 @@
     "merge": "Συγχώνευση αρχείων",
     "result": "Αποτέλεσμα",
     "notFound": "Το εργαλείο δεν βρέθηκε",
-    "convertFailed": "Conversion failed.",
-    "connectionError": "Couldn't connect to the server. Please try again.",
-    "unavailable": "This converter is currently unavailable",
-    "dropClick": "Drag a file here or click to choose",
-    "dropClickMulti": "Drag files here or click to choose",
-    "supportedFormat": "Supported format",
-    "supported": "Supported",
-    "maxSize": "max. 500 MB",
-    "removeFile": "Remove file",
-    "convertDone": "Conversion complete",
-    "downloadNamed": "Download",
-    "convertAnother": "Convert another file",
-    "uploadingFile": "Uploading file…",
-    "uploadingFiles": "Uploading files…",
-    "uploading": "Uploading…",
-    "converting": "Converting…",
-    "convertToPrefix": "Convert to",
-    "needTwoPdf": "Add at least two PDF files to merge.",
-    "operationFailed": "The operation failed.",
-    "compressionQuality": "Compression quality",
-    "qualityHint": "Lower value = smaller file. Higher value = better quality.",
-    "done": "Done",
-    "less": "less",
-    "resultPreview": "Result preview",
-    "startOver": "Start over",
-    "processingLong": "Processing (this may take a few seconds)…"
+    "convertFailed": "Η μετατροπή απέτυχε.",
+    "connectionError": "Δεν ήταν δυνατή η σύνδεση με τον server. Δοκιμάστε ξανά.",
+    "unavailable": "Αυτός ο μετατροπέας δεν είναι διαθέσιμος προς το παρόν",
+    "dropClick": "Σύρετε ένα αρχείο εδώ ή κάντε κλικ για επιλογή",
+    "dropClickMulti": "Σύρετε αρχεία εδώ ή κάντε κλικ για επιλογή",
+    "supportedFormat": "Υποστηριζόμενη μορφή",
+    "supported": "Υποστηρίζεται",
+    "maxSize": "μέγ. 500 MB",
+    "removeFile": "Αφαίρεση αρχείου",
+    "convertDone": "Η μετατροπή ολοκληρώθηκε",
+    "downloadNamed": "Λήψη",
+    "convertAnother": "Μετατροπή άλλου αρχείου",
+    "uploadingFile": "Μεταφόρτωση αρχείου…",
+    "uploadingFiles": "Μεταφόρτωση αρχείων…",
+    "uploading": "Μεταφόρτωση…",
+    "converting": "Μετατροπή…",
+    "convertToPrefix": "Μετατροπή σε",
+    "needTwoPdf": "Προσθέστε τουλάχιστον δύο αρχεία PDF για συγχώνευση.",
+    "operationFailed": "Η λειτουργία απέτυχε.",
+    "compressionQuality": "Ποιότητα συμπίεσης",
+    "qualityHint": "Χαμηλότερη τιμή = μικρότερο αρχείο. Υψηλότερη τιμή = καλύτερη ποιότητα.",
+    "done": "Έτοιμο",
+    "less": "λιγότερο",
+    "resultPreview": "Προεπισκόπηση αποτελέσματος",
+    "startOver": "Ξεκινήστε από την αρχή",
+    "processingLong": "Επεξεργασία (μπορεί να διαρκέσει μερικά δευτερόλεπτα)…",
+    "howToTitle": "Πώς να μετατρέψετε ένα αρχείο — βήμα προς βήμα",
+    "aboutSource": "Σχετικά με τη μορφή πηγής",
+    "aboutTarget": "Σχετικά με τη μορφή στόχου",
+    "whenToUseTitle": "Πότε να χρησιμοποιήσετε αυτόν τον μετατροπέα",
+    "faqTitle": "Συχνές ερωτήσεις",
+    "qualityTitle": "Ποιότητα μετατροπής — τι πρέπει να γνωρίζετε",
+    "tipsTitle": "Πρακτικές συμβουλές",
+    "readFormatGuide": "Οδηγός πλήρους μορφής"
+  },
+  "cookieConsent": {
+    "title": "Cookies",
+    "description": "Το Toolando.tech χρησιμοποιεί απαραίτητα cookies και, με τη συγκατάθεσή σας, αναλυτικά (Google Analytics) και διαφημιστικά cookies (Google AdSense). Μπορείτε να αποδεχτείτε όλα ή μόνο τα απαραίτητα.",
+    "acceptAll": "Αποδοχή όλων",
+    "necessaryOnly": "Μόνο απαραίτητα",
+    "privacyLink": "Πολιτική απορρήτου"
   },
   "aiTool": {
     "prompt": "Το κείμενό σας",
@@ -208,44 +458,44 @@
     "thinking": "Σκέφτεται…",
     "aiError": "Δεν ήταν δυνατή η λήψη απάντησης AI. Δοκιμάστε ξανά.",
     "emptyChat": "Κάντε μια ερώτηση για να ξεκινήσετε τη συνομιλία.",
-    "generateFailed": "Couldn't generate a response.",
-    "noContent": "The AI service returned no content. Check that AI Gateway is active (requires a payment card).",
-    "connectionError": "A connection error occurred. Please try again.",
-    "dropDoc": "Drag a document here or click to choose",
-    "removeFile": "Remove file",
-    "translatePlaceholder": "Paste the text to translate…",
-    "copyPlaceholder": "Describe what the AI should write, e.g. \"a product description for an eco-friendly water bottle\"…",
-    "toneLabel": "Tone",
-    "targetLangLabel": "Target language",
-    "translate": "Translate",
-    "summarizeDoc": "Summarize document",
-    "generateText": "Generate text",
-    "imageFailed": "Couldn't generate the image.",
-    "imagePromptPlaceholder": "Describe the image, e.g. \"a futuristic city at sunset, watercolor style\"…",
-    "ratioSquare": "Square 1:1",
-    "ratioLandscape": "Landscape 3:2",
-    "ratioPortrait": "Portrait 2:3",
-    "generatingImage": "Generating image (this may take several seconds)…",
-    "generateImage": "Generate image",
-    "generatedImageAlt": "Generated image",
-    "downloadImage": "Download image",
+    "generateFailed": "Δεν ήταν δυνατή η δημιουργία απάντησης.",
+    "noContent": "Η υπηρεσία AI δεν επέστρεψε περιεχόμενο. Ελέγξτε ότι το AI Gateway είναι ενεργό (απαιτείται κάρτα πληρωμής).",
+    "connectionError": "Προέκυψε σφάλμα σύνδεσης. Δοκιμάστε ξανά.",
+    "dropDoc": "Σύρετε ένα έγγραφο εδώ ή κάντε κλικ για επιλογή",
+    "removeFile": "Αφαίρεση αρχείου",
+    "translatePlaceholder": "Επικολλήστε το κείμενο για μετάφραση…",
+    "copyPlaceholder": "Περιγράψτε τι πρέπει να γράψει το AI, π.χ. «περιγραφή προϊόντος για οικολογικό μπουκάλι νερού»…",
+    "toneLabel": "Τόνος",
+    "targetLangLabel": "Γλώσσα-στόχος",
+    "translate": "Μετάφραση",
+    "summarizeDoc": "Περίληψη εγγράφου",
+    "generateText": "Δημιουργία κειμένου",
+    "imageFailed": "Δεν ήταν δυνατή η δημιουργία εικόνας.",
+    "imagePromptPlaceholder": "Περιγράψτε την εικόνα, π.χ. «φουτουριστική πόλη στο ηλιοβασίλεμα, στυλ ακουαρέλας»…",
+    "ratioSquare": "Τετράγωνο 1:1",
+    "ratioLandscape": "Οριζόντιο 3:2",
+    "ratioPortrait": "Κατακόρυφο 2:3",
+    "generatingImage": "Δημιουργία εικόνας (μπορεί να διαρκέσει αρκετά δευτερόλεπτα)…",
+    "generateImage": "Δημιουργία εικόνας",
+    "generatedImageAlt": "Δημιουργημένη εικόνα",
+    "downloadImage": "Λήψη εικόνας",
     "tones": {
-      "professional": "professional",
-      "friendly": "friendly",
-      "energetic": "energetic",
-      "formal": "formal",
-      "playful": "playful",
-      "persuasive": "persuasive"
+      "professional": "επαγγελματικός",
+      "friendly": "φιλικός",
+      "energetic": "ενεργητικός",
+      "formal": "επίσημος",
+      "playful": "παιχνιδιάρικος",
+      "persuasive": "πειστικός"
     },
     "languages": {
-      "english": "English",
-      "german": "German",
-      "spanish": "Spanish",
-      "french": "French",
-      "italian": "Italian",
-      "ukrainian": "Ukrainian",
-      "polish": "Polish",
-      "japanese": "Japanese"
+      "english": "αγγλικά",
+      "german": "γερμανικά",
+      "spanish": "ισπανικά",
+      "french": "γαλλικά",
+      "italian": "ιταλικά",
+      "ukrainian": "ουκρανικά",
+      "polish": "πολωνικά",
+      "japanese": "ιαπωνικά"
     }
   },
   "category": {
@@ -259,64 +509,64 @@
     "notFound": "Η κατηγορία δεν βρέθηκε"
   },
   "paywall": {
-    "unlockTitle": "Unlock \"{tool}\" with Premium",
-    "description": "Unlock all Toolando.tech AI tools — text and image generation, translation, summaries and the assistant — in one subscription.",
-    "feature1": "Unlimited access to all AI tools",
-    "feature2": "Text generator, image generator and translator",
-    "feature3": "Priority request processing",
-    "goPremium": "Upgrade to Premium",
-    "redirecting": "Redirecting…",
-    "signInToBuy": "Sign in to buy Premium",
-    "noAccount": "Don't have an account?",
-    "signUp": "Sign up"
+    "unlockTitle": "Ξεκλειδώστε το «{tool}» με Premium",
+    "description": "Ξεκλειδώστε όλα τα εργαλεία AI του Toolando.tech — δημιουργία κειμένου και εικόνων, μετάφραση, περιλήψεις και βοηθό — σε μία συνδρομή.",
+    "feature1": "Απεριόριστη πρόσβαση σε όλα τα εργαλεία AI",
+    "feature2": "Γεννήτρια κειμένου, γεννήτρια εικόνων και μεταφραστής",
+    "feature3": "Προτεραιότητα επεξεργασίας αιτημάτων",
+    "goPremium": "Αναβάθμιση σε Premium",
+    "redirecting": "Ανακατεύθυνση…",
+    "signInToBuy": "Συνδεθείτε για αγορά Premium",
+    "noAccount": "Δεν έχετε λογαριασμό;",
+    "signUp": "Εγγραφή"
   },
   "account": {
-    "backToHome": "Back to homepage",
-    "yourAccount": "Your account",
+    "backToHome": "Επιστροφή στην αρχική",
+    "yourAccount": "Ο λογαριασμός σας",
     "premiumBadge": "Premium",
-    "freeBadge": "Free account",
-    "premiumActiveTitle": "You have active Premium",
-    "premiumActiveDesc": "Thank you for your support! You have full access to all AI tools without limits.",
-    "manageSubscription": "Manage subscription",
-    "manageOpening": "Opening…",
-    "managePortalError": "Could not open the portal.",
-    "manageGenericError": "An error occurred.",
-    "goPremiumTitle": "Go Premium",
-    "feature1": "Unlimited access to AI tools",
-    "feature2": "Background removal, image and text generation",
-    "feature3": "Priority processing",
-    "buyPremium": "Buy Premium",
-    "buyRedirecting": "Redirecting…",
-    "refreshHint": "Paid but Premium still inactive? Refresh your status:",
-    "refreshStatus": "Refresh Premium status",
-    "refreshChecking": "Checking...",
-    "refreshNoSub": "No active subscription found. If you just paid, wait a moment and try again.",
-    "refreshFailed": "Could not refresh status.",
-    "refreshNetworkError": "A network error occurred. Please try again.",
-    "signOut": "Sign out"
+    "freeBadge": "Δωρεάν λογαριασμός",
+    "premiumActiveTitle": "Έχετε ενεργό Premium",
+    "premiumActiveDesc": "Ευχαριστούμε για την υποστήριξη! Έχετε πλήρη πρόσβαση σε όλα τα εργαλεία AI χωρίς όρια.",
+    "manageSubscription": "Διαχείριση συνδρομής",
+    "manageOpening": "Άνοιγμα…",
+    "managePortalError": "Δεν ήταν δυνατό το άνοιγμα της πύλης.",
+    "manageGenericError": "Προέκυψε σφάλμα.",
+    "goPremiumTitle": "Επιλογή Premium",
+    "feature1": "Απεριόριστη πρόσβαση σε εργαλεία AI",
+    "feature2": "Αφαίρεση φόντου, δημιουργία εικόνων και κειμένου",
+    "feature3": "Προτεραιότητα επεξεργασίας",
+    "buyPremium": "Αγορά Premium",
+    "buyRedirecting": "Ανακατεύθυνση…",
+    "refreshHint": "Πληρώσατε αλλά το Premium είναι ακόμη ανενεργό; Ανανεώστε την κατάσταση:",
+    "refreshStatus": "Ανανέωση κατάστασης Premium",
+    "refreshChecking": "Έλεγχος…",
+    "refreshNoSub": "Δεν βρέθηκε ενεργή συνδρομή. Αν μόλις πληρώσατε, περιμένετε λίγο και δοκιμάστε ξανά.",
+    "refreshFailed": "Δεν ήταν δυνατή η ανανέωση της κατάστασης.",
+    "refreshNetworkError": "Προέκυψε σφάλμα δικτύου. Δοκιμάστε ξανά.",
+    "signOut": "Αποσύνδεση"
   },
   "downloader": {
-    "eyebrow": "Video → MP3",
-    "title": "Multi-Platform → MP3 Downloader",
-    "subtitle": "Paste a link from TikTok, Instagram, Facebook, Twitter/X, Vimeo or SoundCloud and grab the audio.",
-    "metaDescription": "Multi-platform Video to MP3 Downloader — TikTok, Instagram, Facebook, Twitter, Vimeo, SoundCloud. Paste a link and download the audio.",
-    "back": "All tools",
-    "inputLabel": "Video link",
+    "eyebrow": "Βίντεο → MP3",
+    "title": "Λήψη MP3 πολλαπλών πλατφορμών",
+    "subtitle": "Επικολλήστε σύνδεσμο από TikTok, Instagram, Facebook, Twitter/X, Vimeo ή SoundCloud και κατεβάστε τον ήχο.",
+    "metaDescription": "Multi-platform Video to MP3 Downloader — TikTok, Instagram, Facebook, Twitter, Vimeo, SoundCloud. Επικολλήστε σύνδεσμο και κατεβάστε τον ήχο.",
+    "back": "Όλα τα εργαλεία",
+    "inputLabel": "Σύνδεσμος βίντεο",
     "inputPlaceholder": "https://www.tiktok.com/@user/video/...",
-    "detected": "detected",
+    "detected": "εντοπίστηκε",
     "idLabel": "ID",
-    "invalidLink": "Enter a valid link from a supported platform.",
-    "download": "Download MP3",
-    "preparing": "Preparing your link…",
-    "ready": "Your link is ready.",
-    "openPage": "Open download page",
-    "resultTitle": "Ready to download",
-    "resultsBack": "Back to downloader",
-    "thumbnailAlt": "Video thumbnail",
-    "viewSource": "View original",
-    "faqTitle": "Frequently asked questions",
-    "disclaimer": "Toolando.tech does not host or download any media. It only detects the platform and the public video ID and hands off to an external service or your browser. Only download content you have the rights to.",
-    "externalNote": "Download happens on an external service or in your browser. Toolando.tech only captured the public platform and video ID. Please respect copyright and each platform's terms of service.",
+    "invalidLink": "Εισαγάγετε έγκυρο σύνδεσμο από υποστηριζόμενη πλατφόρμα.",
+    "download": "Λήψη MP3",
+    "preparing": "Προετοιμασία συνδέσμου…",
+    "ready": "Ο σύνδεσμός σας είναι έτοιμος.",
+    "openPage": "Άνοιγμα σελίδας λήψης",
+    "resultTitle": "Έτοιμο για λήψη",
+    "resultsBack": "Επιστροφή στον downloader",
+    "thumbnailAlt": "Μικρογραφία βίντεο",
+    "viewSource": "Προβολή πρωτότυπου",
+    "faqTitle": "Συχνές ερωτήσεις",
+    "disclaimer": "Το Toolando.tech δεν φιλοξενεί ούτε κατεβάζει πολυμέσα. Ανιχνεύει μόνο την πλατφόρμα και το δημόσιο ID βίντεο και παραδίδει σε εξωτερική υπηρεσία ή τον browser σας. Κατεβάστε μόνο περιεχόμενο για το οποίο έχετε δικαιώματα.",
+    "externalNote": "Η λήψη γίνεται σε εξωτερική υπηρεσία ή στον browser σας. Το Toolando.tech κατέγραψε μόνο τη δημόσια πλατφόρμα και το ID βίντεο. Σεβαστείτε τα πνευματικά δικαιώματα και τους όρους κάθε πλατφόρμας.",
     "faq": [
       {
         "q": "Which platforms are supported?",
@@ -339,18 +589,320 @@
         "a": "Only download content you own or have permission to use. Downloading copyrighted material without permission may violate the platform's terms of service and copyright law."
       }
     ],
-    "platformDisabled": "Downloading from {platform} is temporarily unavailable — {platform} actively blocks downloaders, so we've paused it until our own converter is ready. All other platforms still work."
+    "platformDisabled": "Η λήψη από {platform} είναι προσωρινά μη διαθέσιμη — το {platform} μπλοκάρει ενεργά downloaders, οπότε την έχουμε διακόψει μέχρι να είναι έτοιμος ο δικός μας μετατροπέας. Οι άλλες πλατφόρμες λειτουργούν κανονικά."
+  },
+  "pages": {
+    "contact": {
+      "eyebrow": "Επικοινωνία",
+      "title": "Φόρμα επικοινωνίας",
+      "intro": "Έχετε μια ερώτηση, μια ιδέα συνεργασίας ή θέλετε να αναφέρετε ένα πρόβλημα; Συμπληρώστε τη φόρμα — Θα απαντήσω το συντομότερο δυνατό.",
+      "name": "Όνομα",
+      "namePlaceholder": "Το όνομά σου",
+      "email": "E-mail",
+      "emailPlaceholder": "Η διεύθυνση email σας",
+      "message": "Μήνυμα",
+      "messagePlaceholder": "Περιγράψτε το πρόβλημα ή την ερώτησή σας...",
+      "submit": "Αποστολή μηνύματος",
+      "sent": "Ευχαριστώ! Το μήνυμά σας έχει προετοιμαστεί στην εφαρμογή email σας.",
+      "subject": "Ερώτηση από Toolando.tech"
+    },
+    "about": {
+      "eyebrow": "Σχετικά με μένα",
+      "title": "Γεια, είμαι ο Szymon — ο δημιουργός του Toolando",
+      "intro": "Το Toolando.tech είναι το δικό μου έργο που χτίζω μόνος μου. Από την ιδέα, μέσω του κώδικα, μέχρι το περιεχόμενο που διαβάζετε τώρα — όλα προέρχονται από ένα ζευγάρι χέρια. Θέλω απλές εργασίες, όπως η μετατροπή ενός αρχείου ή ένα γρήγορο διαδικτυακό εργαλείο, να είναι διαθέσιμες σε όλους, χωρίς λογισμικό για εγκατάσταση και χωρίς περιττές επιπλοκές.",
+      "whyTitle": "Γιατί δημιουργήθηκε το Toolando",
+      "whyP1": "Εργάζομαι με υπολογιστές καθημερινά και έχω δει πολλές φορές πόσο χρόνο χάνουν οι άνθρωποι σε εργασίες που πρέπει να διαρκέσουν λίγο — αλλαγή μορφής αρχείου, εξαγωγή ήχου από μια εγγραφή ή μια γρήγορη λειτουργία που σας αναγκάζει να αναζητήσετε έναν τυχαίο ιστότοπο γεμάτο διαφημίσεις και παγίδες.",
+      "whyP2": "Το Toolando δημιουργήθηκε για να συγκεντρώσει τέτοια εργαλεία σε ένα καθαρό και ασφαλές μέρος. Με ενδιαφέρει η υπηρεσία να είναι γρήγορη, ευανάγνωστη και ειλικρινής προς τον χρήστη — χωρίς κόλπα και χωρίς κρυφές πληροφορίες.",
+      "howTitle": "Πώς λειτουργεί το Toolando",
+      "howIntro": "Η υπηρεσία παρέχει διαδικτυακά εργαλεία σε δύο παραλλαγές: δωρεάν και premium.",
+      "howFreeTerm": "Δωρεάν εργαλεία",
+      "howFreeDesc": "διαθέσιμο σε όλους, χωρίς λογαριασμό. Αυτές είναι οι καθημερινές, πιο χρησιμοποιούμενες λειτουργίες που θέλω να κρατήσω ανοιχτές σε όλους.",
+      "howPremiumTerm": "Premium εργαλεία",
+      "howPremiumDesc": "πιο προηγμένες λειτουργίες ή υψηλότερα όρια που βοηθούν στη διατήρηση και ανάπτυξη του έργου. Τα premium έσοδα πηγαίνουν κατευθείαν σε διακομιστές, ανάπτυξη και νέα εργαλεία.",
+      "howOutro": "Ανεξάρτητα από την παραλλαγή, εμμένω στον ίδιο κανόνα: τα μεταφορτωμένα αρχεία χρησιμοποιούνται αποκλειστικά για την εκτέλεση της μετατροπής και δεν αποθηκεύονται από εμένα.",
+      "outsideTitle": "Τι κάνω πέρα από το Toolando",
+      "outsideP1": "Παρέχω υπηρεσίες πληροφορικής — βοηθώντας άτομα και εταιρείες με καθημερινά προβλήματα υλικού και λογισμικού.",
+      "outsideList": [
+        "συντήρηση και επισκευή φορητών υπολογιστών και υπολογιστών,",
+        "Υπηρεσίες πληροφορικής και τεχνική υποστήριξη,",
+        "κατασκευή διαδικτυακών εργαλείων και εφαρμογών."
+      ],
+      "outsideP2": "Η εμπειρία από τις επισκευές και τη συνεργασία με τους χρήστες μεταφράζεται απευθείας στον τρόπο σχεδίασης του Toolando — απλό, επίκαιρο και έχοντας κατά νου τις πραγματικές ανάγκες.",
+      "contactTitle": "Επικοινωνία",
+      "contactP1": "Έχετε μια ερώτηση, μια ιδέα για ένα νέο εργαλείο ή θέλετε να αναφέρετε ένα πρόβλημα; Γράψε μου — θα απαντήσω ευχαρίστως.",
+      "emailLabel": "E-mail:",
+      "methodologyTitle": "Πώς δοκιμάζω τις μετατροπές και γράφω οδηγούς",
+      "methodologyP1": "Κάθε προφίλ οδηγού και μορφής στο Toolando.tech βασίζεται σε πραγματικές δοκιμές μετατροπής — όχι σε προδιαγραφές που έχουν επικολληθεί με αντιγραφή. Ανεβάζω δείγματα αρχείων, συγκρίνω το μέγεθος και την ποιότητα εξόδου και σημειώνω ποιες ρυθμίσεις λειτουργούν καλύτερα.",
+      "methodologyList": [
+        "Δοκιμάζω μετατροπείς με αρχεία διαφορετικών μεγεθών (μικρό, μεσαίο, μεγάλο).",
+        "Για ήχο/βίντεο συγκρίνω το ρυθμό μετάδοσης bit, τη διάρκεια και τη συμβατότητα αναπαραγωγής.",
+        "Για εικόνες ελέγχω το μέγεθος του αρχείου, την οπτική ποιότητα και τη διαφάνεια.",
+        "Οι οδηγοί ενημερώνονται όταν αλλάζουν μορφές ή απαιτήσεις πλατφόρμας."
+      ],
+      "methodologyP2": "Εάν εντοπίσετε ένα σφάλμα σε έναν οδηγό ή σε έναν μετατροπέα που δεν λειτουργεί όπως περιγράφεται, στείλτε email στο badyltech@outlook.com — οι διορθώσεις βοηθούν όλους.",
+      "updatedLabel": "Η σελίδα ενημερώθηκε τελευταία",
+      "updatedDate": "Ιούλιος 2026"
+    },
+    "editorial": {
+      "eyebrow": "Σύνταξη",
+      "title": "Συντακτικά πρότυπα Toolando.tech",
+      "intro": "Το Toolando.tech δεν είναι μόνο μετατροπείς — είναι οδηγοί, εγκυκλοπαίδεια μορφών και συγκρίσεις. Παρακάτω εξηγώ πώς δημιουργείται το περιεχόμενο, από πού προέρχονται οι πληροφορίες και πότε ενημερώνεται.",
+      "whoTitle": "Ποιος δημιουργεί το περιεχόμενο",
+      "whoP1": "Γράφω προσωπικά κάθε οδηγό, προφίλ μορφής και σύγκριση — Szymon Badyl, δημιουργός του Toolando.tech. Δεν χρησιμοποιώ content farms ούτε μη ελεγμένα κείμενα AI.",
+      "whoP2": "Κάθε άρθρο βασίζεται σε δοκιμές μετατροπής σε δικά μου αρχεία. Αν κάτι δεν λειτουργεί όπως περιγράφεται, διορθώνω και το κείμενο και το εργαλείο.",
+      "standardsTitle": "Συντακτικές αρχές",
+      "standardsIntro": "Εφαρμόζω τους ίδιους κανόνες σε κάθε νέο οδηγό:",
+      "standardsList": [
+        "I test the converter with files of different sizes before publishing.",
+        "I give concrete scenarios (email, shop, social media), not vague generalities.",
+        "I distinguish compression from format conversion and lossy from lossless.",
+        "I write about tool limits — when not to convert online.",
+        "I update the date and content when platform or format requirements change."
+      ],
+      "sourcesTitle": "Πηγές και ειλικρίνεια",
+      "sourcesP1": "Επαληθεύω προδιαγραφές μορφών (MIME, codecs) με IANA, FFmpeg και τεκμηρίωση κατασκευαστών. Οι συγκρίσεις βασίζονται σε δικές μου μετρήσεις μεγέθους και ποιότητας, όχι σε marketing πίνακες.",
+      "sourcesP2": "Εξωτερικοί σύνδεσμοι εμφανίζονται μόνο όταν βοηθούν πραγματικά (π.χ. επίσημη τεκμηρίωση). Δεν προωθώ πληρωμένα εργαλεία ανταγωνισμού.",
+      "updatesTitle": "Ενημερώσεις και διορθώσεις",
+      "updatesP1": "Βρήκατε σφάλμα, παρωχημένες πληροφορίες ή έχετε πρόταση θέματος; Γράψτε στο badyltech@outlook.com — οι διορθώσεις μπαίνουν στο άρθρο με ημερομηνία ενημέρωσης.",
+      "updatedLabel": "Τελευταία ενημέρωση",
+      "updatedDate": "Αύγουστος 2026",
+      "fullGuideCta": "Πλήρης οδηγός για συντακτικά πρότυπα"
+    },
+    "howItWorks": {
+      "eyebrow": "Πώς λειτουργεί;",
+      "title": "Πώς λειτουργούν τα εργαλεία στο Toolando",
+      "intro": "Το Toolando.tech είναι ένα σύνολο διαδικτυακών εργαλείων που εκτελείτε απευθείας στο πρόγραμμα περιήγησής σας — χωρίς να εγκαταστήσετε τίποτα. Παρακάτω εξηγώ πώς λειτουργεί η επεξεργασία αρχείων, πώς φροντίζω την ασφάλεια και πώς διαφέρουν τα δωρεάν εργαλεία από τα premium.",
+      "browserTitle": "Εργαλεία που εκτελούνται στο πρόγραμμα περιήγησης",
+      "browserP": "Ανοίγετε ένα εργαλείο, επιλέγετε ένα αρχείο ή εισάγετε δεδομένα και έχετε το αποτέλεσμα απευθείας στη σελίδα. Δεν χρειάζεστε λογαριασμό για να χρησιμοποιήσετε τα δωρεάν εργαλεία και δεν χρειάζεται να εγκαταστήσετε τίποτα στον υπολογιστή σας.",
+      "filesTitle": "Πώς γίνεται η επεξεργασία των αρχείων",
+      "filesIntro": "Ανάλογα με τον τύπο του εργαλείου, η επεξεργασία των αρχείων γίνεται με δύο τρόπους:",
+      "filesLocalTerm": "Τοπικά στο πρόγραμμα περιήγησης",
+      "filesLocalDesc": "ορισμένες λειτουργίες εκτελούνται απευθείας στη συσκευή σας και το αρχείο δεν φεύγει ποτέ από τον υπολογιστή σας.",
+      "filesServerTerm": "Προσωρινά στον διακομιστή",
+      "filesServerDesc": "όταν ένα εργαλείο χρειάζεται περισσότερη υπολογιστική ισχύ, το αρχείο υποβάλλεται σε επεξεργασία στον διακομιστή μόνο για τη διάρκεια της μετατροπής και στη συνέχεια διαγράφεται.",
+      "filesOutro": "Σε καμία από αυτές τις περιπτώσεις δεν αποθηκεύω τα αρχεία σας ούτε τα χρησιμοποιώ για οποιονδήποτε άλλο σκοπό.",
+      "securityTitle": "Ασφάλεια",
+      "securityP": "Η ασφάλεια και το απόρρητο είναι προτεραιότητα για μένα. Η σύνδεση με τον ιστότοπο είναι κρυπτογραφημένη και τα αρχεία χρησιμοποιούνται αποκλειστικά για την εκτέλεση της εργασίας που ζητάτε.",
+      "securityList": [
+        "Τα μεταφορτωμένα αρχεία δεν αποθηκεύονται μετά την ολοκλήρωση της λειτουργίας,",
+        "Δεν πουλάω ούτε κοινοποιώ τα δεδομένα σας,",
+        "δεν χρειάζεται να παρέχετε προσωπικά δεδομένα για να χρησιμοποιήσετε τα δωρεάν εργαλεία."
+      ],
+      "tiersTitle": "Δωρεάν εργαλεία έναντι premium",
+      "tiersP": "Το Toolando προσφέρει εργαλεία σε δύο παραλλαγές, αλλά η αρχή ασφαλείας είναι η ίδια και στις δύο.",
+      "tiersFreeTerm": "Δωρεάν",
+      "tiersFreeDesc": "διαθέσιμο σε όλους, χωρίς λογαριασμό. Ιδανικό για καθημερινές, γρήγορες εργασίες.",
+      "tiersPremiumTerm": "Premium",
+      "tiersPremiumDesc": "πιο προηγμένες δυνατότητες και υψηλότερα όρια ή μεγαλύτερα αρχεία. Το Premium υποστηρίζει τη συντήρηση διακομιστή και την ανάπτυξη νέων εργαλείων."
+    },
+    "faq": {
+      "eyebrow": "FAQ",
+      "title": "Συχνές ερωτήσεις",
+      "intro": "Έχω συγκεντρώσει εδώ τις απαντήσεις στις ερωτήσεις που εμφανίζονται πιο συχνά. Αν δεν μπορείτε να βρείτε αυτό που ψάχνετε, γράψτε μου στο badyltech@outlook.com.",
+      "items": [
+        {
+          "q": "Τα εργαλεία του Toolando είναι δωρεάν;",
+          "a": "Τα περισσότερα εργαλεία είναι εντελώς δωρεάν και διαθέσιμα χωρίς τη δημιουργία λογαριασμού. Ορισμένες πιο προηγμένες λειτουργίες και υψηλότερα όρια είναι διαθέσιμα στην έκδοση premium, η οποία υποστηρίζει τη διατήρηση και την ανάπτυξη της υπηρεσίας."
+        },
+        {
+          "q": "Πώς διαφέρουν τα δωρεάν εργαλεία από τα premium;",
+          "a": "Τα δωρεάν εργαλεία καλύπτουν καθημερινές, τις πιο συνηθισμένες εργασίες και είναι ανοιχτά σε όλους. Το Premium προσφέρει πιο προηγμένες λειτουργίες και μεγαλύτερα αρχεία ή όρια. Η αρχή ασφάλειας αρχείων είναι η ίδια και στις δύο παραλλαγές."
+        },
+        {
+          "q": "Είναι τα αρχεία μου ασφαλή;",
+          "a": "Ναι. Τα μεταφορτωμένα αρχεία χρησιμοποιούνται αποκλειστικά για την εκτέλεση της μετατροπής και δεν αποθηκεύονται από εμένα. Ορισμένες λειτουργίες εκτελούνται τοπικά στο πρόγραμμα περιήγησης και εάν ένα αρχείο μεταβεί στον διακομιστή, υποβάλλεται σε επεξεργασία μόνο για τη διάρκεια της εργασίας και στη συνέχεια διαγράφεται."
+        },
+        {
+          "q": "Αποθηκεύει το Toolando τα αρχεία που ανεβάζω;",
+          "a": "Όχι. Δεν αποθηκεύω τα αρχεία σας μετά την ολοκλήρωση της λειτουργίας και δεν τα χρησιμοποιώ για κανέναν άλλο σκοπό."
+        },
+        {
+          "q": "Πώς προστατεύετε το απόρρητό μου;",
+          "a": "Επεξεργάζομαι μόνο τεχνικά και στατιστικά δεδομένα (π.χ. διεύθυνση IP, τύπος προγράμματος περιήγησης, σύστημα, επισκεψιμότητα ιστότοπου), σύμφωνα με τον GDPR. Θα βρείτε τις λεπτομέρειες στην Πολιτική Απορρήτου. Δεν χρειάζεται να παρέχετε προσωπικά δεδομένα για να χρησιμοποιήσετε τα δωρεάν εργαλεία."
+        },
+        {
+          "q": "Πρέπει να δημιουργήσω λογαριασμό για να χρησιμοποιήσω τα εργαλεία;",
+          "a": "Όχι. Τα δωρεάν εργαλεία λειτουργούν χωρίς λογαριασμό. Ένας λογαριασμός μπορεί να χρειάζεται μόνο για λειτουργίες premium."
+        },
+        {
+          "q": "Υπάρχουν διαφημίσεις στον ιστότοπο;",
+          "a": "Ναι, η υπηρεσία ενδέχεται να εμφανίζει διαφημίσεις Google AdSense, οι οποίες βοηθούν να διατηρηθούν τα δωρεάν εργαλεία διαθέσιμα σε όλους."
+        },
+        {
+          "q": "Πώς λειτουργούν τα διαδικτυακά εργαλεία;",
+          "a": "Ανοίγετε ένα εργαλείο στο πρόγραμμα περιήγησής σας, επιλέγετε ένα αρχείο ή εισάγετε δεδομένα και λαμβάνετε το αποτέλεσμα αμέσως — χωρίς να εγκαταστήσετε τίποτα. Έχω περιγράψει περισσότερες λεπτομέρειες σχετικά με το \"Πώς λειτουργεί;\" σελίδα."
+        },
+        {
+          "q": "Πώς μπορώ να έρθω σε επαφή;",
+          "a": "Γράψτε στο badyltech@outlook.com ή χρησιμοποιήστε τη φόρμα επικοινωνίας. Απαντώ όσο πιο γρήγορα γίνεται."
+        }
+      ]
+    },
+    "privacy": {
+      "eyebrow": "Πολιτική απορρήτου",
+      "title": "Πολιτική απορρήτου Toolando.tech",
+      "intro": "Το Toolando.tech παρέχει online εργαλεία σε δωρεάν και premium εκδοχή. Νοιάζομαι για το απόρρητο των χρηστών και επεξεργάζομαι δεδομένα σύμφωνα με την ισχύουσα νομοθεσία, συμπεριλαμβανομένου του GDPR.",
+      "lastUpdated": "Τελευταία ενημέρωση: 23 Ιουλίου 2026",
+      "s1Title": "1. Υπεύθυνος επεξεργασίας",
+      "s1Pre": "Υπεύθυνος επεξεργασίας είναι ο Szymon Badyl, ιδιοκτήτης του Toolando.tech (Πολωνία). Για θέματα απορρήτου μπορείτε να επικοινωνήσετε στο:",
+      "s1Address": "Αλληλογραφία: badyltech@outlook.com",
+      "s2Title": "2. Ποια δεδομένα επεξεργάζονται",
+      "s2Intro": "Η υπηρεσία επεξεργάζεται τεχνικά και στατιστικά δεδομένα που συλλέγονται αυτόματα κατά τη χρήση του site:",
+      "s2List": [
+        "IP address,",
+        "browser type and version,",
+        "the device's operating system,",
+        "traffic and usage data (e.g. pages visited)."
+      ],
+      "s2Outro": "Αν επικοινωνήσετε μέσω email ή φόρμας, επεξεργάζομαι και τη διεύθυνση email που δίνετε και το περιεχόμενο του μηνύματος.",
+      "s3Title": "3. Αρχεία που ανεβάζονται στα εργαλεία",
+      "s3P": "Τα αρχεία που ανεβάζετε στα εργαλεία για μετατροπή ή άλλη λειτουργία δεν αποθηκεύονται από εμένα. Χρησιμοποιούνται αποκλειστικά για την εκτέλεση της αιτούμενης εργασίας και διαγράφονται μετά την ολοκλήρωσή της. Δεν τα χρησιμοποιώ για άλλο σκοπό.",
+      "s4Title": "4. Διαδικτυακά cookie",
+      "s4Intro": "Η υπηρεσία χρησιμοποιεί τους ακόλουθους τύπους cookies:",
+      "s4TechTerm": "Τεχνικά",
+      "s4TechDesc": "απαραίτητα για τη σωστή λειτουργία του site και την απομνημόνευση ρυθμίσεων (π.χ. γλώσσας).",
+      "s4AnalyticsTerm": "Αναλυτικά",
+      "s4AnalyticsDesc": "στατιστικά εργαλεία (π.χ. Google Analytics) που βοηθούν να κατανοήσουμε πώς χρησιμοποιείται το site, σε συγκεντρωτική και ανώνυμη μορφή.",
+      "s4AdsTerm": "Διαφημιστικά",
+      "s4AdsDesc": "Google AdSense, που μπορεί να χρησιμοποιεί cookies για εμφάνιση και εξατομίκευση διαφημίσεων.",
+      "s4Outro": "Μπορείτε να διαχειριστείτε ή να απενεργοποιήσετε cookies ανά πάσα στιγμή στις ρυθμίσεις του browser. Στην πρώτη επίσκεψη εμφανίζουμε banner συγκατάθεσης όπου μπορείτε να αποδεχτείτε όλα τα cookies ή να περιοριστείτε στα απαραίτητα.",
+      "s4ThirdPartyTitle": "Τρίτοι πάροχοι",
+      "s4ThirdPartyP": "Η υπηρεσία χρησιμοποιεί υπηρεσίες Google (Analytics, AdSense). Η Google μπορεί να συλλέγει δεδομένα σύμφωνα με τη δική της πολιτική απορρήτου. Περισσότερες πληροφορίες: https://policies.google.com/technologies/partner-sites",
+      "s5Title": "5. Δωρεάν και premium εργαλεία",
+      "s5P": "Το Toolando παρέχει δωρεάν εργαλεία (διαθέσιμα χωρίς λογαριασμό) και premium εργαλεία. Οι κανόνες επεξεργασίας δεδομένων και προστασίας αρχείων είναι ίδιοι και στις δύο εκδοχές — διαφέρουν μόνο το εύρος λειτουργιών και τα όρια.",
+      "s6Title": "6. Σκοπός επεξεργασίας δεδομένων",
+      "s6Intro": "Επεξεργάζομαι δεδομένα αποκλειστικά για τους ακόλουθους σκοπούς:",
+      "s6List": [
+        "ensuring the correct and secure operation of the service,",
+        "statistical traffic analysis and improving the tools,",
+        "displaying ads,",
+        "handling contact with the user."
+      ],
+      "s7Title": "7. Τα δικαιώματά σας",
+      "s7Intro": "Έχετε δικαίωμα:",
+      "s7List": [
+        "access your data,",
+        "rectify or delete it,",
+        "restrict processing,",
+        "lodge a complaint with the relevant data protection authority."
+      ],
+      "s8Title": "8. Αλλαγές στην πολιτική",
+      "s8P": "Η πολιτική απορρήτου μπορεί να ενημερωθεί για να αντικατοπτρίζει αλλαγές στην υπηρεσία ή στη νομοθεσία. Η τρέχουσα έκδοση είναι πάντα διαθέσιμη σε αυτή τη σελίδα."
+    },
+    "terms": {
+      "eyebrow": "Όροι χρήσης",
+      "title": "Όροι χρήσης Toolando.tech",
+      "intro": "Οι παρακάτω όροι ορίζουν τους κανόνες χρήσης της υπηρεσίας Toolando.tech. Η χρήση της υπηρεσίας σημαίνει αποδοχή αυτών των κανόνων.",
+      "s1Title": "1. Γενικές διατάξεις",
+      "s1P": "Ιδιοκτήτης του Toolando.tech είναι ο Szymon. Η υπηρεσία παρέχει online εργαλεία για μετατροπή αρχείων, δημιουργία περιεχομένου και εργαλεία με AI.",
+      "s2Title": "2. Δωρεάν και premium εργαλεία",
+      "s2Intro": "Το Toolando προσφέρει εργαλεία σε δύο εκδοχές:",
+      "s2FreeTerm": "Δωρεάν",
+      "s2FreeDesc": "διαθέσιμα σε όλους, χωρίς ανάγκη δημιουργίας λογαριασμού.",
+      "s2PremiumTerm": "Premium",
+      "s2PremiumDesc": "με πιο προηγμένες λειτουργίες και υψηλότερα όρια.",
+      "s2Outro": "Οι κανόνες για τυχόν πληρωμές ή συνδρομές premium λειτουργιών παρουσιάζονται στα σχετικά σημεία της υπηρεσίας.",
+      "s3Title": "3. Χρήση με δική σας ευθύνη",
+      "s3P1": "Χρησιμοποιείτε την υπηρεσία με δική σας ευθύνη. Καταβάλλω κάθε προσπάθεια ώστε τα εργαλεία να λειτουργούν σωστά, ωστόσο η υπηρεσία παρέχεται «ως έχει», χωρίς εγγύηση διαθεσιμότητας, ορθότητας αποτελεσμάτων ή καταλληλότητας για συγκεκριμένο σκοπό.",
+      "s3P2": "Ο ιδιοκτήτης της υπηρεσίας δεν ευθύνεται για:",
+      "s3List": [
+        "the consequences of using the tools' results,",
+        "lost profits,",
+        "damage resulting from interruptions in the service."
+      ],
+      "s3Outro": "Ο χρήστης δεσμεύεται να χρησιμοποιεί την υπηρεσία σύμφωνα με το νόμο και ευθύνεται για το περιεχόμενο και τα αρχεία που επεξεργάζεται.",
+      "s4Title": "4. Αρχεία χρηστών",
+      "s4P": "Τα αρχεία που ανεβάζονται στα εργαλεία δεν αποθηκεύονται. Χρησιμοποιούνται αποκλειστικά για την εκτέλεση της ζητούμενης λειτουργίας και διαγράφονται μετά την ολοκλήρωσή της.",
+      "s5Title": "5. Διαφημίσεις",
+      "s5P": "Η υπηρεσία μπορεί να εμφανίζει διαφημίσεις Google AdSense. Οι διαφημίσεις βοηθούν στη διατήρηση των δωρεάν εργαλείων και την ανάπτυξη του project. Ο πάροχος διαφημίσεων μπορεί να χρησιμοποιεί cookies σύμφωνα με την Πολιτική απορρήτου.",
+      "s6Title": "6. Πνευματικά δικαιώματα",
+      "s6P": "Το όνομα Toolando.tech, τα γραφικά στοιχεία και το περιεχόμενο της υπηρεσίας προστατεύονται νομικά. Απαγορεύεται η αντιγραφή και χρήση τους χωρίς συγκατάθεση του ιδιοκτήτη.",
+      "s7Title": "7. Επικοινωνία",
+      "s7Pre": "Για θέματα σχετικά με αυτούς τους όρους μπορείτε να επικοινωνήσετε στο:",
+      "s8Title": "8. Αλλαγές στους όρους",
+      "s8P": "Οι όροι μπορεί να ενημερωθούν για να αντικατοπτρίζουν αλλαγές στην υπηρεσία ή στη νομοθεσία. Η τρέχουσα έκδοση είναι πάντα διαθέσιμη σε αυτή τη σελίδα."
+    },
+    "guides": {
+      "eyebrow": "Οδηγοί",
+      "title": "Οδηγοί και tutorials μετατροπής αρχείων",
+      "intro": "Πρακτικά άρθρα για μορφές αρχείων, μετατροπή και βέλτιστες πρακτικές. Κάθε οδηγός εξηγεί πότε και γιατί να μετατρέψετε ένα αρχείο και πώς να το κάνετε με ασφάλεια με το Toolando.tech.",
+      "articles": [
+        {
+          "title": "MP3 vs WAV — when to convert audio?",
+          "body": "MP3 is a lossy compression format — files are small but some audio data is lost. WAV preserves full quality but files can be 10 times larger. Convert MP3 → WAV when you need a file for editing in a DAW (e.g. Audacity, FL Studio) or when a platform requires a lossless format. Convert WAV → MP3 when you want to email a recording, publish a podcast, or save disk space. Toolando.tech supports both conversions — just upload your file and download the result."
+        },
+        {
+          "title": "How to convert PDF to JPG for print and the web",
+          "body": "PDF is a document format that preserves page layout. Sometimes you need individual pages as images — for a website, a PowerPoint presentation, or printing a single page. The PDF → JPG converter in Toolando.tech renders each PDF page as a separate high-resolution JPG image. PDF files are never stored — they are deleted immediately after conversion. If you need transparency, consider PDF → PNG instead."
+        },
+        {
+          "title": "WebP and AVIF — modern image formats for websites",
+          "body": "JPG and PNG have dominated the web for years, but newer formats offer better compression. WebP (Google) produces files 25–35% smaller than JPG at the same visual quality and is supported by all modern browsers. AVIF goes even further — files can be half the size of WebP. Convert JPG → WebP or PNG → AVIF in Toolando.tech to speed up your website. Remember that older browsers (e.g. IE) don't support these formats — keep a JPG version as a fallback."
+        },
+        {
+          "title": "Extracting audio from video — the legal alternative",
+          "body": "Sometimes you have a video file (e.g. a camera recording, presentation) and only need the audio track. Toolando.tech lets you extract audio from MP4, MOV, AVI, MKV and other video formats, saving it as MP3, WAV, FLAC, or AAC. This is a legal operation on your own file — unlike downloading music from YouTube or TikTok, which Toolando.tech deliberately does not offer. Upload your video file, choose an audio format, and download the result."
+        },
+        {
+          "title": "JSON, CSV, and XML — converting data between formats",
+          "body": "Developers and data analysts often work with different data formats. JSON is the standard in APIs and configs. CSV and TSV are used for importing into Excel and spreadsheets. XML is used in older enterprise systems and RSS. Toolando.tech converts between these formats while preserving data structure. For example: JSON → CSV lets you open an API response in Excel, and CSV → JSON prepares data for sending to a REST API."
+        },
+        {
+          "title": "File security in online tools",
+          "body": "Uploading files to online tools naturally raises privacy concerns. At Toolando.tech, files are used solely to perform the operation you request — conversion, compression, or preview. After the job completes, files are deleted from the server. Some tools (e.g. the universal file opener) run entirely in your browser — in that case the file never leaves your computer. The connection to the site is encrypted (HTTPS). We never sell or share your files with third parties."
+        },
+        {
+          "title": "Lossy vs lossless compression — a simple guide",
+          "body": "Lossy formats (MP3, JPG, AAC, H.264) discard some data to shrink file size. Lossless formats (FLAC, PNG, WAV, ZIP) keep all data but produce larger files. Rule of thumb: only convert from lossy to lossless when you must — you won't recover lost quality. Converting lossy to lossy (e.g. JPG → JPG at lower quality) should happen once; each re-conversion degrades the result. In Toolando.tech's format encyclopedia, every format is labeled with its compression type."
+        },
+        {
+          "title": "HEIC from iPhone — how to open and convert to JPG",
+          "body": "Apple saves photos in HEIC (HEIF) by default — smaller than JPG at the same quality. The catch: Windows without an extension, older apps, and many services don't support HEIC. Solution: convert HEIC → JPG or HEIC → PNG in Toolando.tech before emailing photos, uploading to a site, or printing. You can also set iPhone to \"Most Compatible\" (JPG) in Settings, but online conversion works on photos already saved as HEIC."
+        },
+        {
+          "title": "PDF vs DOCX — which format when?",
+          "body": "DOCX (Word) is for editing text — you change content, styles, and headings. PDF locks page layout — it looks identical on every device, ideal for invoices, contracts, and CVs sent to recruiters. Convert DOCX → PDF before sending a document \"for reading only.\" Convert PDF → DOCX only when you need to edit text — layout may break. For archiving and print, always choose PDF."
+        },
+        {
+          "title": "Video for social media — MP4, resolution, and bitrate",
+          "body": "Instagram, TikTok, YouTube, and Facebook prefer MP4 with H.264 video and AAC audio. Before publishing, convert MOV, AVI, or MKV to MP4 to avoid upload errors. 1080p (1920×1080) is enough for most platforms; 4K only when the platform supports it. Higher bitrate means better quality but a larger file. Toolando.tech converts video with no install — see the format encyclopedia for details on MP4, WebM, and MOV."
+        }
+      ]
+    }
   },
   "hub": {
-    "convertersTitle": "File converters",
-    "convertersDesc": "Audio, video, images, documents, data, fonts and archives — plus compress, merge PDF and background removal.",
-    "calculatorsTitle": "Calculators & converters",
-    "calculatorsDesc": "Currency, VAT, dates, timezones, units and bitrate.",
-    "developerTitle": "Developer & text tools",
-    "developerDesc": "Passwords, QR, Base64, UUID, hash, colors, timestamp and character counter.",
-    "specialTools": "File tools",
-    "browseConverters": "Browse converters",
-    "browseCalculators": "Browse calculators",
-    "browseDeveloper": "Browse tools"
+    "convertersTitle": "Μετατροπείς αρχείων",
+    "convertersDesc": "Ήχος, βίντεο, εικόνες, έγγραφα, δεδομένα, γραμματοσειρές και αρχεία — plus συμπίεση, συγχώνευση PDF και αφαίρεση φόντου.",
+    "calculatorsTitle": "Αριθμομηχανές και μετατροπείς",
+    "calculatorsDesc": "Νόμισμα, ΦΠΑ, ημερομηνίες, ζώνες ώρας, μονάδες και bitrate.",
+    "developerTitle": "Εργαλεία developer και κειμένου",
+    "developerDesc": "Κωδικοί, QR, Base64, UUID, hash, χρώματα, timestamp και μετρητής χαρακτήρων.",
+    "specialTools": "Εργαλεία αρχείων",
+    "browseConverters": "Περιήγηση μετατροπέων",
+    "browseCalculators": "Περιήγηση αριθμομηχανών",
+    "browseDeveloper": "Περιήγηση εργαλείων"
+  },
+  "specialFields": {
+    "splitMode": "Λειτουργία διαχωρισμού",
+    "everyPage": "Κάθε σελίδα ξεχωριστά",
+    "pageRange": "Επιλεγμένο εύρος",
+    "pagesHint": "Σελίδες (π.χ. 1-3,5)",
+    "rotation": "Γωνία περιστροφής",
+    "width": "Πλάτος (px)",
+    "height": "Ύψος (px, προαιρετικό)",
+    "watermark": "Κείμενο υδατογραφήματος",
+    "trimStart": "Έναρξη (δευτ. ή MM:SS)",
+    "trimEnd": "Λήξη (δευτ. ή MM:SS)",
+    "pageNumberPos": "Θέση αριθμού σελίδας",
+    "bottom": "Κάτω στη σελίδα",
+    "top": "Πάνω στη σελίδα"
+  },
+  "accountRecent": {
+    "title": "Χρησιμοποιήθηκαν πρόσφατα",
+    "subtitle": "Ιστορικό αποθηκευμένο τοπικά σε αυτόν τον browser."
+  },
+  "favorites": {
+    "add": "Προσθήκη στα αγαπημένα",
+    "remove": "Αγαπημένο"
   }
 }

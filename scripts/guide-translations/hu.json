@@ -1,0 +1,797 @@
+{
+  "mp3-vs-wav": {
+    "title": "MP3 vs WAV — mikor konvertáljunk hangot?",
+    "description": "MP3 vs WAV összehasonlítva: veszteséges vs veszteségmentes tömörítés, fájlméret, DAW-szerkesztés és melyik formátumot válasszuk.",
+    "sections": [
+      {
+        "paragraphs": [
+          "Az MP3 veszteséges tömörítést használ — a fájlok kicsik, de egy része az audióadatoknak örökre elvész. A WAV teljes minőséget őriz (veszteségmentes vagy tömörítetlen), de a fájlok akár 10× nagyobbak lehetnek, mint az MP3.",
+          "A gyakorlatban: telefonon hallgatás → MP3 elég. Podcast szerkesztése Audacity-ben vagy mix FL Studio-ban → WAV vagy FLAC."
+        ]
+      },
+      {
+        "title": "Mikor konvertáljunk MP3 → WAV",
+        "paragraphs": [
+          "Ha egy platform vagy alkalmazás veszteségmentes formátumot követel további szerkesztéshez.",
+          "Ha több vágást, effektet és masteringet tervezel — minden MP3-művelet rontja a minőséget.",
+          "Megjegyzés: MP3 → WAV nem állítja helyre az elveszett minőséget, de megállítja a további romlást szerkesztés közben."
+        ]
+      },
+      {
+        "title": "Mikor konvertáljunk WAV → MP3",
+        "paragraphs": [
+          "Felvétel küldése e-mailben vagy chatben — kisebb fájl = gyorsabb átvitel.",
+          "Podcast vagy zene publikálása hallgatásra, nem szerkesztésre.",
+          "Lemezterület spórolása nagy hangtárban."
+        ]
+      }
+    ]
+  },
+  "pdf-to-jpg": {
+    "title": "Hogyan konvertáljunk PDF-et JPG-be nyomtatáshoz és webhez",
+    "description": "Mikor exportáljunk PDF-oldalakat JPG-ként, milyen felbontást válasszunk, és mikor jobb a PNG.",
+    "sections": [
+      {
+        "paragraphs": [
+          "A PDF megőrzi az oldal elrendezését. Néha egyedi oldalakra van szükség képként — weboldalhoz, PowerPointhoz vagy egy oldal nyomtatásához.",
+          "A Toolando.tech PDF → JPG konvertere minden oldalt külön JPG-ként renderel. A fájlok soha nem kerülnek tárolásra — konverzió után azonnal törlődnek."
+        ]
+      },
+      {
+        "title": "JPG vagy PNG PDF-ből?",
+        "paragraphs": [
+          "JPG — kisebb fájlok, ideális fotókhoz és átlátszatlanság nélküli dokumentumokhoz.",
+          "PNG — veszteségmentes átlátszósággal; jobb szöveges grafikához és éles szélekhez."
+        ]
+      }
+    ]
+  },
+  "webp-avif-images": {
+    "title": "WebP és AVIF — modern képformátumok weboldalakhoz",
+    "description": "WebP és AVIF vs JPG/PNG: tömörítés, böngészőtámogatás és PageSpeed optimalizálás.",
+    "sections": [
+      {
+        "paragraphs": [
+          "A JPG és PNG évek óta uralja a webet, de a WebP 25–35%-kal kisebb fájlokat készít azonos vizuális minőségnél. Az AVIF továbbmegy — a fájlok fele akkorák lehetnek, mint a WebP.",
+          "Minden modern böngésző támogatja a WebP-t. Az AVIF támogatása kissé gyengébb régebbi Safari verziókban."
+        ]
+      },
+      {
+        "title": "Telepítési stratégia",
+        "paragraphs": [
+          "Konvertálj JPG → WebP termékfotókhoz és bannerekhez — gyorsítja az oldal betöltését.",
+          "Tartsd meg a JPG-t fallbackként régi böngészőkhöz (HTML <picture> tag).",
+          "Átlátszó logókhoz: PNG → WebP JPG helyett."
+        ]
+      }
+    ]
+  },
+  "extract-audio-from-video": {
+    "title": "Hang kinyerése videóból — a legális alternatíva",
+    "description": "Hogyan nyerjünk ki legálisan hangsávot a saját videófájlból (MP4, MOV, MKV).",
+    "sections": [
+      {
+        "paragraphs": [
+          "Néha van videófájlod, és csak a hang kell. A Toolando.tech MP4, MOV, AVI, MKV fájlokból nyeri ki a hangot, és MP3, WAV, FLAC vagy AAC formátumban menti.",
+          "Saját fájlon ez legális — ellentétben a YouTube-ról vagy TikTok-ról való zeneletöltéssel, amit a Toolando.tech szándékosan nem kínál."
+        ]
+      }
+    ]
+  },
+  "json-csv-xml": {
+    "title": "JSON, CSV és XML — adatok konvertálása formátumok között",
+    "description": "Mikor használjunk JSON-t, CSV-t, TSV-t és XML-t, és hogyan konvertáljunk struktúravesztés nélkül.",
+    "sections": [
+      {
+        "paragraphs": [
+          "A JSON a REST API és alkalmazáskonfiguráció szabványa. A CSV és TSV Excel-importra használatos. Az XML régebbi vállalati rendszerekben és RSS-ben.",
+          "JSON → CSV megnyit egy API-választ Excelben. CSV → JSON adatot készít REST API-hoz. A Toolando.tech konverzió közben megőrzi az adatstruktúrát."
+        ]
+      }
+    ]
+  },
+  "online-file-security": {
+    "title": "Fájlbiztonság online eszközökben",
+    "description": "Hogyan dolgozza fel a Toolando.tech a fájlokat, mikor futnak helyben a böngészőben, és adatvédelmi részletek.",
+    "sections": [
+      {
+        "paragraphs": [
+          "Fájlok feltöltése online eszközökbe jogos aggodalmat kelthet. A Toolando.tech-en a fájlok kizárólag a kért műveletre szolgálnak — konverzió, tömörítés vagy előnézet.",
+          "A feladat befejezése után a fájlok törlődnek a szerverről. Egyes eszközök (univerzális megnyitó) teljesen a böngésződben futnak — a fájl soha nem hagyja el a gépedet. A kapcsolat titkosított (HTTPS)."
+        ]
+      }
+    ]
+  },
+  "lossy-vs-lossless": {
+    "title": "Veszteséges vs veszteségmentes tömörítés — egyszerű útmutató",
+    "description": "Hogyan különbözik a veszteséges és veszteségmentes tömörítés, és hogyan kerüld el a minőségromlást konvertáláskor.",
+    "sections": [
+      {
+        "paragraphs": [
+          "Veszteséges formátumok (MP3, JPG, AAC, H.264) adatot dobnak el a kisebb fájlért. Veszteségmentes formátumok (FLAC, PNG, WAV, ZIP) minden adatot megőriznek, de nagyobb fájlokat készítenek.",
+          "Szabály: veszteséges → veszteségmentes csak ha muszáj — az elveszett minőséget nem állítod helyre. Veszteséges → veszteséges csak egyszer — minden újrakonvertálás ront."
+        ]
+      }
+    ]
+  },
+  "heic-iphone-jpg": {
+    "title": "HEIC iPhone-ról — hogyan nyisd meg és konvertáld JPG-be",
+    "description": "Miért ment HEIC-et az iPhone, kompatibilitási problémák, és hogyan konvertáld JPG-be vagy PNG-be.",
+    "sections": [
+      {
+        "paragraphs": [
+          "Az Apple alapértelmezetten HEIC-ben menti a fotókat — kisebb, mint a JPG azonos minőségnél. Probléma: Windows kiterjesztés nélkül, régi appok és sok szolgáltatás nem támogatja a HEIC-et.",
+          "Megoldás: konvertáld HEIC → JPG vagy HEIC → PNG a Toolando.tech-en e-mail, feltöltés vagy nyomtatás előtt. Beállíthatod az iPhone-t is „Legkompatibilisebb” (JPG) módra."
+        ]
+      }
+    ]
+  },
+  "pdf-vs-docx": {
+    "title": "PDF vs DOCX — melyik formátum mikor?",
+    "description": "PDF vs DOCX különbségek: szerkesztés, nyomtatás, archiválás és mikor melyik irányba konvertálj.",
+    "sections": [
+      {
+        "paragraphs": [
+          "A DOCX (Word) szövegszerkesztésre való — tartalom, stílusok, címsorok. A PDF rögzíti az elrendezést — minden eszközön azonos, ideális számlákhoz, szerződésekhez és önéletrajzokhoz.",
+          "DOCX → PDF konvertálás „csak olvasásra” küldés előtt. PDF → DOCX csak ha szöveget kell szerkeszteni — az elrendezés törhet. Archiváláshoz és nyomtatáshoz mindig PDF."
+        ]
+      }
+    ]
+  },
+  "video-social-media": {
+    "title": "Videó közösségi médiához — MP4, felbontás és bitráta",
+    "description": "Hogyan készíts videót Instagramra, TikTokra, YouTube-ra: MP4 formátum, H.264, 1080p felbontás.",
+    "sections": [
+      {
+        "paragraphs": [
+          "Az Instagram, TikTok, YouTube és Facebook az MP4-et preferálja H.264 videóval és AAC hanggal. Publikálás előtt konvertáld MOV, AVI vagy MKV-t MP4-re a feltöltési hibák elkerülésére.",
+          "A 1080p (1920×1080) elég a legtöbb platformhoz. Magasabb bitráta = jobb minőség, de nagyobb fájl. Részletek az MP4, WebM és MOV formátumokról a formátum-enciklopédiában."
+        ]
+      }
+    ]
+  },
+  "choose-audio-bitrate": {
+    "title": "Milyen MP3 vagy AAC bitrátát válassz?",
+    "description": "128 vs 192 vs 320 kbps — gyakorlati választások podcastokhoz, zenéhez és videóhoz lemezterület pazarlás nélkül.",
+    "sections": [
+      {
+        "paragraphs": [
+          "A bitráta az audió másodpercenkénti adatmennyisége. Magasabb bitráta általában jobb hangot, de nagyobb fájlt jelent. MP3-nál a 128 és 320 kbps közötti különbség jó hangfalakon és sűrű zenén hallható leginkább.",
+          "Beszédhez (podcast, interjú) 96–128 kbps mono gyakran elég. Fejhallgatóban zenéhez 192–256 kbps sztereó jó kompromisszum. 320 kbps a gyakorlati MP3 plafon — magasabb ritkán segít, mert a formátum veszteséges marad."
+        ]
+      },
+      {
+        "title": "MP3, AAC és Opus — gyors összehasonlítás",
+        "paragraphs": [
+          "Az AAC (M4A) azonos bitrátán általában jobb, mint az MP3 — ezért használja a YouTube és az Apple Music.",
+          "Az Opus kiváló VoIP-ben és streamingben alacsony bitrátán (64–128 kbps).",
+          "Stúdióarchívumhoz tartsd WAV vagy FLAC formátumban — veszteséges bitráta nem pótolja a hiányzó adatot."
+        ]
+      },
+      {
+        "title": "Gyakori hibák",
+        "paragraphs": [
+          "Rossz minőségű MP3 bitráta-emelése nem javít a hangon — csak a fájlméret nő.",
+          "Ugyanazon szám többszöri újrakódolása (MP3 → AAC → MP3) minden körben ront.",
+          "Videóprojekthez saját MP4-ből nyerd ki a hangot idegen zene letöltése helyett — a szerzői jog számít."
+        ]
+      }
+    ]
+  },
+  "prepare-images-for-web": {
+    "title": "Hogyan készíts képeket webre (JPG, WebP, AVIF)",
+    "description": "Felbontás, tömörítés és formátum — gyorsítsd az oldalt látható minőségvesztés nélkül.",
+    "sections": [
+      {
+        "paragraphs": [
+          "Óriási kamerafotók (4000×3000 px) minden oldalt lassítanak. Blogra vagy boltba feltöltés előtt méretezd a tényleges megjelenítési méretre — pl. 1600 px szélesség hero bannerhez.",
+          "A JPG marad a biztonságos univerzális választás. A WebP és AVIF kisebb fájlokat készít azonos vizuális minőségnél — modern stackben <picture> fallbackkel régi böngészőkhöz."
+        ]
+      },
+      {
+        "title": "Mikor PNG JPG helyett",
+        "paragraphs": [
+          "Logók, ikonok és UI screenshotok — PNG vagy veszteségmentes WebP éles széleket tart.",
+          "Fehér hátterű termékfotók gyakran jól tömöríthetők JPG 80–85 minőséggel.",
+          "Kerüld ugyanazon banner ismételt JPG-ként mentését — minden mentés artefaktumot ad."
+        ]
+      },
+      {
+        "title": "Ellenőrzőlista publikálás előtt",
+        "paragraphs": [
+          "1) Méretezés cél szélességre px-ben. 2) Formátum (JPG/WebP/AVIF). 3) Fájlsúly (<200 KB thumb, <500 KB nagy blogkép). 4) PageSpeed Insights és LCP összehasonlítás előtte/utána."
+        ]
+      }
+    ]
+  },
+  "docx-pdf-workflow": {
+    "title": "DOCX → PDF irodai munkához — mikor és hogyan konvertálj",
+    "description": "Önéletrajz, számla és szerződés küldése: miért jobb a PDF a DOCX-nél, és hogyan kerüld el a törött betűtípusokat.",
+    "sections": [
+      {
+        "paragraphs": [
+          "A DOCX szerkesztésre való — remek, ha a címzettnek Word van és módosítania kell a szöveget. A PDF olvasásra — elrendezés, betűk és margók azonosak Windows-on, Macen és telefonon.",
+          "Önéletrajz, ajánlat vagy szerződés küldése előtt konvertáld DOCX → PDF. A címzettek véletlenül nem szerkesztik, és elkerülöd a helyettesítő betűket, amelyek tönkreteszik a márkát."
+        ]
+      },
+      {
+        "title": "Mikor NE konvertálj PDF → DOCX",
+        "paragraphs": [
+          "Szkennelt számlák és aláírt szerződések — tartsd PDF-ként archívumként; az OCR külön lépés.",
+          "Összetett többoldalas elrendezések (katalógusok, brosúrák) — DOCX konverzió gyakran törli az oldaltörést.",
+          "Ha csak szövegrészlet kell, másold PDF-ből a teljes fájl konvertálása helyett."
+        ]
+      },
+      {
+        "title": "Biztonság és adatvédelem",
+        "paragraphs": [
+          "A Toolando.tech-en a DOCX és PDF fájlok csak konverzióra szolgálnak, és a feladat végén törlődnek.",
+          "Érzékeny dokumentumoknál (igazolvány, bankszámlaszám) használj HTTPS-t, és ne hagyj másolatot titkosítatlan nyilvános felhőben."
+        ]
+      }
+    ]
+  },
+  "compress-images-without-quality-loss": {
+    "title": "Hogyan tömöríts JPG és PNG képeket látható minőségvesztés nélkül",
+    "description": "Mikor használd a tömörítőt, milyen minőségszintet válassz, és tömörítés vs formátumkonverzió.",
+    "sections": [
+      {
+        "paragraphs": [
+          "A képtömörítés csökkenti a fájlméretet formátumváltás nélkül — továbbra is JPG vagy PNG marad, csak könnyebb. A JPG → WebP konverzió formátumot vált, és weben gyakran jobb eredményt ad, de a nyomtatási folyamatok JPG-t követelhetnek.",
+          "A Toolando.tech-en 2000×2000 termékfotókon teszteltem a képtömörítőt: 80%-os minőségnél a méret 40–60%-kal csökkent látható képernyőartefaktumok nélkül."
+        ]
+      },
+      {
+        "title": "Mikor tömöríts vs konvertálj",
+        "paragraphs": [
+          "Tömöríts, ha a formátum megfelel (pl. bolt JPG-t kér), de a fájl túl nehéz e-mailhez vagy CMS-hez.",
+          "Konvertálj WebP/AVIF-re, ha saját oldalon publikálsz <picture> fallbackkel.",
+          "Soha ne mentsd újra ugyanazt a JPG-t sokszor — minden mentés artefaktumot ad."
+        ]
+      },
+      {
+        "title": "Tipikus forgatókönyvek",
+        "paragraphs": [
+          "E-mail melléklet: JPG minőség ~75–85, max. szélesség 1600 px.",
+          "E-kereskedelem: WebP JPG fallbackkel; thumb 800 px.",
+          "UI screenshot szöveggel: PNG vagy veszteségmentes WebP — kerüld az agresszív JPG-t."
+        ]
+      }
+    ]
+  },
+  "merge-pdf-online-guide": {
+    "title": "Több PDF egyesítése — mikor érdemes",
+    "description": "Számlák, szkennelések és mellékletek összefűzése — oldalsorrend, minőség és adatvédelem.",
+    "sections": [
+      {
+        "paragraphs": [
+          "PDF egyesítés mindennapi irodai feladat: számla + szerződés + igazolványszken a mellékletben. A Toolando.tech a kiválasztott sorrendben fűzi össze a fájlokat.",
+          "A PDF megőrzi a vektoros szöveget és bitmap szkenneléseket — az egyesítés nem csökkenti a szken felbontását, ha a források nem voltak túltömörítve."
+        ]
+      },
+      {
+        "title": "Küldés előtt",
+        "paragraphs": [
+          "Rendezd logikusan (borító → tartalom → mellékletek).",
+          "Távolítsd el a duplikált oldalakat a szkennelésekből.",
+          "Ha a címzett mobilon van, célozz ≤10–15 MB-ra vagy oszd meg felhőlinkkel."
+        ]
+      },
+      {
+        "title": "Adatvédelem",
+        "paragraphs": [
+          "Üzleti és személyes dokumentumokat kezeld bizalmasként. A Toolando feldolgozás után törli a fájlokat; érzékeny adatnál tartsd be a céges szabályzatot."
+        ]
+      }
+    ]
+  },
+  "spreadsheet-csv-json-guide": {
+    "title": "CSV, JSON és Excel — adat mozgatása lapok és API-k között",
+    "description": "Mikor válaszd a CSV-t a JSON helyett, és hogyan kerüld el a törött tizedeseket és kódolást.",
+    "sections": [
+      {
+        "paragraphs": [
+          "A CSV egyszerű szöveg — Excelben, Google Sheetsben és BI eszközökben nyílik. A JSON kezeli a beágyazott struktúrákat (API, konfig). Az XLSX cellatípusokat és több lapot ad.",
+          "Tipikus folyamat: API export JSON-ként → JSON CSV-be → elemzés Excelben. Fordítva: ügyféllista CSV → JSON → REST API."
+        ]
+      },
+      {
+        "title": "Kódolás és Excel",
+        "paragraphs": [
+          "Nem-ASCII karakterekhez UTF-8 CSV. Ha az Excel elrontja a szöveget, importáld Adatok → Szövegből és válaszd az UTF-8-at.",
+          "A CSV elválasztók locale szerint változnak (vessző vs pontosvessző). A TSV (tab) biztonságosabb, ha a leírások vesszőt tartalmaznak."
+        ]
+      },
+      {
+        "title": "Validálás konverzió után",
+        "paragraphs": [
+          "Hasonlítsd össze a sorok számát előtte és utána.",
+          "JSON-nál ellenőrizd a kulcsokat és típusokat — egy hiányzó idézőjel tönkreteszi az egész fájlt."
+        ]
+      }
+    ]
+  },
+  "video-compress-before-sharing": {
+    "title": "Videó kicsinyítése e-mail vagy WhatsApp előtt",
+    "description": "MP4, felbontás, bitráta — gyakorlati méretkorlátok és konténerkonverzió.",
+    "sections": [
+      {
+        "paragraphs": [
+          "Telefonos MOV/MKV felvételek lehetnek több száz MB-osak. Sok postafiók blokkol >25 MB mellékletet. Megoldás: MP4-re konvertálás (H.264 + AAC) és szükség esetén alacsonyabb felbontás.",
+          "720p gyakran elég telefonos előnézethez; 1080p maradjon TV-n."
+        ]
+      },
+      {
+        "title": "Lépések küldés előtt",
+        "paragraphs": [
+          "1) MOV/MKV → MP4. 2) Ellenőrizd a méretet. 3) Ha még túl nagy — vágd le a felesleges intro/outro-t szerkesztőben. 4) Felhőlink, ha >25 MB."
+        ]
+      }
+    ]
+  },
+  "font-woff2-for-websites": {
+    "title": "TTF, OTF, WOFF, WOFF2 — betűtípusok webre",
+    "description": "Betűk konvertálása @font-face-hez, licencek és oldalsebesség-hatás.",
+    "sections": [
+      {
+        "paragraphs": [
+          "A böngészők WOFF/WOFF2-t igényelnek CSS-ben (@font-face), nem nyers Windows fontfájlokat. A WOFF2 a legkisebb átviteli méretet adja.",
+          "A Toolando TTF/OTF → WOFF2 konvertere webkész fájlokat készít. Beágyazás előtt ellenőrizd a betű licencét."
+        ]
+      },
+      {
+        "title": "Teljesítmény",
+        "paragraphs": [
+          "Subseteld a betűket a használt glifákra pro eszközökben, ha nagy a fájl.",
+          "Preload kritikus WOFF2 a <head>-ben above-the-fold szöveghez.",
+          "Használj font-display: swap-ot, hogy a szöveg olvasható maradjon betöltés közben."
+        ]
+      }
+    ]
+  },
+  "toolando-editorial-standards": {
+    "title": "Toolando.tech szerkesztői standardok — hogyan készülnek az útmutatók",
+    "description": "Hogyan készülnek a cikkek, konvertertesztek és a formátum-enciklopédia — átláthatóság olvasóknak és recenzenseknek.",
+    "sections": [
+      {
+        "paragraphs": [
+          "A Toolando.tech-et egyedül építem (Szymon Badyl / Badyl-Tech). Az útmutatók nem tömegesen generáltak vagy Wikipédiából másoltak — valódi konverziós tesztek alapján készülnek.",
+          "Minden cikknek van publikálási és frissítési dátuma. Ha a platformkövetelmények vagy könyvtárak változnak, revidálom a szöveget."
+        ]
+      },
+      {
+        "title": "Mit tesztelek",
+        "paragraphs": [
+          "Audio/video konverterek: idő, kimeneti méret, lejátszás VLC-ben és telefonon.",
+          "Képek: vizuális előtte/utána, PNG átlátszóság, WebP vs JPG méret.",
+          "Dokumentumok: elrendezés PDF ↔ DOCX után, kódolás CSV/JSON-ban."
+        ]
+      },
+      {
+        "title": "Mit nem ígérek",
+        "paragraphs": [
+          "Nincs „100% minőség” veszteséges → veszteséges konverziónál.",
+          "Nincs mások YouTube/TikTok videóinak letöltése — csak legális műveletek a fájlaidon.",
+          "Google hirdetések megjelenhetnek, de a szerkesztői tartalom függetlenül készül."
+        ]
+      }
+    ]
+  },
+  "when-not-to-convert-files": {
+    "title": "Mikor NE konvertálj fájlt — 7 helyzet, ami rontja a minőséget",
+    "description": "Kerüld a felesleges konverziókat: őrizd meg az eredetit, veszteségmentes archívumok, backup kísérletek előtt.",
+    "sections": [
+      {
+        "paragraphs": [
+          "Az online konverterek kényelmesek, de nem minden művelet hasznos. Néha hagyd az eredetit vagy használj veszteségmentes archívumot (ZIP, FLAC).",
+          "Szabály: ne várj csodát veszteséges → veszteségmentes átalakítástól — MP3 → WAV nem állítja helyre az elveszett adatot."
+        ]
+      },
+      {
+        "title": "Hagyd így",
+        "paragraphs": [
+          "Már van PNG átlátszósággal — ne tedd JPG-be ok nélkül.",
+          "Design projektek — tartsd a réteges forrást (PSD, SVG); JPG export csak a végén.",
+          "Stúdió WAV/FLAC — ne lapítsd MP3-ra a végső mix előtt.",
+          "Digitálisan aláírt PDF — a konverzió érvénytelenítheti az aláírást."
+        ]
+      },
+      {
+        "title": "Mielőtt rákattintasz a Konvertálásra",
+        "paragraphs": [
+          "Őrizd meg az eredeti másolatát.",
+          "Ellenőrizd, elfogadja-e a célplatform már a forrásformátumot.",
+          "Olvasd el a formátum-összehasonlításokat a Toolando enciklopédiában — kihagyhatsz egy felesleges lépést."
+        ]
+      }
+    ]
+  },
+  "png-vs-jpg-photos-and-graphics": {
+    "title": "PNG vs JPG — fotók vs szöveges grafika",
+    "description": "Gyakorlati választások: fotók, képernyőképek, átlátszó logók és nyomtatás.",
+    "sections": [
+      {
+        "paragraphs": [
+          "A PNG és JPG a két legtöbbet összekevert formátum. A JPG jól tömörít fotókat — ég, bőr, táj — de tönkreteszi az éles széleket és szöveget. A PNG minden pixelt pontosan megőriz, beleértve az átlátszóságot (alpha), de a fájlok gyakran 5–10× nagyobbak JPG-nél azonos felbontásnál.",
+          "Szabály a Toolando.tech teszteimben: galéria vagy social fotó → JPG (vagy WebP JPG fallbackkel). Ikon, logo, diagram, UI screenshot → PNG. Vegyes fotó + szöveg (pl. ajánlat borító) → gyakran PNG vagy veszteségmentes WebP."
+        ]
+      },
+      {
+        "title": "Mikor válaszd a JPG-t",
+        "paragraphs": [
+          "Kamera vagy telefon fotó átlátszóság nélkül.",
+          "Termék thumb egyszínű háttérrel, alpha nélkül.",
+          "E-mail melléklet — JPG 80–85 minőség általában jó kompromisszum.",
+          "Otthoni fotónyomtatás — sok szolgáltató elfogad nagy felbontású JPG-t (300 DPI egyenérték)."
+        ]
+      },
+      {
+        "title": "Mikor válaszd a PNG-t",
+        "paragraphs": [
+          "Weboldal logó átlátszó háttéren — a JPG mindig fehérrel vagy feketével tölti ki.",
+          "UI, diagram, kód screenshot — a szöveg éles marad.",
+          "Lapos grafika kevés színnel (infografika, app ikonok).",
+          "További réteges szerkesztéshez — veszteségmentes PNG nem ad artefaktumot minden mentésnél (ellentétben az ismételt JPG-vel)."
+        ]
+      },
+      {
+        "title": "Gyakori hibák",
+        "paragraphs": [
+          "Logo mentése JPG-ként — fogazott szélek, nincs átlátszóság.",
+          "4000×3000 fotó PNG-ként „minőségért” — feleslegesen 15 MB 2 MB JPG helyett.",
+          "PNG → JPG → PNG hurkok — minden JPG kör veszít; a mastert PNG-ben tartsd."
+        ]
+      }
+    ]
+  },
+  "flac-music-archive-guide": {
+    "title": "FLAC zenei archívumként — mikor éri meg vs MP3",
+    "description": "Veszteségmentes FLAC vs MP3 320 kbps: biztonsági mentések, otthoni streaming és autó lejátszók.",
+    "sections": [
+      {
+        "paragraphs": [
+          "A FLAC (Free Lossless Audio Codec) veszteségmentes tömörítés — mint ZIP hanghoz. Dekódolva ugyanaz a jel, mint WAV-nél, de a fájl kb. fele akkora. Az MP3 véglegesen eltávolít adatot; még 320 kbps sem bitazonos CD rip-pel.",
+          "Gyakorlatban: ha veszteségmentes zenét vásárolsz vagy saját lemezt ripszelsz, a FLAC ésszerű archív formátum. Telefonon Bluetooth fülhallgatóval FLAC vs MP3 256 kbps gyakran hallhatatlan — MP3-ra konvertálás gigákat spórol."
+        ]
+      },
+      {
+        "title": "Archív munkafolyamat",
+        "paragraphs": [
+          "1) Master FLAC (vagy WAV) NAS-on / felhő backupon.",
+          "2) Munkapéldányok MP3/AAC telefonra és autóba.",
+          "3) Soha ne konvertálj MP3 → FLAC „minőségért” — csak felduzzasztja a fájlt adat visszaállítás nélkül.",
+          "A Toolando.tech FLAC → MP3 konverterét 40–60 perces albumokon teszteltem; konverzió után ellenőrizd a metaadatot (cím, előadó) a lejátszóban."
+        ]
+      },
+      {
+        "title": "Kompatibilitás",
+        "paragraphs": [
+          "FLAC: VLC, Foobar2000, legtöbb Android lejátszó; gyengébb natív Apple Musicben (ALAC jobb Apple ökoszisztémában).",
+          "Autórádiók gyakran csak MP3/WMA/AAC-t olvasnak USB-ről — FLAC → MP3 kötelező.",
+          "Otthoni streaming (Plex, Jellyfin) jól kezeli a FLAC-et."
+        ]
+      }
+    ]
+  },
+  "zip-7z-rar-when-to-use": {
+    "title": "ZIP, 7z és RAR — melyik archívumot küldd",
+    "description": "Méret, kompatibilitás és titkosítás — mikor elég a ZIP, és mikor segít a 7z vagy RAR.",
+    "sections": [
+      {
+        "paragraphs": [
+          "Az archívum sok fájlt egybe csomagol — praktikus e-mailhez, felhőhöz és mappabackuphoz. A ZIP univerzális szabvány: Windows, macOS, Linux extra szoftver nélkül. A 7z általában kisebb eredményt ad, de a címzettnek lehet 7-Zip kell. A RAR régi workflow-kban jelenik meg; RAR készítés online licenc korlátokkal jár — gyakrabban RAR → ZIP, mint fordítva."
+        ]
+      },
+      {
+        "title": "Mikor ZIP",
+        "paragraphs": [
+          "Küldés ügyfélnek vagy hivatalnak — legkisebb „nem nyílik meg” kockázat.",
+          "Kód, irodai dokumentumok, JPG fotók archiválása.",
+          "Rendszerek, amelyek csak .zip feltöltést fogadnak."
+        ]
+      },
+      {
+        "title": "Mikor 7z",
+        "paragraphs": [
+          "Nagy játékmappák, videóprojektek, backup külső lemez előtt — kisebb fájl = gyorsabb feltöltés.",
+          "Ha a címzett technikai és van 7-Zipje.",
+          "ZIP → 7z konverzió csak egyszer értelmes — ne csomagold újra ugyanazt körben."
+        ]
+      },
+      {
+        "title": "Biztonság",
+        "paragraphs": [
+          "Archívum jelszó megakadályozza véletlen megnyitást, de nem helyettesíti az end-to-end titkosítást érzékeny dokumentumoknál.",
+          "Ne csomagold ki ismeretlen forrású archívumot víruskeresés nélkül.",
+          "A Toolando csak a konténerkonverzió idejére dolgozza fel az archívumot — a tartalom legális és a tiéd legyen."
+        ]
+      }
+    ]
+  },
+  "svg-vs-png-logos-and-icons": {
+    "title": "SVG vs PNG — logók és ikonok webre",
+    "description": "Vektor vs raster: mikor adj SVG-t, és mikor elég PNG @2x.",
+    "sections": [
+      {
+        "paragraphs": [
+          "Az SVG matematikailag leírt vektorgrafika — bármely képernyőn skálázódik pixelezés nélkül. A PNG fix felbontású bitmap; retinán gyakran 2× verzió kell. Weben a logók és egyszerű ikonok szinte mindig SVG-k (vagy icon font), hacsak a fájl nem ágyaz be fotót.",
+          "A Toolando.tech SVG → PNG konvertere segít, ha a nyomda PNG 300 DPI-t kér vagy a rendszer elutasítja az SVG-t."
+        ]
+      },
+      {
+        "title": "SVG előnyök",
+        "paragraphs": [
+          "Egy fájl mobilra és desktopra — kevesebb CSS, nincs srcset.",
+          "Egyszerű ikonoknál könnyű színváltás CSS fill-lel.",
+          "Jobb Lighthouse pontszám nehéz PNG hero helyett."
+        ]
+      },
+      {
+        "title": "Mikor PNG SVG helyett",
+        "paragraphs": [
+          "Logo gradienssel, árnyékkal vagy rossz vektor export effekttel.",
+          "Open Graph / social preview thumb — a platformok úgyis rasterizálnak.",
+          "Desktop app SVG motor nélkül.",
+          "PNG @2x export (pl. 512×512) fallback <img>-ben inline SVG mellett."
+        ]
+      }
+    ]
+  },
+  "podcast-export-mp3-aac-settings": {
+    "title": "Podcast export — MP3 vagy AAC és milyen bitráta",
+    "description": "Beállítások Audacity, Reaper vagy telefon felvétel után: mono, 44,1 kHz, ésszerű tömörítés.",
+    "sections": [
+      {
+        "paragraphs": [
+          "A podcast főleg beszéd — nem kell sztereó 320 kbps, mint stúdió zenéhez. A legtöbb platform (Spotify, Apple Podcasts, RSS host) úgyis újrakódol. Mégis küldj rendes mastert: mono vagy sztereó, 44,1 vagy 48 kHz, MP3 128–192 kbps vagy AAC/M4A 128 kbps.",
+          "WAV vagy FLAC felvétel? A végső export szinte mindig MP3 vagy AAC — a Toolando.tech WAV → MP3-t 30–60 perces epizódokon teszteltem; ~30 MB WAV ~28 MB 128 kbps sztereónál (mono beszéd ~15 MB)."
+        ]
+      },
+      {
+        "title": "Ajánlott beállítások",
+        "paragraphs": [
+          "Solo / egy hangos interjú: mono, MP3 96–128 kbps.",
+          "Két hang külön sávon: sztereó 128 kbps.",
+          "Zene intro/outro sztereóban, többi mono — egyszerűségért export sztereó 128 kbps.",
+          "Kerüld a 64 kbps-t — durva szibiláns és háttérzaj olcsó mikrofonokon."
+        ]
+      },
+      {
+        "title": "MP3 vs AAC (M4A)",
+        "paragraphs": [
+          "Az AAC azonos bitrátán általában jobb MP3-nál — az Apple M4A-t preferálja.",
+          "Az MP3 a legszélesebb kompatibilitás régi lejátszókon és autókban.",
+          "Ne tölts fel nyers WAV-et podcast tárhelyre — a feltöltés örökkéig tart."
+        ]
+      }
+    ]
+  },
+  "gif-vs-mp4-for-animations": {
+    "title": "GIF vs MP4 — animációk oldalakon és social médiában",
+    "description": "Mikor értelmes a régi GIF, és mikor spórol megabájtokat a rövid MP4 vagy WebM.",
+    "sections": [
+      {
+        "paragraphs": [
+          "A GIF mindenhol lejátszódik, de technikailag képkocka-sorozat modern videotömörítés nélkül — 5 mp 720p animáció 10–20 MB lehet. Ugyanez MP4-ben (H.264) gyakran 500 KB–1 MB elfogadható minőségnél.",
+          "MP4 → GIF a Toolando.tech-en rövid hurkokhoz (loader, Slack reakció) értelmes, ha a platform nem enged videót. Saját oldalon preferáld <video autoplay loop muted playsinline> MP4 vagy WebM-mel."
+        ]
+      },
+      {
+        "title": "Mikor GIF",
+        "paragraphs": [
+          "Rövid hurok (<5 s), kis felbontás (≤480 px szélesség).",
+          "Platformkövetelmény (néhány fórum csak GIF).",
+          "Egyszerű grafika kevés színnel — akkor a GIF tényleg könnyű lehet."
+        ]
+      },
+      {
+        "title": "Mikor MP4/WebM",
+        "paragraphs": [
+          "Animáció sok színnel, gradienssel vagy videóklippel.",
+          "Weboldalak — jobb LCP, kevesebb sávszélesség.",
+          "Instagram/TikTok videót kér, nem GIF-et."
+        ]
+      },
+      {
+        "title": "Tippek MP4 → GIF-hez",
+        "paragraphs": [
+          "Vágd rövidebbre — másodpercenként tucatnyi képkocka.",
+          "Csökkentsd a felbontást konverzió előtt.",
+          "Korlátozd a színpalettát, ha az eszköz adja (kevesebb banding)."
+        ]
+      }
+    ]
+  },
+  "tiff-and-png-for-document-scans": {
+    "title": "Dokumentumszkennelések — TIFF, PNG vagy JPG",
+    "description": "Számlák és szerződések: veszteségmentes tárolás, többoldalas, és mikor elég a PDF.",
+    "sections": [
+      {
+        "paragraphs": [
+          "Számla vagy szerződés szkennelése más, mint nyaralási fotó. Szöveg és bélyegzők éles széleket igényelnek — agresszív JPG elmosja a betűket. TIFF (gyakran LZW veszteségmentes) és PNG biztonságosabb archívumhoz. Küldéshez és OCR-hez gyakran PDF vagy mérsékelt JPG a vége.",
+          "Többoldalas TIFF egy fájl több réteggel — nem minden néző kezeli; hivataloknak és ügyfeleknek a többoldalas PDF áttekinthetőbb (PDF egyesítés Toolando.tech-en)."
+        ]
+      },
+      {
+        "title": "Ajánlott munkafolyamat",
+        "paragraphs": [
+          "Szkenner → PNG vagy TIFF oldalanként (300 DPI nyomtatáshoz, 150 DPI előnézethez).",
+          "Rotáció/vágás javítása szerkesztőben.",
+          "Oldalak egy PDF-be küldéshez.",
+          "Opcionális JPG 90 csak ha a címzett nem fogad PDF-et."
+        ]
+      },
+      {
+        "title": "Mit kerülj",
+        "paragraphs": [
+          "JPG 60 számlán — az összegek olvashatatlanok lehetnek.",
+          "Ismételt TIFF → JPG → TIFF ciklusok.",
+          "Színes szken 600 DPI „biztos ami biztos” — gigabyte A4 szöveghez feleslegesen."
+        ]
+      }
+    ]
+  },
+  "markdown-to-pdf-workflow": {
+    "title": "Markdownból PDF-be — dokumentáció, README és jegyzetek",
+    "description": "MD → HTML → PDF/DOCX: mikor elég a szerkesztő export, és mikor segít online konverter.",
+    "sections": [
+      {
+        "paragraphs": [
+          "A Markdown írásra való — címsorok, listák, kód — WYSIWYG elrendezés nélkül. Fejlesztők README.md-t tartanak repókban; aztán PDF kell ügyfélnek vagy nyomtatáshoz. Tipikus út: MD → HTML (render) → PDF böngésző Nyomtatás PDF-be, vagy MD → DOCX → PDF jobb oldalfejlécekhez.",
+          "A Toolando.tech MD → HTML és DOCX → PDF konvertereit 20–40 KB fájlokon teszteltem; magyar ékezetek és kódblokkok rendben mennek, ha a MD UTF-8."
+        ]
+      },
+      {
+        "title": "Melyik út mikor",
+        "paragraphs": [
+          "Gyors előnézet: MD → HTML, megnyitás böngészőben.",
+          "Formális dokumentum oldalszámozással: MD → DOCX (vagy szerkesztő), céges stílus, aztán DOCX → PDF.",
+          "Egyszerű jegyzet stílus nélkül: elég MD → TXT."
+        ]
+      },
+      {
+        "title": "Jó MD szokások",
+        "paragraphs": [
+          "Egy fájl = egy téma; hosszú dokikat fejezetekre bontsd.",
+          "Képeket relatívan linkeld — konverzió után ellenőrizd az útvonalakat.",
+          "MD táblázatok PDF-ben törhetnek — CSV vagy DOCX tabuláris adathoz."
+        ]
+      }
+    ]
+  },
+  "extract-images-from-pdf-pages": {
+    "title": "Hogyan nyerj képeket PDF oldalakból (JPG, PNG, WebP)",
+    "description": "Diák, katalógusok és szkennelések — mikor értelmes oldalt képként exportálni és milyen felbontás.",
+    "sections": [
+      {
+        "paragraphs": [
+          "A PDF konténer — benne lehetnek vektorok, betűk és beágyazott bitmapok. PDF → JPG minden oldalt raszterképként renderel. Ez nem ugyanaz, mint egy beágyazott logo kinyerése (PDF szerkesztő kell), de diákhoz, plakátokhoz és szkennelésekhez jól működik.",
+          "16:9 prezentáció PNG-ben 1920 px szélességgel éles a képernyőn; A4 nyomtatáshoz ~2480×3508 px (300 DPI), ha az eszköz támogatja a magas felbontást."
+        ]
+      },
+      {
+        "title": "JPG vs PNG vs WebP",
+        "paragraphs": [
+          "Diá fotó háttérrel → JPG vagy WebP.",
+          "Diá diagrammal és szöveggel → PNG (élesebb tipográfia).",
+          "Web thumb → WebP JPG fallbackkel további konverzió után."
+        ]
+      },
+      {
+        "title": "Többoldalas PDF",
+        "paragraphs": [
+          "Exportálj egyedi oldalakat, ha csak az 5. és 12. diára van szükség.",
+          "Teljes galériához — konvertáld az egész fájlt és rendezd szám szerint a nevekben.",
+          "Tiszteletben tartani a szerzői jogot — más PDF-je nem a tiéd szabad publikálásra."
+        ]
+      }
+    ]
+  },
+  "convert-video-to-gif-properly": {
+    "title": "Hogyan készíts jó GIF-et videóból — felbontás, FPS, hossz",
+    "description": "MP4/MOV GIF-be óriási fájl nélkül: gyakorlati limitek és alternatívák.",
+    "sections": [
+      {
+        "paragraphs": [
+          "A GIF-nek nincs hangja és nem használ H.264-et — minden képkocka teljes bitmap (gyakran 256 szín). Egy 10 mp 1080p klip GIF-ként többet nyomhat, mint az eredeti videó. Cél: rövid, kicsi, alacsony felbontás.",
+          "MP4 → GIF előtt vágj 2–4 másodpercre külső szerkesztőben és használj 10–15 FPS-t 30 helyett — a GIF úgysem adja vissza a film simaságát."
+        ]
+      },
+      {
+        "title": "Kezdő paraméterek",
+        "paragraphs": [
+          "Max. szélesség 480–640 px mémekhez és reakciókhoz.",
+          "Max. hossz 5 s — felette fontold meg a hurkoló MP4-et.",
+          "Egyszerű háttér (greenscreen) jobban tömörít, mint gradiens és zaj."
+        ]
+      },
+      {
+        "title": "Konverzió után",
+        "paragraphs": [
+          "Ellenőrizd a méretet — 5 MB feletti GIF ritkán értelmes oldalon.",
+          "Ha túl nagy a GIF, GIF → MP4 és <video> embed gyakran megoldja.",
+          "A Toolando csak a konverzió idejére dolgozza fel a videót — kész GIF-et nem hostol nyilvánosan."
+        ]
+      }
+    ]
+  },
+  "split-pdf-pages-guide": {
+    "title": "Hogyan válaszd szét PDF-et külön oldalakra online",
+    "description": "Mikor szedd szét a PDF-et, hogyan válassz oldaltartományt, és mit csinálj a ZIP kimenettel.",
+    "sections": [
+      {
+        "paragraphs": [
+          "PDF szétválasztás gyakori többoldalas szerződés vagy számla szkennelése után — egy oldalt kell e-mailben küldeni vagy máshova csatolni.",
+          "A Toolando.tech-en minden oldalt külön exportálhatsz vagy tartományt adhatsz meg (pl. 1-3,5). Eredmény: ZIP PDF fájlok, mindegyik megőrzi az eredeti vektor vagy szken minőséget."
+        ]
+      },
+      {
+        "title": "Mikor szétválaszt vs egyesít",
+        "paragraphs": [
+          "Szétválaszt — ha a címzettnek csak egy rész kell (aláírási oldal, melléklet, borító).",
+          "Egyesít — ha szkenneléseket egy archív/küldési fájlba rakod.",
+          "Szétválasztás után fontold meg az oldalszámozást vagy nagy szken tömörítését."
+        ]
+      }
+    ]
+  },
+  "remove-exif-privacy-guide": {
+    "title": "EXIF fotókon — mit távolíts el publikálás előtt",
+    "description": "GPS, kameramodell és dátum EXIF metaadatban — adatvédelmi kockázatok és eltávolítás.",
+    "sections": [
+      {
+        "paragraphs": [
+          "Az EXIF rejtett metaadat JPEG, PNG vagy HEIC fájlokban: GPS hely, telefonmodell, orientáció, néha előnézeti thumb. A social hálózatok gyakran lecsupaszítják, de saját oldal, hírlevél vagy e-mail melléklet nem mindig.",
+          "Gyerekek, otthoni belső terek vagy asztali dokumentumok fotói publikálása előtt távolítsd el EXIF-et dedikált eszközzel — a Toolando szerveren dolgozza fel, a fájl nem megy külső AI felhőbe."
+        ]
+      },
+      {
+        "title": "Mi marad EXIF eltávolítás után",
+        "paragraphs": [
+          "A képpixelek változatlanok. Csak metaadat törlődik — a felbontás érintetlen.",
+          "EXIF strip után még tömörítheted a fájlt vagy vízjelet adhatsz portfólió publikálás előtt."
+        ]
+      }
+    ]
+  },
+  "jwt-decode-safely-guide": {
+    "title": "JWT — hogyan olvasd a tokent aláírás-ellenőrzés nélkül",
+    "description": "Header, payload és Base64URL — mikor dekódolj lokálisan és mit ne csinálj.",
+    "sections": [
+      {
+        "paragraphs": [
+          "A JSON Web Token három ponttal elválasztott részből áll: header, payload, signature. A Toolando JWT dekódere Base64URL dekódolás után mutatja a headert és payloadot — token szerverre küldése nélkül (böngészőben fut).",
+          "Ez nem helyettesíti a backend aláírás-ellenőrzést. Dekódolás debugolásra való (pl. lejárt `exp`, rossz `aud`) — soha ne tekintsd a payloadot önmagában identitásbizonyítéknak."
+        ]
+      },
+      {
+        "title": "Biztonságos gyakorlat",
+        "paragraphs": [
+          "Ne illessz be produkciós tokeneket személyes adattal nyilvános oldalakra — lokális dekóder vagy tesztkörnyezet.",
+          "Ellenőrizd `exp` és `nbf` értékeket 401 hibák debugolása előtt.",
+          "Elemzés után töröld a tokent vágólap-előzményekből és logokból."
+        ]
+      }
+    ]
+  },
+  "mortgage-loan-calculator-guide": {
+    "title": "Hitelkalkulátor — törlesztő, kamat és mire figyelj",
+    "description": "Anuitás, díjak és biztosítások — hogyan olvasd a jelzálog-kalkulátor eredményét.",
+    "sections": [
+      {
+        "paragraphs": [
+          "A Toolando hitelkalkulátora anuitásos törlesztőt számol: fix havi tőke plusz kamat. Hosszabb futamidő alacsonyabb törlesztő — de magasabb teljes kamatköltség.",
+          "Kezdőpontnak vedd banki beszélgetéshez, nem ajánlatnak. A valós törlesztő a referenciakamattól, marzsontól, díjaktól, életbiztosítástól és önerőtől függ."
+        ]
+      },
+      {
+        "title": "Mit számolj a kalkulátoron túl",
+        "paragraphs": [
+          "Kezelési díj és előtörlesztési díj (ha szerződésben van).",
+          "Ingatlan- és életbiztosítás — gyakran banki követelmény.",
+          "Jogi költségek és illetékek lakásvásárláskor."
+        ]
+      }
+    ]
+  }
+}

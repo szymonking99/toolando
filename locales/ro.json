@@ -3,10 +3,122 @@
     "title": "Toolando.tech — Toate instrumentele tale online într-un singur loc",
     "description": "Convertoare, generatoare, instrumente PDF și AI — totul într-un ecosistem elegant. Rapid și simplu."
   },
+  "socialProof": {
+    "toolsCount": "{count}+ instrumente într-un singur ecosistem",
+    "usesToday": "{uses} utilizări astăzi"
+  },
+  "recent": {
+    "title": "Utilizate recent",
+    "subtitle": "Ultimele tale instrumente — salvate local în acest browser.",
+    "favoritesHint": "Marchează cu stea un instrument de pe pagina lui pentru a-l fixa aici."
+  },
+  "premiumUpsell": {
+    "title": "Deblochează instrumentele AI cu Premium",
+    "description": "Generare de text, rezumate, imagini, traducere și chat — un singur abonament, fără surprize per cerere.",
+    "point1": "Toate instrumentele AI fără limite",
+    "point2": "Procesare prioritară în zilele aglomerate",
+    "point3": "Susține dezvoltarea independentă",
+    "cta": "Alege Premium",
+    "compare": "Vezi planurile",
+    "trialHint": "Conectează-te pentru o previzualizare gratuită — apoi poți face upgrade oricând."
+  },
+  "privacyBadge": {
+    "title": "Confidențialitate pe primul loc",
+    "local": "Procesat local în browserul tău"
+  },
+  "onboarding": {
+    "skip": "Închide",
+    "next": "Următorul",
+    "start": "Explorează instrumentele",
+    "learnMore": "Cum funcționează Toolando",
+    "step1": {
+      "title": "Convertește, calculează, deschide — un singur ecosistem",
+      "body": "287+ instrumente pentru fișiere, calculatoare, utilitare pentru dezvoltatori și AI — alege un instrument sau caută cu Ctrl+K."
+    },
+    "step2": {
+      "title": "Confidențialitate când contează",
+      "body": "Multe utilitare rulează în browserul tău. Conversiile pe server șterg fișierele după finalizarea operației."
+    },
+    "step3": {
+      "title": "Instrumente AI cu Premium",
+      "body": "Încearcă convertoarele gratuit. Funcțiile AI folosesc un plan lunar simplu — vezi prețurile înainte să ajungi la paywall."
+    }
+  },
+  "exitIntent": {
+    "title": "Înainte să pleci…",
+    "body": "Ai nevoie de alt convertor? Caută printre 287+ instrumente sau spune-ne ce să construim în continuare.",
+    "browse": "Explorează instrumentele",
+    "request": "Solicită un instrument",
+    "close": "Închide"
+  },
+  "nextSteps": {
+    "title": "Pașii următori",
+    "aiSummarizeTitle": "Rezumă documentul cu AI",
+    "aiSummarizeBody": "Generează un rezumat PDF sau DOCX în câteva secunde (Premium sau 1 încercare/zi)."
+  },
+  "newsletter": {
+    "title": "Instrumente noi și actualizări Premium",
+    "subtitle": "Lasă adresa de e-mail — te anunțăm despre funcții importante (fără spam).",
+    "placeholder": "nume@example.com",
+    "cta": "Abonează-te",
+    "thanks": "Mulțumim! Confirmă prin contact dacă vrei un răspuns.",
+    "confirmViaContact": "Finalizează înscrierea prin formularul de contact →",
+    "error": "Înscrierea a eșuat. Te rugăm să încerci din nou."
+  },
+  "toolRequest": {
+    "title": "Lipsește un convertor?",
+    "body": "Sugerează un instrument sau format nou — prioritizăm ce solicită utilizatorii.",
+    "cta": "Sugerează un instrument"
+  },
+  "comparison": {
+    "title": "Toolando vs. instrumente cloud de upload",
+    "subtitle": "De ce utilizatorii trec de la convertoare online obișnuite.",
+    "feature": "Funcție",
+    "competitor": "Convertor cloud tipic",
+    "rows": {
+      "privacy": "Previzualizare locală și opțiuni de confidențialitate",
+      "offline": "Funcționează offline (utilitare PWA)",
+      "ai": "Flux de lucru AI integrat",
+      "free": "Convertoare de bază gratuite",
+      "limits": "Fără limite arbitrare zilnice de upload la funcțiile de bază"
+    }
+  },
+  "premiumPage": {
+    "title": "Toolando Premium",
+    "subtitle": "Instrumente AI, prețuri clare, anulare oricând.",
+    "freeTitle": "Gratuit",
+    "freeDesc": "Toate convertoarele de fișiere, calculatoarele și majoritatea utilitarelor.",
+    "premiumTitle": "Premium",
+    "premiumDesc": "Pachet AI complet — text, imagini, rezumate, traducere, chat.",
+    "supporterTitle": "Susținător",
+    "supporterDesc": "Premium + experiență fără reclame (în curând).",
+    "cta": "Alege Premium",
+    "signIn": "Conectează-te pentru abonament",
+    "faqTitle": "FAQ prețuri",
+    "faq1q": "Cum funcționează creditele?",
+    "faq1a": "Nu există credite per cerere — Premium este un abonament lunar fix pentru utilizare AI nelimitată.",
+    "faq2q": "Pot încerca înainte de plată?",
+    "faq2a": "Creează un cont gratuit, explorează convertoarele, apoi fă upgrade când ai nevoie de AI.",
+    "faq3q": "Ce se întâmplă cu confidențialitatea fișierelor?",
+    "faq3a": "Fișierele de pe server sunt șterse după procesare. Instrumentele din browser nu încarcă niciodată datele tale."
+  },
+  "privacyPage": {
+    "title": "Confidențialitate integrată în design",
+    "subtitle": "Cum Toolando îți protejează fișierele și datele.",
+    "localTitle": "Instrumente locale în browser",
+    "localBody": "Utilitarele, deschizătorul universal și multe calculatoare rulează complet în browser — datele nu părăsesc dispozitivul.",
+    "serverTitle": "Conversii pe server",
+    "serverBody": "Când încarci un fișier pentru conversie, acesta este folosit doar pentru acea operație și șters apoi. HTTPS end-to-end.",
+    "aiTitle": "Instrumente AI",
+    "aiBody": "AI Premium trimite furnizorului de modele doar conținutul pe care îl transmiți tu — nu este vândut și nu este folosit pentru reclame.",
+    "badge": "Confidențialitatea pe primul loc",
+    "readPolicy": "Citește politica completă de confidențialitate"
+  },
   "nav": {
     "aiTools": "Instrumente AI",
     "tools": "Convertori",
-    "categories": "Converter categories",
+    "categories": "Categorii de convertoare",
+    "formats": "Formate",
     "about": "Despre",
     "contact": "Contact",
     "cta": "Începe",
@@ -15,11 +127,18 @@
     "allTools": "Toate instrumentele",
     "signIn": "Autentificare",
     "account": "Contul meu",
-    "downloader": "MP3 Downloader",
+    "downloader": "Descărcător MP3",
+    "aboutMe": "Despre mine",
+    "privacy": "Politica de confidențialitate",
+    "terms": "Termeni și condiții",
     "onlineTools": "Calculatoare",
     "converters": "Convertori",
     "calculators": "Calculatoare",
-    "developer": "Pentru dezvoltatori"
+    "developer": "Pentru dezvoltatori",
+    "premium": "Premium",
+    "guides": "Ghiduri",
+    "faq": "FAQ",
+    "more": "Mai mult"
   },
   "hero": {
     "badge": "Un nou ecosistem de instrumente online",
@@ -27,7 +146,68 @@
     "titleHighlight": "singur loc",
     "subtitle": "Convertoare, generatoare, PDF, AI — totul într-un singur ecosistem.",
     "browse": "Explorează instrumentele",
-    "learnMore": "Află mai multe"
+    "learnMore": "Află mai multe",
+    "convertCta": "Convertiți un fișier acum"
+  },
+  "search": {
+    "placeholder": "Convertoare de căutare (de exemplu, mp3 wav, pdf jpg)...",
+    "noResults": "Nu s-au găsit convertizori. Încercați o altă interogare."
+  },
+  "share": {
+    "label": "Distribuie",
+    "copy": "Copiază linkul",
+    "copied": "Copiat"
+  },
+  "feedback": {
+    "question": "A fost util acest articol?",
+    "yes": "Da",
+    "no": "Nu",
+    "thanks": "Vă mulțumim pentru feedback!"
+  },
+  "recommender": {
+    "title": "Ce format ar trebui să aleg?",
+    "subtitle": "Răspundeți la două întrebări rapide și vă vom recomanda cel mai bun format.",
+    "step1": "Ce tip de fisier ai?",
+    "step2": "Ce vrei să faci cu el?",
+    "categories": {
+      "image": "Imagine / fotografie",
+      "audio": "Audio/muzică",
+      "video": "Videoclip",
+      "document": "Document"
+    },
+    "goals": {
+      "image_web": "Publicați pe un site web",
+      "image_email": "Trimite prin email",
+      "image_print": "Imprimați",
+      "image_iphone": "Fotografie de pe iPhone (HEIC)",
+      "audio_listen": "Ascultă pe telefon sau pe player",
+      "audio_edit": "Editați într-un DAW",
+      "audio_archive": "Arhivați fără pierderi de calitate",
+      "video_social": "Postați pe rețelele sociale",
+      "video_web": "Încorporați pe un site web",
+      "video_audio": "Extrageți doar audio",
+      "document_share": "Trimite spre citire (fără editare)",
+      "document_edit": "Editați textul"
+    },
+    "resultTitle": "Format recomandat:",
+    "readFormat": "Ghid de format",
+    "openConverter": "Convertor deschis",
+    "back": "Înapoi",
+    "tryAgain": "Începe de la capăt",
+    "reasons": {
+      "webp-web": "WebP este cu 25–35% mai mic decât JPG la aceeași calitate - ideal pentru site-uri web mai rapide.",
+      "jpg-email": "JPG este universal și mic - perfect pentru atașamentele de e-mail.",
+      "png-print": "PNG este fără pierderi, cu margini ascuțite - bun pentru grafică și imprimare pe tiraje scurte.",
+      "heic-jpg": "HEIC de la iPhone necesită conversie în JPG pentru compatibilitate cu Windows și cu majoritatea serviciilor.",
+      "mp3-listen": "MP3 funcționează pe fiecare dispozitiv și păstrează fișierele mici.",
+      "wav-edit": "WAV este fără pierderi - cel mai bun pentru editare fără pierderi de calitate.",
+      "flac-archive": "FLAC se comprimă fără a pierde calitatea - ideal pentru arhivarea muzicii.",
+      "mp4-social": "MP4 (H.264 + AAC) este standardul pentru Instagram, TikTok și YouTube.",
+      "webm-web": "WebM este optimizat pentru videoclipuri HTML5 în browsere.",
+      "mp3-audio": "Extrageți sunetul din videoclipul dvs. ca MP3 pentru podcasturi sau tonuri de apel.",
+      "pdf-share": "PDF blochează aspectul — destinatarul vede exact ceea ce ați vrut.",
+      "docx-edit": "DOCX vă permite să editați text, stiluri și titluri în Word."
+    }
   },
   "opener": {
     "title": "Deschizător universal de fișiere",
@@ -37,26 +217,26 @@
     "kindVideo": "Video",
     "kindAudio": "Audio",
     "kindDocs": "PDF, cod și date",
-    "readError": "Couldn't read the file contents.",
-    "dropAny": "Drag any file here or click to choose",
-    "dropHint": "Images, video, audio, PDF, documents, code, data — any format. Files are opened locally in your browser and never uploaded anywhere.",
-    "noConverter": "We don't have a converter for this format yet — but you can preview and download the file below.",
-    "convertTo": "Convert to another format",
-    "optionOne": "option",
-    "optionMany": "options",
-    "downloadedOk": "Done! The file has been downloaded.",
-    "download": "Download",
-    "close": "Close",
-    "emptyFile": "(empty file)",
-    "textTruncated": "Preview truncated to the first 200,000 characters. Download the file to see everything.",
-    "binaryPreview": "Binary preview (first bytes in hexadecimal)",
+    "readError": "Nu s-a putut citi conținutul fișierului.",
+    "dropAny": "Trage orice fișier aici sau fă clic pentru a alege",
+    "dropHint": "Imagini, video, audio, PDF, documente, cod, date — orice format. Fișierele se deschid local în browser și nu sunt încărcate nicăieri.",
+    "noConverter": "Nu avem încă un convertor pentru acest format — dar poți previzualiza și descărca fișierul mai jos.",
+    "convertTo": "Convertește în alt format",
+    "optionOne": "opțiune",
+    "optionMany": "opțiuni",
+    "downloadedOk": "Gata! Fișierul a fost descărcat.",
+    "download": "Descarcă",
+    "close": "Închide",
+    "emptyFile": "(fișier gol)",
+    "textTruncated": "Previzualizare trunchiată la primele 200.000 de caractere. Descarcă fișierul pentru a vedea tot.",
+    "binaryPreview": "Previzualizare binară (primii octeți în hexadecimal)",
     "kinds": {
-      "image": "Image",
+      "image": "Imagine",
       "video": "Video",
       "audio": "Audio",
-      "pdf": "PDF document",
-      "text": "Text / code",
-      "binary": "Binary file"
+      "pdf": "Document PDF",
+      "text": "Text / cod",
+      "binary": "Fișier binar"
     }
   },
   "ai": {
@@ -76,6 +256,41 @@
     "title": "Categorii de instrumente",
     "subtitle": "Alege o categorie pentru a vedea toate convertoarele disponibile.",
     "browse": "Explorează"
+  },
+  "toolsIndex": {
+    "intro": "Fiecare instrument convertește fișierele de pe server - nu există software de instalat. Nu sunteți sigur ce format să alegeți? Răsfoiți enciclopedia de format sau ghidurile de conversie.",
+    "formatsLink": "Format enciclopedie",
+    "guidesLink": "Ghiduri de conversie"
+  },
+  "knowledgeHub": {
+    "title": "Cunoștințe de format și conversie",
+    "subtitle": "Nu doar convertiți - înțelegeți când să alegeți MP3 peste FLAC, WebP peste JPG sau PDF peste DOCX. Ghidurile noastre vă ajută să evitați pierderea calității și conversiile inutile.",
+    "formatsTitle": "Enciclopedie format de fișier",
+    "formatsDesc": "Peste 40 de formate: audio, video, imagini, documente, date și arhive. Pro, contra, compatibilitate și comparații cu alternative.",
+    "formatsCta": "Răsfoiți formate",
+    "guidesTitle": "Ghiduri de conversie",
+    "guidesDesc": "Articole practice: calitate audio, compresie imagini, video pentru rețelele sociale, PDF vs DOCX și siguranță fișierelor online.",
+    "guidesCta": "Citiți ghiduri",
+    "comparisonsTitle": "Comparații de format",
+    "comparisonsDesc": "MP3 vs FLAC, JPG vs WebP, PDF vs DOCX — comparații directe cu un verdict clar.",
+    "comparisonsCta": "Răsfoiți comparații",
+    "glossaryTitle": "Glosar",
+    "glossaryDesc": "Bitrate, codec, compresie cu pierderi, MIME — definiții în limbaj simplu.",
+    "glossaryCta": "Deschide glosarul"
+  },
+  "editorial": {
+    "title": "Cine stă în spatele Toolando.tech",
+    "body": "Sunt Szymon — proiectez, dezvolt și testez fiecare instrument personal. Ghidurile se bazează pe conversii reale, nu pe specificații copiate. Vreau să înțelegi fișierele tale înainte de a le converti — și ca serviciul să rămână onest cu tine.",
+    "aboutCta": "Despre mine și metodologie",
+    "howCta": "Cum funcționează instrumentele",
+    "editorialCta": "Standarde editoriale",
+    "guidesCta": "Ghiduri"
+  },
+  "featuredGuides": {
+    "title": "Ghiduri recomandate",
+    "subtitle": "Articole practice despre formate de fișiere, securitate și conversie — scrise pe baza testelor reale, nu șabloane SEO.",
+    "readArticle": "Citește ghidul",
+    "allGuides": "Toate ghidurile"
   },
   "why": {
     "title": "De ce Toolando.tech?",
@@ -100,9 +315,25 @@
     "privacy": "Politica de confidențialitate",
     "terms": "Termeni și condiții",
     "rights": "© 2026 Toolando.tech. Toate drepturile rezervate.",
-    "aboutMe": "About me",
-    "howItWorks": "How it works",
-    "faq": "FAQ"
+    "aboutMe": "Despre mine",
+    "howItWorks": "Cum funcționează",
+    "faq": "FAQ",
+    "guides": "Ghiduri",
+    "editorial": "Editorial",
+    "formats": "Formate de fișiere",
+    "comparisons": "Comparații",
+    "glossary": "Glosar",
+    "rss": "Flux RSS",
+    "cookieSettings": "Setări cookie",
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "messenger": "Messenger",
+    "youtube": "YouTube",
+    "emailAria": "Deschide aplicația de e-mail pentru a ne scrie"
+  },
+  "ad": {
+    "label": "Reclamă",
+    "placeholder": "Spațiu publicitar"
   },
   "language": {
     "label": "Limbă"
@@ -111,6 +342,10 @@
     "eyebrow": "Susține proiectul",
     "title": "Ajută Toolando.tech să continue",
     "subtitle": "Toolando.tech este dezvoltat și oferit gratuit. Dacă îți economisește timp, ia în considerare să susții dezvoltarea lui.",
+    "body1": "Întrețin serviciul pe cont propriu — cod, servere, conținut legal și ghiduri. Asistența dvs. vă ajută să acopere găzduirea (Vercel), procesarea fișierelor, domeniul și dezvoltarea de noi instrumente.",
+    "body2": "Sprijinul este în întregime voluntar. Instrumentele gratuite nu necesită plată. Premium este un abonament opțional separat cu funcții extinse - consultați Termenii și condițiile pentru detalii.",
+    "body3": "Ai o întrebare, o idee de instrumente sau ai găsit o eroare? Scrieți la badyltech@outlook.com sau utilizați formularul de contact - și acesta este un sprijin valoros.",
+    "legalNote": "Donațiile nu acordă acces Premium și nu constituie un contract de servicii, cu excepția cazului în care se specifică altfel în mod explicit. Termenii și Politica de confidențialitate se aplică indiferent de donații.",
     "coffee": "Fă-mi cinste cu o cafea",
     "donate": "Fă o donație",
     "back": "Înapoi la pagina principală",
@@ -155,32 +390,47 @@
     "merge": "Îmbină fișierele",
     "result": "Rezultat",
     "notFound": "Instrument negăsit",
-    "convertFailed": "Conversion failed.",
-    "connectionError": "Couldn't connect to the server. Please try again.",
-    "unavailable": "This converter is currently unavailable",
-    "dropClick": "Drag a file here or click to choose",
-    "dropClickMulti": "Drag files here or click to choose",
-    "supportedFormat": "Supported format",
-    "supported": "Supported",
+    "convertFailed": "Conversia a eșuat.",
+    "connectionError": "Nu s-a putut conecta la server. Te rugăm să încerci din nou.",
+    "unavailable": "Acest convertor este momentan indisponibil",
+    "dropClick": "Trage un fișier aici sau fă clic pentru a alege",
+    "dropClickMulti": "Trage fișiere aici sau fă clic pentru a alege",
+    "supportedFormat": "Format acceptat",
+    "supported": "Acceptat",
     "maxSize": "max. 500 MB",
-    "removeFile": "Remove file",
-    "convertDone": "Conversion complete",
-    "downloadNamed": "Download",
-    "convertAnother": "Convert another file",
-    "uploadingFile": "Uploading file…",
-    "uploadingFiles": "Uploading files…",
-    "uploading": "Uploading…",
-    "converting": "Converting…",
-    "convertToPrefix": "Convert to",
-    "needTwoPdf": "Add at least two PDF files to merge.",
-    "operationFailed": "The operation failed.",
-    "compressionQuality": "Compression quality",
-    "qualityHint": "Lower value = smaller file. Higher value = better quality.",
-    "done": "Done",
-    "less": "less",
-    "resultPreview": "Result preview",
-    "startOver": "Start over",
-    "processingLong": "Processing (this may take a few seconds)…"
+    "removeFile": "Elimină fișierul",
+    "convertDone": "Conversie finalizată",
+    "downloadNamed": "Descarcă",
+    "convertAnother": "Convertește alt fișier",
+    "uploadingFile": "Se încarcă fișierul…",
+    "uploadingFiles": "Se încarcă fișierele…",
+    "uploading": "Se încarcă…",
+    "converting": "Se convertește…",
+    "convertToPrefix": "Convertește în",
+    "needTwoPdf": "Adaugă cel puțin două fișiere PDF pentru combinare.",
+    "operationFailed": "Operația a eșuat.",
+    "compressionQuality": "Calitate compresie",
+    "qualityHint": "Valoare mai mică = fișier mai mic. Valoare mai mare = calitate mai bună.",
+    "done": "Gata",
+    "less": "mai puțin",
+    "resultPreview": "Previzualizare rezultat",
+    "startOver": "Începe din nou",
+    "processingLong": "Se procesează (poate dura câteva secunde)…",
+    "howToTitle": "Cum se transformă un fișier — pas cu pas",
+    "aboutSource": "Despre formatul sursă",
+    "aboutTarget": "Despre formatul țintă",
+    "whenToUseTitle": "Când să utilizați acest convertor",
+    "faqTitle": "Întrebări frecvente",
+    "qualityTitle": "Calitatea conversiei — ce trebuie să știți",
+    "tipsTitle": "Sfaturi practice",
+    "readFormatGuide": "Ghid de format complet"
+  },
+  "cookieConsent": {
+    "title": "Cookie-uri",
+    "description": "Toolando.tech folosește cookie-uri necesare și, cu consimțământul dvs., cookie-uri analitice (Google Analytics) și publicitare (Google AdSense). Puteți accepta toate sau doar cele esențiale.",
+    "acceptAll": "Acceptă toate",
+    "necessaryOnly": "Doar esențiale",
+    "privacyLink": "Politica de confidențialitate"
   },
   "aiTool": {
     "prompt": "Textul tău",
@@ -208,44 +458,44 @@
     "thinking": "Se gândește…",
     "aiError": "Nu s-a putut obține un răspuns AI. Încearcă din nou.",
     "emptyChat": "Pune o întrebare pentru a începe conversația.",
-    "generateFailed": "Couldn't generate a response.",
-    "noContent": "The AI service returned no content. Check that AI Gateway is active (requires a payment card).",
-    "connectionError": "A connection error occurred. Please try again.",
-    "dropDoc": "Drag a document here or click to choose",
-    "removeFile": "Remove file",
-    "translatePlaceholder": "Paste the text to translate…",
-    "copyPlaceholder": "Describe what the AI should write, e.g. \"a product description for an eco-friendly water bottle\"…",
-    "toneLabel": "Tone",
-    "targetLangLabel": "Target language",
-    "translate": "Translate",
-    "summarizeDoc": "Summarize document",
-    "generateText": "Generate text",
-    "imageFailed": "Couldn't generate the image.",
-    "imagePromptPlaceholder": "Describe the image, e.g. \"a futuristic city at sunset, watercolor style\"…",
-    "ratioSquare": "Square 1:1",
-    "ratioLandscape": "Landscape 3:2",
-    "ratioPortrait": "Portrait 2:3",
-    "generatingImage": "Generating image (this may take several seconds)…",
-    "generateImage": "Generate image",
-    "generatedImageAlt": "Generated image",
-    "downloadImage": "Download image",
+    "generateFailed": "Nu s-a putut genera un răspuns.",
+    "noContent": "Serviciul AI nu a returnat conținut. Verifică dacă AI Gateway este activ (necesită card de plată).",
+    "connectionError": "A apărut o eroare de conexiune. Te rugăm să încerci din nou.",
+    "dropDoc": "Trage un document aici sau fă clic pentru a alege",
+    "removeFile": "Elimină fișierul",
+    "translatePlaceholder": "Lipește textul de tradus…",
+    "copyPlaceholder": "Descrie ce ar trebui să scrie AI, de ex. „o descriere de produs pentru o sticlă de apă ecologică”…",
+    "toneLabel": "Ton",
+    "targetLangLabel": "Limba țintă",
+    "translate": "Traduce",
+    "summarizeDoc": "Rezumă documentul",
+    "generateText": "Generează text",
+    "imageFailed": "Nu s-a putut genera imaginea.",
+    "imagePromptPlaceholder": "Descrie imaginea, de ex. „un oraș futurist la apus, stil acuarelă”…",
+    "ratioSquare": "Pătrat 1:1",
+    "ratioLandscape": "Peisaj 3:2",
+    "ratioPortrait": "Portret 2:3",
+    "generatingImage": "Se generează imaginea (poate dura câteva secunde)…",
+    "generateImage": "Generează imagine",
+    "generatedImageAlt": "Imagine generată",
+    "downloadImage": "Descarcă imaginea",
     "tones": {
-      "professional": "professional",
-      "friendly": "friendly",
-      "energetic": "energetic",
+      "professional": "profesional",
+      "friendly": "prietenos",
+      "energetic": "energic",
       "formal": "formal",
-      "playful": "playful",
-      "persuasive": "persuasive"
+      "playful": "jucăuș",
+      "persuasive": "persuasiv"
     },
     "languages": {
-      "english": "English",
-      "german": "German",
-      "spanish": "Spanish",
-      "french": "French",
-      "italian": "Italian",
-      "ukrainian": "Ukrainian",
-      "polish": "Polish",
-      "japanese": "Japanese"
+      "english": "engleză",
+      "german": "germană",
+      "spanish": "spaniolă",
+      "french": "franceză",
+      "italian": "italiană",
+      "ukrainian": "ucraineană",
+      "polish": "poloneză",
+      "japanese": "japoneză"
     }
   },
   "category": {
@@ -259,64 +509,64 @@
     "notFound": "Categorie negăsită"
   },
   "paywall": {
-    "unlockTitle": "Unlock \"{tool}\" with Premium",
-    "description": "Unlock all Toolando.tech AI tools — text and image generation, translation, summaries and the assistant — in one subscription.",
-    "feature1": "Unlimited access to all AI tools",
-    "feature2": "Text generator, image generator and translator",
-    "feature3": "Priority request processing",
-    "goPremium": "Upgrade to Premium",
-    "redirecting": "Redirecting…",
-    "signInToBuy": "Sign in to buy Premium",
-    "noAccount": "Don't have an account?",
-    "signUp": "Sign up"
+    "unlockTitle": "Deblochează „{tool}” cu Premium",
+    "description": "Deblochează toate instrumentele AI Toolando.tech — generare text și imagini, traducere, rezumate și asistent — într-un singur abonament.",
+    "feature1": "Acces nelimitat la toate instrumentele AI",
+    "feature2": "Generator de text, generator de imagini și traducător",
+    "feature3": "Procesare prioritară a cererilor",
+    "goPremium": "Treci la Premium",
+    "redirecting": "Redirecționare…",
+    "signInToBuy": "Conectează-te pentru a cumpăra Premium",
+    "noAccount": "Nu ai cont?",
+    "signUp": "Înregistrează-te"
   },
   "account": {
-    "backToHome": "Back to homepage",
-    "yourAccount": "Your account",
+    "backToHome": "Înapoi la pagina principală",
+    "yourAccount": "Contul tău",
     "premiumBadge": "Premium",
-    "freeBadge": "Free account",
-    "premiumActiveTitle": "You have active Premium",
-    "premiumActiveDesc": "Thank you for your support! You have full access to all AI tools without limits.",
-    "manageSubscription": "Manage subscription",
-    "manageOpening": "Opening…",
-    "managePortalError": "Could not open the portal.",
-    "manageGenericError": "An error occurred.",
-    "goPremiumTitle": "Go Premium",
-    "feature1": "Unlimited access to AI tools",
-    "feature2": "Background removal, image and text generation",
-    "feature3": "Priority processing",
-    "buyPremium": "Buy Premium",
-    "buyRedirecting": "Redirecting…",
-    "refreshHint": "Paid but Premium still inactive? Refresh your status:",
-    "refreshStatus": "Refresh Premium status",
-    "refreshChecking": "Checking...",
-    "refreshNoSub": "No active subscription found. If you just paid, wait a moment and try again.",
-    "refreshFailed": "Could not refresh status.",
-    "refreshNetworkError": "A network error occurred. Please try again.",
-    "signOut": "Sign out"
+    "freeBadge": "Cont gratuit",
+    "premiumActiveTitle": "Ai Premium activ",
+    "premiumActiveDesc": "Mulțumim pentru sprijin! Ai acces complet la toate instrumentele AI fără limite.",
+    "manageSubscription": "Gestionează abonamentul",
+    "manageOpening": "Se deschide…",
+    "managePortalError": "Nu s-a putut deschide portalul.",
+    "manageGenericError": "A apărut o eroare.",
+    "goPremiumTitle": "Alege Premium",
+    "feature1": "Acces nelimitat la instrumentele AI",
+    "feature2": "Eliminare fundal, generare imagini și text",
+    "feature3": "Procesare prioritară",
+    "buyPremium": "Cumpără Premium",
+    "buyRedirecting": "Redirecționare…",
+    "refreshHint": "Ai plătit, dar Premium încă inactiv? Reîmprospătează statusul:",
+    "refreshStatus": "Reîmprospătează statusul Premium",
+    "refreshChecking": "Se verifică…",
+    "refreshNoSub": "Nu s-a găsit niciun abonament activ. Dacă tocmai ai plătit, așteaptă puțin și încearcă din nou.",
+    "refreshFailed": "Nu s-a putut reîmprospăta statusul.",
+    "refreshNetworkError": "A apărut o eroare de rețea. Te rugăm să încerci din nou.",
+    "signOut": "Deconectează-te"
   },
   "downloader": {
     "eyebrow": "Video → MP3",
-    "title": "Multi-Platform → MP3 Downloader",
-    "subtitle": "Paste a link from TikTok, Instagram, Facebook, Twitter/X, Vimeo or SoundCloud and grab the audio.",
-    "metaDescription": "Multi-platform Video to MP3 Downloader — TikTok, Instagram, Facebook, Twitter, Vimeo, SoundCloud. Paste a link and download the audio.",
-    "back": "All tools",
-    "inputLabel": "Video link",
+    "title": "Descărcător Multi-Platform → MP3",
+    "subtitle": "Lipește un link de pe TikTok, Instagram, Facebook, Twitter/X, Vimeo sau SoundCloud și descarcă audio.",
+    "metaDescription": "Multi-platform Video to MP3 Downloader — TikTok, Instagram, Facebook, Twitter, Vimeo, SoundCloud. Lipește un link și descarcă audio.",
+    "back": "Toate instrumentele",
+    "inputLabel": "Link video",
     "inputPlaceholder": "https://www.tiktok.com/@user/video/...",
-    "detected": "detected",
+    "detected": "detectat",
     "idLabel": "ID",
-    "invalidLink": "Enter a valid link from a supported platform.",
-    "download": "Download MP3",
-    "preparing": "Preparing your link…",
-    "ready": "Your link is ready.",
-    "openPage": "Open download page",
-    "resultTitle": "Ready to download",
-    "resultsBack": "Back to downloader",
-    "thumbnailAlt": "Video thumbnail",
-    "viewSource": "View original",
-    "faqTitle": "Frequently asked questions",
-    "disclaimer": "Toolando.tech does not host or download any media. It only detects the platform and the public video ID and hands off to an external service or your browser. Only download content you have the rights to.",
-    "externalNote": "Download happens on an external service or in your browser. Toolando.tech only captured the public platform and video ID. Please respect copyright and each platform's terms of service.",
+    "invalidLink": "Introdu un link valid de pe o platformă acceptată.",
+    "download": "Descarcă MP3",
+    "preparing": "Se pregătește linkul…",
+    "ready": "Linkul tău este gata.",
+    "openPage": "Deschide pagina de descărcare",
+    "resultTitle": "Gata de descărcat",
+    "resultsBack": "Înapoi la downloader",
+    "thumbnailAlt": "Miniatură video",
+    "viewSource": "Vezi originalul",
+    "faqTitle": "Întrebări frecvente",
+    "disclaimer": "Toolando.tech nu găzduiește și nu descarcă media. Detectează doar platforma și ID-ul public al videoclipului și redirecționează către un serviciu extern sau browserul tău. Descarcă doar conținutul pentru care ai drepturi.",
+    "externalNote": "Descărcarea are loc pe un serviciu extern sau în browserul tău. Toolando.tech a capturat doar platforma publică și ID-ul video. Respectă drepturile de autor și termenii fiecărei platforme.",
     "faq": [
       {
         "q": "Which platforms are supported?",
@@ -339,18 +589,320 @@
         "a": "Only download content you own or have permission to use. Downloading copyrighted material without permission may violate the platform's terms of service and copyright law."
       }
     ],
-    "platformDisabled": "Downloading from {platform} is temporarily unavailable — {platform} actively blocks downloaders, so we've paused it until our own converter is ready. All other platforms still work."
+    "platformDisabled": "Descărcarea de pe {platform} este temporar indisponibilă — {platform} blochează activ downloader-ele, așa că am oprit această opțiune până când convertorul nostru va fi gata. Celelalte platforme funcționează în continuare."
+  },
+  "pages": {
+    "contact": {
+      "eyebrow": "Contactați-ne",
+      "title": "Formular de contact",
+      "intro": "Aveți o întrebare, o idee de parteneriat sau doriți să raportați o problemă? Completați formularul — vă voi răspunde cât mai curând posibil.",
+      "name": "Nume",
+      "namePlaceholder": "Numele tău",
+      "email": "E-mail",
+      "emailPlaceholder": "Adresa dvs. de e-mail",
+      "message": "Mesaj",
+      "messagePlaceholder": "Descrieți problema sau întrebarea dvs....",
+      "submit": "Trimite mesaj",
+      "sent": "Multumesc! Mesajul dvs. a fost pregătit în aplicația dvs. de e-mail.",
+      "subject": "Cerere de la Toolando.tech"
+    },
+    "about": {
+      "eyebrow": "Despre mine",
+      "title": "Bună, sunt Szymon — creatorul Toolando",
+      "intro": "Toolando.tech este propriul meu proiect pe care îl construiesc singur. De la idee, prin cod, până la conținutul pe care îl citiți acum - totul vine dintr-o pereche de mâini. Vreau ca sarcini simple, cum ar fi conversia unui fișier sau a unui instrument online rapid, să fie disponibile pentru toată lumea, fără software de instalat și fără complicații inutile.",
+      "whyTitle": "De ce a fost creat Toolando",
+      "whyP1": "Lucrez cu computere în fiecare zi și am văzut de multe ori cât de mult timp pierd oamenii în sarcini care ar trebui să dureze un moment — schimbarea unui format de fișier, extragerea audio dintr-o înregistrare sau o operațiune rapidă care vă obligă să căutați un site aleatoriu plin de reclame și capcane.",
+      "whyP2": "Toolando a fost creat pentru a aduna astfel de instrumente într-un singur loc clar și sigur. Îmi pasă ca serviciul să fie rapid, lizibil și sincer față de utilizator - fără trucuri și fără capturi ascunse.",
+      "howTitle": "Cum funcționează Toolando",
+      "howIntro": "Serviciul oferă instrumente online în două variante: gratuit și premium.",
+      "howFreeTerm": "Instrumente gratuite",
+      "howFreeDesc": "disponibil pentru toată lumea, fără cont. Acestea sunt caracteristicile de zi cu zi, cele mai utilizate, pe care vreau să le păstrez deschise tuturor.",
+      "howPremiumTerm": "Instrumente premium",
+      "howPremiumDesc": "funcții mai avansate sau limite mai mari care ajută la menținerea și dezvoltarea proiectului. Veniturile premium merg direct către servere, dezvoltare și noi instrumente.",
+      "howOutro": "Indiferent de variantă, mă țin de aceeași regulă: fișierele încărcate sunt folosite numai pentru a efectua conversia și nu sunt stocate de mine.",
+      "outsideTitle": "Ce fac dincolo de Toolando",
+      "outsideP1": "Ofer servicii IT - ajut indivizi și companii cu probleme de hardware și software de zi cu zi.",
+      "outsideList": [
+        "întreținerea și repararea laptopurilor și calculatoarelor,",
+        "Servicii IT și suport tehnic,",
+        "construirea de instrumente și aplicații web."
+      ],
+      "outsideP2": "Experiența de la reparații și lucrul cu utilizatorii se traduce direct în modul în care proiectez Toolando — simplu, la obiect și având în vedere nevoile reale.",
+      "contactTitle": "Contactați-ne",
+      "contactP1": "Aveți o întrebare, o idee pentru un instrument nou sau doriți să raportați o problemă? Scrie-mi — voi răspunde cu plăcere.",
+      "emailLabel": "E-mail:",
+      "methodologyTitle": "Cum testez conversiile și scriu ghiduri",
+      "methodologyP1": "Fiecare ghid și profil de format de pe Toolando.tech se bazează pe teste de conversie reale, nu pe specificații copiate-lipite. Încarc fișiere mostre, compar dimensiunea și calitatea ieșirii și notez care setări funcționează cel mai bine.",
+      "methodologyList": [
+        "Testez convertoare cu fișiere de diferite dimensiuni (mic, mediu, mare).",
+        "Pentru audio/video compar ratele de biți, durata și compatibilitatea cu redarea.",
+        "Pentru imagini verific dimensiunea fișierului, calitatea vizuală și transparența.",
+        "Ghidurile sunt actualizate când se modifică formatele sau cerințele platformei."
+      ],
+      "methodologyP2": "Dacă găsiți o eroare într-un ghid sau într-un convertor care nu funcționează conform descrierii, trimiteți un e-mail badyltech@outlook.com — corecțiile îi ajută pe toată lumea.",
+      "updatedLabel": "Ultima actualizare a paginii",
+      "updatedDate": "iulie 2026"
+    },
+    "editorial": {
+      "eyebrow": "Editorial",
+      "title": "Standarde editoriale Toolando.tech",
+      "intro": "Toolando.tech nu înseamnă doar convertoare — sunt ghiduri, o enciclopedie de formate și comparații. Mai jos explic cum se creează conținutul, de unde provin informațiile și când se actualizează.",
+      "whoTitle": "Cine creează conținutul",
+      "whoP1": "Scriu personal fiecare ghid, profil de format și comparație — Szymon Badyl, creatorul Toolando.tech. Nu folosesc ferme de conținut sau texte AI neverificate.",
+      "whoP2": "Fiecare articol se bazează pe teste de conversie pe fișierele mele. Dacă ceva nu funcționează așa cum este descris, corectez atât textul, cât și instrumentul.",
+      "standardsTitle": "Principii editoriale",
+      "standardsIntro": "Aplic aceleași reguli fiecărui ghid nou:",
+      "standardsList": [
+        "I test the converter with files of different sizes before publishing.",
+        "I give concrete scenarios (email, shop, social media), not vague generalities.",
+        "I distinguish compression from format conversion and lossy from lossless.",
+        "I write about tool limits — when not to convert online.",
+        "I update the date and content when platform or format requirements change."
+      ],
+      "sourcesTitle": "Surse și onestitate",
+      "sourcesP1": "Verific specificațiile formatelor (MIME, codecuri) cu IANA, FFmpeg și documentația producătorilor. Comparațiile se bazează pe propriile măsurători de dimensiune și calitate, nu pe tabele de marketing.",
+      "sourcesP2": "Linkurile externe apar doar când ajută cu adevărat (de ex. documentație oficială). Nu promovez instrumente plătite ale concurenței.",
+      "updatesTitle": "Actualizări și corecții",
+      "updatesP1": "Ai găsit o eroare, informații depășite sau ai o sugestie de subiect? Scrie la badyltech@outlook.com — corecțiile intră în articol cu data actualizării.",
+      "updatedLabel": "Ultima actualizare",
+      "updatedDate": "august 2026",
+      "fullGuideCta": "Ghid complet despre standardele editoriale"
+    },
+    "howItWorks": {
+      "eyebrow": "Cum funcționează?",
+      "title": "Cum funcționează instrumentele din Toolando",
+      "intro": "Toolando.tech este un set de instrumente online pe care le rulați chiar în browser - fără nimic de instalat. Mai jos explic cum funcționează procesarea fișierelor, cum mă ocup de securitate și cum diferă instrumentele gratuite de premium.",
+      "browserTitle": "Instrumente care rulează în browser",
+      "browserP": "Deschideți un instrument, alegeți un fișier sau introduceți date și obțineți rezultatul direct pe pagină. Nu aveți nevoie de un cont pentru a utiliza instrumentele gratuite și nu trebuie să instalați nimic pe computer.",
+      "filesTitle": "Cum sunt procesate fișierele",
+      "filesIntro": "În funcție de tipul de instrument, fișierele sunt procesate în două moduri:",
+      "filesLocalTerm": "Local în browser",
+      "filesLocalDesc": "unele operațiuni rulează direct pe dispozitivul dvs., iar fișierul nu părăsește deloc computerul.",
+      "filesServerTerm": "Temporar pe server",
+      "filesServerDesc": "când un instrument are nevoie de mai multă putere de calcul, fișierul este procesat pe server numai pe durata conversiei și apoi șters.",
+      "filesOutro": "În niciunul dintre aceste cazuri nu vă stochez fișierele sau nu le folosesc în alt scop.",
+      "securityTitle": "Securitate",
+      "securityP": "Securitatea și confidențialitatea sunt o prioritate pentru mine. Conexiunea la site este criptată, iar fișierele sunt folosite numai pentru a îndeplini sarcina pe care o solicitați.",
+      "securityList": [
+        "fișierele încărcate nu sunt stocate după finalizarea operațiunii,",
+        "Nu vând sau distribuie datele dvs.,",
+        "nu trebuie să furnizați date personale pentru a utiliza instrumentele gratuite."
+      ],
+      "tiersTitle": "Instrumente gratuite vs premium",
+      "tiersP": "Toolando oferă instrumente în două variante, dar principiul de securitate este același în ambele.",
+      "tiersFreeTerm": "Gratuit",
+      "tiersFreeDesc": "disponibil pentru toată lumea, fără cont. Perfect pentru sarcini de zi cu zi, rapide.",
+      "tiersPremiumTerm": "Premium",
+      "tiersPremiumDesc": "funcții mai avansate și limite mai mari sau fișiere mai mari. Premium acceptă întreținerea serverului și dezvoltarea de noi instrumente."
+    },
+    "faq": {
+      "eyebrow": "Întrebări frecvente",
+      "title": "Întrebări frecvente",
+      "intro": "Am adunat aici răspunsurile la întrebările care apar cel mai des. Dacă nu găsești ceea ce cauți, scrie-mi la badyltech@outlook.com.",
+      "items": [
+        {
+          "q": "Instrumentele Toolando sunt gratuite?",
+          "a": "Majoritatea instrumentelor sunt complet gratuite și disponibile fără a crea un cont. Unele caracteristici mai avansate și limite mai mari sunt disponibile în varianta premium, care acceptă menținerea și dezvoltarea serviciului."
+        },
+        {
+          "q": "Cum diferă instrumentele gratuite de premium?",
+          "a": "Instrumentele gratuite acoperă sarcinile de zi cu zi, cele mai comune și sunt deschise tuturor. Premium oferă funcții mai avansate și fișiere sau limite mai mari. Principiul securității fișierelor este același în ambele variante."
+        },
+        {
+          "q": "Sunt fișierele mele în siguranță?",
+          "a": "Da. Fișierele încărcate sunt folosite numai pentru a efectua conversia și nu sunt stocate de mine. Unele operațiuni rulează local în browser, iar dacă un fișier ajunge la server, acesta este procesat doar pe durata sarcinii și apoi șters."
+        },
+        {
+          "q": "Toolando stochează fișierele pe care le încărc?",
+          "a": "Nu. Nu vă salvez fișierele după finalizarea operațiunii și nu le folosesc în niciun alt scop."
+        },
+        {
+          "q": "Cum îmi protejezi intimitatea?",
+          "a": "Prelucrez numai date tehnice și statistice (de exemplu, adresa IP, tipul browserului, sistemul, traficul pe site), în conformitate cu GDPR. Veți găsi detalii în Politica de confidențialitate. Nu este necesar să furnizați date personale pentru a utiliza instrumentele gratuite."
+        },
+        {
+          "q": "Trebuie să îmi creez un cont pentru a folosi instrumentele?",
+          "a": "Nu. Instrumentele gratuite funcționează fără cont. Un cont poate fi necesar doar pentru funcțiile premium."
+        },
+        {
+          "q": "Sunt reclame pe site?",
+          "a": "Da, serviciul poate afișa reclame Google AdSense, care ajută la menținerea instrumentelor gratuite disponibile pentru toată lumea."
+        },
+        {
+          "q": "Cum funcționează instrumentele online?",
+          "a": "Deschideți un instrument în browser, alegeți un fișier sau introduceți date și obțineți rezultatul imediat - fără nimic de instalat. Am descris mai multe detalii despre „Cum funcționează?” pagină."
+        },
+        {
+          "q": "Cum pot lua legătura?",
+          "a": "Scrieți la badyltech@outlook.com sau utilizați formularul de contact. Raspund cat mai repede."
+        }
+      ]
+    },
+    "privacy": {
+      "eyebrow": "Politica de confidențialitate",
+      "title": "Politica de confidențialitate Toolando.tech",
+      "intro": "Toolando.tech este un serviciu care oferă instrumente online în variantă gratuită și premium. Am grijă de confidențialitatea utilizatorilor și procesez datele conform reglementărilor aplicabile, inclusiv GDPR.",
+      "lastUpdated": "Ultima actualizare: 23 iulie 2026",
+      "s1Title": "1. Operator de date",
+      "s1Pre": "Operatorul de date este Szymon Badyl, proprietarul Toolando.tech (Polonia). Pentru aspecte legate de confidențialitate mă poți contacta la:",
+      "s1Address": "Corespondență: badyltech@outlook.com",
+      "s2Title": "2. Ce date sunt procesate",
+      "s2Intro": "Serviciul procesează date tehnice și statistice colectate automat în timpul utilizării site-ului:",
+      "s2List": [
+        "IP address,",
+        "browser type and version,",
+        "the device's operating system,",
+        "traffic and usage data (e.g. pages visited)."
+      ],
+      "s2Outro": "Dacă mă contactezi prin e-mail sau formular, procesez și adresa de e-mail furnizată și conținutul mesajului.",
+      "s3Title": "3. Fișiere încărcate în instrumente",
+      "s3P": "Fișierele pe care le încarci în instrumente pentru conversie sau altă operație nu sunt stocate de mine. Sunt folosite exclusiv pentru a executa sarcina solicitată și șterse după finalizare. Nu le folosesc în alte scopuri.",
+      "s4Title": "4. Cookie-uri",
+      "s4Intro": "Serviciul folosește următoarele tipuri de cookie-uri:",
+      "s4TechTerm": "Tehnice",
+      "s4TechDesc": "necesare pentru funcționarea corectă a site-ului și memorarea setărilor (de ex. limba).",
+      "s4AnalyticsTerm": "Analitice",
+      "s4AnalyticsDesc": "instrumente statistice (de ex. Google Analytics) care ajută să înțelegem cum este folosit site-ul, în formă agregată și anonimă.",
+      "s4AdsTerm": "Publicitare",
+      "s4AdsDesc": "Google AdSense, care poate folosi cookie-uri pentru afișarea și personalizarea reclamelor.",
+      "s4Outro": "Poți gestiona sau dezactiva cookie-urile oricând din setările browserului. La prima vizită afișăm un banner de consimțământ unde poți accepta toate cookie-urile sau te poți limita la cele esențiale.",
+      "s4ThirdPartyTitle": "Furnizori terți",
+      "s4ThirdPartyP": "Serviciul folosește servicii Google (Analytics, AdSense). Google poate colecta date conform propriei politici de confidențialitate. Mai multe informații: https://policies.google.com/technologies/partner-sites",
+      "s5Title": "5. Instrumente gratuite și premium",
+      "s5P": "Toolando oferă instrumente gratuite (disponibile fără cont) și instrumente premium. Regulile de procesare a datelor și protecția fișierelor sunt aceleași în ambele variante — diferă doar intervalul de funcții și limitele.",
+      "s6Title": "6. Scopul procesării datelor",
+      "s6Intro": "Procesez datele exclusiv în următoarele scopuri:",
+      "s6List": [
+        "ensuring the correct and secure operation of the service,",
+        "statistical traffic analysis and improving the tools,",
+        "displaying ads,",
+        "handling contact with the user."
+      ],
+      "s7Title": "7. Drepturile tale",
+      "s7Intro": "Ai dreptul la:",
+      "s7List": [
+        "access your data,",
+        "rectify or delete it,",
+        "restrict processing,",
+        "lodge a complaint with the relevant data protection authority."
+      ],
+      "s8Title": "8. Modificări ale politicii",
+      "s8P": "Politica de confidențialitate poate fi actualizată pentru a reflecta schimbările din serviciu sau din legislație. Versiunea curentă este întotdeauna disponibilă pe această pagină."
+    },
+    "terms": {
+      "eyebrow": "Termeni și condiții",
+      "title": "Termeni și condiții pentru Toolando.tech",
+      "intro": "Termenii de mai jos stabilesc regulile de utilizare a serviciului Toolando.tech. Utilizarea serviciului înseamnă acceptarea acestor reguli.",
+      "s1Title": "1. Dispoziții generale",
+      "s1P": "Proprietarul Toolando.tech este Szymon. Serviciul oferă instrumente online pentru conversia fișierelor, generarea de conținut și instrumente bazate pe AI.",
+      "s2Title": "2. Instrumente gratuite și premium",
+      "s2Intro": "Toolando oferă instrumente în două variante:",
+      "s2FreeTerm": "Gratuite",
+      "s2FreeDesc": "disponibile tuturor, fără a fi necesar un cont.",
+      "s2PremiumTerm": "Premium",
+      "s2PremiumDesc": "cu funcții mai avansate și limite mai mari.",
+      "s2Outro": "Regulile privind plățile sau abonamentele pentru funcțiile premium sunt prezentate în locurile relevante din serviciu.",
+      "s3Title": "3. Utilizare pe propria răspundere",
+      "s3P1": "Utilizezi serviciul pe propria răspundere. Depun toate eforturile ca instrumentele să funcționeze corect, însă serviciul este furnizat „ca atare”, fără garanție de disponibilitate, corectitudine a rezultatelor sau potrivire pentru un anumit scop.",
+      "s3P2": "Proprietarul serviciului nu răspunde pentru:",
+      "s3List": [
+        "the consequences of using the tools' results,",
+        "lost profits,",
+        "damage resulting from interruptions in the service."
+      ],
+      "s3Outro": "Utilizatorul se obligă să folosească serviciul conform legii și poartă răspunderea pentru conținutul și fișierele pe care le procesează.",
+      "s4Title": "4. Fișierele utilizatorului",
+      "s4P": "Fișierele încărcate în instrumente nu sunt stocate. Sunt folosite exclusiv pentru operația solicitată și șterse după finalizare.",
+      "s5Title": "5. Reclame",
+      "s5P": "Serviciul poate afișa reclame Google AdSense. Reclamele ajută la menținerea instrumentelor gratuite și dezvoltarea proiectului. Furnizorul de reclame poate folosi cookie-uri conform Politicii de confidențialitate.",
+      "s6Title": "6. Drepturi de autor",
+      "s6P": "Numele Toolando.tech, elementele grafice și conținutul serviciului sunt protejate legal. Copierea și utilizarea lor fără acordul proprietarului este interzisă.",
+      "s7Title": "7. Contactați-ne",
+      "s7Pre": "Pentru aspecte legate de acești termeni mă poți contacta la:",
+      "s8Title": "8. Modificări ale termenilor",
+      "s8P": "Termenii pot fi actualizați pentru a reflecta schimbările din serviciu sau din legislație. Versiunea curentă este întotdeauna disponibilă pe această pagină."
+    },
+    "guides": {
+      "eyebrow": "Ghiduri",
+      "title": "Ghiduri și tutoriale de conversie a fișierelor",
+      "intro": "Articole practice despre formate de fișiere, conversie și bune practici. Fiecare ghid explică când și de ce să convertești un fișier și cum să o faci în siguranță cu Toolando.tech.",
+      "articles": [
+        {
+          "title": "MP3 vs WAV — when to convert audio?",
+          "body": "MP3 is a lossy compression format — files are small but some audio data is lost. WAV preserves full quality but files can be 10 times larger. Convert MP3 → WAV when you need a file for editing in a DAW (e.g. Audacity, FL Studio) or when a platform requires a lossless format. Convert WAV → MP3 when you want to email a recording, publish a podcast, or save disk space. Toolando.tech supports both conversions — just upload your file and download the result."
+        },
+        {
+          "title": "How to convert PDF to JPG for print and the web",
+          "body": "PDF is a document format that preserves page layout. Sometimes you need individual pages as images — for a website, a PowerPoint presentation, or printing a single page. The PDF → JPG converter in Toolando.tech renders each PDF page as a separate high-resolution JPG image. PDF files are never stored — they are deleted immediately after conversion. If you need transparency, consider PDF → PNG instead."
+        },
+        {
+          "title": "WebP and AVIF — modern image formats for websites",
+          "body": "JPG and PNG have dominated the web for years, but newer formats offer better compression. WebP (Google) produces files 25–35% smaller than JPG at the same visual quality and is supported by all modern browsers. AVIF goes even further — files can be half the size of WebP. Convert JPG → WebP or PNG → AVIF in Toolando.tech to speed up your website. Remember that older browsers (e.g. IE) don't support these formats — keep a JPG version as a fallback."
+        },
+        {
+          "title": "Extracting audio from video — the legal alternative",
+          "body": "Sometimes you have a video file (e.g. a camera recording, presentation) and only need the audio track. Toolando.tech lets you extract audio from MP4, MOV, AVI, MKV and other video formats, saving it as MP3, WAV, FLAC, or AAC. This is a legal operation on your own file — unlike downloading music from YouTube or TikTok, which Toolando.tech deliberately does not offer. Upload your video file, choose an audio format, and download the result."
+        },
+        {
+          "title": "JSON, CSV, and XML — converting data between formats",
+          "body": "Developers and data analysts often work with different data formats. JSON is the standard in APIs and configs. CSV and TSV are used for importing into Excel and spreadsheets. XML is used in older enterprise systems and RSS. Toolando.tech converts between these formats while preserving data structure. For example: JSON → CSV lets you open an API response in Excel, and CSV → JSON prepares data for sending to a REST API."
+        },
+        {
+          "title": "File security in online tools",
+          "body": "Uploading files to online tools naturally raises privacy concerns. At Toolando.tech, files are used solely to perform the operation you request — conversion, compression, or preview. After the job completes, files are deleted from the server. Some tools (e.g. the universal file opener) run entirely in your browser — in that case the file never leaves your computer. The connection to the site is encrypted (HTTPS). We never sell or share your files with third parties."
+        },
+        {
+          "title": "Lossy vs lossless compression — a simple guide",
+          "body": "Lossy formats (MP3, JPG, AAC, H.264) discard some data to shrink file size. Lossless formats (FLAC, PNG, WAV, ZIP) keep all data but produce larger files. Rule of thumb: only convert from lossy to lossless when you must — you won't recover lost quality. Converting lossy to lossy (e.g. JPG → JPG at lower quality) should happen once; each re-conversion degrades the result. In Toolando.tech's format encyclopedia, every format is labeled with its compression type."
+        },
+        {
+          "title": "HEIC from iPhone — how to open and convert to JPG",
+          "body": "Apple saves photos in HEIC (HEIF) by default — smaller than JPG at the same quality. The catch: Windows without an extension, older apps, and many services don't support HEIC. Solution: convert HEIC → JPG or HEIC → PNG in Toolando.tech before emailing photos, uploading to a site, or printing. You can also set iPhone to \"Most Compatible\" (JPG) in Settings, but online conversion works on photos already saved as HEIC."
+        },
+        {
+          "title": "PDF vs DOCX — which format when?",
+          "body": "DOCX (Word) is for editing text — you change content, styles, and headings. PDF locks page layout — it looks identical on every device, ideal for invoices, contracts, and CVs sent to recruiters. Convert DOCX → PDF before sending a document \"for reading only.\" Convert PDF → DOCX only when you need to edit text — layout may break. For archiving and print, always choose PDF."
+        },
+        {
+          "title": "Video for social media — MP4, resolution, and bitrate",
+          "body": "Instagram, TikTok, YouTube, and Facebook prefer MP4 with H.264 video and AAC audio. Before publishing, convert MOV, AVI, or MKV to MP4 to avoid upload errors. 1080p (1920×1080) is enough for most platforms; 4K only when the platform supports it. Higher bitrate means better quality but a larger file. Toolando.tech converts video with no install — see the format encyclopedia for details on MP4, WebM, and MOV."
+        }
+      ]
+    }
   },
   "hub": {
-    "convertersTitle": "File converters",
-    "convertersDesc": "Audio, video, images, documents, data, fonts and archives — plus compress, merge PDF and background removal.",
-    "calculatorsTitle": "Calculators & converters",
-    "calculatorsDesc": "Currency, VAT, dates, timezones, units and bitrate.",
-    "developerTitle": "Developer & text tools",
-    "developerDesc": "Passwords, QR, Base64, UUID, hash, colors, timestamp and character counter.",
-    "specialTools": "File tools",
-    "browseConverters": "Browse converters",
-    "browseCalculators": "Browse calculators",
-    "browseDeveloper": "Browse tools"
+    "convertersTitle": "Convertoare de fișiere",
+    "convertersDesc": "Audio, video, imagini, documente, date, fonturi și arhive — plus comprimare, combinare PDF și eliminare fundal.",
+    "calculatorsTitle": "Calculatoare și convertoare",
+    "calculatorsDesc": "Valută, TVA, date, fusuri orare, unități și bitrate.",
+    "developerTitle": "Instrumente pentru dezvoltatori și text",
+    "developerDesc": "Parole, QR, Base64, UUID, hash, culori, timestamp și contor de caractere.",
+    "specialTools": "Instrumente pentru fișiere",
+    "browseConverters": "Explorează convertoarele",
+    "browseCalculators": "Explorează calculatoarele",
+    "browseDeveloper": "Explorează instrumentele"
+  },
+  "specialFields": {
+    "splitMode": "Mod de împărțire",
+    "everyPage": "Fiecare pagină separat",
+    "pageRange": "Interval selectat",
+    "pagesHint": "Pagini (de ex. 1-3,5)",
+    "rotation": "Unghi de rotație",
+    "width": "Lățime (px)",
+    "height": "Înălțime (px, opțional)",
+    "watermark": "Text filigran",
+    "trimStart": "Start (sec. sau MM:SS)",
+    "trimEnd": "Sfârșit (sec. sau MM:SS)",
+    "pageNumberPos": "Poziția numărului de pagină",
+    "bottom": "Jos pe pagină",
+    "top": "Sus pe pagină"
+  },
+  "accountRecent": {
+    "title": "Utilizate recent",
+    "subtitle": "Istoric salvat local în acest browser."
+  },
+  "favorites": {
+    "add": "Adaugă la favorite",
+    "remove": "Favorit"
   }
 }

@@ -81,6 +81,11 @@ export default uiPack({
     "comparisonsCta": "Selaa vertailuja"
   },
   "footer": {
+    "emailAria": "Avaa sähköpostisovelluksen kirjoittaaksesi meille",
+    "youtube": "YouTube",
+    "messenger": "Messenger",
+    "instagram": "Instagram",
+    "facebook": "Facebook",
     "guides": "Oppaat",
     "formats": "Tiedostomuodot",
     "comparisons": "Vertailut",

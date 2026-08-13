@@ -3,10 +3,122 @@
     "title": "Toolando.tech — Minden online eszközöd egy helyen",
     "description": "Konverterek, generátorok, PDF- és AI-eszközök — mind egyetlen elegáns ökoszisztémában. Gyors és egyszerű."
   },
+  "socialProof": {
+    "toolsCount": "{count}+ eszköz egy ökoszisztémában",
+    "usesToday": "{uses} használat ma"
+  },
+  "recent": {
+    "title": "Nemrég használt",
+    "subtitle": "Utolsó eszközeid — helyileg mentve ebben a böngészőben.",
+    "favoritesHint": "Csillagozd meg az eszközt az oldalán, hogy ide rögzítsd."
+  },
+  "premiumUpsell": {
+    "title": "Oldd fel az AI eszközöket Premium-mal",
+    "description": "Szöveggenerálás, összefoglalók, képek, fordítás és chat — egy előfizetés, kérésenkénti meglepetések nélkül.",
+    "point1": "Minden AI eszköz korlátok nélkül",
+    "point2": "Prioritásos feldolgozás zsúfolt napokon",
+    "point3": "Támogasd a független fejlesztést",
+    "cta": "Premium választása",
+    "compare": "Csomagok megtekintése",
+    "trialHint": "Jelentkezz be ingyenes előnézethez — bármikor frissíthetsz."
+  },
+  "privacyBadge": {
+    "title": "Adatvédelem az első",
+    "local": "Helyileg feldolgozva a böngésződben"
+  },
+  "onboarding": {
+    "skip": "Bezárás",
+    "next": "Következő",
+    "start": "Eszközök böngészése",
+    "learnMore": "Hogyan működik a Toolando",
+    "step1": {
+      "title": "Konvertálj, számolj, nyiss meg — egy ökoszisztéma",
+      "body": "287+ eszköz fájlokhoz, kalkulátorok, fejlesztői utilitások és AI — válassz eszközt vagy keress Ctrl+K-val."
+    },
+    "step2": {
+      "title": "Adatvédelem, ahol számít",
+      "body": "Sok utilitás a böngésződben fut. A szerveres konverziók a feladat után törölik a fájlokat."
+    },
+    "step3": {
+      "title": "AI eszközök Premium-mal",
+      "body": "A konverterek ingyenesek. Az AI funkciók egyszerű havi csomagban érhetők el — nézd meg az árakat, mielőtt paywallhoz érsz."
+    }
+  },
+  "exitIntent": {
+    "title": "Mielőtt elmész…",
+    "body": "Más konverter kell? Keress a 287+ eszköz között, vagy mondd el, mit építsünk legközelebb.",
+    "browse": "Eszközök böngészése",
+    "request": "Eszköz kérése",
+    "close": "Bezárás"
+  },
+  "nextSteps": {
+    "title": "Következő lépések",
+    "aiSummarizeTitle": "Dokumentum összefoglalása AI-val",
+    "aiSummarizeBody": "PDF vagy DOCX összefoglaló másodpercek alatt (Premium vagy 1 próba/nap)."
+  },
+  "newsletter": {
+    "title": "Új eszközök és Premium frissítések",
+    "subtitle": "Add meg az e-mailed — értesítünk a fontos funkciókról (spam nélkül).",
+    "placeholder": "te@example.com",
+    "cta": "Feliratkozás",
+    "thanks": "Köszönjük! Ha választ szeretnél, erősítsd meg a kapcsolatfelvételen.",
+    "confirmViaContact": "Regisztráció befejezése a kapcsolati űrlapon →",
+    "error": "A feliratkozás sikertelen. Próbáld újra."
+  },
+  "toolRequest": {
+    "title": "Hiányzik egy konverter?",
+    "body": "Javasolj új eszközt vagy formátumot — a felhasználói kéréseket prioritizáljuk.",
+    "cta": "Eszköz javaslata"
+  },
+  "comparison": {
+    "title": "Toolando vs. felhő-alapú feltöltő eszközök",
+    "subtitle": "Miért váltanak a felhasználók a tipikus online konverterekről.",
+    "feature": "Funkció",
+    "competitor": "Tipikus felhő konverter",
+    "rows": {
+      "privacy": "Helyi előnézet és adatvédelmi opciók",
+      "offline": "Offline működés (PWA utilitások)",
+      "ai": "Integrált AI munkafolyamat",
+      "free": "Ingyenes alap konverterek",
+      "limits": "Nincs önkényes napi feltöltési limit az alapoknál"
+    }
+  },
+  "premiumPage": {
+    "title": "Toolando Premium",
+    "subtitle": "AI eszközök, átlátható árak, bármikor lemondható.",
+    "freeTitle": "Ingyenes",
+    "freeDesc": "Minden fájlkonverter, kalkulátor és a legtöbb utilitás.",
+    "premiumTitle": "Premium",
+    "premiumDesc": "Teljes AI csomag — szöveg, képek, összefoglalók, fordítás, chat.",
+    "supporterTitle": "Támogató",
+    "supporterDesc": "Premium + reklámmentes élmény (hamarosan).",
+    "cta": "Premium indítása",
+    "signIn": "Jelentkezz be az előfizetéshez",
+    "faqTitle": "Árak – GYIK",
+    "faq1q": "Hogyan működnek a kreditek?",
+    "faq1a": "Nincsenek kérésenkénti kreditek — a Premium fix havi előfizetés korlátlan AI használattal.",
+    "faq2q": "Kipróbálhatom fizetés előtt?",
+    "faq2a": "Hozz létre ingyenes fiókot, próbáld a konvertereket, majd frissíts, ha AI kell.",
+    "faq3q": "Mi a helyzet a fájlok adatvédelmével?",
+    "faq3a": "A szerveres fájlok feldolgozás után törlődnek. A böngészős eszközök soha nem töltik fel az adataidat."
+  },
+  "privacyPage": {
+    "title": "Adatvédelem a tervezés alapja",
+    "subtitle": "Hogyan védi a Toolando a fájljaidat és adataidat.",
+    "localTitle": "Böngészőben helyi eszközök",
+    "localBody": "Utilitások, az univerzális megnyitó és sok kalkulátor teljesen a böngésződben fut — az adatok soha nem hagyják el az eszközt.",
+    "serverTitle": "Szerveres konverziók",
+    "serverBody": "Konverzióhoz feltöltött fájlok csak arra a feladatra használódnak, majd törlődnek. HTTPS végig.",
+    "aiTitle": "AI eszközök",
+    "aiBody": "A Premium AI csak az általad beküldött tartalmat küldi a modellszolgáltatónak — soha nem adjuk el és nem használjuk reklámhoz.",
+    "badge": "Adatvédelem az első",
+    "readPolicy": "Teljes adatvédelmi irányelvek"
+  },
   "nav": {
     "aiTools": "AI-eszközök",
     "tools": "Konverterek",
-    "categories": "Converter categories",
+    "categories": "Konverter kategóriák",
+    "formats": "Formátumok",
     "about": "Névjegy",
     "contact": "Kapcsolat",
     "cta": "Kezdés",
@@ -15,11 +127,18 @@
     "allTools": "Minden eszköz",
     "signIn": "Bejelentkezés",
     "account": "Fiókom",
-    "downloader": "MP3 Downloader",
+    "downloader": "MP3 letöltő",
+    "aboutMe": "Rólam",
+    "privacy": "Adatvédelmi irányelvek",
+    "terms": "Szolgáltatási feltételek",
     "onlineTools": "Kalkulátorok",
     "converters": "Konverterek",
     "calculators": "Kalkulátorok",
-    "developer": "Fejlesztői eszközök"
+    "developer": "Fejlesztői eszközök",
+    "premium": "Premium",
+    "guides": "Útmutatók",
+    "faq": "GYIK",
+    "more": "Több"
   },
   "hero": {
     "badge": "Az online eszközök új ökoszisztémája",
@@ -27,7 +146,68 @@
     "titleHighlight": "egy helyen",
     "subtitle": "Konverterek, generátorok, PDF, AI — mind egyetlen ökoszisztémában.",
     "browse": "Eszközök böngészése",
-    "learnMore": "Tudj meg többet"
+    "learnMore": "Tudj meg többet",
+    "convertCta": "Fájl konvertálása most"
+  },
+  "search": {
+    "placeholder": "Keresés konverterek (pl. mp3 wav, pdf jpg)…",
+    "noResults": "Nem található konverter. Próbálkozzon másik lekérdezéssel."
+  },
+  "share": {
+    "label": "Megosztás",
+    "copy": "Link másolása",
+    "copied": "Másolva"
+  },
+  "feedback": {
+    "question": "Hasznos volt ez a cikk?",
+    "yes": "Igen",
+    "no": "Nem",
+    "thanks": "Köszönjük visszajelzését!"
+  },
+  "recommender": {
+    "title": "Melyik formátumot válasszam?",
+    "subtitle": "Válaszoljon két gyors kérdésre, és mi ajánljuk a legjobb formátumot.",
+    "step1": "Milyen típusú fájlja van?",
+    "step2": "Mit akarsz vele csinálni?",
+    "categories": {
+      "image": "Kép / fotó",
+      "audio": "Hang / zene",
+      "video": "Videó",
+      "document": "dokumentum"
+    },
+    "goals": {
+      "image_web": "Közzététel egy weboldalon",
+      "image_email": "Küldje el e-mailben",
+      "image_print": "Nyomtatás",
+      "image_iphone": "Fotó iPhone-ról (HEIC)",
+      "audio_listen": "Hallgassa meg telefonon vagy lejátszón",
+      "audio_edit": "Szerkesztés DAW-ban",
+      "audio_archive": "Archívum minőségromlás nélkül",
+      "video_social": "Hozzászólás a közösségi médiában",
+      "video_web": "Beágyaz egy webhelyre",
+      "video_audio": "Csak hang kibontása",
+      "document_share": "Elküldés olvasásra (nincs szerkesztés)",
+      "document_edit": "Szerkessze meg a szöveget"
+    },
+    "resultTitle": "Ajánlott formátum:",
+    "readFormat": "Formázási útmutató",
+    "openConverter": "Nyissa meg a konvertert",
+    "back": "Vissza",
+    "tryAgain": "Kezdje elölről",
+    "reasons": {
+      "webp-web": "A WebP 25–35%-kal kisebb, mint a JPG azonos minőségben – ideális a gyorsabb webhelyekhez.",
+      "jpg-email": "A JPG univerzális és kicsi – tökéletes e-mail mellékletekhez.",
+      "png-print": "A PNG veszteségmentes, éles széleivel – jó grafikához és rövid távú nyomtatáshoz.",
+      "heic-jpg": "Az iPhone HEIC-jét JPG formátumba kell konvertálni, hogy kompatibilis legyen a Windows rendszerrel és a legtöbb szolgáltatással.",
+      "mp3-listen": "Az MP3 minden eszközön működik, és kicsiben tartja a fájlokat.",
+      "wav-edit": "A WAV veszteségmentes – a legjobb minőségromlás nélküli szerkesztéshez.",
+      "flac-archive": "A FLAC minőségromlás nélkül tömörít – ideális zenearchiváláshoz.",
+      "mp4-social": "Az MP4 (H.264 + AAC) az Instagram, a TikTok és a YouTube szabványa.",
+      "webm-web": "A WebM HTML5-videókhoz van optimalizálva a böngészőkben.",
+      "mp3-audio": "Hangot vonhat ki videójából MP3 formátumban podcastokhoz vagy csengőhangokhoz.",
+      "pdf-share": "A PDF zárolja az elrendezést – a címzett pontosan azt látja, amit akart.",
+      "docx-edit": "A DOCX segítségével szövegeket, stílusokat és címsorokat szerkeszthet a Wordben."
+    }
   },
   "opener": {
     "title": "Univerzális fájlmegnyitó",
@@ -37,26 +217,26 @@
     "kindVideo": "Videó",
     "kindAudio": "Hang",
     "kindDocs": "PDF, kód és adat",
-    "readError": "Couldn't read the file contents.",
-    "dropAny": "Drag any file here or click to choose",
-    "dropHint": "Images, video, audio, PDF, documents, code, data — any format. Files are opened locally in your browser and never uploaded anywhere.",
-    "noConverter": "We don't have a converter for this format yet — but you can preview and download the file below.",
-    "convertTo": "Convert to another format",
-    "optionOne": "option",
-    "optionMany": "options",
-    "downloadedOk": "Done! The file has been downloaded.",
-    "download": "Download",
-    "close": "Close",
-    "emptyFile": "(empty file)",
-    "textTruncated": "Preview truncated to the first 200,000 characters. Download the file to see everything.",
-    "binaryPreview": "Binary preview (first bytes in hexadecimal)",
+    "readError": "Nem sikerült beolvasni a fájl tartalmát.",
+    "dropAny": "Húzz ide bármilyen fájlt, vagy kattints a kiválasztáshoz",
+    "dropHint": "Képek, videó, hang, PDF, dokumentumok, kód, adat — bármilyen formátum. A fájlok helyileg nyílnak meg a böngésződben, sehova nem töltődnek fel.",
+    "noConverter": "Ehhez a formátumhoz még nincs konverterünk — de alább megtekintheted és letöltheted a fájlt.",
+    "convertTo": "Konvertálás másik formátumba",
+    "optionOne": "lehetőség",
+    "optionMany": "lehetőség",
+    "downloadedOk": "Kész! A fájl letöltődött.",
+    "download": "Letöltés",
+    "close": "Bezárás",
+    "emptyFile": "(üres fájl)",
+    "textTruncated": "Előnézet az első 200 000 karakterre rövidítve. Töltsd le a fájlt a teljes tartalomhoz.",
+    "binaryPreview": "Bináris előnézet (első bájtok hexadecimálisan)",
     "kinds": {
-      "image": "Image",
-      "video": "Video",
-      "audio": "Audio",
-      "pdf": "PDF document",
-      "text": "Text / code",
-      "binary": "Binary file"
+      "image": "Kép",
+      "video": "Videó",
+      "audio": "Hang",
+      "pdf": "PDF dokumentum",
+      "text": "Szöveg / kód",
+      "binary": "Bináris fájl"
     }
   },
   "ai": {
@@ -76,6 +256,41 @@
     "title": "Eszközkategóriák",
     "subtitle": "Válassz egy kategóriát az összes elérhető konverter megtekintéséhez.",
     "browse": "Böngészés"
+  },
+  "toolsIndex": {
+    "intro": "Mindegyik eszköz konvertálja a fájlokat a szerveren – nincs szükség szoftver telepítésére. Nem tudja melyik formátumot válassza? Böngésszen a formátumlexikon vagy a konverziós útmutatók között.",
+    "formatsLink": "Enciklopédia formátuma",
+    "guidesLink": "Konverziós útmutatók"
+  },
+  "knowledgeHub": {
+    "title": "Formázási és konverziós ismeretek",
+    "subtitle": "Ne csak konvertáljon – értse meg, mikor válasszon MP3-at FLAC helyett, WebP-t JPG helyett, vagy PDF-et DOCX helyett. Útmutatóink segítenek elkerülni a minőségromlást és a szükségtelen konverziókat.",
+    "formatsTitle": "Fájlformátumú lexikon",
+    "formatsDesc": "Több mint 40 formátum: hang, videó, képek, dokumentumok, adatok és archívumok. Előnyök, hátrányok, kompatibilitás és összehasonlítások az alternatívákkal.",
+    "formatsCta": "Böngésszen a formátumok között",
+    "guidesTitle": "Konverziós útmutatók",
+    "guidesDesc": "Gyakorlati cikkek: hangminőség, képtömörítés, videók közösségi médiához, PDF vs DOCX és online fájlbiztonság.",
+    "guidesCta": "Olvassa el az útmutatókat",
+    "comparisonsTitle": "Formátum-összehasonlítások",
+    "comparisonsDesc": "MP3 vs FLAC, JPG vs WebP, PDF vs DOCX – fej-fej összehasonlítás egyértelmű ítélettel.",
+    "comparisonsCta": "Böngésszen az összehasonlítások között",
+    "glossaryTitle": "Szójegyzék",
+    "glossaryDesc": "Bitrate, kodek, veszteséges tömörítés, MIME — érthető definíciók.",
+    "glossaryCta": "Szójegyzék megnyitása"
+  },
+  "editorial": {
+    "title": "Ki áll a Toolando.tech mögött",
+    "body": "Szymon vagyok — minden eszközt magam tervezek, fejlesztek és tesztelek. Az útmutatók valódi konverziókon alapulnak, nem másolt specifikációkon. Azt szeretném, ha megértenéd a fájljaidat konvertálás előtt — és ha a szolgáltatás őszinte maradna hozzád.",
+    "aboutCta": "Rólam és a módszertan",
+    "howCta": "Hogyan működnek az eszközök",
+    "editorialCta": "Szerkesztői standardok",
+    "guidesCta": "Útmutatók"
+  },
+  "featuredGuides": {
+    "title": "Kiemelt útmutatók",
+    "subtitle": "Gyakorlati cikkek fájlformátumokról, biztonságról és konverzióról — valódi tesztek alapján, nem SEO sablonokból.",
+    "readArticle": "Útmutató olvasása",
+    "allGuides": "Összes útmutató"
   },
   "why": {
     "title": "Miért a Toolando.tech?",
@@ -100,9 +315,25 @@
     "privacy": "Adatvédelmi irányelvek",
     "terms": "Szolgáltatási feltételek",
     "rights": "© 2026 Toolando.tech. Minden jog fenntartva.",
-    "aboutMe": "About me",
-    "howItWorks": "How it works",
-    "faq": "FAQ"
+    "aboutMe": "Rólam",
+    "howItWorks": "Hogyan működik",
+    "faq": "GYIK",
+    "guides": "Útmutatók",
+    "editorial": "Szerkesztőség",
+    "formats": "Fájlformátumok",
+    "comparisons": "Összehasonlítások",
+    "glossary": "Szószedet",
+    "rss": "RSS hírcsatorna",
+    "cookieSettings": "Cookie beállítások",
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "messenger": "Messenger",
+    "youtube": "YouTube",
+    "emailAria": "Megnyitja az e-mail alkalmazást, hogy írjon nekünk"
+  },
+  "ad": {
+    "label": "Hirdetés",
+    "placeholder": "Hirdetési hely"
   },
   "language": {
     "label": "Nyelv"
@@ -111,6 +342,10 @@
     "eyebrow": "Támogasd a projektet",
     "title": "Segíts fenntartani a Toolandót",
     "subtitle": "A Toolando.tech ingyenesen készül és érhető el. Ha időt takarít meg neked, fontold meg a fejlesztésének támogatását.",
+    "body1": "A szolgáltatást egyedül tartom fenn – kódot, szervereket, legális tartalmat és útmutatókat. Az Ön támogatása kiterjed a tárhelyszolgáltatásra (Vercel), a fájlfeldolgozásra, a domainre és az új eszközök fejlesztésére.",
+    "body2": "A támogatás teljesen önkéntes. Az ingyenes eszközök nem igényelnek fizetést. A Premium egy különálló opcionális előfizetés, bővített szolgáltatásokkal – a részletekért lásd a Szolgáltatási feltételeket.",
+    "body3": "Kérdése van, eszközötlete van, vagy hibát talált? Írjon a badyltech@outlook.com címre, vagy használja a kapcsolatfelvételi űrlapot – ez is értékes támogatás.",
+    "legalNote": "Az adományok nem biztosítanak prémium hozzáférést, és nem minősülnek szolgáltatási szerződésnek, kivéve, ha kifejezetten másként szerepel. A feltételek és az adatvédelmi szabályzat az adományoktól függetlenül érvényes.",
     "coffee": "Hívj meg egy kávéra",
     "donate": "Adományozz",
     "back": "Vissza a főoldalra",
@@ -155,32 +390,47 @@
     "merge": "Fájlok egyesítése",
     "result": "Eredmény",
     "notFound": "Az eszköz nem található",
-    "convertFailed": "Conversion failed.",
-    "connectionError": "Couldn't connect to the server. Please try again.",
-    "unavailable": "This converter is currently unavailable",
-    "dropClick": "Drag a file here or click to choose",
-    "dropClickMulti": "Drag files here or click to choose",
-    "supportedFormat": "Supported format",
-    "supported": "Supported",
+    "convertFailed": "A konvertálás sikertelen.",
+    "connectionError": "Nem sikerült csatlakozni a szerverhez. Próbáld újra.",
+    "unavailable": "Ez a konverter jelenleg nem érhető el",
+    "dropClick": "Húzz ide egy fájlt, vagy kattints a kiválasztáshoz",
+    "dropClickMulti": "Húzz ide fájlokat, vagy kattints a kiválasztáshoz",
+    "supportedFormat": "Támogatott formátum",
+    "supported": "Támogatott",
     "maxSize": "max. 500 MB",
-    "removeFile": "Remove file",
-    "convertDone": "Conversion complete",
-    "downloadNamed": "Download",
-    "convertAnother": "Convert another file",
-    "uploadingFile": "Uploading file…",
-    "uploadingFiles": "Uploading files…",
-    "uploading": "Uploading…",
-    "converting": "Converting…",
-    "convertToPrefix": "Convert to",
-    "needTwoPdf": "Add at least two PDF files to merge.",
-    "operationFailed": "The operation failed.",
-    "compressionQuality": "Compression quality",
-    "qualityHint": "Lower value = smaller file. Higher value = better quality.",
-    "done": "Done",
-    "less": "less",
-    "resultPreview": "Result preview",
-    "startOver": "Start over",
-    "processingLong": "Processing (this may take a few seconds)…"
+    "removeFile": "Fájl eltávolítása",
+    "convertDone": "Konvertálás kész",
+    "downloadNamed": "Letöltés",
+    "convertAnother": "Másik fájl konvertálása",
+    "uploadingFile": "Fájl feltöltése…",
+    "uploadingFiles": "Fájlok feltöltése…",
+    "uploading": "Feltöltés…",
+    "converting": "Konvertálás…",
+    "convertToPrefix": "Konvertálás erre:",
+    "needTwoPdf": "Adj hozzá legalább két PDF fájlt az egyesítéshez.",
+    "operationFailed": "A művelet sikertelen.",
+    "compressionQuality": "Tömörítési minőség",
+    "qualityHint": "Alacsonyabb érték = kisebb fájl. Magasabb érték = jobb minőség.",
+    "done": "Kész",
+    "less": "kevesebb",
+    "resultPreview": "Eredmény előnézete",
+    "startOver": "Újrakezdés",
+    "processingLong": "Feldolgozás (néhány másodpercig tarthat)…",
+    "howToTitle": "Fájl konvertálása – lépésről lépésre",
+    "aboutSource": "A forrásformátumról",
+    "aboutTarget": "A célformátumról",
+    "whenToUseTitle": "Mikor kell használni ezt a konvertert",
+    "faqTitle": "Gyakran ismételt kérdések",
+    "qualityTitle": "Konverziós minőség – mit kell tudni",
+    "tipsTitle": "Gyakorlati tippek",
+    "readFormatGuide": "Teljes formátumú útmutató"
+  },
+  "cookieConsent": {
+    "title": "Sütik",
+    "description": "A Toolando.tech szükséges sütiket használ, és hozzájárulásával analitikai (Google Analytics) és hirdetési (Google AdSense) sütiket. Elfogadhat mindet, vagy csak a szükségeseket.",
+    "acceptAll": "Összes elfogadása",
+    "necessaryOnly": "Csak szükséges",
+    "privacyLink": "Adatvédelmi irányelvek"
   },
   "aiTool": {
     "prompt": "A szöveged",
@@ -208,44 +458,44 @@
     "thinking": "Gondolkodik…",
     "aiError": "Nem sikerült AI-választ kapni. Próbáld újra.",
     "emptyChat": "Tegyél fel egy kérdést a beszélgetés elindításához.",
-    "generateFailed": "Couldn't generate a response.",
-    "noContent": "The AI service returned no content. Check that AI Gateway is active (requires a payment card).",
-    "connectionError": "A connection error occurred. Please try again.",
-    "dropDoc": "Drag a document here or click to choose",
-    "removeFile": "Remove file",
-    "translatePlaceholder": "Paste the text to translate…",
-    "copyPlaceholder": "Describe what the AI should write, e.g. \"a product description for an eco-friendly water bottle\"…",
-    "toneLabel": "Tone",
-    "targetLangLabel": "Target language",
-    "translate": "Translate",
-    "summarizeDoc": "Summarize document",
-    "generateText": "Generate text",
-    "imageFailed": "Couldn't generate the image.",
-    "imagePromptPlaceholder": "Describe the image, e.g. \"a futuristic city at sunset, watercolor style\"…",
-    "ratioSquare": "Square 1:1",
-    "ratioLandscape": "Landscape 3:2",
-    "ratioPortrait": "Portrait 2:3",
-    "generatingImage": "Generating image (this may take several seconds)…",
-    "generateImage": "Generate image",
-    "generatedImageAlt": "Generated image",
-    "downloadImage": "Download image",
+    "generateFailed": "Nem sikerült választ generálni.",
+    "noContent": "Az AI szolgáltatás nem adott vissza tartalmat. Ellenőrizd, hogy az AI Gateway aktív-e (fizetőkártya szükséges).",
+    "connectionError": "Kapcsolati hiba történt. Próbáld újra.",
+    "dropDoc": "Húzz ide egy dokumentumot, vagy kattints a kiválasztáshoz",
+    "removeFile": "Fájl eltávolítása",
+    "translatePlaceholder": "Illeszd be a lefordítandó szöveget…",
+    "copyPlaceholder": "Írd le, mit írjon az AI, pl. „termékleírás egy környezetbarát vizespalackhoz”…",
+    "toneLabel": "Hangnem",
+    "targetLangLabel": "Célnyelv",
+    "translate": "Fordítás",
+    "summarizeDoc": "Dokumentum összefoglalása",
+    "generateText": "Szöveg generálása",
+    "imageFailed": "Nem sikerült képet generálni.",
+    "imagePromptPlaceholder": "Írd le a képet, pl. „futurisztikus város naplementekor, akvarell stílus”…",
+    "ratioSquare": "Négyzet 1:1",
+    "ratioLandscape": "Fekvő 3:2",
+    "ratioPortrait": "Álló 2:3",
+    "generatingImage": "Kép generálása (több másodpercig is tarthat)…",
+    "generateImage": "Kép generálása",
+    "generatedImageAlt": "Generált kép",
+    "downloadImage": "Kép letöltése",
     "tones": {
-      "professional": "professional",
-      "friendly": "friendly",
-      "energetic": "energetic",
-      "formal": "formal",
-      "playful": "playful",
-      "persuasive": "persuasive"
+      "professional": "professzionális",
+      "friendly": "barátságos",
+      "energetic": "energikus",
+      "formal": "formális",
+      "playful": "játékos",
+      "persuasive": "meggyőző"
     },
     "languages": {
-      "english": "English",
-      "german": "German",
-      "spanish": "Spanish",
-      "french": "French",
-      "italian": "Italian",
-      "ukrainian": "Ukrainian",
-      "polish": "Polish",
-      "japanese": "Japanese"
+      "english": "angol",
+      "german": "német",
+      "spanish": "spanyol",
+      "french": "francia",
+      "italian": "olasz",
+      "ukrainian": "ukrán",
+      "polish": "lengyel",
+      "japanese": "japán"
     }
   },
   "category": {
@@ -259,64 +509,64 @@
     "notFound": "A kategória nem található"
   },
   "paywall": {
-    "unlockTitle": "Unlock \"{tool}\" with Premium",
-    "description": "Unlock all Toolando.tech AI tools — text and image generation, translation, summaries and the assistant — in one subscription.",
-    "feature1": "Unlimited access to all AI tools",
-    "feature2": "Text generator, image generator and translator",
-    "feature3": "Priority request processing",
-    "goPremium": "Upgrade to Premium",
-    "redirecting": "Redirecting…",
-    "signInToBuy": "Sign in to buy Premium",
-    "noAccount": "Don't have an account?",
-    "signUp": "Sign up"
+    "unlockTitle": "Oldd fel a(z) „{tool}” eszközt Premium-mal",
+    "description": "Oldd fel az összes Toolando.tech AI eszközt — szöveg- és képgenerálás, fordítás, összefoglalók és asszisztens — egy előfizetésben.",
+    "feature1": "Korlátlan hozzáférés minden AI eszközhöz",
+    "feature2": "Szöveg- és képgenerátor, fordító",
+    "feature3": "Prioritásos kérések feldolgozása",
+    "goPremium": "Frissítés Premium-ra",
+    "redirecting": "Átirányítás…",
+    "signInToBuy": "Jelentkezz be a Premium vásárlásához",
+    "noAccount": "Nincs fiókod?",
+    "signUp": "Regisztráció"
   },
   "account": {
-    "backToHome": "Back to homepage",
-    "yourAccount": "Your account",
+    "backToHome": "Vissza a főoldalra",
+    "yourAccount": "Fiókod",
     "premiumBadge": "Premium",
-    "freeBadge": "Free account",
-    "premiumActiveTitle": "You have active Premium",
-    "premiumActiveDesc": "Thank you for your support! You have full access to all AI tools without limits.",
-    "manageSubscription": "Manage subscription",
-    "manageOpening": "Opening…",
-    "managePortalError": "Could not open the portal.",
-    "manageGenericError": "An error occurred.",
-    "goPremiumTitle": "Go Premium",
-    "feature1": "Unlimited access to AI tools",
-    "feature2": "Background removal, image and text generation",
-    "feature3": "Priority processing",
-    "buyPremium": "Buy Premium",
-    "buyRedirecting": "Redirecting…",
-    "refreshHint": "Paid but Premium still inactive? Refresh your status:",
-    "refreshStatus": "Refresh Premium status",
-    "refreshChecking": "Checking...",
-    "refreshNoSub": "No active subscription found. If you just paid, wait a moment and try again.",
-    "refreshFailed": "Could not refresh status.",
-    "refreshNetworkError": "A network error occurred. Please try again.",
-    "signOut": "Sign out"
+    "freeBadge": "Ingyenes fiók",
+    "premiumActiveTitle": "Aktív Premium előfizetésed van",
+    "premiumActiveDesc": "Köszönjük a támogatást! Korlátlan hozzáférésed van minden AI eszközhöz.",
+    "manageSubscription": "Előfizetés kezelése",
+    "manageOpening": "Megnyitás…",
+    "managePortalError": "Nem sikerült megnyitni a portált.",
+    "manageGenericError": "Hiba történt.",
+    "goPremiumTitle": "Premium választása",
+    "feature1": "Korlátlan hozzáférés az AI eszközökhöz",
+    "feature2": "Háttér eltávolítása, kép- és szöveggenerálás",
+    "feature3": "Prioritásos feldolgozás",
+    "buyPremium": "Premium vásárlása",
+    "buyRedirecting": "Átirányítás…",
+    "refreshHint": "Fizettél, de a Premium még inaktív? Frissítsd az állapotot:",
+    "refreshStatus": "Premium állapot frissítése",
+    "refreshChecking": "Ellenőrzés…",
+    "refreshNoSub": "Nem található aktív előfizetés. Ha most fizettél, várj egy kicsit, majd próbáld újra.",
+    "refreshFailed": "Nem sikerült frissíteni az állapotot.",
+    "refreshNetworkError": "Hálózati hiba történt. Próbáld újra.",
+    "signOut": "Kijelentkezés"
   },
   "downloader": {
-    "eyebrow": "Video → MP3",
-    "title": "Multi-Platform → MP3 Downloader",
-    "subtitle": "Paste a link from TikTok, Instagram, Facebook, Twitter/X, Vimeo or SoundCloud and grab the audio.",
-    "metaDescription": "Multi-platform Video to MP3 Downloader — TikTok, Instagram, Facebook, Twitter, Vimeo, SoundCloud. Paste a link and download the audio.",
-    "back": "All tools",
-    "inputLabel": "Video link",
+    "eyebrow": "Videó → MP3",
+    "title": "Többplatformos → MP3 letöltő",
+    "subtitle": "Illesz be linket TikTokról, Instagramról, Facebookról, Twitter/X-ről, Vimeóról vagy SoundCloudról, és töltsd le a hangot.",
+    "metaDescription": "Multi-platform Video to MP3 Downloader — TikTok, Instagram, Facebook, Twitter, Vimeo, SoundCloud. Illesz be linket és töltsd le a hangot.",
+    "back": "Minden eszköz",
+    "inputLabel": "Videó link",
     "inputPlaceholder": "https://www.tiktok.com/@user/video/...",
-    "detected": "detected",
+    "detected": "felismerve",
     "idLabel": "ID",
-    "invalidLink": "Enter a valid link from a supported platform.",
-    "download": "Download MP3",
-    "preparing": "Preparing your link…",
-    "ready": "Your link is ready.",
-    "openPage": "Open download page",
-    "resultTitle": "Ready to download",
-    "resultsBack": "Back to downloader",
-    "thumbnailAlt": "Video thumbnail",
-    "viewSource": "View original",
-    "faqTitle": "Frequently asked questions",
-    "disclaimer": "Toolando.tech does not host or download any media. It only detects the platform and the public video ID and hands off to an external service or your browser. Only download content you have the rights to.",
-    "externalNote": "Download happens on an external service or in your browser. Toolando.tech only captured the public platform and video ID. Please respect copyright and each platform's terms of service.",
+    "invalidLink": "Adj meg érvényes linket támogatott platformról.",
+    "download": "MP3 letöltése",
+    "preparing": "Link előkészítése…",
+    "ready": "A linked kész.",
+    "openPage": "Letöltési oldal megnyitása",
+    "resultTitle": "Kész a letöltésre",
+    "resultsBack": "Vissza a letöltőhöz",
+    "thumbnailAlt": "Videó miniatűr",
+    "viewSource": "Eredeti megtekintése",
+    "faqTitle": "Gyakori kérdések",
+    "disclaimer": "A Toolando.tech nem tárol és nem tölt le médiát. Csak felismeri a platformot és a nyilvános videó ID-t, majd továbbít egy külső szolgáltatásnak vagy a böngésződnek. Csak olyan tartalmat tölts le, amire jogod van.",
+    "externalNote": "A letöltés külső szolgáltatáson vagy a böngésződben történik. A Toolando.tech csak a nyilvános platformot és videó ID-t rögzítette. Tiszteletben tartsd a szerzői jogokat és az egyes platformok feltételeit.",
     "faq": [
       {
         "q": "Which platforms are supported?",
@@ -339,18 +589,320 @@
         "a": "Only download content you own or have permission to use. Downloading copyrighted material without permission may violate the platform's terms of service and copyright law."
       }
     ],
-    "platformDisabled": "Downloading from {platform} is temporarily unavailable — {platform} actively blocks downloaders, so we've paused it until our own converter is ready. All other platforms still work."
+    "platformDisabled": "A(z) {platform} letöltése ideiglenesen nem elérhető — a(z) {platform} aktívan blokkolja a letöltőket, ezért szüneteltettük, amíg a saját konverterünk kész nem lesz. A többi platform továbbra is működik."
+  },
+  "pages": {
+    "contact": {
+      "eyebrow": "Kapcsolatfelvétel",
+      "title": "Kapcsolatfelvételi űrlap",
+      "intro": "Kérdése van, partnerségi ötlete van, vagy problémát szeretne jelenteni? Töltse ki az űrlapot – amint tudok, válaszolok.",
+      "name": "Név",
+      "namePlaceholder": "A te neved",
+      "email": "E-mail",
+      "emailPlaceholder": "Az Ön e-mail címe",
+      "message": "Üzenet",
+      "messagePlaceholder": "Írja le problémáját vagy kérdését...",
+      "submit": "Üzenet küldése",
+      "sent": "Köszönöm! Üzenete elkészült az e-mail alkalmazásban.",
+      "subject": "Érdeklődés a Toolando.tech-től"
+    },
+    "about": {
+      "eyebrow": "Rólam",
+      "title": "Szia, Szymon vagyok – a Toolando megalkotója",
+      "intro": "A Toolando.tech a saját projektem, amelyet egyedül építek fel. Az ötlettől a kódon át az éppen olvasott tartalomig – minden egy kézből származik. Azt szeretném, ha az egyszerű feladatok, például egy fájl konvertálása vagy egy gyors online eszköz mindenki számára elérhetőek lennének anélkül, hogy szoftvert kellene telepíteni, és ne legyenek szükségtelen bonyodalmak.",
+      "whyTitle": "Miért jött létre a Toolando?",
+      "whyP1": "Minden nap dolgozom számítógéppel, és sokszor láttam, hogy az emberek mennyi időt veszítenek olyan feladatoknál, amelyeknek el kell telniük egy pillanatig – fájlformátum megváltoztatása, hangfelvételek kinyerése vagy gyors művelet, amely arra kényszeríti az embert, hogy keressen egy véletlenszerű webhelyet, tele hirdetésekkel és csapdákkal.",
+      "whyP2": "A Toolando-t azért hozták létre, hogy az ilyen eszközöket egyetlen áttekinthető és biztonságos helyen gyűjtse össze. Érdekel, hogy a szolgáltatás gyors, olvasható és őszinte legyen a felhasználó felé – trükkök és rejtett fogások nélkül.",
+      "howTitle": "Hogyan működik a Toolando",
+      "howIntro": "A szolgáltatás két változatban kínál online eszközöket: ingyenes és prémium.",
+      "howFreeTerm": "Ingyenes eszközök",
+      "howFreeDesc": "mindenki számára elérhető, fiók nélkül. Ezek a mindennapi, leggyakrabban használt funkciók, amelyeket mindenki számára nyitva szeretnék tartani.",
+      "howPremiumTerm": "Prémium eszközök",
+      "howPremiumDesc": "fejlettebb funkciók vagy magasabb korlátok, amelyek segítenek fenntartani és bővíteni a projektet. A prémium bevétel egyenesen a szerverekhez, a fejlesztésekhez és az új eszközökhöz megy.",
+      "howOutro": "A változattól függetlenül ugyanazt a szabályt tartom be: a feltöltött fájlokat kizárólag az átalakítás elvégzésére használjuk, és nem én tárolom.",
+      "outsideTitle": "Amit a Toolando-n kívül csinálok",
+      "outsideP1": "Informatikai szolgáltatásokat nyújtok – segítek magánszemélyeknek és cégeknek a mindennapi hardver- és szoftverproblémákban.",
+      "outsideList": [
+        "laptopok és számítógépek szervizelése, javítása,",
+        "IT szolgáltatások és műszaki támogatás,",
+        "webes eszközök és alkalmazások készítése."
+      ],
+      "outsideP2": "A javítások és a felhasználókkal való együttműködés során szerzett tapasztalatok közvetlenül tükrözik a Toolando tervezési módját – egyszerűen, lényegre törően, és a valós igényeket szem előtt tartva.",
+      "contactTitle": "Kapcsolatfelvétel",
+      "contactP1": "Kérdése van, ötlete van egy új eszközzel kapcsolatban, vagy problémát szeretne jelenteni? Írj nekem, szívesen válaszolok.",
+      "emailLabel": "E-mail:",
+      "methodologyTitle": "Hogyan tesztelem a konverziókat és írok útmutatókat",
+      "methodologyP1": "A Toolando.tech minden útmutatója és formátumprofilja valós konverziós teszteken – nem másolt beillesztett specifikációkon – alapul. Feltöltök mintafájlokat, összehasonlítom a kimeneti méretet és minőséget, és megjegyzem, mely beállítások működnek a legjobban.",
+      "methodologyList": [
+        "A konvertereket különböző méretű (kicsi, közepes, nagy) fájlokkal tesztelem.",
+        "Hang/videó esetében összehasonlítom a bitrátát, az időtartamot és a lejátszási kompatibilitást.",
+        "A képeknél ellenőrzöm a fájlméretet, a vizuális minőséget és az átlátszóságot.",
+        "Az útmutatók frissülnek, ha a formátumok vagy a platformkövetelmények megváltoznak."
+      ],
+      "methodologyP2": "Ha hibát talál egy útmutatóban vagy egy konverterben, amely nem a leírtak szerint működik, küldjön e-mailt a badyltech@outlook.com e-mail címre – a javítások mindenkinek segítenek.",
+      "updatedLabel": "Az oldal legutóbb frissítve",
+      "updatedDate": "2026. július"
+    },
+    "editorial": {
+      "eyebrow": "Szerkesztőség",
+      "title": "A Toolando.tech szerkesztői standardjai",
+      "intro": "A Toolando.tech nem csak konverterek — útmutatók, formátum-enciklopédia és összehasonlítások is. Alább elmagyarázom, hogyan készül a tartalom, honnan származnak az információk és mikor frissülnek.",
+      "whoTitle": "Ki készíti a tartalmat",
+      "whoP1": "Minden útmutatót, formátumprofilt és összehasonlítást magam írok — Szymon Badyl, a Toolando.tech készítője. Nem használok tartalomfarmokat vagy ellenőrizetlen AI-szövegeket.",
+      "whoP2": "Minden cikk a saját fájljaimon végzett konverziós teszteken alapul. Ha valami nem úgy működik, ahogy leírom, javítom a szöveget és az eszközt is.",
+      "standardsTitle": "Szerkesztői elvek",
+      "standardsIntro": "Minden új útmutatóra ugyanazokat a szabályokat alkalmazom:",
+      "standardsList": [
+        "I test the converter with files of different sizes before publishing.",
+        "I give concrete scenarios (email, shop, social media), not vague generalities.",
+        "I distinguish compression from format conversion and lossy from lossless.",
+        "I write about tool limits — when not to convert online.",
+        "I update the date and content when platform or format requirements change."
+      ],
+      "sourcesTitle": "Források és őszinteség",
+      "sourcesP1": "A formátumspecifikációkat (MIME, kodekek) IANA, FFmpeg és gyártói dokumentáció alapján ellenőrzöm. Az összehasonlítások a saját méret- és minőségméréseimre épülnek, nem marketingtáblázatokra.",
+      "sourcesP2": "Külső linkek csak akkor jelennek meg, ha tényleg segítenek (pl. hivatalos dokumentáció). Nem promotálok fizetős versenyeszközöket.",
+      "updatesTitle": "Frissítések és javítások",
+      "updatesP1": "Találtál hibát, elavult infót vagy van témajavaslatod? Írj a badyltech@outlook.com címre — a javítások frissítési dátummal kerülnek a cikkbe.",
+      "updatedLabel": "Utolsó frissítés",
+      "updatedDate": "2026. augusztus",
+      "fullGuideCta": "Teljes útmutató a szerkesztői standardokról"
+    },
+    "howItWorks": {
+      "eyebrow": "Hogyan működik?",
+      "title": "Hogyan működnek a Toolando eszközei",
+      "intro": "A Toolando.tech olyan online eszközök készlete, amelyeket közvetlenül a böngészőjében futtathat – nincs mit telepítenie. Az alábbiakban elmagyarázom, hogyan működik a fájlfeldolgozás, hogyan gondoskodom a biztonságról, és miben különböznek az ingyenes eszközök a prémiumtól.",
+      "browserTitle": "A böngészőben futó eszközök",
+      "browserP": "Megnyit egy eszközt, kiválaszt egy fájlt vagy beír egy adatot, és az eredmény közvetlenül az oldalon jelenik meg. Az ingyenes eszközök használatához nincs szükség fiókra, és semmit sem kell telepítenie a számítógépére.",
+      "filesTitle": "A fájlok feldolgozása",
+      "filesIntro": "Az eszköz típusától függően a fájlok feldolgozása kétféleképpen történik:",
+      "filesLocalTerm": "Helyileg a böngészőben",
+      "filesLocalDesc": "egyes műveletek közvetlenül az eszközön futnak, és a fájl soha nem hagyja el a számítógépet.",
+      "filesServerTerm": "Ideiglenesen a szerveren",
+      "filesServerDesc": "Ha egy eszköznek nagyobb számítási teljesítményre van szüksége, a fájlt a szerver csak az átalakítás idejére dolgozza fel, majd törli.",
+      "filesOutro": "Ezen esetek egyikében sem tárolom a fájljait, és nem használom más célra.",
+      "securityTitle": "Biztonság",
+      "securityP": "A biztonság és a magánélet az elsődleges számomra. A webhelyhez való kapcsolat titkosított, és a fájlok kizárólag az Ön által kért feladat végrehajtására szolgálnak.",
+      "securityList": [
+        "a feltöltött fájlok nem kerülnek tárolásra a művelet befejezése után,",
+        "Nem adom el és nem osztom meg az adataidat,",
+        "az ingyenes eszközök használatához nincs szükség személyes adatok megadására."
+      ],
+      "tiersTitle": "Ingyenes eszközök vs prémium",
+      "tiersP": "A Toolando két változatban kínál szerszámokat, de a biztonsági elv mindkettőnél ugyanaz.",
+      "tiersFreeTerm": "Ingyenes",
+      "tiersFreeDesc": "mindenki számára elérhető, fiók nélkül. Tökéletes a mindennapi, gyors feladatokhoz.",
+      "tiersPremiumTerm": "Prémium",
+      "tiersPremiumDesc": "fejlettebb funkciók és magasabb korlátok vagy nagyobb fájlok. A Premium támogatja a szerverek karbantartását és új eszközök fejlesztését."
+    },
+    "faq": {
+      "eyebrow": "GYIK",
+      "title": "Gyakran ismételt kérdések",
+      "intro": "Ide gyűjtöttem a válaszokat a leggyakrabban felmerülő kérdésekre. Ha nem találja, amit keres, írjon nekem a badyltech@outlook.com címre.",
+      "items": [
+        {
+          "q": "A Toolando eszközei ingyenesek?",
+          "a": "A legtöbb eszköz teljesen ingyenes, és fiók létrehozása nélkül is elérhető. Néhány fejlettebb funkció és magasabb korlát érhető el a prémium változatban, amely támogatja a szolgáltatás karbantartását és fejlesztését."
+        },
+        {
+          "q": "Miben különböznek az ingyenes eszközök a prémiumtól?",
+          "a": "Az ingyenes eszközök a mindennapi, leggyakoribb feladatokat fedik le, és mindenki számára nyitva állnak. A Premium fejlettebb funkciókat és nagyobb fájlokat vagy korlátokat kínál. A fájlbiztonsági elv mindkét változatban azonos."
+        },
+        {
+          "q": "Biztonságban vannak a fájljaim?",
+          "a": "Igen. A feltöltött fájlokat kizárólag az átalakítás végrehajtására használjuk fel, és azokat nem én tárolom. Egyes műveletek helyileg futnak a böngészőben, és ha egy fájl a szerverre kerül, akkor azt csak a feladat időtartamára dolgozza fel, majd törli."
+        },
+        {
+          "q": "Tárolja a Toolando az általam feltöltött fájlokat?",
+          "a": "Nem. Nem mentem el a fájljait a művelet befejezése után, és nem használom fel semmilyen más célra."
+        },
+        {
+          "q": "Hogyan védi a magánéletemet?",
+          "a": "Kizárólag technikai és statisztikai adatokat dolgozok fel (pl. IP cím, böngésző típusa, rendszer, webhely forgalom), a GDPR-nak megfelelően. A részleteket az Adatvédelmi szabályzatban találja. Az ingyenes eszközök használatához nincs szükség személyes adatok megadására."
+        },
+        {
+          "q": "Kell-e fiókot létrehoznom az eszközök használatához?",
+          "a": "Nem. Az ingyenes eszközök fiók nélkül is működnek. Előfordulhat, hogy fiókra csak a prémium szolgáltatásokhoz van szükség."
+        },
+        {
+          "q": "Vannak hirdetések az oldalon?",
+          "a": "Igen, a szolgáltatás megjeleníthet Google AdSense hirdetéseket, amelyek segítenek az ingyenes eszközök mindenki számára elérhetővé tételében."
+        },
+        {
+          "q": "Hogyan működnek az online eszközök?",
+          "a": "Megnyit egy eszközt a böngészőben, kiválaszt egy fájlt vagy megadja az adatokat, és azonnal megkapja az eredményt – nincs mit telepítenie. További részleteket leírtam a „Hogyan működik?” oldalon."
+        },
+        {
+          "q": "Hogyan léphetek kapcsolatba?",
+          "a": "Írjon a badyltech@outlook.com címre, vagy használja a kapcsolatfelvételi űrlapot. A lehető leggyorsabban válaszolok."
+        }
+      ]
+    },
+    "privacy": {
+      "eyebrow": "Adatvédelmi irányelvek",
+      "title": "A Toolando.tech adatvédelmi irányelvei",
+      "intro": "A Toolando.tech ingyenes és prémium online eszközöket biztosít. Fontosnak tartom a felhasználók adatvédelmét, és az adatokat az alkalmazandó jogszabályoknak, beleértve a GDPR-t, megfelelően kezelem.",
+      "lastUpdated": "Utolsó frissítés: 2026. július 23.",
+      "s1Title": "1. Adatkezelő",
+      "s1Pre": "Az adatkezelő Szymon Badyl, a Toolando.tech tulajdonosa (Lengyelország). Adatvédelmi ügyekben itt érhetsz el:",
+      "s1Address": "Levelezés: badyltech@outlook.com",
+      "s2Title": "2. Milyen adatokat kezelünk",
+      "s2Intro": "A szolgáltatás technikai és statisztikai adatokat dolgoz fel, amelyek automatikusan gyűlnek a webhely használata során:",
+      "s2List": [
+        "IP address,",
+        "browser type and version,",
+        "the device's operating system,",
+        "traffic and usage data (e.g. pages visited)."
+      ],
+      "s2Outro": "Ha e-mailben vagy űrlapon keresztül lépsz kapcsolatba velem, a megadott e-mail címet és az üzenet tartalmát is kezelem.",
+      "s3Title": "3. Az eszközökbe feltöltött fájlok",
+      "s3P": "A konverzióhoz vagy más művelethez feltöltött fájlokat nem tárolom. Kizárólag a kért feladat végrehajtására használom őket, és a befejezés után törlöm. Más célra nem használom őket.",
+      "s4Title": "4. Cookie-k",
+      "s4Intro": "A szolgáltatás a következő típusú cookie-kat használja:",
+      "s4TechTerm": "Technikai",
+      "s4TechDesc": "a webhely megfelelő működéséhez és a beállítások (pl. nyelv) megjegyzéséhez szükségesek.",
+      "s4AnalyticsTerm": "Analitikai",
+      "s4AnalyticsDesc": "statisztikai eszközök (pl. Google Analytics), amelyek segítenek megérteni, hogyan használják a webhelyet, összesített és anonim formában.",
+      "s4AdsTerm": "Hirdetési",
+      "s4AdsDesc": "Google AdSense, amely cookie-kat használhat a hirdetések megjelenítéséhez és személyre szabásához.",
+      "s4Outro": "A cookie-kat bármikor kezelheted vagy letilthatod a böngésző beállításaiban. Az első látogatáskor cookie-hozzájárulási sáv jelenik meg, ahol elfogadhatod az összes cookie-t, vagy csak a szükségesekre korlátozhatod magad.",
+      "s4ThirdPartyTitle": "Harmadik felek",
+      "s4ThirdPartyP": "A szolgáltatás Google szolgáltatásokat használ (Analytics, AdSense). A Google a saját adatvédelmi irányelvei szerint gyűjthet adatokat. További információ: https://policies.google.com/technologies/partner-sites",
+      "s5Title": "5. Ingyenes és prémium eszközök",
+      "s5P": "A Toolando ingyenes (fiók nélkül elérhető) és prémium eszközöket biztosít. Az adatkezelés és a fájlok védelmének szabályai mindkét változatban megegyeznek — csak a funkciók köre és a limitek különböznek.",
+      "s6Title": "6. Az adatkezelés célja",
+      "s6Intro": "Az adatokat kizárólag a következő célokra kezelem:",
+      "s6List": [
+        "ensuring the correct and secure operation of the service,",
+        "statistical traffic analysis and improving the tools,",
+        "displaying ads,",
+        "handling contact with the user."
+      ],
+      "s7Title": "7. Jogaid",
+      "s7Intro": "Jogod van:",
+      "s7List": [
+        "access your data,",
+        "rectify or delete it,",
+        "restrict processing,",
+        "lodge a complaint with the relevant data protection authority."
+      ],
+      "s8Title": "8. Az irányelvek módosítása",
+      "s8P": "Az adatvédelmi irányelvek frissülhetnek a szolgáltatás vagy a jogszabályok változásai miatt. Az aktuális verzió mindig elérhető ezen az oldalon."
+    },
+    "terms": {
+      "eyebrow": "Szolgáltatási feltételek",
+      "title": "A Toolando.tech szolgáltatási feltételei",
+      "intro": "Az alábbi feltételek határozzák meg a Toolando.tech használatának szabályait. A szolgáltatás használata ezen szabályok elfogadását jelenti.",
+      "s1Title": "1. Általános rendelkezések",
+      "s1P": "A Toolando.tech tulajdonosa Szymon. A szolgáltatás online eszközöket biztosít fájlkonverzióhoz, tartalomgeneráláshoz és AI-alapú eszközökhöz.",
+      "s2Title": "2. Ingyenes és prémium eszközök",
+      "s2Intro": "A Toolando két változatban kínál eszközöket:",
+      "s2FreeTerm": "Ingyenes",
+      "s2FreeDesc": "mindenki számára elérhető, fiók létrehozása nélkül.",
+      "s2PremiumTerm": "Premium",
+      "s2PremiumDesc": "fejlettebb funkciókkal és magasabb limitekkel.",
+      "s2Outro": "A prémium funkciók fizetésére vagy előfizetésére vonatkozó szabályok a szolgáltatás megfelelő helyein találhatók.",
+      "s3Title": "3. Saját felelősségre történő használat",
+      "s3P1": "A szolgáltatást saját felelősségedre használod. Mindent megteszek, hogy az eszközök megfelelően működjenek, azonban a szolgáltatás „ahogy van” alapon érhető el, elérhetőségi, eredményességi vagy adott célra való alkalmassági garancia nélkül.",
+      "s3P2": "A szolgáltatás tulajdonosa nem felel:",
+      "s3List": [
+        "the consequences of using the tools' results,",
+        "lost profits,",
+        "damage resulting from interruptions in the service."
+      ],
+      "s3Outro": "A felhasználó kötelezi magát, hogy a szolgáltatást a törvénynek megfelelően használja, és felelős a feldolgozott tartalomért és fájlokért.",
+      "s4Title": "4. Felhasználói fájlok",
+      "s4P": "Az eszközökbe feltöltött fájlokat nem tároljuk. Kizárólag a kért művelet végrehajtására használjuk őket, és a befejezés után törlődnek.",
+      "s5Title": "5. Hirdetések",
+      "s5P": "A szolgáltatás Google AdSense hirdetéseket jeleníthet meg. A hirdetések segítenek fenntartani az ingyenes eszközöket és fejleszteni a projektet. A hirdetésszolgáltató cookie-kat használhat az Adatvédelmi irányelveknek megfelelően.",
+      "s6Title": "6. Szerzői jog",
+      "s6P": "A Toolando.tech neve, grafikai elemei és a szolgáltatás tartalma jogi védelem alatt áll. Másolásuk és használatuk a tulajdonos hozzájárulása nélkül tilos.",
+      "s7Title": "7. Kapcsolat",
+      "s7Pre": "Ezen feltételekkel kapcsolatos ügyekben itt érhetsz el:",
+      "s8Title": "8. A feltételek módosítása",
+      "s8P": "A feltételek frissülhetnek a szolgáltatás vagy a jogszabályok változásai miatt. Az aktuális verzió mindig elérhető ezen az oldalon."
+    },
+    "guides": {
+      "eyebrow": "Útmutatók",
+      "title": "Fájlkonverziós útmutatók és oktatóanyagok",
+      "intro": "Gyakorlati cikkek fájlformátumokról, konverzióról és bevált gyakorlatokról. Minden útmutató elmagyarázza, mikor és miért érdemes fájlt konvertálni, és hogyan teheted ezt biztonságosan a Toolando.tech segítségével.",
+      "articles": [
+        {
+          "title": "MP3 vs WAV — when to convert audio?",
+          "body": "MP3 is a lossy compression format — files are small but some audio data is lost. WAV preserves full quality but files can be 10 times larger. Convert MP3 → WAV when you need a file for editing in a DAW (e.g. Audacity, FL Studio) or when a platform requires a lossless format. Convert WAV → MP3 when you want to email a recording, publish a podcast, or save disk space. Toolando.tech supports both conversions — just upload your file and download the result."
+        },
+        {
+          "title": "How to convert PDF to JPG for print and the web",
+          "body": "PDF is a document format that preserves page layout. Sometimes you need individual pages as images — for a website, a PowerPoint presentation, or printing a single page. The PDF → JPG converter in Toolando.tech renders each PDF page as a separate high-resolution JPG image. PDF files are never stored — they are deleted immediately after conversion. If you need transparency, consider PDF → PNG instead."
+        },
+        {
+          "title": "WebP and AVIF — modern image formats for websites",
+          "body": "JPG and PNG have dominated the web for years, but newer formats offer better compression. WebP (Google) produces files 25–35% smaller than JPG at the same visual quality and is supported by all modern browsers. AVIF goes even further — files can be half the size of WebP. Convert JPG → WebP or PNG → AVIF in Toolando.tech to speed up your website. Remember that older browsers (e.g. IE) don't support these formats — keep a JPG version as a fallback."
+        },
+        {
+          "title": "Extracting audio from video — the legal alternative",
+          "body": "Sometimes you have a video file (e.g. a camera recording, presentation) and only need the audio track. Toolando.tech lets you extract audio from MP4, MOV, AVI, MKV and other video formats, saving it as MP3, WAV, FLAC, or AAC. This is a legal operation on your own file — unlike downloading music from YouTube or TikTok, which Toolando.tech deliberately does not offer. Upload your video file, choose an audio format, and download the result."
+        },
+        {
+          "title": "JSON, CSV, and XML — converting data between formats",
+          "body": "Developers and data analysts often work with different data formats. JSON is the standard in APIs and configs. CSV and TSV are used for importing into Excel and spreadsheets. XML is used in older enterprise systems and RSS. Toolando.tech converts between these formats while preserving data structure. For example: JSON → CSV lets you open an API response in Excel, and CSV → JSON prepares data for sending to a REST API."
+        },
+        {
+          "title": "File security in online tools",
+          "body": "Uploading files to online tools naturally raises privacy concerns. At Toolando.tech, files are used solely to perform the operation you request — conversion, compression, or preview. After the job completes, files are deleted from the server. Some tools (e.g. the universal file opener) run entirely in your browser — in that case the file never leaves your computer. The connection to the site is encrypted (HTTPS). We never sell or share your files with third parties."
+        },
+        {
+          "title": "Lossy vs lossless compression — a simple guide",
+          "body": "Lossy formats (MP3, JPG, AAC, H.264) discard some data to shrink file size. Lossless formats (FLAC, PNG, WAV, ZIP) keep all data but produce larger files. Rule of thumb: only convert from lossy to lossless when you must — you won't recover lost quality. Converting lossy to lossy (e.g. JPG → JPG at lower quality) should happen once; each re-conversion degrades the result. In Toolando.tech's format encyclopedia, every format is labeled with its compression type."
+        },
+        {
+          "title": "HEIC from iPhone — how to open and convert to JPG",
+          "body": "Apple saves photos in HEIC (HEIF) by default — smaller than JPG at the same quality. The catch: Windows without an extension, older apps, and many services don't support HEIC. Solution: convert HEIC → JPG or HEIC → PNG in Toolando.tech before emailing photos, uploading to a site, or printing. You can also set iPhone to \"Most Compatible\" (JPG) in Settings, but online conversion works on photos already saved as HEIC."
+        },
+        {
+          "title": "PDF vs DOCX — which format when?",
+          "body": "DOCX (Word) is for editing text — you change content, styles, and headings. PDF locks page layout — it looks identical on every device, ideal for invoices, contracts, and CVs sent to recruiters. Convert DOCX → PDF before sending a document \"for reading only.\" Convert PDF → DOCX only when you need to edit text — layout may break. For archiving and print, always choose PDF."
+        },
+        {
+          "title": "Video for social media — MP4, resolution, and bitrate",
+          "body": "Instagram, TikTok, YouTube, and Facebook prefer MP4 with H.264 video and AAC audio. Before publishing, convert MOV, AVI, or MKV to MP4 to avoid upload errors. 1080p (1920×1080) is enough for most platforms; 4K only when the platform supports it. Higher bitrate means better quality but a larger file. Toolando.tech converts video with no install — see the format encyclopedia for details on MP4, WebM, and MOV."
+        }
+      ]
+    }
   },
   "hub": {
-    "convertersTitle": "File converters",
-    "convertersDesc": "Audio, video, images, documents, data, fonts and archives — plus compress, merge PDF and background removal.",
-    "calculatorsTitle": "Calculators & converters",
-    "calculatorsDesc": "Currency, VAT, dates, timezones, units and bitrate.",
-    "developerTitle": "Developer & text tools",
-    "developerDesc": "Passwords, QR, Base64, UUID, hash, colors, timestamp and character counter.",
-    "specialTools": "File tools",
-    "browseConverters": "Browse converters",
-    "browseCalculators": "Browse calculators",
-    "browseDeveloper": "Browse tools"
+    "convertersTitle": "Fájlkonverterek",
+    "convertersDesc": "Hang, videó, képek, dokumentumok, adatok, betűtípusok és archívumok — plusz tömörítés, PDF egyesítés és háttér eltávolítása.",
+    "calculatorsTitle": "Kalkulátorok és átváltók",
+    "calculatorsDesc": "Valuta, ÁFA, dátumok, időzónák, mértékegységek és bitrate.",
+    "developerTitle": "Fejlesztői és szöveges eszközök",
+    "developerDesc": "Jelszavak, QR, Base64, UUID, hash, színek, timestamp és karacterszámláló.",
+    "specialTools": "Fájleszközök",
+    "browseConverters": "Konverterek böngészése",
+    "browseCalculators": "Kalkulátorok böngészése",
+    "browseDeveloper": "Eszközök böngészése"
+  },
+  "specialFields": {
+    "splitMode": "Felosztás módja",
+    "everyPage": "Minden oldal külön",
+    "pageRange": "Kiválasztott tartomány",
+    "pagesHint": "Oldalak (pl. 1-3,5)",
+    "rotation": "Forgatási szög",
+    "width": "Szélesség (px)",
+    "height": "Magasság (px, opcionális)",
+    "watermark": "Vízjel szöveg",
+    "trimStart": "Kezdet (mp vagy MM:SS)",
+    "trimEnd": "Vég (mp vagy MM:SS)",
+    "pageNumberPos": "Oldalszám pozíciója",
+    "bottom": "Oldal alja",
+    "top": "Oldal teteje"
+  },
+  "accountRecent": {
+    "title": "Nemrég használt",
+    "subtitle": "Előzmények helyileg mentve ebben a böngészőben."
+  },
+  "favorites": {
+    "add": "Hozzáadás a kedvencekhez",
+    "remove": "Kedvenc"
   }
 }

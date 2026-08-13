@@ -1,0 +1,797 @@
+{
+  "mp3-vs-wav": {
+    "title": "MP3 ve WAV — sesi ne zaman dönüştürmeli?",
+    "description": "MP3 ve WAV karşılaştırması: kayıplı ve kayıpsız sıkıştırma, dosya boyutu, DAW düzenleme ve hangi formatı seçmeli.",
+    "sections": [
+      {
+        "paragraphs": [
+          "MP3 kayıplı sıkıştırma kullanır — dosyalar küçüktür ancak bazı ses verileri kalıcı olarak kaybolur. WAV tam kaliteyi korur (kayıpsız veya sıkıştırılmamış) ancak dosyalar MP3'ten 10 kat daha büyük olabilir.",
+          "Pratikte: telefonda dinleme → MP3 yeterlidir. Audacity'de podcast düzenleme veya FL Studio'da miks → WAV veya FLAC ile çalışın."
+        ]
+      },
+      {
+        "title": "MP3 → WAV ne zaman dönüştürülür",
+        "paragraphs": [
+          "Bir platform veya uygulama daha fazla düzenleme için kayıpsız format gerektirdiğinde.",
+          "Birden fazla kesim, efekt ve mastering planladığınızda — MP3 üzerindeki her işlem kaliteyi düşürür.",
+          "Not: MP3 → WAV kaybolan kaliteyi geri getirmez, ancak düzenleme sırasında daha fazla bozulmayı durdurur."
+        ]
+      },
+      {
+        "title": "WAV → MP3 ne zaman dönüştürülür",
+        "paragraphs": [
+          "Kaydı e-posta veya sohbetle göndermek — daha küçük dosya = daha hızlı aktarım.",
+          "Podcast veya müziği dinlemek için yayınlamak, düzenlemek için değil.",
+          "Büyük bir ses kütüphanesinde disk alanından tasarruf etmek."
+        ]
+      }
+    ]
+  },
+  "pdf-to-jpg": {
+    "title": "PDF'yi baskı ve web için JPG'ye nasıl dönüştürülür",
+    "description": "PDF sayfalarını JPG olarak ne zaman dışa aktarmalı, hangi çözünürlük kullanılmalı ve PNG ne zaman daha iyidir.",
+    "sections": [
+      {
+        "paragraphs": [
+          "PDF sayfa düzenini korur. Bazen tek tek sayfalara görsel olarak ihtiyaç duyarsınız — web sitesi, PowerPoint veya tek sayfa baskı için.",
+          "Toolando.tech'teki PDF → JPG dönüştürücü her sayfayı ayrı bir JPG olarak oluşturur. Dosyalar asla saklanmaz — dönüştürmeden hemen sonra silinir."
+        ]
+      },
+      {
+        "title": "PDF'den JPG mi PNG mi?",
+        "paragraphs": [
+          "JPG — daha küçük dosyalar, fotoğraflar ve şeffaflık gerektirmeyen belgeler için ideal.",
+          "PNG — şeffaflıkla kayıpsız; metin ve keskin kenarlı grafikler için daha iyi."
+        ]
+      }
+    ]
+  },
+  "webp-avif-images": {
+    "title": "WebP ve AVIF — web siteleri için modern görsel formatları",
+    "description": "WebP ve AVIF vs JPG/PNG: sıkıştırma, tarayıcı desteği ve PageSpeed optimizasyonu.",
+    "sections": [
+      {
+        "paragraphs": [
+          "JPG ve PNG yıllardır web'e hükmediyor, ancak WebP aynı görsel kalitede JPG'den %25–35 daha küçük dosyalar üretir. AVIF daha da ileri gider — dosyalar WebP'nin yarısı kadar olabilir.",
+          "Tüm modern tarayıcılar WebP'yi destekler. AVIF eski Safari sürümlerinde biraz daha zayıf desteklenir."
+        ]
+      },
+      {
+        "title": "Dağıtım stratejisi",
+        "paragraphs": [
+          "Ürün fotoğrafları ve bannerlar için JPG → WebP dönüştürün — sayfa yüklemesini hızlandırır.",
+          "Eski tarayıcılar için JPG yedek olarak tutun (HTML <picture> etiketi).",
+          "Şeffaflıklı logolar için: JPG yerine PNG → WebP."
+        ]
+      }
+    ]
+  },
+  "extract-audio-from-video": {
+    "title": "Videodan ses çıkarma — yasal alternatif",
+    "description": "Kendi video dosyanızdan (MP4, MOV, MKV) yasal olarak ses parçası nasıl çıkarılır.",
+    "sections": [
+      {
+        "paragraphs": [
+          "Bazen bir video dosyanız vardır ve yalnızca sese ihtiyaç duyarsınız. Toolando.tech MP4, MOV, AVI, MKV'den sesi çıkarır ve MP3, WAV, FLAC veya AAC olarak kaydeder.",
+          "Bu kendi dosyanızda yasaldır — YouTube veya TikTok'tan müzik indirmek gibi değildir; Toolando.tech bunu bilinçli olarak sunmaz."
+        ]
+      }
+    ]
+  },
+  "json-csv-xml": {
+    "title": "JSON, CSV ve XML — formatlar arası veri dönüştürme",
+    "description": "JSON, CSV, TSV ve XML ne zaman kullanılır ve yapı kaybetmeden aralarında nasıl dönüştürülür.",
+    "sections": [
+      {
+        "paragraphs": [
+          "JSON REST API ve uygulama yapılandırması standardıdır. CSV ve TSV Excel içe aktarma için kullanılır. XML eski kurumsal sistemlerde ve RSS'te kullanılır.",
+          "JSON → CSV bir API yanıtını Excel'de açar. CSV → JSON veriyi REST API için hazırlar. Toolando.tech dönüştürme sırasında veri yapısını korur."
+        ]
+      }
+    ]
+  },
+  "online-file-security": {
+    "title": "Çevrimiçi araçlarda dosya güvenliği",
+    "description": "Toolando.tech dosyaları nasıl işler, araçlar tarayıcıda yerel ne zaman çalışır ve gizlilik ayrıntıları.",
+    "sections": [
+      {
+        "paragraphs": [
+          "Dosyaları çevrimiçi araçlara yüklemek doğal endişeler doğurur. Toolando.tech'te dosyalar yalnızca istediğiniz işlem için kullanılır — dönüştürme, sıkıştırma veya önizleme.",
+          "İşlem tamamlandıktan sonra dosyalar sunucudan silinir. Bazı araçlar (evrensel açıcı) tamamen tarayıcınızda çalışır — dosya bilgisayarınızdan çıkmaz. Bağlantı şifrelidir (HTTPS)."
+        ]
+      }
+    ]
+  },
+  "lossy-vs-lossless": {
+    "title": "Kayıplı ve kayıpsız sıkıştırma — basit rehber",
+    "description": "Kayıplı ve kayıpsız sıkıştırma nasıl farklıdır ve dönüştürürken kalite kaybı nasıl önlenir.",
+    "sections": [
+      {
+        "paragraphs": [
+          "Kayıplı formatlar (MP3, JPG, AAC, H.264) dosyaları küçültmek için veri atar. Kayıpsız formatlar (FLAC, PNG, WAV, ZIP) tüm veriyi korur ancak daha büyük dosyalar üretir.",
+          "Kural: kayıplı → kayıpsız dönüştürmeyi yalnızca gerektiğinde yapın — kaybolan kaliteyi geri alamazsınız. Kayıplı → kayıplı dönüştürmeyi yalnızca bir kez yapın — her yeniden dönüştürme sonucu bozar."
+        ]
+      }
+    ]
+  },
+  "heic-iphone-jpg": {
+    "title": "iPhone'dan HEIC — JPG'ye nasıl açılır ve dönüştürülür",
+    "description": "iPhone neden HEIC kaydeder, uyumluluk sorunları ve JPG veya PNG'ye nasıl dönüştürülür.",
+    "sections": [
+      {
+        "paragraphs": [
+          "Apple varsayılan olarak fotoğrafları HEIC olarak kaydeder — aynı kalitede JPG'den daha küçük. Sorun: eklenti olmadan Windows, eski uygulamalar ve birçok hizmet HEIC'yi desteklemez.",
+          "Çözüm: e-posta, yükleme veya baskıdan önce Toolando.tech'te HEIC → JPG veya HEIC → PNG dönüştürün. Ayarlar'dan iPhone'u \"En Uyumlu\" (JPG) olarak da ayarlayabilirsiniz."
+        ]
+      }
+    ]
+  },
+  "pdf-vs-docx": {
+    "title": "PDF ve DOCX — hangi format ne zaman?",
+    "description": "PDF ve DOCX farkları: düzenleme, baskı, arşivleme ve hangi yönde ne zaman dönüştürülmeli.",
+    "sections": [
+      {
+        "paragraphs": [
+          "DOCX (Word) metin düzenlemek içindir — içerik, stiller, başlıklar. PDF düzeni kilitler — her cihazda aynı, faturalar, sözleşmeler ve CV'ler için ideal.",
+          "\"Yalnızca okuma\" için göndermeden önce DOCX → PDF dönüştürün. Metni düzenlemeniz gerektiğinde yalnızca PDF → DOCX — düzen bozulabilir. Arşivleme ve baskı için her zaman PDF seçin."
+        ]
+      }
+    ]
+  },
+  "video-social-media": {
+    "title": "Sosyal medya için video — MP4, çözünürlük ve bit hızı",
+    "description": "Instagram, TikTok, YouTube için video nasıl hazırlanır: MP4 formatı, H.264, 1080p çözünürlük.",
+    "sections": [
+      {
+        "paragraphs": [
+          "Instagram, TikTok, YouTube ve Facebook H.264 video ve AAC sesli MP4 tercih eder. Yükleme hatalarından kaçınmak için yayınlamadan önce MOV, AVI veya MKV'yi MP4'e dönüştürün.",
+          "1080p (1920×1080) çoğu platform için yeterlidir. Daha yüksek bit hızı = daha iyi kalite ancak daha büyük dosya. MP4, WebM ve MOV ayrıntıları için format ansiklopedisine bakın."
+        ]
+      }
+    ]
+  },
+  "choose-audio-bitrate": {
+    "title": "Hangi MP3 veya AAC bit hızını seçmelisiniz?",
+    "description": "128 vs 192 vs 320 kbps — podcast, müzik ve video için disk alanı israf etmeden pratik seçimler.",
+    "sections": [
+      {
+        "paragraphs": [
+          "Bit hızı, saniye başına ses verisi miktarıdır. Daha yüksek bit hızı genellikle daha iyi ses ancak daha büyük dosyalar demektir. MP3'te 128 ile 320 kbps arasındaki fark iyi hoparlörlerde ve yoğun müzikte en çok duyulur.",
+          "Konuşma (podcast, röportaj) için 96–128 kbps mono genellikle yeterlidir. Kulaklıkta müzik için 192–256 kbps stereo sağlam bir denge sunar. 320 kbps pratik MP3 tavanıdır — format hâlâ kayıplı olduğu için daha yükseğe çıkmak nadiren işe yarar."
+        ]
+      },
+      {
+        "title": "MP3, AAC ve Opus — hızlı karşılaştırma",
+        "paragraphs": [
+          "AAC (M4A) aynı bit hızında genellikle MP3'ü geçer — YouTube ve Apple Music bunu kullanır.",
+          "Opus düşük bit hızlarında (64–128 kbps) VoIP ve akışta öne çıkar.",
+          "Stüdyo arşivleri için WAV veya FLAC saklayın — kayıplı bit hızı eksik veriyi geri getirmez."
+        ]
+      },
+      {
+        "title": "Yaygın hatalar",
+        "paragraphs": [
+          "Düşük kaliteli bir MP3'ü daha yüksek bit hızına yükseltmek sesi iyileştirmez — yalnızca dosya boyutu büyür.",
+          "Aynı parçayı birden fazla kez yeniden kodlamak (MP3 → AAC → MP3) her turda kaliteyi düşürür.",
+          "Video projeleri için başkasının müziğini indirmek yerine kendi MP4'ünüzden ses çıkarın — telif hakkı önemlidir."
+        ]
+      }
+    ]
+  },
+  "prepare-images-for-web": {
+    "title": "Web için görseller nasıl hazırlanır (JPG, WebP, AVIF)",
+    "description": "Çözünürlük, sıkıştırma ve format — görünür kalite kaybı olmadan sitenizi hızlandırın.",
+    "sections": [
+      {
+        "paragraphs": [
+          "Dev kamera fotoğrafları (4000×3000 px) her sayfayı yavaşlatır. Blog veya mağazaya yüklemeden önce gerçek görüntü boyutuna yeniden boyutlandırın — örn. hero banner için 1600 px genişlik.",
+          "JPG güvenli evrensel seçim olmaya devam eder. WebP ve AVIF aynı görsel kalitede daha küçük dosyalar üretir — eski tarayıcılar için <picture> yedeğiyle modern yığınlarda kullanın."
+        ]
+      },
+      {
+        "title": "JPG yerine ne zaman PNG",
+        "paragraphs": [
+          "Logolar, simgeler ve arayüz ekran görüntüleri — PNG veya kayıpsız WebP keskin kenarları korur.",
+          "Beyaz arka planlı ürün fotoğrafları genellikle JPG kalite 80–85 ile iyi sıkışır.",
+          "Aynı banner'ı tekrar tekrar JPG olarak kaydetmekten kaçının — her geçiş artefakt ekler."
+        ]
+      },
+      {
+        "title": "Yayın öncesi kontrol listesi",
+        "paragraphs": [
+          "1) Hedef genişliğe px cinsinden yeniden boyutlandırın. 2) Format seçin (JPG/WebP/AVIF). 3) Dosya ağırlığını kontrol edin (<200 KB küçük resimler, <500 KB büyük blog görselleri). 4) PageSpeed Insights çalıştırın ve LCP'yi önce/sonra karşılaştırın."
+        ]
+      }
+    ]
+  },
+  "docx-pdf-workflow": {
+    "title": "Ofis işleri için DOCX → PDF — ne zaman ve nasıl dönüştürülür",
+    "description": "CV, fatura ve sözleşme gönderme: PDF neden DOCX'i geçer ve bozuk yazı tipleri nasıl önlenir.",
+    "sections": [
+      {
+        "paragraphs": [
+          "DOCX düzenleme içindir — alıcının Word'ü varsa ve metni değiştirmesi gerekiyorsa harikadır. PDF okuma içindir — düzen, yazı tipleri ve kenar boşlukları Windows, Mac ve telefonda aynı görünür.",
+          "CV, teklif veya sözleşme göndermeden önce DOCX → PDF dönüştürün. Alıcılar içeriği yanlışlıkla düzenlemez ve markanızı bozan yedek yazı tiplerinden kaçınırsınız."
+        ]
+      },
+      {
+        "title": "PDF → DOCX ne zaman dönüştürülMEMELİ",
+        "paragraphs": [
+          "Taranmış faturalar ve imzalı sözleşmeler — PDF'yi arşiv olarak tutun; OCR ayrı bir adımdır.",
+          "Karmaşık çok sayfalı düzenler (kataloglar, broşürler) — DOCX dönüştürme genellikle sayfalandırmayı bozar.",
+          "Yalnızca bir metin parçasına ihtiyacınız varsa tüm dosyayı dönüştürmek yerine PDF'den kopyalayın."
+        ]
+      },
+      {
+        "title": "Güvenlik ve gizlilik",
+        "paragraphs": [
+          "Toolando.tech'te DOCX ve PDF dosyaları yalnızca dönüştürme için kullanılır ve işlem bitince silinir.",
+          "Hassas belgeler (kimlik, banka numaraları) için HTTPS kullanın ve şifreleme olmadan halka açık bulut sürücülerinde kopya bırakmayın."
+        ]
+      }
+    ]
+  },
+  "compress-images-without-quality-loss": {
+    "title": "JPG ve PNG görselleri görünür kalite kaybı olmadan nasıl sıkıştırılır",
+    "description": "Sıkıştırıcı ne zaman kullanılır, hangi kalite seviyesi seçilir ve sıkıştırma ile format dönüştürme farkı.",
+    "sections": [
+      {
+        "paragraphs": [
+          "Görsel sıkıştırma formatı değiştirmeden dosya boyutunu küçültür — hâlâ JPG veya PNG'niz vardır, sadece daha hafif. JPG → WebP dönüştürme formatı değiştirir ve web siteleri için genellikle daha iyidir, ancak baskı iş akışları JPG gerektirebilir.",
+          "Toolando.tech'te görsel sıkıştırıcıyı 2000×2000 px ürün fotoğraflarında test ettim: kalite %80'de dosya boyutu ekranda görünür artefakt olmadan %40–60 düştü."
+        ]
+      },
+      {
+        "title": "Ne zaman sıkıştır, ne zaman dönüştür",
+        "paragraphs": [
+          "Format uygunsa (örn. mağaza JPG gerektirir) ancak dosya e-posta veya CMS için çok ağırsa sıkıştırın.",
+          "Kendi sitenizde <picture> yedeğiyle yayınladığınızda WebP/AVIF'e dönüştürün.",
+          "Aynı JPG'yi birçok kez yeniden kaydetmeyin — her geçiş artefakt ekler."
+        ]
+      },
+      {
+        "title": "Tipik senaryolar",
+        "paragraphs": [
+          "E-posta eki: JPG kalite ~75–85, maks. genişlik 1600 px.",
+          "E-ticaret: JPG yedeğiyle WebP; küçük resimler 800 px.",
+          "Metinli arayüz ekran görüntüleri: PNG veya kayıpsız WebP — agresif JPG'den kaçının."
+        ]
+      }
+    ]
+  },
+  "merge-pdf-online-guide": {
+    "title": "Birden fazla PDF'yi birleştirme — ne zaman mantıklı",
+    "description": "Fatura, tarama ve ekleri birleştirme — sayfa sırası, kalite ve gizlilik.",
+    "sections": [
+      {
+        "paragraphs": [
+          "PDF birleştirme günlük ofis işidir: fatura + sözleşme + kimlik taraması tek eklentide. Toolando.tech dosyaları seçtiğiniz sırayla birleştirir.",
+          "PDF vektör metni ve bitmap taramaları korur — kaynaklar aşırı sıkıştırılmamışsa birleştirme tarama çözünürlüğünü düşürmez."
+        ]
+      },
+      {
+        "title": "Göndermeden önce",
+        "paragraphs": [
+          "Dosyaları mantıklı sırayla düzenleyin (kapak → içerik → ekler).",
+          "Taramalardaki yinelenen sayfaları kaldırın.",
+          "Alıcı mobildeyse ≤10–15 MB hedefleyin veya bulut bağlantısı paylaşın."
+        ]
+      },
+      {
+        "title": "Gizlilik",
+        "paragraphs": [
+          "İş ve kişisel belgeleri gizli olarak ele alın. Toolando işlem sonrası dosyaları siler; yine de hassas veriler için şirket politikanıza uyun."
+        ]
+      }
+    ]
+  },
+  "spreadsheet-csv-json-guide": {
+    "title": "CSV, JSON ve Excel — sayfalar ve API'ler arası veri taşıma",
+    "description": "CSV vs JSON ne zaman seçilir ve bozuk ondalıklar ile kodlama nasıl önlenir.",
+    "sections": [
+      {
+        "paragraphs": [
+          "CSV düz metindir — Excel, Google Sheets ve BI araçlarında açılır. JSON iç içe yapıları (API'ler, yapılandırmalar) işler. XLSX hücre türleri ve birden fazla sayfa ekler.",
+          "Tipik akış: API dışa aktarma JSON → JSON'dan CSV'ye → Excel'de analiz. Tersi: müşteri listesi CSV → JSON → REST API."
+        ]
+      },
+      {
+        "title": "Kodlama ve Excel",
+        "paragraphs": [
+          "ASCII dışı karakterler için UTF-8 CSV kullanın. Excel metni bozuyorsa Veri → Metinden içe aktar ile UTF-8 seçin.",
+          "CSV ayırıcıları yerel ayara göre değişir (virgül vs noktalı virgül). Açıklamalarda virgül varsa TSV (sekme) daha güvenlidir."
+        ]
+      },
+      {
+        "title": "Dönüştürme sonrası doğrulama",
+        "paragraphs": [
+          "Önce ve sonra satır sayılarını karşılaştırın.",
+          "JSON için anahtarları ve türleri kontrol edin — eksik bir tırnak tüm dosyayı bozar."
+        ]
+      }
+    ]
+  },
+  "video-compress-before-sharing": {
+    "title": "E-posta veya WhatsApp'tan önce videoyu küçültme",
+    "description": "MP4, çözünürlük, bit hızı — pratik boyut limitleri ve konteyner dönüştürme.",
+    "sections": [
+      {
+        "paragraphs": [
+          "MOV/MKV'deki telefon kayıtları yüzlerce MB olabilir. Birçok posta kutusu >25 MB ekleri engeller. Çözüm: MP4'e (H.264 + AAC) dönüştürün ve gerekirse çözünürlüğü düşürün.",
+          "720p telefon önizlemesi için genellikle yeterlidir; TV izleme için 1080p'yi koruyun."
+        ]
+      },
+      {
+        "title": "Göndermeden önce adımlar",
+        "paragraphs": [
+          "1) MOV/MKV → MP4 dönüştürün. 2) Dosya boyutunu kontrol edin. 3) Hâlâ çok büyükse bir video düzenleyicide gereksiz giriş/çıkışı kesin. 4) >25 MB ise bulut bağlantısı kullanın."
+        ]
+      }
+    ]
+  },
+  "font-woff2-for-websites": {
+    "title": "TTF, OTF, WOFF, WOFF2 — web için yazı tipleri",
+    "description": "@font-face için yazı tipi dönüştürme, lisanslar ve sayfa hızı etkisi.",
+    "sections": [
+      {
+        "paragraphs": [
+          "Tarayıcılar ham Windows yazı tipi dosyaları değil, CSS'te WOFF/WOFF2 (@font-face) gerektirir. WOFF2 en küçük aktarım boyutunu verir.",
+          "Toolando'nun TTF/OTF → WOFF2 dönüştürücüsü web'e hazır dosyalar üretir. Gömmeden önce yazı tipi lisansınızı kontrol edin."
+        ]
+      },
+      {
+        "title": "Performans",
+        "paragraphs": [
+          "Dosyalar büyükse profesyonel araçlarda yazı tiplerini kullanılan gliflere alt kümeleyin.",
+          "Above-the-fold metin için <head>'de kritik WOFF2'yi önceden yükleyin.",
+          "Yükleme sırasında metin okunabilir kalsın diye font-display: swap kullanın."
+        ]
+      }
+    ]
+  },
+  "toolando-editorial-standards": {
+    "title": "Toolando.tech editoryal standartları — rehberler nasıl yazılır",
+    "description": "Makaleler, dönüştürücü testleri ve format ansiklopedisi nasıl üretilir — okuyucular ve inceleyenler için şeffaflık.",
+    "sections": [
+      {
+        "paragraphs": [
+          "Toolando.tech Szymon Badyl (Badyl-Tech) tarafından tek başına geliştirilir. Rehberler toplu üretilmez veya Wikipedia'dan kopyalanmaz — gerçek dönüştürme testlerine dayanır.",
+          "Her makalenin yayın ve güncelleme tarihi vardır. Platform gereksinimleri veya kütüphaneler değiştiğinde metni revize ederim."
+        ]
+      },
+      {
+        "title": "Neleri test ediyorum",
+        "paragraphs": [
+          "Ses/video dönüştürücüler: süre, çıktı boyutu, VLC ve telefonda oynatma.",
+          "Görseller: görsel önce/sonra, PNG şeffaflığı, WebP vs JPG boyutu.",
+          "Belgeler: PDF ↔ DOCX sonrası düzen, CSV/JSON'da kodlama."
+        ]
+      },
+      {
+        "title": "Neleri vaat etmiyorum",
+        "paragraphs": [
+          "Kayıplı → kayıplı dönüştürmede \"%100 kalite\" yok.",
+          "Başkalarının YouTube/TikTok videolarını indirme yok — yalnızca dosyalarınızda yasal işlemler.",
+          "Google reklamları görünebilir, ancak editoryal içerik reklamverenlerden bağımsız yazılır."
+        ]
+      }
+    ]
+  },
+  "when-not-to-convert-files": {
+    "title": "Dosyayı NE ZAMAN dönüştürmemeli — kaliteyi bozan 7 durum",
+    "description": "Gereksiz dönüştürmelerden kaçının: orijinalleri saklayın, kayıpsız arşivler ve denemeden önce yedek.",
+    "sections": [
+      {
+        "paragraphs": [
+          "Çevrimiçi dönüştürücüler kullanışlıdır, ancak her işlem fayda sağlamaz. Bazen orijinali saklayın veya kayıpsız arşivler (ZIP, FLAC) kullanın.",
+          "Kural: kayıplı → kayıpsız dönüştürmede mucize beklemeyin — MP3 → WAV kaybolan veriyi geri getirmez."
+        ]
+      },
+      {
+        "title": "Olduğu gibi bırak",
+        "paragraphs": [
+          "Zaten şeffaflıklı PNG'niz var — sebepsiz JPG'ye dönüştürmeyin.",
+          "Tasarım projeleri — katmanlı kaynakları (PSD, SVG) saklayın; JPG'yi yalnızca sonunda dışa aktarın.",
+          "Stüdyo WAV/FLAC — final miks öncesine kadar MP3'e düzleştirmeyin.",
+          "Dijital imzalı PDF — dönüştürme imzayı geçersiz kılabilir."
+        ]
+      },
+      {
+        "title": "Dönüştür'e tıklamadan önce",
+        "paragraphs": [
+          "Orijinalin bir kopyasını saklayın.",
+          "Hedef platformun kaynak formatınızı zaten kabul edip etmediğini kontrol edin.",
+          "Gereksiz bir adımı atlamak için Toolando ansiklopedisindeki format karşılaştırmalarını okuyun."
+        ]
+      }
+    ]
+  },
+  "png-vs-jpg-photos-and-graphics": {
+    "title": "PNG ve JPG — fotoğraf mı metinli grafik mi",
+    "description": "Pratik seçimler: fotoğraflar, ekran görüntüleri, şeffaflıklı logolar ve baskı.",
+    "sections": [
+      {
+        "paragraphs": [
+          "PNG ve JPG en çok karıştırılan iki formattır. JPG fotoğrafları iyi sıkıştırır — gökyüzü, cilt, manzara — ancak keskin kenarları ve metni bozar. PNG her pikseli tam olarak korur, şeffaflık (alpha) dahil, ancak dosyalar aynı çözünürlükte JPG'den genellikle 5–10 kat daha büyüktür.",
+          "Toolando.tech testlerinde kullandığım kural: galeri veya sosyal medya fotoğrafı → JPG (veya JPG yedeğiyle WebP). Simge, logo, diyagram, arayüz ekran görüntüsü → PNG. Karışık fotoğraf + metin (örn. teklif kapağı) → genellikle PNG veya kayıpsız WebP."
+        ]
+      },
+      {
+        "title": "JPG ne zaman seçilir",
+        "paragraphs": [
+          "Şeffaflık olmadan kamera veya telefon fotoğrafları.",
+          "Arka plan düz ve alpha gerekmiyorsa ürün küçük resimleri.",
+          "E-posta ekleri — JPG kalite 80–85 genellikle makul bir denge sunar.",
+          "Ev fotoğraf baskısı — birçok servis yüksek çözünürlüklü JPG kabul eder (300 DPI eşdeğeri)."
+        ]
+      },
+      {
+        "title": "PNG ne zaman seçilir",
+        "paragraphs": [
+          "Şeffaf arka planlı web logosu — JPG her zaman beyaz veya siyah doldurur.",
+          "Arayüz, grafik, kod ekran görüntüleri — metin keskin kalır.",
+          "Az renkli düz grafikler (infografikler, uygulama simgeleri).",
+          "Daha fazla katmanlı düzenleme planlıyorsanız — kayıpsız PNG her kayıtta artefakt eklemez (tekrarlanan JPG'nin aksine)."
+        ]
+      },
+      {
+        "title": "Yaygın hatalar",
+        "paragraphs": [
+          "Logoyu JPG olarak kaydetmek — kenarlarda tırtıklanma ve şeffaflık yok.",
+          "4000×3000 fotoğrafı \"kalite için\" PNG olarak kaydetmek — 2 MB JPG yerine gereksiz 15 MB.",
+          "PNG → JPG → PNG döngüleri — her JPG geçişi kalite kaybeder; master'ı PNG'de tutun."
+        ]
+      }
+    ]
+  },
+  "flac-music-archive-guide": {
+    "title": "Müzik arşivi olarak FLAC — MP3'e karşı ne zaman değer",
+    "description": "Kayıpsız FLAC vs MP3 320 kbps: yedekler, ev akışı ve araba oynatıcıları.",
+    "sections": [
+      {
+        "paragraphs": [
+          "FLAC (Free Lossless Audio Codec) kayıpsız sıkıştırmadır — ses için ZIP gibi. Çözüldüğünde WAV ile aynı sinyali alırsınız, ancak dosya yaklaşık yarı alan kaplar. MP3 veriyi kalıcı olarak siler; 320 kbps bile CD rip ile bit düzeyinde aynı değildir.",
+          "Pratikte: kayıpsız müzik satın alıyorsanız veya kendi disklerinizi rip ediyorsanız FLAC mantıklı bir arşiv formatıdır. Bluetooth kulaklıklı telefonda FLAC vs MP3 256 kbps genellikle duyulmaz — MP3'e dönüştürmek gigabayt tasarruf sağlar."
+        ]
+      },
+      {
+        "title": "Arşiv iş akışı",
+        "paragraphs": [
+          "1) NAS / bulut yedeğinde FLAC (veya WAV) master.",
+          "2) Telefon ve araba için MP3/AAC çalışma kopyaları.",
+          "3) MP3 → FLAC'ı asla \"kalite için\" dönüştürmeyin — yalnızca dosyayı şişirir, veri geri gelmez.",
+          "Toolando.tech'te FLAC → MP3 dönüştürücüsünü 40–60 dakikalık albümlerde test ettim; dönüştürme sonrası oynatıcıda metadata (başlık, sanatçı) kontrol edin."
+        ]
+      },
+      {
+        "title": "Uyumluluk",
+        "paragraphs": [
+          "FLAC: VLC, Foobar2000, çoğu Android oynatıcı; yerel Apple Music'te daha zayıf (ALAC Apple'a daha uygun).",
+          "Araba stereoları genellikle USB'den yalnızca MP3/WMA/AAC okur — FLAC → MP3 gerekir.",
+          "Ev akışı (Plex, Jellyfin) FLAC'ı sorunsuz işler."
+        ]
+      }
+    ]
+  },
+  "zip-7z-rar-when-to-use": {
+    "title": "ZIP, 7z ve RAR — hangi arşiv gönderilmeli",
+    "description": "Boyut, uyumluluk ve şifreleme — ZIP ne zaman yeter, 7z veya RAR ne zaman yardımcı olur.",
+    "sections": [
+      {
+        "paragraphs": [
+          "Arşiv birçok dosyayı tek dosyada toplar — e-posta, bulut ve klasör yedeği için kullanışlı. ZIP evrensel standarttır: ek yazılım olmadan Windows, macOS ve Linux'ta açılır. 7z genellikle daha küçük sonuç verir, ancak alıcının 7-Zip gerekebilir. RAR eski iş akışlarında görünür; çevrimiçi RAR oluşturmanın lisans sınırları vardır — genellikle tersine göre RAR → ZIP dönüştürülür."
+        ]
+      },
+      {
+        "title": "ZIP ne zaman",
+        "paragraphs": [
+          "Müşteri veya kuruma gönderme — en düşük \"açılmıyor\" riski.",
+          "Kod, ofis belgeleri, JPG fotoğraf seti arşivleme.",
+          "Yalnızca .zip yüklemeleri kabul eden sistemler."
+        ]
+      },
+      {
+        "title": "7z ne zaman",
+        "paragraphs": [
+          "Büyük oyun klasörleri, video projeleri, harici diske yedek — daha küçük dosya = daha hızlı yükleme.",
+          "Alıcı teknik ve 7-Zip kurulu olduğunda.",
+          "ZIP → 7z dönüştürme bir kez mantıklıdır — aynı veriyi tekrar tekrar paketlemeyin."
+        ]
+      },
+      {
+        "title": "Güvenlik",
+        "paragraphs": [
+          "Arşiv şifresi tesadüfi açılmayı engeller, ancak hassas belgeler için uçtan uca şifrelemenin yerini tutmaz.",
+          "Antivirüs taraması olmadan bilinmeyen kaynaklardan arşiv açmayın.",
+          "Toolando arşivleri yalnızca konteyner dönüştürme süresince işler — içerik yasal ve size ait olmalıdır."
+        ]
+      }
+    ]
+  },
+  "svg-vs-png-logos-and-icons": {
+    "title": "SVG ve PNG — web için logolar ve simgeler",
+    "description": "Vektör vs raster: SVG ne zaman, @2x PNG ne zaman yeter.",
+    "sections": [
+      {
+        "paragraphs": [
+          "SVG matematiksel olarak tanımlanan vektör grafiktir — her ekranda pikselleşme olmadan ölçeklenir. PNG sabit çözünürlüklü bitmap'tir; retina'da genellikle 2× sürüm gerekir. Web sitelerinde logolar ve basit simgeler neredeyse her zaman SVG (veya simge yazı tipi) olmalıdır, dosya fotoğraf içermiyorsa.",
+          "Toolando.tech'teki SVG → PNG dönüştürücü, matbaa 300 DPI PNG istediğinde veya sistem SVG reddettiğinde yardımcı olur."
+        ]
+      },
+      {
+        "title": "SVG avantajları",
+        "paragraphs": [
+          "Mobil ve masaüstü için tek dosya — daha az CSS, srcset yok.",
+          "Basit simgelerde CSS fill ile kolay renk değişimi.",
+          "Ağır PNG hero'lardan daha iyi Lighthouse skorları."
+        ]
+      },
+      {
+        "title": "SVG yerine ne zaman PNG",
+        "paragraphs": [
+          "Gradyan, gölge veya vektörden kötü dışa aktarılan efektli logo.",
+          "Open Graph / sosyal önizleme küçük resimleri — platformlar zaten rasterize eder.",
+          "SVG motoru olmayan masaüstü uygulamalar.",
+          "Satır içi SVG yanında <img>'de @2x PNG (örn. 512×512) yedek."
+        ]
+      }
+    ]
+  },
+  "podcast-export-mp3-aac-settings": {
+    "title": "Podcast dışa aktarma — MP3 mi AAC mi ve hangi bit hızı",
+    "description": "Audacity, Reaper veya telefonda kayıt sonrası ayarlar: mono, 44,1 kHz, makul sıkıştırma.",
+    "sections": [
+      {
+        "paragraphs": [
+          "Podcast'ler çoğunlukla konuşmadır — stüdyo müziği gibi stereo 320 kbps gerekmez. Çoğu platform (Spotify, Apple Podcasts, RSS barındırıcıları) yüklemeleri yeniden kodlar. Yine de iyi bir master gönderin: mono veya stereo, 44,1 veya 48 kHz, MP3 128–192 kbps veya AAC/M4A 128 kbps.",
+          "WAV veya FLAC'ta mı kaydettiniz? Final dışa aktarma neredeyse her zaman MP3 veya AAC'tir — Toolando.tech'te 30–60 dakikalık bölümlerde WAV → MP3 test ettim; ~30 MB WAV 128 kbps stereo'da ~28 MB'a düşer (mono konuşma ~15 MB olabilir)."
+        ]
+      },
+      {
+        "title": "Önerilen ayarlar",
+        "paragraphs": [
+          "Solo / tek sesli röportaj: mono, MP3 96–128 kbps.",
+          "Ayrı parçalarda iki ses: stereo 128 kbps.",
+          "Intro/outro müziği stereo, geri kalan mono — basitlik için tümünü stereo 128 kbps dışa aktarın.",
+          "64 kbps'ten kaçının — ucuz mikrofonlarda sert \"s\" sesleri ve arka plan gürültüsü."
+        ]
+      },
+      {
+        "title": "MP3 vs AAC (M4A)",
+        "paragraphs": [
+          "AAC aynı bit hızında genellikle MP3'ü geçer — Apple M4A tercih eder.",
+          "MP3 eski oynatıcılarda ve arabalarda en geniş uyumluluğa sahiptir.",
+          "Podcast barındırıcısına ham WAV yüklemeyin — yükleme sonsuza sürer."
+        ]
+      }
+    ]
+  },
+  "gif-vs-mp4-for-animations": {
+    "title": "GIF ve MP4 — sitelerde ve sosyal medyada animasyonlar",
+    "description": "Eski usul GIF ne zaman mantıklı, kısa MP4 veya WebM megabayt tasarrufu ne zaman sağlar.",
+    "sections": [
+      {
+        "paragraphs": [
+          "GIF her yerde oynar, ancak teknik olarak modern video sıkıştırması olmayan bir kare dizisidir — 5 saniyelik 720p animasyon 10–20 MB olabilir. Aynısı MP4'te (H.264) kabul edilebilir kalitede genellikle 500 KB–1 MB'a sığar.",
+          "Toolando.tech'te MP4 → GIF, platform video gömüme izin vermediğinde kısa döngüler (yükleyici, Slack tepkisi) için mantıklıdır. Kendi sitenizde MP4 veya WebM ile <video autoplay loop muted playsinline> tercih edin."
+        ]
+      },
+      {
+        "title": "GIF ne zaman",
+        "paragraphs": [
+          "Kısa döngü (<5 sn), küçük çözünürlük (≤480 px genişlik).",
+          "Platform gereksinimi (bazı forumlar yalnızca GIF).",
+          "Az renkli basit grafikler — o zaman GIF gerçekten hafif olabilir."
+        ]
+      },
+      {
+        "title": "MP4/WebM ne zaman",
+        "paragraphs": [
+          "Çok renkli, gradyanlı veya video klipli animasyon.",
+          "Web siteleri — daha iyi LCP ve daha az bant genişliği.",
+          "Instagram/TikTok video gerektirir, GIF değil."
+        ]
+      },
+      {
+        "title": "MP4 → GIF ipuçları",
+        "paragraphs": [
+          "Süreyi kısaltın — her saniye onlarca kare demektir.",
+          "Dönüştürmeden önce çözünürlüğü düşürün.",
+          "Araç sunuyorsa renk paletini sınırlayın (daha az banding)."
+        ]
+      }
+    ]
+  },
+  "tiff-and-png-for-document-scans": {
+    "title": "Belge taramaları — TIFF, PNG mi JPG mi",
+    "description": "Fatura ve sözleşmeler: kayıpsız depolama, çok sayfa ve PDF ne zaman yeter.",
+    "sections": [
+      {
+        "paragraphs": [
+          "Fatura veya sözleşme taramak tatil fotoğrafından farklıdır. Metin ve damgalar keskin kenar gerektirir — agresif JPG harfleri bulanıklaştırır. TIFF (genellikle LZW kayıpsız) ve PNG arşiv aşamasında daha güvenlidir. Gönderme ve OCR için genellikle yine PDF veya orta kaliteli JPG'ye dönülür.",
+          "Çok sayfalı TIFF tek dosyada birçok katman olabilir — her görüntüleyici desteklemez; ofisler ve müşteriler için çok sayfalı PDF daha anlaşılırdır (Toolando.tech'te PDF birleştirin)."
+        ]
+      },
+      {
+        "title": "Önerilen iş akışı",
+        "paragraphs": [
+          "Tarayıcı → sayfa başına PNG veya TIFF (baskı için 300 DPI, önizleme için 150 DPI).",
+          "Düzenleyicide döndürme/kırpma düzeltin.",
+          "Teslim için sayfaları tek PDF'de birleştirin.",
+          "Alıcı PDF kabul etmiyorsa isteğe bağlı JPG kalite 90."
+        ]
+      },
+      {
+        "title": "Nelerden kaçınılmalı",
+        "paragraphs": [
+          "Faturada JPG kalite 60 — tutarlar okunamaz olabilir.",
+          "Tekrarlanan TIFF → JPG → TIFF döngüleri.",
+          "A4 metin için \"tedbir\" amaçlı 600 DPI renkli tarama — gigabayt fayda olmadan."
+        ]
+      }
+    ]
+  },
+  "markdown-to-pdf-workflow": {
+    "title": "Markdown'dan PDF'ye — dokümantasyon, README ve notlar",
+    "description": "MD → HTML → PDF/DOCX: düzenleyici dışa aktarma ne zaman yeter, çevrimiçi dönüştürücü ne zaman yardımcı olur.",
+    "sections": [
+      {
+        "paragraphs": [
+          "Markdown yazmak içindir — başlıklar, listeler, kod — WYSIWYG düzeni olmadan. Geliştiriciler README.md'yi depolarda tutar; sonra müşteri veya baskı için PDF gerekir. Tipik yol: MD → HTML (render) → tarayıcı \"PDF olarak yazdır\" veya daha iyi sayfa başlıkları için MD → DOCX → PDF.",
+          "Toolando.tech'te MD → HTML ve DOCX → PDF dönüştürücülerini 20–40 KB dosyalarda test ettim; MD UTF-8 ise Türkçe karakterler ve kod blokları düzgün geçer."
+        ]
+      },
+      {
+        "title": "Hangi yol ne zaman",
+        "paragraphs": [
+          "Hızlı önizleme: MD → HTML, tarayıcıda açın.",
+          "Sayfa numaralı resmi belge: MD → DOCX (veya düzenleyici), şirket stili, sonra DOCX → PDF.",
+          "Stilsiz düz notlar: MD → TXT yeter."
+        ]
+      },
+      {
+        "title": "İyi MD alışkanlıkları",
+        "paragraphs": [
+          "Bir dosya = bir konu; uzun belgeleri bölümlere ayırın.",
+          "Görselleri göreli bağlayın — dönüştürme sonrası yolları kontrol edin.",
+          "MD tabloları PDF'de bozulabilir — tablo verisi için CSV veya DOCX düşünün."
+        ]
+      }
+    ]
+  },
+  "extract-images-from-pdf-pages": {
+    "title": "PDF sayfalarından görseller nasıl çıkarılır (JPG, PNG, WebP)",
+    "description": "Slaytlar, kataloglar ve taramalar — sayfayı görsel olarak dışa aktarma ne zaman mantıklı ve hangi çözünürlük.",
+    "sections": [
+      {
+        "paragraphs": [
+          "PDF bir konteynerdir — içinde vektörler, yazı tipleri ve gömülü bitmapler olabilir. PDF → JPG her sayfayı raster görsel olarak oluşturur. Tek bir gömülü logoyu çıkarmakla aynı değildir (PDF düzenleyici gerekir), ancak slaytlar, posterler ve taramalar için iyi çalışır.",
+          "16:9 sunum 1920 px genişlikte PNG'ye dışa aktarıldığında ekranda keskin görünür; A4 baskı için araç yüksek çözünürlük destekliyorsa ~2480×3508 px (300 DPI) hedefleyin."
+        ]
+      },
+      {
+        "title": "JPG vs PNG vs WebP",
+        "paragraphs": [
+          "Fotoğraf arka planlı slayt → JPG veya WebP.",
+          "Grafik ve metinli slayt → PNG (daha keskin tipografi).",
+          "Web sitesi küçük resmi → daha fazla dönüştürme sonrası JPG yedeğiyle WebP."
+        ]
+      },
+      {
+        "title": "Çok sayfalı PDF'ler",
+        "paragraphs": [
+          "Yalnızca 5. ve 12. slaytlara ihtiyacınız varsa tek sayfaları dışa aktarın.",
+          "Tüm sayfaların galerisi için — tüm dosyayı dönüştürün ve dosya adlarındaki numaraya göre sıralayın.",
+          "Telif hakkına saygı gösterin — başkasının PDF'si özgürce yayınlayacağınız görseliniz değildir."
+        ]
+      }
+    ]
+  },
+  "convert-video-to-gif-properly": {
+    "title": "Videodan iyi GIF nasıl yapılır — çözünürlük, FPS ve süre",
+    "description": "Dev dosya olmadan MP4/MOV'dan GIF'e: pratik limitler ve alternatifler.",
+    "sections": [
+      {
+        "paragraphs": [
+          "GIF'te ses yoktur ve H.264 kullanmaz — her kare tam bitmap'tir (genellikle 256 renk paleti). 10 saniyelik 1080p klip GIF olarak orijinal videodan daha ağır olabilir. Hedef: kısa, küçük, düşük çözünürlük.",
+          "MP4 → GIF öncesinde klipi harici düzenleyicide 2–4 saniyeye kesin ve 30 yerine 10–15 FPS kullanın — GIF yine de film akıcılığını geri getirmez."
+        ]
+      },
+      {
+        "title": "Başlangıç parametreleri",
+        "paragraphs": [
+          "Meme ve tepkiler için maks. genişlik 480–640 px.",
+          "Maks. süre 5 sn — üzerinde döngülü MP4 düşünün.",
+          "Basit arka planlar (yeşil ekran) gradyan ve gürültüden daha kolay sıkışır."
+        ]
+      },
+      {
+        "title": "Dönüştürme sonrası",
+        "paragraphs": [
+          "Dosya boyutunu kontrol edin — 5 MB üzeri GIF sayfada nadiren mantıklıdır.",
+          "GIF çok büyükse GIF → MP4 ve <video> gömme genellikle sorunu çözer.",
+          "Toolando videonuzu yalnızca dönüştürme süresince işler — bitmiş GIF'leri halka açık barındırmaz."
+        ]
+      }
+    ]
+  },
+  "split-pdf-pages-guide": {
+    "title": "PDF çevrimiçi nasıl ayrı sayfalara bölünür",
+    "description": "PDF ne zaman bölünür, sayfa aralıkları nasıl seçilir ve ZIP çıktısıyla ne yapılır.",
+    "sections": [
+      {
+        "paragraphs": [
+          "PDF bölmek, çok sayfalı sözleşme veya fatura taradıktan sonra yaygındır — tek sayfayı e-postayla göndermeniz veya parçayı başka yere eklemeniz gerekebilir.",
+          "Toolando.tech'te her sayfayı ayrı dışa aktarabilir veya aralık belirtebilirsiniz (örn. 1-3,5). Sonuç, her biri orijinal vektör veya tarama kalitesini koruyan PDF dosyalarından oluşan bir ZIP'tir."
+        ]
+      },
+      {
+        "title": "Ne zaman böl, ne zaman birleştir",
+        "paragraphs": [
+          "Böl — alıcı yalnızca parça istediğinde (imza sayfası, ek, kapak).",
+          "Birleştir — taramaları arşiv veya gönderim için tek dosyada topladığınızda.",
+          "Böldükten sonra sayfa numaralandırma veya büyük taramaları sıkıştırmayı düşünün."
+        ]
+      }
+    ]
+  },
+  "remove-exif-privacy-guide": {
+    "title": "Fotoğraflarda EXIF — yayınlamadan önce ne silinmeli",
+    "description": "EXIF metadata'da GPS, kamera modeli ve tarih — gizlilik riskleri ve kaldırma.",
+    "sections": [
+      {
+        "paragraphs": [
+          "EXIF, JPEG, PNG veya HEIC dosyalarındaki gizli metadata'dır: GPS konumu, telefon modeli, yönelim, bazen önizleme küçük resmi. Sosyal ağlar genellikle siler, ancak kendi siteniz, bülten veya e-posta eki her zaman silmez.",
+          "Çocuk, ev içi veya masadaki belge fotoğraflarını yayınlamadan önce EXIF'i özel bir araçla kaldırın — Toolando'da işlem sunucuda yapılır ve dosya harici bir yapay zeka bulutuna gönderilmez."
+        ]
+      },
+      {
+        "title": "EXIF kaldırıldıktan sonra ne kalır",
+        "paragraphs": [
+          "Görsel pikselleri değişmez. Yalnızca metadata silinir — çözünürlük etkilenmez.",
+          "EXIF temizledikten sonra dosyayı sıkıştırabilir veya portföy yayınlamadan önce filigran ekleyebilirsiniz."
+        ]
+      }
+    ]
+  },
+  "jwt-decode-safely-guide": {
+    "title": "JWT — imza doğrulamadan token nasıl okunur",
+    "description": "Header, payload ve Base64URL — yerel ne zaman çözülür ve neler yapılmamalı.",
+    "sections": [
+      {
+        "paragraphs": [
+          "JSON Web Token üç noktayla ayrılmış bölümden oluşur: header, payload ve signature. Toolando'daki JWT çözücü Base64URL çözümünden sonra header ve payload gösterir — token sunucuya gönderilmeden (tarayıcıda çalışır).",
+          "Bu backend'de imza doğrulamanın yerini tutmaz. Çözme hata ayıklama içindir (örn. süresi dolmuş `exp`, yanlış `aud`) — payload'u tek başına kimlik kanıtı saymayın."
+        ]
+      },
+      {
+        "title": "Güvenli uygulamalar",
+        "paragraphs": [
+          "Kişisel verili üretim token'larını halka açık sitelere yapıştırmayın — yerel çözücü veya test ortamı kullanın.",
+          "401 hatalarını ayıklamadan önce `exp` ve `nbf` kontrol edin.",
+          "Analiz sonrası token'ı pano geçmişi ve loglardan temizleyin."
+        ]
+      }
+    ]
+  },
+  "mortgage-loan-calculator-guide": {
+    "title": "Kredi hesaplayıcı — taksit, faiz ve nelere dikkat edilmeli",
+    "description": "Annüite, ücretler ve sigorta — konut kredisi hesaplayıcı sonucu nasıl okunur.",
+    "sections": [
+      {
+        "paragraphs": [
+          "Toolando'daki kredi hesaplayıcı annüite taksiti hesaplar: anapara artı faizden oluşan sabit aylık tutar. Daha uzun vade taksiti düşürür — ancak toplam faiz maliyetini artırır.",
+          "Bunu banka görüşmesi için başlangıç noktası olarak değerlendirin, teklif olarak değil. Gerçek taksit referans faiz, marj, ücretler, hayat sigortası ve peşinata bağlıdır."
+        ]
+      },
+      {
+        "title": "Hesaplayıcının ötesinde neler eklenmeli",
+        "paragraphs": [
+          "Tahsis ücreti ve erken ödeme cezası (sözleşmede varsa).",
+          "Konut ve hayat sigortası — genellikle banka tarafından zorunlu tutulur.",
+          "Ev alımında noter masrafları ve tapu harçları."
+        ]
+      }
+    ]
+  }
+}

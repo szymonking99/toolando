@@ -1,0 +1,34 @@
+{
+  "premiumPage": {
+    "title": "Toolando Premium",
+    "premiumTitle": "Premium"
+  },
+  "nav": {
+    "premium": "Premium"
+  },
+  "opener": {
+    "kindVideo": "Video",
+    "kinds": {
+      "video": "Video"
+    }
+  },
+  "footer": {
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "messenger": "Messenger",
+    "youtube": "YouTube"
+  },
+  "account": {
+    "premiumBadge": "Premium"
+  },
+  "downloader": {
+    "eyebrow": "Video → MP3",
+    "inputPlaceholder": "https://www.tiktok.com/@user/video/...",
+    "idLabel": "ID"
+  },
+  "pages": {
+    "terms": {
+      "s2PremiumTerm": "Premium"
+    }
+  }
+}

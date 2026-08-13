@@ -1,0 +1,797 @@
+{
+  "mp3-vs-wav": {
+    "title": "MP3 与 WAV — 何时转换音频？",
+    "description": "MP3 与 WAV 对比：有损与无损压缩、文件大小、DAW 编辑，以及该选哪种格式。",
+    "sections": [
+      {
+        "paragraphs": [
+          "MP3 使用有损压缩——文件小，但部分音频数据会永久丢失。WAV 保留完整音质（无损或未压缩），但文件可能比 MP3 大 10 倍。",
+          "实际使用中：手机听歌 → MP3 足够。在 Audacity 剪辑播客或在 FL Studio 混音 → 请用 WAV 或 FLAC。"
+        ]
+      },
+      {
+        "title": "何时将 MP3 → WAV",
+        "paragraphs": [
+          "当平台或应用要求无损格式以便继续编辑时。",
+          "当你计划多次剪切、加效果或母带处理时——每次在 MP3 上操作都会降低音质。",
+          "注意：MP3 → WAV 无法恢复已丢失的音质，但可在编辑过程中避免进一步劣化。"
+        ]
+      },
+      {
+        "title": "何时将 WAV → MP3",
+        "paragraphs": [
+          "通过邮件或聊天发送录音——文件更小 = 传输更快。",
+          "发布供收听的播客或音乐，而非供编辑。",
+          "在大型音频库中节省磁盘空间。"
+        ]
+      }
+    ]
+  },
+  "pdf-to-jpg": {
+    "title": "如何将 PDF 转为 JPG 用于打印和网页",
+    "description": "何时将 PDF 页面导出为 JPG、该用多大分辨率，以及何时 PNG 更合适。",
+    "sections": [
+      {
+        "paragraphs": [
+          "PDF 保留页面版式。有时你需要单独的图片页面——用于网站、PowerPoint 或打印某一页。",
+          "Toolando.tech 的 PDF → JPG 转换器将每一页渲染为单独的 JPG。文件从不存储——转换后立即删除。"
+        ]
+      },
+      {
+        "title": "从 PDF 导出 JPG 还是 PNG？",
+        "paragraphs": [
+          "JPG——文件更小，适合照片和无透明通道的文档。",
+          "PNG——无损且支持透明；更适合带文字和锐利边缘的图形。"
+        ]
+      }
+    ]
+  },
+  "webp-avif-images": {
+    "title": "WebP 与 AVIF — 面向网站的现代图片格式",
+    "description": "WebP 与 AVIF 对比 JPG/PNG：压缩、浏览器支持及 PageSpeed 优化。",
+    "sections": [
+      {
+        "paragraphs": [
+          "JPG 和 PNG 多年来主导网页，但 WebP 在相同视觉质量下比 JPG 小 25–35%。AVIF 更进一步——文件可能只有 WebP 的一半大小。",
+          "所有现代浏览器都支持 WebP。AVIF 在较旧版 Safari 上支持略弱。"
+        ]
+      },
+      {
+        "title": "部署策略",
+        "paragraphs": [
+          "将 JPG → WebP 用于产品图和横幅——加快页面加载。",
+          "为旧浏览器保留 JPG 作为后备（HTML <picture> 标签）。",
+          "带透明度的 Logo：PNG → WebP，而非 JPG。"
+        ]
+      }
+    ]
+  },
+  "extract-audio-from-video": {
+    "title": "从视频中提取音频 — 合法替代方案",
+    "description": "如何合法地从您自己的视频文件（MP4、MOV、MKV）中提取音轨。",
+    "sections": [
+      {
+        "paragraphs": [
+          "有时你只有视频文件，却只需要音频。Toolando.tech 可从 MP4、MOV、AVI、MKV 提取音频，并保存为 MP3、WAV、FLAC 或 AAC。",
+          "对你自己的文件这样做是合法的——与从 YouTube 或 TikTok 下载音乐不同，Toolando.tech 有意不提供后者。"
+        ]
+      }
+    ]
+  },
+  "json-csv-xml": {
+    "title": "JSON、CSV 与 XML — 在格式间转换数据",
+    "description": "何时使用 JSON、CSV、TSV 和 XML，以及如何在不丢失结构的情况下互相转换。",
+    "sections": [
+      {
+        "paragraphs": [
+          "JSON 是 REST API 和应用配置的标准。CSV 和 TSV 用于 Excel 导入。XML 用于较旧的企业系统和 RSS。",
+          "JSON → CSV 可在 Excel 中打开 API 响应。CSV → JSON 为 REST API 准备数据。Toolando.tech 在转换时保留数据结构。"
+        ]
+      }
+    ]
+  },
+  "online-file-security": {
+    "title": "在线工具中的文件安全",
+    "description": "Toolando.tech 如何处理文件、哪些工具在浏览器本地运行，以及隐私细节。",
+    "sections": [
+      {
+        "paragraphs": [
+          "将文件上传到在线工具会自然引发担忧。在 Toolando.tech，文件仅用于你请求的操作——转换、压缩或预览。",
+          "任务完成后，文件会从服务器删除。部分工具（通用打开器）完全在浏览器中运行——文件不会离开你的电脑。连接已加密（HTTPS）。"
+        ]
+      }
+    ]
+  },
+  "lossy-vs-lossless": {
+    "title": "有损与无损压缩 — 简明指南",
+    "description": "有损与无损压缩有何不同，以及转换时如何避免质量损失。",
+    "sections": [
+      {
+        "paragraphs": [
+          "有损格式（MP3、JPG、AAC、H.264）丢弃数据以缩小文件。无损格式（FLAC、PNG、WAV、ZIP）保留全部数据，但文件更大。",
+          "原则：仅在必要时将有损转为无损——无法恢复已丢失的质量。有损 → 有损只应转换一次——每次重转都会劣化结果。"
+        ]
+      }
+    ]
+  },
+  "heic-iphone-jpg": {
+    "title": "iPhone 的 HEIC — 如何打开并转为 JPG",
+    "description": "iPhone 为何保存 HEIC、兼容性问题，以及如何转为 JPG 或 PNG。",
+    "sections": [
+      {
+        "paragraphs": [
+          "Apple 默认以 HEIC 保存照片——同等质量下比 JPG 更小。问题：未装扩展的 Windows、旧应用和许多服务不支持 HEIC。",
+          "解决方案：在发邮件、上传或打印前，在 Toolando.tech 将 HEIC → JPG 或 HEIC → PNG。也可在 iPhone 设置中选「最兼容」（JPG）。"
+        ]
+      }
+    ]
+  },
+  "pdf-vs-docx": {
+    "title": "PDF 与 DOCX — 何时用哪种格式？",
+    "description": "PDF 与 DOCX 的区别：编辑、打印、归档，以及何时该向哪个方向转换。",
+    "sections": [
+      {
+        "paragraphs": [
+          "DOCX（Word）用于编辑文本——内容、样式、标题。PDF 锁定版式——在各设备上显示一致，适合发票、合同和简历。",
+          "发送「仅供阅读」前将 DOCX → PDF。仅在需要编辑文字时将 PDF → DOCX——版式可能错乱。归档和打印请始终选 PDF。"
+        ]
+      }
+    ]
+  },
+  "video-social-media": {
+    "title": "社交媒体视频 — MP4、分辨率与码率",
+    "description": "如何为 Instagram、TikTok、YouTube 准备视频：MP4 格式、H.264、1080p 分辨率。",
+    "sections": [
+      {
+        "paragraphs": [
+          "Instagram、TikTok、YouTube 和 Facebook 偏好 H.264 视频 + AAC 音频的 MP4。发布前将 MOV、AVI 或 MKV 转为 MP4，避免上传错误。",
+          "1080p（1920×1080）对大多数平台足够。码率越高 = 画质越好但文件越大。详见格式百科中的 MP4、WebM、MOV 说明。"
+        ]
+      }
+    ]
+  },
+  "choose-audio-bitrate": {
+    "title": "该选多少 MP3 或 AAC 码率？",
+    "description": "128 与 192 与 320 kbps——播客、音乐和视频的实际选择，不浪费磁盘空间。",
+    "sections": [
+      {
+        "paragraphs": [
+          "码率是每秒音频的数据量。码率通常越高音质越好，但文件也越大。MP3 在 128 与 320 kbps 之间的差异，在好音箱和复杂音乐上最明显。",
+          "语音（播客、访谈）单声道 96–128 kbps 往往足够。耳机听音乐时，立体声 192–256 kbps 是稳妥折中。320 kbps 是 MP3 的实际上限——再提高很少有用，因为格式仍是有损的。"
+        ]
+      },
+      {
+        "title": "MP3、AAC 与 Opus — 快速对比",
+        "paragraphs": [
+          "相同码率下 AAC（M4A）通常优于 MP3——YouTube 和 Apple Music 因此使用它。",
+          "Opus 在低码率（64–128 kbps）的 VoIP 和流媒体中表现出色。",
+          "录音室归档请保留 WAV 或 FLAC——有损码率无法恢复缺失数据。"
+        ]
+      },
+      {
+        "title": "常见错误",
+        "paragraphs": [
+          "将低质量 MP3 升码到更高码率不会改善听感——只会增大文件。",
+          "同一曲目多次重编码（MP3 → AAC → MP3）每次都会降低质量。",
+          "视频项目请从自己的 MP4 提取音频，而非下载他人音乐——版权很重要。"
+        ]
+      }
+    ]
+  },
+  "prepare-images-for-web": {
+    "title": "如何为网页准备图片（JPG、WebP、AVIF）",
+    "description": "分辨率、压缩与格式——在不明显损失画质的情况下加快网站速度。",
+    "sections": [
+      {
+        "paragraphs": [
+          "巨大的相机照片（4000×3000 px）会拖慢每一页。上传到博客或商店前，请缩放到实际显示尺寸——例如横幅宽度 1600 px。",
+          "JPG 仍是稳妥的通用选择。WebP 和 AVIF 在相同视觉质量下文件更小——在现代技术栈中使用，并为旧浏览器提供 <picture> 后备。"
+        ]
+      },
+      {
+        "title": "何时用 PNG 而非 JPG",
+        "paragraphs": [
+          "Logo、图标和界面截图——PNG 或无损 WebP 保持锐利边缘。",
+          "白底产品图往往用 JPG 质量 80–85 压缩效果良好。",
+          "避免反复将同一横幅另存为 JPG——每次都会增加伪影。"
+        ]
+      },
+      {
+        "title": "发布前检查清单",
+        "paragraphs": [
+          "1）缩放到目标宽度（px）。2）选择格式（JPG/WebP/AVIF）。3）检查文件大小（缩略图 <200 KB，大图 <500 KB）。4）运行 PageSpeed Insights，对比前后 LCP。"
+        ]
+      }
+    ]
+  },
+  "docx-pdf-workflow": {
+    "title": "办公场景 DOCX → PDF — 何时以及如何转换",
+    "description": "发送简历、发票和合同：为何 PDF 优于 DOCX，以及如何避免字体错乱。",
+    "sections": [
+      {
+        "paragraphs": [
+          "DOCX 用于编辑——收件人有 Word 且需改文字时很合适。PDF 用于阅读——版式、字体和边距在 Windows、Mac 和手机上完全一致。",
+          "发送简历、方案或合同前将 DOCX → PDF。收件人不会误改内容，也避免替代字体破坏品牌样式。"
+        ]
+      },
+      {
+        "title": "何时不要 PDF → DOCX",
+        "paragraphs": [
+          "扫描发票和已签合同——保留 PDF 作为存档；OCR 是另一步。",
+          "复杂多页版式（目录、宣传册）——转 DOCX 常破坏分页。",
+          "若只需一段文字，从 PDF 复制即可，不必转换整个文件。"
+        ]
+      },
+      {
+        "title": "安全与隐私",
+        "paragraphs": [
+          "在 Toolando.tech，DOCX 和 PDF 仅用于转换，任务结束后删除。",
+          "敏感文件（证件、银行账号）请使用 HTTPS，勿在未加密公共云盘留副本。"
+        ]
+      }
+    ]
+  },
+  "compress-images-without-quality-loss": {
+    "title": "如何压缩 JPG 和 PNG 图片且无明显质量损失",
+    "description": "何时使用压缩器、选什么质量级别，以及压缩与格式转换的区别。",
+    "sections": [
+      {
+        "paragraphs": [
+          "压缩图片是在不改变格式的情况下缩小文件——仍是 JPG 或 PNG，只是更轻。JPG → WebP 会改格式，对网站往往更好，但印刷流程可能要求 JPG。",
+          "在 Toolando.tech 上，我对 2000×2000 产品图测试了图片压缩器：质量 80% 时，文件缩小 40–60%，屏幕上无可见伪影。"
+        ]
+      },
+      {
+        "title": "何时压缩 vs 转换",
+        "paragraphs": [
+          "格式已合适（如商店要求 JPG）但文件对邮件或 CMS 太大时——压缩。",
+          "在自己的网站发布且可用 <picture> 后备时——转为 WebP/AVIF。",
+          "切勿多次重存同一 JPG——每次都会增加伪影。"
+        ]
+      },
+      {
+        "title": "典型场景",
+        "paragraphs": [
+          "邮件附件：JPG 质量约 75–85，最大宽度 1600 px。",
+          "电商：WebP + JPG 后备；缩略图 800 px。",
+          "带文字的界面截图：PNG 或无损 WebP——避免激进 JPG。"
+        ]
+      }
+    ]
+  },
+  "merge-pdf-online-guide": {
+    "title": "合并多个 PDF 为一个 — 何时有意义",
+    "description": "合并发票、扫描件和附件——页序、质量与隐私。",
+    "sections": [
+      {
+        "paragraphs": [
+          "合并 PDF 是日常办公任务：发票 + 合同 + 证件扫描放在一个附件里。Toolando.tech 按你选择的顺序合并文件。",
+          "PDF 保留矢量文字和位图扫描——若源文件未过度压缩，合并不会降低扫描分辨率。"
+        ]
+      },
+      {
+        "title": "发送前",
+        "paragraphs": [
+          "按逻辑排序（封面 → 正文 → 附件）。",
+          "删除扫描中的重复页。",
+          "若收件人用手机，目标 ≤10–15 MB，或通过云链接分享。"
+        ]
+      },
+      {
+        "title": "隐私",
+        "paragraphs": [
+          "将商务和个人文档视为机密。Toolando 处理完成后删除文件；敏感数据仍须遵守公司政策。"
+        ]
+      }
+    ]
+  },
+  "spreadsheet-csv-json-guide": {
+    "title": "CSV、JSON 与 Excel — 在表格与 API 间移动数据",
+    "description": "何时选 CSV 还是 JSON，以及如何避免小数和编码出错。",
+    "sections": [
+      {
+        "paragraphs": [
+          "CSV 是纯文本——可在 Excel、Google 表格和 BI 工具中打开。JSON 处理嵌套结构（API、配置）。XLSX 增加单元格类型和多工作表。",
+          "典型流程：API 导出 JSON → JSON 转 CSV → Excel 分析。反向：客户列表 CSV → JSON → REST API。"
+        ]
+      },
+      {
+        "title": "编码与 Excel",
+        "paragraphs": [
+          "非 ASCII 字符请用 UTF-8 CSV。若 Excel 乱码，通过「数据 → 自文本」导入并选 UTF-8。",
+          "CSV 分隔符因区域设置而异（逗号或分号）。描述中含逗号时，TSV（制表符）更安全。"
+        ]
+      },
+      {
+        "title": "转换后验证",
+        "paragraphs": [
+          "对比转换前后的行数。",
+          "JSON 请检查键和类型——少一个引号会破坏整个文件。"
+        ]
+      }
+    ]
+  },
+  "video-compress-before-sharing": {
+    "title": "邮件或 WhatsApp 发送前缩小视频",
+    "description": "MP4、分辨率、码率——实用大小限制与容器转换。",
+    "sections": [
+      {
+        "paragraphs": [
+          "手机录制的 MOV/MKV 可能达数百 MB。许多邮箱阻止 >25 MB 的附件。解决：转为 MP4（H.264 + AAC），必要时降低分辨率。",
+          "720p 对手机预览往往足够；要在电视上看请保留 1080p。"
+        ]
+      },
+      {
+        "title": "发送前步骤",
+        "paragraphs": [
+          "1）MOV/MKV → MP4。2）检查文件大小。3）若仍太大——在视频编辑器中剪掉多余片头片尾。4）若 >25 MB 请用云链接。"
+        ]
+      }
+    ]
+  },
+  "font-woff2-for-websites": {
+    "title": "TTF、OTF、WOFF、WOFF2 — 网页字体",
+    "description": "为 @font-face 转换字体、许可与对页面速度的影响。",
+    "sections": [
+      {
+        "paragraphs": [
+          "浏览器需要 CSS 中的 WOFF/WOFF2（@font-face），而非原始 Windows 字体文件。WOFF2 传输体积最小。",
+          "Toolando 的 TTF/OTF → WOFF2 转换器生成可直接用于网页的文件。嵌入前请检查字体许可。"
+        ]
+      },
+      {
+        "title": "性能",
+        "paragraphs": [
+          "文件较大时，在专业工具中子集化到所用字形。",
+          "在 <head> 中预加载关键 WOFF2，用于首屏文字。",
+          "使用 font-display: swap，加载期间文字仍可读。"
+        ]
+      }
+    ]
+  },
+  "toolando-editorial-standards": {
+    "title": "Toolando.tech 编辑标准 — 指南如何撰写",
+    "description": "文章、转换器测试与格式百科如何产出——面向读者与审核者的透明度。",
+    "sections": [
+      {
+        "paragraphs": [
+          "Toolando.tech 由 Szymon Badyl（Badyl-Tech）独立构建。指南非批量生成或摘自维基——基于真实转换测试。",
+          "每篇文章有发布与更新日期。平台要求或库变更时，我会修订正文。"
+        ]
+      },
+      {
+        "title": "我测试的内容",
+        "paragraphs": [
+          "音视频转换器：耗时、输出大小、VLC 与手机播放。",
+          "图片：前后视觉对比、PNG 透明、WebP 与 JPG 大小。",
+          "文档：PDF ↔ DOCX 后版式、CSV/JSON 编码。"
+        ]
+      },
+      {
+        "title": "我不承诺的事",
+        "paragraphs": [
+          "有损 → 有损转换不承诺「100% 质量」。",
+          "不提供下载他人 YouTube/TikTok 视频——仅对你文件的合法操作。",
+          "可能出现 Google 广告，但编辑内容与广告主无关。"
+        ]
+      }
+    ]
+  },
+  "when-not-to-convert-files": {
+    "title": "何时不要转换文件 — 7 种损害质量的情况",
+    "description": "避免多余转换：保留原件、无损归档，实验前先备份。",
+    "sections": [
+      {
+        "paragraphs": [
+          "在线转换器很方便，但并非每次操作都有益。有时保留原格式或使用无损归档（ZIP、FLAC）更好。",
+          "原则：不要指望有损 → 无损能奇迹般恢复——MP3 → WAV 无法找回已丢数据。"
+        ]
+      },
+      {
+        "title": "保持原样",
+        "paragraphs": [
+          "已有带透明度的 PNG——无必要不要转 JPG。",
+          "设计项目——保留分层源文件（PSD、SVG）；最后再导出 JPG。",
+          "录音室 WAV/FLAC——最终混音前不要压成 MP3。",
+          "数字签名 PDF——转换可能使签名失效。"
+        ]
+      },
+      {
+        "title": "点击转换前",
+        "paragraphs": [
+          "保留原件副本。",
+          "检查目标平台是否已接受源格式。",
+          "阅读 Toolando 格式百科对比，跳过无用步骤。"
+        ]
+      }
+    ]
+  },
+  "png-vs-jpg-photos-and-graphics": {
+    "title": "PNG 与 JPG — 照片 vs 带文字的图形",
+    "description": "实用选择：照片、截图、带透明 Logo 与印刷。",
+    "sections": [
+      {
+        "paragraphs": [
+          "PNG 和 JPG 是最常被混淆的两种格式。JPG 压缩照片很好——天空、皮肤、风景——但会破坏锐利边缘和文字。PNG 精确保留每个像素（含透明度 alpha），但同分辨率下文件常为 JPG 的 5–10 倍。",
+          "我在 Toolando.tech 测试中的原则：图库或社交照片 → JPG（或 WebP + JPG 后备）。图标、Logo、示意图、界面截图 → PNG。照片+文字混合（如报价封面）→ 常选 PNG 或无损 WebP。"
+        ]
+      },
+      {
+        "title": "何时选 JPG",
+        "paragraphs": [
+          "相机或手机照片且无透明通道。",
+          "背景纯色且不需要 alpha 的产品缩略图。",
+          "邮件附件——JPG 质量 80–85 通常是合理折中。",
+          "家庭冲印——许多店接受高分辨率 JPG（相当于 300 DPI）。"
+        ]
+      },
+      {
+        "title": "何时选 PNG",
+        "paragraphs": [
+          "透明背景网站 Logo——JPG 总会填白或黑。",
+          "界面、图表、代码截图——文字保持清晰。",
+          "少色扁平图形（信息图、应用图标）。",
+          "计划继续分层编辑时——无损 PNG 每次保存不增伪影（反复 JPG 则相反）。"
+        ]
+      },
+      {
+        "title": "常见错误",
+        "paragraphs": [
+          "Logo 存为 JPG——边缘锯齿且无透明。",
+          "4000×3000 照片存 PNG「为了质量」——无谓 15 MB 而非 2 MB JPG。",
+          "PNG → JPG → PNG 循环——每次 JPG 都损质量；主文件请用 PNG。"
+        ]
+      }
+    ]
+  },
+  "flac-music-archive-guide": {
+    "title": "FLAC 作为音乐归档 — 何时值得 vs MP3",
+    "description": "无损 FLAC 与 MP3 320 kbps：备份、家庭流媒体与车载播放器。",
+    "sections": [
+      {
+        "paragraphs": [
+          "FLAC（Free Lossless Audio Codec）是无损压缩——像音频的 ZIP。解码后与 WAV 信号相同，但体积约减半。MP3 永久删除数据；即使 320 kbps 也与 CD 翻录不完全一致。",
+          "实践中：若购买无损音乐或翻录自己的碟片，FLAC 是合理的归档格式。手机蓝牙耳机上 FLAC 与 MP3 256 kbps 往往听不出差别——转 MP3 可省数 GB。"
+        ]
+      },
+      {
+        "title": "归档工作流",
+        "paragraphs": [
+          "1）在 NAS/云备份上用 FLAC（或 WAV）做主文件。",
+          "2）手机与车载用 MP3/AAC 工作副本。",
+          "3）切勿 MP3 → FLAC「为了质量」——只会增大文件，无法恢复数据。",
+          "我在 Toolando.tech 上测试 FLAC → MP3 转换 40–60 分钟专辑；转换后请在播放器中核对元数据（标题、艺术家）。"
+        ]
+      },
+      {
+        "title": "兼容性",
+        "paragraphs": [
+          "FLAC：VLC、Foobar2000、多数 Android 播放器；原生 Apple Music 支持较弱（Apple 生态更适合 ALAC）。",
+          "车载音响常只读 U 盘 MP3/WMA/AAC——需 FLAC → MP3。",
+          "家庭流媒体（Plex、Jellyfin）完美支持 FLAC。"
+        ]
+      }
+    ]
+  },
+  "zip-7z-rar-when-to-use": {
+    "title": "ZIP、7z 与 RAR — 该发哪种压缩包",
+    "description": "大小、兼容性与加密——何时 ZIP 足够，何时 7z 或 RAR 更合适。",
+    "sections": [
+      {
+        "paragraphs": [
+          "压缩包将多个文件合为一个——便于邮件、云盘和文件夹备份。ZIP 是通用标准：Windows、macOS、Linux 无需额外软件即可打开。7z 通常更小，但收件人可能需要 7-Zip。RAR 出现在旧流程中；在线创建 RAR 有许可限制——更常做 RAR → ZIP 而非相反。"
+        ]
+      },
+      {
+        "title": "何时用 ZIP",
+        "paragraphs": [
+          "发给客户或机关——「打不开」风险最低。",
+          "归档代码、办公文档、一批 JPG 照片。",
+          "只接受 .zip 上传的系统。"
+        ]
+      },
+      {
+        "title": "何时用 7z",
+        "paragraphs": [
+          "大型游戏文件夹、视频项目、外置硬盘备份前——文件更小 = 上传更快。",
+          "收件人是技术人员且已装 7-Zip。",
+          "ZIP → 7z 转换做一次即可——勿反复打包相同数据。"
+        ]
+      },
+      {
+        "title": "安全",
+        "paragraphs": [
+          "压缩包密码防误开，但不能替代敏感文档的端到端加密。",
+          "勿在未杀毒的情况下解压来源不明的压缩包。",
+          "Toolando 仅在容器格式转换期间处理压缩包——内容须合法且属于你。"
+        ]
+      }
+    ]
+  },
+  "svg-vs-png-logos-and-icons": {
+    "title": "SVG 与 PNG — 网页 Logo 与图标",
+    "description": "矢量与位图：何时用 SVG，何时 @2x PNG 足够。",
+    "sections": [
+      {
+        "paragraphs": [
+          "SVG 是数学描述的矢量图——任意屏幕缩放无像素化。PNG 是固定分辨率位图；Retina 屏常需 2× 版本。网站 Logo 和简单图标几乎应始终用 SVG（或图标字体），除非内嵌照片。",
+          "Toolando.tech 的 SVG → PNG 转换器适用于印刷店要 300 DPI PNG 或系统不接受 SVG 时。"
+        ]
+      },
+      {
+        "title": "SVG 优势",
+        "paragraphs": [
+          "手机与桌面共用一个文件——更少 CSS，无需 srcset。",
+          "简单图标可通过 CSS fill 轻松改色。",
+          "Lighthouse 得分优于沉重 PNG 横幅。"
+        ]
+      },
+      {
+        "title": "何时用 PNG 而非 SVG",
+        "paragraphs": [
+          "带渐变、阴影或矢量导出效果差的 Logo。",
+          "Open Graph / 社交预览缩略图——平台反正会栅格化。",
+          "无 SVG 引擎的桌面应用。",
+          "导出 @2x PNG（如 512×512）作为内联 SVG 旁 <img> 后备。"
+        ]
+      }
+    ]
+  },
+  "podcast-export-mp3-aac-settings": {
+    "title": "播客导出 — MP3 还是 AAC，选什么码率",
+    "description": "在 Audacity、Reaper 或手机上录制后的设置：单声道、44.1 kHz、合理压缩。",
+    "sections": [
+      {
+        "paragraphs": [
+          "播客主要是语音——不需要像录音室音乐那样立体声 320 kbps。多数平台（Spotify、Apple Podcasts、RSS 托管）仍会重编码上传。仍应发送合格母带：单声道或立体声、44.1 或 48 kHz、MP3 128–192 kbps 或 AAC/M4A 128 kbps。",
+          "用 WAV 或 FLAC 录？最终导出几乎总是 MP3 或 AAC——我在 Toolando.tech 测试 30–60 分钟节目 WAV → MP3；约 30 MB WAV 在 128 kbps 立体声约 28 MB（纯语音单声道约 15 MB）。"
+        ]
+      },
+      {
+        "title": "推荐设置",
+        "paragraphs": [
+          "单人/单声访谈：单声道，MP3 96–128 kbps。",
+          "两轨分轨双人：立体声 128 kbps。",
+          "片头片尾音乐立体声、其余单声道——为简单可全片导出立体声 128 kbps。",
+          "避免 64 kbps——廉价麦克风上齿音和底噪刺耳。"
+        ]
+      },
+      {
+        "title": "MP3 与 AAC（M4A）",
+        "paragraphs": [
+          "相同码率下 AAC 通常优于 MP3——Apple 偏好 M4A。",
+          "MP3 在旧播放器和车载上兼容性最广。",
+          "勿向播客托管上传原始 WAV——上传极慢。"
+        ]
+      }
+    ]
+  },
+  "gif-vs-mp4-for-animations": {
+    "title": "GIF 与 MP4 — 网站与社交动画",
+    "description": "何时老式 GIF 有意义，何时短视频 MP4 或 WebM 可省数 MB。",
+    "sections": [
+      {
+        "paragraphs": [
+          "GIF 到处能播，但本质是帧序列、无现代视频压缩——5 秒 720p 动画可能 10–20 MB。同样内容 MP4（H.264）在可接受质量下常仅 500 KB–1 MB。",
+          "Toolando.tech 上 MP4 → GIF 适用于平台无法嵌入视频时的短循环（加载动画、Slack 表情）。自有网站请优先 <video autoplay loop muted playsinline> 配 MP4 或 WebM。"
+        ]
+      },
+      {
+        "title": "何时用 GIF",
+        "paragraphs": [
+          "短循环（<5 秒），小分辨率（宽 ≤480 px）。",
+          "平台要求（部分论坛仅 GIF）。",
+          "少色简单图形——此时 GIF 可以很轻。"
+        ]
+      },
+      {
+        "title": "何时用 MP4/WebM",
+        "paragraphs": [
+          "多色、渐变或视频片段动画。",
+          "网站——更好的 LCP 与更少带宽。",
+          "Instagram/TikTok 要求视频，非 GIF。"
+        ]
+      },
+      {
+        "title": "MP4 → GIF 技巧",
+        "paragraphs": [
+          "剪短时长——每秒数十帧。",
+          "转换前降低分辨率。",
+          "若工具支持，限制色板（减少色带）。"
+        ]
+      }
+    ]
+  },
+  "tiff-and-png-for-document-scans": {
+    "title": "文档扫描 — TIFF、PNG 还是 JPG",
+    "description": "发票与合同：无损存储、多页，以及何时 PDF 足够。",
+    "sections": [
+      {
+        "paragraphs": [
+          "扫描发票或合同与度假照不同。文字和印章需要锐利边缘——激进 JPG 会模糊字母。TIFF（常为 LZW 无损）和 PNG 更适合归档。发送和 OCR 时最终往往仍是 PDF 或中等质量 JPG。",
+          "多页 TIFF 可能是单文件多层——并非所有查看器都支持；对机关和客户，多页 PDF 更清晰（在 Toolando.tech 合并 PDF）。"
+        ]
+      },
+      {
+        "title": "推荐工作流",
+        "paragraphs": [
+          "扫描 → 每页 PNG 或 TIFF（印刷 300 DPI，预览 150 DPI）。",
+          "在编辑器中校正旋转/裁剪。",
+          "合并为一份 PDF 发送。",
+          "仅当收件人不接受 PDF 时可选 JPG 质量 90。"
+        ]
+      },
+      {
+        "title": "应避免",
+        "paragraphs": [
+          "发票用 JPG 质量 60——金额可能无法辨认。",
+          "反复 TIFF → JPG → TIFF。",
+          "A4 文字「以防万一」600 DPI 彩色扫描——数 GB 无收益。"
+        ]
+      }
+    ]
+  },
+  "markdown-to-pdf-workflow": {
+    "title": "Markdown 转 PDF — 文档、README 与笔记",
+    "description": "MD → HTML → PDF/DOCX：何时编辑器导出足够，何时在线转换器有用。",
+    "sections": [
+      {
+        "paragraphs": [
+          "Markdown 用于写作——标题、列表、代码——无 WYSIWYG 版式。开发者在仓库保留 README.md；之后需 PDF 给客户或印刷。典型路径：MD → HTML（渲染）→ 浏览器「打印为 PDF」，或 MD → DOCX → PDF 以更好控制页眉。",
+          "我在 Toolando.tech 测试 MD → HTML 与 DOCX → PDF，文件 20–40 KB；MD 为 UTF-8 时中文与代码块正常。"
+        ]
+      },
+      {
+        "title": "何时选哪条路径",
+        "paragraphs": [
+          "快速预览：MD → HTML，浏览器打开。",
+          "带页码的正式文档：MD → DOCX（或编辑器），公司样式，再 DOCX → PDF。",
+          "无样式纯笔记：MD → TXT 足够。"
+        ]
+      },
+      {
+        "title": "Markdown 好习惯",
+        "paragraphs": [
+          "一文件一主题；长文分章节。",
+          "图片用相对路径——转换后检查路径。",
+          "MD 表格在 PDF 中易出问题——表格数据考虑 CSV 或 DOCX。"
+        ]
+      }
+    ]
+  },
+  "extract-images-from-pdf-pages": {
+    "title": "如何从 PDF 页面提取图片（JPG、PNG、WebP）",
+    "description": "幻灯片、目录与扫描——何时将页面导出为图片及分辨率选择。",
+    "sections": [
+      {
+        "paragraphs": [
+          "PDF 是容器——内可有矢量、字体和嵌入位图。PDF → JPG 将每页渲染为栅格图。这与单独提取嵌入 Logo（需 PDF 编辑器）不同，但对幻灯片、海报和扫描效果很好。",
+          "16:9 演示导出为宽 1920 px 的 PNG 在屏幕上很清晰；A4 印刷若工具支持高分辨率，目标约 2480×3508 px（300 DPI）。"
+        ]
+      },
+      {
+        "title": "JPG vs PNG vs WebP",
+        "paragraphs": [
+          "带照片背景的幻灯片 → JPG 或 WebP。",
+          "带图表和文字的幻灯片 → PNG（文字更锐）。",
+          "网站缩略图 → WebP，再转换后 JPG 后备。"
+        ]
+      },
+      {
+        "title": "多页 PDF",
+        "paragraphs": [
+          "若只需第 5 和 12 页，可单独导出。",
+          "要全部页面图库——转换整文件并按文件名编号排序。",
+          "尊重版权——他人 PDF 不可随意公开发布。"
+        ]
+      }
+    ]
+  },
+  "convert-video-to-gif-properly": {
+    "title": "如何从视频做好 GIF — 分辨率、FPS、时长",
+    "description": "MP4/MOV 转 GIF 而不产生巨型文件：实用限制与替代方案。",
+    "sections": [
+      {
+        "paragraphs": [
+          "GIF 无声音且不用 H.264——每帧是完整位图（常为 256 色）。因此 10 秒 1080p GIF 可能比原视频还大。目标：短、小、低分辨率。",
+          "MP4 → GIF 前请在外部编辑器将片段剪至 2–4 秒，用 10–15 FPS 而非 30——GIF 本就无法恢复电影级流畅。"
+        ]
+      },
+      {
+        "title": "起始参数",
+        "paragraphs": [
+          "表情包和反应类最大宽度 480–640 px。",
+          "最长 5 秒——更长请考虑循环 MP4。",
+          "简单背景（绿幕）比渐变和噪点更易压缩。"
+        ]
+      },
+      {
+        "title": "转换后",
+        "paragraphs": [
+          "检查文件大小——页面上超过 5 MB 的 GIF 很少有意义。",
+          "若 GIF 太大，GIF → MP4 并用 <video> 嵌入常能解决问题。",
+          "Toolando 仅在转换期间处理你的视频——不公开托管成品 GIF。"
+        ]
+      }
+    ]
+  },
+  "split-pdf-pages-guide": {
+    "title": "如何在线将 PDF 拆分为单独页面",
+    "description": "何时拆分 PDF、如何选择页范围，以及如何处理 ZIP 输出。",
+    "sections": [
+      {
+        "paragraphs": [
+          "扫描多页合同或发票后拆分 PDF 很常见——你可能只需邮件发送一页或在别处附加片段。",
+          "在 Toolando.tech 可单独导出每页或指定范围（如 1-3,5）。结果为 ZIP 内的 PDF 文件，各保留原始矢量或扫描质量。"
+        ]
+      },
+      {
+        "title": "何时拆分 vs 合并",
+        "paragraphs": [
+          "拆分——收件人只需片段（签名页、附件、封面）。",
+          "合并——将扫描件组装成一份归档或发送文件。",
+          "拆分后可考虑加页码或压缩大扫描件。"
+        ]
+      }
+    ]
+  },
+  "remove-exif-privacy-guide": {
+    "title": "照片中的 EXIF — 发布前应删除什么",
+    "description": "EXIF 元数据中的 GPS、相机型号与日期——隐私风险与删除方法。",
+    "sections": [
+      {
+        "paragraphs": [
+          "EXIF 是 JPEG、PNG 或 HEIC 中的隐藏元数据：GPS 位置、手机型号、方向，有时还有预览缩略图。社交网络常会自动去除，但自有网站、通讯或邮件附件未必。",
+          "发布儿童、室内或桌面文档照片前，请用专用工具删除 EXIF——在 Toolando 上处理在服务器完成，文件不会发往外部 AI 云。"
+        ]
+      },
+      {
+        "title": "删除 EXIF 后保留什么",
+        "paragraphs": [
+          "图像像素不变。仅删除元数据——分辨率不受影响。",
+          "清除 EXIF 后仍可压缩文件或加水印再发布作品集。"
+        ]
+      }
+    ]
+  },
+  "jwt-decode-safely-guide": {
+    "title": "JWT — 如何在不验证签名的情况下读取令牌",
+    "description": "Header、payload 与 Base64URL——何时本地解码以及不该做什么。",
+    "sections": [
+      {
+        "paragraphs": [
+          "JSON Web Token 由点分隔的三部分组成：header、payload、signature。Toolando 的 JWT 解码器在 Base64URL 解码后显示 header 与 payload——不向服务器发送令牌（在浏览器中运行）。",
+          "这不能替代后端签名验证。解码用于调试（如过期 `exp`、错误 `aud`）——切勿仅凭 payload 当作身份证明。"
+        ]
+      },
+      {
+        "title": "安全实践",
+        "paragraphs": [
+          "勿在公开网站粘贴含个人数据的生产令牌——使用本地解码器或测试环境。",
+          "调试 401 错误前先检查 `exp` 和 `nbf`。",
+          "分析后从剪贴板历史和日志中清除令牌。"
+        ]
+      }
+    ]
+  },
+  "mortgage-loan-calculator-guide": {
+    "title": "贷款计算器 — 月供、利息与注意事项",
+    "description": "等额本息、费用与保险——如何解读房贷计算器结果。",
+    "sections": [
+      {
+        "paragraphs": [
+          "Toolando 上的贷款计算器计算等额本息：每月固定偿还本金加利息。期限越长月供越低——但总利息成本越高。",
+          "请将其作为与银行沟通的起点，而非正式报价。实际月供取决于基准利率、利差、费用、人寿保险和首付。"
+        ]
+      },
+      {
+        "title": "计算器之外还应计入",
+        "paragraphs": [
+          "放款手续费与提前还款费（若合同有约定）。",
+          "房屋与寿险——银行常要求。",
+          "购房时的公证费与过户税。"
+        ]
+      }
+    ]
+  }
+}

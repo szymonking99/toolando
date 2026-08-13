@@ -81,6 +81,11 @@ export default uiPack({
     "comparisonsCta": "Böngésszen az összehasonlítások között"
   },
   "footer": {
+    "emailAria": "Megnyitja az e-mail alkalmazást, hogy írjon nekünk",
+    "youtube": "YouTube",
+    "messenger": "Messenger",
+    "instagram": "Instagram",
+    "facebook": "Facebook",
     "guides": "Útmutatók",
     "formats": "Fájlformátumok",
     "comparisons": "Összehasonlítások",

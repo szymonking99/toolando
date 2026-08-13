@@ -18,11 +18,37 @@ const nextConfig = {
     "@pdf-lib/fontkit",
     "mammoth",
   ],
+  async headers() {
+    return [
+      {
+        source: "/(.*)",
+        headers: [
+          {
+            key: "Strict-Transport-Security",
+            value: "max-age=63072000; includeSubDomains; preload",
+          },
+          { key: "X-Content-Type-Options", value: "nosniff" },
+          { key: "X-Frame-Options", value: "SAMEORIGIN" },
+          {
+            key: "Referrer-Policy",
+            value: "strict-origin-when-cross-origin",
+          },
+          {
+            key: "Permissions-Policy",
+            value: "camera=(), microphone=(), geolocation=()",
+          },
+        ],
+      },
+    ]
+  },
   // Force-include ffmpeg binaries and PDF fonts in the serverless bundle.
   outputFileTracingIncludes: {
     "/api/convert": [
       "./node_modules/@ffmpeg-installer/**/ffmpeg*",
       "./lib/fonts/*.ttf",
+    ],
+    "/api/tools": [
+      "./node_modules/@ffmpeg-installer/**/ffmpeg*",
     ],
   },
 }

@@ -29,6 +29,10 @@ export const GUIDE_SLUGS = [
   "markdown-to-pdf-workflow",
   "extract-images-from-pdf-pages",
   "convert-video-to-gif-properly",
+  "split-pdf-pages-guide",
+  "remove-exif-privacy-guide",
+  "jwt-decode-safely-guide",
+  "mortgage-loan-calculator-guide",
 ] as const
 
 export type GuideSlug = (typeof GUIDE_SLUGS)[number]

@@ -1,0 +1,453 @@
+{
+  "socialProof": {
+    "toolsCount": "{count}+ verktyg i ett ekosystem",
+    "usesToday": "{uses} användningar idag"
+  },
+  "recent": {
+    "title": "Senast använda",
+    "subtitle": "Dina senaste verktyg — sparade lokalt i den här webbläsaren.",
+    "favoritesHint": "Stjärnmarkera ett verktyg på dess sida för att fästa det här."
+  },
+  "premiumUpsell": {
+    "title": "Lås upp AI-verktyg med Premium",
+    "description": "Textgenerering, sammanfattningar, bilder, översättning och chatt — ett abonnemang, inga överraskningar per förfrågan.",
+    "point1": "Alla AI-verktyg utan begränsningar",
+    "point2": "Prioriterad bearbetning på hektiska dagar",
+    "point3": "Stöd oberoende utveckling",
+    "cta": "Skaffa Premium",
+    "compare": "Se abonnemang",
+    "trialHint": "Logga in för en gratis förhandsvisning — uppgradera när du vill."
+  },
+  "privacyBadge": {
+    "title": "Integritet först",
+    "local": "Bearbetas lokalt i din webbläsare"
+  },
+  "onboarding": {
+    "skip": "Stäng",
+    "next": "Nästa",
+    "start": "Bläddra bland verktyg",
+    "learnMore": "Så fungerar Toolando",
+    "step1": {
+      "title": "Konvertera, räkna, öppna — ett ekosystem",
+      "body": "287+ verktyg för filer, kalkylatorer, utvecklarverktyg och AI — välj ett verktyg eller sök med Ctrl+K."
+    },
+    "step2": {
+      "title": "Integritet när det spelar roll",
+      "body": "Många verktyg körs i din webbläsare. Serverkonverteringar raderar filer när jobbet är klart."
+    },
+    "step3": {
+      "title": "AI-verktyg med Premium",
+      "body": "Prova konverterare gratis. AI-funktioner använder en enkel månadsplan — se priser innan du når en betalvägg."
+    }
+  },
+  "exitIntent": {
+    "title": "Innan du går…",
+    "body": "Behöver du en annan konverterare? Sök bland 287+ verktyg eller berätta vad vi ska bygga härnäst.",
+    "browse": "Bläddra bland verktyg",
+    "request": "Begär ett verktyg",
+    "close": "Stäng"
+  },
+  "nextSteps": {
+    "title": "Nästa steg",
+    "aiSummarizeTitle": "Sammanfatta dokument med AI",
+    "aiSummarizeBody": "Generera en PDF- eller DOCX-sammanfattning på några sekunder (Premium eller 1 försök/dag)."
+  },
+  "newsletter": {
+    "title": "Nya verktyg & Premium-uppdateringar",
+    "subtitle": "Lämna din e-post — vi meddelar dig om större funktioner (ingen spam).",
+    "placeholder": "you@example.com",
+    "cta": "Prenumerera",
+    "thanks": "Tack! Bekräfta via kontakt om du vill ha svar.",
+    "confirmViaContact": "Slutför registrering via kontaktformulär →",
+    "error": "Registreringen misslyckades. Försök igen."
+  },
+  "toolRequest": {
+    "title": "Saknar du en konverterare?",
+    "body": "Föreslå ett nytt verktyg eller format — vi prioriterar det användare efterfrågar.",
+    "cta": "Föreslå ett verktyg"
+  },
+  "comparison": {
+    "title": "Toolando vs molnuploadverktyg",
+    "subtitle": "Varför användare byter från generiska uploadkonverterare.",
+    "feature": "Funktion",
+    "competitor": "Typisk molnkonverterare",
+    "rows": {
+      "privacy": "Lokal förhandsvisning & integritetsalternativ",
+      "offline": "Fungerar offline (PWA-verktyg)",
+      "ai": "Integrerat AI-arbetsflöde",
+      "free": "Gratis kärnkonverterare",
+      "limits": "Inga godtyckliga dagliga uploadgränser för grundfunktioner"
+    }
+  },
+  "premiumPage": {
+    "title": "Toolando Premium",
+    "subtitle": "AI-verktyg, tydliga priser, avsluta när som helst.",
+    "freeTitle": "Gratis",
+    "freeDesc": "Alla filkonverterare, kalkylatorer och de flesta verktyg.",
+    "premiumTitle": "Premium",
+    "premiumDesc": "Fullständig AI-svit — text, bilder, sammanfattningar, översättning, chatt.",
+    "supporterTitle": "Supporter",
+    "supporterDesc": "Premium + reklamfri upplevelse (kommer snart).",
+    "cta": "Starta Premium",
+    "signIn": "Logga in för att prenumerera",
+    "faqTitle": "Vanliga frågor om priser",
+    "faq1q": "Hur fungerar credits?",
+    "faq1a": "Det finns inga credits per förfrågan — Premium är ett fast månadsabonnemang för obegränsad AI-användning.",
+    "faq2q": "Kan jag prova innan jag betalar?",
+    "faq2a": "Skapa ett gratis konto, utforska konverterare och uppgradera när du behöver AI.",
+    "faq3q": "Hur är det med filintegritet?",
+    "faq3a": "Serverfiler raderas efter bearbetning. Webbläsarverktyg laddar aldrig upp dina data."
+  },
+  "privacyPage": {
+    "title": "Integritet först från grunden",
+    "subtitle": "Hur Toolando skyddar dina filer och data.",
+    "localTitle": "Verktyg lokalt i webbläsaren",
+    "localBody": "Verktyg, den universella öppnaren och många kalkylatorer körs helt i din webbläsare — data lämnar aldrig din enhet.",
+    "serverTitle": "Serverkonverteringar",
+    "serverBody": "När du laddar upp för konvertering används filer endast för det jobbet och raderas därefter. HTTPS end-to-end.",
+    "aiTitle": "AI-verktyg",
+    "aiBody": "Premium AI skickar endast det innehåll du skickar in till modellleverantören — säljs aldrig eller används för reklam.",
+    "badge": "Privacy-First",
+    "readPolicy": "Läs fullständig integritetspolicy"
+  },
+  "nav": {
+    "categories": "Konverterarkategorier",
+    "downloader": "MP3 Downloader",
+    "aboutMe": "Om mig",
+    "privacy": "Integritetspolicy",
+    "terms": "Användarvillkor",
+    "premium": "Premium",
+    "guides": "Guider",
+    "faq": "FAQ",
+    "more": "Mer"
+  },
+  "share": {
+    "label": "Dela",
+    "copy": "Kopiera länk",
+    "copied": "Kopierad"
+  },
+  "recommender": {
+    "categories": {
+      "video": "Video"
+    }
+  },
+  "opener": {
+    "kindVideo": "Video",
+    "readError": "Kunde inte läsa filinnehållet.",
+    "dropAny": "Dra en fil hit eller klicka för att välja",
+    "dropHint": "Bilder, video, ljud, PDF, dokument, kod, data — alla format. Filer öppnas lokalt i din webbläsare och laddas aldrig upp någonstans.",
+    "noConverter": "Vi har ingen konverterare för det här formatet än — men du kan förhandsgranska och ladda ner filen nedan.",
+    "convertTo": "Konvertera till annat format",
+    "optionOne": "alternativ",
+    "optionMany": "alternativ",
+    "downloadedOk": "Klart! Filen har laddats ner.",
+    "download": "Ladda ner",
+    "close": "Stäng",
+    "emptyFile": "(tom fil)",
+    "textTruncated": "Förhandsvisning trunkerad till de första 200 000 tecknen. Ladda ner filen för att se allt.",
+    "binaryPreview": "Binär förhandsvisning (första bytes i hexadecimal)",
+    "kinds": {
+      "image": "Bild",
+      "video": "Video",
+      "audio": "Ljud",
+      "pdf": "PDF-dokument",
+      "text": "Text / kod",
+      "binary": "Binär fil"
+    }
+  },
+  "knowledgeHub": {
+    "glossaryTitle": "Ordlista",
+    "glossaryDesc": "Bitrate, codec, förlustkomprimering, MIME — definitioner på enkelt språk.",
+    "glossaryCta": "Öppna ordlista"
+  },
+  "editorial": {
+    "title": "Vem driver Toolando.tech",
+    "body": "Jag är Szymon — jag designar, bygger och testar varje verktyg själv. Guider baseras på riktiga konverteringar, inte kopierade specifikationer. Jag vill att du ska förstå dina filer innan du konverterar dem, och att tjänsten ska vara ärlig mot dig.",
+    "aboutCta": "Om mig & metodik",
+    "howCta": "Så fungerar verktygen",
+    "editorialCta": "Redaktionella standarder",
+    "guidesCta": "Guider"
+  },
+  "featuredGuides": {
+    "title": "Utvalda guider",
+    "subtitle": "Praktiska artiklar om filformat, säkerhet och konvertering — skrivna utifrån riktiga tester, inte SEO-mallar.",
+    "readArticle": "Läs guide",
+    "allGuides": "Alla guider"
+  },
+  "footer": {
+    "aboutMe": "Om mig",
+    "howItWorks": "Så fungerar det",
+    "faq": "FAQ",
+    "editorial": "Redaktion",
+    "rss": "RSS-flöde",
+    "cookieSettings": "Cookieinställningar",
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "messenger": "Messenger",
+    "youtube": "YouTube"
+  },
+  "ad": {
+    "label": "Annons",
+    "placeholder": "Annonsyta"
+  },
+  "tool": {
+    "convertFailed": "Konverteringen misslyckades.",
+    "connectionError": "Kunde inte ansluta till servern. Försök igen.",
+    "unavailable": "Denna konverterare är för närvarande otillgänglig",
+    "dropClick": "Dra en fil hit eller klicka för att välja",
+    "dropClickMulti": "Dra filer hit eller klicka för att välja",
+    "supportedFormat": "Format som stöds",
+    "supported": "Stöds",
+    "maxSize": "max. 500 MB",
+    "removeFile": "Ta bort fil",
+    "convertDone": "Konvertering klar",
+    "downloadNamed": "Ladda ner",
+    "convertAnother": "Konvertera en annan fil",
+    "uploadingFile": "Laddar upp fil…",
+    "uploadingFiles": "Laddar upp filer…",
+    "uploading": "Laddar upp…",
+    "converting": "Konverterar…",
+    "convertToPrefix": "Konvertera till",
+    "needTwoPdf": "Lägg till minst två PDF-filer för att slå ihop.",
+    "operationFailed": "Operationen misslyckades.",
+    "compressionQuality": "Komprimeringskvalitet",
+    "qualityHint": "Lägre värde = mindre fil. Högre värde = bättre kvalitet.",
+    "done": "Klar",
+    "less": "mindre",
+    "resultPreview": "Förhandsvisning av resultat",
+    "startOver": "Börja om",
+    "processingLong": "Bearbetar (det kan ta några sekunder)…"
+  },
+  "cookieConsent": {
+    "title": "Cookies"
+  },
+  "aiTool": {
+    "generateFailed": "Kunde inte generera ett svar.",
+    "noContent": "AI-tjänsten returnerade inget innehåll. Kontrollera att AI Gateway är aktiv (kräver betalkort).",
+    "connectionError": "Ett anslutningsfel inträffade. Försök igen.",
+    "dropDoc": "Dra ett dokument hit eller klicka för att välja",
+    "removeFile": "Ta bort fil",
+    "translatePlaceholder": "Klistra in texten som ska översättas…",
+    "copyPlaceholder": "Beskriv vad AI ska skriva, t.ex. \"en produktbeskrivning för en miljövänlig vattenflaska\"…",
+    "toneLabel": "Ton",
+    "targetLangLabel": "Målspråk",
+    "translate": "Översätt",
+    "summarizeDoc": "Sammanfatta dokument",
+    "generateText": "Generera text",
+    "imageFailed": "Kunde inte generera bilden.",
+    "imagePromptPlaceholder": "Beskriv bilden, t.ex. \"en futuristisk stad vid solnedgång, akvarellstil\"…",
+    "ratioSquare": "Kvadrat 1:1",
+    "ratioLandscape": "Landskap 3:2",
+    "ratioPortrait": "Porträtt 2:3",
+    "generatingImage": "Genererar bild (det kan ta flera sekunder)…",
+    "generateImage": "Generera bild",
+    "generatedImageAlt": "Genererad bild",
+    "downloadImage": "Ladda ner bild",
+    "tones": {
+      "professional": "professionell",
+      "friendly": "vänlig",
+      "energetic": "energisk",
+      "formal": "formell",
+      "playful": "lekfull",
+      "persuasive": "övertygande"
+    },
+    "languages": {
+      "english": "Engelska",
+      "german": "Tyska",
+      "spanish": "Spanska",
+      "french": "Franska",
+      "italian": "Italienska",
+      "ukrainian": "Ukrainska",
+      "polish": "Polska",
+      "japanese": "Japanska"
+    }
+  },
+  "paywall": {
+    "unlockTitle": "Lås upp \"{tool}\" med Premium",
+    "description": "Lås upp alla Toolando.tech AI-verktyg — text- och bildgenerering, översättning, sammanfattningar och assistenten — i ett abonnemang.",
+    "feature1": "Obegränsad åtkomst till alla AI-verktyg",
+    "feature2": "Textgenerator, bildgenerator och översättare",
+    "feature3": "Prioriterad bearbetning av förfrågningar",
+    "goPremium": "Uppgradera till Premium",
+    "redirecting": "Omdirigerar…",
+    "signInToBuy": "Logga in för att köpa Premium",
+    "noAccount": "Har du inget konto?",
+    "signUp": "Registrera dig"
+  },
+  "account": {
+    "backToHome": "Tillbaka till startsidan",
+    "yourAccount": "Ditt konto",
+    "premiumBadge": "Premium",
+    "freeBadge": "Gratis konto",
+    "premiumActiveTitle": "Du har aktivt Premium",
+    "premiumActiveDesc": "Tack för ditt stöd! Du har full åtkomst till alla AI-verktyg utan begränsningar.",
+    "manageSubscription": "Hantera abonnemang",
+    "manageOpening": "Öppnar…",
+    "managePortalError": "Kunde inte öppna portalen.",
+    "manageGenericError": "Ett fel inträffade.",
+    "goPremiumTitle": "Skaffa Premium",
+    "feature1": "Obegränsad åtkomst till AI-verktyg",
+    "feature2": "Borttagning av bakgrund, bild- och textgenerering",
+    "feature3": "Prioriterad bearbetning",
+    "buyPremium": "Köp Premium",
+    "buyRedirecting": "Omdirigerar…",
+    "refreshHint": "Betalt men Premium fortfarande inaktivt? Uppdatera din status:",
+    "refreshStatus": "Uppdatera Premium-status",
+    "refreshChecking": "Kontrollerar...",
+    "refreshNoSub": "Inget aktivt abonnemang hittades. Om du just betalat, vänta en stund och försök igen.",
+    "refreshFailed": "Kunde inte uppdatera status.",
+    "refreshNetworkError": "Ett nätverksfel inträffade. Försök igen.",
+    "signOut": "Logga ut"
+  },
+  "downloader": {
+    "eyebrow": "Video → MP3",
+    "title": "Multi-Platform → MP3 Downloader",
+    "subtitle": "Klistra in en länk från TikTok, Instagram, Facebook, Twitter/X, Vimeo eller SoundCloud och hämta ljudet.",
+    "metaDescription": "Multi-platform Video to MP3 Downloader — TikTok, Instagram, Facebook, Twitter, Vimeo, SoundCloud. Klistra in en länk och ladda ner ljudet.",
+    "back": "Alla verktyg",
+    "inputLabel": "Videolänk",
+    "inputPlaceholder": "https://www.tiktok.com/@user/video/...",
+    "detected": "identifierad",
+    "idLabel": "ID",
+    "invalidLink": "Ange en giltig länk från en plattform som stöds.",
+    "download": "Ladda ner MP3",
+    "preparing": "Förbereder din länk…",
+    "ready": "Din länk är klar.",
+    "openPage": "Öppna nedladdningssida",
+    "resultTitle": "Redo att ladda ner",
+    "resultsBack": "Tillbaka till downloader",
+    "thumbnailAlt": "Videominiatyr",
+    "viewSource": "Visa original",
+    "faqTitle": "Vanliga frågor",
+    "disclaimer": "Toolando.tech hostar eller laddar inte ner media. Den identifierar endast plattformen och det offentliga video-ID:t och vidarebefordrar till en extern tjänst eller din webbläsare. Ladda bara ner innehåll du har rättigheter till.",
+    "externalNote": "Nedladdning sker via en extern tjänst eller i din webbläsare. Toolando.tech fångade endast den offentliga plattformen och video-ID:t. Respektera upphovsrätt och varje plattforms användarvillkor.",
+    "platformDisabled": "Nedladdning från {platform} är tillfälligt otillgänglig — {platform} blockerar aktivt downloaders, så vi har pausat tills vår egen konverterare är klar. Alla andra plattformar fungerar fortfarande."
+  },
+  "pages": {
+    "editorial": {
+      "eyebrow": "Redaktion",
+      "title": "Redaktionella standarder för Toolando.tech",
+      "intro": "Toolando.tech är inte bara konverterare — det är guider, en formatencyklopedi och jämförelser. Nedan förklarar jag hur innehåll skapas, var information kommer ifrån och när den uppdateras.",
+      "whoTitle": "Vem skapar innehållet",
+      "whoP1": "Jag skriver varje guide, formatprofil och jämförelse själv — Szymon Badyl, skapare av Toolando.tech. Jag använder inte innehållsfabriker eller okontrollerade AI-texter.",
+      "whoP2": "Varje artikel baseras på konverteringstester med mina egna filer. Om något inte fungerar som beskrivet fixar jag både texten och verktyget.",
+      "standardsTitle": "Redaktionella principer",
+      "standardsIntro": "Jag tillämpar samma regler på varje ny guide:",
+      "sourcesTitle": "Källor och ärlighet",
+      "sourcesP1": "Jag verifierar formatspecifikationer (MIME, codecs) mot IANA, FFmpeg och leverantörsdokumentation. Jämförelser bygger på mina egna mätningar av storlek och kvalitet, inte marknadsföringstabeller.",
+      "sourcesP2": "Externa länkar visas endast när de verkligen hjälper (t.ex. officiell dokumentation). Jag marknadsför inte betalda konkurrentverktyg.",
+      "updatesTitle": "Uppdateringar och korrigeringar",
+      "updatesP1": "Hittat ett fel, föråldrad info eller har du ett ämnesförslag? Mejla badyltech@outlook.com — korrigeringar läggs in i artikeln med uppdateringsdatum.",
+      "updatedLabel": "Senast uppdaterad",
+      "updatedDate": "augusti 2026",
+      "fullGuideCta": "Fullständig guide om redaktionella standarder"
+    },
+    "howItWorks": {
+      "tiersPremiumTerm": "Premium"
+    },
+    "faq": {
+      "eyebrow": "FAQ"
+    },
+    "privacy": {
+      "eyebrow": "Integritetspolicy",
+      "title": "Integritetspolicy för Toolando.tech",
+      "intro": "Toolando.tech är en tjänst med onlineverktyg i en gratis och premiumvariant. Jag värnar om användarnas integritet och behandlar data i enlighet med gällande regler, inklusive GDPR.",
+      "lastUpdated": "Senast uppdaterad: 23 juli 2026",
+      "s1Title": "1. Personuppgiftsansvarig",
+      "s1Pre": "Personuppgiftsansvarig är Szymon Badyl, ägare av Toolando.tech (Polen). För integritetsfrågor kan du kontakta mig på:",
+      "s1Address": "Korrespondens: badyltech@outlook.com",
+      "s2Title": "2. Vilka uppgifter behandlas",
+      "s2Intro": "Tjänsten behandlar tekniska och statistiska uppgifter som samlas in automatiskt vid användning av webbplatsen:",
+      "s2Outro": "Om du kontaktar mig via e-post eller formulär behandlar jag även den e-postadress du anger och innehållet i ditt meddelande.",
+      "s3Title": "3. Filer uppladdade till verktygen",
+      "s3P": "Filer du laddar upp till verktygen för konvertering eller annan åtgärd lagras inte av mig. De används enbart för att utföra den uppgift du begär och raderas när den är klar. Jag använder dem inte för något annat syfte.",
+      "s4Title": "4. Cookies",
+      "s4Intro": "Tjänsten använder följande typer av cookies:",
+      "s4TechTerm": "Tekniska",
+      "s4TechDesc": "nödvändiga för att webbplatsen ska fungera korrekt och för att komma ihåg inställningar (t.ex. språk).",
+      "s4AnalyticsTerm": "Analytiska",
+      "s4AnalyticsDesc": "statistiska verktyg (t.ex. Google Analytics) som hjälper till att förstå hur webbplatsen används, i aggregerad och anonym form.",
+      "s4AdsTerm": "Reklam",
+      "s4AdsDesc": "Google AdSense, som kan använda cookies för att visa och anpassa annonser.",
+      "s4Outro": "Du kan hantera eller inaktivera cookies när som helst i webbläsarinställningarna. Vid ditt första besök visar vi en cookiebanner där du kan acceptera alla cookies eller begränsa dig till nödvändiga.",
+      "s4ThirdPartyTitle": "Tredjepartsleverantörer",
+      "s4ThirdPartyP": "Tjänsten använder Google-tjänster (Analytics, AdSense). Google kan samla in data enligt sin egen integritetspolicy. Mer information: https://policies.google.com/technologies/partner-sites",
+      "s5Title": "5. Gratis och premiumverktyg",
+      "s5P": "Toolando tillhandahåller gratis verktyg (tillgängliga utan konto) och premiumverktyg. Reglerna för databehandling och filskydd är desamma i båda varianterna — de skiljer sig endast i funktionsomfång och gränser.",
+      "s6Title": "6. Syfte med databehandling",
+      "s6Intro": "Jag behandlar data enbart för följande syften:",
+      "s7Title": "7. Dina rättigheter",
+      "s7Intro": "Du har rätt att:",
+      "s8Title": "8. Ändringar i policyn",
+      "s8P": "Integritetspolicyn kan uppdateras för att återspegla ändringar i tjänsten eller lagen. Den aktuella versionen finns alltid på denna sida."
+    },
+    "terms": {
+      "eyebrow": "Användarvillkor",
+      "title": "Användarvillkor för Toolando.tech",
+      "intro": "Villkoren nedan beskriver reglerna för användning av Toolando.tech-tjänsten. Genom att använda tjänsten accepterar du dessa regler.",
+      "s1Title": "1. Allmänna bestämmelser",
+      "s1P": "Ägaren av Toolando.tech är Szymon. Tjänsten tillhandahåller onlineverktyg för filkonvertering, innehållsgenerering och AI-verktyg.",
+      "s2Title": "2. Gratis och premiumverktyg",
+      "s2Intro": "Toolando erbjuder verktyg i två varianter:",
+      "s2FreeTerm": "Gratis",
+      "s2FreeDesc": "tillgängliga för alla, utan att skapa konto.",
+      "s2PremiumTerm": "Premium",
+      "s2PremiumDesc": "med mer avancerade funktioner och högre gränser.",
+      "s2Outro": "Regler för betalningar eller abonnemang för premiumfunktioner presenteras på relevanta ställen i tjänsten.",
+      "s3Title": "3. Användning på egen risk",
+      "s3P1": "Du använder tjänsten på egen risk. Jag gör mitt bästa för att verktygen ska fungera korrekt, men tjänsten tillhandahålls \"as is\", utan garanti för tillgänglighet, riktighet av resultat eller lämplighet för ett visst syfte.",
+      "s3P2": "Tjänsteägaren ansvarar inte för:",
+      "s3Outro": "Användaren förbinder sig att använda tjänsten i enlighet med lagen och ansvarar för det innehåll och de filer som behandlas.",
+      "s4Title": "4. Användarfiler",
+      "s4P": "Filer uppladdade till verktygen lagras inte. De används enbart för att utföra den begärda åtgärden och raderas när den är klar.",
+      "s5Title": "5. Annonser",
+      "s5P": "Tjänsten kan visa Google AdSense-annonser. Annonser hjälper till att underhålla gratisverktygen och utveckla projektet. Annonsleverantören kan använda cookies i enlighet med integritetspolicyn.",
+      "s6Title": "6. Upphovsrätt",
+      "s6P": "Namnet Toolando.tech, grafiska element och tjänstens innehåll är juridiskt skyddade. Kopiering och användning utan ägarens medgivande är förbjudet.",
+      "s7Title": "7. Kontakt",
+      "s7Pre": "För frågor relaterade till dessa villkor kan du kontakta mig på:",
+      "s8Title": "8. Ändringar i villkoren",
+      "s8P": "Villkoren kan uppdateras för att återspegla ändringar i tjänsten eller lagen. Den aktuella versionen finns alltid på denna sida."
+    },
+    "guides": {
+      "eyebrow": "Guider",
+      "title": "Guider och handledningar för filkonvertering",
+      "intro": "Praktiska artiklar om filformat, konvertering och bästa praxis. Varje guide förklarar när och varför du konverterar en fil, och hur du gör det säkert med Toolando.tech."
+    }
+  },
+  "hub": {
+    "convertersTitle": "Filkonverterare",
+    "convertersDesc": "Ljud, video, bilder, dokument, data, typsnitt och arkiv — plus komprimera, slå ihop PDF och ta bort bakgrund.",
+    "calculatorsTitle": "Kalkylatorer & omvandlare",
+    "calculatorsDesc": "Valuta, moms, datum, tidszoner, enheter och bitrate.",
+    "developerTitle": "Utvecklar- & textverktyg",
+    "developerDesc": "Lösenord, QR, Base64, UUID, hash, färger, tidsstämpel och teckenräknare.",
+    "specialTools": "Filverktyg",
+    "browseConverters": "Bläddra bland konverterare",
+    "browseCalculators": "Bläddra bland kalkylatorer",
+    "browseDeveloper": "Bläddra bland verktyg"
+  },
+  "specialFields": {
+    "splitMode": "Delningsläge",
+    "everyPage": "Varje sida separat",
+    "pageRange": "Valt intervall",
+    "pagesHint": "Sidor (t.ex. 1-3,5)",
+    "rotation": "Rotationsvinkel",
+    "width": "Bredd (px)",
+    "height": "Höjd (px, valfritt)",
+    "watermark": "Vattenstämpeltext",
+    "trimStart": "Start (sek eller MM:SS)",
+    "trimEnd": "Slut (sek eller MM:SS)",
+    "pageNumberPos": "Sidnummerposition",
+    "bottom": "Sidans botten",
+    "top": "Sidans topp"
+  },
+  "accountRecent": {
+    "title": "Senast använda",
+    "subtitle": "Historik sparad lokalt i den här webbläsaren."
+  },
+  "favorites": {
+    "add": "Lägg till i favoriter",
+    "remove": "Favorit"
+  }
+}

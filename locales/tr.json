@@ -3,10 +3,122 @@
     "title": "Toolando.tech — Tüm çevrimiçi araçlarınız tek bir yerde",
     "description": "Dönüştürücüler, oluşturucular, PDF ve yapay zekâ araçları — hepsi şık bir ekosistemde. Hızlı ve basit."
   },
+  "socialProof": {
+    "toolsCount": "{count}+ araç tek bir ekosistemde",
+    "usesToday": "Bugün {uses} kullanım"
+  },
+  "recent": {
+    "title": "Son kullanılanlar",
+    "subtitle": "Son araçlarınız — bu tarayıcıda yerel olarak kaydedildi.",
+    "favoritesHint": "Buraya sabitlemek için aracın sayfasından yıldızlayın."
+  },
+  "premiumUpsell": {
+    "title": "Premium ile AI araçlarının kilidini açın",
+    "description": "Metin oluşturma, özetler, görseller, çeviri ve sohbet — tek abonelik, istek başına sürpriz yok.",
+    "point1": "Tüm AI araçları sınırsız",
+    "point2": "Yoğun günlerde öncelikli işleme",
+    "point3": "Bağımsız geliştirmeyi destekleyin",
+    "cta": "Premium'a geç",
+    "compare": "Planları gör",
+    "trialHint": "Ücretsiz önizleme için giriş yapın — istediğiniz zaman yükseltin."
+  },
+  "privacyBadge": {
+    "title": "Gizlilik öncelikli",
+    "local": "Tarayıcınızda yerel olarak işlenir"
+  },
+  "onboarding": {
+    "skip": "Kapat",
+    "next": "İleri",
+    "start": "Araçlara göz at",
+    "learnMore": "Toolando nasıl çalışır",
+    "step1": {
+      "title": "Dönüştür, hesapla, aç — tek ekosistem",
+      "body": "Dosyalar, hesap makineleri, geliştirici araçları ve AI için 287+ araç — bir araç seçin veya Ctrl+K ile arayın."
+    },
+    "step2": {
+      "title": "Gizlilik önemli olduğunda",
+      "body": "Birçok yardımcı araç tarayıcınızda çalışır. Sunucu dönüşümleri iş bitince dosyaları siler."
+    },
+    "step3": {
+      "title": "Premium ile AI araçları",
+      "body": "Dönüştürücüleri ücretsiz deneyin. AI özellikleri basit aylık planda — paywall'a takılmadan önce fiyatları görün."
+    }
+  },
+  "exitIntent": {
+    "title": "Gitmeden önce…",
+    "body": "Farklı bir dönüştürücü mü lazım? 287+ araç arasında arayın veya sırada ne yapmamız gerektiğini söyleyin.",
+    "browse": "Araçlara göz at",
+    "request": "Araç iste",
+    "close": "Kapat"
+  },
+  "nextSteps": {
+    "title": "Sonraki adımlar",
+    "aiSummarizeTitle": "Belgeyi AI ile özetle",
+    "aiSummarizeBody": "Saniyeler içinde PDF veya DOCX özeti oluşturun (Premium veya günde 1 deneme)."
+  },
+  "newsletter": {
+    "title": "Yeni araçlar ve Premium güncellemeleri",
+    "subtitle": "E-postanızı bırakın — önemli özellikler hakkında bilgilendiririz (spam yok).",
+    "placeholder": "siz@example.com",
+    "cta": "Abone ol",
+    "thanks": "Teşekkürler! Yanıt istiyorsanız iletişimden onaylayın.",
+    "confirmViaContact": "Kaydı iletişim formu ile tamamla →",
+    "error": "Kayıt başarısız. Lütfen tekrar deneyin."
+  },
+  "toolRequest": {
+    "title": "Bir dönüştürücü mü eksik?",
+    "body": "Yeni bir araç veya format önerin — kullanıcı isteklerine öncelik veriyoruz.",
+    "cta": "Araç öner"
+  },
+  "comparison": {
+    "title": "Toolando vs. bulut yükleme araçları",
+    "subtitle": "Kullanıcılar neden tipik online dönüştürücülerden geçiyor.",
+    "feature": "Özellik",
+    "competitor": "Tipik bulut dönüştürücü",
+    "rows": {
+      "privacy": "Yerel önizleme ve gizlilik seçenekleri",
+      "offline": "Çevrimdışı çalışır (PWA yardımcıları)",
+      "ai": "Entegre AI iş akışı",
+      "free": "Ücretsiz temel dönüştürücüler",
+      "limits": "Temel işlemlerde keyfi günlük yükleme sınırı yok"
+    }
+  },
+  "premiumPage": {
+    "title": "Toolando Premium",
+    "subtitle": "AI araçları, net fiyatlandırma, istediğiniz zaman iptal.",
+    "freeTitle": "Ücretsiz",
+    "freeDesc": "Tüm dosya dönüştürücüleri, hesap makineleri ve çoğu yardımcı araç.",
+    "premiumTitle": "Premium",
+    "premiumDesc": "Tam AI paketi — metin, görseller, özetler, çeviri, sohbet.",
+    "supporterTitle": "Destekçi",
+    "supporterDesc": "Premium + reklamsız deneyim (yakında).",
+    "cta": "Premium'u başlat",
+    "signIn": "Abone olmak için giriş yap",
+    "faqTitle": "Fiyatlandırma SSS",
+    "faq1q": "Krediler nasıl çalışır?",
+    "faq1a": "İstek başına kredi yok — Premium, sınırsız AI kullanımı için sabit aylık aboneliktir.",
+    "faq2q": "Ödemeden önce deneyebilir miyim?",
+    "faq2a": "Ücretsiz hesap oluşturun, dönüştürücüleri keşfedin, AI gerektiğinde yükseltin.",
+    "faq3q": "Dosya gizliliği ne olacak?",
+    "faq3a": "Sunucu dosyaları işlendikten sonra silinir. Tarayıcı araçları verilerinizi asla yüklemez."
+  },
+  "privacyPage": {
+    "title": "Tasarımda gizlilik öncelikli",
+    "subtitle": "Toolando dosyalarınızı ve verilerinizi nasıl korur.",
+    "localTitle": "Tarayıcıda yerel araçlar",
+    "localBody": "Yardımcılar, evrensel açıcı ve birçok hesap makinesi tamamen tarayıcınızda çalışır — veriler cihazınızdan çıkmaz.",
+    "serverTitle": "Sunucu dönüşümleri",
+    "serverBody": "Dönüştürme için yüklediğinizde dosyalar yalnızca o iş için kullanılır ve ardından silinir. Uçtan uca HTTPS.",
+    "aiTitle": "AI araçları",
+    "aiBody": "Premium AI, modele yalnızca sizin gönderdiğiniz içeriği iletir — asla satılmaz veya reklam için kullanılmaz.",
+    "badge": "Gizlilik öncelikli",
+    "readPolicy": "Tam gizlilik politikasını oku"
+  },
   "nav": {
     "aiTools": "Yapay Zekâ Araçları",
     "tools": "Dönüştürücüler",
-    "categories": "Converter categories",
+    "categories": "Dönüştürücü kategorileri",
+    "formats": "Formatlar",
     "about": "Hakkında",
     "contact": "İletişim",
     "cta": "Başla",
@@ -15,11 +127,18 @@
     "allTools": "Tüm araçlar",
     "signIn": "Giriş yap",
     "account": "Hesabım",
-    "downloader": "MP3 Downloader",
+    "downloader": "MP3 İndirici",
+    "aboutMe": "Hakkımda",
+    "privacy": "Gizlilik politikası",
+    "terms": "Hizmet şartları",
     "onlineTools": "Hesaplayıcılar",
     "converters": "Dönüştürücüler",
     "calculators": "Hesaplayıcılar",
-    "developer": "Geliştirici araçları"
+    "developer": "Geliştirici araçları",
+    "premium": "Premium",
+    "guides": "Rehberler",
+    "faq": "SSS",
+    "more": "Daha fazla"
   },
   "hero": {
     "badge": "Yeni bir çevrimiçi araç ekosistemi",
@@ -27,7 +146,68 @@
     "titleHighlight": "tek bir yerde",
     "subtitle": "Dönüştürücüler, oluşturucular, PDF, yapay zekâ — hepsi tek bir ekosistemde.",
     "browse": "Araçlara göz at",
-    "learnMore": "Daha fazla bilgi"
+    "learnMore": "Daha fazla bilgi",
+    "convertCta": "Şimdi bir dosyayı dönüştürün"
+  },
+  "search": {
+    "placeholder": "Dönüştürücüleri arayın (örneğin mp3 wav, pdf jpg)…",
+    "noResults": "Dönüştürücü bulunamadı. Farklı bir sorgu deneyin."
+  },
+  "share": {
+    "label": "Paylaş",
+    "copy": "Bağlantıyı kopyala",
+    "copied": "Kopyalandı"
+  },
+  "feedback": {
+    "question": "Bu makale faydalı oldu mu?",
+    "yes": "Evet",
+    "no": "Hayır",
+    "thanks": "Geri bildiriminiz için teşekkür ederiz!"
+  },
+  "recommender": {
+    "title": "Hangi formatı seçmeliyim?",
+    "subtitle": "İki kısa soruyu yanıtlayın, size en iyi formatı önerelim.",
+    "step1": "Ne tür bir dosyanız var?",
+    "step2": "Bununla ne yapmak istiyorsun?",
+    "categories": {
+      "image": "Resim / fotoğraf",
+      "audio": "Ses / müzik",
+      "video": "video",
+      "document": "Belge"
+    },
+    "goals": {
+      "image_web": "Bir web sitesinde yayınlama",
+      "image_email": "E-postayla gönder",
+      "image_print": "Yazdır",
+      "image_iphone": "iPhone'dan fotoğraf (HEIC)",
+      "audio_listen": "Telefonda veya oynatıcıda dinleyin",
+      "audio_edit": "DAW'da düzenleme",
+      "audio_archive": "Kalite kaybı olmadan arşivleyin",
+      "video_social": "Sosyal medyada yayınlayın",
+      "video_web": "Bir web sitesine yerleştirme",
+      "video_audio": "Yalnızca sesi çıkar",
+      "document_share": "Okumak için gönder (düzenleme yok)",
+      "document_edit": "Metni düzenleyin"
+    },
+    "resultTitle": "Önerilen format:",
+    "readFormat": "Biçim kılavuzu",
+    "openConverter": "Dönüştürücüyü aç",
+    "back": "Geri",
+    "tryAgain": "Yeniden başla",
+    "reasons": {
+      "webp-web": "WebP, aynı kalitede JPG'den %25-35 daha küçüktür; daha hızlı web siteleri için idealdir.",
+      "jpg-email": "JPG evrenseldir ve küçüktür; e-posta ekleri için mükemmeldir.",
+      "png-print": "PNG, keskin kenarlarla kayıpsızdır; grafikler ve kısa süreli baskılar için idealdir.",
+      "heic-jpg": "iPhone'daki HEIC'in Windows ve çoğu hizmetle uyumluluğu için JPG'ye dönüştürülmesi gerekiyor.",
+      "mp3-listen": "MP3 her cihazda çalışır ve dosyaların küçük kalmasını sağlar.",
+      "wav-edit": "WAV kayıpsızdır; kalite kaybı olmadan düzenleme yapmak için en iyisidir.",
+      "flac-archive": "FLAC, kaliteyi kaybetmeden sıkıştırır; müzik arşivleme için idealdir.",
+      "mp4-social": "MP4 (H.264 + AAC), Instagram, TikTok ve YouTube için standarttır.",
+      "webm-web": "WebM, tarayıcılardaki HTML5 video için optimize edilmiştir.",
+      "mp3-audio": "Podcast'ler veya zil sesleri için videonuzdan sesi MP3 olarak çıkarın.",
+      "pdf-share": "PDF düzeni kilitler; alıcı tam olarak neyi amaçladığınızı görür.",
+      "docx-edit": "DOCX, Word'deki metni, stilleri ve başlıkları düzenlemenizi sağlar."
+    }
   },
   "opener": {
     "title": "Evrensel dosya açıcı",
@@ -37,26 +217,26 @@
     "kindVideo": "Video",
     "kindAudio": "Ses",
     "kindDocs": "PDF, kod ve veri",
-    "readError": "Couldn't read the file contents.",
-    "dropAny": "Drag any file here or click to choose",
-    "dropHint": "Images, video, audio, PDF, documents, code, data — any format. Files are opened locally in your browser and never uploaded anywhere.",
-    "noConverter": "We don't have a converter for this format yet — but you can preview and download the file below.",
-    "convertTo": "Convert to another format",
-    "optionOne": "option",
-    "optionMany": "options",
-    "downloadedOk": "Done! The file has been downloaded.",
-    "download": "Download",
-    "close": "Close",
-    "emptyFile": "(empty file)",
-    "textTruncated": "Preview truncated to the first 200,000 characters. Download the file to see everything.",
-    "binaryPreview": "Binary preview (first bytes in hexadecimal)",
+    "readError": "Dosya içeriği okunamadı.",
+    "dropAny": "Herhangi bir dosyayı buraya sürükleyin veya seçmek için tıklayın",
+    "dropHint": "Görseller, video, ses, PDF, belgeler, kod, veri — her format. Dosyalar tarayıcınızda yerel açılır ve hiçbir yere yüklenmez.",
+    "noConverter": "Bu format için henüz dönüştürücümüz yok — ancak dosyayı aşağıda önizleyip indirebilirsiniz.",
+    "convertTo": "Başka bir biçime dönüştür",
+    "optionOne": "seçenek",
+    "optionMany": "seçenek",
+    "downloadedOk": "Tamam! Dosya indirildi.",
+    "download": "İndir",
+    "close": "Kapat",
+    "emptyFile": "(boş dosya)",
+    "textTruncated": "Önizleme ilk 200.000 karakterle sınırlandı. Her şeyi görmek için dosyayı indirin.",
+    "binaryPreview": "İkili önizleme (ilk baytlar onaltılık)",
     "kinds": {
-      "image": "Image",
+      "image": "Görsel",
       "video": "Video",
-      "audio": "Audio",
-      "pdf": "PDF document",
-      "text": "Text / code",
-      "binary": "Binary file"
+      "audio": "Ses",
+      "pdf": "PDF belgesi",
+      "text": "Metin / kod",
+      "binary": "İkili dosya"
     }
   },
   "ai": {
@@ -76,6 +256,41 @@
     "title": "Araç kategorileri",
     "subtitle": "Mevcut tüm dönüştürücüleri görmek için bir kategori seçin.",
     "browse": "Göz at"
+  },
+  "toolsIndex": {
+    "intro": "Her araç, sunucudaki dosyaları dönüştürür; herhangi bir yazılım yüklenmesine gerek yoktur. Hangi formatı seçeceğinizden emin değil misiniz? Biçim ansiklopedisine veya dönüştürme kılavuzlarına göz atın.",
+    "formatsLink": "Ansiklopedi biçimi",
+    "guidesLink": "Dönüşüm kılavuzları"
+  },
+  "knowledgeHub": {
+    "title": "Biçim ve dönüştürme bilgisi",
+    "subtitle": "Yalnızca dönüştürmeyin; FLAC yerine MP3'ü, JPG yerine WebP'yi veya DOCX yerine PDF'yi ne zaman seçeceğinizi anlayın. Kılavuzlarımız kalite kaybından ve gereksiz dönüşümlerden kaçınmanıza yardımcı olur.",
+    "formatsTitle": "Dosya formatı ansiklopedisi",
+    "formatsDesc": "40'tan fazla format: ses, video, görseller, belgeler, veriler ve arşivler. Artıları, eksileri, uyumluluk ve alternatiflerle karşılaştırmalar.",
+    "formatsCta": "Formatlara göz atın",
+    "guidesTitle": "Dönüşüm kılavuzları",
+    "guidesDesc": "Pratik makaleler: ses kalitesi, görüntü sıkıştırma, sosyal medya için video, PDF ve DOCX karşılaştırması ve çevrimiçi dosya güvenliği.",
+    "guidesCta": "Kılavuzları okuyun",
+    "comparisonsTitle": "Biçim karşılaştırmaları",
+    "comparisonsDesc": "MP3 vs FLAC, JPG vs WebP, PDF vs DOCX — net bir karara sahip bire bir karşılaştırmalar.",
+    "comparisonsCta": "Karşılaştırmalara göz atın",
+    "glossaryTitle": "Sözlük",
+    "glossaryDesc": "Bitrate, codec, kayıplı sıkıştırma, MIME — sade dilde tanımlar.",
+    "glossaryCta": "Sözlüğü aç"
+  },
+  "editorial": {
+    "title": "Toolando.tech'in arkasında kim var",
+    "body": "Ben Szymon — her aracı kendim tasarlıyor, geliştiriyor ve test ediyorum. Rehberler gerçek dönüşümlere dayanır, kopyalanmış spesifikasyonlara değil. Dosyalarınızı dönüştürmeden önce anlamanızı istiyorum — ve hizmetin size karşı dürüst kalmasını.",
+    "aboutCta": "Hakkımda ve metodoloji",
+    "howCta": "Araçlar nasıl çalışır",
+    "editorialCta": "Editoryal standartlar",
+    "guidesCta": "Rehberler"
+  },
+  "featuredGuides": {
+    "title": "Öne çıkan rehberler",
+    "subtitle": "Dosya formatları, güvenlik ve dönüştürme hakkında pratik makaleler — gerçek testlerden, SEO şablonlarından değil.",
+    "readArticle": "Rehberi oku",
+    "allGuides": "Tüm rehberler"
   },
   "why": {
     "title": "Neden Toolando.tech?",
@@ -100,9 +315,25 @@
     "privacy": "Gizlilik politikası",
     "terms": "Hizmet şartları",
     "rights": "© 2026 Toolando.tech. Tüm hakları saklıdır.",
-    "aboutMe": "About me",
-    "howItWorks": "How it works",
-    "faq": "FAQ"
+    "aboutMe": "Hakkımda",
+    "howItWorks": "Nasıl çalışır",
+    "faq": "SSS",
+    "guides": "Kılavuzlar",
+    "editorial": "Editoryal",
+    "formats": "Dosya formatları",
+    "comparisons": "Karşılaştırmalar",
+    "glossary": "Sözlük",
+    "rss": "RSS akışı",
+    "cookieSettings": "Çerez ayarları",
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "messenger": "Messenger",
+    "youtube": "YouTube",
+    "emailAria": "Bize yazmak için e-posta uygulamanızı açar"
+  },
+  "ad": {
+    "label": "Reklam",
+    "placeholder": "Reklam alanı"
   },
   "language": {
     "label": "Dil"
@@ -111,6 +342,10 @@
     "eyebrow": "Projeyi destekleyin",
     "title": "Toolando.tech'nun sürmesine yardım edin",
     "subtitle": "Toolando.tech ücretsiz olarak geliştirilir ve sunulur. Size zaman kazandırıyorsa gelişimini desteklemeyi düşünün.",
+    "body1": "Hizmeti kendi başıma sürdürüyorum (kod, sunucular, yasal içerik ve kılavuzlar). Desteğiniz, barındırma (Vercel), dosya işleme, alan adı ve yeni araç geliştirme konularının kapsanmasına yardımcı olur.",
+    "body2": "Destek tamamen isteğe bağlıdır. Ücretsiz araçlar ödeme gerektirmez. Premium, genişletilmiş özelliklere sahip ayrı bir isteğe bağlı aboneliktir; ayrıntılar için Hizmet Şartları'na bakın.",
+    "body3": "Bir sorunuz, araç fikriniz mi var veya bir hata mı buldunuz? badyltech@outlook.com'ye yazın veya iletişim formunu kullanın; bu da değerli bir destektir.",
+    "legalNote": "Bağışlar, aksi açıkça belirtilmediği sürece Premium erişimi sağlamaz veya bir hizmet sözleşmesi teşkil etmez. Bağışlardan bağımsız olarak Şartlar ve Gizlilik Politikası geçerlidir.",
     "coffee": "Bana bir kahve ısmarla",
     "donate": "Bağış yap",
     "back": "Ana sayfaya dön",
@@ -155,32 +390,47 @@
     "merge": "Dosyaları birleştir",
     "result": "Sonuç",
     "notFound": "Araç bulunamadı",
-    "convertFailed": "Conversion failed.",
-    "connectionError": "Couldn't connect to the server. Please try again.",
-    "unavailable": "This converter is currently unavailable",
-    "dropClick": "Drag a file here or click to choose",
-    "dropClickMulti": "Drag files here or click to choose",
-    "supportedFormat": "Supported format",
-    "supported": "Supported",
-    "maxSize": "max. 500 MB",
-    "removeFile": "Remove file",
-    "convertDone": "Conversion complete",
-    "downloadNamed": "Download",
-    "convertAnother": "Convert another file",
-    "uploadingFile": "Uploading file…",
-    "uploadingFiles": "Uploading files…",
-    "uploading": "Uploading…",
-    "converting": "Converting…",
-    "convertToPrefix": "Convert to",
-    "needTwoPdf": "Add at least two PDF files to merge.",
-    "operationFailed": "The operation failed.",
-    "compressionQuality": "Compression quality",
-    "qualityHint": "Lower value = smaller file. Higher value = better quality.",
-    "done": "Done",
-    "less": "less",
-    "resultPreview": "Result preview",
-    "startOver": "Start over",
-    "processingLong": "Processing (this may take a few seconds)…"
+    "convertFailed": "Dönüştürme başarısız oldu.",
+    "connectionError": "Sunucuya bağlanılamadı. Lütfen tekrar deneyin.",
+    "unavailable": "Bu dönüştürücü şu anda kullanılamıyor",
+    "dropClick": "Bir dosyayı buraya sürükleyin veya seçmek için tıklayın",
+    "dropClickMulti": "Dosyaları buraya sürükleyin veya seçmek için tıklayın",
+    "supportedFormat": "Desteklenen format",
+    "supported": "Desteklenen",
+    "maxSize": "maks. 500 MB",
+    "removeFile": "Dosyayı kaldır",
+    "convertDone": "Dönüştürme tamamlandı",
+    "downloadNamed": "İndir",
+    "convertAnother": "Başka bir dosya dönüştür",
+    "uploadingFile": "Dosya yükleniyor…",
+    "uploadingFiles": "Dosyalar yükleniyor…",
+    "uploading": "Yükleniyor…",
+    "converting": "Dönüştürülüyor…",
+    "convertToPrefix": "Dönüştür:",
+    "needTwoPdf": "Birleştirmek için en az iki PDF dosyası ekleyin.",
+    "operationFailed": "İşlem başarısız oldu.",
+    "compressionQuality": "Sıkıştırma kalitesi",
+    "qualityHint": "Düşük değer = daha küçük dosya. Yüksek değer = daha iyi kalite.",
+    "done": "Tamam",
+    "less": "daha az",
+    "resultPreview": "Sonuç önizlemesi",
+    "startOver": "Baştan başla",
+    "processingLong": "İşleniyor (birkaç saniye sürebilir)…",
+    "howToTitle": "Bir dosya nasıl dönüştürülür — adım adım",
+    "aboutSource": "Kaynak formatı hakkında",
+    "aboutTarget": "Hedef format hakkında",
+    "whenToUseTitle": "Bu dönüştürücü ne zaman kullanılır?",
+    "faqTitle": "Sık sorulan sorular",
+    "qualityTitle": "Dönüşüm kalitesi — bilinmesi gerekenler",
+    "tipsTitle": "Pratik ipuçları",
+    "readFormatGuide": "Tam format kılavuzu"
+  },
+  "cookieConsent": {
+    "title": "Çerezler",
+    "description": "Toolando.tech gerekli çerezleri ve onayınızla analitik (Google Analytics) ve reklam çerezlerini (Google AdSense) kullanır. Tümünü kabul edebilir veya yalnızca gerekli olanlarla sınırlayabilirsiniz.",
+    "acceptAll": "Tümünü kabul et",
+    "necessaryOnly": "Yalnızca gerekli",
+    "privacyLink": "Gizlilik politikası"
   },
   "aiTool": {
     "prompt": "Metniniz",
@@ -208,44 +458,44 @@
     "thinking": "Düşünüyor…",
     "aiError": "Yapay zekâ yanıtı alınamadı. Lütfen tekrar deneyin.",
     "emptyChat": "Konuşmayı başlatmak için bir soru sorun.",
-    "generateFailed": "Couldn't generate a response.",
-    "noContent": "The AI service returned no content. Check that AI Gateway is active (requires a payment card).",
-    "connectionError": "A connection error occurred. Please try again.",
-    "dropDoc": "Drag a document here or click to choose",
-    "removeFile": "Remove file",
-    "translatePlaceholder": "Paste the text to translate…",
-    "copyPlaceholder": "Describe what the AI should write, e.g. \"a product description for an eco-friendly water bottle\"…",
-    "toneLabel": "Tone",
-    "targetLangLabel": "Target language",
-    "translate": "Translate",
-    "summarizeDoc": "Summarize document",
-    "generateText": "Generate text",
-    "imageFailed": "Couldn't generate the image.",
-    "imagePromptPlaceholder": "Describe the image, e.g. \"a futuristic city at sunset, watercolor style\"…",
-    "ratioSquare": "Square 1:1",
-    "ratioLandscape": "Landscape 3:2",
-    "ratioPortrait": "Portrait 2:3",
-    "generatingImage": "Generating image (this may take several seconds)…",
-    "generateImage": "Generate image",
-    "generatedImageAlt": "Generated image",
-    "downloadImage": "Download image",
+    "generateFailed": "Yanıt oluşturulamadı.",
+    "noContent": "AI hizmeti içerik döndürmedi. AI Gateway'in etkin olduğunu kontrol edin (ödeme kartı gerekir).",
+    "connectionError": "Bağlantı hatası oluştu. Lütfen tekrar deneyin.",
+    "dropDoc": "Bir belgeyi buraya sürükleyin veya seçmek için tıklayın",
+    "removeFile": "Dosyayı kaldır",
+    "translatePlaceholder": "Çevrilecek metni yapıştırın…",
+    "copyPlaceholder": "AI'nin ne yazması gerektiğini açıklayın, örn. \"çevre dostu su şişesi için ürün açıklaması\"…",
+    "toneLabel": "Ton",
+    "targetLangLabel": "Hedef dil",
+    "translate": "Çevir",
+    "summarizeDoc": "Belgeyi özetle",
+    "generateText": "Metin oluştur",
+    "imageFailed": "Görsel oluşturulamadı.",
+    "imagePromptPlaceholder": "Görseli açıklayın, örn. \"gün batımında fütüristik bir şehir, suluboya stili\"…",
+    "ratioSquare": "Kare 1:1",
+    "ratioLandscape": "Yatay 3:2",
+    "ratioPortrait": "Dikey 2:3",
+    "generatingImage": "Görsel oluşturuluyor (birkaç saniye sürebilir)…",
+    "generateImage": "Görsel oluştur",
+    "generatedImageAlt": "Oluşturulan görsel",
+    "downloadImage": "Görseli indir",
     "tones": {
-      "professional": "professional",
-      "friendly": "friendly",
-      "energetic": "energetic",
-      "formal": "formal",
-      "playful": "playful",
-      "persuasive": "persuasive"
+      "professional": "profesyonel",
+      "friendly": "samimi",
+      "energetic": "enerjik",
+      "formal": "resmi",
+      "playful": "eğlenceli",
+      "persuasive": "ikna edici"
     },
     "languages": {
-      "english": "English",
-      "german": "German",
-      "spanish": "Spanish",
-      "french": "French",
-      "italian": "Italian",
-      "ukrainian": "Ukrainian",
-      "polish": "Polish",
-      "japanese": "Japanese"
+      "english": "İngilizce",
+      "german": "Almanca",
+      "spanish": "İspanyolca",
+      "french": "Fransızca",
+      "italian": "İtalyanca",
+      "ukrainian": "Ukraynaca",
+      "polish": "Lehçe",
+      "japanese": "Japonca"
     }
   },
   "category": {
@@ -259,64 +509,64 @@
     "notFound": "Kategori bulunamadı"
   },
   "paywall": {
-    "unlockTitle": "Unlock \"{tool}\" with Premium",
-    "description": "Unlock all Toolando.tech AI tools — text and image generation, translation, summaries and the assistant — in one subscription.",
-    "feature1": "Unlimited access to all AI tools",
-    "feature2": "Text generator, image generator and translator",
-    "feature3": "Priority request processing",
-    "goPremium": "Upgrade to Premium",
-    "redirecting": "Redirecting…",
-    "signInToBuy": "Sign in to buy Premium",
-    "noAccount": "Don't have an account?",
-    "signUp": "Sign up"
+    "unlockTitle": "Premium ile \"{tool}\" kilidini aç",
+    "description": "Tüm Toolando.tech AI araçlarının kilidini açın — metin ve görsel oluşturma, çeviri, özetler ve asistan — tek abonelikte.",
+    "feature1": "Tüm AI araçlarına sınırsız erişim",
+    "feature2": "Metin oluşturucu, görsel oluşturucu ve çevirmen",
+    "feature3": "Öncelikli istek işleme",
+    "goPremium": "Premium'a yükselt",
+    "redirecting": "Yönlendiriliyor…",
+    "signInToBuy": "Premium satın almak için giriş yap",
+    "noAccount": "Hesabınız yok mu?",
+    "signUp": "Kaydol"
   },
   "account": {
-    "backToHome": "Back to homepage",
-    "yourAccount": "Your account",
+    "backToHome": "Ana sayfaya dön",
+    "yourAccount": "Hesabınız",
     "premiumBadge": "Premium",
-    "freeBadge": "Free account",
-    "premiumActiveTitle": "You have active Premium",
-    "premiumActiveDesc": "Thank you for your support! You have full access to all AI tools without limits.",
-    "manageSubscription": "Manage subscription",
-    "manageOpening": "Opening…",
-    "managePortalError": "Could not open the portal.",
-    "manageGenericError": "An error occurred.",
-    "goPremiumTitle": "Go Premium",
-    "feature1": "Unlimited access to AI tools",
-    "feature2": "Background removal, image and text generation",
-    "feature3": "Priority processing",
-    "buyPremium": "Buy Premium",
-    "buyRedirecting": "Redirecting…",
-    "refreshHint": "Paid but Premium still inactive? Refresh your status:",
-    "refreshStatus": "Refresh Premium status",
-    "refreshChecking": "Checking...",
-    "refreshNoSub": "No active subscription found. If you just paid, wait a moment and try again.",
-    "refreshFailed": "Could not refresh status.",
-    "refreshNetworkError": "A network error occurred. Please try again.",
-    "signOut": "Sign out"
+    "freeBadge": "Ücretsiz hesap",
+    "premiumActiveTitle": "Aktif Premium'unuz var",
+    "premiumActiveDesc": "Desteğiniz için teşekkürler! Tüm AI araçlarına sınırsız erişiminiz var.",
+    "manageSubscription": "Aboneliği yönet",
+    "manageOpening": "Açılıyor…",
+    "managePortalError": "Portal açılamadı.",
+    "manageGenericError": "Bir hata oluştu.",
+    "goPremiumTitle": "Premium'a geç",
+    "feature1": "AI araçlarına sınırsız erişim",
+    "feature2": "Arka plan kaldırma, görsel ve metin oluşturma",
+    "feature3": "Öncelikli işleme",
+    "buyPremium": "Premium satın al",
+    "buyRedirecting": "Yönlendiriliyor…",
+    "refreshHint": "Ödediniz ama Premium hâlâ aktif değil mi? Durumu yenileyin:",
+    "refreshStatus": "Premium durumunu yenile",
+    "refreshChecking": "Kontrol ediliyor…",
+    "refreshNoSub": "Aktif abonelik bulunamadı. Az önce ödediyseniz biraz bekleyip tekrar deneyin.",
+    "refreshFailed": "Durum yenilenemedi.",
+    "refreshNetworkError": "Ağ hatası oluştu. Lütfen tekrar deneyin.",
+    "signOut": "Çıkış yap"
   },
   "downloader": {
     "eyebrow": "Video → MP3",
-    "title": "Multi-Platform → MP3 Downloader",
-    "subtitle": "Paste a link from TikTok, Instagram, Facebook, Twitter/X, Vimeo or SoundCloud and grab the audio.",
-    "metaDescription": "Multi-platform Video to MP3 Downloader — TikTok, Instagram, Facebook, Twitter, Vimeo, SoundCloud. Paste a link and download the audio.",
-    "back": "All tools",
-    "inputLabel": "Video link",
+    "title": "Çoklu Platform → MP3 İndirici",
+    "subtitle": "TikTok, Instagram, Facebook, Twitter/X, Vimeo veya SoundCloud'dan bir bağlantı yapıştırın ve sesi indirin.",
+    "metaDescription": "Multi-platform Video to MP3 Downloader — TikTok, Instagram, Facebook, Twitter, Vimeo, SoundCloud. Bağlantı yapıştırın ve sesi indirin.",
+    "back": "Tüm araçlar",
+    "inputLabel": "Video bağlantısı",
     "inputPlaceholder": "https://www.tiktok.com/@user/video/...",
-    "detected": "detected",
+    "detected": "algılandı",
     "idLabel": "ID",
-    "invalidLink": "Enter a valid link from a supported platform.",
-    "download": "Download MP3",
-    "preparing": "Preparing your link…",
-    "ready": "Your link is ready.",
-    "openPage": "Open download page",
-    "resultTitle": "Ready to download",
-    "resultsBack": "Back to downloader",
-    "thumbnailAlt": "Video thumbnail",
-    "viewSource": "View original",
-    "faqTitle": "Frequently asked questions",
-    "disclaimer": "Toolando.tech does not host or download any media. It only detects the platform and the public video ID and hands off to an external service or your browser. Only download content you have the rights to.",
-    "externalNote": "Download happens on an external service or in your browser. Toolando.tech only captured the public platform and video ID. Please respect copyright and each platform's terms of service.",
+    "invalidLink": "Desteklenen bir platformdan geçerli bir bağlantı girin.",
+    "download": "MP3 indir",
+    "preparing": "Bağlantınız hazırlanıyor…",
+    "ready": "Bağlantınız hazır.",
+    "openPage": "İndirme sayfasını aç",
+    "resultTitle": "İndirmeye hazır",
+    "resultsBack": "İndiriciye dön",
+    "thumbnailAlt": "Video küçük resmi",
+    "viewSource": "Orijinali görüntüle",
+    "faqTitle": "Sık sorulan sorular",
+    "disclaimer": "Toolando.tech hiçbir medyayı barındırmaz veya indirmez. Yalnızca platformu ve genel video ID'sini algılar ve harici bir hizmete veya tarayıcınıza yönlendirir. Yalnızca haklarına sahip olduğunuz içeriği indirin.",
+    "externalNote": "İndirme harici bir hizmette veya tarayıcınızda gerçekleşir. Toolando.tech yalnızca genel platformu ve video ID'sini yakaladı. Telif haklarına ve her platformun hizmet şartlarına saygı gösterin.",
     "faq": [
       {
         "q": "Which platforms are supported?",
@@ -339,18 +589,320 @@
         "a": "Only download content you own or have permission to use. Downloading copyrighted material without permission may violate the platform's terms of service and copyright law."
       }
     ],
-    "platformDisabled": "Downloading from {platform} is temporarily unavailable — {platform} actively blocks downloaders, so we've paused it until our own converter is ready. All other platforms still work."
+    "platformDisabled": "{platform} üzerinden indirme geçici olarak kullanılamıyor — {platform} indiricileri aktif olarak engelliyor, bu yüzden kendi dönüştürücümüz hazır olana kadar durdurduk. Diğer platformlar çalışmaya devam ediyor."
+  },
+  "pages": {
+    "contact": {
+      "eyebrow": "İletişim",
+      "title": "İletişim formu",
+      "intro": "Bir sorunuz mu, ortaklık fikriniz mi var, yoksa bir sorunu mu bildirmek istiyorsunuz? Formu doldurun — En kısa sürede cevap vereceğim.",
+      "name": "İsim",
+      "namePlaceholder": "Adınız",
+      "email": "E-posta",
+      "emailPlaceholder": "E-posta adresiniz",
+      "message": "Mesaj",
+      "messagePlaceholder": "Sorununuzu veya sorunuzu açıklayın...",
+      "submit": "Mesaj gönder",
+      "sent": "Teşekkür ederim! Mesajınız e-posta uygulamanızda hazırlandı.",
+      "subject": "Toolando.tech'den sorgu"
+    },
+    "about": {
+      "eyebrow": "Hakkımda",
+      "title": "Merhaba, ben Szymon — Toolando'nin yaratıcısıyım",
+      "intro": "Toolando.tech kendi başıma inşa ettiğim kendi projemdir. Fikirden koda ve şu anda okuduğunuz içeriğe kadar her şey tek elden geliyor. Bir dosyayı dönüştürmek veya hızlı bir çevrimiçi araç gibi basit görevlerin, herhangi bir yazılım yüklemeden ve gereksiz karmaşıklık olmadan herkesin kullanımına sunulmasını istiyorum.",
+      "whyTitle": "Toolando neden yaratıldı?",
+      "whyP1": "Her gün bilgisayarlarla çalışıyorum ve insanların bir dakika sürmesi gereken görevlerde ne kadar zaman kaybettiklerini birçok kez gördüm - dosya biçimini değiştirmek, bir kayıttan ses çıkarmak veya sizi reklamlar ve tuzaklarla dolu rastgele bir site aramaya zorlayan hızlı bir işlem.",
+      "whyP2": "Toolando, bu tür araçları tek bir açık ve güvenli yerde toplamak için oluşturuldu. Hizmetin hızlı, okunabilir ve kullanıcıya karşı dürüst olmasını önemsiyorum; hileler ve gizli tuzaklar yok.",
+      "howTitle": "Toolando nasıl çalışır?",
+      "howIntro": "Hizmet iki farklı çevrimiçi araç sunar: ücretsiz ve premium.",
+      "howFreeTerm": "Ücretsiz araçlar",
+      "howFreeDesc": "hesap gerektirmeden herkesin kullanımına açıktır. Bunlar herkese açık tutmak istediğim günlük, en çok kullanılan özellikler.",
+      "howPremiumTerm": "Premium araçlar",
+      "howPremiumDesc": "projenin sürdürülmesine ve büyütülmesine yardımcı olan daha gelişmiş özellikler veya daha yüksek sınırlar. Premium gelir doğrudan sunuculara, geliştirmeye ve yeni araçlara aktarılır.",
+      "howOutro": "Çeşit ne olursa olsun aynı kurala uyuyorum: yüklenen dosyalar yalnızca dönüşümü gerçekleştirmek için kullanılır ve tarafımdan saklanmaz.",
+      "outsideTitle": "Toolando'nin ötesinde ne yapıyorum?",
+      "outsideP1": "BT hizmetleri sağlıyorum; bireylere ve şirketlere günlük donanım ve yazılım sorunları konusunda yardımcı oluyorum.",
+      "outsideList": [
+        "Dizüstü bilgisayar ve bilgisayarların bakım ve onarımı,",
+        "BT hizmetleri ve teknik destek,",
+        "Web araçları ve uygulamaları oluşturma."
+      ],
+      "outsideP2": "Onarımlardan ve kullanıcılarla çalışmaktan edindiğim deneyim, doğrudan Toolando'yi nasıl tasarladığıma yansıyor - basit, noktaya ve gerçek ihtiyaçları göz önünde bulundurarak.",
+      "contactTitle": "İletişim",
+      "contactP1": "Bir sorunuz mu var, yeni bir araç fikriniz mi var veya bir sorunu mu bildirmek istiyorsunuz? Bana yazın - memnuniyetle cevap vereceğim.",
+      "emailLabel": "E-posta:",
+      "methodologyTitle": "Dönüşümleri nasıl test ederim ve kılavuzları nasıl yazarım?",
+      "methodologyP1": "Toolando.tech'deki her kılavuz ve format profili, kopyalanıp yapıştırılan spesifikasyonlara değil, gerçek dönüşüm testlerine dayanmaktadır. Örnek dosyalar yüklüyorum, çıktı boyutunu ve kalitesini karşılaştırıyorum ve hangi ayarların en iyi sonucu verdiğini not ediyorum.",
+      "methodologyList": [
+        "Dönüştürücüleri farklı boyutlardaki (küçük, orta, büyük) dosyalarla test ediyorum.",
+        "Ses/video için bit hızını, süreyi ve oynatma uyumluluğunu karşılaştırıyorum.",
+        "Resimler için dosya boyutunu, görsel kaliteyi ve şeffaflığı kontrol ediyorum.",
+        "Formatlar veya platform gereksinimleri değiştiğinde kılavuzlar güncellenir."
+      ],
+      "methodologyP2": "Bir kılavuzda veya dönüştürücüde açıklandığı gibi çalışmayan bir hata bulursanız badyltech@outlook.com'ye e-posta gönderin; düzeltmelerin herkese faydası olur.",
+      "updatedLabel": "Sayfa son güncellendi",
+      "updatedDate": "Temmuz 2026"
+    },
+    "editorial": {
+      "eyebrow": "Editoryal",
+      "title": "Toolando.tech editoryal standartları",
+      "intro": "Toolando.tech yalnızca dönüştürücüler değil — rehberler, format ansiklopedisi ve karşılaştırmalar da var. Aşağıda içeriğin nasıl oluşturulduğunu, bilgilerin nereden geldiğini ve ne zaman güncellendiğini açıklıyorum.",
+      "whoTitle": "İçeriği kim oluşturuyor",
+      "whoP1": "Her rehberi, format profilini ve karşılaştırmayı kendim yazıyorum — Szymon Badyl, Toolando.tech'in yaratıcısı. İçerik fabrikaları veya doğrulanmamış AI metinleri kullanmıyorum.",
+      "whoP2": "Her makale kendi dosyalarımda yaptığım dönüştürme testlerine dayanır. Bir şey anlatıldığı gibi çalışmıyorsa hem metni hem aracı düzeltirim.",
+      "standardsTitle": "Editoryal ilkeler",
+      "standardsIntro": "Her yeni rehbere aynı kuralları uygularım:",
+      "standardsList": [
+        "I test the converter with files of different sizes before publishing.",
+        "I give concrete scenarios (email, shop, social media), not vague generalities.",
+        "I distinguish compression from format conversion and lossy from lossless.",
+        "I write about tool limits — when not to convert online.",
+        "I update the date and content when platform or format requirements change."
+      ],
+      "sourcesTitle": "Kaynaklar ve dürüstlük",
+      "sourcesP1": "Format spesifikasyonlarını (MIME, codec'ler) IANA, FFmpeg ve üretici belgelerine göre doğrularım. Karşılaştırmalar pazarlama tablolarına değil, kendi boyut ve kalite ölçümlerime dayanır.",
+      "sourcesP2": "Harici bağlantılar yalnızca gerçekten yardımcı olduklarında görünür (örn. resmi dokümantasyon). Ücretli rakip araçları tanıtmam.",
+      "updatesTitle": "Güncellemeler ve düzeltmeler",
+      "updatesP1": "Hata, güncel olmayan bilgi veya konu önerisi mi buldunuz? badyltech@outlook.com adresine yazın — düzeltmeler güncelleme tarihiyle makaleye eklenir.",
+      "updatedLabel": "Son güncelleme",
+      "updatedDate": "Ağustos 2026",
+      "fullGuideCta": "Editoryal standartlar hakkında tam rehber"
+    },
+    "howItWorks": {
+      "eyebrow": "Nasıl çalışıyor?",
+      "title": "Toolando'deki araçlar nasıl çalışır?",
+      "intro": "Toolando.tech, hiçbir kurulum gerektirmeden, doğrudan tarayıcınızda çalıştırabileceğiniz bir dizi çevrimiçi araçtır. Aşağıda dosya işlemenin nasıl çalıştığını, güvenliği nasıl sağladığımı ve ücretsiz araçların premium araçlardan nasıl farklı olduğunu açıklayacağım.",
+      "browserTitle": "Tarayıcıda çalışan araçlar",
+      "browserP": "Bir araç açarsınız, bir dosya seçersiniz veya veri girersiniz ve sonuca doğrudan sayfada ulaşırsınız. Ücretsiz araçları kullanmak için bir hesaba ihtiyacınız yoktur ve bilgisayarınıza herhangi bir şey yüklemenize gerek yoktur.",
+      "filesTitle": "Dosyalar nasıl işlenir?",
+      "filesIntro": "Aracın türüne bağlı olarak dosyalar iki şekilde işlenir:",
+      "filesLocalTerm": "Tarayıcıda yerel olarak",
+      "filesLocalDesc": "bazı işlemler doğrudan cihazınızda çalışır ve dosya bilgisayarınızdan asla ayrılmaz.",
+      "filesServerTerm": "Geçici olarak sunucuda",
+      "filesServerDesc": "bir araç daha fazla bilgi işlem gücüne ihtiyaç duyduğunda, dosya yalnızca dönüştürme süresi boyunca sunucuda işlenir ve ardından silinir.",
+      "filesOutro": "Bu durumların hiçbirinde dosyalarınızı saklamam veya başka bir amaçla kullanmam.",
+      "securityTitle": "Güvenlik",
+      "securityP": "Güvenlik ve gizlilik benim için bir önceliktir. Siteye bağlantı şifrelenir ve dosyalar yalnızca istediğiniz görevi gerçekleştirmek için kullanılır.",
+      "securityList": [
+        "yüklenen dosyalar işlem tamamlandıktan sonra saklanmaz,",
+        "Verilerinizi satmıyorum veya paylaşmıyorum,",
+        "ücretsiz araçları kullanmak için kişisel verilerinizi sağlamanıza gerek yoktur."
+      ],
+      "tiersTitle": "Ücretsiz araçlar ve premium",
+      "tiersP": "Toolando iki farklı araç seçeneği sunar ancak güvenlik ilkesi her ikisinde de aynıdır.",
+      "tiersFreeTerm": "Ücretsiz",
+      "tiersFreeDesc": "hesap gerektirmeden herkesin kullanımına açıktır. Günlük, hızlı görevler için mükemmeldir.",
+      "tiersPremiumTerm": "prim",
+      "tiersPremiumDesc": "daha gelişmiş özellikler ve daha yüksek limitler veya daha büyük dosyalar. Premium, sunucu bakımını ve yeni araçların geliştirilmesini destekler."
+    },
+    "faq": {
+      "eyebrow": "SSS",
+      "title": "Sık sorulan sorular",
+      "intro": "En sık sorulan soruların yanıtlarını burada topladım. Aradığınızı bulamıyorsanız badyltech@outlook.com adresinden bana yazın.",
+      "items": [
+        {
+          "q": "Toolando'nin araçları ücretsiz mi?",
+          "a": "Araçların çoğu tamamen ücretsizdir ve hesap oluşturmadan kullanılabilir. Hizmetin sürdürülmesini ve geliştirilmesini destekleyen premium modelde bazı daha gelişmiş özellikler ve daha yüksek limitler mevcuttur."
+        },
+        {
+          "q": "Ücretsiz araçların premium araçlardan farkı nedir?",
+          "a": "Ücretsiz araçlar günlük, en yaygın görevleri kapsar ve herkese açıktır. Premium, daha gelişmiş özellikler ve daha büyük dosyalar veya sınırlar sunar. Dosya güvenliği ilkesi her iki varyantta da aynıdır."
+        },
+        {
+          "q": "Dosyalarım güvende mi?",
+          "a": "Evet. Yüklenen dosyalar yalnızca dönüşümü gerçekleştirmek için kullanılır ve tarafımdan saklanmaz. Bazı işlemler tarayıcıda yerel olarak çalışır ve bir dosya sunucuya giderse yalnızca görev süresi boyunca işlenir ve ardından silinir."
+        },
+        {
+          "q": "Toolando yüklediğim dosyaları saklıyor mu?",
+          "a": "Hayır. İşlem tamamlandıktan sonra dosyalarınızı kaydetmiyorum ve başka bir amaçla kullanmıyorum."
+        },
+        {
+          "q": "Gizliliğimi nasıl koruyorsunuz?",
+          "a": "GDPR'ye uygun olarak yalnızca teknik ve istatistiksel verileri (örn. IP adresi, tarayıcı türü, sistem, site trafiği) işlerim. Ayrıntıları Gizlilik Politikasında bulacaksınız. Ücretsiz araçları kullanmak için kişisel verilerinizi sağlamanıza gerek yoktur."
+        },
+        {
+          "q": "Araçları kullanmak için bir hesap oluşturmam gerekiyor mu?",
+          "a": "Hayır. Ücretsiz araçlar hesap olmadan çalışır. Yalnızca premium özellikler için bir hesaba ihtiyaç duyulabilir."
+        },
+        {
+          "q": "Sitede reklam var mı?",
+          "a": "Evet, hizmet, ücretsiz araçların herkesin kullanımına sunulmasına yardımcı olan Google AdSense reklamlarını görüntüleyebilir."
+        },
+        {
+          "q": "Çevrimiçi araçlar nasıl çalışır?",
+          "a": "Tarayıcınızda bir araç açarsınız, bir dosya seçersiniz veya veri girersiniz ve hiçbir kuruluma gerek kalmadan hemen sonuca ulaşırsınız. “Nasıl çalışır?” konusunda daha fazla ayrıntı anlattım. sayfa."
+        },
+        {
+          "q": "Nasıl iletişime geçebilirim?",
+          "a": "badyltech@outlook.com'ye yazın veya iletişim formunu kullanın. Olabildiğince çabuk cevap veriyorum."
+        }
+      ]
+    },
+    "privacy": {
+      "eyebrow": "Gizlilik Politikası",
+      "title": "Toolando.tech Gizlilik Politikası",
+      "intro": "Toolando.tech, ücretsiz ve premium sürümlerde online araçlar sunan bir hizmettir. Kullanıcı gizliliğine önem verir ve verileri GDPR dahil geçerli düzenlemelere uygun işlerim.",
+      "lastUpdated": "Son güncelleme: 23 Temmuz 2026",
+      "s1Title": "1. Veri sorumlusu",
+      "s1Pre": "Veri sorumlusu, Toolando.tech'in sahibi Szymon Badyl'dir (Polonya). Gizlilik konularında benimle şu adresten iletişime geçebilirsiniz:",
+      "s1Address": "Yazışma: badyltech@outlook.com",
+      "s2Title": "2. Hangi veriler işlenir",
+      "s2Intro": "Hizmet, site kullanımı sırasında otomatik toplanan teknik ve istatistiksel verileri işler:",
+      "s2List": [
+        "IP address,",
+        "browser type and version,",
+        "the device's operating system,",
+        "traffic and usage data (e.g. pages visited)."
+      ],
+      "s2Outro": "E-posta veya form aracılığıyla iletişime geçerseniz, verdiğiniz e-posta adresini ve mesaj içeriğini de işlerim.",
+      "s3Title": "3. Araçlara yüklenen dosyalar",
+      "s3P": "Dönüştürme veya başka bir işlem için araçlara yüklediğiniz dosyaları saklamam. Yalnızca istediğiniz görevi yerine getirmek için kullanılır ve tamamlandığında silinir. Başka amaçla kullanmam.",
+      "s4Title": "4. Çerezler",
+      "s4Intro": "Hizmet aşağıdaki çerez türlerini kullanır:",
+      "s4TechTerm": "Teknik",
+      "s4TechDesc": "sitenin doğru çalışması ve ayarların (örn. dil) hatırlanması için gerekli.",
+      "s4AnalyticsTerm": "Analitik",
+      "s4AnalyticsDesc": "sitenin nasıl kullanıldığını toplu ve anonim biçimde anlamaya yardımcı istatistik araçları (örn. Google Analytics).",
+      "s4AdsTerm": "Reklam",
+      "s4AdsDesc": "reklam göstermek ve kişiselleştirmek için çerez kullanabilen Google AdSense.",
+      "s4Outro": "Çerezleri tarayıcı ayarlarınızdan istediğiniz zaman yönetebilir veya devre dışı bırakabilirsiniz. İlk ziyarette tüm çerezleri kabul edebileceğiniz veya yalnızca gerekli olanlarla sınırlayabileceğiniz bir onay banner'ı gösteririz.",
+      "s4ThirdPartyTitle": "Üçüncü taraf sağlayıcılar",
+      "s4ThirdPartyP": "Hizmet Google hizmetlerini (Analytics, AdSense) kullanır. Google kendi gizlilik politikasına göre veri toplayabilir. Daha fazla bilgi: https://policies.google.com/technologies/partner-sites",
+      "s5Title": "5. Ücretsiz ve premium araçlar",
+      "s5P": "Toolando, hesap gerektirmeyen ücretsiz araçlar ve premium araçlar sunar. Veri işleme ve dosya koruma kuralları her iki sürümde de aynıdır — yalnızca özellik kapsamı ve limitler farklıdır.",
+      "s6Title": "6. Veri işlemenin amacı",
+      "s6Intro": "Verileri yalnızca şu amaçlarla işlerim:",
+      "s6List": [
+        "ensuring the correct and secure operation of the service,",
+        "statistical traffic analysis and improving the tools,",
+        "displaying ads,",
+        "handling contact with the user."
+      ],
+      "s7Title": "7. Haklarınız",
+      "s7Intro": "Şu haklara sahipsiniz:",
+      "s7List": [
+        "access your data,",
+        "rectify or delete it,",
+        "restrict processing,",
+        "lodge a complaint with the relevant data protection authority."
+      ],
+      "s8Title": "8. Politika değişiklikleri",
+      "s8P": "Gizlilik politikası, hizmetteki veya yasal düzenlemelerdeki değişiklikleri yansıtmak için güncellenebilir. Güncel sürüm her zaman bu sayfada mevcuttur."
+    },
+    "terms": {
+      "eyebrow": "Hizmet Şartları",
+      "title": "Toolando.tech Hizmet Şartları",
+      "intro": "Aşağıdaki şartlar Toolando.tech hizmetinin kullanım kurallarını belirler. Hizmeti kullanmak bu kuralları kabul ettiğiniz anlamına gelir.",
+      "s1Title": "1. Genel hükümler",
+      "s1P": "Toolando.tech'in sahibi Szymon'dur. Hizmet, dosya dönüştürme, içerik oluşturma ve AI destekli araçlar için online araçlar sunar.",
+      "s2Title": "2. Ücretsiz ve premium araçlar",
+      "s2Intro": "Toolando araçları iki sürümde sunar:",
+      "s2FreeTerm": "Ücretsiz",
+      "s2FreeDesc": "hesap oluşturmadan herkesin kullanabileceği.",
+      "s2PremiumTerm": "Premium",
+      "s2PremiumDesc": "daha gelişmiş özellikler ve daha yüksek limitlerle.",
+      "s2Outro": "Premium özellikler için ödeme veya abonelik kuralları hizmetin ilgili yerlerinde sunulur.",
+      "s3Title": "3. Kendi sorumluluğunuzda kullanım",
+      "s3P1": "Hizmeti kendi sorumluluğunuzda kullanırsınız. Araçların doğru çalışması için elinden geleni yaparım, ancak hizmet «olduğu gibi» sunulur; kullanılabilirlik, sonuç doğruluğu veya belirli bir amaca uygunluk garantisi verilmez.",
+      "s3P2": "Hizmet sahibi şunlardan sorumlu değildir:",
+      "s3List": [
+        "the consequences of using the tools' results,",
+        "lost profits,",
+        "damage resulting from interruptions in the service."
+      ],
+      "s3Outro": "Kullanıcı, hizmeti yasaya uygun kullanmayı taahhüt eder ve işlediği içerik ve dosyalardan sorumludur.",
+      "s4Title": "4. Kullanıcı dosyaları",
+      "s4P": "Araçlara yüklenen dosyalar saklanmaz. Yalnızca istenen işlemi gerçekleştirmek için kullanılır ve tamamlandığında silinir.",
+      "s5Title": "5. Reklamlar",
+      "s5P": "Hizmet Google AdSense reklamları gösterebilir. Reklamlar ücretsiz araçların sürdürülmesine ve projenin geliştirilmesine yardımcı olur. Reklam sağlayıcısı Gizlilik Politikası'na uygun çerez kullanabilir.",
+      "s6Title": "6. Telif hakkı",
+      "s6P": "Toolando.tech adı, grafik öğeleri ve hizmet içeriği yasal olarak korunur. Sahibinin izni olmadan kopyalanması ve kullanılması yasaktır.",
+      "s7Title": "7. İletişim",
+      "s7Pre": "Bu şartlarla ilgili konularda benimle şu adresten iletişime geçebilirsiniz:",
+      "s8Title": "8. Şartlardaki değişiklikler",
+      "s8P": "Şartlar, hizmetteki veya yasal düzenlemelerdeki değişiklikleri yansıtmak için güncellenebilir. Güncel sürüm her zaman bu sayfada mevcuttur."
+    },
+    "guides": {
+      "eyebrow": "Rehberler",
+      "title": "Dosya dönüştürme rehberleri ve eğitimler",
+      "intro": "Dosya formatları, dönüştürme ve en iyi uygulamalar hakkında pratik makaleler. Her rehber bir dosyayı ne zaman ve neden dönüştüreceğinizi ve Toolando.tech ile bunu güvenle nasıl yapacağınızı açıklar.",
+      "articles": [
+        {
+          "title": "MP3 vs WAV — when to convert audio?",
+          "body": "MP3 is a lossy compression format — files are small but some audio data is lost. WAV preserves full quality but files can be 10 times larger. Convert MP3 → WAV when you need a file for editing in a DAW (e.g. Audacity, FL Studio) or when a platform requires a lossless format. Convert WAV → MP3 when you want to email a recording, publish a podcast, or save disk space. Toolando.tech supports both conversions — just upload your file and download the result."
+        },
+        {
+          "title": "How to convert PDF to JPG for print and the web",
+          "body": "PDF is a document format that preserves page layout. Sometimes you need individual pages as images — for a website, a PowerPoint presentation, or printing a single page. The PDF → JPG converter in Toolando.tech renders each PDF page as a separate high-resolution JPG image. PDF files are never stored — they are deleted immediately after conversion. If you need transparency, consider PDF → PNG instead."
+        },
+        {
+          "title": "WebP and AVIF — modern image formats for websites",
+          "body": "JPG and PNG have dominated the web for years, but newer formats offer better compression. WebP (Google) produces files 25–35% smaller than JPG at the same visual quality and is supported by all modern browsers. AVIF goes even further — files can be half the size of WebP. Convert JPG → WebP or PNG → AVIF in Toolando.tech to speed up your website. Remember that older browsers (e.g. IE) don't support these formats — keep a JPG version as a fallback."
+        },
+        {
+          "title": "Extracting audio from video — the legal alternative",
+          "body": "Sometimes you have a video file (e.g. a camera recording, presentation) and only need the audio track. Toolando.tech lets you extract audio from MP4, MOV, AVI, MKV and other video formats, saving it as MP3, WAV, FLAC, or AAC. This is a legal operation on your own file — unlike downloading music from YouTube or TikTok, which Toolando.tech deliberately does not offer. Upload your video file, choose an audio format, and download the result."
+        },
+        {
+          "title": "JSON, CSV, and XML — converting data between formats",
+          "body": "Developers and data analysts often work with different data formats. JSON is the standard in APIs and configs. CSV and TSV are used for importing into Excel and spreadsheets. XML is used in older enterprise systems and RSS. Toolando.tech converts between these formats while preserving data structure. For example: JSON → CSV lets you open an API response in Excel, and CSV → JSON prepares data for sending to a REST API."
+        },
+        {
+          "title": "File security in online tools",
+          "body": "Uploading files to online tools naturally raises privacy concerns. At Toolando.tech, files are used solely to perform the operation you request — conversion, compression, or preview. After the job completes, files are deleted from the server. Some tools (e.g. the universal file opener) run entirely in your browser — in that case the file never leaves your computer. The connection to the site is encrypted (HTTPS). We never sell or share your files with third parties."
+        },
+        {
+          "title": "Lossy vs lossless compression — a simple guide",
+          "body": "Lossy formats (MP3, JPG, AAC, H.264) discard some data to shrink file size. Lossless formats (FLAC, PNG, WAV, ZIP) keep all data but produce larger files. Rule of thumb: only convert from lossy to lossless when you must — you won't recover lost quality. Converting lossy to lossy (e.g. JPG → JPG at lower quality) should happen once; each re-conversion degrades the result. In Toolando.tech's format encyclopedia, every format is labeled with its compression type."
+        },
+        {
+          "title": "HEIC from iPhone — how to open and convert to JPG",
+          "body": "Apple saves photos in HEIC (HEIF) by default — smaller than JPG at the same quality. The catch: Windows without an extension, older apps, and many services don't support HEIC. Solution: convert HEIC → JPG or HEIC → PNG in Toolando.tech before emailing photos, uploading to a site, or printing. You can also set iPhone to \"Most Compatible\" (JPG) in Settings, but online conversion works on photos already saved as HEIC."
+        },
+        {
+          "title": "PDF vs DOCX — which format when?",
+          "body": "DOCX (Word) is for editing text — you change content, styles, and headings. PDF locks page layout — it looks identical on every device, ideal for invoices, contracts, and CVs sent to recruiters. Convert DOCX → PDF before sending a document \"for reading only.\" Convert PDF → DOCX only when you need to edit text — layout may break. For archiving and print, always choose PDF."
+        },
+        {
+          "title": "Video for social media — MP4, resolution, and bitrate",
+          "body": "Instagram, TikTok, YouTube, and Facebook prefer MP4 with H.264 video and AAC audio. Before publishing, convert MOV, AVI, or MKV to MP4 to avoid upload errors. 1080p (1920×1080) is enough for most platforms; 4K only when the platform supports it. Higher bitrate means better quality but a larger file. Toolando.tech converts video with no install — see the format encyclopedia for details on MP4, WebM, and MOV."
+        }
+      ]
+    }
   },
   "hub": {
-    "convertersTitle": "File converters",
-    "convertersDesc": "Audio, video, images, documents, data, fonts and archives — plus compress, merge PDF and background removal.",
-    "calculatorsTitle": "Calculators & converters",
-    "calculatorsDesc": "Currency, VAT, dates, timezones, units and bitrate.",
-    "developerTitle": "Developer & text tools",
-    "developerDesc": "Passwords, QR, Base64, UUID, hash, colors, timestamp and character counter.",
-    "specialTools": "File tools",
-    "browseConverters": "Browse converters",
-    "browseCalculators": "Browse calculators",
-    "browseDeveloper": "Browse tools"
+    "convertersTitle": "Dosya dönüştürücüleri",
+    "convertersDesc": "Ses, video, görseller, belgeler, veri, fontlar ve arşivler — ayrıca sıkıştırma, PDF birleştirme ve arka plan kaldırma.",
+    "calculatorsTitle": "Hesap makineleri ve dönüştürücüler",
+    "calculatorsDesc": "Döviz, KDV, tarihler, saat dilimleri, birimler ve bitrate.",
+    "developerTitle": "Geliştirici ve metin araçları",
+    "developerDesc": "Parolalar, QR, Base64, UUID, hash, renkler, timestamp ve karakter sayacı.",
+    "specialTools": "Dosya araçları",
+    "browseConverters": "Dönüştürücülere göz at",
+    "browseCalculators": "Hesap makinelerine göz at",
+    "browseDeveloper": "Araçlara göz at"
+  },
+  "specialFields": {
+    "splitMode": "Bölme modu",
+    "everyPage": "Her sayfa ayrı",
+    "pageRange": "Seçili aralık",
+    "pagesHint": "Sayfalar (örn. 1-3,5)",
+    "rotation": "Döndürme açısı",
+    "width": "Genişlik (px)",
+    "height": "Yükseklik (px, isteğe bağlı)",
+    "watermark": "Filigran metni",
+    "trimStart": "Başlangıç (sn veya MM:SS)",
+    "trimEnd": "Bitiş (sn veya MM:SS)",
+    "pageNumberPos": "Sayfa numarası konumu",
+    "bottom": "Sayfanın altı",
+    "top": "Sayfanın üstü"
+  },
+  "accountRecent": {
+    "title": "Son kullanılanlar",
+    "subtitle": "Geçmiş bu tarayıcıda yerel olarak kaydedildi."
+  },
+  "favorites": {
+    "add": "Favorilere ekle",
+    "remove": "Favori"
   }
 }
