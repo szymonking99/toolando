@@ -80,3 +80,43 @@ export function adSlotEnabled(placement: AdPlacement): boolean {
   if (isAdsFullMode()) return true
   return placement === "home"
 }
+
+/**
+ * Video-link downloader (TikTok/IG → MP3). Off during ad review and by default
+ * when AdSense is the active network — policy risk for AdSense approval.
+ * Set NEXT_PUBLIC_DOWNLOADER_ENABLED=true to override after acceptance.
+ */
+export function isDownloaderEnabled(): boolean {
+  const override = process.env.NEXT_PUBLIC_DOWNLOADER_ENABLED
+  if (override === "true") return true
+  if (override === "false") return false
+  if (isAdReviewMode()) return false
+  const network = process.env.NEXT_PUBLIC_AD_NETWORK?.toLowerCase()
+  if (!network || network === "adsense") return false
+  return true
+}
+
+/** ads.txt body for Google AdSense only (no Ezoic lines). */
+export function adsenseAdsTxt(): string {
+  return `# toolando.tech — Google AdSense
+google.com, pub-1137300798632743, DIRECT, f08c47fec0942fa0
+`
+}
+
+/** Use Ezoic-managed ads.txt (includes Google + Ezoic sellers). */
+export function useEzoicAdsTxt(): boolean {
+  if (isAdReviewMode()) return false
+  return process.env.NEXT_PUBLIC_AD_NETWORK?.toLowerCase() === "ezoic"
+}
+
+/** Load Ezoic scripts/placements (off during any ad-network review). */
+export function isEzoicActive(): boolean {
+  if (isAdReviewMode()) return false
+  return process.env.NEXT_PUBLIC_AD_NETWORK?.toLowerCase() === "ezoic"
+}
+
+/** AdSense site-verification meta tag in <head>. */
+export function showAdSenseVerificationMeta(): boolean {
+  if (isAdReviewMode()) return true
+  return process.env.NEXT_PUBLIC_AD_NETWORK?.toLowerCase() !== "ezoic"
+}

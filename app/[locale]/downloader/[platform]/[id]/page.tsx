@@ -4,6 +4,7 @@ import { notFound } from "next/navigation"
 import { ArrowLeft, Wrench, ArrowUpRight, ExternalLink } from "lucide-react"
 import { getDictionary } from "@/lib/i18n/dictionaries"
 import { localeHref } from "@/lib/i18n/href"
+import { isDownloaderEnabled } from "@/lib/seo/ads-policy"
 import {
   isPlatform,
   rebuildFromParts,
@@ -34,6 +35,8 @@ export default async function DownloaderResultPage({
 }: {
   params: Promise<{ locale: string; platform: string; id: string }>
 }) {
+  if (!isDownloaderEnabled()) notFound()
+
   const { locale, platform, id } = await params
   const dict = await getDictionary(locale)
   const d = dict.downloader

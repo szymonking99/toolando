@@ -1,6 +1,8 @@
 import Link from "next/link"
 import type { Metadata } from "next"
+import { notFound } from "next/navigation"
 import { ArrowLeft, Wrench, Music } from "lucide-react"
+import { isDownloaderEnabled } from "@/lib/seo/ads-policy"
 import { getDictionary } from "@/lib/i18n/dictionaries"
 import { localeHref } from "@/lib/i18n/href"
 import { PLATFORM_LABELS, SUPPORTED_PLATFORMS } from "@/lib/video-link"
@@ -36,6 +38,8 @@ export default async function DownloaderPage({
 }: {
   params: Promise<{ locale: string }>
 }) {
+  if (!isDownloaderEnabled()) notFound()
+
   const { locale } = await params
   const dict = await getDictionary(locale)
   const d = dict.downloader

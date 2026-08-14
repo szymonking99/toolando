@@ -2,9 +2,11 @@
  * Ezoic Step 2 — header scripts in <head>, privacy scripts before sa.min.js.
  * @see https://docs.ezoic.com/docs/ezoicads/integration/
  */
+import { isEzoicActive } from "@/lib/seo/ads-policy"
+
 export function EzoicHeadScripts() {
   if (process.env.NODE_ENV !== "production") return null
-  if (process.env.NEXT_PUBLIC_AD_NETWORK !== "ezoic") return null
+  if (!isEzoicActive()) return null
 
   return (
     <>

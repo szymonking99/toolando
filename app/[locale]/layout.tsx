@@ -18,6 +18,7 @@ import {
   normalizeToSupported,
   fallbackLocale,
 } from "@/lib/i18n/config"
+import { showAdSenseVerificationMeta } from "@/lib/seo/ads-policy"
 import "../globals.css"
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] })
@@ -101,11 +102,10 @@ export async function generateMetadata({
       ],
       apple: "/apple-icon.png",
     },
-    // Google AdSense site verification (only when AdSense is the active network).
-    other:
-      ADSENSE_CLIENT && process.env.NEXT_PUBLIC_AD_NETWORK !== "ezoic"
-        ? { "google-adsense-account": ADSENSE_CLIENT }
-        : {},
+    // Google AdSense site verification (AdSense network or during review).
+    other: showAdSenseVerificationMeta()
+      ? { "google-adsense-account": ADSENSE_CLIENT }
+      : {},
   }
 }
 

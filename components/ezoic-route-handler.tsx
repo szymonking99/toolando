@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation"
 import { runEzoic } from "@/lib/ezoic"
 import {
   adScriptsEnabledForPath,
-  getAdNetwork,
+  isEzoicActive,
 } from "@/lib/seo/ads-policy"
 
 /**
@@ -17,7 +17,7 @@ export function EzoicRouteHandler() {
   const pathname = usePathname()
 
   useEffect(() => {
-    if (process.env.NODE_ENV !== "production" || getAdNetwork() !== "ezoic") {
+    if (process.env.NODE_ENV !== "production" || !isEzoicActive()) {
       return
     }
 

@@ -5,6 +5,7 @@ import {
   localeFromCountry,
   normalizeToSupported,
 } from "@/lib/i18n/config"
+import { isDownloaderEnabled } from "@/lib/seo/ads-policy"
 
 const LOCALE_COOKIE = "toolando-locale"
 const LOCALE_MANUAL_COOKIE = "toolando-locale-manual"
@@ -33,8 +34,14 @@ function isLocaleAgnostic(pathname: string): boolean {
   return false
 }
 
+const DOWNLOADER_PATH = /\/downloader(\/|$)/
+
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl
+
+  if (!isDownloaderEnabled() && DOWNLOADER_PATH.test(pathname)) {
+    return new NextResponse(null, { status: 404 })
+  }
 
   // Already locale-prefixed — sync cookie so /sign-in inherits browsing language.
   if (HAS_LOCALE_PREFIX.test(pathname)) {
