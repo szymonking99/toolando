@@ -904,5 +904,25 @@
   "favorites": {
     "add": "お気に入りに追加",
     "remove": "お気に入り"
+  },
+  "auth": {
+    "signInTitle": "おかえりなさい",
+    "signUpTitle": "アカウントを作成",
+    "signInSubtitle": "続行するにはサインインしてください。",
+    "signUpSubtitle": "Premium機能を使うには登録してください。",
+    "name": "名前",
+    "email": "メール",
+    "password": "パスワード",
+    "submitSignIn": "サインイン",
+    "submitSignUp": "アカウントを作成",
+    "waiting": "お待ちください…",
+    "errorSignIn": "サインインに失敗しました",
+    "errorSignUp": "アカウントを作成できませんでした",
+    "haveAccount": "すでにアカウントをお持ちですか？",
+    "noAccount": "アカウントをお持ちでないですか？",
+    "goSignIn": "サインイン",
+    "goSignUp": "登録",
+    "metaTitle": "アカウント — Toolando.tech",
+    "metaDescription": "Toolando.techにサインインするか、アカウントを作成してください。"
   }
 }

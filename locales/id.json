@@ -904,5 +904,25 @@
   "favorites": {
     "add": "Tambahkan ke favorit",
     "remove": "Favorit"
+  },
+  "auth": {
+    "signInTitle": "Selamat datang kembali",
+    "signUpTitle": "Buat akun",
+    "signInSubtitle": "Masuk untuk melanjutkan.",
+    "signUpSubtitle": "Daftar untuk menggunakan fitur Premium.",
+    "name": "Nama",
+    "email": "Email",
+    "password": "Kata sandi",
+    "submitSignIn": "Masuk",
+    "submitSignUp": "Buat akun",
+    "waiting": "Mohon tunggu…",
+    "errorSignIn": "Gagal masuk",
+    "errorSignUp": "Gagal membuat akun",
+    "haveAccount": "Sudah punya akun?",
+    "noAccount": "Belum punya akun?",
+    "goSignIn": "Masuk",
+    "goSignUp": "Daftar",
+    "metaTitle": "Akun — Toolando.tech",
+    "metaDescription": "Masuk atau buat akun di Toolando.tech."
   }
 }

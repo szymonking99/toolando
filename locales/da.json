@@ -904,5 +904,25 @@
   "favorites": {
     "add": "Tilføj til favoritter",
     "remove": "Favorit"
+  },
+  "auth": {
+    "signInTitle": "Velkommen tilbage",
+    "signUpTitle": "Opret en konto",
+    "signInSubtitle": "Log ind for at fortsætte.",
+    "signUpSubtitle": "Tilmeld dig for at bruge Premium-funktioner.",
+    "name": "Navn",
+    "email": "E-mail",
+    "password": "Adgangskode",
+    "submitSignIn": "Log ind",
+    "submitSignUp": "Opret konto",
+    "waiting": "Vent venligst…",
+    "errorSignIn": "Kunne ikke logge ind",
+    "errorSignUp": "Kunne ikke oprette kontoen",
+    "haveAccount": "Har du allerede en konto?",
+    "noAccount": "Har du ikke en konto?",
+    "goSignIn": "Log ind",
+    "goSignUp": "Tilmeld dig",
+    "metaTitle": "Konto — Toolando.tech",
+    "metaDescription": "Log ind eller opret en konto på Toolando.tech."
   }
 }

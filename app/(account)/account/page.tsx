@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { redirect } from "next/navigation"
-import { cookies } from "next/headers"
+import { cookies, headers } from "next/headers"
 import { Crown, Check, Sparkles, ArrowLeft } from "lucide-react"
 import { getCurrentUser, isUserPremium } from "@/lib/user"
 import { PREMIUM_PLAN } from "@/lib/premium"
@@ -10,7 +10,7 @@ import { RefreshPremiumButton } from "@/components/refresh-premium-button"
 import { SignOutButton } from "@/components/sign-out-button"
 import { AccountRecentTools } from "@/components/account-recent-tools"
 import { getDictionary } from "@/lib/i18n/dictionaries"
-import { fallbackLocale } from "@/lib/i18n/config"
+import { resolveAccountLocale } from "@/lib/i18n/resolve-account-locale"
 
 export default async function AccountPage() {
   const user = await getCurrentUser()
@@ -19,7 +19,12 @@ export default async function AccountPage() {
   const premium = await isUserPremium(user.id)
 
   const cookieStore = await cookies()
-  const locale = cookieStore.get("toolando-locale")?.value || fallbackLocale
+  const headerStore = await headers()
+  const locale = resolveAccountLocale({
+    cookieLocale: cookieStore.get("toolando-locale")?.value,
+    referer: headerStore.get("referer"),
+    acceptLanguage: headerStore.get("accept-language"),
+  })
   const dict = await getDictionary(locale)
   const t = dict.account
 

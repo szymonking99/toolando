@@ -904,5 +904,25 @@
   "favorites": {
     "add": "إضافة إلى المفضلة",
     "remove": "مفضّل"
+  },
+  "auth": {
+    "signInTitle": "مرحبًا بعودتك",
+    "signUpTitle": "إنشاء حساب",
+    "signInSubtitle": "سجّل الدخول للمتابعة.",
+    "signUpSubtitle": "سجّل لاستخدام ميزات Premium.",
+    "name": "الاسم",
+    "email": "البريد الإلكتروني",
+    "password": "كلمة المرور",
+    "submitSignIn": "تسجيل الدخول",
+    "submitSignUp": "إنشاء حساب",
+    "waiting": "يرجى الانتظار…",
+    "errorSignIn": "تعذر تسجيل الدخول",
+    "errorSignUp": "تعذر إنشاء الحساب",
+    "haveAccount": "هل لديك حساب بالفعل؟",
+    "noAccount": "ليس لديك حساب؟",
+    "goSignIn": "تسجيل الدخول",
+    "goSignUp": "إنشاء حساب",
+    "metaTitle": "الحساب — Toolando.tech",
+    "metaDescription": "سجّل الدخول أو أنشئ حسابًا على Toolando.tech."
   }
 }

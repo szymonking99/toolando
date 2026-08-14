@@ -904,5 +904,25 @@
   "favorites": {
     "add": "Přidat do oblíbených",
     "remove": "Oblíbené"
+  },
+  "auth": {
+    "signInTitle": "Vítejte zpět",
+    "signUpTitle": "Vytvořit účet",
+    "signInSubtitle": "Přihlaste se a pokračujte.",
+    "signUpSubtitle": "Zaregistrujte se a používejte funkce Premium.",
+    "name": "Jméno",
+    "email": "E-mail",
+    "password": "Heslo",
+    "submitSignIn": "Přihlásit se",
+    "submitSignUp": "Vytvořit účet",
+    "waiting": "Prosím čekejte…",
+    "errorSignIn": "Přihlášení se nezdařilo",
+    "errorSignUp": "Účet se nepodařilo vytvořit",
+    "haveAccount": "Už máte účet?",
+    "noAccount": "Nemáte účet?",
+    "goSignIn": "Přihlásit se",
+    "goSignUp": "Zaregistrovat se",
+    "metaTitle": "Účet — Toolando.tech",
+    "metaDescription": "Přihlaste se nebo vytvořte účet na Toolando.tech."
   }
 }

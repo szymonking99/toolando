@@ -77,38 +77,40 @@ export function SiteNavbar() {
           <GlobalSearch compact className="relative w-full max-w-full" />
         </div>
 
-        {/* Desktop links — zajmuje środek, nie wypycha akcji poza ekran */}
-        <div className="hidden min-w-0 flex-1 items-center justify-center gap-0.5 overflow-hidden lg:flex xl:gap-1">
-          {coreLinks.map((link) => (
-            <a key={link.href} href={link.href} className={linkClass}>
-              {link.label}
-            </a>
-          ))}
+        {/* Desktop links — overflow tylko na rzędzie linków; „Więcej” poza nim, żeby dropdown nie był ucinany */}
+        <div className="hidden min-w-0 flex-1 items-center justify-center gap-0.5 lg:flex xl:gap-1">
+          <div className="flex min-w-0 max-w-full items-center justify-center gap-0.5 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden xl:gap-1">
+            {coreLinks.map((link) => (
+              <a key={link.href} href={link.href} className={linkClass}>
+                {link.label}
+              </a>
+            ))}
 
-          {/* Premium + Formaty — inline dopiero od 2xl */}
-          {extendedLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className={`${linkClass} hidden 2xl:inline-flex`}
-            >
-              {link.label}
-            </a>
-          ))}
+            {/* Premium + Formaty — inline dopiero od 2xl */}
+            {extendedLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className={`${linkClass} hidden 2xl:inline-flex`}
+              >
+                {link.label}
+              </a>
+            ))}
 
-          {/* FAQ / O mnie / Kontakt — tylko na bardzo szerokich ekranach */}
-          {moreLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className={`${linkClass} hidden min-[1700px]:inline-flex`}
-            >
-              {link.label}
-            </a>
-          ))}
+            {/* FAQ / O mnie / Kontakt — tylko na bardzo szerokich ekranach */}
+            {moreLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className={`${linkClass} hidden min-[1700px]:inline-flex`}
+              >
+                {link.label}
+              </a>
+            ))}
+          </div>
 
-          {/* Więcej — ukryte gdy wszystkie linki są inline */}
-          <div ref={moreRef} className="relative min-[1700px]:hidden">
+          {/* Więcej — poza overflow, ukryte gdy wszystkie linki są inline */}
+          <div ref={moreRef} className="relative shrink-0 min-[1700px]:hidden">
             <button
               type="button"
               onClick={() => setMoreOpen((v) => !v)}

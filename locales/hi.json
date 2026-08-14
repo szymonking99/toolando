@@ -904,5 +904,25 @@
   "favorites": {
     "add": "पसंदीदा में जोड़ें",
     "remove": "पसंदीदा"
+  },
+  "auth": {
+    "signInTitle": "वापसी पर स्वागत है",
+    "signUpTitle": "खाता बनाएँ",
+    "signInSubtitle": "जारी रखने के लिए साइन इन करें।",
+    "signUpSubtitle": "Premium सुविधाओं का उपयोग करने के लिए साइन अप करें।",
+    "name": "नाम",
+    "email": "ईमेल",
+    "password": "पासवर्ड",
+    "submitSignIn": "साइन इन",
+    "submitSignUp": "खाता बनाएँ",
+    "waiting": "कृपया प्रतीक्षा करें…",
+    "errorSignIn": "साइन इन नहीं हो सका",
+    "errorSignUp": "खाता नहीं बन सका",
+    "haveAccount": "पहले से खाता है?",
+    "noAccount": "खाता नहीं है?",
+    "goSignIn": "साइन इन",
+    "goSignUp": "साइन अप",
+    "metaTitle": "खाता — Toolando.tech",
+    "metaDescription": "Toolando.tech पर साइन इन करें या खाता बनाएँ।"
   }
 }

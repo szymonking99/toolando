@@ -8,7 +8,7 @@ import { utilityTools } from "@/lib/utility-tools"
 import { specialTools } from "@/lib/special-tools"
 import { aiTools } from "@/lib/ai-tools"
 import { getUtilityMeta } from "@/lib/i18n/utility-meta"
-import { getSpecialMeta } from "@/lib/i18n/tool-meta"
+import { getSpecialMeta, getAiCategoryLabel } from "@/lib/i18n/tool-meta"
 import { getAiMeta } from "@/lib/i18n/ai-meta"
 import { useI18n } from "@/components/i18n-provider"
 
@@ -17,6 +17,10 @@ type SearchResult = {
   title: string
   hint: string
   premium?: boolean
+}
+
+function safeLower(value: string | undefined | null): string {
+  return (value ?? "").toLowerCase()
 }
 
 export function GlobalSearch({
@@ -44,8 +48,8 @@ export function GlobalSearch({
       const meta = getUtilityMeta(locale, tool.id)
       return {
         id: tool.id,
-        title: meta.name,
-        hint: meta.category,
+        title: meta?.name ?? tool.id,
+        hint: meta?.category ?? "",
       }
     })
 
@@ -53,16 +57,16 @@ export function GlobalSearch({
       const meta = getSpecialMeta(locale, tool.id)
       return {
         id: tool.id,
-        title: meta.name,
-        hint: meta.category,
+        title: meta?.name ?? tool.id,
+        hint: meta?.category ?? "",
       }
     })
 
     const aiMeta = getAiMeta(locale)
     const ai: SearchResult[] = aiTools.map((tool) => ({
       id: tool.id,
-      title: aiMeta[tool.id].name,
-      hint: aiMeta[tool.id].category,
+      title: aiMeta[tool.id]?.name ?? tool.id,
+      hint: getAiCategoryLabel(locale, tool.id),
       premium: true,
     }))
 
@@ -75,9 +79,9 @@ export function GlobalSearch({
     return corpus
       .filter(
         (item) =>
-          item.id.includes(q) ||
-          item.title.toLowerCase().includes(q) ||
-          item.hint.toLowerCase().includes(q),
+          safeLower(item.id).includes(q) ||
+          safeLower(item.title).includes(q) ||
+          safeLower(item.hint).includes(q),
       )
       .slice(0, 12)
   }, [corpus, query])
@@ -120,13 +124,19 @@ export function GlobalSearch({
         />
         <input
           id="global-tool-search"
-          type="search"
+          type="text"
+          role="searchbox"
+          autoComplete="off"
+          spellCheck={false}
           value={query}
           onChange={(e) => {
             setQuery(e.target.value)
             setOpen(true)
           }}
           onFocus={() => setOpen(true)}
+          onKeyDown={(e) => {
+            if (e.key === "Enter") e.preventDefault()
+          }}
           placeholder={t.search.placeholder}
           className={`w-full rounded-xl border border-white/10 bg-white/[0.04] py-2.5 pl-10 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary/40 focus:outline-none focus:ring-1 focus:ring-primary/30 ${
             compact ? "pr-3" : "pr-16"

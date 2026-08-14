@@ -520,6 +520,26 @@
     "noAccount": "Don't have an account?",
     "signUp": "Sign up"
   },
+  "auth": {
+    "signInTitle": "Welcome back",
+    "signUpTitle": "Create an account",
+    "signInSubtitle": "Sign in to continue.",
+    "signUpSubtitle": "Sign up to use Premium features.",
+    "name": "Name",
+    "email": "Email",
+    "password": "Password",
+    "submitSignIn": "Sign in",
+    "submitSignUp": "Create account",
+    "waiting": "Please wait…",
+    "errorSignIn": "Could not sign in",
+    "errorSignUp": "Could not create account",
+    "haveAccount": "Already have an account?",
+    "noAccount": "Don't have an account?",
+    "goSignIn": "Sign in",
+    "goSignUp": "Sign up",
+    "metaTitle": "Account — Toolando.tech",
+    "metaDescription": "Sign in or create an account on Toolando.tech."
+  },
   "account": {
     "backToHome": "Back to homepage",
     "yourAccount": "Your account",

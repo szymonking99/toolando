@@ -904,5 +904,25 @@
   "favorites": {
     "add": "Ajouter aux favoris",
     "remove": "Favori"
+  },
+  "auth": {
+    "signInTitle": "Bon retour",
+    "signUpTitle": "Créer un compte",
+    "signInSubtitle": "Connectez-vous pour continuer.",
+    "signUpSubtitle": "Inscrivez-vous pour utiliser les fonctions Premium.",
+    "name": "Prénom",
+    "email": "E-mail",
+    "password": "Mot de passe",
+    "submitSignIn": "Se connecter",
+    "submitSignUp": "Créer un compte",
+    "waiting": "Veuillez patienter…",
+    "errorSignIn": "Échec de la connexion",
+    "errorSignUp": "Impossible de créer le compte",
+    "haveAccount": "Vous avez déjà un compte ?",
+    "noAccount": "Vous n'avez pas de compte ?",
+    "goSignIn": "Se connecter",
+    "goSignUp": "S'inscrire",
+    "metaTitle": "Compte — Toolando.tech",
+    "metaDescription": "Connectez-vous ou créez un compte sur Toolando.tech."
   }
 }

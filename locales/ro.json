@@ -904,5 +904,25 @@
   "favorites": {
     "add": "Adaugă la favorite",
     "remove": "Favorit"
+  },
+  "auth": {
+    "signInTitle": "Bine ai revenit",
+    "signUpTitle": "Creează un cont",
+    "signInSubtitle": "Autentifică-te pentru a continua.",
+    "signUpSubtitle": "Înregistrează-te pentru a folosi funcțiile Premium.",
+    "name": "Nume",
+    "email": "E-mail",
+    "password": "Parolă",
+    "submitSignIn": "Autentificare",
+    "submitSignUp": "Creează cont",
+    "waiting": "Te rugăm așteaptă…",
+    "errorSignIn": "Autentificarea a eșuat",
+    "errorSignUp": "Contul nu a putut fi creat",
+    "haveAccount": "Ai deja un cont?",
+    "noAccount": "Nu ai un cont?",
+    "goSignIn": "Autentificare",
+    "goSignUp": "Înregistrează-te",
+    "metaTitle": "Cont — Toolando.tech",
+    "metaDescription": "Autentifică-te sau creează un cont pe Toolando.tech."
   }
 }

@@ -904,5 +904,25 @@
   "favorites": {
     "add": "添加到收藏",
     "remove": "已收藏"
+  },
+  "auth": {
+    "signInTitle": "欢迎回来",
+    "signUpTitle": "创建账户",
+    "signInSubtitle": "登录以继续。",
+    "signUpSubtitle": "注册以使用 Premium 功能。",
+    "name": "姓名",
+    "email": "电子邮箱",
+    "password": "密码",
+    "submitSignIn": "登录",
+    "submitSignUp": "创建账户",
+    "waiting": "请稍候…",
+    "errorSignIn": "登录失败",
+    "errorSignUp": "无法创建账户",
+    "haveAccount": "已有账户？",
+    "noAccount": "还没有账户？",
+    "goSignIn": "登录",
+    "goSignUp": "注册",
+    "metaTitle": "账户 — Toolando.tech",
+    "metaDescription": "在 Toolando.tech 登录或创建账户。"
   }
 }

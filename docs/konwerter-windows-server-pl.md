@@ -196,67 +196,138 @@ pm2 logs toolando-converter
 
 ---
 
-## KROK 10 — Auto-sync całego kodu + kopie zapasowe (`F:\Toolando`)
+## KROK 10 — Auto-sync Toolando + backup MegaBota (FB)
 
-Vercel **nie** wysyła plików do domu. Po **każdym** `push` na `main` GitHub Action woła
-`POST https://converter.toolando.tech/hooks/sync`. Serwer:
+Vercel **nie** wysyła plików na serwer domowy.
 
-1. robi **kopię zapasową** aktualnego drzewa do `F:\Toolando\backups\toolando-YYYYMMDD-HHMMSS-<commit>\`
-2. ściąga **całe repo** z GitHub (`git fetch` + `reset --hard origin/main`)
-3. `npm install` w konwerterze i restart PM2
+| Projekt | Źródło | Co robi serwer |
+|---------|--------|----------------|
+| **Toolando** (+ jego doc-converter) | GitHub | backup → `git pull` → restart konwertera |
+| **BadylTech MegaBot** (FB / publikacja) | tylko lokalnie `F:\apps\badyltech-megabot` | codzienny lokalny backup (bez GitHuba) |
 
-Trzymane są ostatnie **10** backupów (konfiguracja: `SYNC_BACKUP_KEEP`).  
-Z backupu wyłączone: `node_modules`, `.next`, `.git`, `backups`, `logs` (żeby nie puchło).  
-Lokalny `.env` konwertera jest zachowywany i też kopiowany do snapshotu.
+### Toolando — sync z GitHub
+
+Dwa sposoby:
+
+1. **Webhook** — push na `main` → GitHub Action → `POST /hooks/sync`
+2. **Polling** (co 5 min) — Task Scheduler → `poll-github-sync.ps1` gdy `origin/main` jest nowszy
+
+Serwer:
+
+1. kopia zapasowa → `F:\backups\toolando-YYYYMMDD-HHMMSS-<commit>\`
+2. `git fetch` + `reset --hard origin/main`
+3. `npm install` w konwerterze + restart PM2
+
+Trzymane są ostatnie **10** backupów (`SYNC_BACKUP_KEEP`).  
+Z backupu wyłączone: `node_modules`, `.next`, `.git`, `backups`, `logs`, `venv`, `__pycache__`.  
+Lokalny `.env` konwertera jest zachowywany.
+
+### Bot BadylTech MegaBot (FB / publikacja) — tylko lokalny backup
+
+**To nie jest doc-converter.** MegaBot to osobny projekt: `F:\apps\badyltech-megabot` (posty FB, publikacja).  
+Nie ma GitHuba — backup jest lokalny.
+
+Skrypty (w repo Toolando, ale dotyczą MegaBota):
+
+- `scripts/windows-server/backup-megabot.ps1`
+- `scripts/windows-server/install-megabot-backup.ps1`
+
+```powershell
+# Na serwerze — raz jako Administrator:
+cd F:\Toolando\scripts\windows-server
+powershell -ExecutionPolicy Bypass -File .\install-megabot-backup.ps1
+# → zadanie BadylTech-MegaBot-Backup codziennie 03:00
+# → kopiuje skrypt do F:\apps\badyltech-megabot\_ops\
+# → backupy: F:\backups\megabot-YYYYMMDD-HHmmss\
+```
+
+Test:
+
+```powershell
+powershell -File F:\apps\badyltech-megabot\_ops\backup-megabot.ps1
+```
+
+### Endpointy Toolando sync (ten sam `DEPLOY_SYNC_SECRET`)
+
+| Endpoint | Działanie |
+|----------|-----------|
+| `POST /hooks/sync` | Toolando: backup + git pull + restart |
+| `POST /hooks/sync/all` | Toolando sync + opcjonalny lokalny backup MegaBota |
+| `POST /hooks/backup/bot` | lokalny backup MegaBota (`F:\apps\badyltech-megabot`) |
 
 ### Wymagania
 
-1. **Git** zainstalowany na Windows Server
-2. `F:\Toolando` to klon repozytorium (nie tylko skopiowany folder):
+1. **Git** na Windows Server
+2. `F:\Toolando` to klon GitHub (nie tylko skopiowany folder):
 
 ```powershell
-# Jeśli folder już istnieje bez .git — zrób świeży klon obok albo:
 cd F:\
-# przykład: przenieś stare pliki, potem:
 git clone https://github.com/szymonking99/toolando.git Toolando
 # przywróć services\doc-converter\.env
 ```
 
-3. W `F:\Toolando\services\doc-converter\.env` dodaj:
+3. MegaBot już leży w `F:\apps\badyltech-megabot` (bez GitHuba — OK).
+
+4. W `F:\Toolando\services\doc-converter\.env`:
 
 ```
 DEPLOY_SYNC_SECRET=inny-losowy-sekret-min-32-znaki
 TOOLANDO_ROOT=F:\Toolando
 PM2_APP_NAME=toolando-converter
+BOT_ROOT=F:\apps\badyltech-megabot
 SYNC_BACKUP_KEEP=10
+SYNC_BACKUP_DIR=F:\backups
+SYNC_LOG_DIR=F:\logs
 ```
 
-4. Restart konwertera: `pm2 restart toolando-converter`
+5. Restart konwertera: `pm2 restart toolando-converter`
 
-5. W GitHub → repo → **Settings → Secrets and variables → Actions**:
+6. **GitHub Secrets** (tylko repo Toolando):
 
 | Secret | Wartość |
 |--------|---------|
 | `CONVERTER_SYNC_URL` | `https://converter.toolando.tech/hooks/sync` |
 | `CONVERTER_SYNC_SECRET` | ten sam co `DEPLOY_SYNC_SECRET` |
 
+7. **Task Scheduler:**
+
+```powershell
+# Toolando — poll GitHub co 5 min
+cd F:\Toolando\services\doc-converter
+powershell -ExecutionPolicy Bypass -File .\install-sync-scheduler.ps1
+
+# MegaBot (FB) — codzienny lokalny backup (OSOBNO)
+cd F:\Toolando\scripts\windows-server
+powershell -ExecutionPolicy Bypass -File .\install-megabot-backup.ps1
+```
+
 ### Test ręczny
 
 ```powershell
+# Toolando (backup + pull)
 curl -X POST https://converter.toolando.tech/hooks/sync `
   -H "Authorization: Bearer TWÓJ_DEPLOY_SYNC_SECRET" `
   -H "Content-Type: application/json" `
   -d "{}"
+
+# Bot (tylko lokalny backup MegaBota — FB)
+curl -X POST https://converter.toolando.tech/hooks/backup/bot `
+  -H "Authorization: Bearer TWÓJ_DEPLOY_SYNC_SECRET" `
+  -H "Content-Type: application/json" `
+  -d "{}"
+
+# Albo lokalnie (zalecane):
+powershell -File F:\Toolando\scripts\windows-server\backup-megabot.ps1
 ```
 
-Oczekiwane: JSON z `"ok": true`, hashem commita i ścieżką `"backup"`.  
-Log: `F:\Toolando\logs\sync.log`. Backupy: `F:\Toolando\backups\`.
+Oczekiwane: JSON z `"ok": true` i ścieżką `"backup"`.  
+Logi Toolando: `F:\logs\sync.log`, `F:\logs\poll-sync.log`.  
+Log MegaBot: `F:\logs\megabot-backup.log`.  
+Backupy: `F:\backups\toolando-...`, `F:\backups\megabot-...`.
 
-Workflow: `.github/workflows/sync-windows-converter.yml` (każdy push na `main` albo ręczne **Run workflow**).
+Workflow Toolando: `.github/workflows/sync-windows-converter.yml`.
 
 ### Restart bez pełnego sync
-
-Gdy wgrałeś pliki ręcznie (bez gita):
 
 ```powershell
 curl.exe -X POST https://converter.toolando.tech/hooks/restart `
@@ -265,9 +336,9 @@ curl.exe -X POST https://converter.toolando.tech/hooks/restart `
   -d "{}"
 ```
 
-Albo lokalnie na serwerze: `pm2 restart toolando-converter`.
+Albo lokalnie: `pm2 restart toolando-converter`.
 
-`GET /health` zwraca też `lastSync` (z `F:\Toolando\logs\last-sync.json`) oraz `startedAt`.
+`GET /health` zwraca `lastSync`, `botBackupEnabled`, `botRoot` (ścieżka MegaBota), `startedAt`.
 
 ### Autostart po restarcie Windows
 
@@ -275,19 +346,22 @@ Albo lokalnie na serwerze: `pm2 restart toolando-converter`.
 pm2 startup
 pm2 save
 Get-Service cloudflared
-# cloudflared powinien być usługą Windows (zainstalowaną z tokenem)
 ```
 
 ### Przywracanie z backupu
 
 ```powershell
-# przykład — dostosuj nazwę folderu
-$bak = "F:\Toolando\backups\toolando-20260729-153000-abc1234"
-robocopy $bak F:\Toolando /E /XD node_modules .next .git backups logs
-# przywróć .env jeśli trzeba, potem:
+# Toolando
+$bak = "F:\backups\toolando-20260729-153000-abc1234"
+robocopy $bak F:\Toolando /E /XD node_modules .next .git backups logs venv __pycache__
 cd F:\Toolando\services\doc-converter
 npm install
 pm2 restart toolando-converter
+
+# Bot
+$bak = "F:\backups\megabot-20260729-153000"
+robocopy $bak F:\apps\badyltech-megabot /E /XD backups logs venv __pycache__
+# potem uruchom MegaBota jak zwykle
 ```
 
 ---
@@ -310,7 +384,7 @@ pm2 restart toolando-converter
 
 ## Aktualizacja po zmianach w kodzie
 
-**Automatycznie:** każdy push na `main` → GitHub Action → backup + pełny sync + `/hooks/sync`.
+**Automatycznie:** push na `main` w Toolando → backup + sync. Task Scheduler: poll GitHub (Toolando) + osobno codzienny backup MegaBota (FB).
 
 **Ręcznie:**
 

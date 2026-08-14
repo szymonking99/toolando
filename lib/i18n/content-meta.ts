@@ -1,6 +1,7 @@
 import type { Locale } from "./config"
 import { resolveContentLocale } from "./content-locale"
 import { localizedCategoryMeta } from "./category-meta/localized-categories"
+import { localizedFeatureMeta } from "./feature-meta/localized-features"
 
 import type { TextMeta, CategoryExtendedMeta } from "./category-meta/types"
 
@@ -170,7 +171,7 @@ const categoryMeta: Record<string, Record<string, CategoryExtendedMeta>> = {
 }
 
 /** Featured tool cards keyed by tool id. */
-const featureMeta: Record<Locale, Record<string, TextMeta>> = {
+const featureMeta: Record<string, Record<string, TextMeta>> = {
   pl: {
     "pdf-to-jpg": { title: "Konwerter PDF → JPG", description: "Zamień strony dokumentu PDF na obrazy JPG w wysokiej jakości — szybko i bez instalacji." },
     "kompresor-obrazow": { title: "Kompresor obrazów", description: "Zmniejsz rozmiar zdjęć bez widocznej utraty jakości, aby przyspieszyć swoją stronę." },
@@ -211,6 +212,7 @@ const featureMeta: Record<Locale, Record<string, TextMeta>> = {
     "laczenie-pdf": { title: "Об’єднання файлів PDF", description: "Об’єднай кілька документів PDF в один файл зі збереженням порядку та якості." },
     "usuwanie-tla": { title: "Видалення фону зі зображення", description: "Автоматично видали фон із фото одним кліком завдяки точному ШІ." },
   },
+  ...localizedFeatureMeta,
 }
 
 export function getCategoryMeta(locale: Locale, slug: string): CategoryExtendedMeta | undefined {
@@ -220,6 +222,7 @@ export function getCategoryMeta(locale: Locale, slug: string): CategoryExtendedM
 }
 
 export function getFeatureMeta(locale: Locale, id: string): TextMeta | undefined {
-  const map = featureMeta[locale] ?? featureMeta.en
+  const resolved = resolveContentLocale(locale)
+  const map = featureMeta[resolved] ?? featureMeta.en
   return map[id] ?? featureMeta.en[id]
 }

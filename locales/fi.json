@@ -904,5 +904,25 @@
   "favorites": {
     "add": "Lisää suosikkeihin",
     "remove": "Suosikki"
+  },
+  "auth": {
+    "signInTitle": "Tervetuloa takaisin",
+    "signUpTitle": "Luo tili",
+    "signInSubtitle": "Kirjaudu jatkaaksesi.",
+    "signUpSubtitle": "Rekisteröidy käyttääksesi Premium-ominaisuuksia.",
+    "name": "Nimi",
+    "email": "Sähköposti",
+    "password": "Salasana",
+    "submitSignIn": "Kirjaudu",
+    "submitSignUp": "Luo tili",
+    "waiting": "Odota…",
+    "errorSignIn": "Kirjautuminen epäonnistui",
+    "errorSignUp": "Tilin luominen epäonnistui",
+    "haveAccount": "Onko sinulla jo tili?",
+    "noAccount": "Eikö sinulla ole tiliä?",
+    "goSignIn": "Kirjaudu",
+    "goSignUp": "Rekisteröidy",
+    "metaTitle": "Tili — Toolando.tech",
+    "metaDescription": "Kirjaudu tai luo tili Toolando.techissä."
   }
 }

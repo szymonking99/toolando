@@ -904,5 +904,25 @@
   "favorites": {
     "add": "Hozzáadás a kedvencekhez",
     "remove": "Kedvenc"
+  },
+  "auth": {
+    "signInTitle": "Üdv újra",
+    "signUpTitle": "Fiók létrehozása",
+    "signInSubtitle": "Jelentkezz be a folytatáshoz.",
+    "signUpSubtitle": "Regisztrálj a Premium funkciók használatához.",
+    "name": "Név",
+    "email": "E-mail",
+    "password": "Jelszó",
+    "submitSignIn": "Bejelentkezés",
+    "submitSignUp": "Fiók létrehozása",
+    "waiting": "Kérjük, várjon…",
+    "errorSignIn": "A bejelentkezés nem sikerült",
+    "errorSignUp": "A fiók létrehozása nem sikerült",
+    "haveAccount": "Már van fiókod?",
+    "noAccount": "Nincs fiókod?",
+    "goSignIn": "Bejelentkezés",
+    "goSignUp": "Regisztráció",
+    "metaTitle": "Fiók — Toolando.tech",
+    "metaDescription": "Jelentkezz be vagy hozz létre fiókot a Toolando.tech oldalon."
   }
 }

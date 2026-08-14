@@ -904,5 +904,25 @@
   "favorites": {
     "add": "Lägg till i favoriter",
     "remove": "Favorit"
+  },
+  "auth": {
+    "signInTitle": "Välkommen tillbaka",
+    "signUpTitle": "Skapa ett konto",
+    "signInSubtitle": "Logga in för att fortsätta.",
+    "signUpSubtitle": "Registrera dig för att använda Premium-funktioner.",
+    "name": "Namn",
+    "email": "E-post",
+    "password": "Lösenord",
+    "submitSignIn": "Logga in",
+    "submitSignUp": "Skapa konto",
+    "waiting": "Vänta…",
+    "errorSignIn": "Kunde inte logga in",
+    "errorSignUp": "Kunde inte skapa kontot",
+    "haveAccount": "Har du redan ett konto?",
+    "noAccount": "Har du inget konto?",
+    "goSignIn": "Logga in",
+    "goSignUp": "Registrera dig",
+    "metaTitle": "Konto — Toolando.tech",
+    "metaDescription": "Logga in eller skapa ett konto på Toolando.tech."
   }
 }

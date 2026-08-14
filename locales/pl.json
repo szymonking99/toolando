@@ -520,6 +520,26 @@
     "noAccount": "Nie masz konta?",
     "signUp": "Zarejestruj się"
   },
+  "auth": {
+    "signInTitle": "Witaj z powrotem",
+    "signUpTitle": "Załóż konto",
+    "signInSubtitle": "Zaloguj się, aby kontynuować.",
+    "signUpSubtitle": "Zarejestruj się, aby korzystać z funkcji Premium.",
+    "name": "Imię",
+    "email": "E-mail",
+    "password": "Hasło",
+    "submitSignIn": "Zaloguj się",
+    "submitSignUp": "Utwórz konto",
+    "waiting": "Proszę czekać…",
+    "errorSignIn": "Nie udało się zalogować",
+    "errorSignUp": "Nie udało się utworzyć konta",
+    "haveAccount": "Masz już konto?",
+    "noAccount": "Nie masz konta?",
+    "goSignIn": "Zaloguj się",
+    "goSignUp": "Zarejestruj się",
+    "metaTitle": "Konto — Toolando.tech",
+    "metaDescription": "Zaloguj się lub załóż konto w Toolando.tech."
+  },
   "account": {
     "backToHome": "Powrót do strony głównej",
     "yourAccount": "Twoje konto",

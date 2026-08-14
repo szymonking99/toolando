@@ -6,9 +6,12 @@ import { useRouter } from "next/navigation"
 import { Loader2, Wrench } from "lucide-react"
 import { authClient } from "@/lib/auth-client"
 import { Button } from "@/components/ui/button"
+import { useI18n } from "@/components/i18n-provider"
 
 export function AuthForm({ mode }: { mode: "sign-in" | "sign-up" }) {
   const router = useRouter()
+  const { t, href } = useI18n()
+  const a = t.auth
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
@@ -30,8 +33,7 @@ export function AuthForm({ mode }: { mode: "sign-in" | "sign-up" }) {
 
     if (error) {
       setError(
-        error.message ??
-          (isSignUp ? "Nie udało się utworzyć konta" : "Nie udało się zalogować"),
+        error.message ?? (isSignUp ? a.errorSignUp : a.errorSignIn),
       )
       return
     }
@@ -46,7 +48,7 @@ export function AuthForm({ mode }: { mode: "sign-in" | "sign-up" }) {
   return (
     <main className="flex min-h-svh items-center justify-center px-4 py-12">
       <div className="w-full max-w-sm rounded-2xl border border-white/10 bg-background/60 p-6 backdrop-blur-xl">
-        <Link href="/" className="mb-6 flex items-center gap-2">
+        <Link href={href("/")} className="mb-6 flex items-center gap-2">
           <span className="flex size-8 items-center justify-center rounded-lg bg-primary/15 text-primary ring-1 ring-primary/30">
             <Wrench className="size-4" aria-hidden="true" />
           </span>
@@ -57,12 +59,10 @@ export function AuthForm({ mode }: { mode: "sign-in" | "sign-up" }) {
 
         <div className="mb-6">
           <h1 className="text-2xl font-semibold tracking-tight text-foreground text-balance">
-            {isSignUp ? "Załóż konto" : "Witaj z powrotem"}
+            {isSignUp ? a.signUpTitle : a.signInTitle}
           </h1>
           <p className="mt-1 text-sm text-muted-foreground leading-relaxed">
-            {isSignUp
-              ? "Zarejestruj się, aby korzystać z funkcji Premium."
-              : "Zaloguj się, aby kontynuować."}
+            {isSignUp ? a.signUpSubtitle : a.signInSubtitle}
           </p>
         </div>
 
@@ -70,7 +70,7 @@ export function AuthForm({ mode }: { mode: "sign-in" | "sign-up" }) {
           {isSignUp && (
             <div className="flex flex-col gap-2">
               <label htmlFor="name" className="text-sm font-medium text-foreground">
-                Imię
+                {a.name}
               </label>
               <input
                 id="name"
@@ -84,7 +84,7 @@ export function AuthForm({ mode }: { mode: "sign-in" | "sign-up" }) {
           )}
           <div className="flex flex-col gap-2">
             <label htmlFor="email" className="text-sm font-medium text-foreground">
-              E-mail
+              {a.email}
             </label>
             <input
               id="email"
@@ -101,7 +101,7 @@ export function AuthForm({ mode }: { mode: "sign-in" | "sign-up" }) {
               htmlFor="password"
               className="text-sm font-medium text-foreground"
             >
-              Hasło
+              {a.password}
             </label>
             <input
               id="password"
@@ -124,20 +124,20 @@ export function AuthForm({ mode }: { mode: "sign-in" | "sign-up" }) {
           <Button type="submit" disabled={loading} size="lg" className="w-full">
             {loading && <Loader2 className="size-4 animate-spin" aria-hidden="true" />}
             {loading
-              ? "Proszę czekać..."
+              ? a.waiting
               : isSignUp
-                ? "Utwórz konto"
-                : "Zaloguj się"}
+                ? a.submitSignUp
+                : a.submitSignIn}
           </Button>
         </form>
 
         <p className="mt-6 text-center text-sm text-muted-foreground">
-          {isSignUp ? "Masz już konto? " : "Nie masz konta? "}
+          {isSignUp ? `${a.haveAccount} ` : `${a.noAccount} `}
           <Link
             href={isSignUp ? "/sign-in" : "/sign-up"}
             className="font-medium text-foreground underline-offset-4 hover:underline"
           >
-            {isSignUp ? "Zaloguj się" : "Zarejestruj się"}
+            {isSignUp ? a.goSignIn : a.goSignUp}
           </Link>
         </p>
       </div>

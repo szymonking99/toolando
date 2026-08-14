@@ -44,9 +44,9 @@ export function ToolSearch({ className }: { className?: string }) {
         const meta = getUtilityMeta(locale, tool.id)
         return {
           id: tool.id,
-          title: meta.name,
-          hint: meta.category,
-          haystack: `${meta.name} ${meta.description} ${tool.id}`.toLowerCase(),
+          title: meta?.name ?? tool.id,
+          hint: meta?.category ?? "",
+          haystack: `${meta?.name ?? ""} ${meta?.description ?? ""} ${tool.id}`.toLowerCase(),
         }
       })
       .filter((tool) => tool.haystack.includes(q) || tool.id.includes(q))

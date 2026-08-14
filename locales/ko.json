@@ -904,5 +904,25 @@
   "favorites": {
     "add": "즐겨찾기에 추가",
     "remove": "즐겨찾기"
+  },
+  "auth": {
+    "signInTitle": "다시 오신 것을 환영합니다",
+    "signUpTitle": "계정 만들기",
+    "signInSubtitle": "계속하려면 로그인하세요.",
+    "signUpSubtitle": "Premium 기능을 사용하려면 가입하세요.",
+    "name": "이름",
+    "email": "이메일",
+    "password": "비밀번호",
+    "submitSignIn": "로그인",
+    "submitSignUp": "계정 만들기",
+    "waiting": "잠시만 기다려 주세요…",
+    "errorSignIn": "로그인하지 못했습니다",
+    "errorSignUp": "계정을 만들지 못했습니다",
+    "haveAccount": "이미 계정이 있으신가요?",
+    "noAccount": "계정이 없으신가요?",
+    "goSignIn": "로그인",
+    "goSignUp": "가입",
+    "metaTitle": "계정 — Toolando.tech",
+    "metaDescription": "Toolando.tech에 로그인하거나 계정을 만드세요."
   }
 }

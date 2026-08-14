@@ -904,5 +904,25 @@
   "favorites": {
     "add": "Adicionar aos favoritos",
     "remove": "Favorito"
+  },
+  "auth": {
+    "signInTitle": "Bem-vindo de volta",
+    "signUpTitle": "Criar uma conta",
+    "signInSubtitle": "Inicie sessão para continuar.",
+    "signUpSubtitle": "Registe-se para usar as funções Premium.",
+    "name": "Nome",
+    "email": "E-mail",
+    "password": "Palavra-passe",
+    "submitSignIn": "Iniciar sessão",
+    "submitSignUp": "Criar conta",
+    "waiting": "Aguarde…",
+    "errorSignIn": "Não foi possível iniciar sessão",
+    "errorSignUp": "Não foi possível criar a conta",
+    "haveAccount": "Já tem uma conta?",
+    "noAccount": "Não tem uma conta?",
+    "goSignIn": "Iniciar sessão",
+    "goSignUp": "Registar-se",
+    "metaTitle": "Conta — Toolando.tech",
+    "metaDescription": "Inicie sessão ou crie uma conta no Toolando.tech."
   }
 }

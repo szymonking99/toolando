@@ -904,5 +904,25 @@
   "favorites": {
     "add": "Προσθήκη στα αγαπημένα",
     "remove": "Αγαπημένο"
+  },
+  "auth": {
+    "signInTitle": "Καλώς ήρθατε ξανά",
+    "signUpTitle": "Δημιουργία λογαριασμού",
+    "signInSubtitle": "Συνδεθείτε για να συνεχίσετε.",
+    "signUpSubtitle": "Εγγραφείτε για να χρησιμοποιήσετε τις λειτουργίες Premium.",
+    "name": "Όνομα",
+    "email": "Email",
+    "password": "Κωδικός",
+    "submitSignIn": "Σύνδεση",
+    "submitSignUp": "Δημιουργία λογαριασμού",
+    "waiting": "Παρακαλώ περιμένετε…",
+    "errorSignIn": "Η σύνδεση απέτυχε",
+    "errorSignUp": "Δεν ήταν δυνατή η δημιουργία λογαριασμού",
+    "haveAccount": "Έχετε ήδη λογαριασμό;",
+    "noAccount": "Δεν έχετε λογαριασμό;",
+    "goSignIn": "Σύνδεση",
+    "goSignUp": "Εγγραφή",
+    "metaTitle": "Λογαριασμός — Toolando.tech",
+    "metaDescription": "Συνδεθείτε ή δημιουργήστε λογαριασμό στο Toolando.tech."
   }
 }

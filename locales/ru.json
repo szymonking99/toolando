@@ -904,5 +904,25 @@
   "favorites": {
     "add": "Добавить в избранное",
     "remove": "Избранное"
+  },
+  "auth": {
+    "signInTitle": "С возвращением",
+    "signUpTitle": "Создать аккаунт",
+    "signInSubtitle": "Войдите, чтобы продолжить.",
+    "signUpSubtitle": "Зарегистрируйтесь, чтобы пользоваться функциями Premium.",
+    "name": "Имя",
+    "email": "Электронная почта",
+    "password": "Пароль",
+    "submitSignIn": "Войти",
+    "submitSignUp": "Создать аккаунт",
+    "waiting": "Подождите…",
+    "errorSignIn": "Не удалось войти",
+    "errorSignUp": "Не удалось создать аккаунт",
+    "haveAccount": "Уже есть аккаунт?",
+    "noAccount": "Нет аккаунта?",
+    "goSignIn": "Войти",
+    "goSignUp": "Зарегистрироваться",
+    "metaTitle": "Аккаунт — Toolando.tech",
+    "metaDescription": "Войдите или создайте аккаунт на Toolando.tech."
   }
 }

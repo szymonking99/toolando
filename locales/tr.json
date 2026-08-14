@@ -904,5 +904,25 @@
   "favorites": {
     "add": "Favorilere ekle",
     "remove": "Favori"
+  },
+  "auth": {
+    "signInTitle": "Tekrar hoş geldiniz",
+    "signUpTitle": "Hesap oluştur",
+    "signInSubtitle": "Devam etmek için giriş yapın.",
+    "signUpSubtitle": "Premium özelliklerini kullanmak için kaydolun.",
+    "name": "Ad",
+    "email": "E-posta",
+    "password": "Şifre",
+    "submitSignIn": "Giriş yap",
+    "submitSignUp": "Hesap oluştur",
+    "waiting": "Lütfen bekleyin…",
+    "errorSignIn": "Giriş yapılamadı",
+    "errorSignUp": "Hesap oluşturulamadı",
+    "haveAccount": "Zaten hesabınız var mı?",
+    "noAccount": "Hesabınız yok mu?",
+    "goSignIn": "Giriş yap",
+    "goSignUp": "Kaydol",
+    "metaTitle": "Hesap — Toolando.tech",
+    "metaDescription": "Toolando.tech'te giriş yapın veya hesap oluşturun."
   }
 }

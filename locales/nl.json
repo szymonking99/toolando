@@ -904,5 +904,25 @@
   "favorites": {
     "add": "Toevoegen aan favorieten",
     "remove": "Favoriet"
+  },
+  "auth": {
+    "signInTitle": "Welkom terug",
+    "signUpTitle": "Account aanmaken",
+    "signInSubtitle": "Log in om door te gaan.",
+    "signUpSubtitle": "Registreer je om Premium-functies te gebruiken.",
+    "name": "Naam",
+    "email": "E-mail",
+    "password": "Wachtwoord",
+    "submitSignIn": "Inloggen",
+    "submitSignUp": "Account aanmaken",
+    "waiting": "Even geduld…",
+    "errorSignIn": "Inloggen mislukt",
+    "errorSignUp": "Account kon niet worden aangemaakt",
+    "haveAccount": "Heb je al een account?",
+    "noAccount": "Nog geen account?",
+    "goSignIn": "Inloggen",
+    "goSignUp": "Registreren",
+    "metaTitle": "Account — Toolando.tech",
+    "metaDescription": "Log in of maak een account aan op Toolando.tech."
   }
 }

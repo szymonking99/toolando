@@ -36,8 +36,19 @@ function isLocaleAgnostic(pathname: string): boolean {
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl
 
-  // Already locale-prefixed — let it through.
+  // Already locale-prefixed — sync cookie so /sign-in inherits browsing language.
   if (HAS_LOCALE_PREFIX.test(pathname)) {
+    const seg = pathname.split("/").filter(Boolean)[0]
+    const resolved = seg ? normalizeToSupported(seg) : undefined
+    if (resolved) {
+      const res = NextResponse.next()
+      res.cookies.set(LOCALE_COOKIE, resolved, {
+        path: "/",
+        maxAge: 60 * 60 * 24 * 365,
+        sameSite: "lax",
+      })
+      return res
+    }
     return NextResponse.next()
   }
 

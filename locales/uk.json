@@ -904,5 +904,25 @@
   "favorites": {
     "add": "Додати до обраного",
     "remove": "Обране"
+  },
+  "auth": {
+    "signInTitle": "З поверненням",
+    "signUpTitle": "Створити обліковий запис",
+    "signInSubtitle": "Увійдіть, щоб продовжити.",
+    "signUpSubtitle": "Зареєструйтеся, щоб користуватися функціями Premium.",
+    "name": "Імʼя",
+    "email": "Електронна пошта",
+    "password": "Пароль",
+    "submitSignIn": "Увійти",
+    "submitSignUp": "Створити обліковий запис",
+    "waiting": "Зачекайте…",
+    "errorSignIn": "Не вдалося увійти",
+    "errorSignUp": "Не вдалося створити обліковий запис",
+    "haveAccount": "Вже маєте обліковий запис?",
+    "noAccount": "Немає облікового запису?",
+    "goSignIn": "Увійти",
+    "goSignUp": "Зареєструватися",
+    "metaTitle": "Обліковий запис — Toolando.tech",
+    "metaDescription": "Увійдіть або створіть обліковий запис на Toolando.tech."
   }
 }
