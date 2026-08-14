@@ -691,7 +691,7 @@ export const guidesTr: Record<GuideSlug, GuideArticle> = {
     sections: [
       {
         paragraphs: [
-          "Toolando.tech Szymon Badyl (Badyl-Tech) tarafından tek başına geliştirilir. Rehberler toplu üretilmez veya Wikipedia'dan kopyalanmaz — gerçek dönüştürme testlerine dayanır.",
+          "Toolando.tech Szymon tarafından tek başına geliştirilir. Rehberler toplu üretilmez veya Wikipedia'dan kopyalanmaz — gerçek dönüştürme testlerine dayanır.",
           "Her makalenin yayın ve güncelleme tarihi vardır. Platform gereksinimleri veya kütüphaneler değiştiğinde metni revize ederim.",
         ],
       },

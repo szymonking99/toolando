@@ -10,7 +10,7 @@ export const termsIt: LegalDocumentData = {
     {
       title: "§1. Disposizioni generali",
       paragraphs: [
-        "1.1. Il titolare e gestore di Toolando.tech (il « Servizio ») è Szymon Badyl (il « Fornitore »).",
+        "1.1. Il titolare e gestore di Toolando.tech (il « Servizio ») è Szymon (il « Fornitore »).",
         "1.2. Contatto: {{email}}. Per questioni che richiedono corrispondenza formale, il Fornitore fornisce i dati identificativi conformemente alla legge applicabile, su richiesta legittima.",
         "1.3. Il Servizio offre strumenti online basati sul browser, inclusi convertitori di file, strumenti specialistici, strumenti assistiti da IA e contenuti informativi (guide, FAQ).",
         "1.4. I presenti termini sono resi disponibili gratuitamente nel Servizio in forma che consente il download, la memorizzazione e la stampa.",

@@ -10,7 +10,7 @@ export const privacyKo: LegalDocumentData = {
     {
       title: "§1. 데이터 관리자",
       paragraphs: [
-        "1.1. 데이터 처리 관리자(「관리자」)는 온라인 도구 서비스를 운영하는 Toolando.tech 소유자 Szymon Badyl입니다.",
+        "1.1. 데이터 처리 관리자(「관리자」)는 온라인 도구 서비스를 운영하는 Toolando.tech 소유자 Szymon입니다.",
         "1.2. 개인정보 문의: {{email}}.",
         "1.3. 관리자는 GDPR상 본 활동에 필요하지 않아 데이터 보호 책임자(DPO)를 지정하지 않았습니다.",
       ],

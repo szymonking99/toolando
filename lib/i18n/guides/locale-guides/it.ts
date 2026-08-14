@@ -691,7 +691,7 @@ export const guidesIt: Record<GuideSlug, GuideArticle> = {
     sections: [
       {
         paragraphs: [
-          "Toolando.tech è sviluppato in autonomia da Szymon Badyl (Badyl-Tech). Le guide non sono generate in massa né copiate da Wikipedia: seguono test di conversione su file reali.",
+          "Toolando.tech è sviluppato in autonomia da Szymon. Le guide non sono generate in massa né copiate da Wikipedia: seguono test di conversione su file reali.",
           "Ogni articolo ha date di pubblicazione e aggiornamento. Quando cambiano i requisiti delle piattaforme o le librerie, rivedo il testo.",
         ],
       },

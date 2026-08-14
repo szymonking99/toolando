@@ -691,7 +691,7 @@ export const guidesAr: Record<GuideSlug, GuideArticle> = {
     sections: [
       {
         paragraphs: [
-          "Toolando.tech بناها Szymon Badyl (Badyl-Tech) بمفرده. الأدلة لا تُولَّد جماعيًا ولا تُنسخ من Wikipedia — تعتمد على اختبارات تحويل حقيقية.",
+          "Toolando.tech بناها Szymon بمفرده. الأدلة لا تُولَّد جماعيًا ولا تُنسخ من Wikipedia — تعتمد على اختبارات تحويل حقيقية.",
           "كل مقال له تاريخ نشر وتحديث. عند تغيّر متطلبات المنصات أو المكتبات، أراجع النص.",
         ],
       },

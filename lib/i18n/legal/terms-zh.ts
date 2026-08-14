@@ -10,7 +10,7 @@ export const termsZh: LegalDocumentData = {
     {
       title: "§1. 一般规定",
       paragraphs: [
-        "1.1. Toolando.tech（「服务」）的所有者及运营者为 Szymon Badyl（「提供商」）。",
+        "1.1. Toolando.tech（「服务」）的所有者及运营者为 Szymon（「提供商」）。",
         "1.2. 联系：{{email}}。需正式通信的事项，提供商将在合理请求下依适用法律提供识别信息。",
         "1.3. 服务提供基于浏览器的在线工具，包括文件转换器、专业工具、AI 工具及信息内容（指南、FAQ）。",
         "1.4. 本条款在服务中免费提供，可下载、保存及打印。",

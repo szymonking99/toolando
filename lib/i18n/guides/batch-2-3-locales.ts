@@ -148,7 +148,7 @@ export const guidesBatch23De: Record<Batch23Slug, GuideArticle> = {
     sections: [
       {
         paragraphs: [
-          "Toolando.tech entwickle ich allein (Szymon Badyl / Badyl-Tech). Ratgeber werden nicht massenhaft generiert oder von Wikipedia kopiert — sie basieren auf Konvertierungstests mit echten Dateien.",
+          "Toolando.tech entwickle ich allein (Szymon). Ratgeber werden nicht massenhaft generiert oder von Wikipedia kopiert — sie basieren auf Konvertierungstests mit echten Dateien.",
           "Jeder Artikel hat Veröffentlichungs- und Aktualisierungsdatum. Wenn Plattformanforderungen (z. B. Instagram-Video) oder Bibliotheken sich ändern, überarbeite ich den Text.",
         ],
       },
@@ -669,7 +669,7 @@ export const guidesBatch23Es: Record<Batch23Slug, GuideArticle> = {
     sections: [
       {
         paragraphs: [
-          "Toolando.tech lo desarrollo yo solo (Szymon Badyl / Badyl-Tech). Las guías no se generan en masa ni se copian de Wikipedia: se basan en pruebas de conversión con archivos reales.",
+          "Toolando.tech lo desarrollo yo solo (Szymon). Las guías no se generan en masa ni se copian de Wikipedia: se basan en pruebas de conversión con archivos reales.",
           "Cada artículo tiene fecha de publicación y actualización. Cuando cambian requisitos de plataformas (p. ej. vídeo de Instagram) o bibliotecas, reviso el texto.",
         ],
       },
@@ -1190,7 +1190,7 @@ export const guidesBatch23Uk: Record<Batch23Slug, GuideArticle> = {
     sections: [
       {
         paragraphs: [
-          "Toolando.tech розробляю самостійно (Szymon Badyl / Badyl-Tech). Посібники не копіюються з Wikipedia й не генеруються масово — вони базуються на тестах конвертації реальних файлів.",
+          "Toolando.tech розробляю самостійно (Szymon). Посібники не копіюються з Wikipedia й не генеруються масово — вони базуються на тестах конвертації реальних файлів.",
           "Кожна стаття має дату публікації та оновлення. Коли змінюються вимоги платформ (наприклад, відео Instagram) або бібліотеки конвертації, я повертаюся до тексту й виправляю його.",
         ],
       },

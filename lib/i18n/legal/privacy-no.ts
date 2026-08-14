@@ -10,7 +10,7 @@ export const privacyNo: LegalDocumentData = {
     {
       title: "§1. Behandlingsansvarlig",
       paragraphs: [
-        "1.1. Behandlingsansvarlig for databehandlingen (\"Behandlingsansvarlig\") er Szymon Badyl, eier av Toolando.tech, som driver nettbaserte verktøytjenester.",
+        "1.1. Behandlingsansvarlig for databehandlingen (\"Behandlingsansvarlig\") er Szymon, eier av Toolando.tech, som driver nettbaserte verktøytjenester.",
         "1.2. Personvernkontakt: {{email}}.",
         "1.3. Behandlingsansvarlig har ikke utnevnt personvernombud, da dette ikke er påkrevd etter GDPR for denne virksomheten.",
       ],

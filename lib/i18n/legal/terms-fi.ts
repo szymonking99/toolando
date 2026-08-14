@@ -10,7 +10,7 @@ export const termsFi: LegalDocumentData = {
     {
       title: "§1. Yleiset määräykset",
       paragraphs: [
-        "1.1. Toolando.tech-palvelun (\"Palvelu\") omistaja ja ylläpitäjä on Szymon Badyl (\"Palveluntarjoaja\").",
+        "1.1. Toolando.tech-palvelun (\"Palvelu\") omistaja ja ylläpitäjä on Szymon (\"Palveluntarjoaja\").",
         "1.2. Yhteystieto: {{email}}. Muodollista kirjeenvaihtoa vaativissa asioissa Palveluntarjoaja antaa tunnistetiedot sovellettavan lainsäädännön mukaisesti perustellusta pyynnöstä.",
         "1.3. Palvelu tarjoaa selainpohjaisia verkkotyökaluja, mukaan lukien tiedostomuuntimet, erikoistyökalut, tekoälypohjaiset työkalut ja tiedotusaineistoa (oppaat, UKK).",
         "1.4. Nämä ehdot tarjotaan maksutta palvelussa muodossa, joka mahdollistaa lataamisen, tallentamisen ja tulostamisen.",

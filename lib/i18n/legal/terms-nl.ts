@@ -10,7 +10,7 @@ export const termsNl: LegalDocumentData = {
     {
       title: "§1. Algemene bepalingen",
       paragraphs: [
-        "1.1. Eigenaar en exploitant van Toolando.tech (de « Dienst ») is Szymon Badyl (de « Aanbieder »).",
+        "1.1. Eigenaar en exploitant van Toolando.tech (de « Dienst ») is Szymon (de « Aanbieder »).",
         "1.2. Contact: {{email}}. Voor zaken die formele correspondentie vereisen, verstrekt de Aanbieder identificatiegegevens conform toepasselijk recht, op legitiem verzoek.",
         "1.3. De Dienst biedt browsergebaseerde online tools, waaronder bestandsconverters, specialistische tools, AI-ondersteunde tools en informatieve content (handleidingen, FAQ).",
         "1.4. Deze voorwaarden worden gratis in de Dienst beschikbaar gesteld in een vorm die downloaden, opslaan en afdrukken mogelijk maakt.",

@@ -691,7 +691,7 @@ export const guidesNo: Record<GuideSlug, GuideArticle> = {
     sections: [
       {
         paragraphs: [
-          "Toolando.tech bygges alene av Szymon Badyl (Badyl-Tech). Guider massegenereres ikke og kopieres ikke fra Wikipedia — de følger ekte konverteringstester.",
+          "Toolando.tech bygges alene av Szymon. Guider massegenereres ikke og kopieres ikke fra Wikipedia — de følger ekte konverteringstester.",
           "Hver artikkel har publiserings- og oppdateringsdato. Når plattformkrav eller biblioteker endres, reviderer jeg teksten.",
         ],
       },

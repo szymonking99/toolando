@@ -10,7 +10,7 @@ export const privacyRo: LegalDocumentData = {
     {
       title: "§1. Operatorul de date",
       paragraphs: [
-        "1.1. Operatorul de date („Operatorul”) este Szymon Badyl, proprietarul Toolando.tech, care furnizează servicii de instrumente online.",
+        "1.1. Operatorul de date („Operatorul”) este Szymon, proprietarul Toolando.tech, care furnizează servicii de instrumente online.",
         "1.2. Contact pentru confidențialitate: {{email}}.",
         "1.3. Operatorul nu a desemnat un Responsabil cu protecția datelor, deoarece acest lucru nu este necesar pentru această activitate conform GDPR.",
       ],

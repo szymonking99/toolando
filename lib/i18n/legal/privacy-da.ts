@@ -10,7 +10,7 @@ export const privacyDa: LegalDocumentData = {
     {
       title: "§1. Dataansvarlig",
       paragraphs: [
-        "1.1. Dataansvarlig for databehandlingen (\"Dataansvarlig\") er Szymon Badyl, ejer af Toolando.tech, som driver onlineværktøjstjenester.",
+        "1.1. Dataansvarlig for databehandlingen (\"Dataansvarlig\") er Szymon, ejer af Toolando.tech, som driver onlineværktøjstjenester.",
         "1.2. Kontakt vedrørende databeskyttelse: {{email}}.",
         "1.3. Dataansvarlig har ikke udpeget en databeskyttelsesrådgiver, da dette ikke er påkrævet efter GDPR for denne virksomhed.",
       ],

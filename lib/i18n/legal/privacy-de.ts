@@ -10,7 +10,7 @@ export const privacyDe: LegalDocumentData = {
     {
       title: "§1. Verantwortlicher",
       paragraphs: [
-        "1.1. Verantwortlicher für die Datenverarbeitung („Verantwortlicher“) ist Szymon Badyl, Inhaber von Toolando.tech, der Online-Tools-Dienste betreibt.",
+        "1.1. Verantwortlicher für die Datenverarbeitung („Verantwortlicher“) ist Szymon, Inhaber von Toolando.tech, der Online-Tools-Dienste betreibt.",
         "1.2. Datenschutzkontakt: {{email}}.",
         "1.3. Der Verantwortliche hat keinen Datenschutzbeauftragten bestellt, da dies für diese Tätigkeit nach der DSGVO nicht erforderlich ist.",
       ],

@@ -10,7 +10,7 @@ export const privacyCs: LegalDocumentData = {
     {
       title: "§1. Správce údajů",
       paragraphs: [
-        "1.1. Správcem zpracování osobních údajů (\"Správce\") je Szymon Badyl, vlastník Toolando.tech, provozující online nástroje.",
+        "1.1. Správcem zpracování osobních údajů (\"Správce\") je Szymon, vlastník Toolando.tech, provozující online nástroje.",
         "1.2. Kontakt pro ochranu osobních údajů: {{email}}.",
         "1.3. Správce nejmenoval pověřence pro ochranu osobních údajů, protože to GDPR pro tuto činnost nevyžaduje.",
       ],

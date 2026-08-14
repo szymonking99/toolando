@@ -10,7 +10,7 @@ export const privacyNl: LegalDocumentData = {
     {
       title: "§1. Verantwoordelijke",
       paragraphs: [
-        "1.1. De verantwoordelijke voor de gegevensverwerking (« Verantwoordelijke ») is Szymon Badyl, exploitant van Toolando.tech, die online tooldiensten aanbiedt.",
+        "1.1. De verantwoordelijke voor de gegevensverwerking (« Verantwoordelijke ») is Szymon, exploitant van Toolando.tech, die online tooldiensten aanbiedt.",
         "1.2. Privacycontact: {{email}}.",
         "1.3. De Verantwoordelijke heeft geen functionaris voor gegevensbescherming aangesteld, omdat dit voor deze activiteit niet vereist is onder de AVG.",
       ],

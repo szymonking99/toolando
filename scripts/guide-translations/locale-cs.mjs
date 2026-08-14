@@ -374,7 +374,7 @@ export default {
     sections: [
       {
         paragraphs: [
-          "Toolando.tech vytvářím sám (Szymon Badyl / Badyl-Tech). Průvodci nejsou hromadně generovaní ani kopírovaní z Wikipedie — vycházejí z reálných testů převodu.",
+          "Toolando.tech vytvářím sám (Szymon). Průvodci nejsou hromadně generovaní ani kopírovaní z Wikipedie — vycházejí z reálných testů převodu.",
           "Každý článek má datum publikace a aktualizace. Když se změní požadavky platforem nebo knihovny, text reviduji.",
         ],
       },

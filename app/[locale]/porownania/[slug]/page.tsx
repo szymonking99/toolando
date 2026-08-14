@@ -59,7 +59,7 @@ export default async function ComparisonDetailPage({
             title: item.title,
             description: item.description,
             path: `/${locale}/porownania/${slug}`,
-            author: "Szymon Badyl",
+            author: "Szymon",
             published: "2026-01-01",
             updated: "2026-07-23",
             locale,

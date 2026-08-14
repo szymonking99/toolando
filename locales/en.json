@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Toolando.tech — converters with test-based guides, not an X→Y farm",
-    "description": "Format guides, comparisons and converters written after testing real files. Files are not stored. Szymon Badyl — one author."
+    "description": "Format guides, comparisons and converters written after testing real files. Files are not stored. Author: Szymon."
   },
   "socialProof": {
     "toolsCount": "Guides from real conversion tests — not an X→Y page farm",
@@ -280,7 +280,7 @@
   },
   "editorial": {
     "title": "Who runs Toolando.tech",
-    "body": "I'm Szymon Badyl — I design, build, and test the tools myself. Guides come from real conversions, not copied specs. I deliberately do not index hundreds of format pairs: that looks like a doorway farm and says nothing new. I want you to understand the file before you upload it — including when you should not convert at all.",
+    "body": "I'm Szymon — I design, build, and test the tools myself. Guides come from real conversions, not copied specs. I want you to understand the file before you upload it — including when you should not convert at all.",
     "aboutCta": "About me & methodology",
     "howCta": "How the tools work",
     "editorialCta": "Editorial standards",
@@ -668,7 +668,7 @@
       "title": "Toolando.tech editorial standards",
       "intro": "Toolando.tech is not just converters — it's guides, a format encyclopedia, and comparisons. Below I explain how content is created, where information comes from, and when it gets updated.",
       "whoTitle": "Who creates the content",
-      "whoP1": "I write every guide, format profile, and comparison myself — Szymon Badyl, creator of Toolando.tech. I don't use content farms or unchecked AI-generated copy.",
+      "whoP1": "I write every guide, format profile, and comparison myself — Szymon, creator of Toolando.tech. I don't use content farms or unchecked AI-generated copy.",
       "whoP2": "Every article is based on conversion tests on my own files. If something doesn't work as described, I fix both the text and the tool.",
       "standardsTitle": "Editorial principles",
       "standardsIntro": "I apply the same rules to every new guide:",

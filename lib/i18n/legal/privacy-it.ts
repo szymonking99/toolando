@@ -10,7 +10,7 @@ export const privacyIt: LegalDocumentData = {
     {
       title: "§1. Titolare del trattamento",
       paragraphs: [
-        "1.1. Il titolare del trattamento (« Titolare ») è Szymon Badyl, gestore di Toolando.tech, che fornisce servizi di strumenti online.",
+        "1.1. Il titolare del trattamento (« Titolare ») è Szymon, gestore di Toolando.tech, che fornisce servizi di strumenti online.",
         "1.2. Contatto per la privacy: {{email}}.",
         "1.3. Il Titolare non ha nominato un responsabile della protezione dei dati, poiché non è richiesto per questa attività ai sensi del GDPR.",
       ],

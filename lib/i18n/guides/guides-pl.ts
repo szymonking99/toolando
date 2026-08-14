@@ -4,7 +4,7 @@ import { guidesBatch2Pl } from "./batch-2"
 import { guidesBatch3Pl } from "./batch-3"
 import { guidesBatch4Pl } from "./batch-4"
 
-const AUTHOR = "Szymon Badyl"
+const AUTHOR = "Szymon"
 
 export const guidesPl: Record<GuideSlug, GuideArticle> = {
   "mp3-vs-wav": {

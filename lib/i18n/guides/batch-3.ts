@@ -1,6 +1,6 @@
 import type { GuideArticle } from "./types"
 
-const AUTHOR = "Szymon Badyl"
+const AUTHOR = "Szymon"
 
 export const guidesBatch3Pl: Record<
   | "png-vs-jpg-photos-and-graphics"

@@ -10,7 +10,7 @@ export const privacySv: LegalDocumentData = {
     {
       title: "§1. Personuppgiftsansvarig",
       paragraphs: [
-        "1.1. Personuppgiftsansvarig för databehandlingen (\"Personuppgiftsansvarig\") är Szymon Badyl, ägare av Toolando.tech, som driver onlineverktygstjänster.",
+        "1.1. Personuppgiftsansvarig för databehandlingen (\"Personuppgiftsansvarig\") är Szymon, ägare av Toolando.tech, som driver onlineverktygstjänster.",
         "1.2. Kontakt för dataskydd: {{email}}.",
         "1.3. Personuppgiftsansvarig har inte utsett dataskyddsombud, eftersom detta inte krävs enligt GDPR för denna verksamhet.",
       ],

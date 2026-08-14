@@ -10,7 +10,7 @@ export const privacyTr: LegalDocumentData = {
     {
       title: "§1. Veri sorumlusu",
       paragraphs: [
-        "1.1. Veri sorumlusu («Sorumlu») Szymon Badyl'dir; Toolando.tech'in sahibi olup çevrimiçi araç hizmetleri sunmaktadır.",
+        "1.1. Veri sorumlusu («Sorumlu») Szymon'dir; Toolando.tech'in sahibi olup çevrimiçi araç hizmetleri sunmaktadır.",
         "1.2. Gizlilik iletişimi: {{email}}.",
         "1.3. Sorumlu, GDPR kapsamında bu faaliyet için gerekli olmadığından Veri Koruma Görevlisi atamamıştır.",
       ],

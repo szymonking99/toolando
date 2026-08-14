@@ -691,7 +691,7 @@ export const guidesJa: Record<GuideSlug, GuideArticle> = {
     sections: [
       {
         paragraphs: [
-          "Toolando.tech は Szymon Badyl（Badyl-Tech）が単独で構築。ガイドは大量生成や Wikipedia コピーではなく、実際の変換テストに基づきます。",
+          "Toolando.tech は Szymon（Badyl-Tech）が単独で構築。ガイドは大量生成や Wikipedia コピーではなく、実際の変換テストに基づきます。",
           "各記事に公開・更新日。プラットフォーム要件やライブラリ変更時に本文を改訂します。",
         ],
       },

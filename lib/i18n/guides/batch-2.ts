@@ -1,7 +1,7 @@
 import type { GuideArticle } from "./types"
 import type { GuideSlug } from "./slugs"
 
-const AUTHOR = "Szymon Badyl"
+const AUTHOR = "Szymon"
 
 export const guidesBatch2Pl: Record<
   | "compress-images-without-quality-loss"
@@ -179,7 +179,7 @@ export const guidesBatch2Pl: Record<
     sections: [
       {
         paragraphs: [
-          "Toolando.tech tworzę samodzielnie (Szymon Badyl / Badyl-Tech). Poradniki nie są kopiowane z Wikipedia ani generowane masowo — opierają się na testach konwersji na realnych plikach.",
+          "Toolando.tech tworzę samodzielnie (Szymon). Poradniki nie są kopiowane z Wikipedia ani generowane masowo — opierają się na testach konwersji na realnych plikach.",
           "Każdy artykuł ma datę publikacji i aktualizacji. Gdy zmieniają się wymagania platform (np. Instagram video) lub biblioteki konwersji, wracam do tekstu i poprawiam go.",
         ],
       },
@@ -379,7 +379,7 @@ export const guidesBatch2En: Record<
     sections: [
       {
         paragraphs: [
-          "Toolando.tech is built solo by Szymon Badyl (Badyl-Tech). Guides are not mass-generated or copied from Wikipedia — they follow real conversion tests.",
+          "Toolando.tech is built solo by Szymon. Guides are not mass-generated or copied from Wikipedia — they follow real conversion tests.",
           "Each article has publish and update dates. When platform requirements or libraries change, I revise the text.",
         ],
       },

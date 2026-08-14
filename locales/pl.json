@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Toolando.tech — konwertery z poradnikami z testów, nie farma X→Y",
-    "description": "Poradniki formatów, porównania i konwertery pisane po testach na własnych plikach. Pliki nie są przechowywane. Szymon Badyl — jeden autor."
+    "description": "Poradniki formatów, porównania i konwertery pisane po testach na własnych plikach. Pliki nie są przechowywane. Autor: Szymon."
   },
   "socialProof": {
     "toolsCount": "Poradniki z testów konwersji — nie farma stron X→Y",
@@ -280,7 +280,7 @@
   },
   "editorial": {
     "title": "Kto stoi za Toolando.tech",
-    "body": "Nazywam się Szymon Badyl — sam projektuję, koduję i testuję narzędzia. Poradniki powstają po realnych konwersjach, nie z skopiowanej specyfikacji. Celowo nie indeksuję setek par formatów: to wygląda jak farma stron i nic nowego nie mówi. Chcę, żebyś wiedział, jak działają pliki, zanim je wrzucisz — i kiedy lepiej tego nie robić.",
+    "body": "Nazywam się Szymon — sam projektuję, koduję i testuję narzędzia. Poradniki piszę po realnych konwersjach, nie z gotowców. Chcę, żebyś wiedział, jak działają pliki, zanim je wrzucisz — i kiedy lepiej tego nie robić.",
     "aboutCta": "O mnie i metodologii",
     "howCta": "Jak działają narzędzia",
     "editorialCta": "Standardy redakcyjne",
@@ -668,7 +668,7 @@
       "title": "Standardy redakcyjne Toolando.tech",
       "intro": "Toolando.tech to nie tylko konwertery — to też poradniki, encyklopedia formatów i porównania. Poniżej opisuję, jak powstają treści, skąd biorę informacje i kiedy je aktualizuję.",
       "whoTitle": "Kto tworzy treści",
-      "whoP1": "Wszystkie poradniki, opisy formatów i artykuły porównawcze piszę sam — Szymon Badyl, twórca Toolando.tech. Nie korzystam z farm treści ani gotowych opisów od AI bez weryfikacji.",
+      "whoP1": "Wszystkie poradniki, opisy formatów i artykuły porównawcze piszę sam — Szymon, twórca Toolando.tech. Nie korzystam z farm treści ani gotowych opisów od AI bez weryfikacji.",
       "whoP2": "Każdy artykuł opiera się na testach konwersji na własnych plikach. Jeśli coś nie działa tak jak opisuję — poprawiam tekst i narzędzie.",
       "standardsTitle": "Zasady redakcyjne",
       "standardsIntro": "Stosuję te same zasady do każdego nowego poradnika:",

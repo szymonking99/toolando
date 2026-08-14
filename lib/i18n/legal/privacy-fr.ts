@@ -10,7 +10,7 @@ export const privacyFr: LegalDocumentData = {
     {
       title: "§1. Responsable du traitement",
       paragraphs: [
-        "1.1. Le responsable du traitement (« Responsable ») est Szymon Badyl, exploitant de Toolando.tech, qui fournit des services d'outils en ligne.",
+        "1.1. Le responsable du traitement (« Responsable ») est Szymon, exploitant de Toolando.tech, qui fournit des services d'outils en ligne.",
         "1.2. Contact pour les questions relatives à la protection des données : {{email}}.",
         "1.3. Le Responsable n'a pas désigné de délégué à la protection des données, car cela n'est pas requis pour cette activité au titre du RGPD.",
       ],

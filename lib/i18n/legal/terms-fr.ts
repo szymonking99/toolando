@@ -10,7 +10,7 @@ export const termsFr: LegalDocumentData = {
     {
       title: "§1. Dispositions générales",
       paragraphs: [
-        "1.1. Le propriétaire et exploitant de Toolando.tech (le « Service ») est Szymon Badyl (le « Fournisseur »).",
+        "1.1. Le propriétaire et exploitant de Toolando.tech (le « Service ») est Szymon (le « Fournisseur »).",
         "1.2. Contact : {{email}}. Pour les affaires nécessitant une correspondance formelle, le Fournisseur fournit les données d'identification conformément à la législation applicable, sur demande légitime.",
         "1.3. Le Service propose des outils en ligne basés sur le navigateur, notamment des convertisseurs de fichiers, des outils spécialisés, des outils assistés par IA et du contenu informatif (guides, FAQ).",
         "1.4. Les présentes conditions sont mises à disposition gratuitement dans le Service sous une forme permettant leur téléchargement, leur enregistrement et leur impression.",

@@ -10,7 +10,7 @@ export const termsId: LegalDocumentData = {
     {
       title: "§1. Ketentuan umum",
       paragraphs: [
-        "1.1. Pemilik dan operator Toolando.tech («Layanan») adalah Szymon Badyl («Penyedia»).",
+        "1.1. Pemilik dan operator Toolando.tech («Layanan») adalah Szymon («Penyedia»).",
         "1.2. Kontak: {{email}}. Untuk hal yang memerlukan korespondensi resmi, Penyedia akan memberikan data identifikasi sesuai hukum yang berlaku atas permintaan yang wajar.",
         "1.3. Layanan menyediakan alat daring berbasis peramban termasuk konverter file, alat khusus, alat AI, dan konten informasi (panduan, FAQ).",
         "1.4. Ketentuan ini disediakan gratis di Layanan dalam bentuk yang dapat diunduh, disimpan, dan dicetak.",

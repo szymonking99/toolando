@@ -10,7 +10,7 @@ export const termsCs: LegalDocumentData = {
     {
       title: "§1. Obecná ustanovení",
       paragraphs: [
-        "1.1. Vlastníkem a provozovatelem Toolando.tech (\"Služba\") je Szymon Badyl (\"Poskytovatel\").",
+        "1.1. Vlastníkem a provozovatelem Toolando.tech (\"Služba\") je Szymon (\"Poskytovatel\").",
         "1.2. Kontakt: {{email}}. Pro záležitosti vyžadující formální korespondenci Poskytovatel poskytne identifikační údaje dle platných právních předpisů na oprávněnou žádost.",
         "1.3. Služba nabízí online nástroje v prohlížeči včetně konvertorů souborů, specializovaných nástrojů, nástrojů s umělou inteligencí a informačního obsahu (průvodci, FAQ).",
         "1.4. Tyto podmínky jsou poskytovány bezplatně ve službě ve formě umožňující stažení, uložení a tisk.",

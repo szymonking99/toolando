@@ -10,7 +10,7 @@ export const termsTr: LegalDocumentData = {
     {
       title: "§1. Genel hükümler",
       paragraphs: [
-        "1.1. Toolando.tech'in («Hizmet») sahibi ve işletmecisi Szymon Badyl'dir («Sağlayıcı»).",
+        "1.1. Toolando.tech'in («Hizmet») sahibi ve işletmecisi Szymon'dir («Sağlayıcı»).",
         "1.2. İletişim: {{email}}. Resmi yazışma gerektiren konularda Sağlayıcı, geçerli mevzuata uygun olarak haklı talep üzerine kimlik bilgilerini sağlayacaktır.",
         "1.3. Hizmet, dosya dönüştürücüler, özel araçlar, yapay zeka destekli araçlar ve bilgilendirici içerikler (kılavuzlar, SSS) dahil tarayıcı tabanlı çevrimiçi araçlar sunar.",
         "1.4. Bu koşullar, indirme, kaydetme ve yazdırma imkânı veren bir biçimde Hizmette ücretsiz olarak sunulur.",

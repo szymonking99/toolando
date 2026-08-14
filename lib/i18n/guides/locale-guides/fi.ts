@@ -691,7 +691,7 @@ export const guidesFi: Record<GuideSlug, GuideArticle> = {
     sections: [
       {
         paragraphs: [
-          "Toolando.techin rakentaa yksin Szymon Badyl (Badyl-Tech). Oppaita ei massatuoteta eikä kopioida Wikipediasta — ne perustuvat oikeisiin muunnostesteihin.",
+          "Toolando.techin rakentaa yksin Szymon. Oppaita ei massatuoteta eikä kopioida Wikipediasta — ne perustuvat oikeisiin muunnostesteihin.",
           "Jokaisella artikkelilla on julkaisu- ja päivityspäivä. Kun alustavaatimukset tai kirjastot muuttuvat, tarkistan tekstin.",
         ],
       },

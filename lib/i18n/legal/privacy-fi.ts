@@ -10,7 +10,7 @@ export const privacyFi: LegalDocumentData = {
     {
       title: "§1. Rekisterinpitäjä",
       paragraphs: [
-        "1.1. Henkilötietojen käsittelystä vastaava rekisterinpitäjä (\"Rekisterinpitäjä\") on Szymon Badyl, Toolando.tech-palvelun omistaja, joka tarjoaa verkkopohjaisia työkalupalveluja.",
+        "1.1. Henkilötietojen käsittelystä vastaava rekisterinpitäjä (\"Rekisterinpitäjä\") on Szymon, Toolando.tech-palvelun omistaja, joka tarjoaa verkkopohjaisia työkalupalveluja.",
         "1.2. Tietosuojaan liittyvä yhteystieto: {{email}}.",
         "1.3. Rekisterinpitäjä ei ole nimennyt tietosuojavastaavaa, koska GDPR ei edellytä sitä tässä toiminnassa.",
       ],

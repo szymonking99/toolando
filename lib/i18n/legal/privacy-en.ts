@@ -10,7 +10,7 @@ export const privacyEn: LegalDocumentData = {
     {
       title: "§1. Data controller",
       paragraphs: [
-        "1.1. The data controller (“Controller”) is Szymon Badyl, owner of Toolando.tech, operating online tools services.",
+        "1.1. The data controller (“Controller”) is Szymon, owner of Toolando.tech, operating online tools services.",
         "1.2. Privacy contact: {{email}}.",
         "1.3. The Controller has not appointed a Data Protection Officer as it is not required for this activity under GDPR.",
       ],

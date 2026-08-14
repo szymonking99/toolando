@@ -10,7 +10,7 @@ export const privacyPl: LegalDocumentData = {
     {
       title: "§1. Administrator danych",
       paragraphs: [
-        "1.1. Administratorem danych osobowych (dalej: „Administrator”) jest Szymon Badyl, właściciel serwisu Toolando.tech, działający w związku z udostępnianiem narzędzi online.",
+        "1.1. Administratorem danych osobowych (dalej: „Administrator”) jest Szymon, właściciel serwisu Toolando.tech, działający w związku z udostępnianiem narzędzi online.",
         "1.2. Kontakt w sprawach ochrony danych: {{email}}.",
         "1.3. Administrator nie powołał Inspektora Ochrony Danych, ponieważ nie jest to wymagane przepisami RODO w przypadku niniejszej działalności.",
       ],

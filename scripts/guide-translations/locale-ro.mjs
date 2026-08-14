@@ -374,7 +374,7 @@ export default {
     sections: [
       {
         paragraphs: [
-          "Toolando.tech e construit singur de Szymon Badyl (Badyl-Tech). Ghidurile nu sunt generate în masă sau copiate de pe Wikipedia — urmează teste reale de conversie.",
+          "Toolando.tech e construit singur de Szymon. Ghidurile nu sunt generate în masă sau copiate de pe Wikipedia — urmează teste reale de conversie.",
           "Fiecare articol are date de publicare și actualizare. Când cerințele platformelor sau bibliotecile se schimbă, revizuiesc textul.",
         ],
       },

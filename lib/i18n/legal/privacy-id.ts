@@ -10,7 +10,7 @@ export const privacyId: LegalDocumentData = {
     {
       title: "§1. Pengendali data",
       paragraphs: [
-        "1.1. Pengendali pemrosesan data («Pengendali») adalah Szymon Badyl, pemilik Toolando.tech, yang mengoperasikan layanan alat daring.",
+        "1.1. Pengendali pemrosesan data («Pengendali») adalah Szymon, pemilik Toolando.tech, yang mengoperasikan layanan alat daring.",
         "1.2. Kontak privasi: {{email}}.",
         "1.3. Pengendali belum menunjuk Petugas Perlindungan Data karena tidak diwajibkan untuk kegiatan ini menurut GDPR.",
       ],

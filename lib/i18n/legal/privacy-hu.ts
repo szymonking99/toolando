@@ -10,7 +10,7 @@ export const privacyHu: LegalDocumentData = {
     {
       title: "§1. Adatkezelő",
       paragraphs: [
-        "1.1. Az adatkezelő („Adatkezelő”) Szymon Badyl, a Toolando.tech tulajdonosa, aki online eszközszolgáltatásokat üzemeltet.",
+        "1.1. Az adatkezelő („Adatkezelő”) Szymon, a Toolando.tech tulajdonosa, aki online eszközszolgáltatásokat üzemeltet.",
         "1.2. Adatvédelmi kapcsolat: {{email}}.",
         "1.3. Az Adatkezelő nem nevezett ki adatvédelmi tisztviselőt, mivel a GDPR szerint ez nem kötelező e tevékenység esetén.",
       ],

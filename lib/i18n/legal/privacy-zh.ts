@@ -10,7 +10,7 @@ export const privacyZh: LegalDocumentData = {
     {
       title: "§1. 数据控制者",
       paragraphs: [
-        "1.1. 数据处理控制者（「控制者」）为 Szymon Badyl，Toolando.tech 的所有者，运营在线工具服务。",
+        "1.1. 数据处理控制者（「控制者」）为 Szymon，Toolando.tech 的所有者，运营在线工具服务。",
         "1.2. 隐私联系：{{email}}。",
         "1.3. 控制者未任命数据保护官，因根据 GDPR 本活动无此要求。",
       ],

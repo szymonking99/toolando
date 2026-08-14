@@ -10,7 +10,7 @@ export const termsPl: LegalDocumentData = {
     {
       title: "§1. Postanowienia ogólne",
       paragraphs: [
-        "1.1. Właścicielem i administratorem Serwisu Toolando.tech (dalej: „Serwis”) jest Szymon Badyl, prowadzący działalność w związku z udostępnianiem narzędzi online (dalej: „Usługodawca”).",
+        "1.1. Właścicielem i administratorem Serwisu Toolando.tech (dalej: „Serwis”) jest Szymon, prowadzący działalność w związku z udostępnianiem narzędzi online (dalej: „Usługodawca”).",
         "1.2. Kontakt z Usługodawcą: e-mail {{email}}. W sprawach wymagających formalnej korespondencji Usługodawca udostępnia dane identyfikacyjne na uzasadnione żądanie, zgodnie z obowiązującymi przepisami prawa.",
         "1.3. Serwis udostępnia narzędzia online działające w przeglądarce internetowej, w tym konwertery plików, narzędzia specjalistyczne, narzędzia oparte na sztucznej inteligencji (AI) oraz treści informacyjne (poradniki, FAQ).",
         "1.4. Regulamin jest udostępniany nieodpłatnie w Serwisie w sposób umożliwiający jego pobranie, utrwalenie i wydrukowanie.",

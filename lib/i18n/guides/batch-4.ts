@@ -1,6 +1,6 @@
 import type { GuideArticle } from "./types"
 
-const AUTHOR = "Szymon Badyl"
+const AUTHOR = "Szymon"
 
 type Batch4Slug =
   | "split-pdf-pages-guide"

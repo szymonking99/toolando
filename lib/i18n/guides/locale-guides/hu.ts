@@ -691,7 +691,7 @@ export const guidesHu: Record<GuideSlug, GuideArticle> = {
     sections: [
       {
         paragraphs: [
-          "A Toolando.tech-et egyedül építem (Szymon Badyl / Badyl-Tech). Az útmutatók nem tömegesen generáltak vagy Wikipédiából másoltak — valódi konverziós tesztek alapján készülnek.",
+          "A Toolando.tech-et egyedül építem (Szymon). Az útmutatók nem tömegesen generáltak vagy Wikipédiából másoltak — valódi konverziós tesztek alapján készülnek.",
           "Minden cikknek van publikálási és frissítési dátuma. Ha a platformkövetelmények vagy könyvtárak változnak, revidálom a szöveget.",
         ],
       },

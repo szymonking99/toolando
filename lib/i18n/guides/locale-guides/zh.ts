@@ -691,7 +691,7 @@ export const guidesZh: Record<GuideSlug, GuideArticle> = {
     sections: [
       {
         paragraphs: [
-          "Toolando.tech 由 Szymon Badyl（Badyl-Tech）独立构建。指南非批量生成或摘自维基——基于真实转换测试。",
+          "Toolando.tech 由 Szymon（Badyl-Tech）独立构建。指南非批量生成或摘自维基——基于真实转换测试。",
           "每篇文章有发布与更新日期。平台要求或库变更时，我会修订正文。",
         ],
       },

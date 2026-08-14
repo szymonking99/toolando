@@ -10,7 +10,7 @@ export const termsHu: LegalDocumentData = {
     {
       title: "§1. Általános rendelkezések",
       paragraphs: [
-        "1.1. A Toolando.tech („Szolgáltatás”) tulajdonosa és üzemeltetője Szymon Badyl („Szolgáltató”).",
+        "1.1. A Toolando.tech („Szolgáltatás”) tulajdonosa és üzemeltetője Szymon („Szolgáltató”).",
         "1.2. Kapcsolat: {{email}}. Formális levelezést igénylő ügyekben a Szolgáltató jogos kérésre azonosító adatokat ad meg az alkalmazandó jog szerint.",
         "1.3. A Szolgáltatás böngészőalapú online eszközöket kínál, beleértve fájlkonvertereket, speciális eszközöket, mesterséges intelligenciával működő eszközöket és tájékoztató tartalmakat (útmutatók, GYIK).",
         "1.4. Ezek a feltételek ingyenesen elérhetők a Szolgáltatásban olyan formában, amely lehetővé teszi letöltést, mentést és nyomtatást.",

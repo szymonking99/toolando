@@ -7,62 +7,60 @@ export type PublisherNotes = {
 }
 
 const notesPl: PublisherNotes = {
-  title: "Jak testuję konwersje — i czego tu nie znajdziesz",
+  title: "Jak powstają narzędzia i poradniki",
   lead:
-    "Toolando.tech nie jest katalogiem tysięcy identycznych stron „X na Y”. Piszę poradniki i profile formatów na podstawie plików, które sam wrzucam do konwerterów. Poniżej jest to, czego recenzent ani użytkownik nie zobaczy w szablonie SEO.",
+    "Nazywam się Szymon. Toolando buduję sam — od kodu po teksty. Zanim coś opiszę albo wypuszczę, sprawdzam to na własnych plikach. Poniżej krótko: jak to wygląda i na czym mi zależy.",
   sections: [
     {
-      title: "Co sprawdzam, zanim opiszę konwersję",
+      title: "Jak testuję konwersje",
       paragraphs: [
-        "Dla audio porównuję czas trwania, bitrate i to, czy wynik otwiera się w VLC oraz w odtwarzaczu Windows. Konwersja MP3 → WAV nigdy nie „naprawia” wcześniejszej kompresji stratnej — jeśli poradnik tego nie mówi wprost, jest niewiarygodny.",
-        "Dla obrazów sprawdzam przezroczystość PNG, artefakty JPG przy agresywnej kompresji i to, czy WebP/AVIF w ogóle otworzy się w danej przeglądarce. HEIC z iPhone’a testuję na Windows — to najczęstszy powód, dla którego ktoś w ogóle szuka konwertera.",
-        "Dla PDF renderuję strony do JPG/PNG i porównuję czytelność drobnego tekstu. DOCX → PDF odsyłam na silnik LibreOffice na moim serwerze, bo czysty JavaScript psuje nagłówki i tabele.",
+        "Przy audio sprawdzam, czy wynik ma sensowną długość i bitrate oraz czy otwiera się w zwykłym odtwarzaczu. Ważna rzecz: zamiana MP3 na WAV nie przywraca jakości, której MP3 już nie ma — i piszę o tym wprost.",
+        "Przy obrazach patrzę na przezroczystość PNG, kompresję JPG i to, czy nowszy format (WebP, AVIF) w ogóle zadziała u Ciebie. Zdjęcia HEIC z iPhone’a testuję na Windows, bo właśnie wtedy ludzie najczęściej szukają pomocy.",
+        "PDF zamieniam na obraz i sprawdzam, czy drobny tekst da się przeczytać. Dokumenty Word → PDF idą przez LibreOffice na serwerze — prostszy silnik w przeglądarce często psuje układ tabel i nagłówków.",
       ],
     },
     {
-      title: "Czego świadomie nie robię",
+      title: "Czego tu nie znajdziesz",
       paragraphs: [
-        "Nie pobieram filmów ani muzyki z YouTube, TikToka ani Spotify. Jeśli potrzebujesz ścieżki z własnego nagrania, wrzucasz plik MP4, który masz na dysku.",
-        "Nie indeksuję setek par formatów różniących się tylko literkami w adresie. Wyszukiwarka i lista narzędzi nadal je otwierają — Google dostaje tylko te strony, przy których mam coś konkretnego do powiedzenia.",
-        "Nie trzymam Twoich plików po konwersji i nie używam ich do trenowania modeli. Kalkulatory (VAT, NIP, hasła) liczą lokalnie w przeglądarce — te dane nie idą na serwer.",
+        "Nie ściągam filmów ani muzyki z YouTube, TikToka ani Spotify. Możesz wrzucić własny plik z dysku — na przykład nagranie z telefonu albo z OBS.",
+        "Po konwersji nie trzymam Twoich plików i nie używam ich do trenowania AI. Kalkulatory (VAT, NIP, hasła) liczą się u Ciebie w przeglądarce, bez wysyłki na serwer.",
       ],
     },
     {
-      title: "Jak czytać ten serwis",
+      title: "Jak z tego korzystać",
       paragraphs: [
-        "Zacznij od poradnika albo profilu formatu, jeśli nie jesteś pewien, czy w ogóle konwertować. Często lepsza decyzja to zostawić oryginał.",
-        "Konwerter jest narzędziem na końcu artykułu, nie odwrotnie. Reklamy — gdy się pojawią — nie zmieniają werdyktu w poradniku: czasem piszę, żebyś w ogóle nie wrzucał pliku do przeglądarki.",
+        "Jeśli nie wiesz, czy w ogóle warto konwertować, zajrzyj najpierw do poradnika albo opisu formatu. Często lepiej zostawić oryginał.",
+        "Narzędzie jest po to, żebyś szybko zrobił robotę. Poradnik — żebyś wiedział, kiedy tego nie robić. Staram się pisać uczciwie, nawet jeśli oznacza to „nie wrzucaj tego pliku online”.",
       ],
     },
   ],
 }
 
 const notesEn: PublisherNotes = {
-  title: "How I test conversions — and what you will not find here",
+  title: "How the tools and guides are made",
   lead:
-    "Toolando.tech is not a directory of thousands of identical “X to Y” pages. I write guides and format profiles from files I actually run through the converters. This is the part a template cannot fake.",
+    "I'm Szymon. I build Toolando myself — code and copy. Before I publish a guide or a converter note, I run real files through it. Here’s how that works and what I care about.",
   sections: [
     {
-      title: "What I check before I describe a conversion",
+      title: "How I test conversions",
       paragraphs: [
-        "For audio I compare duration, bitrate, and whether the result opens in VLC and the Windows player. MP3 → WAV never “repairs” earlier lossy compression — if a guide does not say that, it is not trustworthy.",
-        "For images I check PNG transparency, JPEG artifacts under heavy compression, and whether WebP/AVIF even opens in a given browser. I test iPhone HEIC on Windows — that is why most people need this converter.",
-        "For PDF I render pages to JPG/PNG and check whether small type stays readable. DOCX → PDF goes through LibreOffice on my server, because a pure JavaScript pipeline wrecks headers and tables.",
+        "For audio I check duration, bitrate, and whether the result opens in a normal player. Important: MP3 → WAV does not bring back quality that MP3 already threw away — and I say that clearly.",
+        "For images I look at PNG transparency, JPEG compression, and whether newer formats (WebP, AVIF) actually work for you. I test iPhone HEIC on Windows, because that’s when people usually need help.",
+        "For PDF I render pages to images and check whether small text stays readable. Word → PDF goes through LibreOffice on the server — a browser-only pipeline often breaks tables and headings.",
       ],
     },
     {
-      title: "What I refuse to ship",
+      title: "What you won’t find here",
       paragraphs: [
-        "I do not download video or music from YouTube, TikTok, or Spotify. If you need audio from your own recording, you upload an MP4 you already have.",
-        "I do not index hundreds of format pairs that only differ by letters in the URL. Search and the tools list still open them — Google only gets pages where I have something specific to say.",
-        "I do not keep your files after conversion and I do not use them to train models. Calculators (VAT, ID numbers, passwords) run locally in the browser — that data never hits the server.",
+        "I don’t download video or music from YouTube, TikTok, or Spotify. You can upload a file you already have — a phone recording or an OBS export, for example.",
+        "After conversion I don’t keep your files and I don’t use them to train AI. Calculators (VAT, tax IDs, passwords) run in your browser, without sending that data to the server.",
       ],
     },
     {
-      title: "How to read this site",
+      title: "How to use the site",
       paragraphs: [
-        "Start with a guide or a format profile if you are unsure whether to convert at all. Leaving the original is often the better call.",
-        "The converter sits at the end of the article, not the other way around. Ads — when they appear — do not change a verdict: sometimes I tell you not to upload the file to a browser at all.",
+        "If you’re unsure whether to convert at all, start with a guide or a format page. Leaving the original is often better.",
+        "The tool is there to get the job done. The guide is there so you know when not to. I try to stay honest — even when that means “don’t upload this file online”.",
       ],
     },
   ],
@@ -76,9 +74,9 @@ const byLocale: Record<string, PublisherNotes> = {
 export function getSocialProofLine(locale: string): string {
   const resolved = normalizeToSupported(locale) ?? fallbackLocale
   if (resolved === "pl") {
-    return "Poradniki z testów konwersji — nie farma stron X→Y"
+    return "Poradniki i narzędzia od jednej osoby — po testach na realnych plikach"
   }
-  return "Guides from real conversion tests — not an X→Y page farm"
+  return "Guides and tools from one person — tested on real files"
 }
 
 export function getPublisherNotes(locale: string): PublisherNotes {

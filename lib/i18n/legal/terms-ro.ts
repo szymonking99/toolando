@@ -10,7 +10,7 @@ export const termsRo: LegalDocumentData = {
     {
       title: "§1. Dispoziții generale",
       paragraphs: [
-        "1.1. Proprietarul și operatorul Toolando.tech („Serviciul”) este Szymon Badyl („Furnizorul”).",
+        "1.1. Proprietarul și operatorul Toolando.tech („Serviciul”) este Szymon („Furnizorul”).",
         "1.2. Contact: {{email}}. Pentru chestiuni care necesită corespondență formală, Furnizorul va furniza date de identificare la cerere justificată, conform legislației aplicabile.",
         "1.3. Serviciul oferă instrumente online bazate pe browser, inclusiv convertoare de fișiere, instrumente specializate, instrumente cu inteligență artificială și conținut informativ (ghiduri, FAQ).",
         "1.4. Acești termeni sunt furnizați gratuit în Serviciu într-o formă care permite descărcarea, salvarea și tipărirea.",

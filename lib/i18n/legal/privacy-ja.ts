@@ -10,7 +10,7 @@ export const privacyJa: LegalDocumentData = {
     {
       title: "§1. データ管理者",
       paragraphs: [
-        "1.1. データ処理の管理者（「管理者」）は、オンラインツールサービスを運営する Toolando.tech の所有者 Szymon Badyl です。",
+        "1.1. データ処理の管理者（「管理者」）は、オンラインツールサービスを運営する Toolando.tech の所有者 Szymon です。",
         "1.2. プライバシー連絡先：{{email}}。",
         "1.3. 管理者は、GDPR 上この活動に必要でないため、データ保護責任者を任命していません。",
       ],

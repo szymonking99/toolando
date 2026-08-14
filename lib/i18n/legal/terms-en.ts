@@ -10,7 +10,7 @@ export const termsEn: LegalDocumentData = {
     {
       title: "§1. General provisions",
       paragraphs: [
-        "1.1. The owner and operator of Toolando.tech (the “Service”) is Szymon Badyl (the “Provider”).",
+        "1.1. The owner and operator of Toolando.tech (the “Service”) is Szymon (the “Provider”).",
         "1.2. Contact: {{email}}. For matters requiring formal correspondence, the Provider will disclose identification details upon justified request, in accordance with applicable law.",
         "1.3. The Service provides browser-based online tools including file converters, specialist tools, AI-powered tools, and informational content (guides, FAQ).",
         "1.4. These Terms are made available free of charge on the Service in a form that allows downloading, saving, and printing.",
