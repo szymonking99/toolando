@@ -1,6 +1,8 @@
 import Link from "next/link"
 import type { ToolPageContent } from "@/lib/i18n/tool-content"
+import type { LabNote } from "@/lib/i18n/lab-notes"
 import { localeHref } from "@/lib/i18n/href"
+import { LabNoteBlock } from "@/components/lab-note-block"
 
 type Labels = {
   howToTitle: string
@@ -19,12 +21,14 @@ export function ToolPageContentSection({
   locale,
   sourceFormat,
   targetFormat,
+  labNote,
 }: {
   content: ToolPageContent
   labels: Labels
   locale: string
   sourceFormat: string
   targetFormat: string
+  labNote?: LabNote | null
 }) {
   return (
     <article className="mt-12 space-y-10 border-t border-white/10 pt-10">
@@ -33,6 +37,8 @@ export function ToolPageContentSection({
           {content.extendedDescription}
         </p>
       </section>
+
+      {labNote ? <LabNoteBlock note={labNote} /> : null}
 
       {content.qualityNote && (
         <section className="rounded-xl border border-primary/20 bg-primary/[0.04] p-5">

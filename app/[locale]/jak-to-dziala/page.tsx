@@ -4,6 +4,7 @@ import {
   ContentSection,
 } from "@/components/content-page-shell"
 import { getDictionary } from "@/lib/i18n/dictionaries"
+import { getHowItWorksExtras } from "@/lib/i18n/how-it-works-extras"
 
 export async function generateMetadata({
   params,
@@ -26,6 +27,7 @@ export default async function HowItWorksPage({
 }) {
   const { locale } = await params
   const { howItWorks: p } = (await getDictionary(locale)).pages
+  const extras = getHowItWorksExtras(locale)
 
   return (
     <ContentPageShell eyebrow={p.eyebrow} title={p.title} intro={p.intro}>
@@ -70,6 +72,14 @@ export default async function HowItWorksPage({
           </li>
         </ul>
       </ContentSection>
+
+      {extras.map((extra) => (
+        <ContentSection key={extra.title} title={extra.title}>
+          {extra.paragraphs.map((para) => (
+            <p key={para.slice(0, 40)}>{para}</p>
+          ))}
+        </ContentSection>
+      ))}
     </ContentPageShell>
   )
 }

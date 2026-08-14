@@ -10,15 +10,15 @@ import { getCategoryLabel } from "@/lib/i18n/tool-meta"
 const POPULAR_IDS = [
   "mp3-to-wav",
   "wav-to-mp3",
-  "avi-to-mp4",
-  "mp4-to-avi",
+  "flac-to-mp3",
+  "mp4-to-mp3",
   "pdf-to-docx",
   "docx-to-pdf",
   "jpg-to-png",
   "png-to-jpg",
   "pdf-to-jpg",
-  "png-to-webp",
-  "webp-to-png",
+  "jpg-to-webp",
+  "heic-to-jpg",
   "mp4-to-webm",
 ]
 

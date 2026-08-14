@@ -1,10 +1,10 @@
 {
   "meta": {
-    "title": "Toolando.tech — Your online tools in one place",
-    "description": "Converters, generators, PDF and AI tools — all in one elegant ecosystem. Fast and simple."
+    "title": "Toolando.tech — converters with test-based guides, not an X→Y farm",
+    "description": "Format guides, comparisons and converters written after testing real files. Files are not stored. Szymon Badyl — one author."
   },
   "socialProof": {
-    "toolsCount": "{count}+ tools in one ecosystem",
+    "toolsCount": "Guides from real conversion tests — not an X→Y page farm",
     "usesToday": "{uses} uses today"
   },
   "recent": {
@@ -141,10 +141,10 @@
     "more": "More"
   },
   "hero": {
-    "badge": "A new online tools ecosystem",
+    "badge": "Guides, formats and converters from one author",
     "titleA": "Your online tools in",
     "titleHighlight": "one place",
-    "subtitle": "Converters, generators, PDF, AI — all in one ecosystem.",
+    "subtitle": "I write when to convert — and when to leave the original. Then you get the tool, no install.",
     "browse": "Browse tools",
     "learnMore": "Learn more",
     "convertCta": "Convert a file now"
@@ -280,7 +280,7 @@
   },
   "editorial": {
     "title": "Who runs Toolando.tech",
-    "body": "I'm Szymon — I design, build, and test every tool myself. Guides are based on real conversions, not copy-pasted specs. I want you to understand your files before you convert them, and I want the service to stay honest with you.",
+    "body": "I'm Szymon Badyl — I design, build, and test the tools myself. Guides come from real conversions, not copied specs. I deliberately do not index hundreds of format pairs: that looks like a doorway farm and says nothing new. I want you to understand the file before you upload it — including when you should not convert at all.",
     "aboutCta": "About me & methodology",
     "howCta": "How the tools work",
     "editorialCta": "Editorial standards",
@@ -294,13 +294,13 @@
   },
   "why": {
     "title": "Why Toolando.tech?",
-    "subtitle": "Built with your productivity and comfort in mind.",
-    "speedTitle": "Speed",
-    "speedDesc": "Tools run instantly in your browser — no waiting and no installation.",
-    "simpleTitle": "Simplicity",
-    "simpleDesc": "A clean interface where you find any tool in seconds.",
-    "toolsTitle": "200+ online tools",
-    "toolsDesc": "A huge set of converters, generators and AI tools in one place."
+    "subtitle": "A one-person site — including the limits I refuse to hide.",
+    "speedTitle": "I do not keep your files",
+    "speedDesc": "Server conversions last as long as the job. Then the file is deleted. Calculators run in your browser.",
+    "simpleTitle": "I say when NOT to convert",
+    "simpleDesc": "MP3 will not restore quality. A scanned PDF will not magically become Word. That is in the guides, not a slogan.",
+    "toolsTitle": "I test on my own files",
+    "toolsDesc": "Format write-ups come from FFmpeg, LibreOffice and what the tool actually emitted — not a copied spec sheet."
   },
   "ctaSection": {
     "title": "Start using Toolando.tech today",

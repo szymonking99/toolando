@@ -50,12 +50,15 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params
   const dict = await getDictionary(locale)
-  return buildPageMetadata({
-    locale,
-    path: "/tools",
-    title: `${dict.nav.allTools} — Toolando.tech`,
-    description: dict.hub.convertersDesc,
-  })
+  return {
+    ...buildPageMetadata({
+      locale,
+      path: "/tools",
+      title: `${dict.nav.allTools} — Toolando.tech`,
+      description: dict.hub.convertersDesc,
+    }),
+    robots: { index: false, follow: true },
+  }
 }
 
 export default async function ToolsIndexPage({

@@ -1,10 +1,10 @@
 {
   "meta": {
-    "title": "Toolando.tech — Twoje narzędzia online w jednym miejscu",
-    "description": "Konwertery, generatory, PDF i narzędzia AI — wszystko w jednym eleganckim ekosystemie. Szybko i prosto."
+    "title": "Toolando.tech — konwertery z poradnikami z testów, nie farma X→Y",
+    "description": "Poradniki formatów, porównania i konwertery pisane po testach na własnych plikach. Pliki nie są przechowywane. Szymon Badyl — jeden autor."
   },
   "socialProof": {
-    "toolsCount": "{count}+ narzędzi w jednym ekosystemie",
+    "toolsCount": "Poradniki z testów konwersji — nie farma stron X→Y",
     "usesToday": "{uses} użyć dziś"
   },
   "recent": {
@@ -141,10 +141,10 @@
     "more": "Więcej"
   },
   "hero": {
-    "badge": "Nowy ekosystem narzędzi online",
+    "badge": "Poradniki, formaty i konwertery od jednej osoby",
     "titleA": "Twoje narzędzia online w",
     "titleHighlight": "jednym miejscu",
-    "subtitle": "Konwertery, generatory, PDF, AI — wszystko w jednym ekosystemie.",
+    "subtitle": "Piszę, kiedy konwertować — i kiedy lepiej zostawić oryginał. Potem masz narzędzie, bez instalacji.",
     "browse": "Przeglądaj narzędzia",
     "learnMore": "Dowiedz się więcej",
     "convertCta": "Konwertuj plik teraz"
@@ -280,7 +280,7 @@
   },
   "editorial": {
     "title": "Kto stoi za Toolando.tech",
-    "body": "Nazywam się Szymon — sam projektuję, koduję i testuję każde narzędzie. Poradniki powstają na podstawie realnych konwersji, nie skopiowanych opisów. Chcę, żebyś wiedział, jak działają pliki, zanim je przekonwertujesz — i żeby serwis był uczciwy wobec Ciebie.",
+    "body": "Nazywam się Szymon Badyl — sam projektuję, koduję i testuję narzędzia. Poradniki powstają po realnych konwersjach, nie z skopiowanej specyfikacji. Celowo nie indeksuję setek par formatów: to wygląda jak farma stron i nic nowego nie mówi. Chcę, żebyś wiedział, jak działają pliki, zanim je wrzucisz — i kiedy lepiej tego nie robić.",
     "aboutCta": "O mnie i metodologii",
     "howCta": "Jak działają narzędzia",
     "editorialCta": "Standardy redakcyjne",
@@ -294,13 +294,13 @@
   },
   "why": {
     "title": "Dlaczego Toolando.tech?",
-    "subtitle": "Zbudowane z myślą o Twojej produktywności i komforcie pracy.",
-    "speedTitle": "Szybkość",
-    "speedDesc": "Narzędzia działają błyskawicznie w przeglądarce — bez czekania i bez instalacji.",
-    "simpleTitle": "Prostota",
-    "simpleDesc": "Przejrzysty interfejs, w którym każde narzędzie znajdziesz w kilka sekund.",
-    "toolsTitle": "Ponad 200 narzędzi online",
-    "toolsDesc": "Ogromny zestaw konwerterów, generatorów i narzędzi AI w jednym miejscu."
+    "subtitle": "Serwis od jednej osoby — z limitami, które świadomie zostawiam.",
+    "speedTitle": "Plików nie trzymam",
+    "speedDesc": "Konwersja na serwerze trwa tyle, ile trwa zadanie. Potem plik jest usuwany. Kalkulatory liczą w Twojej przeglądarce.",
+    "simpleTitle": "Mówię, kiedy NIE konwertować",
+    "simpleDesc": "MP3 nie odzyska jakości. Skan PDF nie stanie się magicznie Wordem. To jest w poradnikach, nie w sloganie.",
+    "toolsTitle": "Testuję na własnych plikach",
+    "toolsDesc": "Opisy formatów i konwerterów opieram na FFmpeg, LibreOffice i tym, co faktycznie wyszło z narzędzia — nie na skopiowanej specyfikacji."
   },
   "ctaSection": {
     "title": "Zacznij korzystać z Toolando.tech już dziś",

@@ -10,11 +10,17 @@ export default function robots(): MetadataRoute.Robots {
   }
 
   return {
-    rules: {
-      userAgent: "*",
-      allow: "/",
-      ...(disallow.length > 0 ? { disallow } : {}),
-    },
+    rules: [
+      {
+        userAgent: "Mediapartners-Google",
+        allow: "/",
+      },
+      {
+        userAgent: "*",
+        allow: "/",
+        ...(disallow.length > 0 ? { disallow } : {}),
+      },
+    ],
     sitemap: `${SITE_URL}/sitemap.xml`,
     host: SITE_URL.replace(/^https?:\/\//, ""),
   }

@@ -6,10 +6,11 @@ import { COMPARISON_SLUGS } from "@/lib/i18n/comparisons"
 import { GLOSSARY_SLUGS } from "@/lib/i18n/glossary"
 import { languageAlternates } from "@/lib/seo/alternates"
 import { SITE_URL } from "@/lib/seo/structured-data"
-import { isIndexableTool } from "@/lib/seo/indexable-tools"
+import {
+  INDEXABLE_SPECIAL_IDS,
+  isIndexableTool,
+} from "@/lib/seo/indexable-tools"
 import { categories, tools } from "@/lib/tools"
-import { specialTools } from "@/lib/special-tools"
-import { utilityTools } from "@/lib/utility-tools"
 
 /**
  * Static (non-parameterized) paths that exist for every locale, with a search
@@ -21,7 +22,6 @@ const STATIC_PATHS: {
   changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"]
 }[] = [
   { path: "", priority: 1, changeFrequency: "daily" },
-  { path: "/tools", priority: 0.9, changeFrequency: "weekly" },
   { path: "/otworz", priority: 0.7, changeFrequency: "weekly" },
   { path: "/poradniki", priority: 0.8, changeFrequency: "monthly" },
   { path: "/formaty", priority: 0.85, changeFrequency: "monthly" },
@@ -44,8 +44,7 @@ function languagesFor(path: string): Record<string, string> {
 export default function sitemap(): MetadataRoute.Sitemap {
   const toolIds = [
     ...tools.filter((t) => isIndexableTool(t.id)).map((t) => t.id),
-    ...specialTools.map((t) => t.id),
-    ...utilityTools.map((t) => t.id),
+    ...INDEXABLE_SPECIAL_IDS,
   ]
 
   const entries: MetadataRoute.Sitemap = []

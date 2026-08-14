@@ -35,7 +35,9 @@ import {
   howToSchema,
   faqPageSchema,
 } from "@/lib/seo/structured-data"
-import { isIndexableTool } from "@/lib/seo/indexable-tools"
+import { isPubliclyIndexableTool } from "@/lib/seo/indexable-tools"
+import { getLabNote } from "@/lib/i18n/lab-notes"
+import { LabNoteBlock } from "@/components/lab-note-block"
 
 /** Resolve a localized display name + description for any tool id. */
 function resolveToolText(
@@ -89,9 +91,7 @@ export async function generateMetadata({
   const pageContent = tool ? getToolPageContent(locale, tool) : null
   const description = pageContent?.extendedDescription ?? text.description
   const title = `${text.name} — Toolando.tech`
-  const noindex = tool
-    ? !tool.supported || !isIndexableTool(id)
-    : getAiTool(id) !== undefined
+  const noindex = !isPubliclyIndexableTool(id)
   const meta = buildPageMetadata({
     locale,
     path: `/tools/${id}`,
@@ -348,8 +348,11 @@ export default async function ToolPage({
 
   const special = getSpecialTool(id)
   if (special) {
-    const relatedSpecial = specialTools.filter((t) => t.id !== special.id)
+    const relatedSpecial = specialTools.filter(
+      (t) => t.id !== special.id && isPubliclyIndexableTool(t.id),
+    )
     const specialText = getSpecialMeta(locale, special.id)
+    const specialLab = getLabNote(locale, special.id)
     return (
       <div className="min-h-dvh">
         <JsonLd
@@ -380,6 +383,8 @@ export default async function ToolPage({
           <section className="mt-8 rounded-2xl border border-white/10 bg-white/[0.03] p-6 backdrop-blur-md">
             <SpecialTool tool={special} />
           </section>
+
+          {specialLab ? <LabNoteBlock note={specialLab} /> : null}
 
           {relatedSpecial.length > 0 && (
             <section className="mt-12">
@@ -418,11 +423,17 @@ export default async function ToolPage({
   if (!tool) return notFound()
 
   const related = tools
-    .filter((t) => t.category === tool.category && t.id !== tool.id)
+    .filter(
+      (t) =>
+        t.category === tool.category &&
+        t.id !== tool.id &&
+        isPubliclyIndexableTool(t.id),
+    )
     .slice(0, 4)
 
   const pageContent = getToolPageContent(locale, tool)
   const path = `/${locale}/tools/${id}`
+  const labNote = getLabNote(locale, id)
 
   return (
     <div className="min-h-dvh">
@@ -480,6 +491,7 @@ export default async function ToolPage({
           }}
           sourceFormat={tool.from}
           targetFormat={tool.to}
+          labNote={labNote}
         />
 
         {related.length > 0 && (

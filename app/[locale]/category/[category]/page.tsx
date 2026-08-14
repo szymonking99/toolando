@@ -13,8 +13,10 @@ import { getCategoryMeta } from "@/lib/i18n/content-meta"
 import { getConversionDescription, getSpecialMeta } from "@/lib/i18n/tool-meta"
 import { localeHref } from "@/lib/i18n/href"
 import { JsonLd } from "@/components/json-ld"
-import { breadcrumbSchema, faqPageSchema } from "@/lib/seo/structured-data"
 import { SiteFooter } from "@/components/site-footer"
+import { breadcrumbSchema, faqPageSchema } from "@/lib/seo/structured-data"
+import { getCategoryEssay } from "@/lib/i18n/category-essays"
+import { isPubliclyIndexableTool } from "@/lib/seo/indexable-tools"
 
 export function generateStaticParams() {
   return categories.map((c) => ({ category: c.slug }))
@@ -35,6 +37,7 @@ export async function generateMetadata({
   return {
     title,
     description,
+    robots: { index: true, follow: true },
     alternates: { canonical: `/${locale}/category/${category}` },
     openGraph: {
       title,
@@ -64,8 +67,13 @@ export default async function CategoryPage({
 
   const dict = await getDictionary(locale)
   const cm = getCategoryMeta(locale, category)
-  const list = getToolsForCategory(category)
-  const specials = getSpecialsForCategory(category)
+  const list = getToolsForCategory(category).filter((t) =>
+    isPubliclyIndexableTool(t.id),
+  )
+  const specials = getSpecialsForCategory(category).filter((t) =>
+    isPubliclyIndexableTool(t.id),
+  )
+  const essay = getCategoryEssay(locale, category)
   const totalCount = list.length + specials.length
 
   return (
@@ -118,12 +126,27 @@ export default async function CategoryPage({
             {cm.guide}
           </p>
         )}
+        {essay?.paragraphs.map((p) => (
+          <p
+            key={p.slice(0, 40)}
+            className="mt-4 max-w-3xl text-pretty leading-relaxed text-muted-foreground"
+          >
+            {p}
+          </p>
+        ))}
+        {essay?.searchHint && (
+          <p className="mt-4 max-w-3xl text-pretty text-sm leading-relaxed text-muted-foreground">
+            {essay.searchHint}
+          </p>
+        )}
+        {totalCount > 0 && (
         <p className="mt-2 text-sm text-muted-foreground">
           {totalCount}{" "}
           {totalCount === 1
             ? dict.category.converterOne
             : dict.category.converterMany}
         </p>
+        )}
 
         {specials.length > 0 && (
           <section className="mt-10">
