@@ -186,7 +186,7 @@ export const extraCategoryLabels: Record<string, Record<UtilityCategory, string>
   },
 }
 
-export const extraUtilityMaps: Record<string, UtilityMetaMap> = {
+export const extraUtilityMaps: Record<string, Partial<UtilityMetaMap>> = {
   fr: {
       "przelicznik-walut": {
         category: "Finances",

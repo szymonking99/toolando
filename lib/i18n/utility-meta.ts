@@ -436,7 +436,7 @@ const pl: UtilityMetaMap = {
     category: "Sieć",
     name: "Test prędkości",
     description: "Zmierz prędkość pobierania i opóźnienie połączenia z naszym serwerem.",
-    steps: ["Kliknij „Uruchom test prędkości".", "Poczekaj na zakończenie pomiaru.", "Odczytaj wyniki (Mbps i latency)."],
+    steps: ['Kliknij „Uruchom test prędkości”.', "Poczekaj na zakończenie pomiaru.", "Odczytaj wyniki (Mbps i latency)."],
     faq: [
       { q: "Czy to dokładny test?", a: "To pomiar prędkości do naszego serwera (Vercel Edge). Wynik może się różnić od testów do innych lokalizacji." },
       { q: "Ile danych pobiera test?", a: "Około 2 MB — nie obciąży znacząco Twojego pakietu danych." },
@@ -1949,7 +1949,10 @@ const maps: Record<string, UtilityMetaMap> = {
       ],
     },
   },
-  ...extraUtilityMaps,
+}
+
+for (const [locale, extra] of Object.entries(extraUtilityMaps)) {
+  maps[locale] = { ...en, ...extra }
 }
 
 export function getUtilityCategoryLabel(
