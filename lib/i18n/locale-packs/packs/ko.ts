@@ -69,7 +69,7 @@ export default uiPack({
   },
   "knowledgeHub": {
     "title": "형식 및 변환 지식",
-    "subtitle": "단순히 변환만 하지 말고 FLAC 대신 MP3, JPG 대신 WebP, DOCX 대신 PDF를 선택해야 하는 시기를 이해하세요. 우리 가이드는 품질 손실과 불필요한 변환을 방지하는 데 도움이 됩니다.",
+    "subtitle": "변환만 하지 마세요. MP3와 FLAC, WebP와 JPG, PDF와 DOCX 중 언제 무엇을 고를지 보세요. 가이드는 변환이 언제 의미가 있고, 언제 파일을 그대로 두는 게 나은지 설명합니다.",
     "formatsTitle": "파일 형식 백과사전",
     "formatsDesc": "40개 이상의 형식: 오디오, 비디오, 이미지, 문서, 데이터 및 아카이브. 장점, 단점, 호환성 및 대안과의 비교.",
     "formatsCta": "형식 찾아보기",

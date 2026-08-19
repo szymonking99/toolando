@@ -36,6 +36,7 @@ import {
   faqPageSchema,
 } from "@/lib/seo/structured-data"
 import { isPubliclyIndexableTool } from "@/lib/seo/indexable-tools"
+import { getIndexableSearchCopy } from "@/lib/seo/search-copy"
 import { getLabNote } from "@/lib/i18n/lab-notes"
 import { LabNoteBlock } from "@/components/lab-note-block"
 
@@ -90,13 +91,15 @@ export async function generateMetadata({
   const tool = getTool(id)
   const pageContent = tool ? getToolPageContent(locale, tool) : null
   const description = pageContent?.extendedDescription ?? text.description
-  const title = `${text.name} — Toolando.tech`
+  const seo = getIndexableSearchCopy(locale, id)
+  const title = seo?.title ?? `${text.name} — Toolando.tech`
+  const metaDescription = seo?.description ?? description
   const noindex = !isPubliclyIndexableTool(id)
   const meta = buildPageMetadata({
     locale,
     path: `/tools/${id}`,
     title,
-    description,
+    description: metaDescription,
   })
   return {
     ...meta,

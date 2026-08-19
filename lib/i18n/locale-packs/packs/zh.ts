@@ -69,7 +69,7 @@ export default uiPack({
   },
   "knowledgeHub": {
     "title": "格式与转换知识",
-    "subtitle": "不仅仅是转换 - 了解何时选择 MP3 而不是 FLAC、WebP 而不是 JPG、或 PDF 而不是 DOCX。我们的指南可帮助您避免质量损失和不必要的转换。",
+    "subtitle": "别只是转换——看看什么时候该选 MP3 而不是 FLAC、WebP 而不是 JPG、PDF 而不是 DOCX。指南会说明什么时候转换有意义，什么时候最好别动文件。",
     "formatsTitle": "文件格式百科全书",
     "formatsDesc": "40 多种格式：音频、视频、图像、文档、数据和档案。优点、缺点、兼容性以及与替代方案的比较。",
     "formatsCta": "浏览格式",

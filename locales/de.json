@@ -14,10 +14,10 @@
   },
   "premiumUpsell": {
     "title": "KI-Tools mit Premium freischalten",
-    "description": "Textgenerierung, Zusammenfassungen, Bilder, Übersetzung und Chat — ein Abo, keine Überraschungen pro Anfrage.",
+    "description": "Texte, Zusammenfassungen, Bilder, Übersetzungen und Chat — ein Abo, der Preis ist klar.",
     "point1": "Alle KI-Tools ohne Limits",
-    "point2": "Priorisierte Verarbeitung an starken Tagen",
-    "point3": "Unabhängige Entwicklung unterstützen",
+    "point2": "Schnellere Warteschlange bei hohem Andrang",
+    "point3": "Du unterstützt den Betrieb der Seite",
     "cta": "Premium holen",
     "compare": "Pläne vergleichen",
     "trialHint": "Melde dich an für eine kostenlose Vorschau — Upgrade jederzeit möglich."
@@ -32,7 +32,7 @@
     "start": "Tools durchsuchen",
     "learnMore": "So funktioniert Toolando",
     "step1": {
-      "title": "Konvertieren, rechnen, öffnen — ein Ökosystem",
+      "title": "Konvertieren, rechnen, öffnen — an einem Ort",
       "body": "287+ Tools für Dateien, Rechner, Entwickler-Utilities und KI — Tool wählen oder mit Ctrl+K suchen."
     },
     "step2": {
@@ -72,13 +72,13 @@
   },
   "comparison": {
     "title": "Toolando vs Cloud-Upload-Tools",
-    "subtitle": "Warum Nutzer von typischen Online-Konvertern wechseln.",
+    "subtitle": "Worin sich Toolando von Konvertern unterscheidet, die deine Datei auf fremde Server laden.",
     "feature": "Funktion",
     "competitor": "Typischer Cloud-Konverter",
     "rows": {
       "privacy": "Lokale Vorschau & Datenschutzoptionen",
       "offline": "Offline nutzbar (PWA-Utilities)",
-      "ai": "Integrierter KI-Workflow",
+      "ai": "KI-Tools am selben Ort",
       "free": "Kostenlose Basis-Konverter",
       "limits": "Keine künstlichen Upload-Limits fürs Basisangebot"
     }
@@ -121,7 +121,7 @@
     "formats": "Formate",
     "about": "Über uns",
     "contact": "Kontakt",
-    "cta": "Loslegen",
+    "cta": "Tools durchsuchen",
     "openMenu": "Menü öffnen",
     "closeMenu": "Menü schließen",
     "allTools": "Alle Werkzeuge",
@@ -144,7 +144,7 @@
     "badge": "Ein neues Ökosystem für Online-Tools",
     "titleA": "Deine Online-Tools an",
     "titleHighlight": "einem Ort",
-    "subtitle": "Konverter, Generatoren, PDF, KI — alles in einem Ökosystem.",
+    "subtitle": "Die Ratgeber sagen, wann du konvertieren solltest — und wann das Original besser bleibt. Die Tools laufen im Browser, ohne Installation.",
     "browse": "Werkzeuge durchsuchen",
     "learnMore": "Mehr erfahren",
     "convertCta": "Datei jetzt konvertieren"
@@ -242,15 +242,15 @@
   "ai": {
     "badge": "Premium-KI",
     "title": "Intelligente KI-Tools",
-    "subtitle": "Schreibe, fasse zusammen, übersetze und erstelle Bilder mit den neuesten KI-Modellen — direkt in Toolando.tech, ohne Installation.",
+    "subtitle": "Schreiben, zusammenfassen, übersetzen und Bilder erzeugen — im Browser, ohne Installation.",
     "openTool": "Werkzeug öffnen",
     "more": "Weitere KI-Tools"
   },
   "features": {
     "title": "Beliebteste Werkzeuge",
-    "subtitle": "Die meistgewählten Toolando.tech-Werkzeuge — in Sekunden einsatzbereit.",
+    "subtitle": "Die meistgenutzten Konvertierungen — in beide Richtungen.",
     "popularTitle": "Beliebteste Konverter",
-    "popularSubtitle": "Die meistgenutzten Konvertierungen — in beide Richtungen, sofort bereit."
+    "popularSubtitle": "Die meistgenutzten Konvertierungen — in beide Richtungen."
   },
   "categories": {
     "title": "Werkzeug-Kategorien",
@@ -264,7 +264,7 @@
   },
   "knowledgeHub": {
     "title": "Wissen über Formate & Konvertierung",
-    "subtitle": "Nicht nur konvertieren — verstehen, wann MP3 statt FLAC, WebP statt JPG oder PDF statt DOCX.",
+    "subtitle": "Nicht nur konvertieren — sieh, wann MP3 statt FLAC, WebP statt JPG oder PDF statt DOCX sinnvoll ist. Die Ratgeber erklären, wann eine Konvertierung hilft und wann die Datei besser so bleibt.",
     "formatsTitle": "Enzyklopädie der Dateiformate",
     "formatsDesc": "40+ Formate mit Vor- und Nachteilen, Kompatibilität und Vergleichen.",
     "formatsCta": "Formate durchsuchen",
@@ -294,17 +294,17 @@
   },
   "why": {
     "title": "Warum Toolando.tech?",
-    "subtitle": "Für deine Produktivität und deinen Komfort entwickelt.",
-    "speedTitle": "Geschwindigkeit",
+    "subtitle": "Konverter und Ratgeber ohne versteckte Limits. Dateien bleiben nicht auf dem Server.",
+    "speedTitle": "Dateien werden nicht gespeichert",
     "speedDesc": "Die Werkzeuge laufen blitzschnell im Browser — ohne Warten und ohne Installation.",
-    "simpleTitle": "Einfachheit",
+    "simpleTitle": "Wann du besser nicht konvertierst",
     "simpleDesc": "Eine übersichtliche Oberfläche, in der du jedes Werkzeug in Sekunden findest.",
-    "toolsTitle": "Über 200 Online-Tools",
-    "toolsDesc": "Eine riesige Sammlung von Konvertern, Generatoren und KI-Tools an einem Ort."
+    "toolsTitle": "Beschreibungen aus echten Tests",
+    "toolsDesc": "Format- und Konvertertexte stammen aus Tests mit FFmpeg und LibreOffice — nicht aus einer kopierten Spezifikation."
   },
   "ctaSection": {
-    "title": "Starte noch heute mit Toolando.tech",
-    "subtitle": "Werde Teil eines Ökosystems von Werkzeugen, die dir jeden Tag Zeit sparen.",
+    "title": "Wähle ein Tool und leg los",
+    "subtitle": "Konverter, Rechner und Entwickler-Tools — ohne Installation.",
     "browse": "Werkzeuge durchsuchen"
   },
   "footer": {
@@ -341,7 +341,7 @@
   "support": {
     "eyebrow": "Unterstütze das Projekt",
     "title": "Hilf, Toolando.tech zu erhalten",
-    "subtitle": "Toolando.tech entsteht und wird kostenlos angeboten. Wenn es dir Zeit spart, unterstütze gern die Entwicklung.",
+    "subtitle": "Die kostenlosen Tools kosten nichts. Wenn die Seite dir Zeit spart, kannst du einen Kaffee spendieren.",
     "body1": "Ich betreibe den Dienst allein — Code, Server, Rechtstexte und Ratgeber. Ihre Unterstützung hilft bei Hosting, Dateiverarbeitung und neuen Tools.",
     "body2": "Unterstützung ist freiwillig. Premium ist optional — Details in den Nutzungsbedingungen.",
     "body3": "Frage oder Fehler? Schreiben Sie an badyltech@outlook.com — das hilft dem Projekt auch.",
@@ -349,7 +349,7 @@
     "coffee": "Spendier mir einen Kaffee",
     "donate": "Spende geben",
     "back": "Zurück zur Startseite",
-    "thanks": "Jeder Beitrag hilft, die Server zu finanzieren und neue Werkzeuge zu ermöglichen."
+    "thanks": "Jede Spende und jede Nachricht mit Feedback hilft wirklich. Danke."
   },
   "openerPage": {
     "eyebrow": "Vorschau und Konvertierung",
@@ -513,7 +513,7 @@
     "description": "Schalte alle KI-Tools von Toolando.tech frei — Text- und Bildgenerierung, Übersetzung, Zusammenfassungen und den Assistenten — in einem Abo.",
     "feature1": "Unbegrenzter Zugriff auf alle KI-Tools",
     "feature2": "Textgenerator, Bildgenerator und Übersetzer",
-    "feature3": "Bevorzugte Verarbeitung von Anfragen",
+    "feature3": "Schnellere Warteschlange bei hohem Andrang",
     "goPremium": "Auf Premium upgraden",
     "redirecting": "Weiterleitung…",
     "signInToBuy": "Anmelden, um Premium zu kaufen",
@@ -534,7 +534,7 @@
     "goPremiumTitle": "Auf Premium upgraden",
     "feature1": "Unbegrenzter Zugriff auf KI-Tools",
     "feature2": "Hintergrund entfernen, Bild- und Textgenerierung",
-    "feature3": "Priorisierte Verarbeitung",
+    "feature3": "Schnellere Warteschlange bei hohem Andrang",
     "buyPremium": "Premium kaufen",
     "buyRedirecting": "Weiterleitung…",
     "refreshHint": "Bezahlt, aber Premium noch inaktiv? Status aktualisieren:",
@@ -612,7 +612,7 @@
       "intro": "Toolando.tech ist mein eigenes Projekt, das ich alleine baue. Von der Idee über den Code bis hin zu den Inhalten, die Sie gerade lesen – alles kommt aus einer Hand. Ich möchte, dass einfache Aufgaben wie das Konvertieren einer Datei oder ein schnelles Online-Tool für jeden verfügbar sind, ohne dass Software installiert werden muss und keine unnötigen Komplikationen auftreten.",
       "whyTitle": "Warum Toolando erstellt wurde",
       "whyP1": "Ich arbeite jeden Tag mit Computern und habe oft gesehen, wie viel Zeit Menschen mit Aufgaben verlieren, die einen Moment dauern sollten – das Ändern eines Dateiformats, das Extrahieren von Audio aus einer Aufnahme oder ein schneller Vorgang, der Sie dazu zwingt, nach einer beliebigen Website voller Werbung und Fallen zu suchen.",
-      "whyP2": "Toolando wurde entwickelt, um solche Werkzeuge an einem übersichtlichen und sicheren Ort zu sammeln. Mir ist es wichtig, dass der Dienst schnell, lesbar und ehrlich gegenüber dem Benutzer ist – ohne Tricks und versteckte Haken.",
+      "whyP2": "Toolando entstand, um solche Tools an einem Ort zu sammeln — ohne versteckte Kosten und ohne Tricks.",
       "howTitle": "So funktioniert Toolando",
       "howIntro": "Der Dienst stellt Online-Tools in zwei Varianten zur Verfügung: kostenlos und Premium.",
       "howFreeTerm": "Kostenlose Tools",
@@ -671,7 +671,7 @@
     "howItWorks": {
       "eyebrow": "Wie funktioniert es?",
       "title": "Wie die Tools in Toolando funktionieren",
-      "intro": "Toolando.tech ist eine Reihe von Online-Tools, die Sie direkt in Ihrem Browser ausführen – ohne dass Sie etwas installieren müssen. Im Folgenden erkläre ich, wie die Dateiverarbeitung funktioniert, wie ich mich um die Sicherheit kümmere und wie sich kostenlose Tools von Premium-Tools unterscheiden.",
+      "intro": "Toolando.tech ist eine Sammlung von Online-Tools, die du im Browser nutzt — ohne Installation. Hier steht, wie Dateien verarbeitet werden, wie Daten geschützt sind und worin sich kostenlose und Premium-Tools unterscheiden.",
       "browserTitle": "Tools, die im Browser ausgeführt werden",
       "browserP": "Sie öffnen ein Tool, wählen eine Datei aus oder geben Daten ein und erhalten das Ergebnis direkt auf der Seite. Sie benötigen kein Konto, um die kostenlosen Tools zu nutzen, und Sie müssen nichts auf Ihrem Computer installieren.",
       "filesTitle": "Wie Dateien verarbeitet werden",
@@ -680,16 +680,16 @@
       "filesLocalDesc": "Einige Vorgänge werden direkt auf Ihrem Gerät ausgeführt und die Datei verlässt Ihren Computer überhaupt nicht.",
       "filesServerTerm": "Vorübergehend auf dem Server",
       "filesServerDesc": "Benötigt ein Tool mehr Rechenleistung, wird die Datei nur für die Dauer der Konvertierung auf dem Server verarbeitet und anschließend gelöscht.",
-      "filesOutro": "In keinem dieser Fälle speichere ich Ihre Dateien oder verwende sie für andere Zwecke.",
+      "filesOutro": "In keinem dieser Fälle werden Dateien gespeichert oder für andere Zwecke verwendet.",
       "securityTitle": "Sicherheit",
-      "securityP": "Sicherheit und Datenschutz haben für mich Priorität. Die Verbindung zur Website ist verschlüsselt und die Dateien werden ausschließlich zur Ausführung der von Ihnen angeforderten Aufgabe verwendet.",
+      "securityP": "Deine Dateien werden nicht länger behalten als die Konvertierung dauert. Die Verbindung ist verschlüsselt, und Dateien dienen nur der Aufgabe, die du anstößt.",
       "securityList": [
         "Hochgeladene Dateien werden nach Abschluss des Vorgangs nicht gespeichert.",
-        "Ich verkaufe oder teile Ihre Daten nicht,",
+        "Daten werden nicht verkauft und nicht weitergegeben,",
         "Für die Nutzung der kostenlosen Tools ist die Angabe personenbezogener Daten nicht erforderlich."
       ],
       "tiersTitle": "Kostenlose Tools vs. Premium",
-      "tiersP": "Toolando bietet Tools in zwei Varianten an, das Sicherheitsprinzip ist jedoch bei beiden das gleiche.",
+      "tiersP": "Die Tools sind kostenlos oder Premium. In beiden Fällen sind Dateien gleich geschützt.",
       "tiersFreeTerm": "Kostenlos",
       "tiersFreeDesc": "für jeden verfügbar, ohne Konto. Perfekt für alltägliche, schnelle Aufgaben.",
       "tiersPremiumTerm": "Premium",
@@ -906,7 +906,7 @@
     "remove": "Favorit"
   },
   "auth": {
-    "signInTitle": "Willkommen zurück",
+    "signInTitle": "Willkommen",
     "signUpTitle": "Konto erstellen",
     "signInSubtitle": "Melde dich an, um fortzufahren.",
     "signUpSubtitle": "Registriere dich, um Premium-Funktionen zu nutzen.",

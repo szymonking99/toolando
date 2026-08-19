@@ -14,10 +14,10 @@
   },
   "premiumUpsell": {
     "title": "Avaa AI-työkalut Premiumilla",
-    "description": "Tekstin generointi, yhteenvedot, kuvat, käännös ja chat — yksi tilaus, ei yllätyksiä pyyntöä kohden.",
+    "description": "Teksti, tiivistelmät, kuvat, käännös ja chat — yksi tilaus, hinta on selvä heti.",
     "point1": "Kaikki AI-työkalut ilman rajoituksia",
-    "point2": "Priorisoitu käsittely kiireisinä päivinä",
-    "point3": "Tue itsenäistä kehitystä",
+    "point2": "Nopeampi jono ruuhka-aikoina",
+    "point3": "Tuot sivuston ylläpitoa",
     "cta": "Hanki Premium",
     "compare": "Katso tilaukset",
     "trialHint": "Kirjaudu sisään ilmaiseen esikatseluun — päivitä milloin tahansa."
@@ -32,7 +32,7 @@
     "start": "Selaa työkaluja",
     "learnMore": "Miten Toolando toimii",
     "step1": {
-      "title": "Muunna, laske, avaa — yksi ekosysteemi",
+      "title": "Muunna, laske, avaa — yhdessä paikassa",
       "body": "287+ työkalua tiedostoille, laskimille, kehittäjätyökaluille ja AI:lle — valitse työkalu tai hae Ctrl+K:lla."
     },
     "step2": {
@@ -72,13 +72,13 @@
   },
   "comparison": {
     "title": "Toolando vs pilvilataustyökalut",
-    "subtitle": "Miksi käyttäjät vaihtavat yleisistä latausmuuntimista.",
+    "subtitle": "Miten Toolando eroaa muuntimista, jotka lähettävät tiedoston toisen palvelimelle.",
     "feature": "Ominaisuus",
     "competitor": "Tyypillinen pilvimuunnin",
     "rows": {
       "privacy": "Paikallinen esikatselu & yksityisyysasetukset",
       "offline": "Toimii offline-tilassa (PWA-apuohjelmat)",
-      "ai": "Integroitu AI-työnkulku",
+      "ai": "Tekoälytyökalut samassa paikassa",
       "free": "Ilmaiset ydinmuuntimet",
       "limits": "Ei mielivaltaisia päivittäisiä latausrajoja perustoiminnoissa"
     }
@@ -121,7 +121,7 @@
     "formats": "Muodot",
     "about": "Tietoa",
     "contact": "Yhteystiedot",
-    "cta": "Aloita",
+    "cta": "Selaa työkaluja",
     "openMenu": "Avaa valikko",
     "closeMenu": "Sulje valikko",
     "allTools": "Kaikki työkalut",
@@ -144,7 +144,7 @@
     "badge": "Uusi verkkotyökalujen ekosysteemi",
     "titleA": "Kaikki verkkotyökalusi",
     "titleHighlight": "yhdessä paikassa",
-    "subtitle": "Muuntimet, generaattorit, PDF, tekoäly — kaikki yhdessä ekosysteemissä.",
+    "subtitle": "Oppaat kertovat, milloin kannattaa muuntaa — ja milloin alkuperäinen on parempi. Työkalut toimivat selaimessa, ilman asennusta.",
     "browse": "Selaa työkaluja",
     "learnMore": "Lue lisää",
     "convertCta": "Muunna tiedosto nyt"
@@ -242,15 +242,15 @@
   "ai": {
     "badge": "Premium-tekoäly",
     "title": "Älykkäät tekoälytyökalut",
-    "subtitle": "Kirjoita, tiivistä, käännä ja luo kuvia uusimmilla tekoälymalleilla — suoraan Toolando.techssa, ilman asennusta.",
+    "subtitle": "Kirjoita, tiivistä, käännä ja luo kuvia — selaimessa, ilman asennusta.",
     "openTool": "Avaa työkalu",
     "more": "Lisää tekoälytyökaluja"
   },
   "features": {
     "title": "Suosituimmat työkalut",
-    "subtitle": "Eniten valitut Toolando.tech-työkalut — käyttövalmiina sekunneissa.",
+    "subtitle": "Eniten käytetyt muunnokset — molempiin suuntiin.",
     "popularTitle": "Suosituimmat muuntimet",
-    "popularSubtitle": "Eniten käytetyt muunnokset — molempiin suuntiin, käyttövalmiina."
+    "popularSubtitle": "Eniten käytetyt muunnokset — molempiin suuntiin."
   },
   "categories": {
     "title": "Työkalukategoriat",
@@ -264,7 +264,7 @@
   },
   "knowledgeHub": {
     "title": "Formaatti- ja muunnostieto",
-    "subtitle": "Älä vain muunna – ymmärrä, milloin valita MP3 FLAC:n sijaan, WebP JPG:n sijaan tai PDF DOCX:n sijaan. Oppaamme auttavat sinua välttämään laadun heikkenemisen ja tarpeettomat muunnokset.",
+    "subtitle": "Älä vain muunna — katso milloin valita MP3 FLAC:n sijaan, WebP JPG:n sijaan tai PDF DOCX:n sijaan. Oppaat kertovat, milloin muunnos kannattaa ja milloin tiedosto on parempi jättää rauhaan.",
     "formatsTitle": "Tiedostomuotoinen tietosanakirja",
     "formatsDesc": "Yli 40 muotoa: ääni, video, kuvat, asiakirjat, tiedot ja arkistot. Hyödyt, haitat, yhteensopivuus ja vertailut vaihtoehtoihin.",
     "formatsCta": "Selaa muotoja",
@@ -294,17 +294,17 @@
   },
   "why": {
     "title": "Miksi Toolando.tech?",
-    "subtitle": "Rakennettu tuottavuutesi ja mukavuutesi huomioiden.",
-    "speedTitle": "Nopeus",
+    "subtitle": "Muuntimet ja oppaat ilman piilorajoja. Tiedostot eivät jää palvelimelle.",
+    "speedTitle": "Tiedostoja ei säilytetä",
     "speedDesc": "Työkalut toimivat välittömästi selaimessasi — ei odottelua eikä asennusta.",
-    "simpleTitle": "Yksinkertaisuus",
+    "simpleTitle": "Milloin ei kannata muuntaa",
     "simpleDesc": "Selkeä käyttöliittymä, jossa löydät minkä tahansa työkalun sekunneissa.",
-    "toolsTitle": "Yli 200 verkkotyökalua",
-    "toolsDesc": "Valtava kokoelma muuntimia, generaattoreita ja tekoälytyökaluja yhdessä paikassa."
+    "toolsTitle": "Kuvaukset oikeista testeistä",
+    "toolsDesc": "Muoto- ja muunnintekstit tulevat FFmpeg- ja LibreOffice-testeistä, ei kopioidusta speksistä."
   },
   "ctaSection": {
-    "title": "Aloita Toolando.techn käyttö tänään",
-    "subtitle": "Liity työkalujen ekosysteemiin, joka säästää aikaasi joka päivä.",
+    "title": "Valitse työkalu ja aloita",
+    "subtitle": "Muuntimet, laskurit ja kehittäjätyökalut — ilman asennusta.",
     "browse": "Selaa työkaluja"
   },
   "footer": {
@@ -341,7 +341,7 @@
   "support": {
     "eyebrow": "Tue projektia",
     "title": "Auta pitämään Toolando.tech pystyssä",
-    "subtitle": "Toolando.tech kehitetään ja tarjotaan ilmaiseksi. Jos se säästää aikaasi, harkitse sen kehityksen tukemista.",
+    "subtitle": "Ilmaiset työkalut eivät maksa mitään. Jos sivusto säästää aikaasi, voit tarjota kahvin.",
     "body1": "Ylläpidän palvelua itse – koodi, palvelimet, laillinen sisältö ja oppaat. Tukesi kattaa ylläpidon (Vercel), tiedostojen käsittelyn, verkkotunnuksen ja uusien työkalujen kehittämisen.",
     "body2": "Tuki on täysin vapaaehtoista. Ilmaiset työkalut eivät vaadi maksua. Premium on erillinen valinnainen tilaus, jossa on laajennetut ominaisuudet – katso lisätietoja käyttöehdoista.",
     "body3": "Onko sinulla kysyttävää, työkaluideaa tai löysitkö virheen? Kirjoita osoitteeseen badyltech@outlook.com tai käytä yhteydenottolomaketta – sekin on arvokasta tukea.",
@@ -349,7 +349,7 @@
     "coffee": "Tarjoa minulle kahvi",
     "donate": "Tee lahjoitus",
     "back": "Takaisin etusivulle",
-    "thanks": "Jokainen tuki auttaa kattamaan palvelimet ja pitää uudet työkalut tulossa."
+    "thanks": "Jokainen lahjoitus ja jokainen palauteviesti auttaa oikeasti. Kiitos."
   },
   "openerPage": {
     "eyebrow": "Esikatsele ja muunna",
@@ -513,7 +513,7 @@
     "description": "Avaa kaikki Toolando.tech AI-työkalut — teksti- ja kuvagenerointi, käännös, yhteenvedot ja avustaja — yhdellä tilauksella.",
     "feature1": "Rajoittamaton pääsy kaikkiin AI-työkaluihin",
     "feature2": "Tekstigeneraattori, kuvageneraattori ja kääntäjä",
-    "feature3": "Priorisoitu pyyntöjen käsittely",
+    "feature3": "Nopeampi jono ruuhka-aikoina",
     "goPremium": "Päivitä Premiumiin",
     "redirecting": "Ohjataan…",
     "signInToBuy": "Kirjaudu sisään ostaaksesi Premiumin",
@@ -534,7 +534,7 @@
     "goPremiumTitle": "Hanki Premium",
     "feature1": "Rajoittamaton pääsy AI-työkaluihin",
     "feature2": "Taustan poisto, kuva- ja tekstigenerointi",
-    "feature3": "Priorisoitu käsittely",
+    "feature3": "Nopeampi jono ruuhka-aikoina",
     "buyPremium": "Osta Premium",
     "buyRedirecting": "Ohjataan…",
     "refreshHint": "Maksoitko mutta Premium on yhä passiivinen? Päivitä tilasi:",
@@ -612,7 +612,7 @@
       "intro": "Toolando.tech on oma projektini, jonka rakennan itse. Ideasta koodin kautta nyt lukemaasi sisältöön – kaikki tulee yhdestä käsistä. Haluan, että yksinkertaiset tehtävät, kuten tiedoston muuntaminen tai nopea verkkotyökalu, ovat kaikkien saatavilla ilman ohjelmiston asentamista ja turhia komplikaatioita.",
       "whyTitle": "Miksi Toolando luotiin",
       "whyP1": "Työskentelen tietokoneiden kanssa päivittäin ja olen nähnyt monta kertaa, kuinka paljon aikaa ihmiset menettävät tehtäviin, joiden pitäisi kestää hetken – tiedostomuodon vaihtaminen, äänen poimiminen tallenteesta tai nopea toimenpide, joka pakottaa sinut etsimään satunnaista sivustoa, joka on täynnä mainoksia ja ansoja.",
-      "whyP2": "Toolando luotiin keräämään tällaiset työkalut yhteen selkeään ja turvalliseen paikkaan. Pidän siitä, että palvelu on nopeaa, luettavaa ja rehellistä käyttäjää kohtaan – ilman temppuja ja piilotettuja saaliita.",
+      "whyP2": "Toolando tehtiin kokoamaan nämä työkalut yhteen paikkaan — ilman piilomaksuja ja ilman temppuja.",
       "howTitle": "Kuinka Toolando toimii",
       "howIntro": "Palvelu tarjoaa online-työkaluja kahdessa versiossa: ilmaisia ja premium-tuotteita.",
       "howFreeTerm": "Ilmaiset työkalut",
@@ -671,7 +671,7 @@
     "howItWorks": {
       "eyebrow": "Miten se toimii?",
       "title": "Kuinka Toolando:n työkalut toimivat",
-      "intro": "Toolando.tech on joukko online-työkaluja, joita käytät suoraan selaimessasi – ilman asentamista. Alla kerron kuinka tiedostojen käsittely toimii, miten huolehdin turvallisuudesta ja miten ilmaiset työkalut eroavat premiumista.",
+      "intro": "Toolando.tech on joukko verkkotyökaluja, joita käytät selaimessa ilman asennusta. Alla on, miten tiedostoja käsitellään, miten tietoja suojataan ja miten ilmaiset työkalut eroavat premiumista.",
       "browserTitle": "Selaimessa toimivat työkalut",
       "browserP": "Avaat työkalun, valitset tiedoston tai syötät tiedot ja saat tuloksen suoraan sivulle. Sinun ei tarvitse tiliä käyttääksesi ilmaisia ​​työkaluja, etkä tarvitse asentaa mitään tietokoneellesi.",
       "filesTitle": "Miten tiedostoja käsitellään",
@@ -680,16 +680,16 @@
       "filesLocalDesc": "Jotkut toiminnot suoritetaan suoraan laitteellasi, eikä tiedosto koskaan poistu tietokoneeltasi.",
       "filesServerTerm": "Tilapäisesti palvelimella",
       "filesServerDesc": "kun työkalu tarvitsee enemmän laskentatehoa, tiedosto käsitellään palvelimella vain muuntamisen ajan ja poistetaan sitten.",
-      "filesOutro": "Missään näistä tapauksista en tallenna tiedostojasi tai käytä niitä mihinkään muuhun tarkoitukseen.",
+      "filesOutro": "Missään näistä tapauksista tiedostoja ei säilytetä eikä käytetä muuhun.",
       "securityTitle": "Turvallisuus",
-      "securityP": "Turvallisuus ja yksityisyys ovat minulle tärkeitä. Yhteys sivustoon on salattu, ja tiedostoja käytetään vain pyytämäsi tehtävän suorittamiseen.",
+      "securityP": "Tiedostojasi ei pidetä pidempään kuin muunnos kestää. Yhteys on salattu, ja tiedostoja käytetään vain pyytämääsi tehtävään.",
       "securityList": [
         "ladattuja tiedostoja ei tallenneta toimenpiteen jälkeen,",
-        "En myy tai jaa tietojasi,",
+        "tietoja ei myydä eikä jaeta,",
         "sinun ei tarvitse antaa henkilötietoja käyttääksesi ilmaisia työkaluja."
       ],
       "tiersTitle": "Ilmaiset työkalut vs premium",
-      "tiersP": "Toolando tarjoaa työkaluja kahdessa eri versiossa, mutta turvallisuusperiaate on sama molemmissa.",
+      "tiersP": "Työkalut ovat ilmaisia tai premium. Molemmissa tapauksissa tiedostot suojataan samalla tavalla.",
       "tiersFreeTerm": "Ilmainen",
       "tiersFreeDesc": "kaikkien saatavilla ilman tiliä. Täydellinen päivittäisiin, nopeisiin tehtäviin.",
       "tiersPremiumTerm": "Premium",
@@ -906,7 +906,7 @@
     "remove": "Suosikki"
   },
   "auth": {
-    "signInTitle": "Tervetuloa takaisin",
+    "signInTitle": "Tervetuloa",
     "signUpTitle": "Luo tili",
     "signInSubtitle": "Kirjaudu jatkaaksesi.",
     "signUpSubtitle": "Rekisteröidy käyttääksesi Premium-ominaisuuksia.",

@@ -69,7 +69,7 @@ export default uiPack({
   },
   "knowledgeHub": {
     "title": "Formázási és konverziós ismeretek",
-    "subtitle": "Ne csak konvertáljon – értse meg, mikor válasszon MP3-at FLAC helyett, WebP-t JPG helyett, vagy PDF-et DOCX helyett. Útmutatóink segítenek elkerülni a minőségromlást és a szükségtelen konverziókat.",
+    "subtitle": "Ne csak konvertálj — nézd meg, mikor válaszd az MP3-at FLAC helyett, a WebP-t JPG helyett vagy a PDF-et DOCX helyett. Az útmutatók elmondják, mikor van értelme a konverziónak, és mikor jobb békén hagyni a fájlt.",
     "formatsTitle": "Fájlformátumú lexikon",
     "formatsDesc": "Több mint 40 formátum: hang, videó, képek, dokumentumok, adatok és archívumok. Előnyök, hátrányok, kompatibilitás és összehasonlítások az alternatívákkal.",
     "formatsCta": "Böngésszen a formátumok között",

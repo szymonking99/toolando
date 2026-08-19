@@ -16,6 +16,15 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
       },
       {
+        userAgent: "Googlebot",
+        allow: "/",
+        ...(disallow.length > 0 ? { disallow } : {}),
+      },
+      {
+        userAgent: ["AhrefsBot", "SemrushBot", "MJ12bot", "DotBot", "BLEXBot", "PetalBot", "Bytespider"],
+        disallow: "/",
+      },
+      {
         userAgent: "*",
         allow: "/",
         ...(disallow.length > 0 ? { disallow } : {}),

@@ -14,10 +14,10 @@
   },
   "premiumUpsell": {
     "title": "Lås opp AI-verktøy med Premium",
-    "description": "Tekstgenerering, sammendrag, bilder, oversettelse og chat — ett abonnement, ingen overraskelser per forespørsel.",
+    "description": "Tekst, sammendrag, bilder, oversettelse og chat — ett abonnement, prisen er tydelig fra start.",
     "point1": "Alle AI-verktøy uten begrensninger",
-    "point2": "Prioritert behandling på travle dager",
-    "point3": "Støtt uavhengig utvikling",
+    "point2": "Raskere kø når det er mye trafikk",
+    "point3": "Du hjelper til å holde nettstedet i gang",
     "cta": "Skaff Premium",
     "compare": "Se abonnementer",
     "trialHint": "Logg inn for en gratis forhåndsvisning — oppgrader når du vil."
@@ -32,7 +32,7 @@
     "start": "Bla gjennom verktøy",
     "learnMore": "Slik fungerer Toolando",
     "step1": {
-      "title": "Konverter, beregn, åpne — ett økosystem",
+      "title": "Konverter, regn, åpne — på ett sted",
       "body": "287+ verktøy for filer, kalkulatorer, utviklerverktøy og AI — velg et verktøy eller søk med Ctrl+K."
     },
     "step2": {
@@ -72,13 +72,13 @@
   },
   "comparison": {
     "title": "Toolando vs skyopplastingsverktøy",
-    "subtitle": "Hvorfor brukere bytter fra generiske opplastingskonverterere.",
+    "subtitle": "Hvordan Toolando skiller seg fra konvertere som laster filen opp til noen andres server.",
     "feature": "Funksjon",
     "competitor": "Typisk skykonverterer",
     "rows": {
       "privacy": "Lokal forhåndsvisning & personvernvalg",
       "offline": "Fungerer offline (PWA-verktøy)",
-      "ai": "Integrert AI-arbeidsflyt",
+      "ai": "KI-verktøy på samme sted",
       "free": "Gratis kjernekonverterere",
       "limits": "Ingen vilkårlige daglige opplastingsgrenser for grunnfunksjoner"
     }
@@ -121,7 +121,7 @@
     "formats": "Formater",
     "about": "Om",
     "contact": "Kontakt",
-    "cta": "Kom i gang",
+    "cta": "Bla gjennom verktøy",
     "openMenu": "Åpne meny",
     "closeMenu": "Lukk meny",
     "allTools": "Alle verktøy",
@@ -144,7 +144,7 @@
     "badge": "Et nytt økosystem av nettverktøy",
     "titleA": "Alle nettverktøyene dine på",
     "titleHighlight": "ett sted",
-    "subtitle": "Konverterere, generatorer, PDF, AI — alt i ett økosystem.",
+    "subtitle": "Guidene forklarer når du bør konvertere — og når originalen er bedre. Verktøyene kjører i nettleseren, uten installasjon.",
     "browse": "Bla gjennom verktøy",
     "learnMore": "Lær mer",
     "convertCta": "Konverter en fil nå"
@@ -242,15 +242,15 @@
   "ai": {
     "badge": "Premium-AI",
     "title": "Intelligente AI-verktøy",
-    "subtitle": "Skriv, oppsummer, oversett og lag bilder med de nyeste AI-modellene — rett i Toolando.tech, uten installasjon.",
+    "subtitle": "Skriv, oppsummer, oversett og lag bilder — i nettleseren, uten installasjon.",
     "openTool": "Åpne verktøy",
     "more": "Flere AI-verktøy"
   },
   "features": {
     "title": "Mest populære verktøy",
-    "subtitle": "De mest valgte Toolando.tech-verktøyene — klare til bruk på sekunder.",
+    "subtitle": "De mest brukte konverteringene — begge veier.",
     "popularTitle": "Mest populære konverterere",
-    "popularSubtitle": "De mest brukte konverteringene — begge veier, klare til bruk."
+    "popularSubtitle": "De mest brukte konverteringene — begge veier."
   },
   "categories": {
     "title": "Verktøykategorier",
@@ -264,7 +264,7 @@
   },
   "knowledgeHub": {
     "title": "Format- og konverteringskunnskap",
-    "subtitle": "Ikke bare konverter – forstå når du skal velge MP3 fremfor FLAC, WebP over JPG eller PDF over DOCX. Våre guider hjelper deg å unngå kvalitetstap og unødvendige konverteringer.",
+    "subtitle": "Ikke bare konverter — se når du bør velge MP3 fremfor FLAC, WebP fremfor JPG eller PDF fremfor DOCX. Guidene forklarer når konvertering gir mening, og når filen best får være i fred.",
     "formatsTitle": "Encyclopedia i filformat",
     "formatsDesc": "40+ formater: lyd, video, bilder, dokumenter, data og arkiver. Fordeler, ulemper, kompatibilitet og sammenligninger med alternativer.",
     "formatsCta": "Bla gjennom formater",
@@ -294,17 +294,17 @@
   },
   "why": {
     "title": "Hvorfor Toolando.tech?",
-    "subtitle": "Bygget med tanke på produktiviteten og komforten din.",
-    "speedTitle": "Hastighet",
+    "subtitle": "Konvertere og guider uten skjulte grenser. Filer blir ikke liggende på serveren.",
+    "speedTitle": "Filer lagres ikke",
     "speedDesc": "Verktøyene kjører umiddelbart i nettleseren — ingen venting og ingen installasjon.",
-    "simpleTitle": "Enkelhet",
+    "simpleTitle": "Når du heller ikke bør konvertere",
     "simpleDesc": "Et rent grensesnitt der du finner hvilket som helst verktøy på sekunder.",
-    "toolsTitle": "200+ nettverktøy",
-    "toolsDesc": "En enorm samling konverterere, generatorer og AI-verktøy på ett sted."
+    "toolsTitle": "Beskrivelser fra ekte tester",
+    "toolsDesc": "Notater om formater og konvertere kommer fra tester med FFmpeg og LibreOffice, ikke fra en kopiert spesifikasjon."
   },
   "ctaSection": {
-    "title": "Begynn å bruke Toolando.tech i dag",
-    "subtitle": "Bli med i et økosystem av verktøy som sparer deg tid hver dag.",
+    "title": "Velg et verktøy og sett i gang",
+    "subtitle": "Konvertere, kalkulatorer og utviklerverktøy — uten installasjon.",
     "browse": "Bla gjennom verktøy"
   },
   "footer": {
@@ -341,7 +341,7 @@
   "support": {
     "eyebrow": "Støtt prosjektet",
     "title": "Hjelp Toolando.tech å fortsette",
-    "subtitle": "Toolando.tech utvikles og tilbys gratis. Hvis det sparer deg tid, vurder å støtte utviklingen.",
+    "subtitle": "De gratis verktøyene koster ingenting. Hvis nettstedet sparer deg tid, kan du spandere en kaffe.",
     "body1": "Jeg vedlikeholder tjenesten på egen hånd – kode, servere, juridisk innhold og guider. Din støtte hjelper til med å dekke hosting (Vercel), filbehandling, domenet og utvikling av nye verktøy.",
     "body2": "Støtten er helt frivillig. Gratis verktøy krever ingen betaling. Premium er et eget valgfritt abonnement med utvidede funksjoner – se vilkårene for bruk for detaljer.",
     "body3": "Har du et spørsmål, verktøyidé eller funnet en feil? Skriv til badyltech@outlook.com eller bruk kontaktskjemaet – det er også verdifull støtte.",
@@ -349,7 +349,7 @@
     "coffee": "Spander en kaffe",
     "donate": "Gi en donasjon",
     "back": "Tilbake til forsiden",
-    "thanks": "Hvert bidrag bidrar til å dekke servere og holder nye verktøy på vei."
+    "thanks": "Hver donasjon og hver e-post med tilbakemelding hjelper virkelig. Takk."
   },
   "openerPage": {
     "eyebrow": "Forhåndsvis og konverter",
@@ -513,7 +513,7 @@
     "description": "Lås opp alle Toolando.tech AI-verktøy — tekst- og bildegenerering, oversettelse, sammendrag og assistenten — i ett abonnement.",
     "feature1": "Ubegrenset tilgang til alle AI-verktøy",
     "feature2": "Tekstgenerator, bildegenerator og oversetter",
-    "feature3": "Prioritert behandling av forespørsler",
+    "feature3": "Raskere kø når det er mye trafikk",
     "goPremium": "Oppgrader til Premium",
     "redirecting": "Omdirigerer…",
     "signInToBuy": "Logg inn for å kjøpe Premium",
@@ -534,7 +534,7 @@
     "goPremiumTitle": "Skaff Premium",
     "feature1": "Ubegrenset tilgang til AI-verktøy",
     "feature2": "Bakgrunnsfjerning, bilde- og tekstgenerering",
-    "feature3": "Prioritert behandling",
+    "feature3": "Raskere kø når det er mye trafikk",
     "buyPremium": "Kjøp Premium",
     "buyRedirecting": "Omdirigerer…",
     "refreshHint": "Betalt men Premium fortsatt inaktivt? Oppdater statusen din:",
@@ -612,7 +612,7 @@
       "intro": "Toolando.tech er mitt eget prosjekt som jeg bygger på egen hånd. Fra ideen, gjennom koden, til innholdet du leser nå - alt kommer fra ett par hender. Jeg vil at enkle oppgaver, som å konvertere en fil eller et raskt nettverktøy, skal være tilgjengelig for alle, uten programvare å installere og uten unødvendige komplikasjoner.",
       "whyTitle": "Hvorfor Toolando ble opprettet",
       "whyP1": "Jeg jobber med datamaskiner hver dag, og jeg har mange ganger sett hvor mye tid folk taper på oppgaver som bør ta et øyeblikk – å endre et filformat, trekke ut lyd fra et opptak eller en rask operasjon som tvinger deg til å lete etter et tilfeldig nettsted fullt av annonser og feller.",
-      "whyP2": "Toolando ble opprettet for å samle slike verktøy på ett oversiktlig og trygt sted. Jeg bryr meg om at tjenesten skal være rask, lesbar og ærlig mot brukeren – uten triks og uten skjulte fangster.",
+      "whyP2": "Toolando ble laget for å samle slike verktøy på ett sted — uten skjulte gebyrer og uten triks.",
       "howTitle": "Hvordan Toolando fungerer",
       "howIntro": "Tjenesten tilbyr nettbaserte verktøy i to varianter: gratis og premium.",
       "howFreeTerm": "Gratis verktøy",
@@ -671,7 +671,7 @@
     "howItWorks": {
       "eyebrow": "Hvordan fungerer det?",
       "title": "Hvordan verktøyene i Toolando fungerer",
-      "intro": "Toolando.tech er et sett med nettbaserte verktøy du kjører rett i nettleseren din - uten noe å installere. Nedenfor forklarer jeg hvordan filbehandling fungerer, hvordan jeg tar vare på sikkerheten, og hvordan gratisverktøy skiller seg fra premium.",
+      "intro": "Toolando.tech er et sett med nettverktøy du bruker i nettleseren, uten å installere noe. Nedenfor står hvordan filer behandles, hvordan data er beskyttet, og hvordan gratis verktøy skiller seg fra premium.",
       "browserTitle": "Verktøy som kjører i nettleseren",
       "browserP": "Du åpner et verktøy, velger en fil eller legger inn data, og du får resultatet rett på siden. Du trenger ikke en konto for å bruke gratisverktøyene, og du trenger ikke å installere noe på datamaskinen.",
       "filesTitle": "Hvordan filer behandles",
@@ -680,16 +680,16 @@
       "filesLocalDesc": "noen operasjoner kjøres direkte på enheten din, og filen forlater aldri datamaskinen i det hele tatt.",
       "filesServerTerm": "Midlertidig på serveren",
       "filesServerDesc": "når et verktøy trenger mer datakraft, blir filen behandlet på serveren bare så lenge konverteringen varer, og deretter slettet.",
-      "filesOutro": "I ingen av disse tilfellene lagrer jeg filene dine eller bruker dem til noe annet formål.",
+      "filesOutro": "I ingen av tilfellene lagres filer eller brukes til noe annet.",
       "securityTitle": "Sikkerhet",
-      "securityP": "Sikkerhet og personvern er en prioritet for meg. Tilkoblingen til nettstedet er kryptert, og filer brukes utelukkende til å utføre oppgaven du ber om.",
+      "securityP": "Filene dine beholdes ikke lenger enn konverteringen. Tilkoblingen er kryptert, og filene brukes bare til oppgaven du ber om.",
       "securityList": [
         "opplastede filer lagres ikke etter at operasjonen er fullført,",
-        "Jeg selger eller deler ikke dataene dine,",
+        "data selges ikke og deles ikke,",
         "du trenger ikke oppgi personopplysninger for å bruke gratisverktøyene."
       ],
       "tiersTitle": "Gratis verktøy vs premium",
-      "tiersP": "Toolando tilbyr verktøy i to varianter, men sikkerhetsprinsippet er det samme i begge.",
+      "tiersP": "Verktøyene er gratis eller premium. I begge tilfeller er filene beskyttet på samme måte.",
       "tiersFreeTerm": "Gratis",
       "tiersFreeDesc": "tilgjengelig for alle, uten konto. Perfekt for hverdagslige, raske oppgaver.",
       "tiersPremiumTerm": "Premium",
@@ -906,7 +906,7 @@
     "remove": "Favoritt"
   },
   "auth": {
-    "signInTitle": "Velkommen tilbake",
+    "signInTitle": "Velkommen",
     "signUpTitle": "Opprett en konto",
     "signInSubtitle": "Logg inn for å fortsette.",
     "signUpSubtitle": "Registrer deg for å bruke Premium-funksjoner.",

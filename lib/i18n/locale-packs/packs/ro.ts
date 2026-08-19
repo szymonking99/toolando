@@ -69,7 +69,7 @@ export default uiPack({
   },
   "knowledgeHub": {
     "title": "Cunoștințe de format și conversie",
-    "subtitle": "Nu doar convertiți - înțelegeți când să alegeți MP3 peste FLAC, WebP peste JPG sau PDF peste DOCX. Ghidurile noastre vă ajută să evitați pierderea calității și conversiile inutile.",
+    "subtitle": "Nu convertiți doar de dragul conversiei: vedeți când să alegeți MP3 în loc de FLAC, WebP în loc de JPG sau PDF în loc de DOCX. Ghidurile explică când are sens conversia și când e mai bine să lăsați fișierul așa.",
     "formatsTitle": "Enciclopedie format de fișier",
     "formatsDesc": "Peste 40 de formate: audio, video, imagini, documente, date și arhive. Pro, contra, compatibilitate și comparații cu alternative.",
     "formatsCta": "Răsfoiți formate",

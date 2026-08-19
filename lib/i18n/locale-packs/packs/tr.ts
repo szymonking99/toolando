@@ -69,7 +69,7 @@ export default uiPack({
   },
   "knowledgeHub": {
     "title": "Biçim ve dönüştürme bilgisi",
-    "subtitle": "Yalnızca dönüştürmeyin; FLAC yerine MP3'ü, JPG yerine WebP'yi veya DOCX yerine PDF'yi ne zaman seçeceğinizi anlayın. Kılavuzlarımız kalite kaybından ve gereksiz dönüşümlerden kaçınmanıza yardımcı olur.",
+    "subtitle": "Sadece dönüştürmeyin: MP3’ü FLAC yerine, WebP’yi JPG yerine veya PDF’i DOCX yerine ne zaman seçeceğinize bakın. Rehberler dönüşümün ne zaman işe yaradığını, dosyayı ne zaman olduğu gibi bırakmanın daha iyi olduğunu anlatır.",
     "formatsTitle": "Dosya formatı ansiklopedisi",
     "formatsDesc": "40'tan fazla format: ses, video, görseller, belgeler, veriler ve arşivler. Artıları, eksileri, uyumluluk ve alternatiflerle karşılaştırmalar.",
     "formatsCta": "Formatlara göz atın",

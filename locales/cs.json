@@ -14,10 +14,10 @@
   },
   "premiumUpsell": {
     "title": "Odemkněte AI nástroje s Premium",
-    "description": "Generování textu, shrnutí, obrázky, překlad a chat — jedno předplatné, bez překvapení za jednotlivé požadavky.",
+    "description": "Text, shrnutí, obrázky, překlad a chat — jedno předplatné, cena je jasná hned.",
     "point1": "Všechny AI nástroje bez limitů",
-    "point2": "Prioritní zpracování ve špičkách",
-    "point3": "Podpora nezávislého vývoje",
+    "point2": "Rychlejší fronta, když je provoz vysoký",
+    "point3": "Pomáháte udržet web v chodu",
     "cta": "Zvolit Premium",
     "compare": "Zobrazit plány",
     "trialHint": "Přihlaste se pro bezplatný náhled — poté můžete kdykoli upgradovat."
@@ -32,7 +32,7 @@
     "start": "Procházet nástroje",
     "learnMore": "Jak Toolando funguje",
     "step1": {
-      "title": "Převádějte, počítejte, otevírejte — jeden ekosystém",
+      "title": "Konvertujte, počítejte, otevírejte — na jednom místě",
       "body": "287+ nástrojů pro soubory, kalkulačky, utility pro vývojáře a AI — vyberte nástroj nebo hledejte pomocí Ctrl+K."
     },
     "step2": {
@@ -72,13 +72,13 @@
   },
   "comparison": {
     "title": "Toolando vs. cloudové upload nástroje",
-    "subtitle": "Proč uživatelé přecházejí z běžných online převodníků.",
+    "subtitle": "Čím se Toolando liší od konvertorů, které nahrávají soubor na cizí server.",
     "feature": "Funkce",
     "competitor": "Typický cloudový převodník",
     "rows": {
       "privacy": "Lokální náhled a možnosti soukromí",
       "offline": "Funguje offline (PWA utility)",
-      "ai": "Integrovaný AI workflow",
+      "ai": "Nástroje AI na stejném místě",
       "free": "Zdarma základní převodníky",
       "limits": "Bez libovolných denních limitů uploadu u základů"
     }
@@ -121,7 +121,7 @@
     "formats": "Formáty",
     "about": "O nás",
     "contact": "Kontakt",
-    "cta": "Začít",
+    "cta": "Procházet nástroje",
     "openMenu": "Otevřít menu",
     "closeMenu": "Zavřít menu",
     "allTools": "Všechny nástroje",
@@ -144,7 +144,7 @@
     "badge": "Nový ekosystém online nástrojů",
     "titleA": "Všechny vaše online nástroje na",
     "titleHighlight": "jednom místě",
-    "subtitle": "Převodníky, generátory, PDF, AI — vše v jednom ekosystému.",
+    "subtitle": "Návody říkají, kdy konvertovat — a kdy je lepší nechat originál. Nástroje běží v prohlížeči, bez instalace.",
     "browse": "Procházet nástroje",
     "learnMore": "Zjistit více",
     "convertCta": "Převeďte soubor nyní"
@@ -242,15 +242,15 @@
   "ai": {
     "badge": "Prémiová AI",
     "title": "Inteligentní AI nástroje",
-    "subtitle": "Pište, shrnujte, překládejte a vytvářejte obrázky s nejnovějšími AI modely — přímo v Toolandu, bez instalace.",
+    "subtitle": "Pište, shrnujte, překládejte a generujte obrázky — v prohlížeči, bez instalace.",
     "openTool": "Otevřít nástroj",
     "more": "Další AI nástroje"
   },
   "features": {
     "title": "Nejoblíbenější nástroje",
-    "subtitle": "Nejvíce vybírané nástroje Toolando.tech — připravené k použití během několika sekund.",
+    "subtitle": "Nejpoužívanější konverze — oběma směry.",
     "popularTitle": "Nejoblíbenější převodníky",
-    "popularSubtitle": "Nejpoužívanější převody — oběma směry, připravené k použití."
+    "popularSubtitle": "Nejpoužívanější konverze — oběma směry."
   },
   "categories": {
     "title": "Kategorie nástrojů",
@@ -264,7 +264,7 @@
   },
   "knowledgeHub": {
     "title": "Znalost formátu a konverze",
-    "subtitle": "Nepřevádějte pouze – pochopte, kdy zvolit MP3 přes FLAC, WebP přes JPG nebo PDF přes DOCX. Naši průvodci vám pomohou vyhnout se ztrátě kvality a zbytečným konverzím.",
+    "subtitle": "Nejen konvertujte — podívejte se, kdy zvolit MP3 místo FLAC, WebP místo JPG nebo PDF místo DOCX. Návody vysvětlují, kdy konverze dává smysl a kdy je lepší soubor nechat být.",
     "formatsTitle": "Encyklopedie formátu souboru",
     "formatsDesc": "Více než 40 formátů: zvuk, video, obrázky, dokumenty, data a archivy. Klady, zápory, kompatibilita a srovnání s alternativami.",
     "formatsCta": "Procházet formáty",
@@ -294,17 +294,17 @@
   },
   "why": {
     "title": "Proč Toolando.tech?",
-    "subtitle": "Vytvořeno s ohledem na vaši produktivitu a pohodlí.",
-    "speedTitle": "Rychlost",
+    "subtitle": "Konvertory a návody bez skrytých limitů. Soubory na serveru nezůstávají.",
+    "speedTitle": "Soubory se neukládají",
     "speedDesc": "Nástroje běží okamžitě ve vašem prohlížeči — bez čekání a bez instalace.",
-    "simpleTitle": "Jednoduchost",
+    "simpleTitle": "Kdy raději nekonvertovat",
     "simpleDesc": "Přehledné rozhraní, kde najdete jakýkoli nástroj během několika sekund.",
-    "toolsTitle": "200+ online nástrojů",
-    "toolsDesc": "Obrovská sada převodníků, generátorů a AI nástrojů na jednom místě."
+    "toolsTitle": "Popisy z reálných testů",
+    "toolsDesc": "Poznámky k formátům a konvertorům pocházejí z testů s FFmpeg a LibreOffice, ne z zkopírované specifikace."
   },
   "ctaSection": {
-    "title": "Začněte používat Toolando.tech ještě dnes",
-    "subtitle": "Připojte se k ekosystému nástrojů, který vám každý den šetří čas.",
+    "title": "Vyberte nástroj a pusťte se do práce",
+    "subtitle": "Konvertory, kalkulačky a nástroje pro vývojáře — bez instalace.",
     "browse": "Procházet nástroje"
   },
   "footer": {
@@ -341,7 +341,7 @@
   "support": {
     "eyebrow": "Podpořte projekt",
     "title": "Pomozte udržet Toolando.tech",
-    "subtitle": "Toolando.tech je vyvíjeno a nabízeno zdarma. Pokud vám šetří čas, zvažte podporu jeho vývoje.",
+    "subtitle": "Bezplatné nástroje nic nestojí. Když vám web šetří čas, můžete koupit kávu.",
     "body1": "Službu si udržuji sám – kód, servery, legální obsah a průvodce. Vaše podpora pomáhá pokrýt hosting (Vercel), zpracování souborů, doménu a vývoj nových nástrojů.",
     "body2": "Podpora je zcela dobrovolná. Bezplatné nástroje nevyžadují žádné platby. Premium je samostatné volitelné předplatné s rozšířenými funkcemi – podrobnosti naleznete ve smluvních podmínkách.",
     "body3": "Máte dotaz, nápad na nástroj nebo jste našli chybu? Napište na badyltech@outlook.com nebo použijte kontaktní formulář – i to je cenná podpora.",
@@ -349,7 +349,7 @@
     "coffee": "Kupte mi kávu",
     "donate": "Přispět darem",
     "back": "Zpět na úvod",
-    "thanks": "Každý příspěvek pomáhá pokrýt servery a udržet nové nástroje v přípravě."
+    "thanks": "Každý dar a každý e-mail se zpětnou vazbou opravdu pomáhá. Děkujeme."
   },
   "openerPage": {
     "eyebrow": "Náhled a převod",
@@ -513,7 +513,7 @@
     "description": "Odemkněte všechny AI nástroje Toolando.tech — generování textu a obrázků, překlad, shrnutí a asistenta — v jednom předplatném.",
     "feature1": "Neomezený přístup ke všem AI nástrojům",
     "feature2": "Generátor textu, generátor obrázků a překladač",
-    "feature3": "Prioritní zpracování požadavků",
+    "feature3": "Rychlejší fronta, když je provoz vysoký",
     "goPremium": "Přejít na Premium",
     "redirecting": "Přesměrování…",
     "signInToBuy": "Přihlaste se pro nákup Premium",
@@ -534,7 +534,7 @@
     "goPremiumTitle": "Zvolit Premium",
     "feature1": "Neomezený přístup k AI nástrojům",
     "feature2": "Odstranění pozadí, generování obrázků a textu",
-    "feature3": "Prioritní zpracování",
+    "feature3": "Rychlejší fronta, když je provoz vysoký",
     "buyPremium": "Koupit Premium",
     "buyRedirecting": "Přesměrování…",
     "refreshHint": "Zaplatili jste, ale Premium stále neaktivní? Obnovte stav:",
@@ -612,7 +612,7 @@
       "intro": "Toolando.tech je můj vlastní projekt, který stavím sám. Od myšlenky, přes kód až po obsah, který právě čtete – to vše pochází z jednoho páru rukou. Chci, aby jednoduché úkoly, jako je převod souboru nebo rychlý online nástroj, byly dostupné všem, bez nutnosti instalace softwaru a bez zbytečných komplikací.",
       "whyTitle": "Proč byl vytvořen Toolando",
       "whyP1": "Pracuji s počítači každý den a mnohokrát jsem viděl, kolik času lidé ztrácejí úkoly, které by měly chvíli trvat – změna formátu souboru, extrahování zvuku z nahrávky nebo rychlá operace, která vás nutí hledat nějakou náhodnou stránku plnou reklam a pastí.",
-      "whyP2": "Toolando byl vytvořen, aby shromáždil takové nástroje na jednom přehledném a bezpečném místě. Záleží mi na tom, aby služba byla rychlá, čitelná a upřímná vůči uživateli – bez triků a skrytých úlovků.",
+      "whyP2": "Toolando vzniklo, aby tyto nástroje byly na jednom místě — bez skrytých poplatků a bez fíglů.",
       "howTitle": "Jak Toolando funguje",
       "howIntro": "Služba poskytuje online nástroje ve dvou variantách: bezplatné a prémiové.",
       "howFreeTerm": "Nástroje zdarma",
@@ -671,7 +671,7 @@
     "howItWorks": {
       "eyebrow": "jak to funguje?",
       "title": "Jak fungují nástroje v Toolando",
-      "intro": "Toolando.tech je sada online nástrojů, které spouštíte přímo ve svém prohlížeči – bez nutnosti instalace. Níže vysvětluji, jak funguje zpracování souborů, jak se starám o bezpečnost a jak se liší bezplatné nástroje od prémiových.",
+      "intro": "Toolando.tech je sada online nástrojů, které spouštíte v prohlížeči — nic se neinstaluje. Níže je, jak se soubory zpracovávají, jak jsou data chráněna a čím se liší bezplatné nástroje od premium.",
       "browserTitle": "Nástroje, které běží v prohlížeči",
       "browserP": "Otevřete nástroj, vyberete soubor nebo zadáte data a výsledek se zobrazí přímo na stránce. K používání bezplatných nástrojů nepotřebujete účet a do počítače nemusíte nic instalovat.",
       "filesTitle": "Jak se zpracovávají soubory",
@@ -680,16 +680,16 @@
       "filesLocalDesc": "některé operace běží přímo na vašem zařízení a soubor nikdy neopustí váš počítač.",
       "filesServerTerm": "Dočasně na serveru",
       "filesServerDesc": "když nástroj potřebuje větší výpočetní výkon, je soubor zpracován na serveru pouze po dobu trvání převodu a poté smazán.",
-      "filesOutro": "V žádném z těchto případů vaše soubory neukládám ani je nepoužívám k jinému účelu.",
+      "filesOutro": "V žádném z těchto případů se soubory neukládají ani nepoužívají k ničemu jinému.",
       "securityTitle": "Bezpečnost",
-      "securityP": "Bezpečnost a soukromí jsou pro mě prioritou. Připojení k webu je šifrováno a soubory se používají výhradně k provedení úkolu, který požadujete.",
+      "securityP": "Soubory se nenechávají déle, než trvá konverze. Spojení je šifrované a soubory slouží jen k úloze, o kterou žádáte.",
       "securityList": [
         "nahrané soubory se po dokončení operace neuloží,",
-        "Vaše údaje neprodávám ani nesdílím,",
+        "data se neprodávají ani nesdílejí,",
         "k používání bezplatných nástrojů nemusíte poskytovat osobní údaje."
       ],
       "tiersTitle": "Bezplatné nástroje vs prémiové",
-      "tiersP": "Toolando nabízí nástroje ve dvou variantách, ale princip zabezpečení je u obou stejný.",
+      "tiersP": "Nástroje jsou zdarma nebo premium. V obou případech jsou soubory chráněny stejně.",
       "tiersFreeTerm": "Zdarma",
       "tiersFreeDesc": "k dispozici všem, bez účtu. Ideální pro každodenní, rychlé úkoly.",
       "tiersPremiumTerm": "Premium",
@@ -906,7 +906,7 @@
     "remove": "Oblíbené"
   },
   "auth": {
-    "signInTitle": "Vítejte zpět",
+    "signInTitle": "Vítejte",
     "signUpTitle": "Vytvořit účet",
     "signInSubtitle": "Přihlaste se a pokračujte.",
     "signUpSubtitle": "Zaregistrujte se a používejte funkce Premium.",

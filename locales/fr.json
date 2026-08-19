@@ -14,16 +14,16 @@
   },
   "premiumUpsell": {
     "title": "Débloquez les outils IA avec Premium",
-    "description": "Génération de texte, résumés, images, traduction et chat — un abonnement, sans surprise par requête.",
+    "description": "Texte, résumés, images, traduction et chat — un abonnement, le prix est clair dès le départ.",
     "point1": "Tous les outils IA sans limites",
-    "point2": "Traitement prioritaire les jours chargés",
-    "point3": "Soutenez le développement indépendant",
+    "point2": "File plus rapide quand le trafic est élevé",
+    "point3": "Vous aidez à faire vivre le site",
     "cta": "Passer à Premium",
     "compare": "Voir les offres",
     "trialHint": "Connectez-vous pour un aperçu gratuit — puis passez à Premium quand vous voulez."
   },
   "privacyBadge": {
-    "title": "Confidentialité d'abord",
+    "title": "La vie privée d’abord",
     "local": "Traité localement dans votre navigateur"
   },
   "onboarding": {
@@ -32,7 +32,7 @@
     "start": "Parcourir les outils",
     "learnMore": "Comment fonctionne Toolando",
     "step1": {
-      "title": "Convertir, calculer, ouvrir — un seul écosystème",
+      "title": "Convertir, calculer, ouvrir — au même endroit",
       "body": "287+ outils pour fichiers, calculateurs, utilitaires développeur et IA — choisissez un outil ou recherchez avec Ctrl+K."
     },
     "step2": {
@@ -72,13 +72,13 @@
   },
   "comparison": {
     "title": "Toolando vs outils cloud de téléversement",
-    "subtitle": "Pourquoi les utilisateurs quittent les convertisseurs génériques par upload.",
+    "subtitle": "En quoi Toolando diffère des convertisseurs qui envoient votre fichier sur le serveur de quelqu’un d’autre.",
     "feature": "Fonctionnalité",
     "competitor": "Convertisseur cloud typique",
     "rows": {
       "privacy": "Aperçu local et options de confidentialité",
       "offline": "Fonctionne hors ligne (utilitaires PWA)",
-      "ai": "Workflow IA intégré",
+      "ai": "Outils IA au même endroit",
       "free": "Convertisseurs de base gratuits",
       "limits": "Pas de plafonds d'upload quotidiens arbitraires sur l'essentiel"
     }
@@ -121,7 +121,7 @@
     "formats": "Formats de fichiers",
     "about": "À propos",
     "contact": "Contacter",
-    "cta": "Commencer",
+    "cta": "Parcourir les outils",
     "openMenu": "Ouvrir le menu",
     "closeMenu": "Fermer le menu",
     "allTools": "Tous les outils",
@@ -144,7 +144,7 @@
     "badge": "Un nouvel écosystème d'outils en ligne",
     "titleA": "Vos outils en ligne en",
     "titleHighlight": "un seul endroit",
-    "subtitle": "Convertisseurs, générateurs, PDF, IA — le tout dans un seul écosystème.",
+    "subtitle": "Les guides expliquent quand convertir — et quand garder l’original. Les outils tournent dans le navigateur, sans installation.",
     "browse": "Parcourir les outils",
     "learnMore": "En savoir plus",
     "convertCta": "Convertir un fichier maintenant"
@@ -242,15 +242,15 @@
   "ai": {
     "badge": "IA Premium",
     "title": "Outils IA intelligents",
-    "subtitle": "Rédigez, résumez, traduisez et créez des images avec les derniers modèles d'IA — directement dans Toolando.tech, sans installation.",
+    "subtitle": "Écrire, résumer, traduire et générer des images — dans le navigateur, sans installation.",
     "openTool": "Ouvrir l'outil",
     "more": "Plus d'outils IA"
   },
   "features": {
     "title": "Outils les plus populaires",
-    "subtitle": "Les outils Toolando.tech les plus choisis — prêts à l'emploi en quelques secondes.",
+    "subtitle": "Les conversions les plus utilisées — dans les deux sens.",
     "popularTitle": "Convertisseurs les plus populaires",
-    "popularSubtitle": "Les conversions les plus utilisées — dans les deux sens, prêtes à l'emploi."
+    "popularSubtitle": "Les conversions les plus utilisées — dans les deux sens."
   },
   "categories": {
     "title": "Catégories d'outils",
@@ -264,7 +264,7 @@
   },
   "knowledgeHub": {
     "title": "Connaissance du format et de la conversion",
-    "subtitle": "Ne vous contentez pas de convertir : sachez quand choisir MP3 plutôt que FLAC, WebP plutôt que JPG ou PDF plutôt que DOCX. Nos guides vous aident à éviter la perte de qualité et les conversions inutiles.",
+    "subtitle": "Ne faites pas que convertir : voyez quand choisir MP3 plutôt que FLAC, WebP plutôt que JPG ou PDF plutôt que DOCX. Les guides expliquent quand la conversion a du sens, et quand il vaut mieux laisser le fichier tel quel.",
     "formatsTitle": "Encyclopédie des formats de fichiers",
     "formatsDesc": "Plus de 40 formats : audio, vidéo, images, documents, données et archives. Avantages, inconvénients, compatibilité et comparaisons avec des alternatives.",
     "formatsCta": "Parcourir les formats",
@@ -294,17 +294,17 @@
   },
   "why": {
     "title": "Pourquoi Toolando.tech ?",
-    "subtitle": "Conçu en pensant à votre productivité et à votre confort.",
-    "speedTitle": "Rapidité",
+    "subtitle": "Convertisseurs et guides sans limites cachées. Les fichiers ne restent pas sur le serveur.",
+    "speedTitle": "Les fichiers ne sont pas stockés",
     "speedDesc": "Les outils s'exécutent instantanément dans votre navigateur — sans attente ni installation.",
-    "simpleTitle": "Simplicité",
+    "simpleTitle": "Quand mieux vaut ne pas convertir",
     "simpleDesc": "Une interface épurée où vous trouvez n'importe quel outil en quelques secondes.",
-    "toolsTitle": "Plus de 200 outils en ligne",
-    "toolsDesc": "Un vaste ensemble de convertisseurs, générateurs et outils IA en un seul endroit."
+    "toolsTitle": "Des textes issus de vrais tests",
+    "toolsDesc": "Les notes sur les formats et convertisseurs viennent de tests avec FFmpeg et LibreOffice, pas d’une fiche copiée."
   },
   "ctaSection": {
-    "title": "Commencez à utiliser Toolando.tech dès aujourd'hui",
-    "subtitle": "Rejoignez un écosystème d'outils qui vous fait gagner du temps chaque jour.",
+    "title": "Choisissez un outil et commencez",
+    "subtitle": "Convertisseurs, calculateurs et outils développeur — sans installation.",
     "browse": "Parcourir les outils"
   },
   "footer": {
@@ -341,7 +341,7 @@
   "support": {
     "eyebrow": "Soutenir le projet",
     "title": "Aidez Toolando.tech à continuer",
-    "subtitle": "Toolando.tech est développé et offert gratuitement. S'il vous fait gagner du temps, envisagez de soutenir son développement.",
+    "subtitle": "Les outils gratuits ne coûtent rien. Si le site vous fait gagner du temps, vous pouvez offrir un café.",
     "body1": "Je gère le service moi-même : code, serveurs, contenu juridique et guides. Votre support permet de couvrir l'hébergement (Vercel), le traitement des fichiers, le domaine et le développement de nouveaux outils.",
     "body2": "Le soutien est entièrement volontaire. Les outils gratuits ne nécessitent aucun paiement. Premium est un abonnement facultatif distinct avec des fonctionnalités étendues – consultez les conditions d’utilisation pour plus de détails.",
     "body3": "Vous avez une question, une idée d'outil ou vous avez trouvé un bug ? Écrivez à badyltech@outlook.com ou utilisez le formulaire de contact : c'est aussi une aide précieuse.",
@@ -349,7 +349,7 @@
     "coffee": "Offrez-moi un café",
     "donate": "Faire un don",
     "back": "Retour à l'accueil",
-    "thanks": "Chaque contribution aide à financer les serveurs et à proposer de nouveaux outils."
+    "thanks": "Chaque don et chaque message d’avis aident vraiment. Merci."
   },
   "openerPage": {
     "eyebrow": "Prévisualiser et convertir",
@@ -513,7 +513,7 @@
     "description": "Débloquez tous les outils IA Toolando.tech — génération de texte et d'images, traduction, résumés et assistant — en un seul abonnement.",
     "feature1": "Accès illimité à tous les outils IA",
     "feature2": "Générateur de texte, générateur d'images et traducteur",
-    "feature3": "Traitement prioritaire des requêtes",
+    "feature3": "File plus rapide quand le trafic est élevé",
     "goPremium": "Passer à Premium",
     "redirecting": "Redirection…",
     "signInToBuy": "Connectez-vous pour acheter Premium",
@@ -534,7 +534,7 @@
     "goPremiumTitle": "Passer à Premium",
     "feature1": "Accès illimité aux outils IA",
     "feature2": "Détourage, génération d'images et de texte",
-    "feature3": "Traitement prioritaire",
+    "feature3": "File plus rapide quand le trafic est élevé",
     "buyPremium": "Acheter Premium",
     "buyRedirecting": "Redirection…",
     "refreshHint": "Payé mais Premium toujours inactif ? Actualisez votre statut :",
@@ -612,7 +612,7 @@
       "intro": "Toolando.tech est mon propre projet que je construis moi-même. De l'idée au contenu que vous lisez actuellement, en passant par le code, tout vient d'une seule main. Je souhaite que des tâches simples, comme la conversion d'un fichier ou un outil en ligne rapide, soient accessibles à tous, sans logiciel à installer ni complications inutiles.",
       "whyTitle": "Pourquoi Toolando a été créé",
       "whyP1": "Je travaille avec des ordinateurs tous les jours et j'ai vu à plusieurs reprises combien de temps les gens perdent sur des tâches qui devraient prendre un moment - changer un format de fichier, extraire l'audio d'un enregistrement ou une opération rapide qui vous oblige à rechercher un site aléatoire plein de publicités et de pièges.",
-      "whyP2": "Toolando a été créé pour rassembler ces outils dans un seul endroit clair et sûr. Je tiens à ce que le service soit rapide, lisible et honnête envers l'utilisateur, sans astuces ni pièges cachés.",
+      "whyP2": "Toolando a été créé pour rassembler ces outils au même endroit — sans frais cachés et sans astuces.",
       "howTitle": "Comment fonctionne Toolando",
       "howIntro": "Le service propose des outils en ligne en deux variantes : gratuit et premium.",
       "howFreeTerm": "Outils gratuits",
@@ -671,7 +671,7 @@
     "howItWorks": {
       "eyebrow": "Comment ça marche ?",
       "title": "Comment fonctionnent les outils de Toolando",
-      "intro": "Toolando.tech est un ensemble d'outils en ligne que vous exécutez directement dans votre navigateur, sans rien à installer. Ci-dessous, j'explique comment fonctionne le traitement des fichiers, comment je gère la sécurité et en quoi les outils gratuits diffèrent des outils premium.",
+      "intro": "Toolando.tech est un ensemble d’outils en ligne que vous utilisez dans le navigateur, sans rien installer. Ci-dessous : comment les fichiers sont traités, comment les données sont protégées, et ce qui distingue les outils gratuits des outils premium.",
       "browserTitle": "Outils qui s'exécutent dans le navigateur",
       "browserP": "Vous ouvrez un outil, choisissez un fichier ou saisissez des données, et vous obtenez le résultat directement sur la page. Vous n'avez pas besoin d'un compte pour utiliser les outils gratuits et vous n'avez pas besoin d'installer quoi que ce soit sur votre ordinateur.",
       "filesTitle": "Comment les fichiers sont traités",
@@ -680,16 +680,16 @@
       "filesLocalDesc": "certaines opérations s'exécutent directement sur votre appareil et le fichier ne quitte jamais votre ordinateur.",
       "filesServerTerm": "Temporairement sur le serveur",
       "filesServerDesc": "lorsqu'un outil nécessite plus de puissance de calcul, le fichier est traité sur le serveur uniquement pendant la durée de la conversion, puis supprimé.",
-      "filesOutro": "Dans aucun de ces cas, je ne stocke vos fichiers ni ne les utilise à d’autres fins.",
+      "filesOutro": "Dans aucun de ces cas les fichiers ne sont stockés ni utilisés à d’autres fins.",
       "securityTitle": "Sécurité",
-      "securityP": "La sécurité et la confidentialité sont une priorité pour moi. La connexion au site est cryptée et les fichiers sont utilisés uniquement pour effectuer la tâche que vous demandez.",
+      "securityP": "Vos fichiers ne sont pas conservés plus longtemps que la conversion. La connexion est chiffrée, et les fichiers servent uniquement à la tâche demandée.",
       "securityList": [
         "les fichiers téléchargés ne sont pas stockés une fois l'opération terminée,",
-        "Je ne vends ni ne partage vos données,",
+        "les données ne sont ni vendues ni partagées,",
         "vous n'avez pas besoin de fournir de données personnelles pour utiliser les outils gratuits."
       ],
       "tiersTitle": "Outils gratuits vs premium",
-      "tiersP": "Toolando propose des outils en deux variantes, mais le principe de sécurité est le même dans les deux.",
+      "tiersP": "Les outils sont gratuits ou premium. Dans les deux cas, les fichiers sont protégés de la même façon.",
       "tiersFreeTerm": "Gratuit",
       "tiersFreeDesc": "accessible à tous, sans compte. Parfait pour les tâches quotidiennes et rapides.",
       "tiersPremiumTerm": "Prime",
@@ -906,7 +906,7 @@
     "remove": "Favori"
   },
   "auth": {
-    "signInTitle": "Bon retour",
+    "signInTitle": "Bonjour",
     "signUpTitle": "Créer un compte",
     "signInSubtitle": "Connectez-vous pour continuer.",
     "signUpSubtitle": "Inscrivez-vous pour utiliser les fonctions Premium.",

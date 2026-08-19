@@ -29,6 +29,9 @@ import { SubtitleTool } from "./subtitle-tool"
 import { BatchRenameTool } from "./batch-rename-tool"
 import { IbanTool } from "./iban-tool"
 import { B2bCalculatorTool } from "./b2b-calculator-tool"
+import { PingTool } from "./ping-tool"
+import { DnsLookupTool } from "./dns-lookup-tool"
+import { SpeedtestTool } from "./speedtest-tool"
 
 export function UtilityTool({ tool }: { tool: UtilityToolConfig }) {
   switch (tool.id) {
@@ -88,6 +91,12 @@ export function UtilityTool({ tool }: { tool: UtilityToolConfig }) {
       return <UuidTool />
     case "generator-hash":
       return <HashTool />
+    case "test-ping":
+      return <PingTool />
+    case "dns-lookup":
+      return <DnsLookupTool />
+    case "speedtest":
+      return <SpeedtestTool />
     default:
       return null
   }

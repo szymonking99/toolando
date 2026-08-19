@@ -14,16 +14,16 @@
   },
   "premiumUpsell": {
     "title": "Unlock AI tools with Premium",
-    "description": "Text generation, summaries, images, translation and chat — one subscription, no per-request surprises.",
+    "description": "Text, summaries, images, translation and chat — one subscription, with a clear price up front.",
     "point1": "All AI tools without limits",
-    "point2": "Priority processing on busy days",
-    "point3": "Support independent development",
+    "point2": "Faster queue when traffic is high",
+    "point3": "You help keep the site running",
     "cta": "Go Premium",
     "compare": "See plans",
     "trialHint": "Sign in for a free preview — then upgrade anytime."
   },
   "privacyBadge": {
-    "title": "Privacy-first",
+    "title": "Privacy first",
     "local": "Processed locally in your browser"
   },
   "onboarding": {
@@ -32,7 +32,7 @@
     "start": "Browse tools",
     "learnMore": "How Toolando works",
     "step1": {
-      "title": "Convert, calculate, open — one ecosystem",
+      "title": "Convert, calculate, open — all in one place",
       "body": "287+ tools for files, calculators, developer utilities and AI — pick a tool or search with Ctrl+K."
     },
     "step2": {
@@ -72,13 +72,13 @@
   },
   "comparison": {
     "title": "Toolando vs cloud upload tools",
-    "subtitle": "Why users switch from generic upload converters.",
+    "subtitle": "How Toolando differs from converters that upload your file to someone else's server.",
     "feature": "Feature",
     "competitor": "Typical cloud converter",
     "rows": {
       "privacy": "Local preview & privacy options",
       "offline": "Works offline (PWA utilities)",
-      "ai": "Integrated AI workflow",
+      "ai": "AI tools in the same place",
       "free": "Free core converters",
       "limits": "No arbitrary daily upload caps on basics"
     }
@@ -121,7 +121,7 @@
     "formats": "Formats",
     "about": "About",
     "contact": "Contact",
-    "cta": "Get started",
+    "cta": "Browse tools",
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
     "allTools": "All tools",
@@ -144,7 +144,7 @@
     "badge": "Guides, formats and converters from one author",
     "titleA": "Your online tools in",
     "titleHighlight": "one place",
-    "subtitle": "I write when to convert — and when to leave the original. Then you get the tool, no install.",
+    "subtitle": "The guides explain when to convert — and when to keep the original. Tools run in the browser, no install.",
     "browse": "Browse tools",
     "learnMore": "Learn more",
     "convertCta": "Convert a file now"
@@ -242,15 +242,15 @@
   "ai": {
     "badge": "Premium AI",
     "title": "Intelligent AI tools",
-    "subtitle": "Write, summarize, translate and create images with the latest AI models — right inside Toolando.tech, no installation needed.",
+    "subtitle": "Write, summarize, translate and generate images — in the browser, no install.",
     "openTool": "Open tool",
     "more": "More AI tools"
   },
   "features": {
     "title": "Popular converters",
-    "subtitle": "The most-picked Toolando.tech tools — ready to use in seconds.",
+    "subtitle": "The most-used conversions — both ways.",
     "popularTitle": "Most popular converters",
-    "popularSubtitle": "The most-used conversions — both directions, ready to go."
+    "popularSubtitle": "The most-used conversions — both ways."
   },
   "categories": {
     "title": "Converter categories",
@@ -264,7 +264,7 @@
   },
   "knowledgeHub": {
     "title": "Format & conversion knowledge",
-    "subtitle": "Don't just convert — understand when to pick MP3 over FLAC, WebP over JPG, or PDF over DOCX. Our guides help you avoid quality loss and unnecessary conversions.",
+    "subtitle": "Don't just convert — see when to pick MP3 over FLAC, WebP over JPG, or PDF over DOCX. The guides explain when conversion makes sense, and when it's better to leave the file alone.",
     "formatsTitle": "File format encyclopedia",
     "formatsDesc": "40+ formats: audio, video, images, documents, data, and archives. Pros, cons, compatibility, and comparisons with alternatives.",
     "formatsCta": "Browse formats",
@@ -294,17 +294,17 @@
   },
   "why": {
     "title": "Why Toolando.tech?",
-    "subtitle": "A one-person site — including the limits I refuse to hide.",
-    "speedTitle": "I do not keep your files",
+    "subtitle": "Converters and guides with no hidden limits. Files do not stay on the server.",
+    "speedTitle": "Files are not stored",
     "speedDesc": "Server conversions last as long as the job. Then the file is deleted. Calculators run in your browser.",
-    "simpleTitle": "I say when NOT to convert",
+    "simpleTitle": "When not to convert",
     "simpleDesc": "MP3 will not restore quality. A scanned PDF will not magically become Word. That is in the guides, not a slogan.",
-    "toolsTitle": "I test on my own files",
-    "toolsDesc": "Format write-ups come from FFmpeg, LibreOffice and what the tool actually emitted — not a copied spec sheet."
+    "toolsTitle": "Descriptions from real tests",
+    "toolsDesc": "Format and converter notes come from tests with FFmpeg and LibreOffice — not from a copied spec sheet."
   },
   "ctaSection": {
-    "title": "Start using Toolando.tech today",
-    "subtitle": "Join an ecosystem of tools that save you time every day.",
+    "title": "Pick a tool and get to work",
+    "subtitle": "Converters, calculators and developer tools — no install.",
     "browse": "Browse tools"
   },
   "footer": {
@@ -341,7 +341,7 @@
   "support": {
     "eyebrow": "Support the project",
     "title": "Help keep Toolando.tech going",
-    "subtitle": "Toolando.tech is built and offered for free. If it saves you time, consider supporting its development.",
+    "subtitle": "The free tools cost nothing. If the site saves you time, you can buy a coffee.",
     "body1": "I maintain the service on my own — code, servers, legal content, and guides. Your support helps cover hosting (Vercel), file processing, the domain, and new tool development.",
     "body2": "Support is entirely voluntary. Free tools require no payment. Premium is a separate optional subscription with extended features — see the Terms of Service for details.",
     "body3": "Have a question, tool idea, or found a bug? Write to badyltech@outlook.com or use the contact form — that's valuable support too.",
@@ -349,7 +349,7 @@
     "coffee": "Buy me a coffee",
     "donate": "Make a donation",
     "back": "Back to home",
-    "thanks": "Every contribution — financial or feedback — helps keep Toolando.tech available for everyone."
+    "thanks": "Every donation and every email with feedback really helps. Thank you."
   },
   "openerPage": {
     "eyebrow": "Preview and convert",
@@ -513,7 +513,7 @@
     "description": "Unlock all Toolando.tech AI tools — text and image generation, translation, summaries and the assistant — in one subscription.",
     "feature1": "Unlimited access to all AI tools",
     "feature2": "Text generator, image generator and translator",
-    "feature3": "Priority request processing",
+    "feature3": "Faster queue when traffic is high",
     "goPremium": "Upgrade to Premium",
     "redirecting": "Redirecting…",
     "signInToBuy": "Sign in to buy Premium",
@@ -521,7 +521,7 @@
     "signUp": "Sign up"
   },
   "auth": {
-    "signInTitle": "Welcome back",
+    "signInTitle": "Welcome",
     "signUpTitle": "Create an account",
     "signInSubtitle": "Sign in to continue.",
     "signUpSubtitle": "Sign up to use Premium features.",
@@ -554,7 +554,7 @@
     "goPremiumTitle": "Go Premium",
     "feature1": "Unlimited access to AI tools",
     "feature2": "Background removal, image and text generation",
-    "feature3": "Priority processing",
+    "feature3": "Faster queue when traffic is high",
     "buyPremium": "Buy Premium",
     "buyRedirecting": "Redirecting…",
     "refreshHint": "Paid but Premium still inactive? Refresh your status:",
@@ -632,7 +632,7 @@
       "intro": "Toolando.tech is my own project that I build on my own. From the idea, through the code, to the content you're reading now — it all comes from one pair of hands. I want simple tasks, like converting a file or a quick online tool, to be available to everyone, with no software to install and no needless complications.",
       "whyTitle": "Why Toolando was created",
       "whyP1": "I work with computers every day and I've seen many times how much time people lose on tasks that should take a moment — changing a file format, extracting audio from a recording, or a quick operation that forces you to hunt for some random site full of ads and traps.",
-      "whyP2": "Toolando was created to gather such tools in one clear and safe place. I care about the service being fast, readable, and honest toward the user — with no tricks and no hidden catches.",
+      "whyP2": "Toolando was built to put those tools in one place — no hidden fees and no tricks.",
       "howTitle": "How Toolando works",
       "howIntro": "The service provides online tools in two variants: free and premium.",
       "howFreeTerm": "Free tools",
@@ -691,7 +691,7 @@
     "howItWorks": {
       "eyebrow": "How it works?",
       "title": "How the tools in Toolando work",
-      "intro": "Toolando.tech is a set of online tools you run right in your browser — with nothing to install. Below I explain how file processing works, how I take care of security, and how free tools differ from premium.",
+      "intro": "Toolando.tech is a set of online tools you run in the browser — nothing to install. Below is how files are processed, how data is protected, and how free tools differ from premium.",
       "browserTitle": "Tools that run in the browser",
       "browserP": "You open a tool, choose a file or enter data, and you get the result right on the page. You don't need an account to use the free tools, and you don't need to install anything on your computer.",
       "filesTitle": "How files are processed",
@@ -700,16 +700,16 @@
       "filesLocalDesc": "some operations run directly on your device, and the file never leaves your computer at all.",
       "filesServerTerm": "Temporarily on the server",
       "filesServerDesc": "when a tool needs more computing power, the file is processed on the server only for the duration of the conversion, and then deleted.",
-      "filesOutro": "In none of these cases do I store your files or use them for any other purpose.",
+      "filesOutro": "In either case, files are not stored or used for anything else.",
       "securityTitle": "Security",
-      "securityP": "Security and privacy are a priority for me. The connection to the site is encrypted, and files are used solely to perform the task you request.",
+      "securityP": "Your files are not kept longer than the conversion. The connection is encrypted, and files are used only for the task you ask for.",
       "securityList": [
         "uploaded files are not stored after the operation is complete,",
-        "I do not sell or share your data,",
+        "data is not sold or shared,",
         "you don't need to provide personal data to use the free tools."
       ],
       "tiersTitle": "Free tools vs premium",
-      "tiersP": "Toolando offers tools in two variants, but the security principle is the same in both.",
+      "tiersP": "Tools are free or premium. In both cases, files are protected the same way.",
       "tiersFreeTerm": "Free",
       "tiersFreeDesc": "available to everyone, without an account. Perfect for everyday, quick tasks.",
       "tiersPremiumTerm": "Premium",

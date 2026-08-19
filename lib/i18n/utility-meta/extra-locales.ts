@@ -11,6 +11,7 @@ export const extraCategoryLabels: Record<string, Record<UtilityCategory, string>
     text: "Texte",
     dev: "Développeur",
     media: "Médias",
+    network: "Réseau",
   },
   it: {
     finance: "Finanza",
@@ -19,6 +20,7 @@ export const extraCategoryLabels: Record<string, Record<UtilityCategory, string>
     text: "Testo",
     dev: "Sviluppatore",
     media: "Media",
+    network: "Rete",
   },
   pt: {
     finance: "Finanças",
@@ -27,6 +29,7 @@ export const extraCategoryLabels: Record<string, Record<UtilityCategory, string>
     text: "Texto",
     dev: "Desenvolvedor",
     media: "Mídia",
+    network: "Rede",
   },
   nl: {
     finance: "Financiën",
@@ -35,6 +38,7 @@ export const extraCategoryLabels: Record<string, Record<UtilityCategory, string>
     text: "Tekst",
     dev: "Ontwikkelaar",
     media: "Media",
+    network: "Netwerk",
   },
   sv: {
     finance: "Ekonomi",
@@ -43,6 +47,7 @@ export const extraCategoryLabels: Record<string, Record<UtilityCategory, string>
     text: "Text",
     dev: "Utvecklare",
     media: "Media",
+    network: "Nätverk",
   },
   no: {
     finance: "Økonomi",
@@ -51,6 +56,7 @@ export const extraCategoryLabels: Record<string, Record<UtilityCategory, string>
     text: "Tekst",
     dev: "Utvikler",
     media: "Media",
+    network: "Nettverk",
   },
   da: {
     finance: "Økonomi",
@@ -59,6 +65,7 @@ export const extraCategoryLabels: Record<string, Record<UtilityCategory, string>
     text: "Tekst",
     dev: "Udvikler",
     media: "Medier",
+    network: "Netværk",
   },
   fi: {
     finance: "Talous",
@@ -67,6 +74,7 @@ export const extraCategoryLabels: Record<string, Record<UtilityCategory, string>
     text: "Teksti",
     dev: "Kehittäjä",
     media: "Media",
+    network: "Verkko",
   },
   cs: {
     finance: "Finance",
@@ -75,6 +83,7 @@ export const extraCategoryLabels: Record<string, Record<UtilityCategory, string>
     text: "Text",
     dev: "Vývojář",
     media: "Média",
+    network: "Síť",
   },
   ro: {
     finance: "Finanțe",
@@ -83,6 +92,7 @@ export const extraCategoryLabels: Record<string, Record<UtilityCategory, string>
     text: "Text",
     dev: "Dezvoltator",
     media: "Media",
+    network: "Rețea",
   },
   hu: {
     finance: "Pénzügy",
@@ -91,6 +101,7 @@ export const extraCategoryLabels: Record<string, Record<UtilityCategory, string>
     text: "Szöveg",
     dev: "Fejlesztő",
     media: "Média",
+    network: "Hálózat",
   },
   el: {
     finance: "Οικονομικά",
@@ -99,6 +110,7 @@ export const extraCategoryLabels: Record<string, Record<UtilityCategory, string>
     text: "Κείμενο",
     dev: "Προγραμματιστής",
     media: "Πολυμέσα",
+    network: "Δίκτυο",
   },
   tr: {
     finance: "Finans",
@@ -107,6 +119,7 @@ export const extraCategoryLabels: Record<string, Record<UtilityCategory, string>
     text: "Metin",
     dev: "Geliştirici",
     media: "Medya",
+    network: "Ağ",
   },
   ru: {
     finance: "Финансы",
@@ -115,6 +128,7 @@ export const extraCategoryLabels: Record<string, Record<UtilityCategory, string>
     text: "Текст",
     dev: "Разработчик",
     media: "Медиа",
+    network: "Сеть",
   },
   ar: {
     finance: "المالية",
@@ -123,6 +137,7 @@ export const extraCategoryLabels: Record<string, Record<UtilityCategory, string>
     text: "النص",
     dev: "المطور",
     media: "الوسائط",
+    network: "الشبكة",
   },
   zh: {
     finance: "财务",
@@ -131,6 +146,7 @@ export const extraCategoryLabels: Record<string, Record<UtilityCategory, string>
     text: "文本",
     dev: "开发者",
     media: "媒体",
+    network: "网络",
   },
   ja: {
     finance: "ファイナンス",
@@ -139,6 +155,7 @@ export const extraCategoryLabels: Record<string, Record<UtilityCategory, string>
     text: "テキスト",
     dev: "開発者",
     media: "メディア",
+    network: "ネットワーク",
   },
   ko: {
     finance: "금융",
@@ -147,6 +164,7 @@ export const extraCategoryLabels: Record<string, Record<UtilityCategory, string>
     text: "텍스트",
     dev: "개발자",
     media: "미디어",
+    network: "네트워크",
   },
   hi: {
     finance: "वित्त",
@@ -155,6 +173,7 @@ export const extraCategoryLabels: Record<string, Record<UtilityCategory, string>
     text: "पाठ",
     dev: "डेवलपर",
     media: "मीडिया",
+    network: "नेटवर्क",
   },
   id: {
     finance: "Keuangan",
@@ -163,6 +182,7 @@ export const extraCategoryLabels: Record<string, Record<UtilityCategory, string>
     text: "Teks",
     dev: "Pengembang",
     media: "Media",
+    network: "Jaringan",
   },
 }
 

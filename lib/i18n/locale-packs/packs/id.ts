@@ -69,7 +69,7 @@ export default uiPack({
   },
   "knowledgeHub": {
     "title": "Pengetahuan format & konversi",
-    "subtitle": "Jangan hanya mengonversi — pahami kapan harus memilih MP3 daripada FLAC, WebP melalui JPG, atau PDF melalui DOCX. Panduan kami membantu Anda menghindari kehilangan kualitas dan konversi yang tidak perlu.",
+    "subtitle": "Jangan hanya mengonversi — lihat kapan memilih MP3 daripada FLAC, WebP daripada JPG, atau PDF daripada DOCX. Panduan menjelaskan kapan konversi masuk akal, dan kapan lebih baik membiarkan berkas apa adanya.",
     "formatsTitle": "Ensiklopedia format file",
     "formatsDesc": "40+ format: audio, video, gambar, dokumen, data, dan arsip. Pro, kontra, kompatibilitas, dan perbandingan dengan alternatif.",
     "formatsCta": "Telusuri format",

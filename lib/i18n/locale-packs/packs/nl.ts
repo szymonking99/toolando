@@ -69,7 +69,7 @@ export default uiPack({
   },
   "knowledgeHub": {
     "title": "Formaat- en conversiekennis",
-    "subtitle": "Converteer niet alleen: begrijp wanneer u MP3 boven FLAC, WebP boven JPG of PDF boven DOCX moet kiezen. Onze handleidingen helpen u kwaliteitsverlies en onnodige conversies te voorkomen.",
+    "subtitle": "Niet alleen converteren — zie wanneer je MP3 kiest in plaats van FLAC, WebP in plaats van JPG of PDF in plaats van DOCX. De gidsen leggen uit wanneer conversie zin heeft, en wanneer het bestand beter zo blijft.",
     "formatsTitle": "Bestandsformaat encyclopedie",
     "formatsDesc": "40+ formaten: audio, video, afbeeldingen, documenten, gegevens en archieven. Voor- en nadelen, compatibiliteit en vergelijkingen met alternatieven.",
     "formatsCta": "Blader door formaten",

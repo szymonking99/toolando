@@ -69,7 +69,7 @@ export default uiPack({
   },
   "knowledgeHub": {
     "title": "Connaissance du format et de la conversion",
-    "subtitle": "Ne vous contentez pas de convertir : sachez quand choisir MP3 plutôt que FLAC, WebP plutôt que JPG ou PDF plutôt que DOCX. Nos guides vous aident à éviter la perte de qualité et les conversions inutiles.",
+    "subtitle": "Ne faites pas que convertir : voyez quand choisir MP3 plutôt que FLAC, WebP plutôt que JPG ou PDF plutôt que DOCX. Les guides expliquent quand la conversion a du sens, et quand il vaut mieux laisser le fichier tel quel.",
     "formatsTitle": "Encyclopédie des formats de fichiers",
     "formatsDesc": "Plus de 40 formats : audio, vidéo, images, documents, données et archives. Avantages, inconvénients, compatibilité et comparaisons avec des alternatives.",
     "formatsCta": "Parcourir les formats",

@@ -20,6 +20,7 @@ const categoryLabels: Record<string, Record<UtilityCategory, string>> = {
     text: "Tekst",
     dev: "Dla developerów",
     media: "Media",
+    network: "Sieć",
   },
   en: {
     finance: "Finance",
@@ -28,6 +29,7 @@ const categoryLabels: Record<string, Record<UtilityCategory, string>> = {
     text: "Text",
     dev: "Developer",
     media: "Media",
+    network: "Network",
   },
   de: {
     finance: "Finanzen",
@@ -36,6 +38,7 @@ const categoryLabels: Record<string, Record<UtilityCategory, string>> = {
     text: "Text",
     dev: "Entwickler",
     media: "Medien",
+    network: "Netzwerk",
   },
   es: {
     finance: "Finanzas",
@@ -44,6 +47,7 @@ const categoryLabels: Record<string, Record<UtilityCategory, string>> = {
     text: "Texto",
     dev: "Desarrolladores",
     media: "Medios",
+    network: "Red",
   },
   uk: {
     finance: "Фінанси",
@@ -52,6 +56,7 @@ const categoryLabels: Record<string, Record<UtilityCategory, string>> = {
     text: "Текст",
     dev: "Для розробників",
     media: "Медіа",
+    network: "Мережа",
   },
   ...extraCategoryLabels,
 }
@@ -407,6 +412,36 @@ const pl: UtilityMetaMap = {
     steps: ["Podaj brutto etatu i przychód B2B.", "Wybierz formę opodatkowania.", "Porównaj wyniki."],
     faq: [{ q: "Czy to porada podatkowa?", a: "Nie — uproszczona symulacja do rozmowy z księgowym." }],
   },
+  "test-ping": {
+    category: "Sieć",
+    name: "Test Ping",
+    description: "Zmierz czas odpowiedzi serwera (latency) dla dowolnej domeny lub adresu IP.",
+    steps: ["Wpisz adres hosta (np. google.com).", "Kliknij Ping.", "Odczytaj czasy odpowiedzi i średnią."],
+    faq: [
+      { q: "Czy to prawdziwy ICMP ping?", a: "Nie — mierzymy czas HTTP HEAD request z serwera, bo ICMP jest niedostępne w środowisku serverless." },
+      { q: "Dlaczego czasy mogą się różnić?", a: "Ping zależy od lokalizacji serwera, obciążenia sieci i trasy pakietów." },
+    ],
+  },
+  "dns-lookup": {
+    category: "Sieć",
+    name: "DNS Lookup",
+    description: "Sprawdź rekordy DNS dla dowolnej domeny — A, AAAA, MX, CNAME, NS, TXT, SOA.",
+    steps: ["Wpisz domenę.", "Wybierz typ rekordu.", "Zobacz wyniki."],
+    faq: [
+      { q: "Skąd pochodzą wyniki?", a: "Zapytania DNS są wykonywane z serwera — wyniki mogą się różnić od Twojego lokalnego resolvera." },
+      { q: "Czy mogę sprawdzić subdomenę?", a: "Tak — wpisz pełną subdomenę, np. mail.example.com." },
+    ],
+  },
+  "speedtest": {
+    category: "Sieć",
+    name: "Test prędkości",
+    description: "Zmierz prędkość pobierania i opóźnienie połączenia z naszym serwerem.",
+    steps: ["Kliknij „Uruchom test prędkości".", "Poczekaj na zakończenie pomiaru.", "Odczytaj wyniki (Mbps i latency)."],
+    faq: [
+      { q: "Czy to dokładny test?", a: "To pomiar prędkości do naszego serwera (Vercel Edge). Wynik może się różnić od testów do innych lokalizacji." },
+      { q: "Ile danych pobiera test?", a: "Około 2 MB — nie obciąży znacząco Twojego pakietu danych." },
+    ],
+  },
 }
 
 const en: UtilityMetaMap = {
@@ -759,6 +794,36 @@ const en: UtilityMetaMap = {
     description: "Compare net employment salary vs B2B invoice income (flat or linear tax).",
     steps: ["Enter gross salary and B2B revenue.", "Pick tax form.", "Compare results."],
     faq: [{ q: "Is this tax advice?", a: "No — a simplified simulation for discussion with an accountant." }],
+  },
+  "test-ping": {
+    category: "Network",
+    name: "Ping Test",
+    description: "Measure server response time (latency) for any domain or IP address.",
+    steps: ["Enter a host (e.g. google.com).", "Click Ping.", "Read response times and average."],
+    faq: [
+      { q: "Is this a real ICMP ping?", a: "No — we measure HTTP HEAD request time from the server, since ICMP is unavailable in serverless environments." },
+      { q: "Why do times vary?", a: "Ping depends on server location, network load, and packet routing." },
+    ],
+  },
+  "dns-lookup": {
+    category: "Network",
+    name: "DNS Lookup",
+    description: "Check DNS records for any domain — A, AAAA, MX, CNAME, NS, TXT, SOA.",
+    steps: ["Enter a domain.", "Select record type.", "View results."],
+    faq: [
+      { q: "Where do results come from?", a: "DNS queries run from the server — results may differ from your local resolver." },
+      { q: "Can I check a subdomain?", a: "Yes — enter the full subdomain, e.g. mail.example.com." },
+    ],
+  },
+  "speedtest": {
+    category: "Network",
+    name: "Speed Test",
+    description: "Measure download speed and latency to our server.",
+    steps: ["Click 'Run speed test'.", "Wait for measurement.", "Read results (Mbps and latency)."],
+    faq: [
+      { q: "Is this accurate?", a: "It measures speed to our server (Vercel Edge). Results may differ from other speed test services." },
+      { q: "How much data does it use?", a: "About 2 MB — won't significantly impact your data plan." },
+    ],
   },
 }
 

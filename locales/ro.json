@@ -14,16 +14,16 @@
   },
   "premiumUpsell": {
     "title": "Deblochează instrumentele AI cu Premium",
-    "description": "Generare de text, rezumate, imagini, traducere și chat — un singur abonament, fără surprize per cerere.",
+    "description": "Text, rezumate, imagini, traducere și chat — un abonament, prețul e clar de la început.",
     "point1": "Toate instrumentele AI fără limite",
-    "point2": "Procesare prioritară în zilele aglomerate",
-    "point3": "Susține dezvoltarea independentă",
+    "point2": "Coadă mai rapidă când e mult trafic",
+    "point3": "Ajuți la menținerea site-ului",
     "cta": "Alege Premium",
     "compare": "Vezi planurile",
     "trialHint": "Conectează-te pentru o previzualizare gratuită — apoi poți face upgrade oricând."
   },
   "privacyBadge": {
-    "title": "Confidențialitate pe primul loc",
+    "title": "Confidențialitate mai întâi",
     "local": "Procesat local în browserul tău"
   },
   "onboarding": {
@@ -32,7 +32,7 @@
     "start": "Explorează instrumentele",
     "learnMore": "Cum funcționează Toolando",
     "step1": {
-      "title": "Convertește, calculează, deschide — un singur ecosistem",
+      "title": "Convertiți, calculați, deschideți — într-un loc",
       "body": "287+ instrumente pentru fișiere, calculatoare, utilitare pentru dezvoltatori și AI — alege un instrument sau caută cu Ctrl+K."
     },
     "step2": {
@@ -72,13 +72,13 @@
   },
   "comparison": {
     "title": "Toolando vs. instrumente cloud de upload",
-    "subtitle": "De ce utilizatorii trec de la convertoare online obișnuite.",
+    "subtitle": "Cu ce se deosebește Toolando de convertoarele care trimit fișierul pe serverul altcuiva.",
     "feature": "Funcție",
     "competitor": "Convertor cloud tipic",
     "rows": {
       "privacy": "Previzualizare locală și opțiuni de confidențialitate",
       "offline": "Funcționează offline (utilitare PWA)",
-      "ai": "Flux de lucru AI integrat",
+      "ai": "Instrumente AI în același loc",
       "free": "Convertoare de bază gratuite",
       "limits": "Fără limite arbitrare zilnice de upload la funcțiile de bază"
     }
@@ -121,7 +121,7 @@
     "formats": "Formate",
     "about": "Despre",
     "contact": "Contact",
-    "cta": "Începe",
+    "cta": "Vezi instrumentele",
     "openMenu": "Deschide meniul",
     "closeMenu": "Închide meniul",
     "allTools": "Toate instrumentele",
@@ -144,7 +144,7 @@
     "badge": "Un nou ecosistem de instrumente online",
     "titleA": "Toate instrumentele tale online într-un",
     "titleHighlight": "singur loc",
-    "subtitle": "Convertoare, generatoare, PDF, AI — totul într-un singur ecosistem.",
+    "subtitle": "Ghidurile explică când să convertiți — și când e mai bine originalul. Instrumentele rulează în browser, fără instalare.",
     "browse": "Explorează instrumentele",
     "learnMore": "Află mai multe",
     "convertCta": "Convertiți un fișier acum"
@@ -242,15 +242,15 @@
   "ai": {
     "badge": "AI Premium",
     "title": "Instrumente AI inteligente",
-    "subtitle": "Scrie, rezumă, traduce și creează imagini cu cele mai noi modele AI — direct în Toolando.tech, fără instalare.",
+    "subtitle": "Scrieți, rezumați, traduceți și generați imagini — în browser, fără instalare.",
     "openTool": "Deschide instrumentul",
     "more": "Mai multe instrumente AI"
   },
   "features": {
     "title": "Cele mai populare instrumente",
-    "subtitle": "Cele mai alese instrumente Toolando.tech — gata de folosit în câteva secunde.",
+    "subtitle": "Cele mai folosite conversii — în ambele sensuri.",
     "popularTitle": "Cele mai populare convertoare",
-    "popularSubtitle": "Cele mai folosite conversii — în ambele sensuri, gata de folosit."
+    "popularSubtitle": "Cele mai folosite conversii — în ambele sensuri."
   },
   "categories": {
     "title": "Categorii de instrumente",
@@ -264,7 +264,7 @@
   },
   "knowledgeHub": {
     "title": "Cunoștințe de format și conversie",
-    "subtitle": "Nu doar convertiți - înțelegeți când să alegeți MP3 peste FLAC, WebP peste JPG sau PDF peste DOCX. Ghidurile noastre vă ajută să evitați pierderea calității și conversiile inutile.",
+    "subtitle": "Nu convertiți doar de dragul conversiei: vedeți când să alegeți MP3 în loc de FLAC, WebP în loc de JPG sau PDF în loc de DOCX. Ghidurile explică când are sens conversia și când e mai bine să lăsați fișierul așa.",
     "formatsTitle": "Enciclopedie format de fișier",
     "formatsDesc": "Peste 40 de formate: audio, video, imagini, documente, date și arhive. Pro, contra, compatibilitate și comparații cu alternative.",
     "formatsCta": "Răsfoiți formate",
@@ -294,17 +294,17 @@
   },
   "why": {
     "title": "De ce Toolando.tech?",
-    "subtitle": "Creat cu gândul la productivitatea și confortul tău.",
-    "speedTitle": "Viteză",
+    "subtitle": "Convertoare și ghiduri fără limite ascunse. Fișierele nu rămân pe server.",
+    "speedTitle": "Fișierele nu sunt stocate",
     "speedDesc": "Instrumentele rulează instantaneu în browser — fără așteptare și fără instalare.",
-    "simpleTitle": "Simplitate",
+    "simpleTitle": "Când e mai bine să nu convertiți",
     "simpleDesc": "O interfață curată în care găsești orice instrument în câteva secunde.",
-    "toolsTitle": "Peste 200 de instrumente online",
-    "toolsDesc": "Un set imens de convertoare, generatoare și instrumente AI într-un singur loc."
+    "toolsTitle": "Descrieri din teste reale",
+    "toolsDesc": "Notele despre formate și convertoare vin din teste cu FFmpeg și LibreOffice, nu dintr-o specificație copiată."
   },
   "ctaSection": {
-    "title": "Începe să folosești Toolando.tech azi",
-    "subtitle": "Alătură-te unui ecosistem de instrumente care îți economisește timp în fiecare zi.",
+    "title": "Alegeți un instrument și începeți",
+    "subtitle": "Convertoare, calculatoare și unelte pentru dezvoltatori — fără instalare.",
     "browse": "Explorează instrumentele"
   },
   "footer": {
@@ -341,7 +341,7 @@
   "support": {
     "eyebrow": "Susține proiectul",
     "title": "Ajută Toolando.tech să continue",
-    "subtitle": "Toolando.tech este dezvoltat și oferit gratuit. Dacă îți economisește timp, ia în considerare să susții dezvoltarea lui.",
+    "subtitle": "Instrumentele gratuite nu costă nimic. Dacă site-ul vă salvează timp, puteți oferi o cafea.",
     "body1": "Întrețin serviciul pe cont propriu — cod, servere, conținut legal și ghiduri. Asistența dvs. vă ajută să acopere găzduirea (Vercel), procesarea fișierelor, domeniul și dezvoltarea de noi instrumente.",
     "body2": "Sprijinul este în întregime voluntar. Instrumentele gratuite nu necesită plată. Premium este un abonament opțional separat cu funcții extinse - consultați Termenii și condițiile pentru detalii.",
     "body3": "Ai o întrebare, o idee de instrumente sau ai găsit o eroare? Scrieți la badyltech@outlook.com sau utilizați formularul de contact - și acesta este un sprijin valoros.",
@@ -349,7 +349,7 @@
     "coffee": "Fă-mi cinste cu o cafea",
     "donate": "Fă o donație",
     "back": "Înapoi la pagina principală",
-    "thanks": "Fiecare contribuție ajută la acoperirea serverelor și menține noile instrumente în dezvoltare."
+    "thanks": "Fiecare donație și fiecare e-mail cu feedback ajută cu adevărat. Mulțumim."
   },
   "openerPage": {
     "eyebrow": "Previzualizează și convertește",
@@ -513,7 +513,7 @@
     "description": "Deblochează toate instrumentele AI Toolando.tech — generare text și imagini, traducere, rezumate și asistent — într-un singur abonament.",
     "feature1": "Acces nelimitat la toate instrumentele AI",
     "feature2": "Generator de text, generator de imagini și traducător",
-    "feature3": "Procesare prioritară a cererilor",
+    "feature3": "Coadă mai rapidă când e mult trafic",
     "goPremium": "Treci la Premium",
     "redirecting": "Redirecționare…",
     "signInToBuy": "Conectează-te pentru a cumpăra Premium",
@@ -534,7 +534,7 @@
     "goPremiumTitle": "Alege Premium",
     "feature1": "Acces nelimitat la instrumentele AI",
     "feature2": "Eliminare fundal, generare imagini și text",
-    "feature3": "Procesare prioritară",
+    "feature3": "Coadă mai rapidă când e mult trafic",
     "buyPremium": "Cumpără Premium",
     "buyRedirecting": "Redirecționare…",
     "refreshHint": "Ai plătit, dar Premium încă inactiv? Reîmprospătează statusul:",
@@ -612,7 +612,7 @@
       "intro": "Toolando.tech este propriul meu proiect pe care îl construiesc singur. De la idee, prin cod, până la conținutul pe care îl citiți acum - totul vine dintr-o pereche de mâini. Vreau ca sarcini simple, cum ar fi conversia unui fișier sau a unui instrument online rapid, să fie disponibile pentru toată lumea, fără software de instalat și fără complicații inutile.",
       "whyTitle": "De ce a fost creat Toolando",
       "whyP1": "Lucrez cu computere în fiecare zi și am văzut de multe ori cât de mult timp pierd oamenii în sarcini care ar trebui să dureze un moment — schimbarea unui format de fișier, extragerea audio dintr-o înregistrare sau o operațiune rapidă care vă obligă să căutați un site aleatoriu plin de reclame și capcane.",
-      "whyP2": "Toolando a fost creat pentru a aduna astfel de instrumente într-un singur loc clar și sigur. Îmi pasă ca serviciul să fie rapid, lizibil și sincer față de utilizator - fără trucuri și fără capturi ascunse.",
+      "whyP2": "Toolando a fost creat ca aceste instrumente să fie într-un singur loc — fără taxe ascunse și fără trucuri.",
       "howTitle": "Cum funcționează Toolando",
       "howIntro": "Serviciul oferă instrumente online în două variante: gratuit și premium.",
       "howFreeTerm": "Instrumente gratuite",
@@ -671,7 +671,7 @@
     "howItWorks": {
       "eyebrow": "Cum funcționează?",
       "title": "Cum funcționează instrumentele din Toolando",
-      "intro": "Toolando.tech este un set de instrumente online pe care le rulați chiar în browser - fără nimic de instalat. Mai jos explic cum funcționează procesarea fișierelor, cum mă ocup de securitate și cum diferă instrumentele gratuite de premium.",
+      "intro": "Toolando.tech este un set de instrumente online pe care le folosiți în browser, fără să instalați nimic. Mai jos e cum sunt procesate fișierele, cum sunt protejate datele și cu ce diferă instrumentele gratuite de cele premium.",
       "browserTitle": "Instrumente care rulează în browser",
       "browserP": "Deschideți un instrument, alegeți un fișier sau introduceți date și obțineți rezultatul direct pe pagină. Nu aveți nevoie de un cont pentru a utiliza instrumentele gratuite și nu trebuie să instalați nimic pe computer.",
       "filesTitle": "Cum sunt procesate fișierele",
@@ -680,16 +680,16 @@
       "filesLocalDesc": "unele operațiuni rulează direct pe dispozitivul dvs., iar fișierul nu părăsește deloc computerul.",
       "filesServerTerm": "Temporar pe server",
       "filesServerDesc": "când un instrument are nevoie de mai multă putere de calcul, fișierul este procesat pe server numai pe durata conversiei și apoi șters.",
-      "filesOutro": "În niciunul dintre aceste cazuri nu vă stochez fișierele sau nu le folosesc în alt scop.",
+      "filesOutro": "În niciunul dintre aceste cazuri fișierele nu sunt stocate sau folosite în alt scop.",
       "securityTitle": "Securitate",
-      "securityP": "Securitatea și confidențialitatea sunt o prioritate pentru mine. Conexiunea la site este criptată, iar fișierele sunt folosite numai pentru a îndeplini sarcina pe care o solicitați.",
+      "securityP": "Fișierele nu sunt păstrate mai mult decât durează conversia. Conexiunea e criptată, iar fișierele servesc doar sarcinii pe care o cereți.",
       "securityList": [
         "fișierele încărcate nu sunt stocate după finalizarea operațiunii,",
-        "Nu vând sau distribuie datele dvs.,",
+        "datele nu sunt vândute și nu sunt partajate,",
         "nu trebuie să furnizați date personale pentru a utiliza instrumentele gratuite."
       ],
       "tiersTitle": "Instrumente gratuite vs premium",
-      "tiersP": "Toolando oferă instrumente în două variante, dar principiul de securitate este același în ambele.",
+      "tiersP": "Instrumentele sunt gratuite sau premium. În ambele cazuri fișierele sunt protejate la fel.",
       "tiersFreeTerm": "Gratuit",
       "tiersFreeDesc": "disponibil pentru toată lumea, fără cont. Perfect pentru sarcini de zi cu zi, rapide.",
       "tiersPremiumTerm": "Premium",
@@ -906,7 +906,7 @@
     "remove": "Favorit"
   },
   "auth": {
-    "signInTitle": "Bine ai revenit",
+    "signInTitle": "Bun venit",
     "signUpTitle": "Creează un cont",
     "signInSubtitle": "Autentifică-te pentru a continua.",
     "signUpSubtitle": "Înregistrează-te pentru a folosi funcțiile Premium.",

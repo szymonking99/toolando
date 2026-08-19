@@ -69,7 +69,7 @@ export default uiPack({
   },
   "knowledgeHub": {
     "title": "Znalost formátu a konverze",
-    "subtitle": "Nepřevádějte pouze – pochopte, kdy zvolit MP3 přes FLAC, WebP přes JPG nebo PDF přes DOCX. Naši průvodci vám pomohou vyhnout se ztrátě kvality a zbytečným konverzím.",
+    "subtitle": "Nejen konvertujte — podívejte se, kdy zvolit MP3 místo FLAC, WebP místo JPG nebo PDF místo DOCX. Návody vysvětlují, kdy konverze dává smysl a kdy je lepší soubor nechat být.",
     "formatsTitle": "Encyklopedie formátu souboru",
     "formatsDesc": "Více než 40 formátů: zvuk, video, obrázky, dokumenty, data a archivy. Klady, zápory, kompatibilita a srovnání s alternativami.",
     "formatsCta": "Procházet formáty",

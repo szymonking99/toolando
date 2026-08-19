@@ -27,6 +27,9 @@ export type UtilityToolId =
   | "generator-nazw-plikow"
   | "walidator-iban"
   | "kalkulator-b2b"
+  | "test-ping"
+  | "dns-lookup"
+  | "speedtest"
 
 export type UtilityCategory =
   | "finance"
@@ -35,6 +38,7 @@ export type UtilityCategory =
   | "text"
   | "dev"
   | "media"
+  | "network"
 
 export type UtilityToolConfig = {
   id: UtilityToolId
@@ -71,6 +75,9 @@ export const utilityTools: UtilityToolConfig[] = [
   { id: "unix-timestamp", category: "dev", icon: "Clock" },
   { id: "generator-uuid", category: "dev", icon: "Fingerprint" },
   { id: "generator-hash", category: "dev", icon: "Hash" },
+  { id: "test-ping", category: "network", icon: "Radar" },
+  { id: "dns-lookup", category: "network", icon: "Search" },
+  { id: "speedtest", category: "network", icon: "Gauge" },
 ]
 
 export function getUtilityTool(id: string): UtilityToolConfig | undefined {

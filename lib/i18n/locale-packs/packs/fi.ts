@@ -69,7 +69,7 @@ export default uiPack({
   },
   "knowledgeHub": {
     "title": "Formaatti- ja muunnostieto",
-    "subtitle": "Älä vain muunna – ymmärrä, milloin valita MP3 FLAC:n sijaan, WebP JPG:n sijaan tai PDF DOCX:n sijaan. Oppaamme auttavat sinua välttämään laadun heikkenemisen ja tarpeettomat muunnokset.",
+    "subtitle": "Älä vain muunna — katso milloin valita MP3 FLAC:n sijaan, WebP JPG:n sijaan tai PDF DOCX:n sijaan. Oppaat kertovat, milloin muunnos kannattaa ja milloin tiedosto on parempi jättää rauhaan.",
     "formatsTitle": "Tiedostomuotoinen tietosanakirja",
     "formatsDesc": "Yli 40 muotoa: ääni, video, kuvat, asiakirjat, tiedot ja arkistot. Hyödyt, haitat, yhteensopivuus ja vertailut vaihtoehtoihin.",
     "formatsCta": "Selaa muotoja",

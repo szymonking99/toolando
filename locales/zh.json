@@ -14,10 +14,10 @@
   },
   "premiumUpsell": {
     "title": "升级 Premium，解锁 AI 工具",
-    "description": "文本生成、摘要、图像、翻译与对话——一项订阅，无按次计费惊喜。",
+    "description": "文本、摘要、图片、翻译和聊天——一份订阅，价格一开始就清楚。",
     "point1": "所有 AI 工具无限使用",
-    "point2": "繁忙时段优先处理",
-    "point3": "支持独立开发",
+    "point2": "访问量大时排队更快",
+    "point3": "你在帮助网站继续运转",
     "cta": "升级 Premium",
     "compare": "查看方案",
     "trialHint": "登录即可免费预览——随时升级。"
@@ -32,7 +32,7 @@
     "start": "浏览工具",
     "learnMore": "Toolando 如何运作",
     "step1": {
-      "title": "转换、计算、打开——一个生态系统",
+      "title": "转换、计算、打开——都在一处",
       "body": "287+ 款工具，涵盖文件、计算器、开发者实用工具和 AI——选择工具或使用 Ctrl+K 搜索。"
     },
     "step2": {
@@ -72,13 +72,13 @@
   },
   "comparison": {
     "title": "Toolando 对比云端上传工具",
-    "subtitle": "用户为何从通用在线转换器转向 Toolando。",
+    "subtitle": "Toolando 和那些把文件上传到别人服务器的转换器有何不同。",
     "feature": "功能",
     "competitor": "典型云端转换器",
     "rows": {
       "privacy": "本地预览与隐私选项",
       "offline": "离线可用（PWA 实用工具）",
-      "ai": "集成 AI 工作流",
+      "ai": "同一处的 AI 工具",
       "free": "免费核心转换器",
       "limits": "基础功能无任意每日上传限制"
     }
@@ -121,7 +121,7 @@
     "formats": "格式",
     "about": "关于",
     "contact": "联系",
-    "cta": "开始使用",
+    "cta": "浏览工具",
     "openMenu": "打开菜单",
     "closeMenu": "关闭菜单",
     "allTools": "所有工具",
@@ -144,7 +144,7 @@
     "badge": "全新的在线工具生态系统",
     "titleA": "你的在线工具",
     "titleHighlight": "尽在一处",
-    "subtitle": "转换器、生成器、PDF、AI——全部集于一个生态系统。",
+    "subtitle": "指南会说明什么时候该转换，什么时候该保留原文件。工具在浏览器里运行，无需安装。",
     "browse": "浏览工具",
     "learnMore": "了解更多",
     "convertCta": "立即转换文件"
@@ -242,15 +242,15 @@
   "ai": {
     "badge": "高级 AI",
     "title": "智能 AI 工具",
-    "subtitle": "使用最新的 AI 模型撰写、总结、翻译和创建图像——就在 Toolando.tech 内，无需安装。",
+    "subtitle": "写作、摘要、翻译和生成图片——在浏览器里完成，无需安装。",
     "openTool": "打开工具",
     "more": "更多 AI 工具"
   },
   "features": {
     "title": "最受欢迎的工具",
-    "subtitle": "最多人选择的 Toolando.tech 工具——几秒即可使用。",
+    "subtitle": "最常用的转换——双向都有。",
     "popularTitle": "最受欢迎的转换器",
-    "popularSubtitle": "最常用的转换——双向可用，即开即用。"
+    "popularSubtitle": "最常用的转换——双向都有。"
   },
   "categories": {
     "title": "工具分类",
@@ -264,7 +264,7 @@
   },
   "knowledgeHub": {
     "title": "格式与转换知识",
-    "subtitle": "不仅仅是转换 - 了解何时选择 MP3 而不是 FLAC、WebP 而不是 JPG、或 PDF 而不是 DOCX。我们的指南可帮助您避免质量损失和不必要的转换。",
+    "subtitle": "别只是转换——看看什么时候该选 MP3 而不是 FLAC、WebP 而不是 JPG、PDF 而不是 DOCX。指南会说明什么时候转换有意义，什么时候最好别动文件。",
     "formatsTitle": "文件格式百科全书",
     "formatsDesc": "40 多种格式：音频、视频、图像、文档、数据和档案。优点、缺点、兼容性以及与替代方案的比较。",
     "formatsCta": "浏览格式",
@@ -294,17 +294,17 @@
   },
   "why": {
     "title": "为什么选择 Toolando.tech？",
-    "subtitle": "以你的效率与舒适为出发点而打造。",
-    "speedTitle": "速度",
+    "subtitle": "没有隐藏限额的转换器和指南。文件不会留在服务器上。",
+    "speedTitle": "文件不会被保存",
     "speedDesc": "工具在你的浏览器中即时运行——无需等待，无需安装。",
-    "simpleTitle": "简单",
+    "simpleTitle": "什么时候最好不要转换",
     "simpleDesc": "简洁的界面，让你在几秒内找到任何工具。",
-    "toolsTitle": "200+ 在线工具",
-    "toolsDesc": "海量的转换器、生成器和 AI 工具，尽在一处。"
+    "toolsTitle": "来自真实测试的说明",
+    "toolsDesc": "格式和转换器说明来自 FFmpeg 与 LibreOffice 的测试，不是抄来的规格表。"
   },
   "ctaSection": {
-    "title": "立即开始使用 Toolando.tech",
-    "subtitle": "加入一个每天为你节省时间的工具生态系统。",
+    "title": "选一个工具，开始用",
+    "subtitle": "转换器、计算器和开发工具——无需安装。",
     "browse": "浏览工具"
   },
   "footer": {
@@ -341,7 +341,7 @@
   "support": {
     "eyebrow": "支持本项目",
     "title": "帮助 Toolando.tech 持续运营",
-    "subtitle": "Toolando.tech 免费开发并提供。如果它为你节省了时间，欢迎支持它的发展。",
+    "subtitle": "免费工具不花钱。如果网站帮你省了时间，可以请一杯咖啡。",
     "body1": "我自己维护服务——代码、服务器、法律内容和指南。您的支持涵盖托管 (Vercel)、文件处理、域和新工具开发。",
     "body2": "支持完全是自愿的。免费工具无需付费。高级版是具有扩展功能的单独可选订阅 - 有关详细信息，请参阅服务条款。",
     "body3": "有疑问、工具想法或发现错误吗？写信给 badyltech@outlook.com 或使用联系表格 — 这也是宝贵的支持。",
@@ -349,7 +349,7 @@
     "coffee": "请我喝杯咖啡",
     "donate": "进行捐赠",
     "back": "返回首页",
-    "thanks": "每一份贡献都有助于支付服务器费用，并让新工具不断推出。"
+    "thanks": "每一笔捐助、每一封反馈邮件都真的有用。谢谢。"
   },
   "openerPage": {
     "eyebrow": "预览与转换",
@@ -513,7 +513,7 @@
     "description": "一项订阅解锁 Toolando.tech 全部 AI 工具——文本与图像生成、翻译、摘要和助手。",
     "feature1": "无限访问所有 AI 工具",
     "feature2": "文本生成器、图像生成器和翻译器",
-    "feature3": "优先处理请求",
+    "feature3": "访问量大时排队更快",
     "goPremium": "升级 Premium",
     "redirecting": "正在跳转…",
     "signInToBuy": "登录以购买 Premium",
@@ -534,7 +534,7 @@
     "goPremiumTitle": "升级 Premium",
     "feature1": "无限访问 AI 工具",
     "feature2": "背景移除、图像与文本生成",
-    "feature3": "优先处理",
+    "feature3": "访问量大时排队更快",
     "buyPremium": "购买 Premium",
     "buyRedirecting": "正在跳转…",
     "refreshHint": "已付款但 Premium 仍未激活？刷新状态：",
@@ -612,7 +612,7 @@
       "intro": "Toolando.tech 是我自己构建的项目。从想法，到代码，再到你现在正在阅读的内容——这一切都来自于一双手。我希望每个人都可以完成简单的任务，例如转换文件或快速在线工具，无需安装软件，也没有不必要的复杂性。",
       "whyTitle": "为什么创建 Toolando",
       "whyP1": "我每天都与计算机打交道，我多次看到人们在那些应该花点时间的任务上浪费了多少时间——更改文件格式、从录音中提取音频，或者迫使你寻找一些充满广告和陷阱的随机网站的快速操作。",
-      "whyP2": "Toolando 的创建是为了将这些工具收集在一个干净且安全的地方。我关心的是服务是否快速、可读且对用户诚实——没有任何技巧，也没有隐藏的陷阱。",
+      "whyP2": "做 Toolando 是为了把这些工具放在一处——没有暗收费，也没有套路。",
       "howTitle": "Toolando 的工作原理",
       "howIntro": "该服务提供两种在线工具：免费和付费。",
       "howFreeTerm": "免费工具",
@@ -671,7 +671,7 @@
     "howItWorks": {
       "eyebrow": "它是如何运作的？",
       "title": "Toolando 中的工具如何工作",
-      "intro": "Toolando.tech 是一组可以直接在浏览器中运行的在线工具，无需安装任何内容。下面我将解释文件处理的工作原理、如何保护安全性以及免费工具与高级工具的区别。",
+      "intro": "Toolando.tech 是一组在浏览器里用的在线工具，不用安装。下面说明文件如何处理、数据如何保护，以及免费工具和付费工具有何不同。",
       "browserTitle": "在浏览器中运行的工具",
       "browserP": "您打开一个工具，选择一个文件或输入数据，然后您就可以在页面上得到结果。您不需要帐户即可使用免费工具，也不需要在计算机上安装任何内容。",
       "filesTitle": "文件是如何处理的",
@@ -680,16 +680,16 @@
       "filesLocalDesc": "有些操作直接在您的设备上运行，文件永远不会离开您的计算机。",
       "filesServerTerm": "暂时在服务器上",
       "filesServerDesc": "当工具需要更多计算能力时，仅在转换期间在服务器上处理文件，然后将其删除。",
-      "filesOutro": "在这些情况下，我都不会存储您的文件或将它们用于任何其他目的。",
+      "filesOutro": "无论哪种情况，文件都不会被保存，也不会用于别的用途。",
       "securityTitle": "安全性",
-      "securityP": "安全和隐私是我的首要任务。与站点的连接是加密的，文件仅用于执行您请求的任务。",
+      "securityP": "文件保存时间不会超过转换本身。连接已加密，文件只用于你发起的任务。",
       "securityList": [
         "操作完成后上传的文件不会被存储，",
-        "我不会出售或分享您的数据，",
+        "数据不会被出售或分享，",
         "您无需提供个人数据即可使用免费工具。"
       ],
       "tiersTitle": "免费工具与高级工具",
-      "tiersP": "Toolando 提供两种变体的工具，但两者的安全原理是相同的。",
+      "tiersP": "工具分免费和付费。两种情况下，文件的保护方式相同。",
       "tiersFreeTerm": "免费",
       "tiersFreeDesc": "所有人都可以使用，无需帐户。非常适合日常快速任务。",
       "tiersPremiumTerm": "高级版",
@@ -906,7 +906,7 @@
     "remove": "已收藏"
   },
   "auth": {
-    "signInTitle": "欢迎回来",
+    "signInTitle": "欢迎",
     "signUpTitle": "创建账户",
     "signInSubtitle": "登录以继续。",
     "signUpSubtitle": "注册以使用 Premium 功能。",

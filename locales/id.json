@@ -14,10 +14,10 @@
   },
   "premiumUpsell": {
     "title": "Buka alat AI dengan Premium",
-    "description": "Generasi teks, ringkasan, gambar, terjemahan, dan chat — satu langganan, tanpa biaya kejutan per permintaan.",
+    "description": "Teks, ringkasan, gambar, terjemahan, dan chat — satu langganan, harganya jelas dari awal.",
     "point1": "Semua alat AI tanpa batas",
-    "point2": "Pemrosesan prioritas di hari sibuk",
-    "point3": "Dukung pengembangan independen",
+    "point2": "Antrean lebih cepat saat ramai",
+    "point3": "Anda membantu situs tetap berjalan",
     "cta": "Pilih Premium",
     "compare": "Lihat paket",
     "trialHint": "Masuk untuk pratinjau gratis — upgrade kapan saja."
@@ -32,7 +32,7 @@
     "start": "Jelajahi alat",
     "learnMore": "Cara kerja Toolando",
     "step1": {
-      "title": "Konversi, hitung, buka — satu ekosistem",
+      "title": "Konversi, hitung, buka — di satu tempat",
       "body": "287+ alat untuk berkas, kalkulator, utilitas pengembang, dan AI — pilih alat atau cari dengan Ctrl+K."
     },
     "step2": {
@@ -72,13 +72,13 @@
   },
   "comparison": {
     "title": "Toolando vs alat unggah cloud",
-    "subtitle": "Mengapa pengguna beralih dari konverter unggah generik.",
+    "subtitle": "Bedanya Toolando dengan konverter yang mengunggah berkas Anda ke server orang lain.",
     "feature": "Fitur",
     "competitor": "Konverter cloud umum",
     "rows": {
       "privacy": "Pratinjau lokal & opsi privasi",
       "offline": "Bekerja offline (utilitas PWA)",
-      "ai": "Alur kerja AI terintegrasi",
+      "ai": "Alat AI di tempat yang sama",
       "free": "Konverter inti gratis",
       "limits": "Tanpa batas unggah harian sewenang-wenang untuk dasar"
     }
@@ -121,7 +121,7 @@
     "formats": "Format",
     "about": "Tentang",
     "contact": "Kontak",
-    "cta": "Mulai",
+    "cta": "Lihat alat",
     "openMenu": "Buka menu",
     "closeMenu": "Tutup menu",
     "allTools": "Semua alat",
@@ -144,7 +144,7 @@
     "badge": "Ekosistem alat online yang baru",
     "titleA": "Semua alat online Anda dalam",
     "titleHighlight": "satu tempat",
-    "subtitle": "Konverter, generator, PDF, AI — semuanya dalam satu ekosistem.",
+    "subtitle": "Panduan menjelaskan kapan harus mengonversi — dan kapan lebih baik menjaga aslinya. Alat berjalan di peramban, tanpa instalasi.",
     "browse": "Jelajahi alat",
     "learnMore": "Pelajari lebih lanjut",
     "convertCta": "Konversikan file sekarang"
@@ -242,15 +242,15 @@
   "ai": {
     "badge": "AI Premium",
     "title": "Alat AI cerdas",
-    "subtitle": "Menulis, meringkas, menerjemahkan, dan membuat gambar dengan model AI terbaru — langsung di dalam Toolando.tech, tanpa pemasangan.",
+    "subtitle": "Tulis, ringkas, terjemahkan, dan buat gambar — di peramban, tanpa instalasi.",
     "openTool": "Buka alat",
     "more": "Alat AI lainnya"
   },
   "features": {
     "title": "Alat paling populer",
-    "subtitle": "Alat Toolando.tech yang paling banyak dipilih — siap digunakan dalam hitungan detik.",
+    "subtitle": "Konversi yang paling sering dipakai — kedua arah.",
     "popularTitle": "Konverter paling populer",
-    "popularSubtitle": "Konversi yang paling banyak digunakan — dua arah, siap dipakai."
+    "popularSubtitle": "Konversi yang paling sering dipakai — kedua arah."
   },
   "categories": {
     "title": "Kategori alat",
@@ -264,7 +264,7 @@
   },
   "knowledgeHub": {
     "title": "Pengetahuan format & konversi",
-    "subtitle": "Jangan hanya mengonversi — pahami kapan harus memilih MP3 daripada FLAC, WebP melalui JPG, atau PDF melalui DOCX. Panduan kami membantu Anda menghindari kehilangan kualitas dan konversi yang tidak perlu.",
+    "subtitle": "Jangan hanya mengonversi — lihat kapan memilih MP3 daripada FLAC, WebP daripada JPG, atau PDF daripada DOCX. Panduan menjelaskan kapan konversi masuk akal, dan kapan lebih baik membiarkan berkas apa adanya.",
     "formatsTitle": "Ensiklopedia format file",
     "formatsDesc": "40+ format: audio, video, gambar, dokumen, data, dan arsip. Pro, kontra, kompatibilitas, dan perbandingan dengan alternatif.",
     "formatsCta": "Telusuri format",
@@ -294,17 +294,17 @@
   },
   "why": {
     "title": "Mengapa Toolando.tech?",
-    "subtitle": "Dibuat dengan mempertimbangkan produktivitas dan kenyamanan Anda.",
-    "speedTitle": "Kecepatan",
+    "subtitle": "Konverter dan panduan tanpa batas tersembunyi. Berkas tidak tinggal di server.",
+    "speedTitle": "Berkas tidak disimpan",
     "speedDesc": "Alat berjalan seketika di peramban Anda — tanpa menunggu dan tanpa pemasangan.",
-    "simpleTitle": "Kesederhanaan",
+    "simpleTitle": "Kapan lebih baik tidak mengonversi",
     "simpleDesc": "Antarmuka yang bersih tempat Anda menemukan alat apa pun dalam hitungan detik.",
-    "toolsTitle": "200+ alat online",
-    "toolsDesc": "Sekumpulan besar konverter, generator, dan alat AI dalam satu tempat."
+    "toolsTitle": "Deskripsi dari uji nyata",
+    "toolsDesc": "Catatan format dan konverter berasal dari uji dengan FFmpeg dan LibreOffice, bukan dari spesifikasi yang disalin."
   },
   "ctaSection": {
-    "title": "Mulai gunakan Toolando.tech hari ini",
-    "subtitle": "Bergabunglah dengan ekosistem alat yang menghemat waktu Anda setiap hari.",
+    "title": "Pilih alat dan mulai kerja",
+    "subtitle": "Konverter, kalkulator, dan alat pengembang — tanpa instalasi.",
     "browse": "Jelajahi alat"
   },
   "footer": {
@@ -341,7 +341,7 @@
   "support": {
     "eyebrow": "Dukung proyek ini",
     "title": "Bantu Toolando.tech tetap berjalan",
-    "subtitle": "Toolando.tech dikembangkan dan ditawarkan secara gratis. Jika menghemat waktu Anda, pertimbangkan untuk mendukung pengembangannya.",
+    "subtitle": "Alat gratis tidak dikenai biaya. Jika situs menghemat waktu Anda, Anda bisa membelikan kopi.",
     "body1": "Saya mengelola layanan ini sendiri — kode, server, konten hukum, dan panduan. Dukungan Anda membantu mencakup hosting (Vercel), pemrosesan file, domain, dan pengembangan alat baru.",
     "body2": "Dukungan sepenuhnya bersifat sukarela. Alat gratis tidak memerlukan pembayaran. Premium adalah langganan opsional terpisah dengan fitur tambahan — lihat Ketentuan Layanan untuk detailnya.",
     "body3": "Punya pertanyaan, ide alat, atau menemukan bug? Tulis ke badyltech@outlook.com atau gunakan formulir kontak — itu juga merupakan dukungan yang berharga.",
@@ -349,7 +349,7 @@
     "coffee": "Belikan saya kopi",
     "donate": "Beri donasi",
     "back": "Kembali ke beranda",
-    "thanks": "Setiap kontribusi membantu menutup biaya server dan menjaga alat baru terus hadir."
+    "thanks": "Setiap donasi dan setiap email masukan benar-benar membantu. Terima kasih."
   },
   "openerPage": {
     "eyebrow": "Pratinjau dan konversi",
@@ -513,7 +513,7 @@
     "description": "Buka semua alat AI Toolando.tech — generasi teks dan gambar, terjemahan, ringkasan, dan asisten — dalam satu langganan.",
     "feature1": "Akses tanpa batas ke semua alat AI",
     "feature2": "Generator teks, generator gambar, dan penerjemah",
-    "feature3": "Pemrosesan permintaan prioritas",
+    "feature3": "Antrean lebih cepat saat ramai",
     "goPremium": "Upgrade ke Premium",
     "redirecting": "Mengalihkan…",
     "signInToBuy": "Masuk untuk membeli Premium",
@@ -534,7 +534,7 @@
     "goPremiumTitle": "Pilih Premium",
     "feature1": "Akses tanpa batas ke alat AI",
     "feature2": "Penghapusan latar, generasi gambar dan teks",
-    "feature3": "Pemrosesan prioritas",
+    "feature3": "Antrean lebih cepat saat ramai",
     "buyPremium": "Beli Premium",
     "buyRedirecting": "Mengalihkan…",
     "refreshHint": "Sudah bayar tapi Premium masih nonaktif? Segarkan status:",
@@ -612,7 +612,7 @@
       "intro": "Toolando.tech adalah proyek saya sendiri yang saya bangun sendiri. Dari ide, melalui kode, hingga konten yang Anda baca sekarang — semuanya berasal dari sepasang tangan. Saya ingin tugas sederhana, seperti mengonversi file atau alat online cepat, tersedia untuk semua orang, tanpa perlu menginstal perangkat lunak dan tanpa komplikasi yang tidak perlu.",
       "whyTitle": "Mengapa Toolando dibuat",
       "whyP1": "Saya bekerja dengan komputer setiap hari dan saya telah melihat berkali-kali berapa banyak waktu yang terbuang ketika seseorang melakukan tugas-tugas yang seharusnya memakan waktu sejenak — mengubah format file, mengekstrak audio dari rekaman, atau operasi cepat yang memaksa Anda mencari situs acak yang penuh dengan iklan dan jebakan.",
-      "whyP2": "Toolando diciptakan untuk mengumpulkan alat-alat tersebut di satu tempat yang jelas dan aman. Saya peduli dengan layanan yang cepat, mudah dibaca, dan jujur ​​terhadap pengguna — tanpa trik dan tanpa hambatan tersembunyi.",
+      "whyP2": "Toolando dibuat agar alat-alat itu ada di satu tempat — tanpa biaya tersembunyi dan tanpa trik.",
       "howTitle": "Bagaimana Toolando bekerja",
       "howIntro": "Layanan ini menyediakan alat online dalam dua varian: gratis dan premium.",
       "howFreeTerm": "Alat gratis",
@@ -671,7 +671,7 @@
     "howItWorks": {
       "eyebrow": "Bagaimana cara kerjanya?",
       "title": "Cara kerja alat di Toolando",
-      "intro": "Toolando.tech adalah seperangkat alat online yang Anda jalankan langsung di browser Anda — tanpa perlu menginstal apa pun. Di bawah ini saya menjelaskan cara kerja pemrosesan file, cara saya menjaga keamanan, dan perbedaan alat gratis dari premium.",
+      "intro": "Toolando.tech adalah kumpulan alat daring yang Anda jalankan di peramban, tanpa menginstal apa pun. Di bawah ini cara berkas diproses, cara data dilindungi, dan perbedaan alat gratis dengan premium.",
       "browserTitle": "Alat yang dijalankan di browser",
       "browserP": "Anda membuka alat, memilih file atau memasukkan data, dan Anda mendapatkan hasilnya langsung di halaman. Anda tidak memerlukan akun untuk menggunakan alat gratis ini, dan Anda tidak perlu menginstal apa pun di komputer Anda.",
       "filesTitle": "Bagaimana file diproses",
@@ -680,16 +680,16 @@
       "filesLocalDesc": "beberapa operasi berjalan langsung di perangkat Anda, dan file tidak pernah meninggalkan komputer Anda sama sekali.",
       "filesServerTerm": "Untuk sementara di server",
       "filesServerDesc": "ketika suatu alat memerlukan lebih banyak daya komputasi, file diproses di server hanya selama durasi konversi, dan kemudian dihapus.",
-      "filesOutro": "Dalam kasus ini saya tidak menyimpan file Anda atau menggunakannya untuk tujuan lain apa pun.",
+      "filesOutro": "Dalam kedua kasus, berkas tidak disimpan dan tidak dipakai untuk hal lain.",
       "securityTitle": "Keamanan",
-      "securityP": "Keamanan dan privasi adalah prioritas bagi saya. Koneksi ke situs dienkripsi, dan file digunakan semata-mata untuk melakukan tugas yang Anda minta.",
+      "securityP": "Berkas Anda tidak disimpan lebih lama dari konversi. Koneksi dienkripsi, dan berkas hanya dipakai untuk tugas yang Anda minta.",
       "securityList": [
         "file yang diunggah tidak disimpan setelah operasi selesai,",
-        "Saya tidak menjual atau membagikan data Anda,",
+        "data tidak dijual atau dibagikan,",
         "Anda tidak perlu memberikan data pribadi untuk menggunakan alat gratis."
       ],
       "tiersTitle": "Alat gratis vs premium",
-      "tiersP": "Toolando menawarkan alat dalam dua varian, namun prinsip keamanan keduanya sama.",
+      "tiersP": "Alat bersifat gratis atau premium. Dalam kedua kasus, berkas dilindungi dengan cara yang sama.",
       "tiersFreeTerm": "Gratis",
       "tiersFreeDesc": "tersedia untuk semua orang, tanpa akun. Sempurna untuk tugas sehari-hari dan cepat.",
       "tiersPremiumTerm": "Premi",
@@ -906,7 +906,7 @@
     "remove": "Favorit"
   },
   "auth": {
-    "signInTitle": "Selamat datang kembali",
+    "signInTitle": "Selamat datang",
     "signUpTitle": "Buat akun",
     "signInSubtitle": "Masuk untuk melanjutkan.",
     "signUpSubtitle": "Daftar untuk menggunakan fitur Premium.",
