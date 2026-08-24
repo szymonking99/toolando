@@ -1,11 +1,7 @@
-import { fullyTranslatedLocales, type SupportedLocale } from "@/lib/i18n/config"
-import { COMPARISON_SLUGS, getComparison } from "@/lib/i18n/comparisons"
-import { GLOSSARY_SLUGS, getGlossaryTerm } from "@/lib/i18n/glossary"
+import type { SupportedLocale } from "@/lib/i18n/config"
+import { INDEXED_LOCALES, isIndexableGuide } from "@/lib/seo/publisher-index"
 import { GUIDE_SLUGS, getGuide } from "@/lib/i18n/guides"
 import { SITE_URL } from "@/lib/seo/structured-data"
-
-const COMPARISON_PUB_DATE = "2026-07-23T00:00:00.000Z"
-const GLOSSARY_PUB_DATE = "2026-07-20T00:00:00.000Z"
 
 export function escapeXml(value: string): string {
   return value
@@ -29,51 +25,29 @@ const CHANNEL_COPY: Record<
   { title: string; description: string; language: string }
 > = {
   pl: {
-    title: "Toolando.tech — poradniki, porównania i słownik",
+    title: "Toolando.tech — poradniki o konwersji plików",
     description:
-      "Poradniki konwersji plików, porównania formatów i definicje ze słownika Toolando.tech",
+      "Poradniki z testów na realnych plikach: kiedy konwertować, kiedy zostawić oryginał i jak nie psuć jakości.",
     language: "pl",
   },
   en: {
-    title: "Toolando.tech — guides, comparisons & glossary",
+    title: "Toolando.tech — file conversion guides",
     description:
-      "File conversion guides, format comparisons and glossary terms from Toolando.tech",
+      "Guides from real-file tests: when to convert, when to leave the original, and how not to wreck quality.",
     language: "en",
-  },
-  de: {
-    title: "Toolando.tech — Ratgeber, Vergleiche & Glossar",
-    description:
-      "Konvertierungsratgeber, Formatvergleiche und Glossarbegriffe von Toolando.tech",
-    language: "de",
-  },
-  es: {
-    title: "Toolando.tech — guías, comparaciones y glosario",
-    description:
-      "Guías de conversión, comparaciones de formatos y términos del glosario de Toolando.tech",
-    language: "es",
-  },
-  uk: {
-    title: "Toolando.tech — поради, порівняння та словник",
-    description:
-      "Поради з конвертації файлів, порівняння форматів і терміни словника Toolando.tech",
-    language: "uk",
   },
 }
 
 function channelCopy(locale?: string) {
   if (locale && CHANNEL_COPY[locale]) return CHANNEL_COPY[locale]
-  return {
-    title: "Toolando.tech — guides, comparisons & glossary",
-    description:
-      "File conversion guides, format comparisons and glossary terms from Toolando.tech",
-    language: locale || "en",
-  }
+  return CHANNEL_COPY.pl
 }
 
 function collectLocaleItems(locale: SupportedLocale): FeedItem[] {
   const items: FeedItem[] = []
 
   for (const slug of GUIDE_SLUGS) {
+    if (!isIndexableGuide(locale, slug)) continue
     const article = getGuide(locale, slug)
     if (!article) continue
     items.push({
@@ -86,39 +60,13 @@ function collectLocaleItems(locale: SupportedLocale): FeedItem[] {
     })
   }
 
-  for (const slug of COMPARISON_SLUGS) {
-    const comparison = getComparison(locale, slug)
-    if (!comparison) continue
-    items.push({
-      title: comparison.title,
-      link: `${SITE_URL}/${locale}/porownania/${slug}`,
-      description: comparison.description,
-      pubDate: new Date(COMPARISON_PUB_DATE).toUTCString(),
-      category: "comparison",
-      locale,
-    })
-  }
-
-  for (const slug of GLOSSARY_SLUGS) {
-    const term = getGlossaryTerm(locale, slug)
-    if (!term) continue
-    items.push({
-      title: term.term,
-      link: `${SITE_URL}/${locale}/slownik/${slug}`,
-      description: term.definition,
-      pubDate: new Date(GLOSSARY_PUB_DATE).toUTCString(),
-      category: "glossary",
-      locale,
-    })
-  }
-
   return items
 }
 
 export function collectFeedItems(locale?: string): FeedItem[] {
   const locales = locale
     ? ([locale] as SupportedLocale[])
-    : [...fullyTranslatedLocales]
+    : [...INDEXED_LOCALES]
 
   const items = locales.flatMap((code) => collectLocaleItems(code))
   return items.sort(

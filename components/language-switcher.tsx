@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react"
 import { Globe, Check } from "lucide-react"
 import { useI18n } from "@/components/i18n-provider"
 import {
-  supportedLocales,
+  switcherLocales,
   localeNames,
   localeFlags,
   type Locale,
@@ -60,7 +60,7 @@ export function LanguageSwitcher({ className = "" }: { className?: string }) {
           role="listbox"
           className="absolute right-0 z-[100] mt-2 max-h-80 w-44 overflow-y-auto rounded-xl border border-white/10 bg-background/95 p-1 shadow-lg backdrop-blur-xl"
         >
-          {supportedLocales.map((code) => (
+          {switcherLocales.map((code) => (
             <li key={code}>
               <button
                 type="button"

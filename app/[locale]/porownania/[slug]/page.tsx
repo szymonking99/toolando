@@ -35,6 +35,7 @@ export async function generateMetadata({
     title: `${item.title} — Toolando.tech`,
     description: item.description,
     type: "article",
+    index: false,
   })
 }
 

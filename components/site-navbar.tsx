@@ -28,12 +28,11 @@ export function SiteNavbar() {
 
   const extendedLinks: NavLink[] = [
     { label: t.nav.premium, href: href("/premium") },
-    { label: t.nav.formats, href: href("/formaty") },
+    { label: t.nav.aboutMe, href: href("/o-mnie") },
   ]
 
   const moreLinks: NavLink[] = [
     { label: t.nav.faq, href: href("/faq") },
-    { label: t.nav.aboutMe, href: href("/o-mnie") },
     { label: t.nav.contact, href: href("/kontakt") },
   ]
 

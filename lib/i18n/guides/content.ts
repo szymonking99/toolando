@@ -10,6 +10,8 @@ import {
 import { guidesBatch23De, guidesBatch23Es, guidesBatch23Uk } from "./batch-2-3-locales"
 import { guidesPl } from "./guides-pl"
 import { guidesEn } from "./guides-en"
+import { flagshipPl } from "./flagship-pl"
+import { flagshipEn } from "./flagship-en"
 import {
   guidesAr,
   guidesCs,
@@ -881,8 +883,8 @@ const guidesUk: Record<GuideSlug, GuideArticle> = {
 }
 
 const byLocale: Record<string, Record<GuideSlug, GuideArticle>> = {
-  pl: guidesPl,
-  en: guidesEn,
+  pl: { ...guidesPl, ...flagshipPl },
+  en: { ...guidesEn, ...flagshipEn },
   de: guidesDe,
   es: guidesEs,
   uk: guidesUk,

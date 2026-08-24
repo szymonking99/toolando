@@ -4,6 +4,7 @@ import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import { GuideArticleView } from "@/components/guide-article-view"
 import { buildPageMetadata } from "@/lib/seo/metadata"
+import { isIndexableGuide } from "@/lib/seo/publisher-index"
 import {
   GUIDE_SLUGS,
   getGuide,
@@ -28,6 +29,7 @@ export async function generateMetadata({
     title: `${article.title} — Toolando.tech`,
     description: article.description,
     type: "article",
+    index: isIndexableGuide(locale, slug),
   })
 }
 

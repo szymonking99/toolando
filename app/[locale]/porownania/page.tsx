@@ -6,6 +6,7 @@ import { getAllComparisons, getComparisonsHubMeta } from "@/lib/i18n/comparisons
 import { localeHref } from "@/lib/i18n/href"
 import { JsonLd } from "@/components/json-ld"
 import { itemListSchema } from "@/lib/seo/structured-data"
+import { buildPageMetadata } from "@/lib/seo/metadata"
 
 export async function generateMetadata({
   params,
@@ -14,11 +15,13 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params
   const hub = getComparisonsHubMeta(locale)
-  return {
+  return buildPageMetadata({
+    locale,
+    path: "/porownania",
     title: `${hub.title} — Toolando.tech`,
     description: hub.intro,
-    alternates: { canonical: `/${locale}/porownania` },
-  }
+    index: false,
+  })
 }
 
 export default async function ComparisonsPage({

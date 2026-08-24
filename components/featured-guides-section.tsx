@@ -6,12 +6,12 @@ import type { GuideSlug } from "@/lib/i18n/guides"
 import { localeHref } from "@/lib/i18n/href"
 
 const FEATURED_GUIDE_SLUGS: GuideSlug[] = [
-  "online-file-security",
-  "lossy-vs-lossless",
-  "png-vs-jpg-photos-and-graphics",
-  "podcast-export-mp3-aac-settings",
   "when-not-to-convert-files",
-  "flac-music-archive-guide",
+  "online-file-security",
+  "heic-iphone-jpg",
+  "docx-pdf-workflow",
+  "lossy-vs-lossless",
+  "extract-audio-from-video",
 ]
 
 export async function FeaturedGuidesSection({
@@ -20,7 +20,9 @@ export async function FeaturedGuidesSection({
   locale: string
 }) {
   const { featuredGuides: copy } = await getDictionary(locale)
-  const articles = FEATURED_GUIDE_SLUGS.map((slug) => getGuide(locale, slug))
+  const articles = FEATURED_GUIDE_SLUGS.map((slug) => getGuide(locale, slug)).filter(
+    (article): article is NonNullable<typeof article> => Boolean(article),
+  )
 
   return (
     <section className="border-t border-white/10 px-4 py-20">

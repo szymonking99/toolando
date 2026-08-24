@@ -7,6 +7,7 @@ import {
   getFormatsHubMeta,
 } from "@/lib/i18n/formats"
 import { localeHref } from "@/lib/i18n/href"
+import { buildPageMetadata } from "@/lib/seo/metadata"
 
 export async function generateMetadata({
   params,
@@ -15,11 +16,13 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params
   const hub = getFormatsHubMeta(locale)
-  return {
+  return buildPageMetadata({
+    locale,
+    path: "/formaty",
     title: `${hub.title} — Toolando.tech`,
     description: hub.intro.slice(0, 160),
-    alternates: { canonical: `/${locale}/formaty` },
-  }
+    index: false,
+  })
 }
 
 export default async function FormatsIndexPage({

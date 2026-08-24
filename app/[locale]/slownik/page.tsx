@@ -18,6 +18,7 @@ export async function generateMetadata({
     path: "/slownik",
     title: `${hub.title} — Toolando.tech`,
     description: hub.intro,
+    index: false,
   })
 }
 

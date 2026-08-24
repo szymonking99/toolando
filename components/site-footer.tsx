@@ -35,12 +35,6 @@ export function SiteFooter() {
 
     { label: t.footer.editorial, href: href("/redakcja") },
 
-    { label: t.footer.formats, href: href("/formaty") },
-
-    { label: t.footer.comparisons, href: href("/porownania") },
-
-    { label: t.footer.glossary, href: href("/slownik") },
-
     { label: t.footer.rss, href: href("/feed.xml") },
 
     { label: t.footer.support, href: href("/wsparcie") },

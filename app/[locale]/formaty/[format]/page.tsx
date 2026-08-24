@@ -28,6 +28,7 @@ export async function generateMetadata({
     title: `${profile.name} (.${profile.extension.toUpperCase()}) — Toolando.tech`,
     description: profile.intro.slice(0, 160),
     type: "article",
+    index: false,
   })
 }
 

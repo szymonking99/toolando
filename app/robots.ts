@@ -3,8 +3,27 @@ import { isDownloaderEnabled } from "@/lib/seo/ads-policy"
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://toolando.tech"
 
+/**
+ * Thin programmatic sections stay off Googlebot and the AdSense crawler.
+ * Pages remain usable in the browser; they just are not advertised to bots.
+ */
+const THIN_PATHS = [
+  "/*/formaty",
+  "/*/formaty/",
+  "/*/formaty/*",
+  "/*/slownik",
+  "/*/slownik/",
+  "/*/slownik/*",
+  "/*/porownania",
+  "/*/porownania/",
+  "/*/porownania/*",
+  "/*/category",
+  "/*/category/",
+  "/*/category/*",
+]
+
 export default function robots(): MetadataRoute.Robots {
-  const disallow: string[] = []
+  const disallow: string[] = [...THIN_PATHS]
   if (!isDownloaderEnabled()) {
     disallow.push("/*/downloader", "/*/downloader/*")
   }
@@ -12,13 +31,9 @@ export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
       {
-        userAgent: "Mediapartners-Google",
+        userAgent: ["Googlebot", "Mediapartners-Google", "Googlebot-Image"],
         allow: "/",
-      },
-      {
-        userAgent: "Googlebot",
-        allow: "/",
-        ...(disallow.length > 0 ? { disallow } : {}),
+        disallow,
       },
       {
         userAgent: ["AhrefsBot", "SemrushBot", "MJ12bot", "DotBot", "BLEXBot", "PetalBot", "Bytespider"],
@@ -27,7 +42,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        ...(disallow.length > 0 ? { disallow } : {}),
+        disallow,
       },
     ],
     sitemap: `${SITE_URL}/sitemap.xml`,

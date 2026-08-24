@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { canonicalPath, languageAlternates } from "@/lib/seo/alternates"
+import { isIndexedLocale, noindexRobots } from "@/lib/seo/publisher-index"
 
 type PageMetadataInput = {
   locale: string
@@ -9,6 +10,11 @@ type PageMetadataInput = {
   type?: "website" | "article"
   /** Override OG/Twitter image path (defaults to /opengraph-image). */
   imagePath?: string
+  /**
+   * When false, page is noindex. Defaults to true only for indexed locales.
+   * Programmatic hubs (formats, glossary, comparisons) should pass false.
+   */
+  index?: boolean
 }
 
 const DEFAULT_OG = "/opengraph-image"
@@ -22,6 +28,7 @@ export function buildPageMetadata(input: PageMetadataInput): Metadata {
     description,
     type = "website",
     imagePath = DEFAULT_OG,
+    index = isIndexedLocale(locale),
   } = input
 
   const canonical = canonicalPath(locale, path)
@@ -30,6 +37,7 @@ export function buildPageMetadata(input: PageMetadataInput): Metadata {
   return {
     title,
     description,
+    ...(index ? {} : { robots: noindexRobots() }),
     alternates: {
       canonical,
       languages,

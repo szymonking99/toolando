@@ -1,16 +1,17 @@
-import { fullyTranslatedLocales, fallbackLocale } from "@/lib/i18n/config"
+import { defaultLocale } from "@/lib/i18n/config"
+import { INDEXED_LOCALES } from "@/lib/seo/publisher-index"
 import { SITE_URL } from "@/lib/seo/structured-data"
 
 /** Build hreflang map for HTML metadata and sitemap (indexed locales only). */
 export function languageAlternates(path: string): Record<string, string> {
   const normalized = path.startsWith("/") ? path : `/${path}`
   const map = Object.fromEntries(
-    fullyTranslatedLocales.map((locale) => [
+    INDEXED_LOCALES.map((locale) => [
       locale,
       `${SITE_URL}/${locale}${normalized}`,
     ]),
   )
-  map["x-default"] = `${SITE_URL}/${fallbackLocale}${normalized}`
+  map["x-default"] = `${SITE_URL}/${defaultLocale}${normalized}`
   return map
 }
 

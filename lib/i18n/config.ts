@@ -103,6 +103,12 @@ export const fullyTranslatedLocales: SupportedLocale[] = [
   "uk",
 ]
 
+/**
+ * Languages shown in the UI switcher. Placeholder locales (English fallback
+ * labelled as Français / 日本語 / …) look like a doorway farm to reviewers.
+ */
+export const switcherLocales: SupportedLocale[] = fullyTranslatedLocales
+
 /** Right-to-left locales — used to set the <html dir> attribute. */
 export const rtlLocales = new Set<string>(["ar", "he", "fa", "ur"])
 

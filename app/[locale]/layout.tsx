@@ -13,12 +13,12 @@ import { organizationSchema, websiteSchema } from "@/lib/seo/structured-data"
 import { getDictionary } from "@/lib/i18n/dictionaries"
 import {
   supportedLocales,
-  fullyTranslatedLocales,
   rtlLocales,
   normalizeToSupported,
   fallbackLocale,
 } from "@/lib/i18n/config"
 import { showAdSenseVerificationMeta } from "@/lib/seo/ads-policy"
+import { INDEXED_LOCALES, isIndexedLocale, noindexRobots } from "@/lib/seo/publisher-index"
 import "../globals.css"
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] })
@@ -44,20 +44,19 @@ export async function generateMetadata({
   const { locale } = await params
   const dict = await getDictionary(locale)
   const resolved = normalizeToSupported(locale) ?? fallbackLocale
-  const isFullyTranslated = (fullyTranslatedLocales as readonly string[]).includes(resolved)
 
   // Build hreflang alternates for indexed locales only.
   const languages: Record<string, string> = {}
-  for (const code of fullyTranslatedLocales) {
+  for (const code of INDEXED_LOCALES) {
     languages[code] = `/${code}`
   }
-  languages["x-default"] = `/${fallbackLocale}`
+  languages["x-default"] = "/pl"
 
   return {
     metadataBase: new URL(SITE_URL),
     title: dict.meta.title,
     description: dict.meta.description,
-    ...(isFullyTranslated ? {} : { robots: { index: false, follow: true } }),
+    ...(isIndexedLocale(resolved) ? {} : { robots: noindexRobots() }),
     alternates: {
       canonical: `/${locale}`,
       languages,

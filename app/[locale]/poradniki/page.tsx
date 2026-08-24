@@ -1,10 +1,12 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { ContentPageShell } from "@/components/content-page-shell"
-import { getAllGuides, getGuidesHubMeta } from "@/lib/i18n/guides"
+import { getGuide, getGuidesHubMeta } from "@/lib/i18n/guides"
 import { localeHref } from "@/lib/i18n/href"
 import { JsonLd } from "@/components/json-ld"
 import { itemListSchema } from "@/lib/seo/structured-data"
+import { buildPageMetadata } from "@/lib/seo/metadata"
+import { INDEXABLE_GUIDE_SLUGS, isIndexedLocale } from "@/lib/seo/publisher-index"
 
 export async function generateMetadata({
   params,
@@ -13,11 +15,13 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params
   const hub = getGuidesHubMeta(locale)
-  return {
+  return buildPageMetadata({
+    locale,
+    path: "/poradniki",
     title: `${hub.title} — Toolando.tech`,
     description: hub.intro,
-    alternates: { canonical: `/${locale}/poradniki` },
-  }
+    index: isIndexedLocale(locale),
+  })
 }
 
 export default async function GuidesPage({
@@ -27,7 +31,9 @@ export default async function GuidesPage({
 }) {
   const { locale } = await params
   const hub = getGuidesHubMeta(locale)
-  const articles = getAllGuides(locale)
+  const articles = [...INDEXABLE_GUIDE_SLUGS]
+    .map((slug) => getGuide(locale, slug))
+    .filter((article): article is NonNullable<typeof article> => Boolean(article))
 
   return (
     <>
