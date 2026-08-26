@@ -6,7 +6,9 @@
 import fs from "node:fs"
 import path from "node:path"
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://toolando.tech"
+const SITE_URL = (
+  process.env.NEXT_PUBLIC_SITE_URL || "https://www.toolando.tech"
+).replace(/\/$/, "")
 const KEY = process.env.INDEXNOW_KEY || "toolando-indexnow-2026"
 const BATCH = 100
 

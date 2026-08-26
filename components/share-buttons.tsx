@@ -18,7 +18,7 @@ export function ShareButtons({ title, path, className }: ShareButtonsProps) {
   const siteUrl =
     typeof window !== "undefined"
       ? window.location.origin
-      : process.env.NEXT_PUBLIC_SITE_URL || "https://toolando.tech"
+      : process.env.NEXT_PUBLIC_SITE_URL || "https://www.toolando.tech"
 
   const url = `${siteUrl}/${locale}${path.startsWith("/") ? path : `/${path}`}`
   const encodedUrl = encodeURIComponent(url)

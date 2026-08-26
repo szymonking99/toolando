@@ -8,8 +8,13 @@ import { supportedLocales } from "@/lib/i18n/config"
  * Every builder returns a plain object that is serialized by <JsonLd />.
  */
 
-export const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://toolando.tech"
+/**
+ * Must match the live host. Cloudflare currently serves users on www
+ * (apex → www 308). Sitemap/canonicals on the apex host split the index.
+ */
+export const SITE_URL = (
+  process.env.NEXT_PUBLIC_SITE_URL || "https://www.toolando.tech"
+).replace(/\/$/, "")
 
 const SITE_NAME = "Toolando.tech"
 

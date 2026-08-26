@@ -4,7 +4,9 @@ import { getCurrentUser } from "@/lib/user"
 
 export const runtime = "nodejs"
 
-const SITE_URL = "https://toolando.tech"
+const SITE_URL = (
+  process.env.NEXT_PUBLIC_SITE_URL || "https://www.toolando.tech"
+).replace(/\/$/, "")
 
 export async function POST() {
   try {

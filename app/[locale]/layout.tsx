@@ -27,7 +27,9 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 })
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://toolando.tech"
+const SITE_URL = (
+  process.env.NEXT_PUBLIC_SITE_URL || "https://www.toolando.tech"
+).replace(/\/$/, "")
 const ADSENSE_CLIENT =
   process.env.NEXT_PUBLIC_ADSENSE_CLIENT ?? "ca-pub-1137300798632743"
 

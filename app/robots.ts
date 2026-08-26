@@ -1,7 +1,9 @@
 import type { MetadataRoute } from "next"
 import { isDownloaderEnabled } from "@/lib/seo/ads-policy"
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://toolando.tech"
+const SITE_URL = (
+  process.env.NEXT_PUBLIC_SITE_URL || "https://www.toolando.tech"
+).replace(/\/$/, "")
 
 /**
  * Thin programmatic sections stay off Googlebot and the AdSense crawler.
