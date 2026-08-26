@@ -9,7 +9,7 @@ import { EzoicHeadScripts } from "@/components/ezoic-head-scripts"
 import { EzoicRouteHandler } from "@/components/ezoic-route-handler"
 import { PwaRegister } from "@/components/pwa-register"
 import { JsonLd } from "@/components/json-ld"
-import { organizationSchema, websiteSchema } from "@/lib/seo/structured-data"
+import { organizationSchema, websiteSchema, SITE_URL } from "@/lib/seo/structured-data"
 import { getDictionary } from "@/lib/i18n/dictionaries"
 import {
   supportedLocales,
@@ -27,9 +27,6 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 })
 
-const SITE_URL = (
-  process.env.NEXT_PUBLIC_SITE_URL || "https://www.toolando.tech"
-).replace(/\/$/, "")
 const ADSENSE_CLIENT =
   process.env.NEXT_PUBLIC_ADSENSE_CLIENT ?? "ca-pub-1137300798632743"
 

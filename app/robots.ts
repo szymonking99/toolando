@@ -1,9 +1,6 @@
 import type { MetadataRoute } from "next"
 import { isDownloaderEnabled } from "@/lib/seo/ads-policy"
-
-const SITE_URL = (
-  process.env.NEXT_PUBLIC_SITE_URL || "https://www.toolando.tech"
-).replace(/\/$/, "")
+import { SITE_URL } from "@/lib/seo/structured-data"
 
 /**
  * Thin programmatic sections stay off Googlebot and the AdSense crawler.
@@ -38,7 +35,15 @@ export default function robots(): MetadataRoute.Robots {
         disallow,
       },
       {
-        userAgent: ["AhrefsBot", "SemrushBot", "MJ12bot", "DotBot", "BLEXBot", "PetalBot", "Bytespider"],
+        userAgent: [
+          "AhrefsBot",
+          "SemrushBot",
+          "MJ12bot",
+          "DotBot",
+          "BLEXBot",
+          "PetalBot",
+          "Bytespider",
+        ],
         disallow: "/",
       },
       {

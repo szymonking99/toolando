@@ -6,9 +6,18 @@
 import fs from "node:fs"
 import path from "node:path"
 
-const SITE_URL = (
-  process.env.NEXT_PUBLIC_SITE_URL || "https://www.toolando.tech"
-).replace(/\/$/, "")
+const SITE_URL = (() => {
+  const raw = (
+    process.env.NEXT_PUBLIC_SITE_URL || "https://www.toolando.tech"
+  ).replace(/\/$/, "")
+  try {
+    const url = new URL(raw)
+    if (url.hostname === "toolando.tech") url.hostname = "www.toolando.tech"
+    return url.toString().replace(/\/$/, "")
+  } catch {
+    return "https://www.toolando.tech"
+  }
+})()
 const KEY = process.env.INDEXNOW_KEY || "toolando-indexnow-2026"
 const BATCH = 100
 

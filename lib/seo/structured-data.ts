@@ -9,12 +9,26 @@ import { supportedLocales } from "@/lib/i18n/config"
  */
 
 /**
- * Must match the live host. Cloudflare currently serves users on www
- * (apex → www 308). Sitemap/canonicals on the apex host split the index.
+ * Live host is www (Cloudflare apex → www 308). If Vercel still has
+ * NEXT_PUBLIC_SITE_URL=https://toolando.tech, rewrite to www so sitemap /
+ * canonicals match what users and Googlebot actually fetch.
  */
-export const SITE_URL = (
-  process.env.NEXT_PUBLIC_SITE_URL || "https://www.toolando.tech"
-).replace(/\/$/, "")
+function resolveSiteUrl(): string {
+  const raw = (
+    process.env.NEXT_PUBLIC_SITE_URL || "https://www.toolando.tech"
+  ).replace(/\/$/, "")
+  try {
+    const url = new URL(raw)
+    if (url.hostname === "toolando.tech") {
+      url.hostname = "www.toolando.tech"
+    }
+    return url.toString().replace(/\/$/, "")
+  } catch {
+    return "https://www.toolando.tech"
+  }
+}
+
+export const SITE_URL = resolveSiteUrl()
 
 const SITE_NAME = "Toolando.tech"
 

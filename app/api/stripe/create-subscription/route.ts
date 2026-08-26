@@ -5,12 +5,9 @@ import { getCurrentUser } from "@/lib/user"
 import { db } from "@/lib/db"
 import { user as userTable } from "@/lib/db/schema"
 import { PREMIUM_PLAN } from "@/lib/premium"
+import { SITE_URL } from "@/lib/seo/structured-data"
 
 export const runtime = "nodejs"
-
-const SITE_URL = (
-  process.env.NEXT_PUBLIC_SITE_URL || "https://www.toolando.tech"
-).replace(/\/$/, "")
 
 export async function POST(request: NextRequest) {
   try {

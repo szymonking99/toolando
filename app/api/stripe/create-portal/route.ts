@@ -1,12 +1,9 @@
 import { NextResponse } from "next/server"
 import { getStripe } from "@/lib/stripe"
 import { getCurrentUser } from "@/lib/user"
+import { SITE_URL } from "@/lib/seo/structured-data"
 
 export const runtime = "nodejs"
-
-const SITE_URL = (
-  process.env.NEXT_PUBLIC_SITE_URL || "https://www.toolando.tech"
-).replace(/\/$/, "")
 
 export async function POST() {
   try {
