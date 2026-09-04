@@ -12,6 +12,7 @@ import { tools } from "@/lib/tools"
  * Small, original surface for crawlers. Format/glossary/comparison templates
  * and extra locales stay out — they were the AdSense “low value content” signal.
  */
+/** Trust + editorial only — no thin support/FAQ filler in the crawler list. */
 const STATIC_PATHS: {
   path: string
   priority: number
@@ -19,14 +20,12 @@ const STATIC_PATHS: {
 }[] = [
   { path: "", priority: 1, changeFrequency: "weekly" },
   { path: "/poradniki", priority: 0.9, changeFrequency: "weekly" },
-  { path: "/o-mnie", priority: 0.8, changeFrequency: "monthly" },
-  { path: "/redakcja", priority: 0.8, changeFrequency: "monthly" },
-  { path: "/jak-to-dziala", priority: 0.7, changeFrequency: "monthly" },
-  { path: "/faq", priority: 0.6, changeFrequency: "monthly" },
-  { path: "/kontakt", priority: 0.5, changeFrequency: "monthly" },
-  { path: "/wsparcie", priority: 0.4, changeFrequency: "monthly" },
+  { path: "/o-mnie", priority: 0.85, changeFrequency: "monthly" },
+  { path: "/redakcja", priority: 0.85, changeFrequency: "monthly" },
+  { path: "/jak-to-dziala", priority: 0.75, changeFrequency: "monthly" },
+  { path: "/kontakt", priority: 0.6, changeFrequency: "monthly" },
+  { path: "/polityka-prywatnosci", priority: 0.4, changeFrequency: "yearly" },
   { path: "/regulamin", priority: 0.3, changeFrequency: "yearly" },
-  { path: "/polityka-prywatnosci", priority: 0.3, changeFrequency: "yearly" },
 ]
 
 function languagesFor(path: string): Record<string, string> {

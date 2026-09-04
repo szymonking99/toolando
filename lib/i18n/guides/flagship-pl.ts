@@ -2,7 +2,7 @@ import type { GuideArticle } from "./types"
 import type { GuideSlug } from "./slugs"
 
 const AUTHOR = "Szymon"
-const UPDATED = "2026-08-24"
+const UPDATED = "2026-09-04"
 
 /**
  * Long-form originals for AdSense / Search Quality. These override the short
@@ -70,6 +70,23 @@ export const flagshipPl: Record<
           "Jeśli nie wiesz, czy format jest stratny, załóż że jest — i nie rób drugiej konwersji na tym samym materiale.",
         ],
       },
+      {
+        title: "Jak sprawdzam to na własnych plikach",
+        paragraphs: [
+          "Trzymam mały zestaw testowy: podcast 128 kbps, zdjęcie HEIC z iPhone’a, PNG z logo na przezroczystym tle, skan umowy w PDF i krótki MP4 z OBS. Na każdym robię konwersję „w górę” i „w bok”, potem porównuję w Audacity, Explorerze albo zwykłym podglądzie.",
+          "Najczęstszy wniosek z tych testów: ludzie konwertują, bo boją się, że odbiorca „nie otworzy”. W praktyce Gmail, Chrome i Windows 11 otwierają więcej formatów niż się wydaje. Problem zwykle nie jest w formacie, tylko w limicie rozmiaru albo w starym programie po drugiej stronie.",
+          "Dlatego w poradnikach Toolando najpierw tłumaczę, kiedy nie konwertować. Konwerter zostawiam na sytuacje, w których oryginał realnie blokuje workflow — nie na nawyk „na wszelki wypadek”.",
+        ],
+      },
+      {
+        title: "Krótka checklista zamiast automatycznej konwersji",
+        paragraphs: [
+          "1) Jaki program ma otworzyć plik po drugiej stronie? Jeśli nie wiesz — zapytaj, zanim przekodujesz.",
+          "2) Czy problemem jest rozmiar, nie format? Wtedy kompresja JPG/WebP albo mniejszy bitrate MP3 zwykle wystarcza.",
+          "3) Czy to archiwum, czy kopia do wysyłki? Archiwum trzymaj w oryginale (FLAC, HEIC, SVG, PDF z podpisem).",
+          "4) Czy druga konwersja będzie stratna? Jeśli tak — zatrzymaj się. Jedna strata jest do przeżycia, łańcuch konwersji psuje materiał bezpowrotnie.",
+        ],
+      },
     ],
   },
   "online-file-security": {
@@ -107,6 +124,22 @@ export const flagshipPl: Record<
         paragraphs: [
           "Dokument z PESEL, skan dowodu, nagranie ze spotkania objęte tajemnicą firmy — jeśli polityka pracodawcy zabrania narzędzi SaaS, użyj programu offline (LibreOffice, FFmpeg lokalnie).",
           "Jeśli musisz konwertować coś poufnego online, sprawdź czy narzędzie działa w przeglądarce (pasek adresu, brak paska postępu serwera). W Toolando przy kalkulatorach i części narzędzi utility tak właśnie jest.",
+        ],
+      },
+      {
+        title: "Jak weryfikuję to jako autor serwisu",
+        paragraphs: [
+          "Nie publikuję tu marketingowych obietnic „zero logów na zawsze” bez kontekstu. Serwer ma logi techniczne (błąd FFmpeg, kod statusu), żeby naprawiać awarie — ale nie buduję z nich biblioteki Twoich CV.",
+          "Gdy dodaję nowe narzędzie, najpierw pytam: czy da się policzyć w przeglądarce? Jeśli tak (QR, JWT, procenty kredytu), nie ma sensu pchać bajtów na VPS. Upload zostawiam tylko tam, gdzie bez silnika po stronie serwera wynik byłby bezużyteczny.",
+          "Polityka prywatności i regulamin są po to, żebyś mógł to sprawdzić bez zgadywania. Jeśli coś się zmieni w ścieżce pliku (np. dłuższe przechowywanie pod premium), napiszę to wprost — nie „w aktualizacji cookies”.",
+        ],
+      },
+      {
+        title: "Praktyczna hierarchia ryzyka",
+        paragraphs: [
+          "Najbezpieczniej: narzędzie w 100% lokalne w przeglądarce — plik nie opuszcza urządzenia.",
+          "Środek: krótki upload HTTPS z kasowaniem po jobie — standard dla FFmpeg/LibreOffice w Toolando.",
+          "Najgorzej (i tego tu nie ma): wrzucenie pliku do cudzego chatbota „żeby streścił umowę” albo do downloadera linków z platform VOD. Świadomie tego nie buduję, bo miesza prywatność z cudzą treścią.",
         ],
       },
     ],
