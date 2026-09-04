@@ -12,6 +12,12 @@ const FEATURED_GUIDE_SLUGS: GuideSlug[] = [
   "docx-pdf-workflow",
   "lossy-vs-lossless",
   "extract-audio-from-video",
+  "mp3-vs-wav",
+  "compress-images-without-quality-loss",
+  "remove-exif-privacy-guide",
+  "prepare-images-for-web",
+  "flac-music-archive-guide",
+  "toolando-editorial-standards",
 ]
 
 export async function FeaturedGuidesSection({

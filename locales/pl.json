@@ -141,13 +141,13 @@
     "more": "Więcej"
   },
   "hero": {
-    "badge": "Poradniki, formaty i konwertery od jednej osoby",
-    "titleA": "Twoje narzędzia online w",
-    "titleHighlight": "jednym miejscu",
-    "subtitle": "Poradniki mówią, kiedy konwertować — i kiedy lepiej zostawić oryginał. Narzędzia działają w przeglądarce, bez instalacji.",
+    "badge": "Poradniki o plikach — z testów, nie z szablonów",
+    "titleA": "Wiedza o formatach i",
+    "titleHighlight": "bezpiecznej konwersji",
+    "subtitle": "Piszę, kiedy warto konwertować plik — i kiedy lepiej zostawić oryginał. Narzędzia są dostępne, ale sednem witryny są oryginalne poradniki po polsku.",
     "browse": "Przeglądaj narzędzia",
-    "learnMore": "Dowiedz się więcej",
-    "convertCta": "Konwertuj plik teraz"
+    "learnMore": "Czytaj poradniki",
+    "convertCta": "Otwórz plik"
   },
   "search": {
     "placeholder": "Szukaj narzędzia (np. mp3 wav, waluty, qr)…",
@@ -288,7 +288,7 @@
   },
   "featuredGuides": {
     "title": "Polecane poradniki",
-    "subtitle": "Praktyczne artykuły o formatach plików, bezpieczeństwie i konwersji — pisane na podstawie realnych testów, nie szablonów SEO.",
+    "subtitle": "Praktyczne artykuły o formatach, prywatności i konwersji — z testów na własnych plikach, bez farmy szablonów SEO.",
     "readArticle": "Czytaj poradnik",
     "allGuides": "Wszystkie poradniki"
   },
@@ -666,7 +666,7 @@
     "editorial": {
       "eyebrow": "Redakcja",
       "title": "Standardy redakcyjne Toolando.tech",
-      "intro": "Toolando.tech to nie tylko konwertery — to też poradniki, encyklopedia formatów i porównania. Poniżej opisuję, jak powstają treści, skąd biorę informacje i kiedy je aktualizuję.",
+      "intro": "Toolando.tech to poradniki o formatach plików i bezpiecznej konwersji — plus narzędzia, gdy już wiesz, że konwersja ma sens. Poniżej opisuję, jak powstają treści, skąd biorę informacje i kiedy je aktualizuję.",
       "whoTitle": "Kto tworzy treści",
       "whoP1": "Wszystkie poradniki, opisy formatów i artykuły porównawcze piszę sam — Szymon, twórca Toolando.tech. Nie korzystam z farm treści ani gotowych opisów od AI bez weryfikacji.",
       "whoP2": "Każdy artykuł opiera się na testach konwersji na własnych plikach. Jeśli coś nie działa tak jak opisuję — poprawiam tekst i narzędzie.",

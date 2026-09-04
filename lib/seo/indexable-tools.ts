@@ -4,34 +4,17 @@ import { getSpecialTool } from "@/lib/special-tools"
 import { getUtilityTool } from "@/lib/utility-tools"
 
 /**
- * Pages Google may index. The live catalog has 250+ converter URLs plus
- * calculators — indexing all of them looks like doorway / template pages to
- * AdSense and Search Quality.
+ * Pages Google may index. The live catalog has 250+ converter URLs —
+ * indexing even a shortlist still reads as doorway / template pages to
+ * AdSense (“low value content”).
  *
- * Only flagship conversions (backed by unique guides) and a few special tools
- * with original notes stay indexable. Everything else remains usable with noindex.
+ * During publisher review: index ZERO tool URLs. Tools stay fully usable
+ * with noindex; crawlers are pointed at long-form PL guides instead.
+ * Re-enable a tiny allowlist only after AdSense approval.
  */
-export const INDEXABLE_TOOL_IDS = new Set([
-  "mp3-to-wav",
-  "wav-to-mp3",
-  "flac-to-mp3",
-  "mp4-to-mp3",
-  "mp4-to-webm",
-  "png-to-jpg",
-  "jpg-to-png",
-  "jpg-to-webp",
-  "heic-to-jpg",
-  "pdf-to-jpg",
-  "pdf-to-docx",
-  "docx-to-pdf",
-  "svg-to-png",
-])
+export const INDEXABLE_TOOL_IDS = new Set<string>([])
 
-export const INDEXABLE_SPECIAL_IDS = new Set([
-  "kompresor-obrazow",
-  "laczenie-pdf",
-  "usun-exif",
-])
+export const INDEXABLE_SPECIAL_IDS = new Set<string>([])
 
 export function isIndexableTool(id: string): boolean {
   if (getAiTool(id) || getUtilityTool(id) || getSpecialTool(id)) return false

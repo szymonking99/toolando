@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next"
+import { supportedLocales } from "@/lib/i18n/config"
 import { isDownloaderEnabled } from "@/lib/seo/ads-policy"
 import { SITE_URL } from "@/lib/seo/structured-data"
 
@@ -19,10 +20,19 @@ const THIN_PATHS = [
   "/*/category",
   "/*/category/",
   "/*/category/*",
+  // Tool grids look like doorway farms to Mediapartners-Google / AdSense review.
+  "/*/tools",
+  "/*/tools/",
+  "/*/tools/*",
 ]
 
+/** Non-PL locales: translations / stubs must not compete with Polish originals. */
+const NON_PL_LOCALE_PATHS = supportedLocales
+  .filter((locale) => locale !== "pl")
+  .flatMap((locale) => [`/${locale}`, `/${locale}/`, `/${locale}/*`])
+
 export default function robots(): MetadataRoute.Robots {
-  const disallow: string[] = [...THIN_PATHS]
+  const disallow: string[] = [...THIN_PATHS, ...NON_PL_LOCALE_PATHS]
   if (!isDownloaderEnabled()) {
     disallow.push("/*/downloader", "/*/downloader/*")
   }

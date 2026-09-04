@@ -41,6 +41,10 @@ export function LanguageSwitcher({ className = "" }: { className?: string }) {
     setOpen(false)
   }
 
+  if (switcherLocales.length <= 1) {
+    return null
+  }
+
   return (
     <div ref={ref} className={`relative ${className}`}>
       <button

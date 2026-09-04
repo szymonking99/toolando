@@ -104,10 +104,12 @@ export const fullyTranslatedLocales: SupportedLocale[] = [
 ]
 
 /**
- * Languages shown in the UI switcher. Placeholder locales (English fallback
- * labelled as Français / 日本語 / …) look like a doorway farm to reviewers.
+ * Languages shown in the UI switcher.
+ * AdSense “low value” reviews treat multi-locale stub copies as a doorway farm.
+ * Ship Polish only in the switcher until the publisher network is approved;
+ * other locales remain reachable by direct URL but are noindex + robots-disallow.
  */
-export const switcherLocales: SupportedLocale[] = fullyTranslatedLocales
+export const switcherLocales: SupportedLocale[] = [defaultLocale]
 
 /** Right-to-left locales — used to set the <html dir> attribute. */
 export const rtlLocales = new Set<string>(["ar", "he", "fa", "ur"])

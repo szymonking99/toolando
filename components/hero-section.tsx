@@ -53,17 +53,17 @@ export function HeroSection() {
 
         <div className="mt-8 flex w-full flex-col items-center justify-center gap-3 sm:w-auto sm:flex-row">
           <Link
-            href={href("/otworz")}
+            href={href("/poradniki")}
             className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-6 py-3 text-base font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition-opacity hover:opacity-90 sm:w-auto"
+          >
+            {t.hero.learnMore}
+          </Link>
+          <Link
+            href={href("/otworz")}
+            className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/[0.04] px-6 py-3 text-base font-medium transition-colors hover:border-primary/40 hover:bg-white/[0.08] sm:w-auto"
           >
             <Upload className="size-5" aria-hidden="true" />
             {t.hero.convertCta}
-          </Link>
-          <Link
-            href={href("/tools")}
-            className="inline-flex w-full items-center justify-center rounded-xl border border-white/10 bg-white/[0.04] px-6 py-3 text-base font-medium transition-colors hover:border-primary/40 hover:bg-white/[0.08] sm:w-auto"
-          >
-            {t.hero.browse}
           </Link>
         </div>
       </div>
