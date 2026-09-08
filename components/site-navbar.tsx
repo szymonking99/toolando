@@ -19,20 +19,21 @@ export function SiteNavbar() {
   const moreRef = useRef<HTMLDivElement>(null)
   const { t, href } = useI18n()
 
-  // Guides + about first — AdSense reviewers follow primary nav.
   const coreLinks: NavLink[] = [
+    { label: t.nav.converters, href: href("/tools#konwertery") },
+    { label: t.nav.calculators, href: href("/tools#kalkulatory") },
+    { label: t.nav.aiTools, href: href("/#ai") },
     { label: t.nav.guides, href: href("/poradniki") },
-    { label: t.nav.aboutMe, href: href("/o-mnie") },
-    { label: t.nav.contact, href: href("/kontakt") },
-    { label: t.nav.converters, href: href("/tools") },
   ]
 
   const extendedLinks: NavLink[] = [
     { label: t.nav.premium, href: href("/premium") },
+    { label: t.nav.aboutMe, href: href("/o-mnie") },
   ]
 
   const moreLinks: NavLink[] = [
     { label: t.nav.faq, href: href("/faq") },
+    { label: t.nav.contact, href: href("/kontakt") },
   ]
 
   const allLinks = [...coreLinks, ...extendedLinks, ...moreLinks]

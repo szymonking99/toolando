@@ -2,30 +2,26 @@ import type { MetadataRoute } from "next"
 import { INDEXABLE_GUIDE_SLUGS, INDEXED_LOCALES } from "@/lib/seo/publisher-index"
 import { languageAlternates } from "@/lib/seo/alternates"
 import { SITE_URL } from "@/lib/seo/structured-data"
-import {
-  INDEXABLE_SPECIAL_IDS,
-  isIndexableTool,
-} from "@/lib/seo/indexable-tools"
-import { tools } from "@/lib/tools"
+import { listIndexableToolIds } from "@/lib/seo/indexable-tools"
 
 /**
- * Small, original surface for crawlers. Format/glossary/comparison templates
- * and extra locales stay out — they were the AdSense “low value content” signal.
+ * Product-first sitemap: PL converters + specials + flagship guides.
+ * Format/glossary/comparison templates stay out (robots + noindex).
  */
-/** Trust + editorial only — no thin support/FAQ filler in the crawler list. */
 const STATIC_PATHS: {
   path: string
   priority: number
   changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"]
 }[] = [
   { path: "", priority: 1, changeFrequency: "weekly" },
-  { path: "/poradniki", priority: 0.9, changeFrequency: "weekly" },
-  { path: "/o-mnie", priority: 0.85, changeFrequency: "monthly" },
-  { path: "/redakcja", priority: 0.85, changeFrequency: "monthly" },
-  { path: "/jak-to-dziala", priority: 0.75, changeFrequency: "monthly" },
-  { path: "/kontakt", priority: 0.6, changeFrequency: "monthly" },
-  { path: "/polityka-prywatnosci", priority: 0.4, changeFrequency: "yearly" },
+  { path: "/tools", priority: 0.95, changeFrequency: "weekly" },
+  { path: "/poradniki", priority: 0.7, changeFrequency: "weekly" },
+  { path: "/o-mnie", priority: 0.6, changeFrequency: "monthly" },
+  { path: "/jak-to-dziala", priority: 0.6, changeFrequency: "monthly" },
+  { path: "/kontakt", priority: 0.5, changeFrequency: "monthly" },
+  { path: "/faq", priority: 0.4, changeFrequency: "monthly" },
   { path: "/regulamin", priority: 0.3, changeFrequency: "yearly" },
+  { path: "/polityka-prywatnosci", priority: 0.3, changeFrequency: "yearly" },
 ]
 
 function languagesFor(path: string): Record<string, string> {
@@ -33,11 +29,7 @@ function languagesFor(path: string): Record<string, string> {
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const toolIds = [
-    ...tools.filter((t) => isIndexableTool(t.id)).map((t) => t.id),
-    ...INDEXABLE_SPECIAL_IDS,
-  ]
-
+  const toolIds = listIndexableToolIds()
   const entries: MetadataRoute.Sitemap = []
   const now = new Date()
 
@@ -58,7 +50,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         url: `${SITE_URL}/${locale}${path}`,
         lastModified: now,
         changeFrequency: "monthly",
-        priority: 0.55,
+        priority: 0.7,
         alternates: { languages: languagesFor(path) },
       })
     }
@@ -69,7 +61,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         url: `${SITE_URL}/${locale}${path}`,
         lastModified: now,
         changeFrequency: "monthly",
-        priority: 0.75,
+        priority: 0.55,
         alternates: { languages: languagesFor(path) },
       })
     }

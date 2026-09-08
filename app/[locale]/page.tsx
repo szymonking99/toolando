@@ -1,19 +1,20 @@
 import { SiteNavbar } from "@/components/site-navbar"
 import { HeroSection } from "@/components/hero-section"
+import { UniversalOpenerSection } from "@/components/universal-opener-section"
+import { AiToolsSection } from "@/components/ai-tools-section"
+import { FeaturesSection } from "@/components/features-section"
 import { WhySection } from "@/components/why-section"
 import { EditorialTrustSection } from "@/components/editorial-trust-section"
 import { PublisherNotesSection } from "@/components/publisher-notes-section"
 import { FeaturedGuidesSection } from "@/components/featured-guides-section"
 import { SiteFooter } from "@/components/site-footer"
 import { AdSlot } from "@/components/ad-slot"
+import { RecentToolsSection } from "@/components/recent-tools-section"
 import { NewsletterSignup } from "@/components/newsletter-signup"
+import { ToolRequestBanner } from "@/components/tool-request-banner"
 import { OnboardingTour } from "@/components/onboarding-tour"
 import { ExitIntentModal } from "@/components/exit-intent-modal"
 
-/**
- * Homepage for AdSense / Search Quality: editorial first.
- * Tool grids, AI strip and opener farm live under /tools (noindex), not here.
- */
 export default async function Page({
   params,
 }: {
@@ -28,15 +29,20 @@ export default async function Page({
       <ExitIntentModal />
       <main>
         <HeroSection />
-        <EditorialTrustSection />
-        <PublisherNotesSection locale={locale} />
-        <FeaturedGuidesSection locale={locale} />
-        <WhySection />
+        <RecentToolsSection />
+        <UniversalOpenerSection />
+        <FeaturesSection />
+        <AiToolsSection />
         <AdSlot
           placement="home"
           slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT_HOME}
         />
+        <WhySection />
+        <EditorialTrustSection />
+        <PublisherNotesSection locale={locale} />
+        <FeaturedGuidesSection locale={locale} />
         <NewsletterSignup />
+        <ToolRequestBanner />
       </main>
       <SiteFooter />
     </div>
