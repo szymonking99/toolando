@@ -21,6 +21,7 @@ const categoryLabels: Record<string, Record<UtilityCategory, string>> = {
     dev: "Dla developerów",
     media: "Media",
     network: "Sieć",
+    privacy: "Prywatność",
   },
   en: {
     finance: "Finance",
@@ -30,6 +31,7 @@ const categoryLabels: Record<string, Record<UtilityCategory, string>> = {
     dev: "Developer",
     media: "Media",
     network: "Network",
+    privacy: "Privacy",
   },
   de: {
     finance: "Finanzen",
@@ -39,6 +41,7 @@ const categoryLabels: Record<string, Record<UtilityCategory, string>> = {
     dev: "Entwickler",
     media: "Medien",
     network: "Netzwerk",
+    privacy: "Privatsphäre",
   },
   es: {
     finance: "Finanzas",
@@ -48,6 +51,7 @@ const categoryLabels: Record<string, Record<UtilityCategory, string>> = {
     dev: "Desarrolladores",
     media: "Medios",
     network: "Red",
+    privacy: "Privacidad",
   },
   uk: {
     finance: "Фінанси",
@@ -57,6 +61,7 @@ const categoryLabels: Record<string, Record<UtilityCategory, string>> = {
     dev: "Для розробників",
     media: "Медіа",
     network: "Мережа",
+    privacy: "Конфіденційність",
   },
   ...extraCategoryLabels,
 }
@@ -442,6 +447,91 @@ const pl: UtilityMetaMap = {
       { q: "Ile danych pobiera test?", a: "Około 2 MB — nie obciąży znacząco Twojego pakietu danych." },
     ],
   },
+  "inspektor-prywatnosci": {
+    category: "Prywatność",
+    name: "Co ten plik ujawnia o mnie?",
+    description:
+      "Sprawdź metadane zdjęcia lub PDF lokalnie w przeglądarce: GPS, aparat, autora, daty. Plik nie opuszcza Twojego urządzenia.",
+    steps: [
+      "Wybierz plik JPG, PNG lub PDF.",
+      "Przejrzyj znalezione metadane i ostrzeżenia.",
+      "W razie potrzeby usuń EXIF jednym kliknięciem.",
+    ],
+    faq: [
+      {
+        q: "Czy plik jest wysyłany na serwer?",
+        a: "Nie — analiza działa w całości w przeglądarce.",
+      },
+    ],
+  },
+  "kalkulator-procentow": {
+    category: "Finanse",
+    name: "Kalkulator procentów",
+    description: "Policz procent od kwoty, zmianę procentową albo ile procent stanowi jedna wartość względem drugiej.",
+    steps: ["Wybierz tryb.", "Wpisz wartości.", "Odczytaj wynik."],
+    faq: [],
+  },
+  "kalkulator-roi": {
+    category: "Finanse",
+    name: "Kalkulator ROI",
+    description: "Oblicz zwrot z inwestycji (ROI) na podstawie kwoty zainwestowanej i zwróconej.",
+    steps: ["Wpisz kwotę zainwestowaną.", "Wpisz kwotę zwróconą.", "Zobacz zysk i ROI %."],
+    faq: [],
+  },
+  "kalkulator-aspect-ratio": {
+    category: "Media",
+    name: "Kalkulator proporcji (aspect ratio)",
+    description: "Policz proporcje obrazu (np. 16:9) i przeskaluj wymiary przy zachowaniu ratio.",
+    steps: ["Wpisz szerokość i wysokość.", "Odczytaj uproszczone ratio.", "Opcjonalnie przeskaluj do nowej szerokości."],
+    faq: [],
+  },
+  "kalkulator-rozmiaru-pliku": {
+    category: "Media",
+    name: "Kalkulator rozmiaru pliku / czasu transferu",
+    description: "Oszacuj rozmiar pliku z bitrate'u albo czas uploadu/downloadu przy danej prędkości łącza.",
+    steps: ["Wybierz tryb.", "Wpisz bitrate lub rozmiar i prędkość.", "Odczytaj wynik."],
+    faq: [],
+  },
+  "url-encoder": {
+    category: "Dla developerów",
+    name: "URL encoder / decoder",
+    description: "Zakoduj lub odkoduj ciąg URL (percent-encoding) lokalnie w przeglądarce.",
+    steps: ["Wybierz encode lub decode.", "Wklej tekst.", "Skopiuj wynik."],
+    faq: [],
+  },
+  "csv-json": {
+    category: "Dla developerów",
+    name: "CSV ↔ JSON",
+    description: "Konwertuj tabele CSV do JSON i z powrotem — lokalnie, bez wysyłania danych.",
+    steps: ["Wybierz kierunek.", "Wklej dane.", "Skopiuj wynik."],
+    faq: [],
+  },
+  "html-markdown": {
+    category: "Tekst",
+    name: "HTML ↔ Markdown",
+    description: "Konwertuj Markdown do HTML (z podglądem) lub uproszczony HTML do Markdown.",
+    steps: ["Wybierz kierunek.", "Wklej treść.", "Skopiuj wynik."],
+    faq: [],
+  },
+  "minifikator": {
+    category: "Dla developerów",
+    name: "Minifikator CSS / JS / HTML",
+    description: "Szybko zmniejsz rozmiar CSS, JavaScript lub HTML przed wdrożeniem.",
+    steps: ["Wybierz typ.", "Wklej kod.", "Skopiuj zminifikowany wynik."],
+    faq: [
+      {
+        q: "Czy to pełny kompilator?",
+        a: "To lekki minifikator przeglądarkowy — do produkcji rozważ narzędzia typu esbuild/terser.",
+      },
+    ],
+  },
+  "generator-favicon": {
+    category: "Dla developerów",
+    name: "Generator favicon",
+    description: "Wygeneruj zestaw PNG favicon (16–512 px) z jednego obrazu i pobierz ZIP — lokalnie w przeglądarce.",
+    steps: ["Wybierz obraz źródłowy.", "Poczekaj na wygenerowanie.", "Pobierz paczkę ZIP."],
+    faq: [],
+  },
 }
 
 const en: UtilityMetaMap = {
@@ -824,6 +914,91 @@ const en: UtilityMetaMap = {
       { q: "Is this accurate?", a: "It measures speed to our server (Vercel Edge). Results may differ from other speed test services." },
       { q: "How much data does it use?", a: "About 2 MB — won't significantly impact your data plan." },
     ],
+  },
+  "inspektor-prywatnosci": {
+    category: "Privacy",
+    name: "What does this file reveal about me?",
+    description:
+      "Inspect photo or PDF metadata locally in your browser: GPS, camera, author, dates. The file never leaves your device.",
+    steps: [
+      "Choose a JPG, PNG or PDF file.",
+      "Review findings and warnings.",
+      "Strip EXIF in one click when needed.",
+    ],
+    faq: [
+      {
+        q: "Is the file uploaded?",
+        a: "No — inspection runs entirely in your browser.",
+      },
+    ],
+  },
+  "kalkulator-procentow": {
+    category: "Finance",
+    name: "Percentage calculator",
+    description: "Calculate a percentage of an amount, percent change, or what percent one value is of another.",
+    steps: ["Pick a mode.", "Enter values.", "Read the result."],
+    faq: [],
+  },
+  "kalkulator-roi": {
+    category: "Finance",
+    name: "ROI calculator",
+    description: "Compute return on investment from amount invested and amount returned.",
+    steps: ["Enter invested amount.", "Enter returned amount.", "See profit and ROI %."],
+    faq: [],
+  },
+  "kalkulator-aspect-ratio": {
+    category: "Media",
+    name: "Aspect ratio calculator",
+    description: "Simplify image ratios (e.g. 16:9) and scale dimensions while keeping the ratio.",
+    steps: ["Enter width and height.", "Read the simplified ratio.", "Optionally scale to a new width."],
+    faq: [],
+  },
+  "kalkulator-rozmiaru-pliku": {
+    category: "Media",
+    name: "File size / transfer time calculator",
+    description: "Estimate file size from bitrate, or upload/download time at a given connection speed.",
+    steps: ["Choose a mode.", "Enter bitrate or size and speed.", "Read the estimate."],
+    faq: [],
+  },
+  "url-encoder": {
+    category: "Developer",
+    name: "URL encoder / decoder",
+    description: "Percent-encode or decode URL strings locally in your browser.",
+    steps: ["Choose encode or decode.", "Paste text.", "Copy the result."],
+    faq: [],
+  },
+  "csv-json": {
+    category: "Developer",
+    name: "CSV ↔ JSON",
+    description: "Convert CSV tables to JSON and back — locally, without uploading data.",
+    steps: ["Pick a direction.", "Paste data.", "Copy the result."],
+    faq: [],
+  },
+  "html-markdown": {
+    category: "Text",
+    name: "HTML ↔ Markdown",
+    description: "Convert Markdown to HTML (with preview) or simplified HTML to Markdown.",
+    steps: ["Pick a direction.", "Paste content.", "Copy the result."],
+    faq: [],
+  },
+  "minifikator": {
+    category: "Developer",
+    name: "CSS / JS / HTML minifier",
+    description: "Quickly shrink CSS, JavaScript or HTML before deploy.",
+    steps: ["Choose a type.", "Paste code.", "Copy the minified output."],
+    faq: [
+      {
+        q: "Is this a full compiler?",
+        a: "It is a lightweight browser minifier — for production builds prefer esbuild/terser.",
+      },
+    ],
+  },
+  "generator-favicon": {
+    category: "Developer",
+    name: "Favicon generator",
+    description: "Generate a PNG favicon set (16–512 px) from one image and download a ZIP — entirely in your browser.",
+    steps: ["Choose a source image.", "Wait for generation.", "Download the ZIP pack."],
+    faq: [],
   },
 }
 

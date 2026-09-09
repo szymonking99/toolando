@@ -43,7 +43,7 @@ export const CALCULATOR_CATEGORIES: UtilityCategory[] = [
   "media",
 ]
 
-export const DEVELOPER_CATEGORIES: UtilityCategory[] = ["text", "dev"]
+export const DEVELOPER_CATEGORIES: UtilityCategory[] = ["text", "dev", "privacy"]
 
 export function getConverterCategories(): CategoryMeta[] {
   return categories
@@ -78,7 +78,7 @@ export const utilityBrowseGroups: UtilityBrowseGroup[] = [
   {
     id: "finance",
     hub: "calculators",
-    utilityIds: ["przelicznik-walut", "kalkulator-vat", "kalkulator-kredytu", "kalkulator-b2b"],
+    utilityIds: ["przelicznik-walut", "kalkulator-vat", "kalkulator-kredytu", "kalkulator-b2b", "kalkulator-procentow", "kalkulator-roi"],
   },
   {
     id: "time",
@@ -93,7 +93,7 @@ export const utilityBrowseGroups: UtilityBrowseGroup[] = [
   {
     id: "media",
     hub: "calculators",
-    utilityIds: ["kalkulator-bitrate", "konwerter-napisow"],
+    utilityIds: ["kalkulator-bitrate", "konwerter-napisow", "kalkulator-aspect-ratio", "kalkulator-rozmiaru-pliku"],
   },
   {
     id: "text",
@@ -105,6 +105,7 @@ export const utilityBrowseGroups: UtilityBrowseGroup[] = [
       "usun-duplikaty-linii",
       "markdown-preview",
       "generator-nazw-plikow",
+      "html-markdown",
     ],
   },
   {
@@ -123,6 +124,15 @@ export const utilityBrowseGroups: UtilityBrowseGroup[] = [
       "unix-timestamp",
       "generator-uuid",
       "generator-hash",
+      "url-encoder",
+      "csv-json",
+      "minifikator",
+      "generator-favicon",
     ],
+  },
+  {
+    id: "privacy",
+    hub: "developer",
+    utilityIds: ["inspektor-prywatnosci", "generator-hasel", "sila-hasla", "generator-hash"],
   },
 ]

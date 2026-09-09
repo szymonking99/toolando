@@ -30,6 +30,16 @@ export type UtilityToolId =
   | "test-ping"
   | "dns-lookup"
   | "speedtest"
+  | "inspektor-prywatnosci"
+  | "kalkulator-procentow"
+  | "kalkulator-roi"
+  | "kalkulator-aspect-ratio"
+  | "kalkulator-rozmiaru-pliku"
+  | "url-encoder"
+  | "csv-json"
+  | "html-markdown"
+  | "minifikator"
+  | "generator-favicon"
 
 export type UtilityCategory =
   | "finance"
@@ -39,6 +49,7 @@ export type UtilityCategory =
   | "dev"
   | "media"
   | "network"
+  | "privacy"
 
 export type UtilityToolConfig = {
   id: UtilityToolId
@@ -78,8 +89,26 @@ export const utilityTools: UtilityToolConfig[] = [
   { id: "test-ping", category: "network", icon: "Radar" },
   { id: "dns-lookup", category: "network", icon: "Search" },
   { id: "speedtest", category: "network", icon: "Gauge" },
+  { id: "inspektor-prywatnosci", category: "privacy", icon: "ShieldAlert" },
+  { id: "kalkulator-procentow", category: "finance", icon: "Percent" },
+  { id: "kalkulator-roi", category: "finance", icon: "TrendingUp" },
+  { id: "kalkulator-aspect-ratio", category: "media", icon: "Ratio" },
+  { id: "kalkulator-rozmiaru-pliku", category: "media", icon: "HardDriveDownload" },
+  { id: "url-encoder", category: "dev", icon: "Link" },
+  { id: "csv-json", category: "dev", icon: "Table" },
+  { id: "html-markdown", category: "text", icon: "FileCode" },
+  { id: "minifikator", category: "dev", icon: "Minimize2" },
+  { id: "generator-favicon", category: "dev", icon: "AppWindow" },
 ]
 
 export function getUtilityTool(id: string): UtilityToolConfig | undefined {
   return utilityTools.find((t) => t.id === id)
 }
+
+/** Privacy / security oriented utilities for hub browse. */
+export const PRIVACY_UTILITY_IDS: UtilityToolId[] = [
+  "inspektor-prywatnosci",
+  "generator-hasel",
+  "sila-hasla",
+  "generator-hash",
+]

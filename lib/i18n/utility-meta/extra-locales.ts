@@ -12,6 +12,7 @@ export const extraCategoryLabels: Record<string, Record<UtilityCategory, string>
     dev: "Développeur",
     media: "Médias",
     network: "Réseau",
+    privacy: "Confidentialité",
   },
   it: {
     finance: "Finanza",
@@ -21,6 +22,7 @@ export const extraCategoryLabels: Record<string, Record<UtilityCategory, string>
     dev: "Sviluppatore",
     media: "Media",
     network: "Rete",
+    privacy: "Privacy",
   },
   pt: {
     finance: "Finanças",
@@ -30,6 +32,7 @@ export const extraCategoryLabels: Record<string, Record<UtilityCategory, string>
     dev: "Desenvolvedor",
     media: "Mídia",
     network: "Rede",
+    privacy: "Privacidade",
   },
   nl: {
     finance: "Financiën",
@@ -39,6 +42,7 @@ export const extraCategoryLabels: Record<string, Record<UtilityCategory, string>
     dev: "Ontwikkelaar",
     media: "Media",
     network: "Netwerk",
+    privacy: "Privacy",
   },
   sv: {
     finance: "Ekonomi",
@@ -48,6 +52,7 @@ export const extraCategoryLabels: Record<string, Record<UtilityCategory, string>
     dev: "Utvecklare",
     media: "Media",
     network: "Nätverk",
+    privacy: "Integritet",
   },
   no: {
     finance: "Økonomi",
@@ -57,6 +62,7 @@ export const extraCategoryLabels: Record<string, Record<UtilityCategory, string>
     dev: "Utvikler",
     media: "Media",
     network: "Nettverk",
+    privacy: "Personvern",
   },
   da: {
     finance: "Økonomi",
@@ -66,6 +72,7 @@ export const extraCategoryLabels: Record<string, Record<UtilityCategory, string>
     dev: "Udvikler",
     media: "Medier",
     network: "Netværk",
+    privacy: "Privatliv",
   },
   fi: {
     finance: "Talous",
@@ -75,6 +82,7 @@ export const extraCategoryLabels: Record<string, Record<UtilityCategory, string>
     dev: "Kehittäjä",
     media: "Media",
     network: "Verkko",
+    privacy: "Tietosuoja",
   },
   cs: {
     finance: "Finance",
@@ -84,6 +92,7 @@ export const extraCategoryLabels: Record<string, Record<UtilityCategory, string>
     dev: "Vývojář",
     media: "Média",
     network: "Síť",
+    privacy: "Soukromí",
   },
   ro: {
     finance: "Finanțe",
@@ -93,6 +102,7 @@ export const extraCategoryLabels: Record<string, Record<UtilityCategory, string>
     dev: "Dezvoltator",
     media: "Media",
     network: "Rețea",
+    privacy: "Confidențialitate",
   },
   hu: {
     finance: "Pénzügy",
@@ -102,6 +112,7 @@ export const extraCategoryLabels: Record<string, Record<UtilityCategory, string>
     dev: "Fejlesztő",
     media: "Média",
     network: "Hálózat",
+    privacy: "Adatvédelem",
   },
   el: {
     finance: "Οικονομικά",
@@ -111,6 +122,7 @@ export const extraCategoryLabels: Record<string, Record<UtilityCategory, string>
     dev: "Προγραμματιστής",
     media: "Πολυμέσα",
     network: "Δίκτυο",
+    privacy: "Απόρρητο",
   },
   tr: {
     finance: "Finans",
@@ -120,6 +132,7 @@ export const extraCategoryLabels: Record<string, Record<UtilityCategory, string>
     dev: "Geliştirici",
     media: "Medya",
     network: "Ağ",
+    privacy: "Gizlilik",
   },
   ru: {
     finance: "Финансы",
@@ -129,6 +142,7 @@ export const extraCategoryLabels: Record<string, Record<UtilityCategory, string>
     dev: "Разработчик",
     media: "Медиа",
     network: "Сеть",
+    privacy: "Конфиденциальность",
   },
   ar: {
     finance: "المالية",
@@ -138,6 +152,7 @@ export const extraCategoryLabels: Record<string, Record<UtilityCategory, string>
     dev: "المطور",
     media: "الوسائط",
     network: "الشبكة",
+    privacy: "الخصوصية",
   },
   zh: {
     finance: "财务",
@@ -147,6 +162,7 @@ export const extraCategoryLabels: Record<string, Record<UtilityCategory, string>
     dev: "开发者",
     media: "媒体",
     network: "网络",
+    privacy: "隐私",
   },
   ja: {
     finance: "ファイナンス",
@@ -156,6 +172,7 @@ export const extraCategoryLabels: Record<string, Record<UtilityCategory, string>
     dev: "開発者",
     media: "メディア",
     network: "ネットワーク",
+    privacy: "プライバシー",
   },
   ko: {
     finance: "금융",
@@ -165,6 +182,7 @@ export const extraCategoryLabels: Record<string, Record<UtilityCategory, string>
     dev: "개발자",
     media: "미디어",
     network: "네트워크",
+    privacy: "개인정보",
   },
   hi: {
     finance: "वित्त",
@@ -174,6 +192,7 @@ export const extraCategoryLabels: Record<string, Record<UtilityCategory, string>
     dev: "डेवलपर",
     media: "मीडिया",
     network: "नेटवर्क",
+    privacy: "गोपनीयता",
   },
   id: {
     finance: "Keuangan",
@@ -183,6 +202,7 @@ export const extraCategoryLabels: Record<string, Record<UtilityCategory, string>
     dev: "Pengembang",
     media: "Media",
     network: "Jaringan",
+    privacy: "Privasi",
   },
 }
 

@@ -141,17 +141,41 @@
     "more": "Więcej"
   },
   "hero": {
-    "badge": "Konwertery i narzędzia online — bez instalacji",
-    "titleA": "Twoje narzędzia online w",
-    "titleHighlight": "jednym miejscu",
-    "subtitle": "Konwertuj audio, wideo, PDF i obrazy w przeglądarce. Szybki start — wybierz narzędzie albo wrzuć plik.",
+    "badge": "Wrzuć plik. Toolando wie, co z nim zrobić.",
+    "titleA": "Co chcesz",
+    "titleHighlight": "zrobić?",
+    "subtitle": "Opisz problem, wrzuć plik albo otwórz zestaw dla swojej roli. Narzędzia z naciskiem na prywatność — i poradniki, które mówią, kiedy lepiej nie konwertować.",
     "browse": "Przeglądaj narzędzia",
     "learnMore": "Dowiedz się więcej",
-    "convertCta": "Konwertuj plik teraz"
+    "convertCta": "Wrzuć plik",
+    "askLabel": "Co chcesz zrobić?",
+    "askHint": "Np. „zmniejszyć PDF”, „HEIC na JPG”, „usunąć metadane”, „mp3 do wav”…"
   },
   "search": {
-    "placeholder": "Szukaj narzędzia (np. mp3 wav, waluty, qr)…",
-    "noResults": "Nie znaleziono narzędzia. Spróbuj innego zapytania."
+    "placeholder": "Co chcesz zrobić? np. heic na jpg, zmniejszyć PDF…",
+    "noResults": "Nie znaleziono narzędzia. Spróbuj innego zapytania.",
+    "intents": {
+      "pdfWord": "Najpewniej potrzebujesz PDF → Word (DOCX), żeby edytować treść.",
+      "shrinkImage": "Najlepiej: skompresuj obraz, zmień rozmiar albo skonwertuj do WebP pod WWW.",
+      "iphone": "Zdjęcia z iPhone’a to często HEIC. Możesz je tu otworzyć albo przekonwertować do JPG pod Windows.",
+      "mp3Wav": "MP3 → WAV daje nieskompresowany plik do montażu.",
+      "privacy": "Zacznij od inspektora prywatności, potem usuń EXIF przed publikacją.",
+      "videoWeb": "Na stronę WWW zwykle wystarczy WebM (albo skompresowane MP4).",
+      "csvExcel": "CSV ↔ JSON lokalnie albo konwersja CSV w katalogu danych.",
+      "dwg": "Spróbujemy lokalnego podglądu — formaty CAD są ograniczone; w razie potrzeby pobierz oryginał.",
+      "shrinkPdf": "Użyj kompresji PDF albo podziel duży dokument na mniejsze pliki.",
+      "mergePdf": "Łączenie PDF zachowuje kolejność stron — dodaj co najmniej dwa pliki.",
+      "password": "Wygeneruj silne hasło lokalnie, potem sprawdź jego siłę.",
+      "hash": "Policz hash / sumę kontrolną (SHA-256 / MD5) w przeglądarce.",
+      "webImage": "WebP lub AVIF zwykle wygrywa z JPG/PNG na WWW — oryginał zostaw, gdy liczy się jakość.",
+      "vat": "Kalkulator VAT netto ↔ brutto — wybierz stawkę.",
+      "jwt": "Zdekoduj payload JWT lokalnie — nic nie idzie na serwer.",
+      "json": "Sformatuj JSON albo konwertuj CSV ↔ JSON.",
+      "base64": "Koduj lub dekoduj Base64 w przeglądarce.",
+      "url": "Percent-encoding URL — encode / decode.",
+      "ocr": "Wyodrębnij tekst z PDF (warstwa tekstowa) — pełne OCR skanów jeszcze nie.",
+      "favicon": "Wygeneruj paczkę favicon PNG w ZIP z jednego obrazu."
+    }
   },
   "share": {
     "label": "Udostępnij",
@@ -210,16 +234,16 @@
     }
   },
   "opener": {
-    "title": "Uniwersalny otwieracz plików",
-    "subtitle": "Otwórz i podejrzyj dosłownie każdy format pliku bezpośrednio w przeglądarce — bez instalacji i bez wysyłania danych na serwer.",
-    "cta": "Otwórz plik",
+    "title": "Uniwersalny asystent plików",
+    "subtitle": "Wrzuć dowolny plik. Toolando pokaże, co to jest, co ujawnia i co możesz zrobić — konwersja, kompresja, usuwanie metadanych albo sam podgląd. Czasem lepiej nie konwertować.",
+    "cta": "Otwórz asystenta",
     "kindImages": "Obrazy",
     "kindVideo": "Wideo",
     "kindAudio": "Dźwięk",
     "kindDocs": "PDF, kod i dane",
     "readError": "Nie udało się odczytać zawartości pliku.",
-    "dropAny": "Przeciągnij dowolny plik tutaj lub kliknij, aby wybrać",
-    "dropHint": "Obrazy, wideo, audio, PDF, dokumenty, kod, dane — każdy format. Pliki są otwierane lokalnie w przeglądarce i nie są nigdzie wysyłane.",
+    "dropAny": "Upuść plik — Toolando go rozpozna",
+    "dropHint": "Podgląd działa lokalnie w przeglądarce. Konwersje wysyłają plik tylko na czas operacji, potem są usuwane.",
     "noConverter": "Dla tego formatu nie mamy jeszcze konwertera — możesz jednak podejrzeć i pobrać plik poniżej.",
     "convertTo": "Konwertuj na inny format",
     "optionOne": "opcja",
@@ -236,7 +260,10 @@
       "audio": "Dźwięk",
       "pdf": "Dokument PDF",
       "text": "Tekst / kod",
-      "binary": "Plik binarny"
+      "binary": "Plik binarny",
+      "document": "Dokument",
+      "data": "Dane",
+      "archive": "Archiwum"
     }
   },
   "ai": {
@@ -352,9 +379,9 @@
     "thanks": "Każda wpłata i każdy mail z opinią naprawdę pomaga. Dziękujemy."
   },
   "openerPage": {
-    "eyebrow": "Podgląd i konwersja",
-    "title": "Uniwersalny otwieracz i konwerter plików",
-    "subtitle": "Otwórz dosłownie każdy format pliku — obrazy, wideo, dźwięk, PDF, dokumenty, kod i dane wyświetlą się natychmiast. Po otwarciu Toolando.tech od razu podpowie wszystkie sensowne formaty, na które możesz przekonwertować plik jednym kliknięciem.",
+    "eyebrow": "Toolando zna Twój plik",
+    "title": "Uniwersalny asystent plików",
+    "subtitle": "Wrzuć raz. Zobacz informacje o pliku, ryzyka prywatności i najlepsze kolejne kroki — bez szukania w katalogu.",
     "back": "Wszystkie narzędzia",
     "drop": "Przeciągnij i upuść plik tutaj",
     "or": "lub",
@@ -423,7 +450,10 @@
     "faqTitle": "Najczęstsze pytania",
     "qualityTitle": "Jakość konwersji — co warto wiedzieć",
     "tipsTitle": "Praktyczne wskazówki",
-    "readFormatGuide": "Pełny przewodnik po formacie"
+    "readFormatGuide": "Pełny przewodnik po formacie",
+    "batchHint": "Możesz wybrać wiele plików — wynik pobierzesz jako ZIP.",
+    "filesSelected": "plików wybranych",
+    "batchDone": "Batch gotowy — pobierz ZIP."
   },
   "cookieConsent": {
     "title": "Pliki cookies",
@@ -924,5 +954,92 @@
   "favorites": {
     "add": "Dodaj do ulubionych",
     "remove": "Ulubione"
+  },
+  "assistant": {
+    "inspectorTitle": "Informacje o pliku",
+    "actionsTitle": "Co możesz z nim zrobić",
+    "actionsSubtitle": "Rozpoznaliśmy format i proponujemy operacje. Nie musisz konwertować, jeśli chcesz tylko podgląd.",
+    "name": "Nazwa",
+    "size": "Rozmiar",
+    "type": "Typ",
+    "resolution": "Rozdzielczość",
+    "preview": "Podgląd tutaj",
+    "convertTo": "Konwertuj do",
+    "navHint": "Asystent plików",
+    "homeTitle": "Wrzuć plik — Toolando wie, co dalej",
+    "homeSubtitle": "Wykrywamy format, pokazujemy ryzyka metadanych i proponujemy konwersję / kompresję / usunięcie EXIF / podgląd. Czasem lepiej zostawić oryginał.",
+    "homeCta": "Otwórz asystenta plików",
+    "tips": {
+      "heic": "To prawdopodobnie zdjęcie HEIC z iPhone’a. Otwórz je tutaj, skonwertuj do JPG pod Windows albo zostaw HEIC, jeśli zależy Ci na jakości i rozmiarze.",
+      "flac": "FLAC jest bezstratny. Konwertuj do MP3 tylko, gdy potrzebujesz mniejszego pliku lub szerszej kompatybilności.",
+      "png": "PNG świetnie nadaje się do grafiki z przezroczystością. Zdjęcia na WWW zwykle lepiej wysłać jako WebP/AVIF.",
+      "pdf": "Nie zawsze trzeba konwertować — możesz podejrzeć, skompresować, połączyć albo wyciągnąć tekst.",
+      "webImage": "To już nowoczesny format WWW. Konwertuj tylko, gdy system docelowy wymaga JPG/PNG.",
+      "wav": "WAV jest nieskompresowany — idealny do montażu. Do udostępniania wybierz MP3/AAC."
+    }
+  },
+  "homeHubs": {
+    "title": "Popularne teraz",
+    "subtitle": "Wskocz w kategorię — albo wrzuć plik i pozwól Toolando wybrać.",
+    "items": {
+      "pdf": "PDF",
+      "image": "Obrazy",
+      "audio": "Audio",
+      "video": "Wideo",
+      "documents": "Dokumenty",
+      "privacy": "Prywatność",
+      "web": "Web",
+      "calculators": "Kalkulatory"
+    }
+  },
+  "audiences": {
+    "title": "Toolando dla profesjonalistów",
+    "subtitle": "Gotowe zestawy pod realną pracę — nie ściana „1000 narzędzi”.",
+    "cta": "Otwórz zestaw",
+    "eyebrow": "Toolando dla profesjonalistów",
+    "open": "Otwórz",
+    "items": {
+      "fotograf": {
+        "title": "Fotografowie",
+        "desc": "HEIC, EXIF, resize, WebP/AVIF i usuwanie tła.",
+        "intro": "Od HEIC z iPhone’a po WebP na stronę — plus prywatność przed publikacją."
+      },
+      "webmaster": {
+        "title": "Webmasterzy i developerzy",
+        "desc": "WebP/AVIF, favicony, minifikatory, JSON/CSV i narzędzia URL.",
+        "intro": "Lżejsze assety i porządek w danych bez wychodzenia z przeglądarki."
+      },
+      "biuro": {
+        "title": "Biuro i administracja",
+        "desc": "PDF ↔ Word, tekst z PDF, łączenie, kompresja, numeracja, VAT.",
+        "intro": "Codzienne operacje na dokumentach i kalkulatory biurowe."
+      },
+      "student": {
+        "title": "Studenci",
+        "desc": "PDF, Markdown, licznik znaków, daty, jednostki i bezpieczne hasła.",
+        "intro": "Narzędzia do nauki, które zostają prywatne w przeglądarce."
+      },
+      "creator": {
+        "title": "Twórcy contentu",
+        "desc": "Kompresja/przycinanie wideo, audio, napisy i obrazy pod WWW.",
+        "intro": "Przygotuj materiały pod social i stronę."
+      },
+      "ecommerce": {
+        "title": "E-commerce",
+        "desc": "Usuwanie tła, zdjęcia produktów, CSV/JSON, VAT i ROI.",
+        "intro": "Narzędzia katalogowe i marżowe dla sklepów."
+      }
+    }
+  },
+  "privacyTool": {
+    "intro": "Upuść zdjęcie lub PDF. Skanujemy metadane lokalnie w przeglądarce — plik nie opuszcza urządzenia.",
+    "pickFile": "Plik",
+    "drop": "Upuść JPG, PNG lub PDF — albo kliknij, by wybrać",
+    "cta": "Wybierz plik",
+    "error": "Nie udało się przeanalizować pliku.",
+    "summaryWarn": "Przed publikacją warto usunąć wrażliwe metadane (szczególnie GPS).",
+    "summaryInfo": "Znaleziono metadane — przejrzyj je przed udostępnieniem.",
+    "summaryClean": "W przeskanowanej części nie znaleziono wrażliwych metadanych.",
+    "stripExif": "Usuń EXIF teraz"
   }
 }

@@ -32,6 +32,16 @@ import { B2bCalculatorTool } from "./b2b-calculator-tool"
 import { PingTool } from "./ping-tool"
 import { DnsLookupTool } from "./dns-lookup-tool"
 import { SpeedtestTool } from "./speedtest-tool"
+import { PrivacyInspectorTool } from "./privacy-inspector-tool"
+import { PercentTool } from "./percent-tool"
+import { RoiTool } from "./roi-tool"
+import { AspectRatioTool } from "./aspect-ratio-tool"
+import { FileSizeCalcTool } from "./file-size-calc-tool"
+import { UrlEncoderTool } from "./url-encoder-tool"
+import { CsvJsonTool } from "./csv-json-tool"
+import { HtmlMarkdownTool } from "./html-markdown-tool"
+import { MinifierTool } from "./minifier-tool"
+import { FaviconTool } from "./favicon-tool"
 
 export function UtilityTool({ tool }: { tool: UtilityToolConfig }) {
   switch (tool.id) {
@@ -97,6 +107,26 @@ export function UtilityTool({ tool }: { tool: UtilityToolConfig }) {
       return <DnsLookupTool />
     case "speedtest":
       return <SpeedtestTool />
+    case "inspektor-prywatnosci":
+      return <PrivacyInspectorTool />
+    case "kalkulator-procentow":
+      return <PercentTool />
+    case "kalkulator-roi":
+      return <RoiTool />
+    case "kalkulator-aspect-ratio":
+      return <AspectRatioTool />
+    case "kalkulator-rozmiaru-pliku":
+      return <FileSizeCalcTool />
+    case "url-encoder":
+      return <UrlEncoderTool />
+    case "csv-json":
+      return <CsvJsonTool />
+    case "html-markdown":
+      return <HtmlMarkdownTool />
+    case "minifikator":
+      return <MinifierTool />
+    case "generator-favicon":
+      return <FaviconTool />
     default:
       return null
   }
