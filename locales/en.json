@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Toolando.tech — converters with test-based guides, not an X→Y farm",
-    "description": "Format guides, comparisons and converters written after testing real files. Files are not stored. Author: Szymon."
+    "title": "Toolando.tech — HEIC to JPG, PDF tools, EXIF remover online",
+    "description": "Convert HEIC, compress PDF, strip EXIF and open files in the browser. File assistant, batch ZIP, test-based guides. Files are not stored."
   },
   "socialProof": {
     "toolsCount": "Guides from real conversion tests — not an X→Y page farm",
@@ -138,7 +138,8 @@
     "premium": "Premium",
     "guides": "Guides",
     "faq": "FAQ",
-    "more": "More"
+    "more": "More",
+    "fileAssistant": "File assistant"
   },
   "hero": {
     "badge": "Drop a file. Toolando knows what you can do.",
@@ -356,7 +357,9 @@
     "instagram": "Instagram",
     "messenger": "Messenger",
     "youtube": "YouTube",
-    "emailAria": "Opens your email app to write to us"
+    "emailAria": "Opens your email app to write to us",
+    "fileAssistant": "File assistant",
+    "privacyTools": "File privacy"
   },
   "ad": {
     "label": "Advertisement",
@@ -1041,5 +1044,33 @@
     "summaryInfo": "Some metadata found — review before sharing publicly.",
     "summaryClean": "No sensitive metadata found in the scanned portion.",
     "stripExif": "Remove EXIF now"
+  },
+  "seoDiscover": {
+    "title": "Most-searched problems",
+    "subtitle": "Jump straight to a tool or a short guide — not a wall of 1000 converters.",
+    "toolCta": "Open tool",
+    "guideCta": "Guide",
+    "items": {
+      "heic": {
+        "title": "iPhone photo won’t open on Windows",
+        "desc": "Usually HEIC. Preview here or convert to JPG — batch many files into a ZIP."
+      },
+      "exif": {
+        "title": "What does this photo reveal about me?",
+        "desc": "Check GPS, camera and dates locally, then strip EXIF before publishing."
+      },
+      "pdf": {
+        "title": "PDF too large for email",
+        "desc": "Compress a PDF, merge files, or split pages."
+      },
+      "webp": {
+        "title": "Images too heavy for the web",
+        "desc": "JPG/PNG → WebP or AVIF. Sometimes keep the original — read the guide."
+      },
+      "assistant": {
+        "title": "I don’t know which tool I need",
+        "desc": "Drop a file — Toolando detects the format and suggests actions."
+      }
+    }
   }
 }

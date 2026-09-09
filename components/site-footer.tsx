@@ -22,29 +22,19 @@ export function SiteFooter() {
 
 
   const links = [
-
+    { label: t.footer.fileAssistant ?? t.nav.fileAssistant ?? "File assistant", href: href("/otworz") },
     { label: t.footer.tools, href: href("/tools") },
-
-    { label: t.footer.aboutMe, href: href("/o-mnie") },
-
-    { label: t.footer.howItWorks, href: href("/jak-to-dziala") },
-
-    { label: t.footer.faq, href: href("/faq") },
-
+    { label: t.footer.privacyTools ?? "Privacy", href: href("/tools/inspektor-prywatnosci") },
     { label: t.footer.guides, href: href("/poradniki") },
-
+    { label: t.footer.aboutMe, href: href("/o-mnie") },
+    { label: t.footer.howItWorks, href: href("/jak-to-dziala") },
     { label: t.footer.editorial, href: href("/redakcja") },
-
+    { label: t.footer.faq, href: href("/faq") },
     { label: t.footer.rss, href: href("/feed.xml") },
-
     { label: t.footer.support, href: href("/wsparcie") },
-
     { label: t.footer.contact, href: href("/kontakt") },
-
     { label: t.footer.privacy, href: href("/polityka-prywatnosci") },
-
     { label: t.footer.terms, href: href("/regulamin") },
-
   ]
 
 

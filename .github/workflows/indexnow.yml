@@ -1,0 +1,22 @@
+name: Submit IndexNow
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  indexnow:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Wait for production deploy
+        run: sleep 90
+      - name: Submit sitemap URLs to IndexNow
+        env:
+          NEXT_PUBLIC_SITE_URL: https://www.toolando.tech
+          INDEXNOW_KEY: toolando-indexnow-2026
+        run: node scripts/submit-indexnow.mjs

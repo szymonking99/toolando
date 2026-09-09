@@ -33,11 +33,13 @@ export async function generateMetadata({
     { title: string; desc: string }
   >
   const copy = items[audience]
-  return {
+  const { buildPageMetadata } = await import("@/lib/seo/metadata")
+  return buildPageMetadata({
+    locale,
+    path: `/dla/${audience}`,
     title: `${copy?.title ?? audience} — Toolando.tech`,
-    description: copy?.desc,
-    alternates: { canonical: `/${locale}/dla/${audience}` },
-  }
+    description: copy?.desc ?? "",
+  })
 }
 
 export default async function AudiencePage({

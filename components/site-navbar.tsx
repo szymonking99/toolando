@@ -20,13 +20,14 @@ export function SiteNavbar() {
   const { t, href } = useI18n()
 
   const coreLinks: NavLink[] = [
+    { label: t.nav.fileAssistant ?? "File assistant", href: href("/otworz") },
     { label: t.nav.converters, href: href("/tools#konwertery") },
-    { label: t.nav.calculators, href: href("/tools#kalkulatory") },
-    { label: t.nav.aiTools, href: href("/#ai") },
     { label: t.nav.guides, href: href("/poradniki") },
+    { label: t.nav.calculators, href: href("/tools#kalkulatory") },
   ]
 
   const extendedLinks: NavLink[] = [
+    { label: t.nav.aiTools, href: href("/#ai") },
     { label: t.nav.premium, href: href("/premium") },
     { label: t.nav.aboutMe, href: href("/o-mnie") },
   ]

@@ -9,6 +9,7 @@ import { EditorialTrustSection } from "@/components/editorial-trust-section"
 import { PublisherNotesSection } from "@/components/publisher-notes-section"
 import { FeaturedGuidesSection } from "@/components/featured-guides-section"
 import { AudienceSection } from "@/components/audience-section"
+import { SeoDiscoverSection } from "@/components/seo-discover-section"
 import { SiteFooter } from "@/components/site-footer"
 import { AdSlot } from "@/components/ad-slot"
 import { RecentToolsSection } from "@/components/recent-tools-section"
@@ -34,6 +35,7 @@ export default async function Page({
         <HeroSection />
         <PopularNowSection />
         <UniversalOpenerSection />
+        <SeoDiscoverSection />
         <FeaturesSection />
         <RecentToolsSection />
         <AudienceSection />

@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Toolando.tech — konwertery z poradnikami z testów, nie farma X→Y",
-    "description": "Poradniki formatów, porównania i konwertery pisane po testach na własnych plikach. Pliki nie są przechowywane. Autor: Szymon."
+    "title": "Toolando.tech — HEIC na JPG, PDF, EXIF i narzędzia plików online",
+    "description": "Konwertuj HEIC, kompresuj PDF, usuń EXIF i otwieraj pliki w przeglądarce. Asystent plików, batch ZIP, poradniki z testów. Pliki nie są przechowywane."
   },
   "socialProof": {
     "toolsCount": "Poradniki z testów konwersji — nie farma stron X→Y",
@@ -138,7 +138,8 @@
     "premium": "Premium",
     "guides": "Poradniki",
     "faq": "Pytania i odpowiedzi",
-    "more": "Więcej"
+    "more": "Więcej",
+    "fileAssistant": "Asystent plików"
   },
   "hero": {
     "badge": "Wrzuć plik. Toolando wie, co z nim zrobić.",
@@ -356,7 +357,9 @@
     "instagram": "Instagram",
     "messenger": "Messenger",
     "youtube": "YouTube",
-    "emailAria": "Otwiera program pocztowy, aby napisać do nas"
+    "emailAria": "Otwiera program pocztowy, aby napisać do nas",
+    "fileAssistant": "Asystent plików",
+    "privacyTools": "Prywatność plików"
   },
   "ad": {
     "label": "Reklama",
@@ -1041,5 +1044,33 @@
     "summaryInfo": "Znaleziono metadane — przejrzyj je przed udostępnieniem.",
     "summaryClean": "W przeskanowanej części nie znaleziono wrażliwych metadanych.",
     "stripExif": "Usuń EXIF teraz"
+  },
+  "seoDiscover": {
+    "title": "Najczęściej szukane problemy",
+    "subtitle": "Wejdź od razu w narzędzie albo przeczytaj krótki poradnik — bez katalogu 1000 konwerterów.",
+    "toolCta": "Otwórz narzędzie",
+    "guideCta": "Poradnik",
+    "items": {
+      "heic": {
+        "title": "Zdjęcie z iPhone nie otwiera się na Windows",
+        "desc": "To zwykle HEIC. Podgląd tutaj albo konwersja do JPG — batch wielu plików w ZIP."
+      },
+      "exif": {
+        "title": "Co zdjęcie ujawnia o mnie?",
+        "desc": "Sprawdź GPS, aparat i daty lokalnie, potem usuń EXIF przed publikacją."
+      },
+      "pdf": {
+        "title": "PDF za duży do maila",
+        "desc": "Skompresuj PDF, połącz kilka plików albo podziel na strony."
+      },
+      "webp": {
+        "title": "Zdjęcia za ciężkie na stronę WWW",
+        "desc": "JPG/PNG → WebP lub AVIF. Czasem lepiej nie konwertować — sprawdź poradnik."
+      },
+      "assistant": {
+        "title": "Nie wiem, jakiego narzędzia potrzebuję",
+        "desc": "Wrzuć plik — Toolando rozpozna format i pokaże dostępne operacje."
+      }
+    }
   }
 }
