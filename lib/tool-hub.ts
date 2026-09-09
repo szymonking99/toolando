@@ -23,6 +23,7 @@ const SPECIALS_BY_CATEGORY: Record<string, SpecialToolConfig["id"][]> = {
     "zmiana-rozmiaru-obrazu",
     "usun-exif",
     "znak-wodny",
+    "naprawa-plikow",
   ],
   documents: [
     "laczenie-pdf",
@@ -31,9 +32,21 @@ const SPECIALS_BY_CATEGORY: Record<string, SpecialToolConfig["id"][]> = {
     "obrot-pdf",
     "pdf-do-tekstu",
     "numeracja-pdf",
+    "naprawa-plikow",
   ],
-  pdf: ["podzial-pdf", "kompresja-pdf", "obrot-pdf", "pdf-do-tekstu", "laczenie-pdf", "numeracja-pdf"],
-  video: ["wyciszenie-wideo", "przyciecie-wideo", "kompresja-wideo"],
+  pdf: [
+    "podzial-pdf",
+    "kompresja-pdf",
+    "obrot-pdf",
+    "pdf-do-tekstu",
+    "laczenie-pdf",
+    "numeracja-pdf",
+    "naprawa-plikow",
+  ],
+  video: ["wyciszenie-wideo", "przyciecie-wideo", "kompresja-wideo", "naprawa-plikow"],
+  audio: ["naprawa-plikow"],
+  archive: ["naprawa-plikow"],
+  data: ["naprawa-plikow"],
 }
 
 export const CALCULATOR_CATEGORIES: UtilityCategory[] = [

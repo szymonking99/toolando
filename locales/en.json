@@ -184,7 +184,8 @@
       "watermark": "Add a watermark before you publish the image.",
       "aiHelp": "For writing, summaries, and translation, use Premium AI tools.",
       "openFile": "Open the file in the assistant first — you’ll see the format and safe next steps.",
-      "formatConversion": "Matching converter: {from} → {to}."
+      "formatConversion": "Matching converter: {from} → {to}.",
+      "repairFile": "Try file repair — Toolando diagnoses the type and rewrites a broken container (PDF, image, video/audio, ZIP/DOCX, JSON)."
     }
   },
   "share": {
@@ -264,6 +265,9 @@
     "emptyFile": "(empty file)",
     "textTruncated": "Preview truncated to the first 200,000 characters. Download the file to see everything.",
     "binaryPreview": "Binary preview (first bytes in hexadecimal)",
+    "documentPreview": "Document text preview",
+    "documentNoPreviewTitle": "No text preview for this document",
+    "documentNoPreviewBody": "This Office format can’t be previewed as text here. Use the actions below to convert it (e.g. DOCX → PDF) or download the original.",
     "kinds": {
       "image": "Image",
       "video": "Video",

@@ -19,6 +19,7 @@ import {
   addPdfPageNumbers,
   type SpecialResult,
 } from "@/lib/special-convert"
+import { repairFile } from "@/lib/file-repair"
 import { parseTimeToSeconds } from "@/lib/ffmpeg-utils"
 
 export const runtime = "nodejs"
@@ -210,20 +211,29 @@ export async function POST(req: NextRequest) {
         result = await addPdfPageNumbers(files[0].buffer, files[0].name, pos)
         break
       }
+      case "repair-file": {
+        result = await repairFile(files[0].buffer, files[0].name)
+        break
+      }
       default:
         return json({ error: "Nieobsługiwane narzędzie." }, 400)
     }
 
+    const headers: Record<string, string> = {
+      "Content-Type": result.contentType,
+      "Content-Disposition": `attachment; filename="${encodeURIComponent(
+        result.filename,
+      )}"`,
+      "Content-Length": String(result.buffer.length),
+      "Cache-Control": "no-store",
+    }
+    if (result.note) {
+      headers["X-Toolando-Report"] = encodeURIComponent(result.note.slice(0, 3500))
+    }
+
     return new Response(new Uint8Array(result.buffer), {
       status: 200,
-      headers: {
-        "Content-Type": result.contentType,
-        "Content-Disposition": `attachment; filename="${encodeURIComponent(
-          result.filename,
-        )}"`,
-        "Content-Length": String(result.buffer.length),
-        "Cache-Control": "no-store",
-      },
+      headers,
     })
   } catch (err) {
     if (err instanceof ConversionError) {

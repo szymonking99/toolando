@@ -429,6 +429,14 @@ const specialMaps: Record<string, SpecialMap> = {
       actionLabel: "Dodaj numery stron",
       acceptLabel: "PDF",
     },
+    "naprawa-plikow": {
+      category: "Pliki",
+      name: "Naprawa plików",
+      description:
+        "Uratuj uszkodzony PDF, obraz, wideo/audio, ZIP/DOCX lub JSON — diagnostyka i przepisanie kontenera. Darmowe.",
+      actionLabel: "Napraw plik",
+      acceptLabel: "PDF, obrazy, wideo/audio, ZIP/Office, JSON",
+    },
   },
   en: {
     "kompresor-obrazow": {
@@ -532,6 +540,14 @@ const specialMaps: Record<string, SpecialMap> = {
       description: "Add page numbering to every page of a PDF document.",
       actionLabel: "Add page numbers",
       acceptLabel: "PDF",
+    },
+    "naprawa-plikow": {
+      category: "Files",
+      name: "File repair",
+      description:
+        "Try to salvage a broken PDF, image, video/audio, ZIP/DOCX, or JSON — diagnose and rewrite the container. Free.",
+      actionLabel: "Repair file",
+      acceptLabel: "PDF, images, video/audio, ZIP/Office, JSON",
     },
   },
   de: {
