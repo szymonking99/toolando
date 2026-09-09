@@ -39,8 +39,8 @@ export function SupportButton({ fullWidth, compact, className }: SupportButtonPr
         fullWidth
           ? "w-full px-6 py-3.5 text-base"
           : compact
-            ? "size-9 p-0 xl:h-auto xl:w-auto xl:px-4 xl:py-2 xl:text-sm"
-            : "px-2.5 py-2 text-[13px] lg:px-4 lg:text-sm",
+            ? "h-9 px-3 text-xs sm:px-3.5 sm:text-[13px]"
+            : "h-9 px-3 text-xs sm:px-3.5 sm:text-[13px] xl:px-4 xl:text-sm",
         className,
       )}
     >
@@ -53,9 +53,7 @@ export function SupportButton({ fullWidth, compact, className }: SupportButtonPr
         className={cn(fullWidth ? "size-5" : "size-4 shrink-0")}
         aria-hidden="true"
       />
-      <span className={cn(compact && !fullWidth && "hidden xl:inline")}>
-        {label}
-      </span>
+      <span>{label}</span>
     </Link>
   )
 }

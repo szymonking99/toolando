@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react"
 import Link from "next/link"
-import { Search, Command, Lightbulb } from "lucide-react"
+import { Search, Command, Lightbulb, Sparkles, Loader2 } from "lucide-react"
 import { tools } from "@/lib/tools"
 import { utilityTools } from "@/lib/utility-tools"
 import { specialTools } from "@/lib/special-tools"
@@ -13,6 +13,7 @@ import { getAiMeta } from "@/lib/i18n/ai-meta"
 import { useI18n } from "@/components/i18n-provider"
 import {
   matchSearchIntents,
+  shouldUseAiSearch,
   TOOL_KEYWORDS,
 } from "@/lib/search-intents"
 
@@ -26,11 +27,18 @@ type SearchResult = {
   score?: number
 }
 
+type AiIntentState = {
+  query: string
+  answer: string | null
+  toolIds: string[]
+}
+
 function normalize(s: string) {
   return s
     .toLowerCase()
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "")
+    .replace(/ł/g, "l")
 }
 
 export function GlobalSearch({
@@ -43,7 +51,10 @@ export function GlobalSearch({
   const { t, href, locale } = useI18n()
   const [query, setQuery] = useState("")
   const [open, setOpen] = useState(false)
+  const [aiLoading, setAiLoading] = useState(false)
+  const [aiIntent, setAiIntent] = useState<AiIntentState | null>(null)
   const rootRef = useRef<HTMLDivElement>(null)
+  const aiAbortRef = useRef<AbortController | null>(null)
 
   const corpus = useMemo(() => {
     const converters: SearchResult[] = tools
@@ -96,13 +107,32 @@ export function GlobalSearch({
   }, [locale, t])
 
   const intentHits = useMemo(() => matchSearchIntents(query), [query])
+  const bestLocalScore = intentHits[0]?.score ?? 0
 
   const intentAnswer = useMemo(() => {
     const top = intentHits[0]
-    if (!top) return null
+    if (!top || top.score < 55) return null
     const answers = t.search?.intents as Record<string, string> | undefined
-    return answers?.[top.intent.answerKey] ?? null
+    const key = top.intent.answerKey
+    if (key === "formatConversion") {
+      const id = top.intent.toolIds[0]
+      if (id?.includes("-to-")) {
+        const [from, to] = id.split("-to-")
+        const template = answers?.formatConversion
+        if (template) {
+          return template
+            .replace("{from}", from.toUpperCase())
+            .replace("{to}", to.toUpperCase())
+        }
+      }
+    }
+    return answers?.[key] ?? null
   }, [intentHits, t])
+
+  const activeAi =
+    aiIntent && aiIntent.query === query.trim() ? aiIntent : null
+
+  const displayAnswer = intentAnswer ?? activeAi?.answer ?? null
 
   const results = useMemo(() => {
     const q = normalize(query.trim())
@@ -113,6 +143,11 @@ export function GlobalSearch({
       for (const id of hit.intent.toolIds) {
         boosted.set(id, (boosted.get(id) ?? 0) + hit.score)
       }
+    }
+    if (activeAi) {
+      activeAi.toolIds.forEach((id, i) => {
+        boosted.set(id, (boosted.get(id) ?? 0) + 90 - i * 8)
+      })
     }
 
     const scored = corpus
@@ -136,7 +171,55 @@ export function GlobalSearch({
       .slice(0, 12)
 
     return scored
-  }, [corpus, query, intentHits])
+  }, [corpus, query, intentHits, activeAi])
+
+  useEffect(() => {
+    const trimmed = query.trim()
+    if (!shouldUseAiSearch(trimmed, bestLocalScore)) {
+      setAiLoading(false)
+      aiAbortRef.current?.abort()
+      return
+    }
+
+    const controller = new AbortController()
+    aiAbortRef.current?.abort()
+    aiAbortRef.current = controller
+
+    const timer = window.setTimeout(async () => {
+      setAiLoading(true)
+      try {
+        const res = await fetch("/api/search/intent", {
+          method: "POST",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify({ query: trimmed, locale }),
+          signal: controller.signal,
+        })
+        if (!res.ok) {
+          if (!controller.signal.aborted) setAiLoading(false)
+          return
+        }
+        const data = (await res.json()) as {
+          answer?: string | null
+          toolIds?: string[]
+        }
+        if (controller.signal.aborted) return
+        setAiIntent({
+          query: trimmed,
+          answer: data.answer?.trim() || null,
+          toolIds: Array.isArray(data.toolIds) ? data.toolIds : [],
+        })
+      } catch {
+        // aborted or network — ignore
+      } finally {
+        if (!controller.signal.aborted) setAiLoading(false)
+      }
+    }, 450)
+
+    return () => {
+      window.clearTimeout(timer)
+      controller.abort()
+    }
+  }, [query, bestLocalScore, locale])
 
   useEffect(() => {
     function onKey(e: KeyboardEvent) {
@@ -162,7 +245,12 @@ export function GlobalSearch({
   const onSelect = useCallback(() => {
     setQuery("")
     setOpen(false)
+    setAiIntent(null)
   }, [])
+
+  const showPanel =
+    open &&
+    (results.length > 0 || displayAnswer || aiLoading || (query.length >= 2 && !aiLoading))
 
   return (
     <div ref={rootRef} className={className}>
@@ -201,12 +289,31 @@ export function GlobalSearch({
           </span>
         )}
       </div>
-      {open && (results.length > 0 || intentAnswer) && (
+      {showPanel && (results.length > 0 || displayAnswer || aiLoading) && (
         <div className="absolute z-[70] mt-2 w-full overflow-hidden rounded-xl border border-white/10 bg-background/95 shadow-xl backdrop-blur-md">
-          {intentAnswer && (
+          {(displayAnswer || aiLoading) && (
             <div className="flex items-start gap-2 border-b border-white/10 px-4 py-3 text-sm text-foreground/90">
-              <Lightbulb className="mt-0.5 size-4 shrink-0 text-primary" />
-              <p>{intentAnswer}</p>
+              {aiLoading && !displayAnswer ? (
+                <Loader2 className="mt-0.5 size-4 shrink-0 animate-spin text-primary" />
+              ) : activeAi?.answer && !intentAnswer ? (
+                <Sparkles className="mt-0.5 size-4 shrink-0 text-primary" />
+              ) : (
+                <Lightbulb className="mt-0.5 size-4 shrink-0 text-primary" />
+              )}
+              <div className="min-w-0 space-y-1">
+                {displayAnswer ? (
+                  <p>{displayAnswer}</p>
+                ) : (
+                  <p className="text-muted-foreground">
+                    {t.search?.aiThinking ?? "Reading your intent…"}
+                  </p>
+                )}
+                {activeAi?.answer && !intentAnswer && (
+                  <p className="text-[11px] text-muted-foreground">
+                    {t.search?.aiBadge ?? "AI intent"}
+                  </p>
+                )}
+              </div>
             </div>
           )}
           {results.length > 0 && (
@@ -230,11 +337,15 @@ export function GlobalSearch({
           )}
         </div>
       )}
-      {open && query.length >= 2 && results.length === 0 && !intentAnswer && (
-        <p className="absolute z-[70] mt-2 w-full rounded-xl border border-white/10 bg-background/95 px-4 py-3 text-sm text-muted-foreground shadow-lg backdrop-blur-md">
-          {t.search.noResults}
-        </p>
-      )}
+      {open &&
+        query.length >= 2 &&
+        results.length === 0 &&
+        !displayAnswer &&
+        !aiLoading && (
+          <p className="absolute z-[70] mt-2 w-full rounded-xl border border-white/10 bg-background/95 px-4 py-3 text-sm text-muted-foreground shadow-lg backdrop-blur-md">
+            {t.search.noResults}
+          </p>
+        )}
     </div>
   )
 }

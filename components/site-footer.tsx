@@ -1,30 +1,26 @@
 "use client"
 
-
-
+import Image from "next/image"
 import { Wrench } from "lucide-react"
-
 import Link from "next/link"
-
 import { useI18n } from "@/components/i18n-provider"
-
 import { openCookiePreferences } from "@/lib/consent"
-
 import { AdSlot } from "@/components/ad-slot"
 import { ContactEmailLink } from "@/components/contact-email-link"
 
-
-
 export function SiteFooter() {
-
   const { t, href } = useI18n()
 
-
-
   const links = [
-    { label: t.footer.fileAssistant ?? t.nav.fileAssistant ?? "File assistant", href: href("/otworz") },
+    {
+      label: t.footer.fileAssistant ?? t.nav.fileAssistant ?? "File assistant",
+      href: href("/otworz"),
+    },
     { label: t.footer.tools, href: href("/tools") },
-    { label: t.footer.privacyTools ?? "Privacy", href: href("/tools/inspektor-prywatnosci") },
+    {
+      label: t.footer.privacyTools ?? "Privacy",
+      href: href("/tools/inspektor-prywatnosci"),
+    },
     { label: t.footer.guides, href: href("/poradniki") },
     { label: t.footer.aboutMe, href: href("/o-mnie") },
     { label: t.footer.howItWorks, href: href("/jak-to-dziala") },
@@ -37,12 +33,8 @@ export function SiteFooter() {
     { label: t.footer.terms, href: href("/regulamin") },
   ]
 
-
-
   return (
-
     <footer className="border-t border-white/10 px-4 py-12">
-
       <AdSlot
         placement="footer"
         slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT_FOOTER}
@@ -51,72 +43,50 @@ export function SiteFooter() {
       />
 
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 md:flex-row">
-
         <Link href={href("/")} className="flex items-center gap-2">
-
           <span className="flex size-8 items-center justify-center rounded-lg bg-primary/15 text-primary ring-1 ring-primary/30">
-
             <Wrench className="size-4" aria-hidden="true" />
-
           </span>
-
           <span className="text-lg font-semibold tracking-tight text-foreground">
-
             Toolando.tech
-
           </span>
-
         </Link>
 
-
-
         <nav className="flex flex-wrap items-center justify-center gap-4 md:gap-8">
-
           {links.map((link) => (
-
             <Link
-
               key={link.href}
-
               href={link.href}
-
               className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
-
             >
-
               {link.label}
-
             </Link>
-
           ))}
-
           <button
-
             type="button"
-
             onClick={() => openCookiePreferences()}
-
             className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
-
           >
-
             {t.footer.cookieSettings}
-
           </button>
-
         </nav>
 
-
-
         <div className="flex flex-col items-center md:items-end">
-
           <p className="text-sm text-muted-foreground">{t.footer.rights}</p>
-
-          <ContactEmailLink
-            subject={t.pages.contact.subject}
-            ariaLabel={t.footer.emailAria}
-            className="text-sm font-medium text-muted-foreground underline underline-offset-4 transition-colors hover:text-foreground"
-          />
+          <div className="mt-1 flex items-center gap-2">
+            <Image
+              src="/badyl-tech-logo-footer.png"
+              alt="Badyl-Tech"
+              width={100}
+              height={32}
+              className="h-8 w-auto rounded-md bg-white shadow-sm ring-1 ring-black/10"
+            />
+            <ContactEmailLink
+              subject={t.pages.contact.subject}
+              ariaLabel={t.footer.emailAria}
+              className="text-sm font-medium text-muted-foreground underline underline-offset-4 transition-colors hover:text-foreground"
+            />
+          </div>
           <div className="mt-2 flex flex-wrap justify-center gap-3 md:justify-end">
             <a
               href="https://www.facebook.com/badyltech"
@@ -152,12 +122,7 @@ export function SiteFooter() {
             </a>
           </div>
         </div>
-
       </div>
-
     </footer>
-
   )
-
 }
-
