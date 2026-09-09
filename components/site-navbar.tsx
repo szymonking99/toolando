@@ -26,18 +26,19 @@ export function SiteNavbar() {
     { label: t.nav.calculators, href: href("/tools#kalkulatory") },
   ]
 
-  const extendedLinks: NavLink[] = [
-    { label: t.nav.aiTools, href: href("/#ai") },
+  /** Always visible on desktop — requested primary destinations. */
+  const primaryLinks: NavLink[] = [
     { label: t.nav.premium, href: href("/premium") },
     { label: t.nav.aboutMe, href: href("/o-mnie") },
-  ]
-
-  const moreLinks: NavLink[] = [
-    { label: t.nav.faq, href: href("/faq") },
     { label: t.nav.contact, href: href("/kontakt") },
   ]
 
-  const allLinks = [...coreLinks, ...extendedLinks, ...moreLinks]
+  const moreLinks: NavLink[] = [
+    { label: t.nav.aiTools, href: href("/#ai") },
+    { label: t.nav.faq, href: href("/faq") },
+  ]
+
+  const allLinks = [...coreLinks, ...primaryLinks, ...moreLinks]
 
   useEffect(() => {
     function onClick(e: MouseEvent) {
@@ -62,7 +63,6 @@ export function SiteNavbar() {
         aria-label="Main"
         className="mx-auto flex w-full max-w-[100rem] items-center gap-2 rounded-2xl border border-white/10 bg-background/70 px-2.5 py-2 backdrop-blur-xl sm:gap-3 sm:px-4 sm:py-2.5"
       >
-        {/* Logo */}
         <a href={href("/")} className="flex shrink-0 items-center gap-2">
           <span className="flex size-8 items-center justify-center rounded-lg bg-primary/15 text-primary ring-1 ring-primary/30">
             <Wrench className="size-4" aria-hidden="true" />
@@ -72,12 +72,10 @@ export function SiteNavbar() {
           </span>
         </a>
 
-        {/* Search */}
-        <div className="relative hidden w-[11rem] shrink-0 min-w-0 lg:block xl:w-[13rem] 2xl:w-[15rem]">
+        <div className="relative hidden w-[10rem] shrink-0 min-w-0 lg:block xl:w-[12rem] 2xl:w-[14rem]">
           <GlobalSearch compact className="relative w-full max-w-full" />
         </div>
 
-        {/* Desktop links — overflow tylko na rzędzie linków; „Więcej” poza nim, żeby dropdown nie był ucinany */}
         <div className="hidden min-w-0 flex-1 items-center justify-center gap-0.5 lg:flex xl:gap-1">
           <div className="flex min-w-0 max-w-full items-center justify-center gap-0.5 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden xl:gap-1">
             {coreLinks.map((link) => (
@@ -85,32 +83,23 @@ export function SiteNavbar() {
                 {link.label}
               </a>
             ))}
-
-            {/* Premium + Formaty — inline dopiero od 2xl */}
-            {extendedLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className={`${linkClass} hidden 2xl:inline-flex`}
-              >
+            {primaryLinks.map((link) => (
+              <a key={link.href} href={link.href} className={linkClass}>
                 {link.label}
               </a>
             ))}
-
-            {/* FAQ / O mnie / Kontakt — tylko na bardzo szerokich ekranach */}
             {moreLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className={`${linkClass} hidden min-[1700px]:inline-flex`}
+                className={`${linkClass} hidden min-[1600px]:inline-flex`}
               >
                 {link.label}
               </a>
             ))}
           </div>
 
-          {/* Więcej — poza overflow, ukryte gdy wszystkie linki są inline */}
-          <div ref={moreRef} className="relative shrink-0 min-[1700px]:hidden">
+          <div ref={moreRef} className="relative shrink-0 min-[1600px]:hidden">
             <button
               type="button"
               onClick={() => setMoreOpen((v) => !v)}
@@ -123,22 +112,12 @@ export function SiteNavbar() {
             </button>
             {moreOpen && (
               <div className="absolute right-0 top-full z-[70] mt-1 min-w-[11rem] rounded-xl border border-white/10 bg-background/95 py-1 shadow-xl backdrop-blur-md">
-                {extendedLinks.map((link) => (
-                  <a
-                    key={link.href}
-                    href={link.href}
-                    onClick={() => setMoreOpen(false)}
-                    className="block px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-white/[0.06] hover:text-foreground 2xl:hidden"
-                  >
-                    {link.label}
-                  </a>
-                ))}
                 {moreLinks.map((link) => (
                   <a
                     key={link.href}
                     href={link.href}
                     onClick={() => setMoreOpen(false)}
-                    className="block px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-white/[0.06] hover:text-foreground min-[1700px]:hidden"
+                    className="block px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-white/[0.06] hover:text-foreground"
                   >
                     {link.label}
                   </a>
@@ -148,12 +127,11 @@ export function SiteNavbar() {
           </div>
         </div>
 
-        {/* Akcje — zawsze po prawej, bez zawijania */}
         <div className="ml-auto flex shrink-0 items-center justify-end gap-1.5 sm:gap-2 lg:ml-0">
           <div className="hidden items-center gap-1.5 sm:gap-2 lg:flex">
             <LanguageSwitcher />
             <AccountNavButton />
-            <SupportButton compact />
+            <SupportButton />
           </div>
 
           <div className="flex items-center gap-2 lg:hidden">
