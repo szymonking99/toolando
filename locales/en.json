@@ -150,11 +150,13 @@
     "learnMore": "Learn more",
     "convertCta": "Drop a file",
     "askLabel": "What do you want to do?",
-    "askHint": "Try “shrink PDF”, “HEIC to JPG”, “remove metadata”, “mp3 to wav”…"
+    "askHint": "Write a normal sentence — e.g. “shrink an iPhone photo”, “PDF too big for email”…"
   },
   "search": {
-    "placeholder": "What do you want to do? e.g. heic to jpg, shrink PDF…",
-    "noResults": "No tools found. Try a different query.",
+    "placeholder": "Describe what you need — e.g. shrink an iPhone photo…",
+    "noResults": "No tools found. Try describing your goal in a full sentence.",
+    "aiThinking": "Reading your intent…",
+    "aiBadge": "AI tool matching",
     "intents": {
       "pdfWord": "You probably want PDF → Word (DOCX) so you can edit the text.",
       "shrinkImage": "Best options: compress the image, resize it, or convert to WebP for the web.",
@@ -175,7 +177,14 @@
       "base64": "Encode or decode Base64 in the browser.",
       "url": "Percent-encode or decode URL strings.",
       "ocr": "Extract text from a PDF (text layer) — not full OCR for scans yet.",
-      "favicon": "Generate a multi-size favicon pack as a ZIP from one image."
+      "favicon": "Generate a multi-size favicon pack as a ZIP from one image.",
+      "removeBg": "Background removal leaves the subject on a transparent PNG.",
+      "splitPdf": "Split a PDF into smaller files or extract pages.",
+      "rotatePdf": "Rotate PDF pages without losing text quality.",
+      "watermark": "Add a watermark before you publish the image.",
+      "aiHelp": "For writing, summaries, and translation, use Premium AI tools.",
+      "openFile": "Open the file in the assistant first — you’ll see the format and safe next steps.",
+      "formatConversion": "Matching converter: {from} → {to}."
     }
   },
   "share": {

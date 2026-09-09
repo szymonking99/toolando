@@ -150,11 +150,13 @@
     "learnMore": "Dowiedz się więcej",
     "convertCta": "Wrzuć plik",
     "askLabel": "Co chcesz zrobić?",
-    "askHint": "Np. „zmniejszyć PDF”, „HEIC na JPG”, „usunąć metadane”, „mp3 do wav”…"
+    "askHint": "Napisz zwykłym zdaniem — np. „zmniejszyć zdjęcie z iPhone’a”, „za duży PDF do maila”…"
   },
   "search": {
-    "placeholder": "Co chcesz zrobić? np. heic na jpg, zmniejszyć PDF…",
-    "noResults": "Nie znaleziono narzędzia. Spróbuj innego zapytania.",
+    "placeholder": "Opisz co chcesz zrobić — np. zmniejszyć zdjęcie z iPhone’a…",
+    "noResults": "Nie znaleziono narzędzia. Spróbuj opisać cel zwykłym zdaniem.",
+    "aiThinking": "Odczytuję intencję…",
+    "aiBadge": "Dobór narzędzi przez AI",
     "intents": {
       "pdfWord": "Najpewniej potrzebujesz PDF → Word (DOCX), żeby edytować treść.",
       "shrinkImage": "Najlepiej: skompresuj obraz, zmień rozmiar albo skonwertuj do WebP pod WWW.",
@@ -175,7 +177,14 @@
       "base64": "Koduj lub dekoduj Base64 w przeglądarce.",
       "url": "Percent-encoding URL — encode / decode.",
       "ocr": "Wyodrębnij tekst z PDF (warstwa tekstowa) — pełne OCR skanów jeszcze nie.",
-      "favicon": "Wygeneruj paczkę favicon PNG w ZIP z jednego obrazu."
+      "favicon": "Wygeneruj paczkę favicon PNG w ZIP z jednego obrazu.",
+      "removeBg": "Usuwanie tła zostawia obiekt na przezroczystym PNG.",
+      "splitPdf": "Podziel PDF na mniejsze pliki albo wyodrębnij strony.",
+      "rotatePdf": "Obróć strony PDF bez utraty jakości tekstu.",
+      "watermark": "Dodaj znak wodny na obraz przed publikacją.",
+      "aiHelp": "Do pisania, streszczeń i tłumaczeń użyj narzędzi AI (Premium).",
+      "openFile": "Najpierw otwórz plik w asystencie — zobaczysz format i bezpieczne opcje.",
+      "formatConversion": "Pasuje konwerter {from} → {to}."
     }
   },
   "share": {
