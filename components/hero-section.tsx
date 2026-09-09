@@ -11,7 +11,7 @@ export function HeroSection() {
   const { t, href } = useI18n()
 
   return (
-    <section className="relative overflow-hidden px-4 pb-24 pt-40 md:pb-32 md:pt-48">
+    <section className="relative overflow-hidden px-4 pb-20 pt-36 md:pb-24 md:pt-44">
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 -z-10"
@@ -28,7 +28,11 @@ export function HeroSection() {
           {t.hero.badge}
         </span>
 
-        <h1 className="mt-6 text-balance text-4xl font-semibold leading-[1.1] tracking-tight text-foreground sm:text-6xl md:text-7xl">
+        <p className="mt-6 text-sm font-semibold tracking-[0.2em] text-primary uppercase">
+          Toolando.tech
+        </p>
+
+        <h1 className="mt-3 text-balance text-4xl font-semibold leading-[1.1] tracking-tight text-foreground sm:text-6xl md:text-7xl">
           {t.hero.titleA}{" "}
           <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
             {t.hero.titleHighlight}
@@ -44,7 +48,14 @@ export function HeroSection() {
         </div>
 
         <div className="relative z-10 mt-8 w-full max-w-xl">
+          <p className="mb-2 text-left text-xs font-medium uppercase tracking-wide text-muted-foreground">
+            {t.hero.askLabel ?? "What do you want to do?"}
+          </p>
           <GlobalSearch />
+          <p className="mt-2 text-left text-xs text-muted-foreground">
+            {t.hero.askHint ??
+              'Try “shrink PDF”, “HEIC to JPG”, “remove metadata”…'}
+          </p>
         </div>
 
         <div className="mt-8 w-full">

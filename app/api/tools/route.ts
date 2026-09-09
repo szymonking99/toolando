@@ -26,6 +26,34 @@ export const maxDuration = 300
 
 const MAX_BYTES = 500 * 1024 * 1024
 
+async function zipResults(
+  results: SpecialResult[],
+  zipName: string,
+): Promise<SpecialResult> {
+  const JSZip = (await import("jszip")).default
+  const zip = new JSZip()
+  const used = new Set<string>()
+  for (const r of results) {
+    let name = r.filename
+    if (used.has(name)) {
+      const dot = name.lastIndexOf(".")
+      const stem = dot > 0 ? name.slice(0, dot) : name
+      const ext = dot > 0 ? name.slice(dot) : ""
+      let i = 2
+      while (used.has(`${stem}-${i}${ext}`)) i++
+      name = `${stem}-${i}${ext}`
+    }
+    used.add(name)
+    zip.file(name, r.buffer)
+  }
+  const buffer = await zip.generateAsync({ type: "nodebuffer" })
+  return {
+    buffer,
+    filename: zipName,
+    contentType: "application/zip",
+  }
+}
+
 export async function POST(req: NextRequest) {
   const id = new URL(req.url).searchParams.get("id")
   const tool = getSpecialTool(id ?? "")
@@ -59,7 +87,14 @@ export async function POST(req: NextRequest) {
     switch (tool.engine) {
       case "compress-image": {
         const quality = Number(intake.field("quality") ?? 75)
-        result = await compressImage(files[0].buffer, files[0].name, quality)
+        if (files.length > 1) {
+          const parts = await Promise.all(
+            files.map((f) => compressImage(f.buffer, f.name, quality)),
+          )
+          result = await zipResults(parts, "skompresowane-obrazy.zip")
+        } else {
+          result = await compressImage(files[0].buffer, files[0].name, quality)
+        }
         break
       }
       case "merge-pdf": {
@@ -108,16 +143,37 @@ export async function POST(req: NextRequest) {
       case "resize-image": {
         const width = Number(intake.field("width") ?? 0)
         const height = Number(intake.field("height") ?? 0)
-        result = await resizeImage(
-          files[0].buffer,
-          files[0].name,
-          width || undefined,
-          height || undefined,
-        )
+        if (files.length > 1) {
+          const parts = await Promise.all(
+            files.map((f) =>
+              resizeImage(
+                f.buffer,
+                f.name,
+                width || undefined,
+                height || undefined,
+              ),
+            ),
+          )
+          result = await zipResults(parts, "zmiana-rozmiaru.zip")
+        } else {
+          result = await resizeImage(
+            files[0].buffer,
+            files[0].name,
+            width || undefined,
+            height || undefined,
+          )
+        }
         break
       }
       case "strip-exif": {
-        result = await stripExif(files[0].buffer, files[0].name)
+        if (files.length > 1) {
+          const parts = await Promise.all(
+            files.map((f) => stripExif(f.buffer, f.name)),
+          )
+          result = await zipResults(parts, "bez-exif.zip")
+        } else {
+          result = await stripExif(files[0].buffer, files[0].name)
+        }
         break
       }
       case "watermark-image": {

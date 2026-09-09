@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useMemo, useRef, useState } from "react"
+import Link from "next/link"
 import {
   Upload,
   Download,
@@ -16,56 +17,40 @@ import {
   Wand2,
   CheckCircle2,
   AlertCircle,
+  Shield,
+  Eye,
+  Info,
+  Lightbulb,
 } from "lucide-react"
 import { getConversionsFrom, type ToolConfig } from "@/lib/tools"
 import { uploadAndProcess } from "@/lib/client-upload"
 import { useI18n } from "@/components/i18n-provider"
 import { useFakeProgress } from "@/hooks/use-fake-progress"
+import {
+  detectFileKind,
+  extOf,
+  formatBytes,
+  getFormatTipKey,
+  getRecommendedActions,
+  type FileAction,
+  type FileKind,
+} from "@/lib/file-assistant"
+import { getSpecialMeta } from "@/lib/i18n/tool-meta"
+import { getUtilityMeta } from "@/lib/i18n/utility-meta"
+import type { UtilityToolId } from "@/lib/utility-tools"
+import type { SpecialToolId } from "@/lib/special-tools"
 
-type Kind = "image" | "video" | "audio" | "pdf" | "text" | "binary"
+type Kind = FileKind
 
-const IMAGE_EXT = new Set([
-  "png", "jpg", "jpeg", "gif", "webp", "avif", "bmp", "ico", "svg", "apng",
-])
-const VIDEO_EXT = new Set(["mp4", "webm", "mov", "mkv", "avi", "m4v", "ogv"])
-const AUDIO_EXT = new Set(["mp3", "wav", "ogg", "oga", "flac", "m4a", "aac", "opus", "weba"])
-const TEXT_EXT = new Set([
-  "txt", "md", "markdown", "json", "csv", "tsv", "xml", "yaml", "yml", "html",
-  "htm", "css", "js", "jsx", "ts", "tsx", "mjs", "cjs", "log", "ini", "conf",
-  "cfg", "toml", "sql", "py", "rb", "go", "rs", "java", "c", "h", "cpp", "cc",
-  "cs", "php", "sh", "bash", "zsh", "env", "gitignore", "dockerfile", "svg",
-  "vue", "svelte", "kt", "swift", "r", "lua", "pl", "properties", "gradle",
-])
-
-function formatBytes(bytes: number) {
-  if (bytes < 1024) return `${bytes} B`
-  if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(1)} KB`
-  return `${(bytes / (1024 * 1024)).toFixed(1)} MB`
-}
-
-function extOf(name: string) {
-  const dot = name.lastIndexOf(".")
-  return dot >= 0 ? name.slice(dot + 1).toLowerCase() : ""
-}
-
-function detectKind(file: File): Kind {
-  const ext = extOf(file.name)
-  const mime = file.type
-  if (mime.startsWith("image/") || IMAGE_EXT.has(ext)) return "image"
-  if (mime.startsWith("video/") || VIDEO_EXT.has(ext)) return "video"
-  if (mime.startsWith("audio/") || AUDIO_EXT.has(ext)) return "audio"
-  if (mime === "application/pdf" || ext === "pdf") return "pdf"
-  if (mime.startsWith("text/") || TEXT_EXT.has(ext) || mime.includes("json") || mime.includes("xml"))
-    return "text"
-  return "binary"
-}
-
-const KIND_ICON: Record<Kind, typeof FileText> = {
+const KIND_ICON: Record<string, typeof FileText> = {
   image: ImageIcon,
   video: Film,
   audio: Music,
   pdf: FileType2,
   text: FileText,
+  document: FileText,
+  data: FileText,
+  archive: Binary,
   binary: Binary,
 }
 
@@ -76,6 +61,8 @@ type Loaded = {
   text: string | null
   textTruncated: boolean
   hex: string | null
+  width?: number
+  height?: number
 }
 
 export function UniversalOpener() {
@@ -102,32 +89,37 @@ export function UniversalOpener() {
     if (loaded?.url) URL.revokeObjectURL(loaded.url)
     setLoading(true)
 
-    const kind = detectKind(file)
+    const kind = detectFileKind(file)
     let url: string | null = null
     let text: string | null = null
     let textTruncated = false
     let hex: string | null = null
+    let width: number | undefined
+    let height: number | undefined
 
     try {
       if (kind === "image" || kind === "video" || kind === "audio" || kind === "pdf") {
         url = URL.createObjectURL(file)
-      } else if (kind === "text") {
+        if (kind === "image" && url) {
+          const dims = await readImageSize(url)
+          width = dims?.width
+          height = dims?.height
+        }
+      } else if (kind === "text" || kind === "data") {
         const MAX = 200_000
         const slice = file.slice(0, MAX)
         text = await slice.text()
         textTruncated = file.size > MAX
       } else {
-        // Binary: build a hex + ASCII dump of the first bytes.
         const MAX = 4096
         const buf = new Uint8Array(await file.slice(0, MAX).arrayBuffer())
         hex = toHexDump(buf)
       }
     } catch {
-      // fall back to binary view on any read error
       hex = t.opener.readError
     }
 
-    setLoaded({ file, kind, url, text, textTruncated, hex })
+    setLoaded({ file, kind, url, text, textTruncated, hex, width, height })
     setLoading(false)
   }
 
@@ -176,6 +168,8 @@ export function UniversalOpener() {
       {loaded && (
         <>
           <FileHeader loaded={loaded} onReset={reset} />
+          <FileInspector loaded={loaded} />
+          <ActionsPanel loaded={loaded} />
           <ConversionPanel file={loaded.file} />
           <Preview loaded={loaded} />
         </>
@@ -184,15 +178,155 @@ export function UniversalOpener() {
   )
 }
 
-function extName(name: string) {
-  const dot = name.lastIndexOf(".")
-  return dot >= 0 ? name.slice(dot + 1).toLowerCase() : ""
+function readImageSize(url: string): Promise<{ width: number; height: number } | null> {
+  return new Promise((resolve) => {
+    const img = new Image()
+    img.onload = () => resolve({ width: img.naturalWidth, height: img.naturalHeight })
+    img.onerror = () => resolve(null)
+    img.src = url
+  })
+}
+
+function FileInspector({ loaded }: { loaded: Loaded }) {
+  const { t } = useI18n()
+  const ext = extOf(loaded.file.name)
+  const tipKey = getFormatTipKey(ext)
+  const tip =
+    tipKey && (t.assistant?.tips as Record<string, string> | undefined)?.[tipKey]
+
+  return (
+    <div className="rounded-xl border border-white/10 bg-white/[0.03] p-4">
+      <div className="mb-3 flex items-center gap-2">
+        <Info className="size-4 text-primary" />
+        <h3 className="text-sm font-semibold text-foreground">
+          {t.assistant?.inspectorTitle ?? "File information"}
+        </h3>
+      </div>
+      <dl className="grid gap-2 text-sm sm:grid-cols-2">
+        <div>
+          <dt className="text-xs text-muted-foreground">{t.assistant?.name ?? "Name"}</dt>
+          <dd className="truncate font-medium">{loaded.file.name}</dd>
+        </div>
+        <div>
+          <dt className="text-xs text-muted-foreground">{t.assistant?.size ?? "Size"}</dt>
+          <dd className="font-medium">{formatBytes(loaded.file.size)}</dd>
+        </div>
+        <div>
+          <dt className="text-xs text-muted-foreground">{t.assistant?.type ?? "Type"}</dt>
+          <dd className="font-medium uppercase">{ext || "—"}</dd>
+        </div>
+        <div>
+          <dt className="text-xs text-muted-foreground">MIME</dt>
+          <dd className="font-medium">{loaded.file.type || "—"}</dd>
+        </div>
+        {loaded.width && loaded.height ? (
+          <div className="sm:col-span-2">
+            <dt className="text-xs text-muted-foreground">
+              {t.assistant?.resolution ?? "Resolution"}
+            </dt>
+            <dd className="font-medium">
+              {loaded.width} × {loaded.height} px
+            </dd>
+          </div>
+        ) : null}
+      </dl>
+      {tip && (
+        <p className="mt-3 flex items-start gap-2 rounded-lg border border-primary/20 bg-primary/[0.06] px-3 py-2 text-xs leading-relaxed text-foreground/90">
+          <Lightbulb className="mt-0.5 size-3.5 shrink-0 text-primary" />
+          {tip}
+        </p>
+      )}
+    </div>
+  )
+}
+
+function ActionsPanel({ loaded }: { loaded: Loaded }) {
+  const { t, href, locale } = useI18n()
+  const actions = useMemo(
+    () => getRecommendedActions(loaded.file.name, loaded.kind),
+    [loaded.file.name, loaded.kind],
+  )
+
+  const labeled = actions.map((action) => ({
+    ...action,
+    display: actionLabel(action, locale, t),
+  }))
+
+  return (
+    <div className="rounded-xl border border-white/10 bg-white/[0.03] p-4">
+      <div className="mb-3 flex items-center gap-2">
+        <Eye className="size-4 text-primary" />
+        <h3 className="text-sm font-semibold text-foreground">
+          {t.assistant?.actionsTitle ?? "What you can do"}
+        </h3>
+      </div>
+      <p className="mb-3 text-xs text-muted-foreground">
+        {t.assistant?.actionsSubtitle ??
+          "Toolando recognised the format and suggests useful operations — you don’t have to convert if you only need a preview."}
+      </p>
+      <div className="flex flex-wrap gap-2">
+        {labeled.map((action) => {
+          if (action.kind === "preview") {
+            return (
+              <span
+                key={action.id}
+                className="inline-flex items-center gap-1.5 rounded-lg border border-primary/30 bg-primary/10 px-3 py-1.5 text-sm font-medium text-primary"
+              >
+                <Eye className="size-3.5" />
+                {action.display}
+              </span>
+            )
+          }
+          const Icon =
+            action.kind === "special" && action.id === "usun-exif"
+              ? Shield
+              : ArrowRight
+          return (
+            <Link
+              key={action.id}
+              href={href(action.href)}
+              className="group inline-flex items-center gap-1.5 rounded-lg border border-white/10 bg-white/[0.04] px-3 py-1.5 text-sm font-medium text-foreground transition-colors hover:border-primary/50 hover:bg-primary/10"
+            >
+              <Icon className="size-3.5 text-primary" />
+              {action.display}
+            </Link>
+          )
+        })}
+      </div>
+    </div>
+  )
+}
+
+function actionLabel(
+  action: FileAction,
+  locale: string,
+  t: ReturnType<typeof useI18n>["t"],
+): string {
+  if (action.kind === "preview") {
+    return t.assistant?.preview ?? "Preview here"
+  }
+  if (action.kind === "convert" && action.to) {
+    return `${t.assistant?.convertTo ?? "Convert to"} ${action.to}`
+  }
+  if (action.kind === "special") {
+    const meta = getSpecialMeta(locale as never, action.id as SpecialToolId)
+    return meta?.name ?? action.label
+  }
+  if (action.kind === "utility") {
+    try {
+      const meta = getUtilityMeta(locale as never, action.id as UtilityToolId)
+      return meta?.name ?? action.label
+    } catch {
+      return action.label
+    }
+  }
+  return action.label
 }
 
 function ConversionPanel({ file }: { file: File }) {
   const { t } = useI18n()
   const conversions = useMemo(
-    () => getConversionsFrom(extName(file.name)),
+    () => getConversionsFrom(extOf(file.name)),
     [file],
   )
   const [busyId, setBusyId] = useState<string | null>(null)
@@ -315,7 +449,11 @@ function ConversionPanel({ file }: { file: File }) {
 
 function FileHeader({ loaded, onReset }: { loaded: Loaded; onReset: () => void }) {
   const { t } = useI18n()
-  const Icon = KIND_ICON[loaded.kind]
+  const Icon = KIND_ICON[loaded.kind] ?? Binary
+  const kindLabel =
+    (t.opener.kinds as Record<string, string>)[loaded.kind] ??
+    loaded.kind
+
   return (
     <div className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3">
       <div className="flex min-w-0 items-center gap-3">
@@ -327,8 +465,11 @@ function FileHeader({ loaded, onReset }: { loaded: Loaded; onReset: () => void }
             {loaded.file.name}
           </p>
           <p className="text-xs text-muted-foreground">
-            {t.opener.kinds[loaded.kind]} • {formatBytes(loaded.file.size)}
+            {kindLabel} • {formatBytes(loaded.file.size)}
             {loaded.file.type ? ` • ${loaded.file.type}` : ""}
+            {loaded.width && loaded.height
+              ? ` • ${loaded.width}×${loaded.height}`
+              : ""}
           </p>
         </div>
       </div>
@@ -410,7 +551,7 @@ function Preview({ loaded }: { loaded: Loaded }) {
     )
   }
 
-  if (kind === "text" && text !== null) {
+  if ((kind === "text" || kind === "data") && text !== null) {
     return (
       <div className="overflow-hidden rounded-xl border border-white/10 bg-[#0b1020]">
         <pre className="max-h-[70vh] overflow-auto p-4 text-xs leading-relaxed text-foreground/90">
@@ -425,7 +566,6 @@ function Preview({ loaded }: { loaded: Loaded }) {
     )
   }
 
-  // Binary fallback
   return (
     <div className="overflow-hidden rounded-xl border border-white/10 bg-[#0b1020]">
       <div className="border-b border-white/10 px-4 py-2 text-xs font-medium text-muted-foreground">

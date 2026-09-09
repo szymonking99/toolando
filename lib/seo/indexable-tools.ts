@@ -1,14 +1,15 @@
 import { getTool, tools } from "@/lib/tools"
 import { getAiTool } from "@/lib/ai-tools"
 import { getSpecialTool, specialTools } from "@/lib/special-tools"
-import { getUtilityTool } from "@/lib/utility-tools"
+import { getUtilityTool, utilityTools } from "@/lib/utility-tools"
 
 /**
  * Toolando is a converter product again: popular + long-tail X→Y pages
- * may appear in search (PL locale only via publisher-index).
+ * may appear in search (indexed locales via publisher-index).
  *
  * Format/glossary/comparison hubs stay noindex via robots + page meta.
- * AI/utility calculators stay noindex (thin template risk).
+ * Most AI/utility calculators stay noindex (thin template risk) except a
+ * small allowlist of high-intent utilities.
  */
 
 /** Explicit high-intent converters — always indexed when supported. */
@@ -22,6 +23,8 @@ export const INDEXABLE_TOOL_IDS = new Set([
   "jpg-to-png",
   "jpg-to-webp",
   "heic-to-jpg",
+  "heic-to-png",
+  "heic-to-webp",
   "pdf-to-jpg",
   "pdf-to-docx",
   "docx-to-pdf",
@@ -32,14 +35,18 @@ export const INDEXABLE_TOOL_IDS = new Set([
   "mkv-to-mp4",
   "webp-to-jpg",
   "png-to-webp",
+  "jpg-to-avif",
+  "png-to-avif",
   "gif-to-mp4",
   "mp4-to-gif",
   "wav-to-flac",
   "ogg-to-mp3",
   "m4a-to-mp3",
   "pdf-to-png",
-  "jpg-to-pdf",
-  "png-to-pdf",
+  "csv-to-json",
+  "json-to-csv",
+  "md-to-html",
+  "html-to-md",
 ])
 
 export const INDEXABLE_SPECIAL_IDS = new Set([
@@ -51,6 +58,25 @@ export const INDEXABLE_SPECIAL_IDS = new Set([
   "podzial-pdf",
   "kompresja-pdf",
   "usuwanie-tla",
+  "pdf-do-tekstu",
+  "numeracja-pdf",
+  "kompresja-wideo",
+  "znak-wodny",
+])
+
+/** High-intent utilities that deserve their own SERP entry. */
+export const INDEXABLE_UTILITY_IDS = new Set([
+  "inspektor-prywatnosci",
+  "generator-hasel",
+  "generator-hash",
+  "kalkulator-vat",
+  "json-formatter",
+  "dekoder-jwt",
+  "base64",
+  "url-encoder",
+  "csv-json",
+  "generator-favicon",
+  "kalkulator-rozmiaru-pliku",
 ])
 
 /**
@@ -74,9 +100,15 @@ export function isIndexableSpecial(id: string): boolean {
   return INDEXABLE_SPECIAL_IDS.has(id)
 }
 
+export function isIndexableUtility(id: string): boolean {
+  if (!getUtilityTool(id)) return false
+  return INDEXABLE_UTILITY_IDS.has(id)
+}
+
 /** Converter, special, utility, or AI page that may appear in search. */
 export function isPubliclyIndexableTool(id: string): boolean {
-  if (getAiTool(id) || getUtilityTool(id)) return false
+  if (getAiTool(id)) return false
+  if (getUtilityTool(id)) return isIndexableUtility(id)
   if (getSpecialTool(id)) return isIndexableSpecial(id)
   return isIndexableTool(id)
 }
@@ -87,5 +119,8 @@ export function listIndexableToolIds(): string[] {
   const specials = specialTools
     .filter((t) => isIndexableSpecial(t.id))
     .map((t) => t.id)
-  return [...converters, ...specials]
+  const utilities = utilityTools
+    .filter((t) => isIndexableUtility(t.id))
+    .map((t) => t.id)
+  return [...converters, ...specials, ...utilities]
 }

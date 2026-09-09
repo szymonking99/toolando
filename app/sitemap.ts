@@ -3,10 +3,11 @@ import { INDEXABLE_GUIDE_SLUGS, INDEXED_LOCALES } from "@/lib/seo/publisher-inde
 import { languageAlternates } from "@/lib/seo/alternates"
 import { SITE_URL } from "@/lib/seo/structured-data"
 import { listIndexableToolIds } from "@/lib/seo/indexable-tools"
+import { AUDIENCE_IDS } from "@/lib/audiences"
 
 /**
- * Product-first sitemap: PL converters + specials + flagship guides.
- * Format/glossary/comparison templates stay out (robots + noindex).
+ * Product-first sitemap: indexed locales + high-intent tools + flagship guides
+ * + discovery surfaces (/otworz, /dla/*). Thin format/glossary hubs stay out.
  */
 const STATIC_PATHS: {
   path: string
@@ -15,13 +16,17 @@ const STATIC_PATHS: {
 }[] = [
   { path: "", priority: 1, changeFrequency: "weekly" },
   { path: "/tools", priority: 0.95, changeFrequency: "weekly" },
-  { path: "/poradniki", priority: 0.7, changeFrequency: "weekly" },
-  { path: "/o-mnie", priority: 0.6, changeFrequency: "monthly" },
+  { path: "/otworz", priority: 0.95, changeFrequency: "weekly" },
+  { path: "/poradniki", priority: 0.8, changeFrequency: "weekly" },
+  { path: "/o-mnie", priority: 0.55, changeFrequency: "monthly" },
   { path: "/jak-to-dziala", priority: 0.6, changeFrequency: "monthly" },
-  { path: "/kontakt", priority: 0.5, changeFrequency: "monthly" },
-  { path: "/faq", priority: 0.4, changeFrequency: "monthly" },
-  { path: "/regulamin", priority: 0.3, changeFrequency: "yearly" },
-  { path: "/polityka-prywatnosci", priority: 0.3, changeFrequency: "yearly" },
+  { path: "/redakcja", priority: 0.5, changeFrequency: "monthly" },
+  { path: "/prywatnosc", priority: 0.55, changeFrequency: "monthly" },
+  { path: "/kontakt", priority: 0.4, changeFrequency: "monthly" },
+  { path: "/faq", priority: 0.45, changeFrequency: "monthly" },
+  { path: "/wsparcie", priority: 0.35, changeFrequency: "monthly" },
+  { path: "/regulamin", priority: 0.2, changeFrequency: "yearly" },
+  { path: "/polityka-prywatnosci", priority: 0.25, changeFrequency: "yearly" },
 ]
 
 function languagesFor(path: string): Record<string, string> {
@@ -44,13 +49,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       })
     }
 
+    for (const id of AUDIENCE_IDS) {
+      const path = `/dla/${id}`
+      entries.push({
+        url: `${SITE_URL}/${locale}${path}`,
+        lastModified: now,
+        changeFrequency: "monthly",
+        priority: 0.65,
+        alternates: { languages: languagesFor(path) },
+      })
+    }
+
     for (const id of toolIds) {
       const path = `/tools/${id}`
       entries.push({
         url: `${SITE_URL}/${locale}${path}`,
         lastModified: now,
         changeFrequency: "monthly",
-        priority: 0.7,
+        priority: 0.75,
         alternates: { languages: languagesFor(path) },
       })
     }
@@ -61,7 +77,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         url: `${SITE_URL}/${locale}${path}`,
         lastModified: now,
         changeFrequency: "monthly",
-        priority: 0.55,
+        priority: 0.7,
         alternates: { languages: languagesFor(path) },
       })
     }

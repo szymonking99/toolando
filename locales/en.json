@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Toolando.tech — converters with test-based guides, not an X→Y farm",
-    "description": "Format guides, comparisons and converters written after testing real files. Files are not stored. Author: Szymon."
+    "title": "Toolando.tech — HEIC to JPG, PDF tools, EXIF remover online",
+    "description": "Convert HEIC, compress PDF, strip EXIF and open files in the browser. File assistant, batch ZIP, test-based guides. Files are not stored."
   },
   "socialProof": {
     "toolsCount": "Guides from real conversion tests — not an X→Y page farm",
@@ -138,20 +138,45 @@
     "premium": "Premium",
     "guides": "Guides",
     "faq": "FAQ",
-    "more": "More"
+    "more": "More",
+    "fileAssistant": "File assistant"
   },
   "hero": {
-    "badge": "Guides, formats and converters from one author",
-    "titleA": "Your online tools in",
-    "titleHighlight": "one place",
-    "subtitle": "The guides explain when to convert — and when to keep the original. Tools run in the browser, no install.",
+    "badge": "Drop a file. Toolando knows what you can do.",
+    "titleA": "What do you want",
+    "titleHighlight": "to do?",
+    "subtitle": "Search a problem, drop a file, or open a toolkit. Privacy-first tools in the browser — and guides that say when not to convert.",
     "browse": "Browse tools",
     "learnMore": "Learn more",
-    "convertCta": "Convert a file now"
+    "convertCta": "Drop a file",
+    "askLabel": "What do you want to do?",
+    "askHint": "Try “shrink PDF”, “HEIC to JPG”, “remove metadata”, “mp3 to wav”…"
   },
   "search": {
-    "placeholder": "Search tools (e.g. mp3 wav, currency, qr)…",
-    "noResults": "No tools found. Try a different query."
+    "placeholder": "What do you want to do? e.g. heic to jpg, shrink PDF…",
+    "noResults": "No tools found. Try a different query.",
+    "intents": {
+      "pdfWord": "You probably want PDF → Word (DOCX) so you can edit the text.",
+      "shrinkImage": "Best options: compress the image, resize it, or convert to WebP for the web.",
+      "iphone": "iPhone photos are often HEIC. You can preview here or convert to JPG for Windows.",
+      "mp3Wav": "MP3 → WAV gives you an uncompressed file for editing.",
+      "privacy": "Start with the privacy inspector, then strip EXIF before publishing.",
+      "videoWeb": "For websites, WebM (or a compressed MP4) is usually the right fit.",
+      "csvExcel": "CSV ↔ JSON locally, or convert CSV to another data format in converters.",
+      "dwg": "We can try a local preview — CAD formats are limited; download the original if needed.",
+      "shrinkPdf": "Use PDF compression, or split large documents into smaller files.",
+      "mergePdf": "Merge PDFs keeps page order — add at least two files.",
+      "password": "Generate a strong password locally, then check its strength.",
+      "hash": "Hash text or verify checksums (SHA-256 / MD5) in your browser.",
+      "webImage": "WebP or AVIF usually beats JPG/PNG for websites — keep originals when quality matters.",
+      "vat": "Net ↔ gross VAT calculator — pick your rate.",
+      "jwt": "Decode a JWT payload locally — nothing is sent to a server.",
+      "json": "Format / validate JSON, or convert CSV ↔ JSON.",
+      "base64": "Encode or decode Base64 in the browser.",
+      "url": "Percent-encode or decode URL strings.",
+      "ocr": "Extract text from a PDF (text layer) — not full OCR for scans yet.",
+      "favicon": "Generate a multi-size favicon pack as a ZIP from one image."
+    }
   },
   "share": {
     "label": "Share",
@@ -210,16 +235,16 @@
     }
   },
   "opener": {
-    "title": "Universal file opener",
-    "subtitle": "Open and preview literally any file format directly in your browser — no installation and no uploading your data to a server.",
-    "cta": "Open a file",
+    "title": "Universal File Assistant",
+    "subtitle": "Drop any file. Toolando shows what it is, what it reveals, and what you can do — convert, compress, strip metadata, or just preview. Sometimes you should not convert.",
+    "cta": "Open the assistant",
     "kindImages": "Images",
     "kindVideo": "Video",
     "kindAudio": "Audio",
     "kindDocs": "PDF, code and data",
     "readError": "Couldn't read the file contents.",
-    "dropAny": "Drag any file here or click to choose",
-    "dropHint": "Images, video, audio, PDF, documents, code, data — any format. Files are opened locally in your browser and never uploaded anywhere.",
+    "dropAny": "Drop a file — Toolando will recognise it",
+    "dropHint": "Preview stays local in your browser. Conversions upload only for that job, then files are deleted.",
     "noConverter": "We don't have a converter for this format yet — but you can preview and download the file below.",
     "convertTo": "Convert to another format",
     "optionOne": "option",
@@ -236,7 +261,10 @@
       "audio": "Audio",
       "pdf": "PDF document",
       "text": "Text / code",
-      "binary": "Binary file"
+      "binary": "Binary file",
+      "document": "Document",
+      "data": "Data",
+      "archive": "Archive"
     }
   },
   "ai": {
@@ -329,7 +357,9 @@
     "instagram": "Instagram",
     "messenger": "Messenger",
     "youtube": "YouTube",
-    "emailAria": "Opens your email app to write to us"
+    "emailAria": "Opens your email app to write to us",
+    "fileAssistant": "File assistant",
+    "privacyTools": "File privacy"
   },
   "ad": {
     "label": "Advertisement",
@@ -352,9 +382,9 @@
     "thanks": "Every donation and every email with feedback really helps. Thank you."
   },
   "openerPage": {
-    "eyebrow": "Preview and convert",
-    "title": "Universal file opener and converter",
-    "subtitle": "Open literally any file format — images, video, audio, PDF, documents, code and data show up instantly. Once opened, Toolando.tech immediately suggests every sensible format you can convert the file to with one click.",
+    "eyebrow": "Toolando knows your file",
+    "title": "Universal File Assistant",
+    "subtitle": "Upload once. See file info, privacy risks, and the best next actions — without hunting the catalogue.",
     "back": "All tools",
     "drop": "Drag and drop a file here",
     "or": "or",
@@ -423,7 +453,10 @@
     "faqTitle": "Frequently asked questions",
     "qualityTitle": "Conversion quality — what to know",
     "tipsTitle": "Practical tips",
-    "readFormatGuide": "Full format guide"
+    "readFormatGuide": "Full format guide",
+    "batchHint": "You can select multiple files — results download as a ZIP.",
+    "filesSelected": "files selected",
+    "batchDone": "Batch done — download the ZIP."
   },
   "cookieConsent": {
     "title": "Cookies",
@@ -924,5 +957,120 @@
   "favorites": {
     "add": "Add to favorites",
     "remove": "Favorite"
+  },
+  "assistant": {
+    "inspectorTitle": "File information",
+    "actionsTitle": "What you can do",
+    "actionsSubtitle": "Recognised format with suggested operations. You do not have to convert if you only need a preview.",
+    "name": "Name",
+    "size": "Size",
+    "type": "Type",
+    "resolution": "Resolution",
+    "preview": "Preview here",
+    "convertTo": "Convert to",
+    "navHint": "File assistant",
+    "homeTitle": "Drop a file — Toolando knows the rest",
+    "homeSubtitle": "We detect the format, show metadata risks, and suggest convert / compress / strip EXIF / preview. Sometimes keeping the original is better.",
+    "homeCta": "Open File Assistant",
+    "tips": {
+      "heic": "This is likely an iPhone HEIC photo. Preview it here, convert to JPG for Windows, or keep HEIC if you care about quality and size.",
+      "flac": "FLAC is lossless. Convert to MP3 only when you need smaller files or wider player support.",
+      "png": "PNG is great for graphics with transparency. For photos on the web, WebP/AVIF is usually smaller.",
+      "pdf": "You may not need to convert — preview, compress, merge, or extract text instead.",
+      "webImage": "Already a modern web format. Convert only if a target system requires JPG/PNG.",
+      "wav": "WAV is uncompressed — ideal for editing. Convert to MP3/AAC for sharing."
+    }
+  },
+  "homeHubs": {
+    "title": "Popular now",
+    "subtitle": "Jump into a category — or drop a file and let Toolando decide.",
+    "items": {
+      "pdf": "PDF",
+      "image": "Images",
+      "audio": "Audio",
+      "video": "Video",
+      "documents": "Documents",
+      "privacy": "Privacy",
+      "web": "Web",
+      "calculators": "Calculators"
+    }
+  },
+  "audiences": {
+    "title": "Toolando for professionals",
+    "subtitle": "Curated toolkits for how you work — not a wall of 1000 converters.",
+    "cta": "Open toolkit",
+    "eyebrow": "Toolando for professionals",
+    "open": "Open",
+    "items": {
+      "fotograf": {
+        "title": "Photographers",
+        "desc": "HEIC, EXIF, resize, WebP/AVIF and background removal.",
+        "intro": "From iPhone HEIC to web-ready WebP — plus privacy tools before you publish."
+      },
+      "webmaster": {
+        "title": "Webmasters & developers",
+        "desc": "WebP/AVIF, favicons, minifiers, JSON/CSV and URL tools.",
+        "intro": "Ship faster assets and tidy data formats without leaving the browser."
+      },
+      "biuro": {
+        "title": "Office & admin",
+        "desc": "PDF ↔ Word, OCR text, merge, compress, page numbers, VAT.",
+        "intro": "Everyday document ops and calculators for office workflows."
+      },
+      "student": {
+        "title": "Students",
+        "desc": "PDF, Markdown, word count, dates, units and secure passwords.",
+        "intro": "Study-friendly tools that stay private in the browser."
+      },
+      "creator": {
+        "title": "Content creators",
+        "desc": "Video compress/trim, audio extract, subtitles and web images.",
+        "intro": "Prep clips and assets for social and the web."
+      },
+      "ecommerce": {
+        "title": "E-commerce",
+        "desc": "Background removal, product images, CSV/JSON, VAT and ROI.",
+        "intro": "Catalogue and margin tools for shop operators."
+      }
+    }
+  },
+  "privacyTool": {
+    "intro": "Drop a photo or PDF. We scan metadata locally in your browser — the file never leaves your device.",
+    "pickFile": "File",
+    "drop": "Drop JPG, PNG or PDF — or click to choose",
+    "cta": "Choose a file",
+    "error": "Could not inspect this file.",
+    "summaryWarn": "Before publishing, remove sensitive metadata (especially GPS).",
+    "summaryInfo": "Some metadata found — review before sharing publicly.",
+    "summaryClean": "No sensitive metadata found in the scanned portion.",
+    "stripExif": "Remove EXIF now"
+  },
+  "seoDiscover": {
+    "title": "Most-searched problems",
+    "subtitle": "Jump straight to a tool or a short guide — not a wall of 1000 converters.",
+    "toolCta": "Open tool",
+    "guideCta": "Guide",
+    "items": {
+      "heic": {
+        "title": "iPhone photo won’t open on Windows",
+        "desc": "Usually HEIC. Preview here or convert to JPG — batch many files into a ZIP."
+      },
+      "exif": {
+        "title": "What does this photo reveal about me?",
+        "desc": "Check GPS, camera and dates locally, then strip EXIF before publishing."
+      },
+      "pdf": {
+        "title": "PDF too large for email",
+        "desc": "Compress a PDF, merge files, or split pages."
+      },
+      "webp": {
+        "title": "Images too heavy for the web",
+        "desc": "JPG/PNG → WebP or AVIF. Sometimes keep the original — read the guide."
+      },
+      "assistant": {
+        "title": "I don’t know which tool I need",
+        "desc": "Drop a file — Toolando detects the format and suggests actions."
+      }
+    }
   }
 }

@@ -4,21 +4,23 @@ import { getDictionary } from "@/lib/i18n/dictionaries"
 import { getGuide } from "@/lib/i18n/guides"
 import type { GuideSlug } from "@/lib/i18n/guides"
 import { localeHref } from "@/lib/i18n/href"
+import { INDEXABLE_GUIDE_SLUGS } from "@/lib/seo/publisher-index"
 
+/** Prefer high-intent guides first on the homepage. */
 const FEATURED_GUIDE_SLUGS: GuideSlug[] = [
+  "heic-iphone-jpg",
+  "remove-exif-privacy-guide",
   "when-not-to-convert-files",
   "online-file-security",
-  "heic-iphone-jpg",
-  "docx-pdf-workflow",
-  "lossy-vs-lossless",
-  "extract-audio-from-video",
-  "mp3-vs-wav",
   "compress-images-without-quality-loss",
-  "remove-exif-privacy-guide",
+  "merge-pdf-online-guide",
   "prepare-images-for-web",
-  "flac-music-archive-guide",
-  "toolando-editorial-standards",
-]
+  "pdf-vs-docx",
+  "webp-avif-images",
+  "extract-audio-from-video",
+  "docx-pdf-workflow",
+  "split-pdf-pages-guide",
+].filter((slug) => INDEXABLE_GUIDE_SLUGS.has(slug))
 
 export async function FeaturedGuidesSection({
   locale,

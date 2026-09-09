@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react"
 import Link from "next/link"
-import { Search, Command } from "lucide-react"
+import { Search, Command, Lightbulb } from "lucide-react"
 import { tools } from "@/lib/tools"
 import { utilityTools } from "@/lib/utility-tools"
 import { specialTools } from "@/lib/special-tools"
@@ -11,16 +11,26 @@ import { getUtilityMeta } from "@/lib/i18n/utility-meta"
 import { getSpecialMeta, getAiCategoryLabel } from "@/lib/i18n/tool-meta"
 import { getAiMeta } from "@/lib/i18n/ai-meta"
 import { useI18n } from "@/components/i18n-provider"
+import {
+  matchSearchIntents,
+  TOOL_KEYWORDS,
+} from "@/lib/search-intents"
 
 type SearchResult = {
   id: string
   title: string
   hint: string
   premium?: boolean
+  href?: string
+  keywords?: string[]
+  score?: number
 }
 
-function safeLower(value: string | undefined | null): string {
-  return (value ?? "").toLowerCase()
+function normalize(s: string) {
+  return s
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
 }
 
 export function GlobalSearch({
@@ -42,6 +52,7 @@ export function GlobalSearch({
         id: tool.id,
         title: `${tool.from.toUpperCase()} → ${tool.to.toUpperCase()}`,
         hint: tool.category,
+        keywords: TOOL_KEYWORDS[tool.id] ?? [],
       }))
 
     const utilities: SearchResult[] = utilityTools.map((tool) => {
@@ -50,6 +61,7 @@ export function GlobalSearch({
         id: tool.id,
         title: meta?.name ?? tool.id,
         hint: meta?.category ?? "",
+        keywords: TOOL_KEYWORDS[tool.id] ?? [],
       }
     })
 
@@ -59,6 +71,7 @@ export function GlobalSearch({
         id: tool.id,
         title: meta?.name ?? tool.id,
         hint: meta?.category ?? "",
+        keywords: TOOL_KEYWORDS[tool.id] ?? [],
       }
     })
 
@@ -68,23 +81,62 @@ export function GlobalSearch({
       title: aiMeta[tool.id]?.name ?? tool.id,
       hint: getAiCategoryLabel(locale, tool.id),
       premium: true,
+      keywords: TOOL_KEYWORDS[tool.id] ?? [],
     }))
 
-    return [...utilities, ...specials, ...ai, ...converters]
-  }, [locale])
+    const opener: SearchResult = {
+      id: "otworz",
+      title: t.opener?.title ?? "Universal file opener",
+      hint: t.assistant?.navHint ?? "File assistant",
+      href: "/otworz",
+      keywords: ["open file", "preview", "otworz", "heic", "dwg", "podglad"],
+    }
+
+    return [opener, ...utilities, ...specials, ...ai, ...converters]
+  }, [locale, t])
+
+  const intentHits = useMemo(() => matchSearchIntents(query), [query])
+
+  const intentAnswer = useMemo(() => {
+    const top = intentHits[0]
+    if (!top) return null
+    const answers = t.search?.intents as Record<string, string> | undefined
+    return answers?.[top.intent.answerKey] ?? null
+  }, [intentHits, t])
 
   const results = useMemo(() => {
-    const q = query.trim().toLowerCase()
+    const q = normalize(query.trim())
     if (q.length < 2) return []
-    return corpus
-      .filter(
-        (item) =>
-          safeLower(item.id).includes(q) ||
-          safeLower(item.title).includes(q) ||
-          safeLower(item.hint).includes(q),
-      )
+
+    const boosted = new Map<string, number>()
+    for (const hit of intentHits.slice(0, 3)) {
+      for (const id of hit.intent.toolIds) {
+        boosted.set(id, (boosted.get(id) ?? 0) + hit.score)
+      }
+    }
+
+    const scored = corpus
+      .map((item) => {
+        const id = normalize(item.id)
+        const title = normalize(item.title)
+        const hint = normalize(item.hint)
+        const kw = (item.keywords ?? []).map(normalize).join(" ")
+        let score = boosted.get(item.id) ?? 0
+        if (id === q || title === q) score += 80
+        if (id.includes(q) || title.includes(q)) score += 40
+        if (hint.includes(q) || kw.includes(q)) score += 25
+        const tokens = q.split(/\s+/).filter((t) => t.length > 1)
+        for (const tok of tokens) {
+          if (id.includes(tok) || title.includes(tok) || kw.includes(tok)) score += 8
+        }
+        return { ...item, score }
+      })
+      .filter((item) => item.score > 0)
+      .sort((a, b) => b.score! - a.score!)
       .slice(0, 12)
-  }, [corpus, query])
+
+    return scored
+  }, [corpus, query, intentHits])
 
   useEffect(() => {
     function onKey(e: KeyboardEvent) {
@@ -149,29 +201,36 @@ export function GlobalSearch({
           </span>
         )}
       </div>
-      {open && results.length > 0 && (
-        <ul
-          role="listbox"
-          className="absolute z-[70] mt-2 max-h-80 w-full overflow-auto rounded-xl border border-white/10 bg-background/95 shadow-xl backdrop-blur-md"
-        >
-          {results.map((tool) => (
-            <li key={tool.id} role="option">
-              <Link
-                href={href(`/tools/${tool.id}`)}
-                onClick={onSelect}
-                className="flex items-center justify-between gap-2 px-4 py-2.5 text-sm transition-colors hover:bg-white/[0.06]"
-              >
-                <span className="font-medium text-foreground">{tool.title}</span>
-                <span className="shrink-0 text-xs text-muted-foreground">
-                  {tool.premium ? "Premium · " : ""}
-                  {tool.hint}
-                </span>
-              </Link>
-            </li>
-          ))}
-        </ul>
+      {open && (results.length > 0 || intentAnswer) && (
+        <div className="absolute z-[70] mt-2 w-full overflow-hidden rounded-xl border border-white/10 bg-background/95 shadow-xl backdrop-blur-md">
+          {intentAnswer && (
+            <div className="flex items-start gap-2 border-b border-white/10 px-4 py-3 text-sm text-foreground/90">
+              <Lightbulb className="mt-0.5 size-4 shrink-0 text-primary" />
+              <p>{intentAnswer}</p>
+            </div>
+          )}
+          {results.length > 0 && (
+            <ul role="listbox" className="max-h-80 overflow-auto">
+              {results.map((tool) => (
+                <li key={tool.id} role="option">
+                  <Link
+                    href={href(tool.href ?? `/tools/${tool.id}`)}
+                    onClick={onSelect}
+                    className="flex items-center justify-between gap-2 px-4 py-2.5 text-sm transition-colors hover:bg-white/[0.06]"
+                  >
+                    <span className="font-medium text-foreground">{tool.title}</span>
+                    <span className="shrink-0 text-xs text-muted-foreground">
+                      {tool.premium ? "Premium · " : ""}
+                      {tool.hint}
+                    </span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
       )}
-      {open && query.length >= 2 && results.length === 0 && (
+      {open && query.length >= 2 && results.length === 0 && !intentAnswer && (
         <p className="absolute z-[70] mt-2 w-full rounded-xl border border-white/10 bg-background/95 px-4 py-3 text-sm text-muted-foreground shadow-lg backdrop-blur-md">
           {t.search.noResults}
         </p>

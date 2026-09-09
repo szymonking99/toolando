@@ -1,22 +1,31 @@
 # Toolando.tech
 
-> Free online file converters with format guides, comparisons and a technical glossary.
+> Browser-based file tools with privacy-first converters and test-based guides.
 
-Toolando helps users convert audio, video, image and document files in the browser.
-Indexed locales: pl, en, de, es, uk.
+Toolando helps people convert, inspect and prepare files without installing software.
+Primary indexed locales: pl, en. Other locales are available in the UI but not advertised to search engines.
 
-## Main hubs
+## Main entry points
 
-- Home: https://toolando.tech/pl
-- All tools: https://toolando.tech/pl/tools
-- Format encyclopedia: https://toolando.tech/pl/formaty
-- Conversion guides: https://toolando.tech/pl/poradniki
-- Format comparisons: https://toolando.tech/pl/porownania
-- Glossary: https://toolando.tech/pl/slownik
+- Home (PL): https://www.toolando.tech/pl
+- Home (EN): https://www.toolando.tech/en
+- File Assistant: https://www.toolando.tech/pl/otworz
+- All tools: https://www.toolando.tech/pl/tools
+- Guides: https://www.toolando.tech/pl/poradniki
+- Privacy inspector: https://www.toolando.tech/pl/tools/inspektor-prywatnosci
+- HEIC → JPG: https://www.toolando.tech/pl/tools/heic-to-jpg
+- Remove EXIF: https://www.toolando.tech/pl/tools/usun-exif
+- Compress PDF: https://www.toolando.tech/pl/tools/kompresja-pdf
+
+## Profession toolkits
+
+- Photographers: https://www.toolando.tech/pl/dla/fotograf
+- Webmasters: https://www.toolando.tech/pl/dla/webmaster
+- Office: https://www.toolando.tech/pl/dla/biuro
 
 ## RSS
 
-- https://toolando.tech/feed.xml
+- https://www.toolando.tech/feed.xml
 
 ## Contact
 

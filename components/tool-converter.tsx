@@ -8,6 +8,7 @@ import { useI18n } from "@/components/i18n-provider"
 import { useFakeProgress } from "@/hooks/use-fake-progress"
 import { NextStepsPanel } from "@/components/next-steps-panel"
 import { recordToolVisit } from "@/lib/client-preferences"
+import JSZip from "jszip"
 
 type Status = "idle" | "uploading" | "converting" | "done" | "error"
 
@@ -20,31 +21,35 @@ function formatBytes(bytes: number) {
 export function ToolConverter({ tool }: { tool: ToolConfig }) {
   const { t } = useI18n()
   const inputRef = useRef<HTMLInputElement>(null)
-  const [file, setFile] = useState<File | null>(null)
+  const [files, setFiles] = useState<File[]>([])
   const [status, setStatus] = useState<Status>("idle")
   const [error, setError] = useState<string | null>(null)
   const [progress, setProgress] = useState(0)
+  const [batchIndex, setBatchIndex] = useState(0)
   const [dragging, setDragging] = useState(false)
   const [result, setResult] = useState<{ url: string; name: string } | null>(
     null,
   )
   const convProgress = useFakeProgress(status === "converting")
+  const batch = files.length > 1
 
   function reset() {
-    setFile(null)
+    setFiles([])
     setStatus("idle")
     setError(null)
     setProgress(0)
+    setBatchIndex(0)
     if (result) URL.revokeObjectURL(result.url)
     setResult(null)
     if (inputRef.current) inputRef.current.value = ""
   }
 
-  function pickFile(f: File | null) {
-    if (!f) return
+  function pickFiles(list: FileList | File[] | null) {
+    if (!list || list.length === 0) return
+    const arr = Array.from(list)
     setError(null)
     setStatus("idle")
-    setFile(f)
+    setFiles(arr)
     if (result) {
       URL.revokeObjectURL(result.url)
       setResult(null)
@@ -53,12 +58,41 @@ export function ToolConverter({ tool }: { tool: ToolConfig }) {
 
   const LARGE = 4 * 1024 * 1024
 
+  async function convertOne(file: File): Promise<{ blob: Blob; name: string }> {
+    const res = await uploadAndProcess({
+      file,
+      endpoint: "/api/convert",
+      id: tool.id,
+      onUploadProgress: (pct) => {
+        setProgress(pct)
+        if (pct >= 100) setStatus("converting")
+      },
+    })
+    if (!res.ok) {
+      let message = t.tool.convertFailed
+      try {
+        const data = await res.json()
+        if (data?.error) message = data.error
+      } catch {
+        /* keep */
+      }
+      throw new Error(message)
+    }
+    const blob = await res.blob()
+    const disposition = res.headers.get("Content-Disposition") ?? ""
+    const match = disposition.match(/filename="?([^"]+)"?/)
+    const name = match
+      ? decodeURIComponent(match[1])
+      : `${file.name.replace(/\.[^.]+$/, "")}.${tool.to}`
+    return { blob, name }
+  }
+
   async function convert() {
-    if (!file) return
+    if (files.length === 0) return
     setError(null)
 
-    const isLarge = file.size > LARGE
-    if (isLarge) {
+    const firstLarge = files[0]!.size > LARGE
+    if (firstLarge) {
       setStatus("uploading")
       setProgress(0)
     } else {
@@ -66,41 +100,28 @@ export function ToolConverter({ tool }: { tool: ToolConfig }) {
     }
 
     try {
-      const res = await uploadAndProcess({
-        file,
-        endpoint: "/api/convert",
-        id: tool.id,
-        onUploadProgress: (pct) => {
-          setProgress(pct)
-          if (pct >= 100) setStatus("converting")
-        },
-      })
-
-      if (!res.ok) {
-        let message = t.tool.convertFailed
-        try {
-          const data = await res.json()
-          if (data?.error) message = data.error
-        } catch {
-          /* keep default */
-        }
-        setError(message)
-        setStatus("error")
+      if (files.length === 1) {
+        const { blob, name } = await convertOne(files[0]!)
+        setResult({ url: URL.createObjectURL(blob), name })
+        setStatus("done")
+        recordToolVisit(tool.id, `${tool.from.toUpperCase()} → ${tool.to.toUpperCase()}`)
         return
       }
 
-      const blob = await res.blob()
-      const disposition = res.headers.get("Content-Disposition") ?? ""
-      const match = disposition.match(/filename="?([^"]+)"?/)
-      const name = match
-        ? decodeURIComponent(match[1])
-        : `converted.${tool.to}`
-
-      setResult({ url: URL.createObjectURL(blob), name })
+      const zip = new JSZip()
+      for (let i = 0; i < files.length; i++) {
+        setBatchIndex(i + 1)
+        setStatus(files[i]!.size > LARGE ? "uploading" : "converting")
+        const { blob, name } = await convertOne(files[i]!)
+        zip.file(name, blob)
+      }
+      const zipBlob = await zip.generateAsync({ type: "blob" })
+      const zipName = `${tool.from}-to-${tool.to}-batch.zip`
+      setResult({ url: URL.createObjectURL(zipBlob), name: zipName })
       setStatus("done")
-      recordToolVisit(tool.id, `${tool.from.toUpperCase()} → ${tool.to.toUpperCase()}`)
-    } catch {
-      setError(t.tool.connectionError)
+      recordToolVisit(tool.id, `${tool.from.toUpperCase()} → ${tool.to.toUpperCase()} (batch)`)
+    } catch (err) {
+      setError(err instanceof Error ? err.message : t.tool.connectionError)
       setStatus("error")
     }
   }
@@ -134,7 +155,7 @@ export function ToolConverter({ tool }: { tool: ToolConfig }) {
         onDrop={(e) => {
           e.preventDefault()
           setDragging(false)
-          pickFile(e.dataTransfer.files?.[0] ?? null)
+          pickFiles(e.dataTransfer.files)
         }}
         className={`flex cursor-pointer flex-col items-center justify-center gap-3 rounded-2xl border border-dashed p-10 text-center transition-colors ${
           dragging
@@ -145,9 +166,10 @@ export function ToolConverter({ tool }: { tool: ToolConfig }) {
         <input
           ref={inputRef}
           type="file"
+          multiple
           accept={`.${tool.from}${tool.from === "jpg" ? ",.jpeg" : ""}`}
           className="sr-only"
-          onChange={(e) => pickFile(e.target.files?.[0] ?? null)}
+          onChange={(e) => pickFiles(e.target.files)}
         />
         <span className="flex size-12 items-center justify-center rounded-full bg-primary/15 text-primary">
           <Upload className="size-5" />
@@ -158,26 +180,39 @@ export function ToolConverter({ tool }: { tool: ToolConfig }) {
         <span className="text-xs text-muted-foreground">
           {t.tool.supportedFormat}: {tool.from.toUpperCase()} • {t.tool.maxSize}
         </span>
+        <span className="text-xs text-primary/90">
+          {t.tool.batchHint ?? "You can select multiple files — results download as a ZIP."}
+        </span>
       </label>
 
-      {file && (
-        <div className="flex items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3">
-          <div className="min-w-0">
-            <p className="truncate text-sm font-medium text-foreground">
-              {file.name}
+      {files.length > 0 && (
+        <div className="rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3">
+          <div className="mb-2 flex items-center justify-between gap-3">
+            <p className="text-sm font-medium text-foreground">
+              {files.length === 1
+                ? files[0]!.name
+                : `${files.length} ${t.tool.filesSelected ?? "files selected"}`}
             </p>
-            <p className="text-xs text-muted-foreground">
-              {formatBytes(file.size)}
-            </p>
+            <button
+              type="button"
+              onClick={reset}
+              className="shrink-0 rounded-md p-1.5 text-muted-foreground transition-colors hover:bg-white/10 hover:text-foreground"
+              aria-label={t.tool.removeFile}
+            >
+              <X className="size-4" />
+            </button>
           </div>
-          <button
-            type="button"
-            onClick={reset}
-            className="shrink-0 rounded-md p-1.5 text-muted-foreground transition-colors hover:bg-white/10 hover:text-foreground"
-            aria-label={t.tool.removeFile}
-          >
-            <X className="size-4" />
-          </button>
+          {files.length === 1 ? (
+            <p className="text-xs text-muted-foreground">{formatBytes(files[0]!.size)}</p>
+          ) : (
+            <ul className="max-h-40 space-y-1 overflow-auto text-xs text-muted-foreground">
+              {files.map((f) => (
+                <li key={f.name + f.size} className="truncate">
+                  {f.name} · {formatBytes(f.size)}
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
       )}
 
@@ -192,7 +227,9 @@ export function ToolConverter({ tool }: { tool: ToolConfig }) {
         <div className="space-y-3 rounded-xl border border-primary/25 bg-primary/[0.06] px-4 py-4">
           <div className="flex items-center gap-2 text-sm font-medium text-foreground">
             <CheckCircle2 className="size-4 text-primary" />
-            {t.tool.convertDone}
+            {batch
+              ? (t.tool.batchDone ?? "Batch done — download the ZIP.")
+              : t.tool.convertDone}
           </div>
           <div className="flex flex-wrap gap-3">
             <a
@@ -221,7 +258,10 @@ export function ToolConverter({ tool }: { tool: ToolConfig }) {
           {status === "uploading" && (
             <div className="space-y-1.5">
               <div className="flex items-center justify-between text-xs text-muted-foreground">
-                <span>{t.tool.uploadingFile}</span>
+                <span>
+                  {t.tool.uploadingFile}
+                  {batch ? ` (${batchIndex}/${files.length})` : ""}
+                </span>
                 <span>{progress}%</span>
               </div>
               <div className="h-2 w-full overflow-hidden rounded-full bg-white/10">
@@ -235,7 +275,10 @@ export function ToolConverter({ tool }: { tool: ToolConfig }) {
           {status === "converting" && (
             <div className="space-y-1.5">
               <div className="flex items-center justify-between text-xs text-muted-foreground">
-                <span>{t.tool.converting}</span>
+                <span>
+                  {t.tool.converting}
+                  {batch ? ` (${batchIndex}/${files.length})` : ""}
+                </span>
                 <span>{convProgress}%</span>
               </div>
               <div className="h-2 w-full overflow-hidden rounded-full bg-white/10">
@@ -250,7 +293,7 @@ export function ToolConverter({ tool }: { tool: ToolConfig }) {
             type="button"
             onClick={convert}
             disabled={
-              !file || status === "converting" || status === "uploading"
+              files.length === 0 || status === "converting" || status === "uploading"
             }
             className="inline-flex w-full items-center justify-center gap-2 rounded-md bg-primary px-4 py-2.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/85 disabled:cursor-not-allowed disabled:opacity-50 sm:w-auto"
           >
@@ -264,6 +307,8 @@ export function ToolConverter({ tool }: { tool: ToolConfig }) {
                 <Loader2 className="size-4 animate-spin" />
                 {t.tool.converting}
               </>
+            ) : batch ? (
+              `${t.tool.convertToPrefix} ${tool.to.toUpperCase()} (${files.length})`
             ) : (
               `${t.tool.convertToPrefix} ${tool.to.toUpperCase()}`
             )}
