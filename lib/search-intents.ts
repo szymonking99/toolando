@@ -171,6 +171,15 @@ export const SEARCH_INTENTS: SearchIntent[] = [
   },
   {
     aliases: [
+      "napraw plik", "naprawić plik", "naprawic plik", "repair file", "fix file",
+      "uszkodzony plik", "corrupt file", "corrupted file", "broken pdf",
+      "uszkodzony pdf", "nie da sie otworzyc pliku", "damaged file",
+    ],
+    toolIds: ["naprawa-plikow", "otworz"],
+    answerKey: "repairFile",
+  },
+  {
+    aliases: [
       "usunac tlo", "usuń tło", "remove background", "wytnij tlo",
       "background remover", "png bez tla",
     ],
@@ -347,6 +356,12 @@ type ActionRule = {
 
 const ACTION_RULES: ActionRule[] = [
   {
+    re: /\b(napraw\w*|repair\w*|fix\w*|odzysk\w*)\b.*\b(plik\w*|file\w*|pdf|zip|docx|obraz\w*|zdjec\w*|wideo|video|audio)\b|\b(uszkodzon\w*|corrupt\w*|damaged|broken)\b.*\b(plik\w*|file\w*|pdf|zip)\b/,
+    toolIds: ["naprawa-plikow", "otworz"],
+    answerKey: "repairFile",
+    score: 90,
+  },
+  {
     re: /\b(zmniejsz\w*|skompresuj\w*|odchudz\w*|compress\w*|shrink\w*|optimize\w*)\b.*\bpdf\b|\bpdf\b.*\b(za duz\w*|too big|ciezk\w*|heavy)\b|\b(za duz\w*|too big|ciezk\w*|heavy)\b.*\bpdf\b/,
     toolIds: ["kompresja-pdf"],
     answerKey: "shrinkPdf",
@@ -512,4 +527,8 @@ export const TOOL_KEYWORDS: Record<string, string[]> = {
   "minifikator": ["minify", "css minifier", "js minifier", "html minifier"],
   otworz: ["open file", "preview", "podglad", "nie wiem format"],
   "usuwanie-tla": ["remove background", "png transparent"],
+  "naprawa-plikow": [
+    "napraw", "repair", "fix", "uszkodzony", "corrupt", "broken file",
+    "damaged pdf", "naprawic plik",
+  ],
 }

@@ -46,6 +46,7 @@ export function SpecialTool({ tool }: { tool: SpecialToolConfig }) {
     name: string
     size: number
     isImage: boolean
+    note?: string
   } | null>(null)
 
   const isImageResult = tool.previewImage
@@ -144,12 +145,17 @@ export function SpecialTool({ tool }: { tool: SpecialToolConfig }) {
       const disposition = res.headers.get("Content-Disposition") ?? ""
       const match = disposition.match(/filename="?([^"]+)"?/)
       const name = match ? decodeURIComponent(match[1]) : t.tool.result
+      const reportHeader = res.headers.get("X-Toolando-Report")
+      const note = reportHeader
+        ? decodeURIComponent(reportHeader)
+        : undefined
 
       setResult({
         url: URL.createObjectURL(blob),
         name,
         size: blob.size,
         isImage: isImageResult,
+        note,
       })
       setStatus("done")
       recordToolVisit(tool.id, meta.name)
@@ -319,6 +325,12 @@ export function SpecialTool({ tool }: { tool: SpecialToolConfig }) {
                 className="mx-auto max-h-80 w-auto"
               />
             </div>
+          )}
+
+          {result.note && (
+            <pre className="max-h-48 overflow-auto whitespace-pre-wrap rounded-lg border border-white/10 bg-white/[0.03] px-3 py-2 text-xs leading-relaxed text-muted-foreground">
+              {result.note}
+            </pre>
           )}
 
           <div className="flex flex-wrap gap-3">

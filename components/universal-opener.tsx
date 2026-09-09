@@ -35,6 +35,9 @@ import {
   type FileAction,
   type FileKind,
 } from "@/lib/file-assistant"
+import {
+  extractDocumentPreview,
+} from "@/lib/client-doc-preview"
 import { getSpecialMeta } from "@/lib/i18n/tool-meta"
 import { getUtilityMeta } from "@/lib/i18n/utility-meta"
 import type { UtilityToolId } from "@/lib/utility-tools"
@@ -110,6 +113,16 @@ export function UniversalOpener() {
         const slice = file.slice(0, MAX)
         text = await slice.text()
         textTruncated = file.size > MAX
+      } else if (kind === "document") {
+        const preview = await extractDocumentPreview(file)
+        if (preview) {
+          text = preview.text
+          textTruncated = preview.truncated
+        } else {
+          // Legacy .doc / unsupported — avoid showing ZIP/OLE as “binary code”.
+          text = null
+          hex = null
+        }
       } else {
         const MAX = 4096
         const buf = new Uint8Array(await file.slice(0, MAX).arrayBuffer())
@@ -551,10 +564,15 @@ function Preview({ loaded }: { loaded: Loaded }) {
     )
   }
 
-  if ((kind === "text" || kind === "data") && text !== null) {
+  if ((kind === "text" || kind === "data" || kind === "document") && text !== null) {
     return (
       <div className="overflow-hidden rounded-xl border border-white/10 bg-[#0b1020]">
-        <pre className="max-h-[70vh] overflow-auto p-4 text-xs leading-relaxed text-foreground/90">
+        {kind === "document" && (
+          <div className="border-b border-white/10 px-4 py-2 text-xs font-medium text-muted-foreground">
+            {t.opener?.documentPreview ?? "Document text preview"}
+          </div>
+        )}
+        <pre className="max-h-[70vh] overflow-auto whitespace-pre-wrap p-4 text-xs leading-relaxed text-foreground/90">
           <code>{text || t.opener.emptyFile}</code>
         </pre>
         {textTruncated && (
@@ -562,6 +580,20 @@ function Preview({ loaded }: { loaded: Loaded }) {
             {t.opener.textTruncated}
           </p>
         )}
+      </div>
+    )
+  }
+
+  if (kind === "document") {
+    return (
+      <div className="rounded-xl border border-white/10 bg-white/[0.03] px-4 py-6 text-sm text-muted-foreground">
+        <p className="font-medium text-foreground">
+          {t.opener?.documentNoPreviewTitle ?? "No text preview for this document"}
+        </p>
+        <p className="mt-2 text-xs leading-relaxed">
+          {t.opener?.documentNoPreviewBody ??
+            "This Office format can’t be previewed as text here. Use the actions below to convert it (e.g. DOCX → PDF) or download the original."}
+        </p>
       </div>
     )
   }

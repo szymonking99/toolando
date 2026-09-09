@@ -4,6 +4,8 @@ export type SpecialResult = {
   buffer: Buffer
   filename: string
   contentType: string
+  /** Optional human-readable report (e.g. file repair). */
+  note?: string
 }
 
 /* ------------------------------------------------------------------ */

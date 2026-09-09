@@ -41,17 +41,18 @@ const TEXT_EXT = new Set([
 
 /** Special tools recommended per file kind / extension. */
 const SPECIAL_BY_EXT: Record<string, string[]> = {
-  jpg: ["kompresor-obrazow", "zmiana-rozmiaru-obrazu", "usun-exif", "usuwanie-tla", "znak-wodny"],
-  jpeg: ["kompresor-obrazow", "zmiana-rozmiaru-obrazu", "usun-exif", "usuwanie-tla", "znak-wodny"],
-  png: ["kompresor-obrazow", "zmiana-rozmiaru-obrazu", "usun-exif", "usuwanie-tla", "znak-wodny"],
-  webp: ["kompresor-obrazow", "zmiana-rozmiaru-obrazu", "usun-exif"],
-  avif: ["kompresor-obrazow", "zmiana-rozmiaru-obrazu"],
-  heic: ["usun-exif", "kompresor-obrazow", "zmiana-rozmiaru-obrazu"],
-  heif: ["usun-exif", "kompresor-obrazow", "zmiana-rozmiaru-obrazu"],
-  tiff: ["kompresor-obrazow", "zmiana-rozmiaru-obrazu", "usun-exif"],
-  tif: ["kompresor-obrazow", "zmiana-rozmiaru-obrazu", "usun-exif"],
-  gif: ["kompresor-obrazow", "zmiana-rozmiaru-obrazu"],
+  jpg: ["naprawa-plikow", "kompresor-obrazow", "zmiana-rozmiaru-obrazu", "usun-exif", "usuwanie-tla", "znak-wodny"],
+  jpeg: ["naprawa-plikow", "kompresor-obrazow", "zmiana-rozmiaru-obrazu", "usun-exif", "usuwanie-tla", "znak-wodny"],
+  png: ["naprawa-plikow", "kompresor-obrazow", "zmiana-rozmiaru-obrazu", "usun-exif", "usuwanie-tla", "znak-wodny"],
+  webp: ["naprawa-plikow", "kompresor-obrazow", "zmiana-rozmiaru-obrazu", "usun-exif"],
+  avif: ["naprawa-plikow", "kompresor-obrazow", "zmiana-rozmiaru-obrazu"],
+  heic: ["naprawa-plikow", "usun-exif", "kompresor-obrazow", "zmiana-rozmiaru-obrazu"],
+  heif: ["naprawa-plikow", "usun-exif", "kompresor-obrazow", "zmiana-rozmiaru-obrazu"],
+  tiff: ["naprawa-plikow", "kompresor-obrazow", "zmiana-rozmiaru-obrazu", "usun-exif"],
+  tif: ["naprawa-plikow", "kompresor-obrazow", "zmiana-rozmiaru-obrazu", "usun-exif"],
+  gif: ["naprawa-plikow", "kompresor-obrazow", "zmiana-rozmiaru-obrazu"],
   pdf: [
+    "naprawa-plikow",
     "kompresja-pdf",
     "laczenie-pdf",
     "podzial-pdf",
@@ -59,10 +60,19 @@ const SPECIAL_BY_EXT: Record<string, string[]> = {
     "pdf-do-tekstu",
     "numeracja-pdf",
   ],
-  mp4: ["kompresja-wideo", "przyciecie-wideo", "wyciszenie-wideo"],
-  webm: ["kompresja-wideo", "przyciecie-wideo", "wyciszenie-wideo"],
-  mov: ["kompresja-wideo", "przyciecie-wideo", "wyciszenie-wideo"],
-  mkv: ["kompresja-wideo", "przyciecie-wideo", "wyciszenie-wideo"],
+  mp4: ["naprawa-plikow", "kompresja-wideo", "przyciecie-wideo", "wyciszenie-wideo"],
+  webm: ["naprawa-plikow", "kompresja-wideo", "przyciecie-wideo", "wyciszenie-wideo"],
+  mov: ["naprawa-plikow", "kompresja-wideo", "przyciecie-wideo", "wyciszenie-wideo"],
+  mkv: ["naprawa-plikow", "kompresja-wideo", "przyciecie-wideo", "wyciszenie-wideo"],
+  zip: ["naprawa-plikow"],
+  docx: ["naprawa-plikow"],
+  xlsx: ["naprawa-plikow"],
+  pptx: ["naprawa-plikow"],
+  json: ["naprawa-plikow"],
+  mp3: ["naprawa-plikow"],
+  wav: ["naprawa-plikow"],
+  flac: ["naprawa-plikow"],
+  m4a: ["naprawa-plikow"],
 }
 
 const UTILITY_BY_KIND: Partial<Record<FileKind, { id: string; labelKey: string; label: string }[]>> = {
@@ -314,6 +324,17 @@ export const PROBLEM_MATCHES: ProblemMatch[] = [
     titleKey: "openDwg",
     answerKey: "openDwg",
     toolIds: ["otworz"],
+  },
+  {
+    id: "repair-file",
+    keywords: [
+      "napraw plik", "naprawic plik", "naprawić plik", "repair file", "fix file",
+      "uszkodzony", "corrupt", "corrupted", "nie otwiera sie", "nie otwiera się",
+      "broken file", "damaged pdf", "uszkodzony pdf", "uszkodzony zip",
+    ],
+    titleKey: "repairFile",
+    answerKey: "repairFile",
+    toolIds: ["naprawa-plikow", "otworz"],
   },
 ]
 

@@ -184,7 +184,8 @@
       "watermark": "Dodaj znak wodny na obraz przed publikacją.",
       "aiHelp": "Do pisania, streszczeń i tłumaczeń użyj narzędzi AI (Premium).",
       "openFile": "Najpierw otwórz plik w asystencie — zobaczysz format i bezpieczne opcje.",
-      "formatConversion": "Pasuje konwerter {from} → {to}."
+      "formatConversion": "Pasuje konwerter {from} → {to}.",
+      "repairFile": "Spróbuj naprawy pliku — Toolando zdiagnozuje typ i przepisze uszkodzony kontener (PDF, obraz, wideo/audio, ZIP/DOCX, JSON)."
     }
   },
   "share": {
@@ -264,6 +265,9 @@
     "emptyFile": "(pusty plik)",
     "textTruncated": "Podgląd skrócony do pierwszych 200 000 znaków. Pobierz plik, aby zobaczyć całość.",
     "binaryPreview": "Podgląd binarny (pierwsze bajty w formacie szesnastkowym)",
+    "documentPreview": "Podgląd tekstu dokumentu",
+    "documentNoPreviewTitle": "Brak podglądu tekstu dla tego dokumentu",
+    "documentNoPreviewBody": "Ten format Office nie da się tu wygodnie podejrzeć jako tekst. Użyj akcji poniżej (np. konwersja DOCX → PDF) albo pobierz oryginał.",
     "kinds": {
       "image": "Obraz",
       "video": "Wideo",

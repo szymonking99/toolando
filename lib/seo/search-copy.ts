@@ -216,6 +216,11 @@ const pl: Record<string, SearchCopy> = {
     title: "Znak wodny na zdjęciu online",
     description: "Dodaj tekstowy znak wodny na obraz — ochrona przed kopiowaniem.",
   },
+  "naprawa-plikow": {
+    title: "Naprawa plików online — PDF, obraz, wideo, ZIP",
+    description:
+      "Uratuj uszkodzony plik: diagnostyka i przepisanie kontenera. PDF, obrazy, audio/wideo, ZIP/DOCX, JSON — za darmo.",
+  },
   "inspektor-prywatnosci": {
     title: "Co ten plik ujawnia o mnie? — skaner EXIF / GPS",
     description:
@@ -447,6 +452,11 @@ const en: Record<string, SearchCopy> = {
   "znak-wodny": {
     title: "Watermark image online",
     description: "Add a text watermark to a photo before sharing.",
+  },
+  "naprawa-plikow": {
+    title: "Repair files online — PDF, image, video, ZIP",
+    description:
+      "Salvage a broken file: diagnose and rewrite the container. PDF, images, audio/video, ZIP/DOCX, JSON — free.",
   },
   "inspektor-prywatnosci": {
     title: "What does this file reveal? — EXIF / GPS scanner",

@@ -13,6 +13,7 @@ export type SpecialToolId =
   | "kompresja-wideo"
   | "numeracja-pdf"
   | "pdf-do-tekstu"
+  | "naprawa-plikow"
 
 export type SpecialEngine =
   | "compress-image"
@@ -29,6 +30,7 @@ export type SpecialEngine =
   | "pdf-page-numbers"
   | "watermark-image"
   | "pdf-to-text"
+  | "repair-file"
 
 export type SpecialToolConfig = {
   id: SpecialToolId
@@ -239,6 +241,21 @@ export const specialTools: SpecialToolConfig[] = [
     acceptLabel: "PDF",
     multiple: false,
     actionLabel: "Dodaj numery stron",
+    hasQuality: false,
+    previewImage: false,
+  },
+  {
+    id: "naprawa-plikow",
+    engine: "repair-file",
+    category: "Pliki",
+    name: "Naprawa plików",
+    description:
+      "Spróbuj uratować uszkodzony PDF, obraz, wideo/audio, ZIP/DOCX albo JSON. Narzędzie diagnozuje typ pliku i przepisuje kontener — bez magicznego odzysku jakości ze stratnych formatów.",
+    accept:
+      ".pdf,.jpg,.jpeg,.png,.webp,.gif,.avif,.tiff,.tif,.heic,.heif,.mp4,.mov,.webm,.mkv,.avi,.mp3,.wav,.flac,.ogg,.m4a,.aac,.zip,.docx,.xlsx,.pptx,.json",
+    acceptLabel: "PDF, obrazy, wideo/audio, ZIP/Office, JSON",
+    multiple: false,
+    actionLabel: "Napraw plik",
     hasQuality: false,
     previewImage: false,
   },
