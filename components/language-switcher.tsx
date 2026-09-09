@@ -41,6 +41,14 @@ export function LanguageSwitcher({ className = "" }: { className?: string }) {
     setOpen(false)
   }
 
+  function preferBrowserDefault() {
+    // Clear sticky manual override so "/" uses Accept-Language / PL again.
+    document.cookie = "toolando-locale-manual=; path=/; max-age=0; samesite=lax"
+    document.cookie = "toolando-locale=; path=/; max-age=0; samesite=lax"
+    router.push("/pl")
+    setOpen(false)
+  }
+
   return (
     <div ref={ref} className={`relative ${className}`}>
       <button

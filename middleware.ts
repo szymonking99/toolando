@@ -70,17 +70,25 @@ export function middleware(request: NextRequest) {
     : undefined
   const cookieLocale = cookieRaw ? normalizeToSupported(cookieRaw) : undefined
 
-  const country = request.headers.get("x-vercel-ip-country")
+  // Prefer the browser language over geo-IP. Geo (DE/AT/CH → de) was
+  // sending Polish speakers on German IPs/VPNs to /de before their
+  // Accept-Language: pl could win. Country is only a last resort.
   const fromHeader = detectLocale(request.headers.get("accept-language"))
+  const country = request.headers.get("x-vercel-ip-country")
+  const fromCountry = localeFromCountry(country)
   const locale =
-    cookieLocale ||
-    localeFromCountry(country) ||
-    fromHeader ||
-    defaultLocale
+    cookieLocale || fromHeader || fromCountry || defaultLocale
 
   const url = request.nextUrl.clone()
   url.pathname = pathname === "/" ? `/${locale}` : `/${locale}${pathname}`
-  return NextResponse.redirect(url)
+  const res = NextResponse.redirect(url)
+  // Do not set toolando-locale-manual here — only the language switcher does.
+  res.cookies.set(LOCALE_COOKIE, locale, {
+    path: "/",
+    maxAge: 60 * 60 * 24 * 365,
+    sameSite: "lax",
+  })
+  return res
 }
 
 export const config = {
