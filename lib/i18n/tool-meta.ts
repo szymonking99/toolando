@@ -437,6 +437,14 @@ const specialMaps: Record<string, SpecialMap> = {
       actionLabel: "Napraw plik",
       acceptLabel: "PDF, obrazy, wideo/audio, ZIP/Office, JSON",
     },
+    "zdjecia-do-pdf": {
+      category: "Dokumenty",
+      name: "Zdjęcia / skany → PDF",
+      description:
+        "Zrób jeden PDF ze zdjęć lub skanów. Kolejność plików = kolejność stron — CV, umowy, skany do maila.",
+      actionLabel: "Zrób PDF",
+      acceptLabel: "JPG, PNG, WebP, HEIC, TIFF, GIF (wiele plików)",
+    },
   },
   en: {
     "kompresor-obrazow": {
@@ -548,6 +556,14 @@ const specialMaps: Record<string, SpecialMap> = {
         "Try to salvage a broken PDF, image, video/audio, ZIP/DOCX, or JSON — diagnose and rewrite the container. Free.",
       actionLabel: "Repair file",
       acceptLabel: "PDF, images, video/audio, ZIP/Office, JSON",
+    },
+    "zdjecia-do-pdf": {
+      category: "Documents",
+      name: "Photos / scans → PDF",
+      description:
+        "Make one PDF from photos or scans. File order = page order — CVs, contracts, email-ready scans.",
+      actionLabel: "Make PDF",
+      acceptLabel: "JPG, PNG, WebP, HEIC, TIFF, GIF (multiple OK)",
     },
   },
   de: {

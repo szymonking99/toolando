@@ -14,6 +14,7 @@ export type SpecialToolId =
   | "numeracja-pdf"
   | "pdf-do-tekstu"
   | "naprawa-plikow"
+  | "zdjecia-do-pdf"
 
 export type SpecialEngine =
   | "compress-image"
@@ -31,6 +32,7 @@ export type SpecialEngine =
   | "watermark-image"
   | "pdf-to-text"
   | "repair-file"
+  | "images-to-pdf"
 
 export type SpecialToolConfig = {
   id: SpecialToolId
@@ -257,6 +259,20 @@ export const specialTools: SpecialToolConfig[] = [
     multiple: false,
     actionLabel: "Napraw plik",
     hasQuality: false,
+    previewImage: false,
+  },
+  {
+    id: "zdjecia-do-pdf",
+    engine: "images-to-pdf",
+    category: "Dokumenty",
+    name: "Zdjęcia / skany → PDF",
+    description:
+      "Zrób jeden PDF ze zdjęć lub skanów (JPG, PNG, WebP, HEIC…). Kolejność plików = kolejność stron. Idealne do CV, umów i skanów do maila.",
+    accept: ".jpg,.jpeg,.png,.webp,.gif,.avif,.tiff,.tif,.heic,.heif,.bmp",
+    acceptLabel: "JPG, PNG, WebP, HEIC, TIFF, GIF (wiele plików)",
+    multiple: true,
+    actionLabel: "Zrób PDF",
+    hasQuality: true,
     previewImage: false,
   },
 ]

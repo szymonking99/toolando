@@ -41,16 +41,17 @@ const TEXT_EXT = new Set([
 
 /** Special tools recommended per file kind / extension. */
 const SPECIAL_BY_EXT: Record<string, string[]> = {
-  jpg: ["naprawa-plikow", "kompresor-obrazow", "zmiana-rozmiaru-obrazu", "usun-exif", "usuwanie-tla", "znak-wodny"],
-  jpeg: ["naprawa-plikow", "kompresor-obrazow", "zmiana-rozmiaru-obrazu", "usun-exif", "usuwanie-tla", "znak-wodny"],
-  png: ["naprawa-plikow", "kompresor-obrazow", "zmiana-rozmiaru-obrazu", "usun-exif", "usuwanie-tla", "znak-wodny"],
-  webp: ["naprawa-plikow", "kompresor-obrazow", "zmiana-rozmiaru-obrazu", "usun-exif"],
-  avif: ["naprawa-plikow", "kompresor-obrazow", "zmiana-rozmiaru-obrazu"],
-  heic: ["naprawa-plikow", "usun-exif", "kompresor-obrazow", "zmiana-rozmiaru-obrazu"],
-  heif: ["naprawa-plikow", "usun-exif", "kompresor-obrazow", "zmiana-rozmiaru-obrazu"],
-  tiff: ["naprawa-plikow", "kompresor-obrazow", "zmiana-rozmiaru-obrazu", "usun-exif"],
-  tif: ["naprawa-plikow", "kompresor-obrazow", "zmiana-rozmiaru-obrazu", "usun-exif"],
-  gif: ["naprawa-plikow", "kompresor-obrazow", "zmiana-rozmiaru-obrazu"],
+  jpg: ["zdjecia-do-pdf", "naprawa-plikow", "kompresor-obrazow", "zmiana-rozmiaru-obrazu", "usun-exif", "usuwanie-tla", "znak-wodny"],
+  jpeg: ["zdjecia-do-pdf", "naprawa-plikow", "kompresor-obrazow", "zmiana-rozmiaru-obrazu", "usun-exif", "usuwanie-tla", "znak-wodny"],
+  png: ["zdjecia-do-pdf", "naprawa-plikow", "kompresor-obrazow", "zmiana-rozmiaru-obrazu", "usun-exif", "usuwanie-tla", "znak-wodny"],
+  webp: ["zdjecia-do-pdf", "naprawa-plikow", "kompresor-obrazow", "zmiana-rozmiaru-obrazu", "usun-exif"],
+  avif: ["zdjecia-do-pdf", "naprawa-plikow", "kompresor-obrazow", "zmiana-rozmiaru-obrazu"],
+  heic: ["zdjecia-do-pdf", "naprawa-plikow", "usun-exif", "kompresor-obrazow", "zmiana-rozmiaru-obrazu"],
+  heif: ["zdjecia-do-pdf", "naprawa-plikow", "usun-exif", "kompresor-obrazow", "zmiana-rozmiaru-obrazu"],
+  tiff: ["zdjecia-do-pdf", "naprawa-plikow", "kompresor-obrazow", "zmiana-rozmiaru-obrazu", "usun-exif"],
+  tif: ["zdjecia-do-pdf", "naprawa-plikow", "kompresor-obrazow", "zmiana-rozmiaru-obrazu", "usun-exif"],
+  gif: ["zdjecia-do-pdf", "naprawa-plikow", "kompresor-obrazow", "zmiana-rozmiaru-obrazu"],
+  bmp: ["zdjecia-do-pdf", "naprawa-plikow", "kompresor-obrazow"],
   pdf: [
     "naprawa-plikow",
     "kompresja-pdf",
@@ -335,6 +336,17 @@ export const PROBLEM_MATCHES: ProblemMatch[] = [
     titleKey: "repairFile",
     answerKey: "repairFile",
     toolIds: ["naprawa-plikow", "otworz"],
+  },
+  {
+    id: "images-to-pdf",
+    keywords: [
+      "zdjecia do pdf", "zdjęcia do pdf", "skan do pdf", "skany do pdf",
+      "photos to pdf", "images to pdf", "scan to pdf", "jpg do pdf",
+      "png do pdf", "heic do pdf", "zrobic pdf ze zdjec", "pdf ze skanow",
+    ],
+    titleKey: "imagesToPdf",
+    answerKey: "imagesToPdf",
+    toolIds: ["zdjecia-do-pdf", "laczenie-pdf"],
   },
 ]
 

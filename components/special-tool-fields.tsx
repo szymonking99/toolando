@@ -13,6 +13,8 @@ export type SpecialFieldValues = {
   trimStart: string
   trimEnd: string
   pageNumberPosition: "bottom" | "top"
+  pageSize: "a4" | "letter"
+  fit: "contain" | "cover"
 }
 
 export const defaultSpecialFields: SpecialFieldValues = {
@@ -25,6 +27,8 @@ export const defaultSpecialFields: SpecialFieldValues = {
   trimStart: "0",
   trimEnd: "30",
   pageNumberPosition: "bottom",
+  pageSize: "a4",
+  fit: "contain",
 }
 
 export function buildSpecialFields(
@@ -53,6 +57,11 @@ export function buildSpecialFields(
       }
     case "pdf-page-numbers":
       return { pageNumberPosition: values.pageNumberPosition }
+    case "images-to-pdf":
+      return {
+        pageSize: values.pageSize,
+        fit: values.fit,
+      }
     default:
       return undefined
   }
@@ -72,6 +81,10 @@ type SpecialFieldsCopy = {
   pageNumberPos: string
   bottom: string
   top: string
+  pageSize: string
+  fitMode: string
+  fitContain: string
+  fitCover: string
 }
 
 const FALLBACK_FIELDS: SpecialFieldsCopy = {
@@ -88,6 +101,10 @@ const FALLBACK_FIELDS: SpecialFieldsCopy = {
   pageNumberPos: "Page number position",
   bottom: "Bottom of page",
   top: "Top of page",
+  pageSize: "Page size",
+  fitMode: "How to place the image",
+  fitContain: "Fit on page (with margins)",
+  fitCover: "Fill page (may crop)",
 }
 
 export function SpecialToolFields({
@@ -248,6 +265,43 @@ export function SpecialToolFields({
               <option value="top">{f.top}</option>
             </select>
           </label>
+        </div>
+      )
+    case "images-to-pdf":
+      return (
+        <div className={box}>
+          <div className="grid gap-3 sm:grid-cols-2">
+            <label className={label}>
+              {f.pageSize}
+              <select
+                className={input}
+                value={values.pageSize}
+                onChange={(e) =>
+                  onChange({
+                    pageSize: e.target.value as SpecialFieldValues["pageSize"],
+                  })
+                }
+              >
+                <option value="a4">A4</option>
+                <option value="letter">Letter</option>
+              </select>
+            </label>
+            <label className={label}>
+              {f.fitMode}
+              <select
+                className={input}
+                value={values.fit}
+                onChange={(e) =>
+                  onChange({
+                    fit: e.target.value as SpecialFieldValues["fit"],
+                  })
+                }
+              >
+                <option value="contain">{f.fitContain}</option>
+                <option value="cover">{f.fitCover}</option>
+              </select>
+            </label>
+          </div>
         </div>
       )
     default:

@@ -185,7 +185,8 @@
       "aiHelp": "For writing, summaries, and translation, use Premium AI tools.",
       "openFile": "Open the file in the assistant first — you’ll see the format and safe next steps.",
       "formatConversion": "Matching converter: {from} → {to}.",
-      "repairFile": "Try file repair — Toolando diagnoses the type and rewrites a broken container (PDF, image, video/audio, ZIP/DOCX, JSON)."
+      "repairFile": "Try file repair — Toolando diagnoses the type and rewrites a broken container (PDF, image, video/audio, ZIP/DOCX, JSON).",
+      "imagesToPdf": "Make one PDF from photos or scans — file order becomes page order."
     }
   },
   "share": {
@@ -961,7 +962,11 @@
     "trimEnd": "End (sec or MM:SS)",
     "pageNumberPos": "Page number position",
     "bottom": "Bottom of page",
-    "top": "Top of page"
+    "top": "Top of page",
+    "pageSize": "Page size",
+    "fitMode": "How to place the image",
+    "fitContain": "Fit on page (with margins)",
+    "fitCover": "Fill page (may crop)"
   },
   "accountRecent": {
     "title": "Recently used",

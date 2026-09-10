@@ -185,7 +185,8 @@
       "aiHelp": "Do pisania, streszczeń i tłumaczeń użyj narzędzi AI (Premium).",
       "openFile": "Najpierw otwórz plik w asystencie — zobaczysz format i bezpieczne opcje.",
       "formatConversion": "Pasuje konwerter {from} → {to}.",
-      "repairFile": "Spróbuj naprawy pliku — Toolando zdiagnozuje typ i przepisze uszkodzony kontener (PDF, obraz, wideo/audio, ZIP/DOCX, JSON)."
+      "repairFile": "Spróbuj naprawy pliku — Toolando zdiagnozuje typ i przepisze uszkodzony kontener (PDF, obraz, wideo/audio, ZIP/DOCX, JSON).",
+      "imagesToPdf": "Zrób jeden PDF ze zdjęć lub skanów — kolejność plików to kolejność stron."
     }
   },
   "share": {
@@ -961,7 +962,11 @@
     "trimEnd": "Koniec (sek. lub MM:SS)",
     "pageNumberPos": "Pozycja numeracji",
     "bottom": "Na dole strony",
-    "top": "Na górze strony"
+    "top": "Na górze strony",
+    "pageSize": "Rozmiar strony",
+    "fitMode": "Jak ułożyć obraz",
+    "fitContain": "Zmieść na stronie (z marginesem)",
+    "fitCover": "Wypełnij stronę (może przyciąć)"
   },
   "accountRecent": {
     "title": "Ostatnio używane",

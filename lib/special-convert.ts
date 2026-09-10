@@ -649,3 +649,87 @@ export async function addPdfPageNumbers(
     contentType: "application/pdf",
   }
 }
+
+/* ------------------------------------------------------------------ */
+/* Images / scans → single PDF                                         */
+/* ------------------------------------------------------------------ */
+
+const PAGE_SIZES = {
+  a4: { width: 595.28, height: 841.89 },
+  letter: { width: 612, height: 792 },
+} as const
+
+export async function imagesToPdf(
+  files: { buffer: Buffer; name: string }[],
+  options: {
+    quality?: number
+    pageSize?: "a4" | "letter"
+    /** Fill page edge-to-edge (crop) vs fit with margins. */
+    fit?: "contain" | "cover"
+  } = {},
+): Promise<SpecialResult> {
+  if (files.length === 0) {
+    throw new ConversionError("Dodaj co najmniej jedno zdjęcie lub skan.")
+  }
+
+  const sharp = (await import("sharp")).default
+  const { PDFDocument } = await import("pdf-lib")
+  const pageSize = options.pageSize === "letter" ? "letter" : "a4"
+  const fit = options.fit === "cover" ? "cover" : "contain"
+  const q = Math.min(95, Math.max(40, Math.round(options.quality ?? 85)))
+  const { width: pageW, height: pageH } = PAGE_SIZES[pageSize]
+  const margin = fit === "contain" ? 24 : 0
+  const maxW = pageW - margin * 2
+  const maxH = pageH - margin * 2
+
+  const pdf = await PDFDocument.create()
+
+  for (const file of files) {
+    let normalized: Buffer
+    let usePng = false
+    try {
+      const image = sharp(file.buffer, { failOn: "none", unlimited: true }).rotate()
+      const meta = await image.metadata()
+      const hasAlpha = Boolean(meta.hasAlpha) || meta.format === "png" || meta.format === "gif"
+      if (hasAlpha) {
+        normalized = await image.png({ compressionLevel: 8 }).toBuffer()
+        usePng = true
+      } else {
+        normalized = await image.jpeg({ quality: q, mozjpeg: true }).toBuffer()
+      }
+    } catch {
+      throw new ConversionError(
+        `Nie udało się odczytać obrazu „${file.name}". Użyj JPG, PNG, WebP, HEIC lub TIFF.`,
+      )
+    }
+
+    const embedded = usePng
+      ? await pdf.embedPng(normalized)
+      : await pdf.embedJpg(normalized)
+
+    const page = pdf.addPage([pageW, pageH])
+    const iw = embedded.width
+    const ih = embedded.height
+    const scale =
+      fit === "cover"
+        ? Math.max(maxW / iw, maxH / ih)
+        : Math.min(maxW / iw, maxH / ih, 1)
+    const drawW = iw * scale
+    const drawH = ih * scale
+    const x = margin + (maxW - drawW) / 2
+    const y = margin + (maxH - drawH) / 2
+    page.drawImage(embedded, { x, y, width: drawW, height: drawH })
+  }
+
+  const bytes = await pdf.save()
+  const filename =
+    files.length === 1
+      ? `${stemOf(files[0].name)}-skan.pdf`
+      : `skany-${files.length}-stron.pdf`
+
+  return {
+    buffer: Buffer.from(bytes),
+    filename,
+    contentType: "application/pdf",
+  }
+}
