@@ -246,6 +246,21 @@ const pl: Record<string, SearchCopy> = {
     description:
       "Prosty diff warstwy tekstowej dwóch dokumentów. Przy skanach najpierw OCR.",
   },
+  "redakcja-pdf": {
+    title: "Redakcja PDF online — zaczernianie PESEL i e-maili",
+    description:
+      "Zaczernij dane wrażliwe przed wysyłką. Wizualna redakcja PDF z warstwą tekstową. Darmowe.",
+  },
+  "wypelnij-pdf": {
+    title: "Wypełnij PDF / blankiet online",
+    description:
+      "Uzupełnij pola formularza albo dodaj pieczątkę z imieniem, NIP-em i datą.",
+  },
+  "rozdziel-skan": {
+    title: "Rozdziel skan wielostronicowy na strony PDF",
+    description:
+      "Jeden skan → osobne pliki w ZIP. Idealne po złożeniu zdjęć w PDF.",
+  },
   "inspektor-prywatnosci": {
     title: "Co ten plik ujawnia o mnie? — skaner EXIF / GPS",
     description:
@@ -506,6 +521,21 @@ const en: Record<string, SearchCopy> = {
     title: "Compare two PDFs or DOCX online",
     description:
       "Simple text-layer diff of two documents. For scans, run OCR first.",
+  },
+  "redakcja-pdf": {
+    title: "PDF redaction online — black out IDs and emails",
+    description:
+      "Black out sensitive data before sending. Visual redaction for text-layer PDFs. Free.",
+  },
+  "wypelnij-pdf": {
+    title: "Fill PDF / form online",
+    description:
+      "Fill AcroForm fields or stamp name, tax ID and date onto every page.",
+  },
+  "rozdziel-skan": {
+    title: "Split a multipage scan into PDF pages",
+    description:
+      "One scan → separate files in a ZIP. Perfect after photos → PDF.",
   },
   "inspektor-prywatnosci": {
     title: "What does this file reveal? — EXIF / GPS scanner",

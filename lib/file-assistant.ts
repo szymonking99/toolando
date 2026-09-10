@@ -56,9 +56,12 @@ const SPECIAL_BY_EXT: Record<string, string[]> = {
   bmp: ["ocr-skanu", "zdjecia-do-pdf", "przygotuj-do-maila", "naprawa-plikow"],
   pdf: [
     "przygotuj-do-maila",
+    "redakcja-pdf",
+    "wypelnij-pdf",
     "kompresja-pdf",
     "ocr-skanu",
     "podpis-pdf",
+    "rozdziel-skan",
     "porownaj-dokumenty",
     "naprawa-plikow",
     "laczenie-pdf",
@@ -408,6 +411,33 @@ export const PROBLEM_MATCHES: ProblemMatch[] = [
     titleKey: "compareDocs",
     answerKey: "compareDocs",
     toolIds: ["porownaj-dokumenty"],
+  },
+  {
+    id: "redact-pdf",
+    keywords: [
+      "redakcja", "zaczernij", "anonimizacja", "redact", "ukryj pesel", "cenzura pdf",
+    ],
+    titleKey: "redactPdf",
+    answerKey: "redactPdf",
+    toolIds: ["redakcja-pdf"],
+  },
+  {
+    id: "fill-pdf",
+    keywords: [
+      "wypelnij pdf", "wypełnij pdf", "fill pdf", "blankiet", "formularz pdf",
+    ],
+    titleKey: "fillPdf",
+    answerKey: "fillPdf",
+    toolIds: ["wypelnij-pdf"],
+  },
+  {
+    id: "split-scan",
+    keywords: [
+      "rozdziel skan", "podziel skan", "split scan", "skan na strony",
+    ],
+    titleKey: "splitScan",
+    answerKey: "splitScan",
+    toolIds: ["rozdziel-skan", "podzial-pdf"],
   },
 ]
 

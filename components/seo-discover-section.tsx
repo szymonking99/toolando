@@ -52,7 +52,13 @@ const LINKS = [
     id: "ocr",
     href: "/tools/ocr-skanu",
     icon: FileText,
-    guide: "/poradniki/when-not-to-convert-files",
+    guide: "/poradniki/ocr-scan-to-text-guide",
+  },
+  {
+    id: "redact",
+    href: "/tools/redakcja-pdf",
+    icon: Shield,
+    guide: "/poradniki/pdf-redaction-privacy-guide",
   },
   {
     id: "assistant",

@@ -418,5 +418,6 @@ export async function compareDocuments(
     buffer: Buffer.from(report, "utf8"),
     filename: "porownanie.txt",
     contentType: "text/plain; charset=utf-8",
+    note: report.slice(0, 3500),
   }
 }

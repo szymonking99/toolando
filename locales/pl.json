@@ -193,7 +193,10 @@
       "imagesToPdf": "Zrób jeden PDF ze zdjęć lub skanów — kolejność plików to kolejność stron.",
       "stampPdf": "Dodaj tekstową pieczątkę lub obraz podpisu na każdą stronę PDF.",
       "prepareEmail": "Skompresuj, usuń EXIF i spakuj do ZIP gotowego do maila — opcjonalnie złóż obrazy w PDF.",
-      "compareDocs": "Porównaj dwa PDF lub DOCX (warstwa tekstowa) i pobierz prosty diff."
+      "compareDocs": "Porównaj dwa PDF lub DOCX (warstwa tekstowa) i pobierz prosty diff.",
+      "redactPdf": "Zaczernij e-maile, PESEL, IBAN i własne frazy w PDF przed wysyłką.",
+      "fillPdf": "Wypełnij pola formularza albo dodaj pieczątkę z imieniem, NIP-em i datą.",
+      "splitScan": "Rozdziel wielostronicowy skan PDF na osobne strony w ZIP."
     }
   },
   "share": {
@@ -461,6 +464,9 @@
     "needTwoPdf": "Dodaj co najmniej dwa pliki PDF do połączenia.",
     "needTwoDocs": "Dodaj dokładnie dwa dokumenty do porównania.",
     "needPdfStamp": "Dodaj PDF (opcjonalnie obraz pieczątki jako drugi plik).",
+    "shareFile": "Udostępnij plik",
+    "emailDraft": "Szkic e-maila",
+    "restoredSettings": "Przywrócono Twoje ostatnie ustawienia tego narzędzia — dodaj pliki i uruchom ponownie.",
     "operationFailed": "Operacja nie powiodła się.",
     "compressionQuality": "Jakość kompresji",
     "qualityHint": "Niższa wartość = mniejszy plik. Wyższa wartość = lepsza jakość.",
@@ -982,7 +988,17 @@
     "posBottomRight": "Prawy dolny róg",
     "posBottomLeft": "Lewy dolny róg",
     "posTopRight": "Prawy górny róg",
-    "posCenter": "Środek"
+    "posCenter": "Środek",
+    "redactPatterns": "Własne frazy (każda w nowej linii)",
+    "redactAuto": "Wykrywanie automatyczne",
+    "redactEmails": "E-maile",
+    "redactPesel": "PESEL / numery ID",
+    "redactIban": "IBAN / numery kont",
+    "redactPhones": "Numery telefonów",
+    "fillName": "Imię i nazwisko",
+    "fillNip": "NIP",
+    "fillDate": "Data",
+    "fillExtra": "Dodatkowa notatka"
   },
   "accountRecent": {
     "title": "Ostatnio używane",
@@ -1114,6 +1130,10 @@
         "title": "Tekst ze skanu lub zdjęcia dokumentu",
         "desc": "OCR skanu/PDF (do 3 stron) albo warstwa tekstowa — wynik jako TXT."
       },
+      "redact": {
+        "title": "Zaczernij PESEL / e-mail w PDF",
+        "desc": "Wizualna redakcja przed wysyłką — plus przygotowanie do maila bez EXIF."
+      },
       "assistant": {
         "title": "Nie wiem, jakiego narzędzia potrzebuję",
         "desc": "Wrzuć plik — Toolando rozpozna format i pokaże jedną jasną rekomendację."
@@ -1136,8 +1156,8 @@
       },
       "prywatnosc": {
         "title": "Prywatność pliku",
-        "desc": "Sprawdź metadane, usuń EXIF, przygotuj bezpieczną wersję do maila.",
-        "intro": "Najpierw zobacz, co ujawnia plik. Potem usuń EXIF albo przygotuj lekką wersję bez metadanych."
+        "desc": "Sprawdź metadane, usuń EXIF, zaczerń dane w PDF, przygotuj bezpieczną wersję do maila.",
+        "intro": "Najpierw zobacz, co ujawnia plik. Potem usuń EXIF, zrób redakcję PDF albo przygotuj lekką wersję bez metadanych."
       },
       "skan-do-pdf": {
         "title": "Skan / zdjęcia → PDF",
@@ -1163,6 +1183,21 @@
         "title": "Napraw uszkodzony plik",
         "desc": "Diagnoza i przepisanie kontenera PDF, obrazu, ZIP/DOCX i innych.",
         "intro": "Naprawa nie odzyskuje magicznie usuniętej treści — przepisuje uszkodzony kontener, gdy to możliwe."
+      },
+      "redakcja": {
+        "title": "Zaczernij dane w PDF",
+        "desc": "PESEL, e-mail, IBAN i własne frazy — wizualna redakcja przed wysyłką.",
+        "intro": "Wyszukujemy tekst w PDF i rysujemy czarne prostokąty. To przykrycie, nie kryptograficzne usunięcie — łącz z przygotowaniem do maila."
+      },
+      "wypelnij": {
+        "title": "Wypełnij blankiet / PDF",
+        "desc": "Pola AcroForm albo pieczątka z imieniem, NIP-em i datą.",
+        "intro": "Jeśli PDF ma pola formularza — uzupełnimy je. W przeciwnym razie dodamy czytelną pieczątkę na każdej stronie."
+      },
+      "rozdziel-skan": {
+        "title": "Rozdziel skan na strony",
+        "desc": "Wielostronicowy PDF → osobne pliki w ZIP.",
+        "intro": "Po złożeniu zdjęć w jeden PDF często chcesz wysłać tylko wybrane strony — rozdziel skan na ZIP."
       }
     }
   }

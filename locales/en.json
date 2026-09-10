@@ -193,7 +193,10 @@
       "imagesToPdf": "Make one PDF from photos or scans — file order becomes page order.",
       "stampPdf": "Add a text stamp or signature image on every PDF page.",
       "prepareEmail": "Compress, strip EXIF, and ZIP for email — optionally pack images into one PDF.",
-      "compareDocs": "Compare two PDF or DOCX files (text layer) and download a simple diff."
+      "compareDocs": "Compare two PDF or DOCX files (text layer) and download a simple diff.",
+      "redactPdf": "Black out emails, ID numbers, IBANs and custom phrases in a PDF before sending.",
+      "fillPdf": "Fill form fields or stamp name, tax ID and date onto the PDF.",
+      "splitScan": "Split a multipage scan PDF into separate pages in a ZIP."
     }
   },
   "share": {
@@ -461,6 +464,9 @@
     "needTwoPdf": "Add at least two PDF files to merge.",
     "needTwoDocs": "Add exactly two documents to compare.",
     "needPdfStamp": "Add a PDF (optional stamp image as second file).",
+    "shareFile": "Share file",
+    "emailDraft": "E-mail draft",
+    "restoredSettings": "Restored your last settings for this tool — add files and run again.",
     "operationFailed": "The operation failed.",
     "compressionQuality": "Compression quality",
     "qualityHint": "Lower value = smaller file. Higher value = better quality.",
@@ -982,7 +988,17 @@
     "posBottomRight": "Bottom right",
     "posBottomLeft": "Bottom left",
     "posTopRight": "Top right",
-    "posCenter": "Center"
+    "posCenter": "Center",
+    "redactPatterns": "Custom phrases (one per line)",
+    "redactAuto": "Auto-detect",
+    "redactEmails": "E-mails",
+    "redactPesel": "PESEL / ID-like numbers",
+    "redactIban": "IBAN / account numbers",
+    "redactPhones": "Phone numbers",
+    "fillName": "Full name",
+    "fillNip": "NIP / tax ID",
+    "fillDate": "Date",
+    "fillExtra": "Extra note"
   },
   "accountRecent": {
     "title": "Recently used",
@@ -1114,6 +1130,10 @@
         "title": "Text from a scan or document photo",
         "desc": "OCR a scan/PDF (up to 3 pages) or pull a text layer — download as TXT."
       },
+      "redact": {
+        "title": "Black out ID / email in a PDF",
+        "desc": "Visual redaction before sending — plus email prep without EXIF."
+      },
       "assistant": {
         "title": "I don’t know which tool I need",
         "desc": "Drop a file — Toolando detects the format and shows one clear recommendation."
@@ -1136,8 +1156,8 @@
       },
       "prywatnosc": {
         "title": "File privacy",
-        "desc": "Inspect metadata, strip EXIF, prepare a safer email-ready copy.",
-        "intro": "First see what the file reveals. Then strip EXIF or prepare a light copy without metadata."
+        "desc": "Inspect metadata, strip EXIF, redact PDF data, prepare a safer email-ready copy.",
+        "intro": "First see what the file reveals. Then strip EXIF, redact the PDF, or prepare a light copy without metadata."
       },
       "skan-do-pdf": {
         "title": "Scan / photos → PDF",
@@ -1163,6 +1183,21 @@
         "title": "Repair a damaged file",
         "desc": "Diagnose and rewrite PDF, image, ZIP/DOCX and other containers.",
         "intro": "Repair does not magically recover deleted content — it rewrites a damaged container when possible."
+      },
+      "redakcja": {
+        "title": "Black out data in a PDF",
+        "desc": "IDs, emails, IBANs and custom phrases — visual redaction before sending.",
+        "intro": "We search the PDF text and draw black rectangles. This is a cover, not cryptographic removal — pair it with email prep."
+      },
+      "wypelnij": {
+        "title": "Fill a form / PDF",
+        "desc": "AcroForm fields or a stamp with name, tax ID and date.",
+        "intro": "If the PDF has form fields we fill them. Otherwise we add a readable stamp on every page."
+      },
+      "rozdziel-skan": {
+        "title": "Split a scan into pages",
+        "desc": "Multipage PDF → separate files in a ZIP.",
+        "intro": "After packing photos into one PDF you often need only selected pages — split the scan into a ZIP."
       }
     }
   }

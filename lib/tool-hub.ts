@@ -19,7 +19,10 @@ export type UtilityBrowseGroup = {
 const SPECIALS_BY_CATEGORY: Record<string, SpecialToolConfig["id"][]> = {
   documents: [
     "zdjecia-do-pdf",
+    "rozdziel-skan",
     "ocr-skanu",
+    "redakcja-pdf",
+    "wypelnij-pdf",
     "podpis-pdf",
     "porownaj-dokumenty",
     "przygotuj-do-maila",
@@ -33,7 +36,10 @@ const SPECIALS_BY_CATEGORY: Record<string, SpecialToolConfig["id"][]> = {
   ],
   pdf: [
     "zdjecia-do-pdf",
+    "rozdziel-skan",
     "ocr-skanu",
+    "redakcja-pdf",
+    "wypelnij-pdf",
     "podpis-pdf",
     "porownaj-dokumenty",
     "przygotuj-do-maila",

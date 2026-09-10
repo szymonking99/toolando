@@ -193,6 +193,31 @@ export const SEARCH_INTENTS: SearchIntent[] = [
   },
   {
     aliases: [
+      "redakcja pdf", "zaczernij", "zaczernianie", "anonimizacja pdf",
+      "redact pdf", "blackout pdf", "ukryj pesel", "hide pesel",
+      "zakryj dane", "cenzura pdf",
+    ],
+    toolIds: ["redakcja-pdf"],
+    answerKey: "redactPdf",
+  },
+  {
+    aliases: [
+      "wypelnij pdf", "wypełnij pdf", "fill pdf", "formularz pdf",
+      "blankiet", "uzupelnij pdf", "acroform", "wstaw nip",
+    ],
+    toolIds: ["wypelnij-pdf"],
+    answerKey: "fillPdf",
+  },
+  {
+    aliases: [
+      "rozdziel skan", "podziel skan", "split scan", "skan na strony",
+      "kazda strona osobno", "pages from scan", "rozdziel strony skanu",
+    ],
+    toolIds: ["rozdziel-skan", "podzial-pdf"],
+    answerKey: "splitScan",
+  },
+  {
+    aliases: [
       "napraw plik", "naprawić plik", "naprawic plik", "repair file", "fix file",
       "uszkodzony plik", "corrupt file", "corrupted file", "broken pdf",
       "uszkodzony pdf", "nie da sie otworzyc pliku", "damaged file",
@@ -473,6 +498,24 @@ const ACTION_RULES: ActionRule[] = [
     score: 90,
   },
   {
+    re: /\b(redakcj\w*|zaczern\w*|anonimiz\w*|redact\w*|cenzur\w*|blackout)\b.*\b(pdf|pesel|dane|data)\b|\b(ukryj|zakryj)\b.*\b(pesel|email|dane)\b/,
+    toolIds: ["redakcja-pdf"],
+    answerKey: "redactPdf",
+    score: 90,
+  },
+  {
+    re: /\b(wypeln\w*|wypełn\w*|fill\w*|uzupeln\w*|blankiet|formularz)\b.*\bpdf\b|\bpdf\b.*\b(formularz|blankiet|nip)\b/,
+    toolIds: ["wypelnij-pdf"],
+    answerKey: "fillPdf",
+    score: 88,
+  },
+  {
+    re: /\b(rozdziel\w*|podziel\w*|split)\b.*\b(skan\w*|scan\w*)\b|\b(skan\w*|scan)\b.*\b(na strony|into pages|osobno)\b/,
+    toolIds: ["rozdziel-skan", "podzial-pdf"],
+    answerKey: "splitScan",
+    score: 88,
+  },
+  {
     re: /\b(edytuj\w*|edytowac|edit\w*)\b.*\bpdf\b|\bpdf\b.*\b(word|docx)\b|\b(word|docx)\b.*\bpdf\b/,
     toolIds: ["pdf-to-docx"],
     answerKey: "pdfWord",
@@ -623,5 +666,12 @@ export const TOOL_KEYWORDS: Record<string, string[]> = {
   ],
   "porownaj-dokumenty": [
     "porównaj", "compare documents", "diff pdf", "compare docx",
+  ],
+  "redakcja-pdf": [
+    "zaczernij", "redact", "anonimizacja", "ukryj pesel", "cenzura",
+  ],
+  "wypelnij-pdf": ["wypełnij", "fill pdf", "blankiet", "formularz", "nip"],
+  "rozdziel-skan": [
+    "rozdziel skan", "split scan", "skan na strony", "podziel skan",
   ],
 }

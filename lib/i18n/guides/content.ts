@@ -7,6 +7,7 @@ import {
   guidesBatch4Es,
   guidesBatch4Uk,
 } from "./batch-4"
+import { guidesBatch5En } from "./batch-5"
 import { guidesBatch23De, guidesBatch23Es, guidesBatch23Uk } from "./batch-2-3-locales"
 import { guidesPl } from "./guides-pl"
 import { guidesEn } from "./guides-en"
@@ -320,6 +321,7 @@ const guidesDe: Record<GuideSlug, GuideArticle> = {
   },
   ...guidesBatch23De,
   ...guidesBatch4De,
+  ...guidesBatch5En,
 }
 
 const guidesEs: Record<GuideSlug, GuideArticle> = {
@@ -600,6 +602,7 @@ const guidesEs: Record<GuideSlug, GuideArticle> = {
   },
   ...guidesBatch23Es,
   ...guidesBatch4Es,
+  ...guidesBatch5En,
 }
 
 const guidesUk: Record<GuideSlug, GuideArticle> = {
@@ -880,6 +883,7 @@ const guidesUk: Record<GuideSlug, GuideArticle> = {
   },
   ...guidesBatch23Uk,
   ...guidesBatch4Uk,
+  ...guidesBatch5En,
 }
 
 const byLocale: Record<string, Record<GuideSlug, GuideArticle>> = {

@@ -12,6 +12,9 @@ export type ProblemIntentId =
   | "podpis-pdf"
   | "porownaj"
   | "naprawa"
+  | "redakcja"
+  | "wypelnij"
+  | "rozdziel-skan"
 
 export type ProblemIntent = {
   id: ProblemIntentId
@@ -29,7 +32,7 @@ export const PROBLEM_INTENTS: ProblemIntent[] = [
       "przygotuj-do-maila",
       "kompresja-pdf",
       "kompresor-obrazow",
-      "podzial-pdf",
+      "rozdziel-skan",
     ],
   },
   {
@@ -37,12 +40,19 @@ export const PROBLEM_INTENTS: ProblemIntent[] = [
     toolIds: [
       "inspektor-prywatnosci",
       "usun-exif",
+      "redakcja-pdf",
       "przygotuj-do-maila",
     ],
   },
   {
     id: "skan-do-pdf",
-    toolIds: ["zdjecia-do-pdf", "ocr-skanu", "laczenie-pdf", "przygotuj-do-maila"],
+    toolIds: [
+      "zdjecia-do-pdf",
+      "rozdziel-skan",
+      "ocr-skanu",
+      "laczenie-pdf",
+      "przygotuj-do-maila",
+    ],
   },
   {
     id: "ocr",
@@ -50,7 +60,7 @@ export const PROBLEM_INTENTS: ProblemIntent[] = [
   },
   {
     id: "podpis-pdf",
-    toolIds: ["podpis-pdf", "znak-wodny", "numeracja-pdf"],
+    toolIds: ["podpis-pdf", "wypelnij-pdf", "znak-wodny", "numeracja-pdf"],
   },
   {
     id: "porownaj",
@@ -59,6 +69,18 @@ export const PROBLEM_INTENTS: ProblemIntent[] = [
   {
     id: "naprawa",
     toolIds: ["naprawa-plikow", "otworz", "przygotuj-do-maila"],
+  },
+  {
+    id: "redakcja",
+    toolIds: ["redakcja-pdf", "inspektor-prywatnosci", "usun-exif", "przygotuj-do-maila"],
+  },
+  {
+    id: "wypelnij",
+    toolIds: ["wypelnij-pdf", "podpis-pdf", "numeracja-pdf"],
+  },
+  {
+    id: "rozdziel-skan",
+    toolIds: ["rozdziel-skan", "podzial-pdf", "zdjecia-do-pdf", "laczenie-pdf"],
   },
 ]
 

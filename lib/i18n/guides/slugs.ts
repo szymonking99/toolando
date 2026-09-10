@@ -33,6 +33,9 @@ export const GUIDE_SLUGS = [
   "remove-exif-privacy-guide",
   "jwt-decode-safely-guide",
   "mortgage-loan-calculator-guide",
+  "pdf-redaction-privacy-guide",
+  "ocr-scan-to-text-guide",
+  "prepare-files-for-email-guide",
 ] as const
 
 export type GuideSlug = (typeof GUIDE_SLUGS)[number]

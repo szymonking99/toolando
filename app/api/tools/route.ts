@@ -27,6 +27,7 @@ import {
   prepareForEmail,
   compareDocuments,
 } from "@/lib/office-workflows"
+import { redactPdf, fillPdfForm } from "@/lib/office-privacy"
 import { parseTimeToSeconds } from "@/lib/ffmpeg-utils"
 
 export const runtime = "nodejs"
@@ -234,15 +235,28 @@ export async function POST(req: NextRequest) {
         break
       }
       case "ocr-document": {
-        result = await ocrDocument(files[0].buffer, files[0].name)
+        if (files.length > 1) {
+          const parts = await Promise.all(
+            files.map((f) => ocrDocument(f.buffer, f.name)),
+          )
+          result = await zipResults(parts, "ocr-batch.zip")
+          result.note = `OCR: ${parts.length} plików w ZIP.`
+        } else {
+          result = await ocrDocument(files[0].buffer, files[0].name)
+        }
         break
       }
       case "stamp-pdf": {
-        const pdfFile =
-          files.find((f) => f.name.toLowerCase().endsWith(".pdf")) ?? files[0]
-        const stampImage = files.find(
-          (f) => f !== pdfFile && /\.(png|jpe?g|webp)$/i.test(f.name),
+        const stampImage = files.find((f) =>
+          /\.(png|jpe?g|webp)$/i.test(f.name),
         )
+        const pdfs = files.filter((f) => f.name.toLowerCase().endsWith(".pdf"))
+        if (pdfs.length === 0) {
+          return json(
+            { error: "Dodaj co najmniej jeden PDF (opcjonalnie obraz pieczątki)." },
+            400,
+          )
+        }
         const positionRaw = intake.field("stampPosition") ?? "bottom-right"
         const position = (
           ["bottom-right", "bottom-left", "top-right", "center"] as const
@@ -253,11 +267,19 @@ export async function POST(req: NextRequest) {
               | "top-right"
               | "center")
           : "bottom-right"
-        result = await stampPdf(pdfFile.buffer, pdfFile.name, {
+        const stampOpts = {
           text: intake.field("stampText") ?? "toolando.tech",
           position,
           stampImage: stampImage?.buffer,
-        })
+        }
+        if (pdfs.length > 1) {
+          const parts = await Promise.all(
+            pdfs.map((f) => stampPdf(f.buffer, f.name, stampOpts)),
+          )
+          result = await zipResults(parts, "podpisane-pdf.zip")
+        } else {
+          result = await stampPdf(pdfs[0].buffer, pdfs[0].name, stampOpts)
+        }
         break
       }
       case "prepare-email": {
@@ -277,6 +299,36 @@ export async function POST(req: NextRequest) {
         result = await compareDocuments(
           files.map((f) => ({ buffer: f.buffer, name: f.name })),
         )
+        break
+      }
+      case "redact-pdf": {
+        result = await redactPdf(files[0].buffer, files[0].name, {
+          customPatterns: intake.field("redactPatterns") ?? "",
+          emails: intake.field("redactEmails") !== "0",
+          pesel: intake.field("redactPesel") !== "0",
+          iban: intake.field("redactIban") !== "0",
+          phones: intake.field("redactPhones") === "1",
+        })
+        break
+      }
+      case "fill-pdf": {
+        const positionRaw = intake.field("stampPosition") ?? "bottom-right"
+        const position = (
+          ["bottom-right", "bottom-left", "top-right", "center"] as const
+        ).includes(positionRaw as never)
+          ? (positionRaw as
+              | "bottom-right"
+              | "bottom-left"
+              | "top-right"
+              | "center")
+          : "bottom-right"
+        result = await fillPdfForm(files[0].buffer, files[0].name, {
+          fullName: intake.field("fillName") ?? "",
+          nip: intake.field("fillNip") ?? "",
+          date: intake.field("fillDate") ?? "",
+          extra: intake.field("fillExtra") ?? "",
+          position,
+        })
         break
       }
       default:

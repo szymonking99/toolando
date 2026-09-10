@@ -19,6 +19,9 @@ export type SpecialToolId =
   | "podpis-pdf"
   | "przygotuj-do-maila"
   | "porownaj-dokumenty"
+  | "redakcja-pdf"
+  | "wypelnij-pdf"
+  | "rozdziel-skan"
 
 export type SpecialEngine =
   | "compress-image"
@@ -41,6 +44,8 @@ export type SpecialEngine =
   | "stamp-pdf"
   | "prepare-email"
   | "compare-documents"
+  | "redact-pdf"
+  | "fill-pdf"
 
 export type SpecialToolConfig = {
   id: SpecialToolId
@@ -289,10 +294,10 @@ export const specialTools: SpecialToolConfig[] = [
     category: "Dokumenty",
     name: "OCR skanu → tekst",
     description:
-      "Wyodrębnij tekst ze skanu, zdjęcia dokumentu albo PDF bez warstwy tekstowej. PDF: najpierw warstwa tekstowa, inaczej OCR do 3 stron.",
+      "Wyodrębnij tekst ze skanu, zdjęcia dokumentu albo PDF bez warstwy tekstowej. PDF: najpierw warstwa tekstowa, inaczej OCR do 3 stron. Wiele plików → ZIP.",
     accept: ".jpg,.jpeg,.png,.webp,.gif,.tif,.tiff,.heic,.heif,.pdf,.bmp",
-    acceptLabel: "Obraz lub PDF (skan)",
-    multiple: false,
+    acceptLabel: "Obrazy lub PDF (wiele plików OK)",
+    multiple: true,
     actionLabel: "Wyodrębnij tekst",
     hasQuality: false,
     previewImage: false,
@@ -303,7 +308,7 @@ export const specialTools: SpecialToolConfig[] = [
     category: "Dokumenty",
     name: "Podpis / pieczątka PDF",
     description:
-      "Dodaj tekstową pieczątkę lub podpis na każdą stronę PDF. Opcjonalnie dołącz obraz pieczątki jako drugi plik.",
+      "Dodaj tekstową pieczątkę lub podpis na każdą stronę PDF. Wiele PDF → ZIP; opcjonalnie jeden obraz pieczątki.",
     accept: ".pdf,.png,.jpg,.jpeg,.webp",
     acceptLabel: "PDF (+ opcjonalnie obraz pieczątki)",
     multiple: true,
@@ -332,11 +337,53 @@ export const specialTools: SpecialToolConfig[] = [
     category: "Dokumenty",
     name: "Porównaj dokumenty",
     description:
-      "Porównaj dwa PDF lub DOCX (warstwa tekstowa) i pobierz prosty diff. Przy samych skanach najpierw użyj OCR.",
+      "Porównaj dwa PDF lub DOCX (warstwa tekstowa) — podgląd różnic obok siebie i plik diff. Przy samych skanach najpierw użyj OCR.",
     accept: ".pdf,.docx,.txt,.md",
     acceptLabel: "Dokładnie 2 pliki: PDF / DOCX / TXT",
     multiple: true,
     actionLabel: "Porównaj",
+    hasQuality: false,
+    previewImage: false,
+  },
+  {
+    id: "redakcja-pdf",
+    engine: "redact-pdf",
+    category: "Dokumenty",
+    name: "Redakcja PDF (zaczernianie)",
+    description:
+      "Zaczernij e-maile, PESEL, IBAN i własne frazy przed wysyłką. Wizualne przykrycie — nie magiczne usuwanie tekstu spod warstwy.",
+    accept: ".pdf",
+    acceptLabel: "PDF z warstwą tekstową",
+    multiple: false,
+    actionLabel: "Zaczernij",
+    hasQuality: false,
+    previewImage: false,
+  },
+  {
+    id: "wypelnij-pdf",
+    engine: "fill-pdf",
+    category: "Dokumenty",
+    name: "Wypełnij PDF / blankiet",
+    description:
+      "Uzupełnij pola AcroForm (gdy są) albo dodaj pieczątkę z imieniem, NIP-em i datą na każdej stronie.",
+    accept: ".pdf",
+    acceptLabel: "PDF (formularz lub blankiet)",
+    multiple: false,
+    actionLabel: "Wypełnij",
+    hasQuality: false,
+    previewImage: false,
+  },
+  {
+    id: "rozdziel-skan",
+    engine: "split-pdf",
+    category: "Dokumenty",
+    name: "Rozdziel skan wielostronicowy",
+    description:
+      "Jeden skan PDF → osobne strony w ZIP. Idealne po „Zdjęcia → PDF”, gdy chcesz wysłać tylko wybrane strony.",
+    accept: ".pdf",
+    acceptLabel: "Wielostronicowy PDF / skan",
+    multiple: false,
+    actionLabel: "Rozdziel strony",
     hasQuality: false,
     previewImage: false,
   },

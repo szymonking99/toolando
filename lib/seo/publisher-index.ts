@@ -51,6 +51,9 @@ export const INDEXABLE_GUIDE_SLUGS = new Set<GuideSlug>([
   "extract-images-from-pdf-pages",
   "pdf-to-jpg",
   "video-social-media",
+  "pdf-redaction-privacy-guide",
+  "ocr-scan-to-text-guide",
+  "prepare-files-for-email-guide",
 ])
 
 export function isIndexedLocale(locale: string): boolean {

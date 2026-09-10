@@ -475,6 +475,29 @@ const specialMaps: Record<string, SpecialMap> = {
       actionLabel: "Porównaj",
       acceptLabel: "Dokładnie 2 pliki",
     },
+    "redakcja-pdf": {
+      category: "Dokumenty",
+      name: "Redakcja PDF (zaczernianie)",
+      description:
+        "Zaczernij e-maile, PESEL, IBAN i własne frazy. Wizualne przykrycie — nie usuwa magicznie tekstu spod warstwy.",
+      actionLabel: "Zaczernij",
+      acceptLabel: "PDF z warstwą tekstową",
+    },
+    "wypelnij-pdf": {
+      category: "Dokumenty",
+      name: "Wypełnij PDF / blankiet",
+      description:
+        "Uzupełnij pola AcroForm albo dodaj pieczątkę z imieniem, NIP-em i datą.",
+      actionLabel: "Wypełnij",
+      acceptLabel: "PDF",
+    },
+    "rozdziel-skan": {
+      category: "Dokumenty",
+      name: "Rozdziel skan wielostronicowy",
+      description: "Jeden skan PDF → osobne strony w ZIP.",
+      actionLabel: "Rozdziel strony",
+      acceptLabel: "Wielostronicowy PDF",
+    },
   },
   en: {
     "kompresor-obrazow": {
@@ -624,6 +647,29 @@ const specialMaps: Record<string, SpecialMap> = {
       description: "Simple text diff of two PDFs or DOCX files.",
       actionLabel: "Compare",
       acceptLabel: "Exactly 2 files",
+    },
+    "redakcja-pdf": {
+      category: "Documents",
+      name: "PDF redaction (blackout)",
+      description:
+        "Black out emails, ID numbers, IBANs and custom phrases. Visual cover — not magic text removal.",
+      actionLabel: "Redact",
+      acceptLabel: "PDF with a text layer",
+    },
+    "wypelnij-pdf": {
+      category: "Documents",
+      name: "Fill PDF / form",
+      description:
+        "Fill AcroForm fields or stamp name, tax ID and date on every page.",
+      actionLabel: "Fill",
+      acceptLabel: "PDF",
+    },
+    "rozdziel-skan": {
+      category: "Documents",
+      name: "Split multipage scan",
+      description: "One scan PDF → separate pages in a ZIP.",
+      actionLabel: "Split pages",
+      acceptLabel: "Multipage PDF",
     },
   },
   de: {

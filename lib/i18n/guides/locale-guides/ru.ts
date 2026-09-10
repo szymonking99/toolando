@@ -1,6 +1,7 @@
 import type { GuideArticle } from "../types"
 import type { GuideSlug } from "../slugs"
 import { guidesEn } from "../guides-en"
+import { guidesBatch5En } from "../batch-5"
 
 export const guidesRu: Record<GuideSlug, GuideArticle> = {
   "choose-audio-bitrate": {
@@ -832,4 +833,5 @@ export const guidesRu: Record<GuideSlug, GuideArticle> = {
       },
     ],
   },
+  ...guidesBatch5En,
 }

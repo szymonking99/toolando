@@ -8,6 +8,9 @@ import {
   AlertCircle,
   Download,
   X,
+  Share2,
+  RotateCcw,
+  Mail,
 } from "lucide-react"
 import type { SpecialToolConfig } from "@/lib/special-tools"
 import { uploadManyAndProcess } from "@/lib/client-upload"
@@ -18,9 +21,15 @@ import {
   SpecialToolFields,
   buildSpecialFields,
   defaultSpecialFields,
+  type SpecialFieldValues,
 } from "@/components/special-tool-fields"
 import { NextStepsPanel } from "@/components/next-steps-panel"
-import { recordToolVisit } from "@/lib/client-preferences"
+import { CompareDiffView } from "@/components/compare-diff-view"
+import {
+  recordToolVisit,
+  recordLastOperation,
+  getLastOperation,
+} from "@/lib/client-preferences"
 
 type Status = "idle" | "uploading" | "working" | "done" | "error"
 
@@ -47,10 +56,35 @@ export function SpecialTool({ tool }: { tool: SpecialToolConfig }) {
     size: number
     isImage: boolean
     note?: string
+    textPreview?: string
+    mime?: string
   } | null>(null)
+  const [canShareFile, setCanShareFile] = useState(false)
+  const [lastOpHint, setLastOpHint] = useState(false)
 
   const isImageResult = tool.previewImage
   const workProgress = useFakeProgress(status === "working")
+
+  useEffect(() => {
+    const last = getLastOperation(tool.id)
+    if (!last?.fields) return
+    setExtraFields((prev) => ({
+      ...prev,
+      ...Object.fromEntries(
+        Object.entries(last.fields).filter(([k]) => k in prev),
+      ),
+    }) as SpecialFieldValues)
+    if (typeof last.quality === "number") setQuality(last.quality)
+    setLastOpHint(true)
+  }, [tool.id])
+
+  useEffect(() => {
+    setCanShareFile(
+      typeof navigator !== "undefined" &&
+        typeof navigator.share === "function" &&
+        typeof navigator.canShare === "function",
+    )
+  }, [])
 
   // Live thumbnails for selected image files (before processing).
   const [previews, setPreviews] = useState<string[]>([])
@@ -164,15 +198,36 @@ export function SpecialTool({ tool }: { tool: SpecialToolConfig }) {
         ? decodeURIComponent(reportHeader)
         : undefined
 
+      let textPreview: string | undefined
+      if (
+        tool.engine === "compare-documents" ||
+        blob.type.startsWith("text/")
+      ) {
+        try {
+          textPreview = await blob.text()
+        } catch {
+          textPreview = undefined
+        }
+      }
+
       setResult({
         url: URL.createObjectURL(blob),
         name,
         size: blob.size,
         isImage: isImageResult,
         note,
+        textPreview,
+        mime: blob.type || "application/octet-stream",
       })
       setStatus("done")
       recordToolVisit(tool.id, meta.name)
+      recordLastOperation({
+        toolId: tool.id,
+        title: meta.name,
+        fields: { ...extraFields },
+        quality: tool.hasQuality ? quality : undefined,
+      })
+      setLastOpHint(false)
     } catch {
       setError(t.tool.connectionError)
       setStatus("error")
@@ -181,8 +236,54 @@ export function SpecialTool({ tool }: { tool: SpecialToolConfig }) {
 
   const originalSize = files.reduce((sum, f) => sum + f.size, 0)
 
+  async function shareResult() {
+    if (!result) return
+    try {
+      const fileRes = await fetch(result.url)
+      const blob = await fileRes.blob()
+      const file = new File([blob], result.name, {
+        type: result.mime || blob.type || "application/octet-stream",
+      })
+      if (navigator.canShare?.({ files: [file] })) {
+        await navigator.share({
+          files: [file],
+          title: result.name,
+          text: meta.name,
+        })
+        return
+      }
+      if (navigator.share) {
+        await navigator.share({
+          title: meta.name,
+          text: `${meta.name} — ${result.name}`,
+          url: window.location.href,
+        })
+      }
+    } catch {
+      /* user cancelled */
+    }
+  }
+
+  function mailtoHint() {
+    if (!result) return
+    const subject = encodeURIComponent(result.name)
+    const body = encodeURIComponent(
+      `${meta.name}\n${typeof window !== "undefined" ? window.location.href : ""}\n\n(Pobierz plik z Toolando i dołącz jako załącznik — przeglądarki nie wstawiają plików do mailto.)`,
+    )
+    window.location.href = `mailto:?subject=${subject}&body=${body}`
+  }
+
   return (
     <div className="space-y-4">
+      {lastOpHint && files.length === 0 && (
+        <div className="flex items-start gap-2 rounded-xl border border-primary/20 bg-primary/[0.06] px-4 py-3 text-sm text-foreground">
+          <RotateCcw className="mt-0.5 size-4 shrink-0 text-primary" />
+          <span>
+            {(t.tool as { restoredSettings?: string }).restoredSettings ??
+              "Restored your last settings for this tool — add files and run again."}
+          </span>
+        </div>
+      )}
       <label
         onDragOver={(e) => {
           e.preventDefault()
@@ -341,10 +442,18 @@ export function SpecialTool({ tool }: { tool: SpecialToolConfig }) {
             </div>
           )}
 
-          {result.note && (
+          {result.note && tool.engine !== "compare-documents" && (
             <pre className="max-h-48 overflow-auto whitespace-pre-wrap rounded-lg border border-white/10 bg-white/[0.03] px-3 py-2 text-xs leading-relaxed text-muted-foreground">
               {result.note}
             </pre>
+          )}
+
+          {tool.engine === "compare-documents" && result.textPreview && (
+            <CompareDiffView
+              text={result.textPreview}
+              leftLabel={files[0]?.name ?? "A"}
+              rightLabel={files[1]?.name ?? "B"}
+            />
           )}
 
           <div className="flex flex-wrap gap-3">
@@ -356,6 +465,24 @@ export function SpecialTool({ tool }: { tool: SpecialToolConfig }) {
               <Download className="size-4" />
               {t.tool.downloadNamed} {result.name}
             </a>
+            {canShareFile && (
+              <button
+                type="button"
+                onClick={shareResult}
+                className="inline-flex items-center gap-2 rounded-md border border-white/15 px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-white/5"
+              >
+                <Share2 className="size-4" />
+                {(t.tool as { shareFile?: string }).shareFile ?? "Share file"}
+              </button>
+            )}
+            <button
+              type="button"
+              onClick={mailtoHint}
+              className="inline-flex items-center gap-2 rounded-md border border-white/15 px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-white/5"
+            >
+              <Mail className="size-4" />
+              {(t.tool as { emailDraft?: string }).emailDraft ?? "E-mail draft"}
+            </button>
             <button
               type="button"
               onClick={reset}

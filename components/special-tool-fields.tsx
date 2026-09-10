@@ -18,6 +18,15 @@ export type SpecialFieldValues = {
   stampText: string
   stampPosition: "bottom-right" | "bottom-left" | "top-right" | "center"
   makePdf: boolean
+  redactPatterns: string
+  redactEmails: boolean
+  redactPesel: boolean
+  redactIban: boolean
+  redactPhones: boolean
+  fillName: string
+  fillNip: string
+  fillDate: string
+  fillExtra: string
 }
 
 export const defaultSpecialFields: SpecialFieldValues = {
@@ -35,6 +44,15 @@ export const defaultSpecialFields: SpecialFieldValues = {
   stampText: "Podpisano elektronicznie",
   stampPosition: "bottom-right",
   makePdf: false,
+  redactPatterns: "",
+  redactEmails: true,
+  redactPesel: true,
+  redactIban: true,
+  redactPhones: false,
+  fillName: "",
+  fillNip: "",
+  fillDate: "",
+  fillExtra: "",
 }
 
 export function buildSpecialFields(
@@ -75,6 +93,22 @@ export function buildSpecialFields(
       }
     case "prepare-email":
       return { makePdf: values.makePdf ? "1" : "0" }
+    case "redact-pdf":
+      return {
+        redactPatterns: values.redactPatterns,
+        redactEmails: values.redactEmails ? "1" : "0",
+        redactPesel: values.redactPesel ? "1" : "0",
+        redactIban: values.redactIban ? "1" : "0",
+        redactPhones: values.redactPhones ? "1" : "0",
+      }
+    case "fill-pdf":
+      return {
+        fillName: values.fillName,
+        fillNip: values.fillNip,
+        fillDate: values.fillDate,
+        fillExtra: values.fillExtra,
+        stampPosition: values.stampPosition,
+      }
     default:
       return undefined
   }
@@ -105,6 +139,16 @@ type SpecialFieldsCopy = {
   posBottomLeft?: string
   posTopRight?: string
   posCenter?: string
+  redactPatterns?: string
+  redactAuto?: string
+  redactEmails?: string
+  redactPesel?: string
+  redactIban?: string
+  redactPhones?: string
+  fillName?: string
+  fillNip?: string
+  fillDate?: string
+  fillExtra?: string
 }
 
 const FALLBACK_FIELDS: SpecialFieldsCopy = {
@@ -132,6 +176,16 @@ const FALLBACK_FIELDS: SpecialFieldsCopy = {
   posBottomLeft: "Bottom left",
   posTopRight: "Top right",
   posCenter: "Center",
+  redactPatterns: "Custom phrases (one per line)",
+  redactAuto: "Auto-detect",
+  redactEmails: "E-mails",
+  redactPesel: "PESEL / ID-like numbers",
+  redactIban: "IBAN / account numbers",
+  redactPhones: "Phone numbers",
+  fillName: "Full name",
+  fillNip: "NIP / tax ID",
+  fillDate: "Date",
+  fillExtra: "Extra note",
 }
 
 export function SpecialToolFields({
@@ -380,6 +434,121 @@ export function SpecialToolFields({
               onChange={(e) => onChange({ makePdf: e.target.checked })}
             />
             {f.makePdf}
+          </label>
+        </div>
+      )
+    case "redact-pdf":
+      return (
+        <div className={box}>
+          <label className={label}>
+            {f.redactPatterns ?? "Custom phrases"}
+            <textarea
+              className={`${input} min-h-[5rem]`}
+              value={values.redactPatterns}
+              onChange={(e) => onChange({ redactPatterns: e.target.value })}
+              placeholder="jan.kowalski@firma.pl&#10;90010112345"
+            />
+          </label>
+          <p className="text-xs text-muted-foreground">
+            {f.redactAuto ?? "Auto-detect"}
+          </p>
+          <div className="flex flex-wrap gap-4 text-sm text-foreground">
+            <label className="flex items-center gap-2">
+              <input
+                type="checkbox"
+                checked={values.redactEmails}
+                onChange={(e) => onChange({ redactEmails: e.target.checked })}
+              />
+              {f.redactEmails ?? "E-mails"}
+            </label>
+            <label className="flex items-center gap-2">
+              <input
+                type="checkbox"
+                checked={values.redactPesel}
+                onChange={(e) => onChange({ redactPesel: e.target.checked })}
+              />
+              {f.redactPesel ?? "PESEL"}
+            </label>
+            <label className="flex items-center gap-2">
+              <input
+                type="checkbox"
+                checked={values.redactIban}
+                onChange={(e) => onChange({ redactIban: e.target.checked })}
+              />
+              {f.redactIban ?? "IBAN"}
+            </label>
+            <label className="flex items-center gap-2">
+              <input
+                type="checkbox"
+                checked={values.redactPhones}
+                onChange={(e) => onChange({ redactPhones: e.target.checked })}
+              />
+              {f.redactPhones ?? "Phones"}
+            </label>
+          </div>
+        </div>
+      )
+    case "fill-pdf":
+      return (
+        <div className={box}>
+          <div className="grid gap-3 sm:grid-cols-2">
+            <label className={label}>
+              {f.fillName ?? "Full name"}
+              <input
+                className={input}
+                value={values.fillName}
+                onChange={(e) => onChange({ fillName: e.target.value })}
+              />
+            </label>
+            <label className={label}>
+              {f.fillNip ?? "NIP"}
+              <input
+                className={input}
+                value={values.fillNip}
+                onChange={(e) => onChange({ fillNip: e.target.value })}
+              />
+            </label>
+            <label className={label}>
+              {f.fillDate ?? "Date"}
+              <input
+                className={input}
+                value={values.fillDate}
+                onChange={(e) => onChange({ fillDate: e.target.value })}
+                placeholder="2026-09-10"
+              />
+            </label>
+            <label className={label}>
+              {f.stampPosition}
+              <select
+                className={input}
+                value={values.stampPosition}
+                onChange={(e) =>
+                  onChange({
+                    stampPosition: e.target
+                      .value as SpecialFieldValues["stampPosition"],
+                  })
+                }
+              >
+                <option value="bottom-right">
+                  {f.posBottomRight ?? "Bottom right"}
+                </option>
+                <option value="bottom-left">
+                  {f.posBottomLeft ?? "Bottom left"}
+                </option>
+                <option value="top-right">
+                  {f.posTopRight ?? "Top right"}
+                </option>
+                <option value="center">{f.posCenter ?? "Center"}</option>
+              </select>
+            </label>
+          </div>
+          <label className={label}>
+            {f.fillExtra ?? "Extra note"}
+            <input
+              className={input}
+              value={values.fillExtra}
+              onChange={(e) => onChange({ fillExtra: e.target.value })}
+            />
           </label>
         </div>
       )

@@ -13,6 +13,7 @@ const NEXT_BY_TOOL: Record<string, string[]> = {
 
 const NEXT_BY_SPECIAL: Record<string, string[]> = {
   "podzial-pdf": ["laczenie-pdf", "kompresja-pdf", "pdf-do-tekstu"],
+  "rozdziel-skan": ["zdjecia-do-pdf", "przygotuj-do-maila", "ocr-skanu"],
   "laczenie-pdf": ["podzial-pdf", "kompresja-pdf", "numeracja-pdf"],
   "kompresja-pdf": ["numeracja-pdf", "podzial-pdf", "pdf-do-tekstu"],
   "numeracja-pdf": ["laczenie-pdf", "podsumowanie", "kompresja-pdf"],
@@ -20,6 +21,13 @@ const NEXT_BY_SPECIAL: Record<string, string[]> = {
   "pdf-do-tekstu": ["podsumowanie", "generator-tekstu"],
   "kompresor-obrazow": ["usun-exif", "znak-wodny", "zmiana-rozmiaru-obrazu"],
   "zmiana-rozmiaru-obrazu": ["kompresor-obrazow", "znak-wodny"],
+  "ocr-skanu": ["porownaj-dokumenty", "przygotuj-do-maila", "redakcja-pdf"],
+  "podpis-pdf": ["wypelnij-pdf", "numeracja-pdf", "przygotuj-do-maila"],
+  "przygotuj-do-maila": ["redakcja-pdf", "kompresja-pdf", "usun-exif"],
+  "porownaj-dokumenty": ["ocr-skanu", "pdf-do-tekstu", "podsumowanie"],
+  "redakcja-pdf": ["przygotuj-do-maila", "inspektor-prywatnosci", "usun-exif"],
+  "wypelnij-pdf": ["podpis-pdf", "numeracja-pdf", "przygotuj-do-maila"],
+  "zdjecia-do-pdf": ["rozdziel-skan", "ocr-skanu", "przygotuj-do-maila"],
 }
 
 export function getNextStepToolIds(toolId: string, limit = 3): string[] {

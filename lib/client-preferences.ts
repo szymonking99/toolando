@@ -122,6 +122,34 @@ export function markOnboardingDone() {
   }
 }
 
+const LAST_OPS_KEY = "toolando-last-ops"
+const MAX_LAST_OPS = 12
+
+export type LastOperation = {
+  toolId: string
+  title: string
+  fields: Record<string, string | number | boolean>
+  quality?: number
+  savedAt: number
+}
+
+export function recordLastOperation(op: Omit<LastOperation, "savedAt">) {
+  const list = readJson<LastOperation[]>(LAST_OPS_KEY, [])
+  const next = [
+    { ...op, savedAt: Date.now() },
+    ...list.filter((t) => t.toolId !== op.toolId),
+  ].slice(0, MAX_LAST_OPS)
+  writeJson(LAST_OPS_KEY, next)
+}
+
+export function getLastOperation(toolId: string): LastOperation | null {
+  return readJson<LastOperation[]>(LAST_OPS_KEY, []).find((t) => t.toolId === toolId) ?? null
+}
+
+export function getRecentOperations(): LastOperation[] {
+  return readJson<LastOperation[]>(LAST_OPS_KEY, [])
+}
+
 export function subscribePrefs(listener: () => void) {
   window.addEventListener("toolando-prefs-change", listener)
   window.addEventListener("storage", listener)

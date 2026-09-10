@@ -3,6 +3,7 @@ import type { GuideSlug } from "./slugs"
 import { guidesBatch2Pl } from "./batch-2"
 import { guidesBatch3Pl } from "./batch-3"
 import { guidesBatch4Pl } from "./batch-4"
+import { guidesBatch5Pl } from "./batch-5"
 
 const AUTHOR = "Szymon"
 
@@ -360,5 +361,6 @@ export const guidesPl: Record<GuideSlug, GuideArticle> = {
   ...guidesBatch2Pl,
   ...guidesBatch3Pl,
   ...guidesBatch4Pl,
+  ...guidesBatch5Pl,
 }
 

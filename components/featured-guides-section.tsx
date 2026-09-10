@@ -10,6 +10,9 @@ import { INDEXABLE_GUIDE_SLUGS } from "@/lib/seo/publisher-index"
 const FEATURED_GUIDE_SLUGS: GuideSlug[] = [
   "heic-iphone-jpg",
   "remove-exif-privacy-guide",
+  "pdf-redaction-privacy-guide",
+  "prepare-files-for-email-guide",
+  "ocr-scan-to-text-guide",
   "when-not-to-convert-files",
   "online-file-security",
   "compress-images-without-quality-loss",

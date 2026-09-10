@@ -12,7 +12,10 @@ Primary indexed locales: pl, en. Other locales are available in the UI but not a
 - File Assistant: https://www.toolando.tech/pl/otworz
 - Repair files: https://www.toolando.tech/pl/tools/naprawa-plikow
 - Photos/scans to PDF: https://www.toolando.tech/pl/tools/zdjecia-do-pdf
+- Split multipage scan: https://www.toolando.tech/pl/tools/rozdziel-skan
 - OCR scan → text: https://www.toolando.tech/pl/tools/ocr-skanu
+- PDF redaction: https://www.toolando.tech/pl/tools/redakcja-pdf
+- Fill PDF / form: https://www.toolando.tech/pl/tools/wypelnij-pdf
 - PDF signature/stamp: https://www.toolando.tech/pl/tools/podpis-pdf
 - Prepare for email: https://www.toolando.tech/pl/tools/przygotuj-do-maila
 - Compare documents: https://www.toolando.tech/pl/tools/porownaj-dokumenty
@@ -28,8 +31,11 @@ Primary indexed locales: pl, en. Other locales are available in the UI but not a
 - Won’t open: https://www.toolando.tech/pl/zrob/nie-otwiera-sie
 - Too big: https://www.toolando.tech/pl/zrob/za-duzy
 - Privacy: https://www.toolando.tech/pl/zrob/prywatnosc
+- Redaction: https://www.toolando.tech/pl/zrob/redakcja
 - Scan → PDF: https://www.toolando.tech/pl/zrob/skan-do-pdf
+- Split scan: https://www.toolando.tech/pl/zrob/rozdziel-skan
 - OCR: https://www.toolando.tech/pl/zrob/ocr
+- Fill PDF: https://www.toolando.tech/pl/zrob/wypelnij
 
 ## Profession toolkits
 

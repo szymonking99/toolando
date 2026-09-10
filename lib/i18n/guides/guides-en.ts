@@ -4,6 +4,7 @@ import { guidesPl } from "./guides-pl"
 import { guidesBatch2En } from "./batch-2"
 import { guidesBatch3En } from "./batch-3"
 import { guidesBatch4En } from "./batch-4"
+import { guidesBatch5En } from "./batch-5"
 
 export const guidesEn: Record<GuideSlug, GuideArticle> = {
   "mp3-vs-wav": {
@@ -267,4 +268,5 @@ export const guidesEn: Record<GuideSlug, GuideArticle> = {
   ...guidesBatch2En,
   ...guidesBatch3En,
   ...guidesBatch4En,
+  ...guidesBatch5En,
 }
