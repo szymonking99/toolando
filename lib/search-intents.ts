@@ -180,6 +180,16 @@ export const SEARCH_INTENTS: SearchIntent[] = [
   },
   {
     aliases: [
+      "zdjecia do pdf", "zdjęcia do pdf", "skan do pdf", "skany do pdf",
+      "photos to pdf", "images to pdf", "scan to pdf", "jpg na pdf", "jpg do pdf",
+      "png do pdf", "heic do pdf", "zrob pdf ze zdjec", "pdf ze skanow",
+      "wiele zdjec do pdf", "many photos to pdf",
+    ],
+    toolIds: ["zdjecia-do-pdf"],
+    answerKey: "imagesToPdf",
+  },
+  {
+    aliases: [
       "usunac tlo", "usuń tło", "remove background", "wytnij tlo",
       "background remover", "png bez tla",
     ],
@@ -356,6 +366,12 @@ type ActionRule = {
 
 const ACTION_RULES: ActionRule[] = [
   {
+    re: /\b(zdjec\w*|skan\w*|photo\w*|image\w*|jpg|png|heic)\b.*\b(do pdf|na pdf|to pdf)\b|\b(pdf)\b.*\b(ze zdjec|ze skan|from (photo|scan|image))\b/,
+    toolIds: ["zdjecia-do-pdf"],
+    answerKey: "imagesToPdf",
+    score: 90,
+  },
+  {
     re: /\b(napraw\w*|repair\w*|fix\w*|odzysk\w*)\b.*\b(plik\w*|file\w*|pdf|zip|docx|obraz\w*|zdjec\w*|wideo|video|audio)\b|\b(uszkodzon\w*|corrupt\w*|damaged|broken)\b.*\b(plik\w*|file\w*|pdf|zip)\b/,
     toolIds: ["naprawa-plikow", "otworz"],
     answerKey: "repairFile",
@@ -476,6 +492,22 @@ export function matchSearchIntents(query: string): IntentHit[] {
       },
       score: conv.score,
     })
+  } else {
+    // Common intent: image formats → PDF (no matrix converter; use special tool).
+    const q = normalize(query)
+    const imageTokens = ["jpg", "jpeg", "png", "webp", "heic", "heif", "tiff", "gif", "zdjec", "skan", "photo", "image"]
+    const wantsPdf = /\bpdf\b/.test(q)
+    const hasImage = imageTokens.some((t) => q.includes(t))
+    if (wantsPdf && hasImage) {
+      hits.push({
+        intent: {
+          aliases: [],
+          toolIds: ["zdjecia-do-pdf"],
+          answerKey: "imagesToPdf",
+        },
+        score: 75,
+      })
+    }
   }
 
   return hits.sort((a, b) => b.score - a.score)
@@ -530,5 +562,9 @@ export const TOOL_KEYWORDS: Record<string, string[]> = {
   "naprawa-plikow": [
     "napraw", "repair", "fix", "uszkodzony", "corrupt", "broken file",
     "damaged pdf", "naprawic plik",
+  ],
+  "zdjecia-do-pdf": [
+    "skan do pdf", "photos to pdf", "images to pdf", "jpg to pdf",
+    "zdjęcia do pdf", "scan to pdf", "wiele zdjęć",
   ],
 }

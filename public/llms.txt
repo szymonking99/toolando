@@ -11,6 +11,7 @@ Primary indexed locales: pl, en. Other locales are available in the UI but not a
 - Home (EN): https://www.toolando.tech/en
 - File Assistant: https://www.toolando.tech/pl/otworz
 - Repair files: https://www.toolando.tech/pl/tools/naprawa-plikow
+- Photos/scans to PDF: https://www.toolando.tech/pl/tools/zdjecia-do-pdf
 - All tools: https://www.toolando.tech/pl/tools
 - Guides: https://www.toolando.tech/pl/poradniki
 - Privacy inspector: https://www.toolando.tech/pl/tools/inspektor-prywatnosci

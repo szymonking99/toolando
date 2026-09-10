@@ -23,9 +23,11 @@ const SPECIALS_BY_CATEGORY: Record<string, SpecialToolConfig["id"][]> = {
     "zmiana-rozmiaru-obrazu",
     "usun-exif",
     "znak-wodny",
+    "zdjecia-do-pdf",
     "naprawa-plikow",
   ],
   documents: [
+    "zdjecia-do-pdf",
     "laczenie-pdf",
     "podzial-pdf",
     "kompresja-pdf",
@@ -35,6 +37,7 @@ const SPECIALS_BY_CATEGORY: Record<string, SpecialToolConfig["id"][]> = {
     "naprawa-plikow",
   ],
   pdf: [
+    "zdjecia-do-pdf",
     "podzial-pdf",
     "kompresja-pdf",
     "obrot-pdf",

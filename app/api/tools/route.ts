@@ -17,6 +17,7 @@ import {
   trimVideo,
   compressVideo,
   addPdfPageNumbers,
+  imagesToPdf,
   type SpecialResult,
 } from "@/lib/special-convert"
 import { repairFile } from "@/lib/file-repair"
@@ -213,6 +214,17 @@ export async function POST(req: NextRequest) {
       }
       case "repair-file": {
         result = await repairFile(files[0].buffer, files[0].name)
+        break
+      }
+      case "images-to-pdf": {
+        const pageSize =
+          intake.field("pageSize") === "letter" ? "letter" : "a4"
+        const fit = intake.field("fit") === "cover" ? "cover" : "contain"
+        const quality = Number(intake.field("quality") ?? 85)
+        result = await imagesToPdf(
+          files.map((f) => ({ buffer: f.buffer, name: f.name })),
+          { pageSize, fit, quality },
+        )
         break
       }
       default:

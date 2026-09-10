@@ -63,6 +63,7 @@ export const INDEXABLE_SPECIAL_IDS = new Set([
   "kompresja-wideo",
   "znak-wodny",
   "naprawa-plikow",
+  "zdjecia-do-pdf",
 ])
 
 /** High-intent utilities that deserve their own SERP entry. */

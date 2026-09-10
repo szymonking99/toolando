@@ -221,6 +221,11 @@ const pl: Record<string, SearchCopy> = {
     description:
       "Uratuj uszkodzony plik: diagnostyka i przepisanie kontenera. PDF, obrazy, audio/wideo, ZIP/DOCX, JSON — za darmo.",
   },
+  "zdjecia-do-pdf": {
+    title: "Zdjęcia i skany do PDF online — wiele stron",
+    description:
+      "Zrób jeden PDF ze zdjęć lub skanów (JPG, PNG, HEIC…). Kolejność plików = kolejność stron. Darmowe.",
+  },
   "inspektor-prywatnosci": {
     title: "Co ten plik ujawnia o mnie? — skaner EXIF / GPS",
     description:
@@ -457,6 +462,11 @@ const en: Record<string, SearchCopy> = {
     title: "Repair files online — PDF, image, video, ZIP",
     description:
       "Salvage a broken file: diagnose and rewrite the container. PDF, images, audio/video, ZIP/DOCX, JSON — free.",
+  },
+  "zdjecia-do-pdf": {
+    title: "Photos and scans to PDF online — multi-page",
+    description:
+      "Make one PDF from photos or scans (JPG, PNG, HEIC…). File order = page order. Free.",
   },
   "inspektor-prywatnosci": {
     title: "What does this file reveal? — EXIF / GPS scanner",
