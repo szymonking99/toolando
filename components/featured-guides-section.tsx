@@ -7,7 +7,7 @@ import { localeHref } from "@/lib/i18n/href"
 import { INDEXABLE_GUIDE_SLUGS } from "@/lib/seo/publisher-index"
 
 /** Prefer high-intent guides first on the homepage. */
-const FEATURED_GUIDE_SLUGS: GuideSlug[] = [
+const FEATURED_GUIDE_CANDIDATES = [
   "heic-iphone-jpg",
   "remove-exif-privacy-guide",
   "pdf-redaction-privacy-guide",
@@ -23,7 +23,11 @@ const FEATURED_GUIDE_SLUGS: GuideSlug[] = [
   "extract-audio-from-video",
   "docx-pdf-workflow",
   "split-pdf-pages-guide",
-].filter((slug) => INDEXABLE_GUIDE_SLUGS.has(slug))
+] as const satisfies readonly GuideSlug[]
+
+const FEATURED_GUIDE_SLUGS: GuideSlug[] = FEATURED_GUIDE_CANDIDATES.filter(
+  (slug): slug is GuideSlug => INDEXABLE_GUIDE_SLUGS.has(slug),
+)
 
 export async function FeaturedGuidesSection({
   locale,

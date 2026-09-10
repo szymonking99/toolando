@@ -989,7 +989,15 @@ const specialMaps: Record<string, SpecialMap> = {
 /** Localized metadata for a special tool, falling back to English. */
 export function getSpecialMeta(locale: Locale, id: SpecialToolId): SpecialMeta {
   const map = specialMaps[locale] ?? specialMaps.en
-  return map[id] ?? specialMaps.en[id]
+  const meta = map[id] ?? specialMaps.en[id]
+  if (meta) return meta
+  return {
+    category: "Tools",
+    name: id,
+    description: id,
+    actionLabel: "Run",
+    acceptLabel: "File",
+  }
 }
 
 /* ------------------------------------------------------------------ */
