@@ -139,7 +139,11 @@
     "guides": "Poradniki",
     "faq": "Pytania i odpowiedzi",
     "more": "Więcej",
-    "fileAssistant": "Asystent plików"
+    "fileAssistant": "Asystent plików",
+    "wontOpen": "Nie otwiera się",
+    "tooBig": "Za duży",
+    "scanToPdf": "Skan → PDF",
+    "privacyProblem": "Prywatność"
   },
   "hero": {
     "badge": "Wrzuć plik. Toolando wie, co z nim zrobić.",
@@ -176,7 +180,7 @@
       "json": "Sformatuj JSON albo konwertuj CSV ↔ JSON.",
       "base64": "Koduj lub dekoduj Base64 w przeglądarce.",
       "url": "Percent-encoding URL — encode / decode.",
-      "ocr": "Wyodrębnij tekst z PDF (warstwa tekstowa) — pełne OCR skanów jeszcze nie.",
+      "ocr": "OCR skanu/zdjęcia albo warstwa tekstowa PDF — wynik jako plik TXT.",
       "favicon": "Wygeneruj paczkę favicon PNG w ZIP z jednego obrazu.",
       "removeBg": "Usuwanie tła zostawia obiekt na przezroczystym PNG.",
       "splitPdf": "Podziel PDF na mniejsze pliki albo wyodrębnij strony.",
@@ -186,7 +190,10 @@
       "openFile": "Najpierw otwórz plik w asystencie — zobaczysz format i bezpieczne opcje.",
       "formatConversion": "Pasuje konwerter {from} → {to}.",
       "repairFile": "Spróbuj naprawy pliku — Toolando zdiagnozuje typ i przepisze uszkodzony kontener (PDF, obraz, wideo/audio, ZIP/DOCX, JSON).",
-      "imagesToPdf": "Zrób jeden PDF ze zdjęć lub skanów — kolejność plików to kolejność stron."
+      "imagesToPdf": "Zrób jeden PDF ze zdjęć lub skanów — kolejność plików to kolejność stron.",
+      "stampPdf": "Dodaj tekstową pieczątkę lub obraz podpisu na każdą stronę PDF.",
+      "prepareEmail": "Skompresuj, usuń EXIF i spakuj do ZIP gotowego do maila — opcjonalnie złóż obrazy w PDF.",
+      "compareDocs": "Porównaj dwa PDF lub DOCX (warstwa tekstowa) i pobierz prosty diff."
     }
   },
   "share": {
@@ -452,6 +459,8 @@
     "converting": "Konwertowanie…",
     "convertToPrefix": "Konwertuj na",
     "needTwoPdf": "Dodaj co najmniej dwa pliki PDF do połączenia.",
+    "needTwoDocs": "Dodaj dokładnie dwa dokumenty do porównania.",
+    "needPdfStamp": "Dodaj PDF (opcjonalnie obraz pieczątki jako drugi plik).",
     "operationFailed": "Operacja nie powiodła się.",
     "compressionQuality": "Jakość kompresji",
     "qualityHint": "Niższa wartość = mniejszy plik. Wyższa wartość = lepsza jakość.",
@@ -966,7 +975,14 @@
     "pageSize": "Rozmiar strony",
     "fitMode": "Jak ułożyć obraz",
     "fitContain": "Zmieść na stronie (z marginesem)",
-    "fitCover": "Wypełnij stronę (może przyciąć)"
+    "fitCover": "Wypełnij stronę (może przyciąć)",
+    "stampText": "Tekst pieczątki / podpisu",
+    "stampPosition": "Pozycja",
+    "makePdf": "Dodatkowo złóż obrazy w jeden PDF",
+    "posBottomRight": "Prawy dolny róg",
+    "posBottomLeft": "Lewy dolny róg",
+    "posTopRight": "Prawy górny róg",
+    "posCenter": "Środek"
   },
   "accountRecent": {
     "title": "Ostatnio używane",
@@ -979,7 +995,8 @@
   "assistant": {
     "inspectorTitle": "Informacje o pliku",
     "actionsTitle": "Co możesz z nim zrobić",
-    "actionsSubtitle": "Rozpoznaliśmy format i proponujemy operacje. Nie musisz konwertować, jeśli chcesz tylko podgląd.",
+    "actionsSubtitle": "Rozpoznaliśmy format i proponujemy jedną główną operację plus dodatkowe. Nie musisz konwertować, jeśli chcesz tylko podgląd.",
+    "primaryCta": "Polecany następny krok",
     "name": "Nazwa",
     "size": "Rozmiar",
     "type": "Typ",
@@ -1032,8 +1049,8 @@
       },
       "biuro": {
         "title": "Biuro i administracja",
-        "desc": "PDF ↔ Word, tekst z PDF, łączenie, kompresja, numeracja, VAT.",
-        "intro": "Codzienne operacje na dokumentach i kalkulatory biurowe."
+        "desc": "PDF ↔ Word, OCR skanów, podpis PDF, porównanie, mail-ready, kompresja.",
+        "intro": "Codzienne operacje na dokumentach: OCR, pieczątka, porównanie wersji i przygotowanie do wysyłki."
       },
       "student": {
         "title": "Studenci",
@@ -1078,16 +1095,74 @@
         "desc": "Sprawdź GPS, aparat i daty lokalnie, potem usuń EXIF przed publikacją."
       },
       "pdf": {
-        "title": "PDF za duży do maila",
-        "desc": "Skompresuj PDF, połącz kilka plików albo podziel na strony."
+        "title": "Plik za duży do maila",
+        "desc": "Skompresuj, usuń EXIF i spakuj do ZIP — albo złóż zdjęcia w jeden lekki PDF."
       },
       "webp": {
         "title": "Zdjęcia za ciężkie na stronę WWW",
         "desc": "JPG/PNG → WebP lub AVIF. Czasem lepiej nie konwertować — sprawdź poradnik."
       },
+      "scanPdf": {
+        "title": "Skan / kilka zdjęć → jeden PDF",
+        "desc": "Złóż skany w dokument wielostronicowy. Kolejność plików = kolejność stron."
+      },
+      "repair": {
+        "title": "Uszkodzony PDF, ZIP albo obraz",
+        "desc": "Diagnoza typu i przepisanie uszkodzonego kontenera — bez magicznych obietnic."
+      },
+      "ocr": {
+        "title": "Tekst ze skanu lub zdjęcia dokumentu",
+        "desc": "OCR skanu/PDF (do 3 stron) albo warstwa tekstowa — wynik jako TXT."
+      },
       "assistant": {
         "title": "Nie wiem, jakiego narzędzia potrzebuję",
-        "desc": "Wrzuć plik — Toolando rozpozna format i pokaże dostępne operacje."
+        "desc": "Wrzuć plik — Toolando rozpozna format i pokaże jedną jasną rekomendację."
+      }
+    }
+  },
+  "problemIntents": {
+    "eyebrow": "Rozwiąż problem z plikiem",
+    "open": "Otwórz",
+    "items": {
+      "nie-otwiera-sie": {
+        "title": "Plik się nie otwiera",
+        "desc": "Podgląd, naprawa uszkodzonego kontenera albo HEIC → JPG.",
+        "intro": "Zacznij od asystenta plików. Jeśli kontener jest uszkodzony — spróbuj naprawy. Zdjęcia z iPhone’a często są HEIC."
+      },
+      "za-duzy": {
+        "title": "Plik za duży do wysyłki",
+        "desc": "Przygotuj do maila, kompresja PDF/obrazów albo podział dokumentu.",
+        "intro": "Najszybciej: „Przygotuj do maila” (kompresja + bez EXIF + ZIP). Duże PDF możesz też skompresować lub podzielić."
+      },
+      "prywatnosc": {
+        "title": "Prywatność pliku",
+        "desc": "Sprawdź metadane, usuń EXIF, przygotuj bezpieczną wersję do maila.",
+        "intro": "Najpierw zobacz, co ujawnia plik. Potem usuń EXIF albo przygotuj lekką wersję bez metadanych."
+      },
+      "skan-do-pdf": {
+        "title": "Skan / zdjęcia → PDF",
+        "desc": "Złóż skany w jeden dokument, opcjonalnie OCR i przygotowanie do maila.",
+        "intro": "Wrzuć kilka zdjęć lub skanów — otrzymasz wielostronicowy PDF w kolejności plików."
+      },
+      "ocr": {
+        "title": "Tekst ze skanu (OCR)",
+        "desc": "OCR skanu/zdjęcia albo warstwa tekstowa PDF → plik TXT.",
+        "intro": "Dla skanów bez tekstu użyj OCR (do 3 stron). Jeśli PDF ma warstwę tekstową — wyodrębnimy ją bez AI."
+      },
+      "podpis-pdf": {
+        "title": "Podpis / pieczątka na PDF",
+        "desc": "Tekstowa pieczątka lub obraz podpisu na każdej stronie.",
+        "intro": "Dodaj PDF i opcjonalnie PNG/JPG pieczątki. Tekst i pozycję ustawisz przed uruchomieniem."
+      },
+      "porownaj": {
+        "title": "Porównaj dwie wersje dokumentu",
+        "desc": "Diff tekstowy dwóch PDF lub DOCX.",
+        "intro": "Dodaj dokładnie dwa pliki z warstwą tekstową. Same skany najpierw przepuść przez OCR."
+      },
+      "naprawa": {
+        "title": "Napraw uszkodzony plik",
+        "desc": "Diagnoza i przepisanie kontenera PDF, obrazu, ZIP/DOCX i innych.",
+        "intro": "Naprawa nie odzyskuje magicznie usuniętej treści — przepisuje uszkodzony kontener, gdy to możliwe."
       }
     }
   }

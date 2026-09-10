@@ -226,6 +226,26 @@ const pl: Record<string, SearchCopy> = {
     description:
       "Zrób jeden PDF ze zdjęć lub skanów (JPG, PNG, HEIC…). Kolejność plików = kolejność stron. Darmowe.",
   },
+  "ocr-skanu": {
+    title: "OCR skanu online — tekst ze zdjęcia lub PDF",
+    description:
+      "Wyodrębnij tekst ze skanu dokumentu. PDF bez tekstu: OCR do 3 stron. Darmowe.",
+  },
+  "podpis-pdf": {
+    title: "Podpis i pieczątka PDF online",
+    description:
+      "Dodaj tekstową pieczątkę lub obraz podpisu na każdą stronę PDF. Darmowe.",
+  },
+  "przygotuj-do-maila": {
+    title: "Przygotuj pliki do maila — kompresja i bez EXIF",
+    description:
+      "Odchudź obrazy/PDF, usuń metadane i spakuj do ZIP. Opcjonalnie złóż skany w PDF.",
+  },
+  "porownaj-dokumenty": {
+    title: "Porównaj dwa PDF lub DOCX online",
+    description:
+      "Prosty diff warstwy tekstowej dwóch dokumentów. Przy skanach najpierw OCR.",
+  },
   "inspektor-prywatnosci": {
     title: "Co ten plik ujawnia o mnie? — skaner EXIF / GPS",
     description:
@@ -467,6 +487,25 @@ const en: Record<string, SearchCopy> = {
     title: "Photos and scans to PDF online — multi-page",
     description:
       "Make one PDF from photos or scans (JPG, PNG, HEIC…). File order = page order. Free.",
+  },
+  "ocr-skanu": {
+    title: "Scan OCR online — text from photo or PDF",
+    description:
+      "Extract text from a document scan. Textless PDF: OCR up to 3 pages. Free.",
+  },
+  "podpis-pdf": {
+    title: "PDF signature and stamp online",
+    description: "Add a text stamp or signature image to every PDF page. Free.",
+  },
+  "przygotuj-do-maila": {
+    title: "Prepare files for email — compress and strip EXIF",
+    description:
+      "Shrink images/PDFs, remove metadata, pack a ZIP. Optionally merge scans into a PDF.",
+  },
+  "porownaj-dokumenty": {
+    title: "Compare two PDFs or DOCX online",
+    description:
+      "Simple text-layer diff of two documents. For scans, run OCR first.",
   },
   "inspektor-prywatnosci": {
     title: "What does this file reveal? — EXIF / GPS scanner",

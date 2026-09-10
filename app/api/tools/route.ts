@@ -21,6 +21,12 @@ import {
   type SpecialResult,
 } from "@/lib/special-convert"
 import { repairFile } from "@/lib/file-repair"
+import {
+  ocrDocument,
+  stampPdf,
+  prepareForEmail,
+  compareDocuments,
+} from "@/lib/office-workflows"
 import { parseTimeToSeconds } from "@/lib/ffmpeg-utils"
 
 export const runtime = "nodejs"
@@ -224,6 +230,52 @@ export async function POST(req: NextRequest) {
         result = await imagesToPdf(
           files.map((f) => ({ buffer: f.buffer, name: f.name })),
           { pageSize, fit, quality },
+        )
+        break
+      }
+      case "ocr-document": {
+        result = await ocrDocument(files[0].buffer, files[0].name)
+        break
+      }
+      case "stamp-pdf": {
+        const pdfFile =
+          files.find((f) => f.name.toLowerCase().endsWith(".pdf")) ?? files[0]
+        const stampImage = files.find(
+          (f) => f !== pdfFile && /\.(png|jpe?g|webp)$/i.test(f.name),
+        )
+        const positionRaw = intake.field("stampPosition") ?? "bottom-right"
+        const position = (
+          ["bottom-right", "bottom-left", "top-right", "center"] as const
+        ).includes(positionRaw as never)
+          ? (positionRaw as
+              | "bottom-right"
+              | "bottom-left"
+              | "top-right"
+              | "center")
+          : "bottom-right"
+        result = await stampPdf(pdfFile.buffer, pdfFile.name, {
+          text: intake.field("stampText") ?? "toolando.tech",
+          position,
+          stampImage: stampImage?.buffer,
+        })
+        break
+      }
+      case "prepare-email": {
+        result = await prepareForEmail(
+          files.map((f) => ({ buffer: f.buffer, name: f.name })),
+          {
+            quality: Number(intake.field("quality") ?? 72),
+            makePdf: intake.field("makePdf") === "1",
+          },
+        )
+        break
+      }
+      case "compare-documents": {
+        if (files.length !== 2) {
+          return json({ error: "Dodaj dokładnie dwa pliki do porównania." }, 400)
+        }
+        result = await compareDocuments(
+          files.map((f) => ({ buffer: f.buffer, name: f.name })),
         )
         break
       }

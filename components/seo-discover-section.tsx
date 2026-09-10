@@ -26,7 +26,7 @@ const LINKS = [
   },
   {
     id: "pdf",
-    href: "/tools/kompresja-pdf",
+    href: "/tools/przygotuj-do-maila",
     icon: FileText,
     guide: "/poradniki/merge-pdf-online-guide",
   },
@@ -35,6 +35,24 @@ const LINKS = [
     href: "/tools/jpg-to-webp",
     icon: ImageIcon,
     guide: "/poradniki/prepare-images-for-web",
+  },
+  {
+    id: "scanPdf",
+    href: "/tools/zdjecia-do-pdf",
+    icon: FileText,
+    guide: "/poradniki/merge-pdf-online-guide",
+  },
+  {
+    id: "repair",
+    href: "/tools/naprawa-plikow",
+    icon: Upload,
+    guide: "/poradniki/when-not-to-convert-files",
+  },
+  {
+    id: "ocr",
+    href: "/tools/ocr-skanu",
+    icon: FileText,
+    guide: "/poradniki/when-not-to-convert-files",
   },
   {
     id: "assistant",

@@ -15,6 +15,10 @@ export type SpecialToolId =
   | "pdf-do-tekstu"
   | "naprawa-plikow"
   | "zdjecia-do-pdf"
+  | "ocr-skanu"
+  | "podpis-pdf"
+  | "przygotuj-do-maila"
+  | "porownaj-dokumenty"
 
 export type SpecialEngine =
   | "compress-image"
@@ -33,6 +37,10 @@ export type SpecialEngine =
   | "pdf-to-text"
   | "repair-file"
   | "images-to-pdf"
+  | "ocr-document"
+  | "stamp-pdf"
+  | "prepare-email"
+  | "compare-documents"
 
 export type SpecialToolConfig = {
   id: SpecialToolId
@@ -273,6 +281,63 @@ export const specialTools: SpecialToolConfig[] = [
     multiple: true,
     actionLabel: "Zrób PDF",
     hasQuality: true,
+    previewImage: false,
+  },
+  {
+    id: "ocr-skanu",
+    engine: "ocr-document",
+    category: "Dokumenty",
+    name: "OCR skanu → tekst",
+    description:
+      "Wyodrębnij tekst ze skanu, zdjęcia dokumentu albo PDF bez warstwy tekstowej. PDF: najpierw warstwa tekstowa, inaczej OCR do 3 stron.",
+    accept: ".jpg,.jpeg,.png,.webp,.gif,.tif,.tiff,.heic,.heif,.pdf,.bmp",
+    acceptLabel: "Obraz lub PDF (skan)",
+    multiple: false,
+    actionLabel: "Wyodrębnij tekst",
+    hasQuality: false,
+    previewImage: false,
+  },
+  {
+    id: "podpis-pdf",
+    engine: "stamp-pdf",
+    category: "Dokumenty",
+    name: "Podpis / pieczątka PDF",
+    description:
+      "Dodaj tekstową pieczątkę lub podpis na każdą stronę PDF. Opcjonalnie dołącz obraz pieczątki jako drugi plik.",
+    accept: ".pdf,.png,.jpg,.jpeg,.webp",
+    acceptLabel: "PDF (+ opcjonalnie obraz pieczątki)",
+    multiple: true,
+    actionLabel: "Dodaj podpis",
+    hasQuality: false,
+    previewImage: false,
+  },
+  {
+    id: "przygotuj-do-maila",
+    engine: "prepare-email",
+    category: "Pliki",
+    name: "Przygotuj do maila",
+    description:
+      "Skompresuj, usuń EXIF i nadaj lekkie nazwy. Obrazy i PDF → ZIP gotowy do wysyłki; opcjonalnie złóż obrazy w jeden PDF.",
+    accept:
+      ".jpg,.jpeg,.png,.webp,.gif,.avif,.tiff,.tif,.heic,.heif,.bmp,.pdf",
+    acceptLabel: "Obrazy i PDF (wiele plików)",
+    multiple: true,
+    actionLabel: "Przygotuj",
+    hasQuality: true,
+    previewImage: false,
+  },
+  {
+    id: "porownaj-dokumenty",
+    engine: "compare-documents",
+    category: "Dokumenty",
+    name: "Porównaj dokumenty",
+    description:
+      "Porównaj dwa PDF lub DOCX (warstwa tekstowa) i pobierz prosty diff. Przy samych skanach najpierw użyj OCR.",
+    accept: ".pdf,.docx,.txt,.md",
+    acceptLabel: "Dokładnie 2 pliki: PDF / DOCX / TXT",
+    multiple: true,
+    actionLabel: "Porównaj",
+    hasQuality: false,
     previewImage: false,
   },
 ]

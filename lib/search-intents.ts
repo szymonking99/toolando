@@ -158,16 +158,38 @@ export const SEARCH_INTENTS: SearchIntent[] = [
     aliases: [
       "ocr", "pdf do tekstu", "pdf to text", "wyciagnac tekst",
       "skopiowac tekst z pdf", "extract text from pdf",
+      "skan do tekstu", "ocr skanu", "ocr scan", "tekst ze skanu",
+      "text from scan", "odczytac skan", "read scan",
     ],
-    toolIds: ["pdf-do-tekstu"],
+    toolIds: ["ocr-skanu", "pdf-do-tekstu"],
     answerKey: "ocr",
   },
   {
     aliases: [
-      "favicon", "ikona strony", "site icon",
+      "podpis pdf", "pieczatka pdf", "pieczątka pdf", "stamp pdf",
+      "signature pdf", "podpisac pdf", "podpisać pdf", "pdf stamp",
+      "znak na pdf",
     ],
-    toolIds: ["generator-favicon"],
-    answerKey: "favicon",
+    toolIds: ["podpis-pdf"],
+    answerKey: "stampPdf",
+  },
+  {
+    aliases: [
+      "przygotuj do maila", "do maila", "for email", "email ready",
+      "wyslac plik", "wysłać plik", "za duzy do maila", "too big for email",
+      "skompresuj i usun exif", "pack for email",
+    ],
+    toolIds: ["przygotuj-do-maila", "kompresja-pdf", "kompresor-obrazow"],
+    answerKey: "prepareEmail",
+  },
+  {
+    aliases: [
+      "porownaj dokumenty", "porównaj dokumenty", "compare documents",
+      "compare pdf", "porownaj pdf", "diff pdf", "porownaj word",
+      "compare docx", "roznice w dokumentach",
+    ],
+    toolIds: ["porownaj-dokumenty"],
+    answerKey: "compareDocs",
   },
   {
     aliases: [
@@ -187,6 +209,13 @@ export const SEARCH_INTENTS: SearchIntent[] = [
     ],
     toolIds: ["zdjecia-do-pdf"],
     answerKey: "imagesToPdf",
+  },
+  {
+    aliases: [
+      "favicon", "ikona strony", "site icon",
+    ],
+    toolIds: ["generator-favicon"],
+    answerKey: "favicon",
   },
   {
     aliases: [
@@ -420,10 +449,28 @@ const ACTION_RULES: ActionRule[] = [
     score: 85,
   },
   {
-    re: /\b(wyciagn\w*|extract\w*|skopiuj\w*)\b.*\b(tekst\w*|text\w*)\b.*\bpdf\b|\bpdf\b.*\b(do tekstu|to text)\b/,
-    toolIds: ["pdf-do-tekstu"],
+    re: /\b(wyciagn\w*|extract\w*|skopiuj\w*|odczyt\w*|ocr)\b.*\b(tekst\w*|text\w*|skan\w*|scan\w*)\b|\b(tekst\w*|text)\b.*\b(ze skan|from scan|z pdf|from pdf)\b|\bpdf\b.*\b(do tekstu|to text)\b|\bocr\b/,
+    toolIds: ["ocr-skanu", "pdf-do-tekstu"],
     answerKey: "ocr",
     score: 85,
+  },
+  {
+    re: /\b(podpis\w*|pieczatk\w*|stamp\w*|signature)\b.*\bpdf\b|\bpdf\b.*\b(podpis\w*|pieczatk\w*|stamp\w*|signature)\b/,
+    toolIds: ["podpis-pdf"],
+    answerKey: "stampPdf",
+    score: 90,
+  },
+  {
+    re: /\b(przygotuj\w*|pack\w*|wyslij\w*|wysłać|email|maila)\b.*\b(plik\w*|file\w*|zdjec\w*|pdf)\b|\b(za duz\w*|too big)\b.*\b(mail|email)\b/,
+    toolIds: ["przygotuj-do-maila", "kompresja-pdf", "kompresor-obrazow"],
+    answerKey: "prepareEmail",
+    score: 88,
+  },
+  {
+    re: /\b(porownaj\w*|porównaj|compare|diff)\b.*\b(dokument\w*|pdf|docx|word|file\w*)\b/,
+    toolIds: ["porownaj-dokumenty"],
+    answerKey: "compareDocs",
+    score: 90,
   },
   {
     re: /\b(edytuj\w*|edytowac|edit\w*)\b.*\bpdf\b|\bpdf\b.*\b(word|docx)\b|\b(word|docx)\b.*\bpdf\b/,
@@ -566,5 +613,15 @@ export const TOOL_KEYWORDS: Record<string, string[]> = {
   "zdjecia-do-pdf": [
     "skan do pdf", "photos to pdf", "images to pdf", "jpg to pdf",
     "zdjęcia do pdf", "scan to pdf", "wiele zdjęć",
+  ],
+  "ocr-skanu": [
+    "ocr", "tekst ze skanu", "text from scan", "ocr pdf", "skan do tekstu",
+  ],
+  "podpis-pdf": ["podpis", "pieczątka", "stamp", "signature pdf"],
+  "przygotuj-do-maila": [
+    "do maila", "for email", "email ready", "za duży do maila",
+  ],
+  "porownaj-dokumenty": [
+    "porównaj", "compare documents", "diff pdf", "compare docx",
   ],
 }

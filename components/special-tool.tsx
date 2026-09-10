@@ -99,6 +99,20 @@ export function SpecialTool({ tool }: { tool: SpecialToolConfig }) {
       setError(t.tool.needTwoPdf)
       return
     }
+    if (tool.engine === "compare-documents" && files.length !== 2) {
+      setError(
+        t.tool?.needTwoDocs ??
+          "Add exactly two documents to compare.",
+      )
+      return
+    }
+    if (tool.engine === "stamp-pdf") {
+      const hasPdf = files.some((f) => f.name.toLowerCase().endsWith(".pdf"))
+      if (!hasPdf) {
+        setError(t.tool?.needPdfStamp ?? "Add a PDF (optional stamp image as second file).")
+        return
+      }
+    }
 
     const totalBytes = files.reduce((sum, f) => sum + f.size, 0)
     const isLarge = totalBytes > 4 * 1024 * 1024

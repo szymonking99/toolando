@@ -4,6 +4,7 @@ import { languageAlternates } from "@/lib/seo/alternates"
 import { SITE_URL } from "@/lib/seo/structured-data"
 import { listIndexableToolIds } from "@/lib/seo/indexable-tools"
 import { AUDIENCE_IDS } from "@/lib/audiences"
+import { PROBLEM_INTENT_IDS } from "@/lib/problem-intents"
 
 /**
  * Product-first sitemap: indexed locales + high-intent tools + flagship guides
@@ -56,6 +57,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
         lastModified: now,
         changeFrequency: "monthly",
         priority: 0.65,
+        alternates: { languages: languagesFor(path) },
+      })
+    }
+
+    for (const id of PROBLEM_INTENT_IDS) {
+      const path = `/zrob/${id}`
+      entries.push({
+        url: `${SITE_URL}/${locale}${path}`,
+        lastModified: now,
+        changeFrequency: "monthly",
+        priority: 0.7,
         alternates: { languages: languagesFor(path) },
       })
     }

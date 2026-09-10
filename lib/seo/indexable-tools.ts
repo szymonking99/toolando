@@ -64,6 +64,10 @@ export const INDEXABLE_SPECIAL_IDS = new Set([
   "znak-wodny",
   "naprawa-plikow",
   "zdjecia-do-pdf",
+  "ocr-skanu",
+  "podpis-pdf",
+  "przygotuj-do-maila",
+  "porownaj-dokumenty",
 ])
 
 /** High-intent utilities that deserve their own SERP entry. */

@@ -21,9 +21,22 @@ export function SiteNavbar() {
 
   const coreLinks: NavLink[] = [
     { label: t.nav.fileAssistant ?? "File assistant", href: href("/otworz") },
-    { label: t.nav.converters, href: href("/tools#konwertery") },
-    { label: t.nav.guides, href: href("/poradniki") },
-    { label: t.nav.calculators, href: href("/tools#kalkulatory") },
+    {
+      label: t.nav.wontOpen ?? "Won’t open",
+      href: href("/zrob/nie-otwiera-sie"),
+    },
+    {
+      label: t.nav.tooBig ?? "Too big",
+      href: href("/zrob/za-duzy"),
+    },
+    {
+      label: t.nav.scanToPdf ?? "Scan → PDF",
+      href: href("/zrob/skan-do-pdf"),
+    },
+    {
+      label: t.nav.privacyProblem ?? "Privacy",
+      href: href("/zrob/prywatnosc"),
+    },
   ]
 
   /** Always visible on desktop — requested primary destinations. */
@@ -34,6 +47,9 @@ export function SiteNavbar() {
   ]
 
   const moreLinks: NavLink[] = [
+    { label: t.nav.converters, href: href("/tools#konwertery") },
+    { label: t.nav.guides, href: href("/poradniki") },
+    { label: t.nav.calculators, href: href("/tools#kalkulatory") },
     { label: t.nav.aiTools, href: href("/#ai") },
     { label: t.nav.faq, href: href("/faq") },
   ]

@@ -12,12 +12,24 @@ Primary indexed locales: pl, en. Other locales are available in the UI but not a
 - File Assistant: https://www.toolando.tech/pl/otworz
 - Repair files: https://www.toolando.tech/pl/tools/naprawa-plikow
 - Photos/scans to PDF: https://www.toolando.tech/pl/tools/zdjecia-do-pdf
+- OCR scan → text: https://www.toolando.tech/pl/tools/ocr-skanu
+- PDF signature/stamp: https://www.toolando.tech/pl/tools/podpis-pdf
+- Prepare for email: https://www.toolando.tech/pl/tools/przygotuj-do-maila
+- Compare documents: https://www.toolando.tech/pl/tools/porownaj-dokumenty
 - All tools: https://www.toolando.tech/pl/tools
 - Guides: https://www.toolando.tech/pl/poradniki
 - Privacy inspector: https://www.toolando.tech/pl/tools/inspektor-prywatnosci
 - HEIC → JPG: https://www.toolando.tech/pl/tools/heic-to-jpg
 - Remove EXIF: https://www.toolando.tech/pl/tools/usun-exif
 - Compress PDF: https://www.toolando.tech/pl/tools/kompresja-pdf
+
+## Problem landings
+
+- Won’t open: https://www.toolando.tech/pl/zrob/nie-otwiera-sie
+- Too big: https://www.toolando.tech/pl/zrob/za-duzy
+- Privacy: https://www.toolando.tech/pl/zrob/prywatnosc
+- Scan → PDF: https://www.toolando.tech/pl/zrob/skan-do-pdf
+- OCR: https://www.toolando.tech/pl/zrob/ocr
 
 ## Profession toolkits
 

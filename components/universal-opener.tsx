@@ -277,35 +277,57 @@ function ActionsPanel({ loaded }: { loaded: Loaded }) {
         {t.assistant?.actionsSubtitle ??
           "Toolando recognised the format and suggests useful operations — you don’t have to convert if you only need a preview."}
       </p>
-      <div className="flex flex-wrap gap-2">
-        {labeled.map((action) => {
-          if (action.kind === "preview") {
-            return (
-              <span
-                key={action.id}
-                className="inline-flex items-center gap-1.5 rounded-lg border border-primary/30 bg-primary/10 px-3 py-1.5 text-sm font-medium text-primary"
+      {(() => {
+        const preview = labeled.find((a) => a.kind === "preview")
+        const primary = labeled.find((a) => a.primary)
+        const rest = labeled.filter(
+          (a) => a.kind !== "preview" && !a.primary,
+        )
+        return (
+          <div className="space-y-3">
+            {primary && (
+              <Link
+                href={href(primary.href)}
+                className="flex w-full items-center justify-between gap-3 rounded-xl border border-primary/40 bg-primary/15 px-4 py-3 text-left transition-colors hover:bg-primary/20"
               >
-                <Eye className="size-3.5" />
-                {action.display}
-              </span>
-            )
-          }
-          const Icon =
-            action.kind === "special" && action.id === "usun-exif"
-              ? Shield
-              : ArrowRight
-          return (
-            <Link
-              key={action.id}
-              href={href(action.href)}
-              className="group inline-flex items-center gap-1.5 rounded-lg border border-white/10 bg-white/[0.04] px-3 py-1.5 text-sm font-medium text-foreground transition-colors hover:border-primary/50 hover:bg-primary/10"
-            >
-              <Icon className="size-3.5 text-primary" />
-              {action.display}
-            </Link>
-          )
-        })}
-      </div>
+                <span>
+                  <span className="block text-[11px] font-medium uppercase tracking-wide text-primary/90">
+                    {t.assistant?.primaryCta ?? "Recommended next step"}
+                  </span>
+                  <span className="mt-0.5 block text-sm font-semibold text-foreground">
+                    {primary.display}
+                  </span>
+                </span>
+                <ArrowRight className="size-4 shrink-0 text-primary" />
+              </Link>
+            )}
+            <div className="flex flex-wrap gap-2">
+              {preview && (
+                <span className="inline-flex items-center gap-1.5 rounded-lg border border-white/15 bg-white/[0.04] px-3 py-1.5 text-sm font-medium text-muted-foreground">
+                  <Eye className="size-3.5" />
+                  {preview.display}
+                </span>
+              )}
+              {rest.map((action) => {
+                const Icon =
+                  action.kind === "special" && action.id === "usun-exif"
+                    ? Shield
+                    : ArrowRight
+                return (
+                  <Link
+                    key={action.id}
+                    href={href(action.href)}
+                    className="group inline-flex items-center gap-1.5 rounded-lg border border-white/10 bg-white/[0.04] px-3 py-1.5 text-sm font-medium text-foreground transition-colors hover:border-primary/50 hover:bg-primary/10"
+                  >
+                    <Icon className="size-3.5 text-primary" />
+                    {action.display}
+                  </Link>
+                )
+              })}
+            </div>
+          </div>
+        )
+      })()}
     </div>
   )
 }

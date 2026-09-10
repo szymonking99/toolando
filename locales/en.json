@@ -139,7 +139,11 @@
     "guides": "Guides",
     "faq": "FAQ",
     "more": "More",
-    "fileAssistant": "File assistant"
+    "fileAssistant": "File assistant",
+    "wontOpen": "Won’t open",
+    "tooBig": "Too big",
+    "scanToPdf": "Scan → PDF",
+    "privacyProblem": "Privacy"
   },
   "hero": {
     "badge": "Drop a file. Toolando knows what you can do.",
@@ -176,7 +180,7 @@
       "json": "Format / validate JSON, or convert CSV ↔ JSON.",
       "base64": "Encode or decode Base64 in the browser.",
       "url": "Percent-encode or decode URL strings.",
-      "ocr": "Extract text from a PDF (text layer) — not full OCR for scans yet.",
+      "ocr": "OCR a scan/photo or pull a PDF text layer — download as TXT.",
       "favicon": "Generate a multi-size favicon pack as a ZIP from one image.",
       "removeBg": "Background removal leaves the subject on a transparent PNG.",
       "splitPdf": "Split a PDF into smaller files or extract pages.",
@@ -186,7 +190,10 @@
       "openFile": "Open the file in the assistant first — you’ll see the format and safe next steps.",
       "formatConversion": "Matching converter: {from} → {to}.",
       "repairFile": "Try file repair — Toolando diagnoses the type and rewrites a broken container (PDF, image, video/audio, ZIP/DOCX, JSON).",
-      "imagesToPdf": "Make one PDF from photos or scans — file order becomes page order."
+      "imagesToPdf": "Make one PDF from photos or scans — file order becomes page order.",
+      "stampPdf": "Add a text stamp or signature image on every PDF page.",
+      "prepareEmail": "Compress, strip EXIF, and ZIP for email — optionally pack images into one PDF.",
+      "compareDocs": "Compare two PDF or DOCX files (text layer) and download a simple diff."
     }
   },
   "share": {
@@ -452,6 +459,8 @@
     "converting": "Converting…",
     "convertToPrefix": "Convert to",
     "needTwoPdf": "Add at least two PDF files to merge.",
+    "needTwoDocs": "Add exactly two documents to compare.",
+    "needPdfStamp": "Add a PDF (optional stamp image as second file).",
     "operationFailed": "The operation failed.",
     "compressionQuality": "Compression quality",
     "qualityHint": "Lower value = smaller file. Higher value = better quality.",
@@ -966,7 +975,14 @@
     "pageSize": "Page size",
     "fitMode": "How to place the image",
     "fitContain": "Fit on page (with margins)",
-    "fitCover": "Fill page (may crop)"
+    "fitCover": "Fill page (may crop)",
+    "stampText": "Stamp / signature text",
+    "stampPosition": "Position",
+    "makePdf": "Also pack images into one PDF",
+    "posBottomRight": "Bottom right",
+    "posBottomLeft": "Bottom left",
+    "posTopRight": "Top right",
+    "posCenter": "Center"
   },
   "accountRecent": {
     "title": "Recently used",
@@ -979,7 +995,8 @@
   "assistant": {
     "inspectorTitle": "File information",
     "actionsTitle": "What you can do",
-    "actionsSubtitle": "Recognised format with suggested operations. You do not have to convert if you only need a preview.",
+    "actionsSubtitle": "We recognised the format and suggest one primary action plus extras. You don’t have to convert if you only need a preview.",
+    "primaryCta": "Recommended next step",
     "name": "Name",
     "size": "Size",
     "type": "Type",
@@ -1032,8 +1049,8 @@
       },
       "biuro": {
         "title": "Office & admin",
-        "desc": "PDF ↔ Word, OCR text, merge, compress, page numbers, VAT.",
-        "intro": "Everyday document ops and calculators for office workflows."
+        "desc": "PDF ↔ Word, scan OCR, PDF stamp, compare docs, email-ready pack, compress.",
+        "intro": "Everyday document work: OCR, stamps, version compare, and mail-ready files."
       },
       "student": {
         "title": "Students",
@@ -1078,16 +1095,74 @@
         "desc": "Check GPS, camera and dates locally, then strip EXIF before publishing."
       },
       "pdf": {
-        "title": "PDF too large for email",
-        "desc": "Compress a PDF, merge files, or split pages."
+        "title": "File too large for email",
+        "desc": "Compress, strip EXIF, and ZIP — or pack photos into one lighter PDF."
       },
       "webp": {
         "title": "Images too heavy for the web",
         "desc": "JPG/PNG → WebP or AVIF. Sometimes keep the original — read the guide."
       },
+      "scanPdf": {
+        "title": "Scan / several photos → one PDF",
+        "desc": "Build a multi-page document from scans. File order becomes page order."
+      },
+      "repair": {
+        "title": "Broken PDF, ZIP, or image",
+        "desc": "Diagnose the type and rewrite a damaged container — no magic recovery claims."
+      },
+      "ocr": {
+        "title": "Text from a scan or document photo",
+        "desc": "OCR a scan/PDF (up to 3 pages) or pull a text layer — download as TXT."
+      },
       "assistant": {
         "title": "I don’t know which tool I need",
-        "desc": "Drop a file — Toolando detects the format and suggests actions."
+        "desc": "Drop a file — Toolando detects the format and shows one clear recommendation."
+      }
+    }
+  },
+  "problemIntents": {
+    "eyebrow": "Solve a file problem",
+    "open": "Open",
+    "items": {
+      "nie-otwiera-sie": {
+        "title": "File won’t open",
+        "desc": "Preview, repair a broken container, or convert HEIC → JPG.",
+        "intro": "Start with the file assistant. If the container is damaged, try repair. iPhone photos are often HEIC."
+      },
+      "za-duzy": {
+        "title": "File too large to send",
+        "desc": "Prepare for email, compress PDF/images, or split a document.",
+        "intro": "Fastest path: Prepare for email (compress + no EXIF + ZIP). Large PDFs can also be compressed or split."
+      },
+      "prywatnosc": {
+        "title": "File privacy",
+        "desc": "Inspect metadata, strip EXIF, prepare a safer email-ready copy.",
+        "intro": "First see what the file reveals. Then strip EXIF or prepare a light copy without metadata."
+      },
+      "skan-do-pdf": {
+        "title": "Scan / photos → PDF",
+        "desc": "Build one document from scans, optional OCR and email prep.",
+        "intro": "Drop several photos or scans — get a multi-page PDF in file order."
+      },
+      "ocr": {
+        "title": "Text from a scan (OCR)",
+        "desc": "OCR a scan/photo or pull a PDF text layer → TXT file.",
+        "intro": "For scans without text, use OCR (up to 3 pages). If the PDF has a text layer, we extract it without AI."
+      },
+      "podpis-pdf": {
+        "title": "PDF signature / stamp",
+        "desc": "Text stamp or signature image on every page.",
+        "intro": "Add a PDF and optionally a PNG/JPG stamp. Set text and position before running."
+      },
+      "porownaj": {
+        "title": "Compare two document versions",
+        "desc": "Text diff of two PDF or DOCX files.",
+        "intro": "Add exactly two files with a text layer. Pure scans need OCR first."
+      },
+      "naprawa": {
+        "title": "Repair a damaged file",
+        "desc": "Diagnose and rewrite PDF, image, ZIP/DOCX and other containers.",
+        "intro": "Repair does not magically recover deleted content — it rewrites a damaged container when possible."
       }
     }
   }

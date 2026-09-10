@@ -445,6 +445,36 @@ const specialMaps: Record<string, SpecialMap> = {
       actionLabel: "Zrób PDF",
       acceptLabel: "JPG, PNG, WebP, HEIC, TIFF, GIF (wiele plików)",
     },
+    "ocr-skanu": {
+      category: "Dokumenty",
+      name: "OCR skanu → tekst",
+      description:
+        "Wyodrębnij tekst ze skanu lub PDF bez warstwy tekstowej (do 3 stron OCR).",
+      actionLabel: "Wyodrębnij tekst",
+      acceptLabel: "Obraz lub PDF",
+    },
+    "podpis-pdf": {
+      category: "Dokumenty",
+      name: "Podpis / pieczątka PDF",
+      description: "Dodaj tekst lub obraz pieczątki na każdą stronę PDF.",
+      actionLabel: "Dodaj podpis",
+      acceptLabel: "PDF (+ opcjonalnie obraz)",
+    },
+    "przygotuj-do-maila": {
+      category: "Pliki",
+      name: "Przygotuj do maila",
+      description:
+        "Kompresja, bez EXIF i lekkie nazwy — ZIP gotowy do wysyłki; opcjonalnie PDF ze zdjęć.",
+      actionLabel: "Przygotuj",
+      acceptLabel: "Obrazy i PDF",
+    },
+    "porownaj-dokumenty": {
+      category: "Dokumenty",
+      name: "Porównaj dokumenty",
+      description: "Prosty diff tekstu dwóch PDF lub DOCX.",
+      actionLabel: "Porównaj",
+      acceptLabel: "Dokładnie 2 pliki",
+    },
   },
   en: {
     "kompresor-obrazow": {
@@ -564,6 +594,36 @@ const specialMaps: Record<string, SpecialMap> = {
         "Make one PDF from photos or scans. File order = page order — CVs, contracts, email-ready scans.",
       actionLabel: "Make PDF",
       acceptLabel: "JPG, PNG, WebP, HEIC, TIFF, GIF (multiple OK)",
+    },
+    "ocr-skanu": {
+      category: "Documents",
+      name: "Scan OCR → text",
+      description:
+        "Extract text from a scan or PDF without a text layer (OCR up to 3 pages).",
+      actionLabel: "Extract text",
+      acceptLabel: "Image or PDF",
+    },
+    "podpis-pdf": {
+      category: "Documents",
+      name: "PDF signature / stamp",
+      description: "Add text or an image stamp to every PDF page.",
+      actionLabel: "Add stamp",
+      acceptLabel: "PDF (+ optional image)",
+    },
+    "przygotuj-do-maila": {
+      category: "Files",
+      name: "Prepare for email",
+      description:
+        "Compress, strip EXIF, light names — ZIP ready to send; optional PDF from photos.",
+      actionLabel: "Prepare",
+      acceptLabel: "Images and PDF",
+    },
+    "porownaj-dokumenty": {
+      category: "Documents",
+      name: "Compare documents",
+      description: "Simple text diff of two PDFs or DOCX files.",
+      actionLabel: "Compare",
+      acceptLabel: "Exactly 2 files",
     },
   },
   de: {

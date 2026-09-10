@@ -15,6 +15,9 @@ export type SpecialFieldValues = {
   pageNumberPosition: "bottom" | "top"
   pageSize: "a4" | "letter"
   fit: "contain" | "cover"
+  stampText: string
+  stampPosition: "bottom-right" | "bottom-left" | "top-right" | "center"
+  makePdf: boolean
 }
 
 export const defaultSpecialFields: SpecialFieldValues = {
@@ -29,6 +32,9 @@ export const defaultSpecialFields: SpecialFieldValues = {
   pageNumberPosition: "bottom",
   pageSize: "a4",
   fit: "contain",
+  stampText: "Podpisano elektronicznie",
+  stampPosition: "bottom-right",
+  makePdf: false,
 }
 
 export function buildSpecialFields(
@@ -62,6 +68,13 @@ export function buildSpecialFields(
         pageSize: values.pageSize,
         fit: values.fit,
       }
+    case "stamp-pdf":
+      return {
+        stampText: values.stampText,
+        stampPosition: values.stampPosition,
+      }
+    case "prepare-email":
+      return { makePdf: values.makePdf ? "1" : "0" }
     default:
       return undefined
   }
@@ -85,6 +98,13 @@ type SpecialFieldsCopy = {
   fitMode: string
   fitContain: string
   fitCover: string
+  stampText: string
+  stampPosition: string
+  makePdf: string
+  posBottomRight?: string
+  posBottomLeft?: string
+  posTopRight?: string
+  posCenter?: string
 }
 
 const FALLBACK_FIELDS: SpecialFieldsCopy = {
@@ -105,6 +125,13 @@ const FALLBACK_FIELDS: SpecialFieldsCopy = {
   fitMode: "How to place the image",
   fitContain: "Fit on page (with margins)",
   fitCover: "Fill page (may crop)",
+  stampText: "Stamp / signature text",
+  stampPosition: "Position",
+  makePdf: "Also pack images into one PDF",
+  posBottomRight: "Bottom right",
+  posBottomLeft: "Bottom left",
+  posTopRight: "Top right",
+  posCenter: "Center",
 }
 
 export function SpecialToolFields({
@@ -302,6 +329,58 @@ export function SpecialToolFields({
               </select>
             </label>
           </div>
+        </div>
+      )
+    case "stamp-pdf":
+      return (
+        <div className={box}>
+          <div className="grid gap-3 sm:grid-cols-2">
+            <label className={label}>
+              {f.stampText}
+              <input
+                className={input}
+                value={values.stampText}
+                onChange={(e) => onChange({ stampText: e.target.value })}
+              />
+            </label>
+            <label className={label}>
+              {f.stampPosition}
+              <select
+                className={input}
+                value={values.stampPosition}
+                onChange={(e) =>
+                  onChange({
+                    stampPosition: e.target
+                      .value as SpecialFieldValues["stampPosition"],
+                  })
+                }
+              >
+                <option value="bottom-right">
+                  {f.posBottomRight ?? "Bottom right"}
+                </option>
+                <option value="bottom-left">
+                  {f.posBottomLeft ?? "Bottom left"}
+                </option>
+                <option value="top-right">
+                  {f.posTopRight ?? "Top right"}
+                </option>
+                <option value="center">{f.posCenter ?? "Center"}</option>
+              </select>
+            </label>
+          </div>
+        </div>
+      )
+    case "prepare-email":
+      return (
+        <div className={box}>
+          <label className="flex items-center gap-2 text-sm text-foreground">
+            <input
+              type="checkbox"
+              checked={values.makePdf}
+              onChange={(e) => onChange({ makePdf: e.target.checked })}
+            />
+            {f.makePdf}
+          </label>
         </div>
       )
     default:
