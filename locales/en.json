@@ -143,7 +143,8 @@
     "wontOpen": "Won’t open",
     "tooBig": "Too big",
     "scanToPdf": "Scan → PDF",
-    "privacyProblem": "Privacy"
+    "privacyProblem": "Privacy",
+    "problems": "Problems"
   },
   "hero": {
     "badge": "Drop a file. Toolando knows what you can do.",

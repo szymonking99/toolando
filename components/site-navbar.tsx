@@ -11,16 +11,74 @@ import { GlobalSearch } from "@/components/global-search"
 type NavLink = { label: string; href: string }
 
 const linkClass =
-  "shrink-0 whitespace-nowrap rounded-lg px-2 py-1.5 text-xs font-medium text-muted-foreground transition-colors hover:bg-white/[0.05] hover:text-foreground xl:px-2.5 xl:text-[13px] 2xl:text-sm"
+  "inline-flex shrink-0 items-center rounded-lg px-2.5 py-1.5 text-[13px] font-medium text-muted-foreground transition-colors hover:bg-white/[0.05] hover:text-foreground"
+
+const menuItemClass =
+  "block px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-white/[0.06] hover:text-foreground"
+
+function NavDropdown({
+  label,
+  links,
+}: {
+  label: string
+  links: NavLink[]
+}) {
+  const [open, setOpen] = useState(false)
+  const ref = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    function onClick(e: MouseEvent) {
+      if (!ref.current?.contains(e.target as Node)) setOpen(false)
+    }
+    document.addEventListener("mousedown", onClick)
+    return () => document.removeEventListener("mousedown", onClick)
+  }, [])
+
+  return (
+    <div ref={ref} className="relative shrink-0">
+      <button
+        type="button"
+        onClick={() => setOpen((v) => !v)}
+        className={`${linkClass} gap-0.5`}
+        aria-expanded={open}
+        aria-haspopup="true"
+      >
+        {label}
+        <ChevronDown
+          className={`size-3.5 opacity-70 transition-transform ${open ? "rotate-180" : ""}`}
+          aria-hidden="true"
+        />
+      </button>
+      {open && (
+        <div className="absolute left-0 top-full z-[70] mt-1 min-w-[13rem] rounded-xl border border-white/10 bg-background/95 py-1 shadow-xl backdrop-blur-md">
+          {links.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              onClick={() => setOpen(false)}
+              className={menuItemClass}
+            >
+              {link.label}
+            </a>
+          ))}
+        </div>
+      )}
+    </div>
+  )
+}
 
 export function SiteNavbar() {
   const [open, setOpen] = useState(false)
-  const [moreOpen, setMoreOpen] = useState(false)
-  const moreRef = useRef<HTMLDivElement>(null)
   const { t, href } = useI18n()
 
-  const coreLinks: NavLink[] = [
+  const mainLinks: NavLink[] = [
     { label: t.nav.fileAssistant ?? "File assistant", href: href("/otworz") },
+    { label: t.nav.converters, href: href("/tools#konwertery") },
+    { label: t.nav.guides, href: href("/poradniki") },
+    { label: t.nav.premium, href: href("/premium") },
+  ]
+
+  const problemLinks: NavLink[] = [
     {
       label: t.nav.wontOpen ?? "Won’t open",
       href: href("/zrob/nie-otwiera-sie"),
@@ -39,30 +97,13 @@ export function SiteNavbar() {
     },
   ]
 
-  /** Always visible on desktop — requested primary destinations. */
-  const primaryLinks: NavLink[] = [
-    { label: t.nav.premium, href: href("/premium") },
+  const moreLinks: NavLink[] = [
     { label: t.nav.aboutMe, href: href("/o-mnie") },
     { label: t.nav.contact, href: href("/kontakt") },
-  ]
-
-  const moreLinks: NavLink[] = [
-    { label: t.nav.converters, href: href("/tools#konwertery") },
-    { label: t.nav.guides, href: href("/poradniki") },
     { label: t.nav.calculators, href: href("/tools#kalkulatory") },
     { label: t.nav.aiTools, href: href("/#ai") },
     { label: t.nav.faq, href: href("/faq") },
   ]
-
-  const allLinks = [...coreLinks, ...primaryLinks, ...moreLinks]
-
-  useEffect(() => {
-    function onClick(e: MouseEvent) {
-      if (!moreRef.current?.contains(e.target as Node)) setMoreOpen(false)
-    }
-    document.addEventListener("mousedown", onClick)
-    return () => document.removeEventListener("mousedown", onClick)
-  }, [])
 
   useEffect(() => {
     if (!open) return
@@ -74,77 +115,39 @@ export function SiteNavbar() {
   }, [open])
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 px-2 pt-3 sm:px-3 sm:pt-4">
+    <header className="fixed inset-x-0 top-0 z-50 px-3 pt-3 sm:px-4 sm:pt-4">
       <nav
         aria-label="Main"
-        className="mx-auto flex w-full max-w-[100rem] items-center gap-2 rounded-2xl border border-white/10 bg-background/70 px-2.5 py-2 backdrop-blur-xl sm:gap-3 sm:px-4 sm:py-2.5"
+        className="mx-auto flex h-14 w-full max-w-7xl items-center gap-3 rounded-2xl border border-white/10 bg-background/80 px-3 backdrop-blur-xl sm:h-[3.75rem] sm:gap-4 sm:px-4"
       >
         <a href={href("/")} className="flex shrink-0 items-center gap-2">
           <span className="flex size-8 items-center justify-center rounded-lg bg-primary/15 text-primary ring-1 ring-primary/30">
             <Wrench className="size-4" aria-hidden="true" />
           </span>
-          <span className="hidden text-sm font-semibold tracking-tight text-foreground lg:inline lg:text-base">
+          <span className="text-sm font-semibold tracking-tight text-foreground sm:text-base">
             Toolando
           </span>
         </a>
 
-        <div className="relative hidden w-[10rem] shrink-0 min-w-0 lg:block xl:w-[12rem] 2xl:w-[14rem]">
-          <GlobalSearch compact className="relative w-full max-w-full" />
+        <div className="hidden min-w-0 flex-1 lg:block lg:max-w-[16rem] xl:max-w-[18rem]">
+          <GlobalSearch compact className="relative w-full" />
         </div>
 
-        <div className="hidden min-w-0 flex-1 items-center justify-center gap-0.5 lg:flex xl:gap-1">
-          <div className="flex min-w-0 max-w-full items-center justify-center gap-0.5 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden xl:gap-1">
-            {coreLinks.map((link) => (
-              <a key={link.href} href={link.href} className={linkClass}>
-                {link.label}
-              </a>
-            ))}
-            {primaryLinks.map((link) => (
-              <a key={link.href} href={link.href} className={linkClass}>
-                {link.label}
-              </a>
-            ))}
-            {moreLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className={`${linkClass} hidden min-[1600px]:inline-flex`}
-              >
-                {link.label}
-              </a>
-            ))}
-          </div>
-
-          <div ref={moreRef} className="relative shrink-0 min-[1600px]:hidden">
-            <button
-              type="button"
-              onClick={() => setMoreOpen((v) => !v)}
-              className="inline-flex items-center gap-0.5 rounded-lg px-2 py-1.5 text-xs font-medium text-muted-foreground transition-colors hover:bg-white/[0.05] hover:text-foreground xl:text-[13px]"
-              aria-expanded={moreOpen}
-              aria-haspopup="true"
-            >
-              {t.nav.more}
-              <ChevronDown className="size-3.5 opacity-70" aria-hidden="true" />
-            </button>
-            {moreOpen && (
-              <div className="absolute right-0 top-full z-[70] mt-1 min-w-[11rem] rounded-xl border border-white/10 bg-background/95 py-1 shadow-xl backdrop-blur-md">
-                {moreLinks.map((link) => (
-                  <a
-                    key={link.href}
-                    href={link.href}
-                    onClick={() => setMoreOpen(false)}
-                    className="block px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-white/[0.06] hover:text-foreground"
-                  >
-                    {link.label}
-                  </a>
-                ))}
-              </div>
-            )}
-          </div>
+        <div className="hidden min-w-0 flex-1 items-center justify-center gap-0.5 lg:flex">
+          {mainLinks.map((link) => (
+            <a key={link.href} href={link.href} className={linkClass}>
+              {link.label}
+            </a>
+          ))}
+          <NavDropdown
+            label={t.nav.problems ?? "Problems"}
+            links={problemLinks}
+          />
+          <NavDropdown label={t.nav.more} links={moreLinks} />
         </div>
 
-        <div className="ml-auto flex shrink-0 items-center justify-end gap-1.5 sm:gap-2 lg:ml-0">
-          <div className="hidden items-center gap-1.5 sm:gap-2 lg:flex">
+        <div className="ml-auto flex shrink-0 items-center gap-2">
+          <div className="hidden items-center gap-2 lg:flex">
             <LanguageSwitcher />
             <AccountNavButton />
             <SupportButton />
@@ -173,12 +176,32 @@ export function SiteNavbar() {
             className="fixed inset-0 z-40 bg-black/50 lg:hidden"
             onClick={() => setOpen(false)}
           />
-          <div className="relative z-50 mx-auto mt-2 max-h-[calc(100dvh-5.5rem)] w-full max-w-[100rem] overflow-y-auto rounded-2xl border border-white/10 bg-background/95 p-4 shadow-xl backdrop-blur-xl lg:hidden">
+          <div className="relative z-50 mx-auto mt-2 max-h-[calc(100dvh-5.5rem)] w-full max-w-7xl overflow-y-auto rounded-2xl border border-white/10 bg-background/95 p-4 shadow-xl backdrop-blur-xl lg:hidden">
             <div className="mb-4">
               <GlobalSearch compact className="relative w-full" />
             </div>
-            <div className="flex flex-col gap-0.5">
-              {allLinks.map((link) => (
+
+            <p className="mb-1 px-3 text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">
+              {t.nav.tools}
+            </p>
+            <div className="mb-3 flex flex-col gap-0.5">
+              {mainLinks.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setOpen(false)}
+                  className="rounded-lg px-3 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-white/5"
+                >
+                  {link.label}
+                </a>
+              ))}
+            </div>
+
+            <p className="mb-1 px-3 text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">
+              {t.nav.problems ?? "Problems"}
+            </p>
+            <div className="mb-3 flex flex-col gap-0.5">
+              {problemLinks.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
@@ -189,6 +212,23 @@ export function SiteNavbar() {
                 </a>
               ))}
             </div>
+
+            <p className="mb-1 px-3 text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">
+              {t.nav.more}
+            </p>
+            <div className="flex flex-col gap-0.5">
+              {moreLinks.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setOpen(false)}
+                  className="rounded-lg px-3 py-2.5 text-sm font-medium text-muted-foreground transition-colors hover:bg-white/5 hover:text-foreground"
+                >
+                  {link.label}
+                </a>
+              ))}
+            </div>
+
             <AccountNavButton fullWidth className="mt-4" />
             <SupportButton fullWidth className="mt-2" />
           </div>
