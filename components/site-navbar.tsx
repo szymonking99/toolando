@@ -145,7 +145,7 @@ export function SiteNavbar() {
           <NavDropdown label={t.nav.more} links={moreLinks} />
         </div>
 
-        <div className="mx-2 hidden min-w-0 flex-1 lg:block lg:max-w-xs xl:max-w-sm">
+        <div className="mx-2 hidden min-w-0 flex-1 xl:block xl:max-w-xs 2xl:max-w-sm">
           <GlobalSearch compact className="relative w-full" />
         </div>
 
