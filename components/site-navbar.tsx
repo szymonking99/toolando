@@ -153,7 +153,7 @@ export function SiteNavbar() {
           <div className="hidden items-center gap-2 lg:flex">
             <LanguageSwitcher />
             <AccountNavButton />
-            <SupportButton />
+            <SupportButton compact />
           </div>
 
           <div className="flex items-center gap-2 lg:hidden">
