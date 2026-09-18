@@ -11,7 +11,7 @@ import { GlobalSearch } from "@/components/global-search"
 type NavLink = { label: string; href: string }
 
 const linkClass =
-  "inline-flex shrink-0 items-center rounded-lg px-2.5 py-1.5 text-[13px] font-medium text-muted-foreground transition-colors hover:bg-white/[0.05] hover:text-foreground"
+  "inline-flex shrink-0 items-center rounded-lg px-2 py-1.5 text-[13px] font-medium text-muted-foreground transition-colors hover:bg-white/[0.05] hover:text-foreground xl:px-2.5"
 
 const menuItemClass =
   "block px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-white/[0.06] hover:text-foreground"
@@ -72,7 +72,10 @@ export function SiteNavbar() {
   const { t, href } = useI18n()
 
   const mainLinks: NavLink[] = [
-    { label: t.nav.fileAssistant ?? "File assistant", href: href("/otworz") },
+    {
+      label: t.nav.assistantShort ?? t.nav.fileAssistant ?? "Assistant",
+      href: href("/otworz"),
+    },
     { label: t.nav.converters, href: href("/tools#konwertery") },
     { label: t.nav.guides, href: href("/poradniki") },
     { label: t.nav.premium, href: href("/premium") },
@@ -118,7 +121,7 @@ export function SiteNavbar() {
     <header className="fixed inset-x-0 top-0 z-50 px-3 pt-3 sm:px-4 sm:pt-4">
       <nav
         aria-label="Main"
-        className="mx-auto flex h-14 w-full max-w-7xl items-center gap-3 rounded-2xl border border-white/10 bg-background/80 px-3 backdrop-blur-xl sm:h-[3.75rem] sm:gap-4 sm:px-4"
+        className="mx-auto flex h-14 w-full max-w-6xl items-center gap-2 rounded-2xl border border-white/10 bg-background/80 px-3 backdrop-blur-xl sm:h-[3.75rem] sm:gap-3 sm:px-4"
       >
         <a href={href("/")} className="flex shrink-0 items-center gap-2">
           <span className="flex size-8 items-center justify-center rounded-lg bg-primary/15 text-primary ring-1 ring-primary/30">
@@ -129,11 +132,7 @@ export function SiteNavbar() {
           </span>
         </a>
 
-        <div className="hidden min-w-0 flex-1 lg:block lg:max-w-[16rem] xl:max-w-[18rem]">
-          <GlobalSearch compact className="relative w-full" />
-        </div>
-
-        <div className="hidden min-w-0 flex-1 items-center justify-center gap-0.5 lg:flex">
+        <div className="ml-1 hidden items-center gap-0.5 lg:flex">
           {mainLinks.map((link) => (
             <a key={link.href} href={link.href} className={linkClass}>
               {link.label}
@@ -144,6 +143,10 @@ export function SiteNavbar() {
             links={problemLinks}
           />
           <NavDropdown label={t.nav.more} links={moreLinks} />
+        </div>
+
+        <div className="mx-2 hidden min-w-0 flex-1 lg:block lg:max-w-xs xl:max-w-sm">
+          <GlobalSearch compact className="relative w-full" />
         </div>
 
         <div className="ml-auto flex shrink-0 items-center gap-2">
@@ -176,7 +179,7 @@ export function SiteNavbar() {
             className="fixed inset-0 z-40 bg-black/50 lg:hidden"
             onClick={() => setOpen(false)}
           />
-          <div className="relative z-50 mx-auto mt-2 max-h-[calc(100dvh-5.5rem)] w-full max-w-7xl overflow-y-auto rounded-2xl border border-white/10 bg-background/95 p-4 shadow-xl backdrop-blur-xl lg:hidden">
+          <div className="relative z-50 mx-auto mt-2 max-h-[calc(100dvh-5.5rem)] w-full max-w-6xl overflow-y-auto rounded-2xl border border-white/10 bg-background/95 p-4 shadow-xl backdrop-blur-xl lg:hidden">
             <div className="mb-4">
               <GlobalSearch compact className="relative w-full" />
             </div>
