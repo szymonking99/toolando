@@ -50,7 +50,7 @@ function NavDropdown({
         />
       </button>
       {open && (
-        <div className="absolute left-0 top-full z-[70] mt-1 min-w-[13rem] rounded-xl border border-white/10 bg-background/95 py-1 shadow-xl backdrop-blur-md">
+        <div className="absolute left-0 top-full z-[70] mt-1.5 min-w-[13.5rem] rounded-xl border border-white/10 bg-background py-1.5 shadow-2xl ring-1 ring-black/40">
           {links.map((link) => (
             <a
               key={link.href}
@@ -185,15 +185,15 @@ export function SiteNavbar() {
             </div>
 
             <p className="mb-1 px-3 text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">
-              {t.nav.tools}
+              {t.nav.menu ?? "Menu"}
             </p>
-            <div className="mb-3 flex flex-col gap-0.5">
+            <div className="mb-3 flex flex-col">
               {mainLinks.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="rounded-lg px-3 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-white/5"
+                  className="rounded-lg px-3 py-2 text-sm font-medium text-foreground transition-colors hover:bg-white/5"
                 >
                   {link.label}
                 </a>
@@ -203,13 +203,13 @@ export function SiteNavbar() {
             <p className="mb-1 px-3 text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">
               {t.nav.problems ?? "Problems"}
             </p>
-            <div className="mb-3 flex flex-col gap-0.5">
+            <div className="mb-3 flex flex-col">
               {problemLinks.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="rounded-lg px-3 py-2.5 text-sm font-medium text-muted-foreground transition-colors hover:bg-white/5 hover:text-foreground"
+                  className="rounded-lg px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-white/5 hover:text-foreground"
                 >
                   {link.label}
                 </a>
@@ -219,13 +219,13 @@ export function SiteNavbar() {
             <p className="mb-1 px-3 text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">
               {t.nav.more}
             </p>
-            <div className="flex flex-col gap-0.5">
+            <div className="flex flex-col">
               {moreLinks.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="rounded-lg px-3 py-2.5 text-sm font-medium text-muted-foreground transition-colors hover:bg-white/5 hover:text-foreground"
+                  className="rounded-lg px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-white/5 hover:text-foreground"
                 >
                   {link.label}
                 </a>

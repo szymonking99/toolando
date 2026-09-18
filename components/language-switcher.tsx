@@ -54,7 +54,7 @@ export function LanguageSwitcher({ className = "" }: { className?: string }) {
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
-        className="inline-flex items-center gap-1.5 rounded-lg border border-white/10 bg-white/5 px-2.5 py-1.5 text-sm font-medium text-foreground transition-colors hover:bg-white/10"
+        className="inline-flex h-9 items-center gap-1.5 rounded-xl border border-white/10 bg-white/5 px-2.5 text-sm font-medium text-foreground transition-colors hover:bg-white/10"
         aria-haspopup="listbox"
         aria-expanded={open}
         aria-label={t.language.label}

@@ -145,7 +145,8 @@
     "tooBig": "Too big",
     "scanToPdf": "Scan → PDF",
     "privacyProblem": "Privacy",
-    "problems": "Problems"
+    "problems": "Problems",
+    "menu": "Menu"
   },
   "hero": {
     "badge": "Drop a file. Toolando knows what you can do.",
@@ -159,8 +160,9 @@
     "askHint": "Write a normal sentence — e.g. “shrink an iPhone photo”, “PDF too big for email”…"
   },
   "search": {
-    "placeholder": "Describe what you need — e.g. shrink an iPhone photo…",
-    "noResults": "No tools found. Try describing your goal in a full sentence.",
+      "placeholder": "Describe what you need — e.g. shrink an iPhone photo…",
+      "placeholderShort": "Search…",
+      "noResults": "No tools found. Try describing your goal in a full sentence.",
     "aiThinking": "Reading your intent…",
     "aiBadge": "AI tool matching",
     "intents": {

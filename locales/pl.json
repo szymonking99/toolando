@@ -145,7 +145,8 @@
     "tooBig": "Za duży",
     "scanToPdf": "Skan → PDF",
     "privacyProblem": "Prywatność",
-    "problems": "Problemy"
+    "problems": "Problemy",
+    "menu": "Menu"
   },
   "hero": {
     "badge": "Wrzuć plik. Toolando wie, co z nim zrobić.",
@@ -159,8 +160,9 @@
     "askHint": "Napisz zwykłym zdaniem — np. „zmniejszyć zdjęcie z iPhone’a”, „za duży PDF do maila”…"
   },
   "search": {
-    "placeholder": "Opisz co chcesz zrobić — np. zmniejszyć zdjęcie z iPhone’a…",
-    "noResults": "Nie znaleziono narzędzia. Spróbuj opisać cel zwykłym zdaniem.",
+      "placeholder": "Opisz co chcesz zrobić — np. zmniejszyć zdjęcie z iPhone’a…",
+      "placeholderShort": "Szukaj…",
+      "noResults": "Nie znaleziono narzędzia. Spróbuj opisać cel zwykłym zdaniem.",
     "aiThinking": "Odczytuję intencję…",
     "aiBadge": "Dobór narzędzi przez AI",
     "intents": {
