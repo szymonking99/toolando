@@ -277,9 +277,13 @@ export function GlobalSearch({
           onKeyDown={(e) => {
             if (e.key === "Enter") e.preventDefault()
           }}
-          placeholder={t.search.placeholder}
-          className={`w-full rounded-xl border border-white/10 bg-white/[0.04] py-2.5 pl-10 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary/40 focus:outline-none focus:ring-1 focus:ring-primary/30 ${
-            compact ? "pr-3" : "pr-16"
+          placeholder={
+            compact
+              ? (t.search?.placeholderShort ?? "Szukaj…")
+              : t.search.placeholder
+          }
+          className={`w-full rounded-xl border border-white/10 bg-white/[0.04] pl-10 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary/40 focus:outline-none focus:ring-1 focus:ring-primary/30 ${
+            compact ? "h-9 py-0 pr-3" : "py-2.5 pr-16"
           }`}
         />
         {!compact && (
