@@ -498,6 +498,36 @@ const specialMaps: Record<string, SpecialMap> = {
       actionLabel: "Rozdziel strony",
       acceptLabel: "Wielostronicowy PDF",
     },
+    "audio-z-wideo": {
+      category: "Audio",
+      name: "Audio z wideo",
+      description:
+        "Wyodrębnij ścieżkę dźwiękową z wideo do MP3, M4A lub WAV.",
+      actionLabel: "Wyodrębnij audio",
+      acceptLabel: "MP4, WebM, MOV, MKV",
+    },
+    "wideo-do-gif": {
+      category: "Wideo",
+      name: "Wideo → GIF",
+      description:
+        "Zrób animowany GIF z krótkiego fragmentu wideo (max 30 s).",
+      actionLabel: "Zrób GIF",
+      acceptLabel: "MP4, WebM, MOV, MKV",
+    },
+    "pdf-haslo": {
+      category: "Dokumenty",
+      name: "Hasło na PDF",
+      description: "Zabezpiecz PDF hasłem (AES-256).",
+      actionLabel: "Zabezpiecz PDF",
+      acceptLabel: "PDF (bez hasła)",
+    },
+    "obrot-obrazu": {
+      category: "Obrazy",
+      name: "Obrót obrazu",
+      description: "Obróć zdjęcie o 90°, 180° lub 270°.",
+      actionLabel: "Obróć obraz",
+      acceptLabel: "JPG, PNG, WebP, AVIF, TIFF, GIF, HEIC",
+    },
   },
   en: {
     "kompresor-obrazow": {
@@ -670,6 +700,34 @@ const specialMaps: Record<string, SpecialMap> = {
       description: "One scan PDF → separate pages in a ZIP.",
       actionLabel: "Split pages",
       acceptLabel: "Multipage PDF",
+    },
+    "audio-z-wideo": {
+      category: "Audio",
+      name: "Audio from video",
+      description: "Extract the audio track from a video to MP3, M4A or WAV.",
+      actionLabel: "Extract audio",
+      acceptLabel: "MP4, WebM, MOV, MKV",
+    },
+    "wideo-do-gif": {
+      category: "Video",
+      name: "Video → GIF",
+      description: "Make an animated GIF from a short video clip (max 30 s).",
+      actionLabel: "Make GIF",
+      acceptLabel: "MP4, WebM, MOV, MKV",
+    },
+    "pdf-haslo": {
+      category: "Documents",
+      name: "Password-protect PDF",
+      description: "Lock a PDF with a password (AES-256).",
+      actionLabel: "Protect PDF",
+      acceptLabel: "PDF (unlocked)",
+    },
+    "obrot-obrazu": {
+      category: "Images",
+      name: "Rotate image",
+      description: "Rotate a photo by 90°, 180° or 270°.",
+      actionLabel: "Rotate image",
+      acceptLabel: "JPG, PNG, WebP, AVIF, TIFF, GIF, HEIC",
     },
   },
   de: {

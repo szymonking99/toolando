@@ -22,6 +22,10 @@ export type SpecialToolId =
   | "redakcja-pdf"
   | "wypelnij-pdf"
   | "rozdziel-skan"
+  | "audio-z-wideo"
+  | "wideo-do-gif"
+  | "pdf-haslo"
+  | "obrot-obrazu"
 
 export type SpecialEngine =
   | "compress-image"
@@ -46,6 +50,10 @@ export type SpecialEngine =
   | "compare-documents"
   | "redact-pdf"
   | "fill-pdf"
+  | "extract-audio"
+  | "video-to-gif"
+  | "protect-pdf"
+  | "rotate-image"
 
 export type SpecialToolConfig = {
   id: SpecialToolId
@@ -386,6 +394,62 @@ export const specialTools: SpecialToolConfig[] = [
     actionLabel: "Rozdziel strony",
     hasQuality: false,
     previewImage: false,
+  },
+  {
+    id: "audio-z-wideo",
+    engine: "extract-audio",
+    category: "Audio",
+    name: "Audio z wideo",
+    description:
+      "Wyodrębnij ścieżkę dźwiękową z MP4, WebM, MOV lub MKV do MP3, M4A albo WAV — bez pobierania z YouTube/TikTok.",
+    accept: ".mp4,.webm,.mov,.mkv,.avi,.m4v",
+    acceptLabel: "MP4, WebM, MOV, MKV",
+    multiple: false,
+    actionLabel: "Wyodrębnij audio",
+    hasQuality: false,
+    previewImage: false,
+  },
+  {
+    id: "wideo-do-gif",
+    engine: "video-to-gif",
+    category: "Wideo",
+    name: "Wideo → GIF",
+    description:
+      "Zrób animowany GIF z krótkiego fragmentu wideo. Ustaw początek i koniec oraz jakość (rozdzielczość / FPS).",
+    accept: ".mp4,.webm,.mov,.mkv,.avi,.m4v",
+    acceptLabel: "MP4, WebM, MOV, MKV",
+    multiple: false,
+    actionLabel: "Zrób GIF",
+    hasQuality: true,
+    previewImage: true,
+  },
+  {
+    id: "pdf-haslo",
+    engine: "protect-pdf",
+    category: "Dokumenty",
+    name: "Hasło na PDF",
+    description:
+      "Zabezpiecz PDF hasłem (AES-256). Otwieranie wymaga podanego hasła — nie zostawiaj kopii bez hasła na dysku współdzielonym.",
+    accept: ".pdf",
+    acceptLabel: "PDF (bez hasła)",
+    multiple: false,
+    actionLabel: "Zabezpiecz PDF",
+    hasQuality: false,
+    previewImage: false,
+  },
+  {
+    id: "obrot-obrazu",
+    engine: "rotate-image",
+    category: "Obrazy",
+    name: "Obrót obrazu",
+    description:
+      "Obróć zdjęcie o 90°, 180° lub 270° z zachowaniem formatu (JPG, PNG, WebP…). Idealne po skanie w złej orientacji.",
+    accept: ".jpg,.jpeg,.png,.webp,.avif,.tiff,.gif,.heic,.heif",
+    acceptLabel: "JPG, PNG, WebP, AVIF, TIFF, GIF, HEIC",
+    multiple: false,
+    actionLabel: "Obróć obraz",
+    hasQuality: false,
+    previewImage: true,
   },
 ]
 

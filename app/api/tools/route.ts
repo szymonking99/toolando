@@ -18,6 +18,10 @@ import {
   compressVideo,
   addPdfPageNumbers,
   imagesToPdf,
+  extractAudio,
+  videoToGif,
+  protectPdf,
+  rotateImage,
   type SpecialResult,
 } from "@/lib/special-convert"
 import { repairFile } from "@/lib/file-repair"
@@ -329,6 +333,45 @@ export async function POST(req: NextRequest) {
           extra: intake.field("fillExtra") ?? "",
           position,
         })
+        break
+      }
+      case "extract-audio": {
+        const fmtRaw = (intake.field("audioFormat") ?? "mp3").toLowerCase()
+        const format = (
+          ["mp3", "m4a", "wav"] as const
+        ).includes(fmtRaw as never)
+          ? (fmtRaw as "mp3" | "m4a" | "wav")
+          : "mp3"
+        result = await extractAudio(files[0].buffer, files[0].name, format)
+        break
+      }
+      case "video-to-gif": {
+        const startSec = parseTimeToSeconds(intake.field("trimStart") ?? "0")
+        const endSec = parseTimeToSeconds(intake.field("trimEnd") ?? "5")
+        const quality = Number(intake.field("quality") ?? 70)
+        result = await videoToGif(
+          files[0].buffer,
+          files[0].name,
+          startSec,
+          endSec,
+          quality,
+        )
+        break
+      }
+      case "protect-pdf": {
+        result = await protectPdf(
+          files[0].buffer,
+          files[0].name,
+          intake.field("pdfPassword") ?? "",
+        )
+        break
+      }
+      case "rotate-image": {
+        const rot = Number(intake.field("rotation") ?? 90)
+        const degrees = ([90, 180, 270] as const).includes(rot as never)
+          ? (rot as 90 | 180 | 270)
+          : 90
+        result = await rotateImage(files[0].buffer, files[0].name, degrees)
         break
       }
       default:

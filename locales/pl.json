@@ -185,6 +185,10 @@
       "removeBg": "Usuwanie tła zostawia obiekt na przezroczystym PNG.",
       "splitPdf": "Podziel PDF na mniejsze pliki albo wyodrębnij strony.",
       "rotatePdf": "Obróć strony PDF bez utraty jakości tekstu.",
+      "extractAudio": "Wyodrębnij audio z wideo do MP3, M4A lub WAV.",
+      "videoToGif": "Zrób animowany GIF z krótkiego fragmentu wideo.",
+      "protectPdf": "Zabezpiecz PDF hasłem (AES-256).",
+      "rotateImage": "Obróć zdjęcie o 90°, 180° lub 270°.",
       "watermark": "Dodaj znak wodny na obraz przed publikacją.",
       "aiHelp": "Do pisania, streszczeń i tłumaczeń użyj narzędzi AI (Premium).",
       "openFile": "Najpierw otwórz plik w asystencie — zobaczysz format i bezpieczne opcje.",
@@ -998,7 +1002,10 @@
     "fillName": "Imię i nazwisko",
     "fillNip": "NIP",
     "fillDate": "Data",
-    "fillExtra": "Dodatkowa notatka"
+    "fillExtra": "Dodatkowa notatka",
+    "audioFormat": "Format audio",
+    "pdfPassword": "Hasło",
+    "pdfPasswordHint": "Min. 4 znaki. Zapamiętaj je — bez hasła nie otworzysz pliku."
   },
   "accountRecent": {
     "title": "Ostatnio używane",

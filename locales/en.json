@@ -185,6 +185,10 @@
       "removeBg": "Background removal leaves the subject on a transparent PNG.",
       "splitPdf": "Split a PDF into smaller files or extract pages.",
       "rotatePdf": "Rotate PDF pages without losing text quality.",
+      "extractAudio": "Extract audio from video to MP3, M4A or WAV.",
+      "videoToGif": "Make an animated GIF from a short video clip.",
+      "protectPdf": "Password-protect a PDF (AES-256).",
+      "rotateImage": "Rotate a photo by 90°, 180° or 270°.",
       "watermark": "Add a watermark before you publish the image.",
       "aiHelp": "For writing, summaries, and translation, use Premium AI tools.",
       "openFile": "Open the file in the assistant first — you’ll see the format and safe next steps.",
@@ -998,7 +1002,10 @@
     "fillName": "Full name",
     "fillNip": "NIP / tax ID",
     "fillDate": "Date",
-    "fillExtra": "Extra note"
+    "fillExtra": "Extra note",
+    "audioFormat": "Audio format",
+    "pdfPassword": "Password",
+    "pdfPasswordHint": "Min. 4 characters. Remember it — without it you cannot open the file."
   },
   "accountRecent": {
     "title": "Recently used",

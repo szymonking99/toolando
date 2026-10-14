@@ -27,6 +27,8 @@ export type SpecialFieldValues = {
   fillNip: string
   fillDate: string
   fillExtra: string
+  audioFormat: "mp3" | "m4a" | "wav"
+  pdfPassword: string
 }
 
 export const defaultSpecialFields: SpecialFieldValues = {
@@ -53,6 +55,8 @@ export const defaultSpecialFields: SpecialFieldValues = {
   fillNip: "",
   fillDate: "",
   fillExtra: "",
+  audioFormat: "mp3",
+  pdfPassword: "",
 }
 
 export function buildSpecialFields(
@@ -66,6 +70,7 @@ export function buildSpecialFields(
         pageRange: values.pageRange,
       }
     case "rotate-pdf":
+    case "rotate-image":
       return { rotation: values.rotation }
     case "resize-image":
       return {
@@ -75,10 +80,15 @@ export function buildSpecialFields(
     case "watermark-image":
       return { watermarkText: values.watermarkText }
     case "trim-video":
+    case "video-to-gif":
       return {
         trimStart: values.trimStart,
         trimEnd: values.trimEnd,
       }
+    case "extract-audio":
+      return { audioFormat: values.audioFormat }
+    case "protect-pdf":
+      return { pdfPassword: values.pdfPassword }
     case "pdf-page-numbers":
       return { pageNumberPosition: values.pageNumberPosition }
     case "images-to-pdf":
@@ -149,6 +159,9 @@ type SpecialFieldsCopy = {
   fillNip?: string
   fillDate?: string
   fillExtra?: string
+  audioFormat?: string
+  pdfPassword?: string
+  pdfPasswordHint?: string
 }
 
 const FALLBACK_FIELDS: SpecialFieldsCopy = {
@@ -186,6 +199,9 @@ const FALLBACK_FIELDS: SpecialFieldsCopy = {
   fillNip: "NIP / tax ID",
   fillDate: "Date",
   fillExtra: "Extra note",
+  audioFormat: "Audio format",
+  pdfPassword: "Password",
+  pdfPasswordHint: "Min. 4 characters. Remember it — without it you cannot open the file.",
 }
 
 export function SpecialToolFields({
@@ -245,6 +261,7 @@ export function SpecialToolFields({
         </div>
       )
     case "rotate-pdf":
+    case "rotate-image":
       return (
         <div className={box}>
           <label className={label}>
@@ -305,6 +322,7 @@ export function SpecialToolFields({
         </div>
       )
     case "trim-video":
+    case "video-to-gif":
       return (
         <div className={box}>
           <div className="grid gap-3 sm:grid-cols-2">
@@ -325,6 +343,47 @@ export function SpecialToolFields({
               />
             </label>
           </div>
+        </div>
+      )
+    case "extract-audio":
+      return (
+        <div className={box}>
+          <label className={label}>
+            {f.audioFormat ?? "Audio format"}
+            <select
+              className={input}
+              value={values.audioFormat}
+              onChange={(e) =>
+                onChange({
+                  audioFormat: e.target.value as SpecialFieldValues["audioFormat"],
+                })
+              }
+            >
+              <option value="mp3">MP3</option>
+              <option value="m4a">M4A (AAC)</option>
+              <option value="wav">WAV</option>
+            </select>
+          </label>
+        </div>
+      )
+    case "protect-pdf":
+      return (
+        <div className={box}>
+          <label className={label}>
+            {f.pdfPassword ?? "Password"}
+            <input
+              className={input}
+              type="password"
+              autoComplete="new-password"
+              value={values.pdfPassword}
+              onChange={(e) => onChange({ pdfPassword: e.target.value })}
+              placeholder="••••••••"
+            />
+          </label>
+          <p className="text-xs text-muted-foreground">
+            {f.pdfPasswordHint ??
+              "Min. 4 characters. Remember it — without it you cannot open the file."}
+          </p>
         </div>
       )
     case "pdf-page-numbers":

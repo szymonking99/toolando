@@ -267,6 +267,37 @@ export const SEARCH_INTENTS: SearchIntent[] = [
   },
   {
     aliases: [
+      "audio z wideo", "wyodrebnic audio", "wyodrębnić audio",
+      "extract audio", "video to mp3", "wideo do mp3", "mp4 do mp3",
+    ],
+    toolIds: ["audio-z-wideo"],
+    answerKey: "extractAudio",
+  },
+  {
+    aliases: [
+      "wideo do gif", "video to gif", "mp4 do gif", "zrobic gif", "zrobić gif",
+    ],
+    toolIds: ["wideo-do-gif"],
+    answerKey: "videoToGif",
+  },
+  {
+    aliases: [
+      "haslo na pdf", "hasło na pdf", "password pdf", "zabezpieczyc pdf",
+      "zabezpieczyć pdf", "pdf password", "encrypt pdf",
+    ],
+    toolIds: ["pdf-haslo"],
+    answerKey: "protectPdf",
+  },
+  {
+    aliases: [
+      "obrocic zdjecie", "obrócić zdjęcie", "obrot obrazu", "obrót obrazu",
+      "rotate image", "obrocic obraz", "obrócić obraz",
+    ],
+    toolIds: ["obrot-obrazu"],
+    answerKey: "rotateImage",
+  },
+  {
+    aliases: [
       "znak wodny", "watermark", "nakladka na obraz",
     ],
     toolIds: ["znak-wodny"],

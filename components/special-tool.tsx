@@ -45,7 +45,11 @@ export function SpecialTool({ tool }: { tool: SpecialToolConfig }) {
   const inputRef = useRef<HTMLInputElement>(null)
   const [files, setFiles] = useState<File[]>([])
   const [quality, setQuality] = useState(75)
-  const [extraFields, setExtraFields] = useState(defaultSpecialFields)
+  const [extraFields, setExtraFields] = useState(() =>
+    tool.engine === "video-to-gif"
+      ? { ...defaultSpecialFields, trimEnd: "5" }
+      : defaultSpecialFields,
+  )
   const [status, setStatus] = useState<Status>("idle")
   const [error, setError] = useState<string | null>(null)
   const [progress, setProgress] = useState(0)

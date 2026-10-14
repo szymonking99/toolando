@@ -604,6 +604,217 @@ export async function compressVideo(
 }
 
 /* ------------------------------------------------------------------ */
+/* Extract audio / video→GIF / protect PDF / rotate image              */
+/* ------------------------------------------------------------------ */
+
+export async function extractAudio(
+  input: Buffer,
+  originalName: string,
+  format: "mp3" | "m4a" | "wav",
+): Promise<SpecialResult> {
+  const ext = extOf(originalName) || "mp4"
+  const { ffmpegTransform } = await import("@/lib/ffmpeg-utils")
+
+  const codecArgs: string[] =
+    format === "wav"
+      ? ["-codec:a", "pcm_s16le"]
+      : format === "m4a"
+        ? ["-codec:a", "aac", "-b:a", "192k"]
+        : ["-codec:a", "libmp3lame", "-q:a", "2"]
+
+  const out = await ffmpegTransform(input, ext, format, (inPath, outPath) => [
+    "-y",
+    "-i",
+    inPath,
+    "-vn",
+    ...codecArgs,
+    outPath,
+  ])
+
+  const contentType =
+    format === "wav"
+      ? "audio/wav"
+      : format === "m4a"
+        ? "audio/mp4"
+        : "audio/mpeg"
+
+  const stem = stemOf(originalName)
+  return {
+    buffer: out,
+    filename: `${stem}-audio.${format}`,
+    contentType,
+  }
+}
+
+export async function videoToGif(
+  input: Buffer,
+  originalName: string,
+  startSec: number,
+  endSec: number,
+  quality: number,
+): Promise<SpecialResult> {
+  if (endSec <= startSec) {
+    throw new ConversionError("Czas końca musi być większy niż początek.")
+  }
+  if (endSec - startSec > 30) {
+    throw new ConversionError(
+      "GIF max. 30 sekund — skróć zakres początku i końca.",
+    )
+  }
+
+  const q = Math.min(100, Math.max(1, Math.round(quality) || 70))
+  const width = Math.round(240 + (q / 100) * 240)
+  const fps = Math.round(8 + (q / 100) * 8)
+  const ext = extOf(originalName) || "mp4"
+  const { ffmpegTransform } = await import("@/lib/ffmpeg-utils")
+
+  const out = await ffmpegTransform(input, ext, "gif", (inPath, outPath) => [
+    "-y",
+    "-ss",
+    String(startSec),
+    "-to",
+    String(endSec),
+    "-i",
+    inPath,
+    "-vf",
+    `fps=${fps},scale=${width}:-1:flags=lanczos`,
+    "-an",
+    outPath,
+  ])
+
+  const stem = stemOf(originalName)
+  return {
+    buffer: out,
+    filename: `${stem}.gif`,
+    contentType: "image/gif",
+  }
+}
+
+export async function protectPdf(
+  input: Buffer,
+  originalName: string,
+  password: string,
+): Promise<SpecialResult> {
+  const pw = password.trim()
+  if (pw.length < 4) {
+    throw new ConversionError("Hasło musi mieć co najmniej 4 znaki.")
+  }
+  if (pw.length > 64) {
+    throw new ConversionError("Hasło jest za długie (max 64 znaki).")
+  }
+  if (/[,=]/.test(pw)) {
+    throw new ConversionError(
+      "Hasło nie może zawierać przecinka ani znaku równości.",
+    )
+  }
+
+  const mupdf = await import("mupdf")
+  let doc
+  try {
+    doc = mupdf.Document.openDocument(input, "application/pdf")
+  } catch {
+    throw new ConversionError("Nie udało się odczytać pliku PDF.")
+  }
+
+  if (doc.needsPassword()) {
+    throw new ConversionError(
+      "Ten PDF ma już hasło. Najpierw otwórz go hasłem w innym programie i zapisz bez zabezpieczenia.",
+    )
+  }
+
+  const pdf = doc.asPDF()
+  if (!pdf) {
+    throw new ConversionError("Plik nie jest prawidłowym PDF.")
+  }
+
+  let bytes: Uint8Array
+  try {
+    const buf = pdf.saveToBuffer(
+      `encrypt=aes-256,owner-password=${pw},user-password=${pw}`,
+    )
+    bytes = buf.asUint8Array()
+  } catch {
+    throw new ConversionError("Nie udało się zaszyfrować PDF.")
+  }
+
+  const stem = stemOf(originalName)
+  return {
+    buffer: Buffer.from(bytes),
+    filename: `${stem}-haslo.pdf`,
+    contentType: "application/pdf",
+    note: "PDF zabezpieczony hasłem (AES-256). Zapamiętaj hasło — bez niego nie otworzysz pliku.",
+  }
+}
+
+export async function rotateImage(
+  input: Buffer,
+  originalName: string,
+  degrees: 90 | 180 | 270,
+): Promise<SpecialResult> {
+  const sharp = (await import("sharp")).default
+  let image = sharp(input, { failOn: "none" })
+  const meta = await image.metadata()
+  const format = String(meta.format || "")
+
+  image = image.rotate(degrees)
+
+  let out: Buffer
+  let ext: string
+  let contentType: string
+
+  switch (format) {
+    case "jpeg":
+    case "jpg":
+      out = await image.jpeg({ quality: 92, mozjpeg: true }).toBuffer()
+      ext = "jpg"
+      contentType = "image/jpeg"
+      break
+    case "png":
+      out = await image.png({ compressionLevel: 9 }).toBuffer()
+      ext = "png"
+      contentType = "image/png"
+      break
+    case "webp":
+      out = await image.webp({ quality: 92 }).toBuffer()
+      ext = "webp"
+      contentType = "image/webp"
+      break
+    case "avif":
+      out = await image.avif({ quality: 80 }).toBuffer()
+      ext = "avif"
+      contentType = "image/avif"
+      break
+    case "tiff":
+      out = await image.tiff({ quality: 90 }).toBuffer()
+      ext = "tiff"
+      contentType = "image/tiff"
+      break
+    case "gif":
+      out = await image.gif().toBuffer()
+      ext = "gif"
+      contentType = "image/gif"
+      break
+    case "heif":
+    case "heic":
+      out = await image.jpeg({ quality: 92, mozjpeg: true }).toBuffer()
+      ext = "jpg"
+      contentType = "image/jpeg"
+      break
+    default:
+      throw new ConversionError(
+        "Nieobsługiwany format obrazu. Użyj JPG, PNG, WebP, AVIF, TIFF, GIF lub HEIC.",
+      )
+  }
+
+  const stem = stemOf(originalName)
+  return {
+    buffer: out,
+    filename: `${stem}-obrocony.${ext}`,
+    contentType,
+  }
+}
+
+/* ------------------------------------------------------------------ */
 /* PDF page numbers (pdf-lib)                                          */
 /* ------------------------------------------------------------------ */
 
