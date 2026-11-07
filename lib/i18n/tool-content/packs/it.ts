@@ -34,7 +34,7 @@ export const itToolContentTemplates: ToolContentTemplates = {
     },
     {
       q: "Qual è la dimensione massima del file?",
-      a: "Puoi caricare file fino a 500 MB. I file più grandi possono richiedere più tempo.",
+      a: "Puoi caricare file fino a 4 MB. I file più grandi possono richiedere più tempo.",
     },
     {
       q: "La qualità del {TO} sarà buona?",

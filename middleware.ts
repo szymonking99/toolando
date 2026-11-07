@@ -92,6 +92,12 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  // Run on everything except API routes, Next internals and static files.
-  matcher: ["/((?!api|_next/static|_next/image|favicon.ico|.*\\..*).*)"],
+  // Locale pages are static and must be served from the CDN. Running
+  // middleware on them (and setting a cookie) counts as Fast Origin
+  // Transfer on every view, which is what paused the Hobby plan.
+  // `/` and unprefixed paths still redirect and set the locale cookie.
+  // The language switcher writes the same cookie from the browser.
+  matcher: [
+    "/((?!api/|_next/|favicon.ico|.*\\..*|pl(?:/|$)|en(?:/|$)|de(?:/|$)|es(?:/|$)|uk(?:/|$)|fr(?:/|$)|it(?:/|$)|pt(?:/|$)|nl(?:/|$)|sv(?:/|$)|no(?:/|$)|da(?:/|$)|fi(?:/|$)|cs(?:/|$)|ro(?:/|$)|hu(?:/|$)|el(?:/|$)|tr(?:/|$)|ru(?:/|$)|ar(?:/|$)|zh(?:/|$)|ja(?:/|$)|ko(?:/|$)|hi(?:/|$)|id(?:/|$)).*)",
+  ],
 }

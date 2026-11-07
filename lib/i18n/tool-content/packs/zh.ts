@@ -34,7 +34,7 @@ export const zhToolContentTemplates: ToolContentTemplates = {
     },
     {
       q: "最大文件大小是多少？",
-      a: "您可上传最大 500 MB 的文件。更大的文件可能需要更长的处理时间。",
+      a: "您可上传最大 4 MB 的文件。更大的文件可能需要更长的处理时间。",
     },
     {
       q: "{TO} 的质量会好吗？",

@@ -34,7 +34,7 @@ export const svToolContentTemplates: ToolContentTemplates = {
     },
     {
       q: "Vilken är den maximala filstorleken?",
-      a: "Du kan ladda upp filer på upp till 500 MB. Större filer kan ta längre tid att bearbeta.",
+      a: "Du kan ladda upp filer på upp till 4 MB. Större filer kan ta längre tid att bearbeta.",
     },
     {
       q: "Blir kvaliteten på {TO} bra?",

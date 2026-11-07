@@ -397,7 +397,7 @@
     "dropClickMulti": "파일을 여기에 끌어다 놓거나 클릭하여 선택",
     "supportedFormat": "지원 형식",
     "supported": "지원",
-    "maxSize": "최대 500 MB",
+    "maxSize": "최대 4 MB",
     "removeFile": "파일 제거",
     "convertDone": "변환 완료",
     "downloadNamed": "다운로드",

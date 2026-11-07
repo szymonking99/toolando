@@ -35,7 +35,7 @@ export const fiToolContentTemplates: ToolContentTemplates = {
     },
     {
       q: "Mikä on suurin sallittu tiedostokoko?",
-      a: "Voit ladata tiedostoja enintään 500 MB. Suuremmat tiedostot voivat kestää kauemmin käsitellä.",
+      a: "Voit ladata tiedostoja enintään 4 MB. Suuremmat tiedostot voivat kestää kauemmin käsitellä.",
     },
     {
       q: "Onko {TO}-tiedoston laatu hyvä?",

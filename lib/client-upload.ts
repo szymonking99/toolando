@@ -1,11 +1,9 @@
 "use client";
 
-import { upload } from "@vercel/blob/client";
-
-// Files at or below this size are sent directly as multipart form data.
-// Anything larger is uploaded straight to Vercel Blob first, bypassing the
-// 4.5 MB serverless request-body limit.
-const DIRECT_LIMIT = 4 * 1024 * 1024;
+import {
+  MAX_UPLOAD_BYTES,
+  uploadTooLargeMessage,
+} from "@/lib/upload-limit";
 
 export type ProcessOptions = {
   file: File;
@@ -13,60 +11,45 @@ export type ProcessOptions = {
   id: string;
   /** Extra scalar fields (e.g. { quality: "80" }). */
   fields?: Record<string, string>;
-  /** Called with 0-100 while a large file uploads to Blob. */
+  /** Kept for callers. Direct uploads have no separate progress events. */
   onUploadProgress?: (percentage: number) => void;
 };
 
+function tooLarge(): Response {
+  return new Response(JSON.stringify({ error: uploadTooLargeMessage() }), {
+    status: 413,
+    headers: { "Content-Type": "application/json" },
+  });
+}
+
 /**
- * Uploads a single file and calls the processing endpoint. Small files go
- * through a normal multipart POST; large files are streamed to Vercel Blob and
- * the endpoint is then called with a JSON reference to the uploaded blob.
+ * Sends a file to a processing endpoint as multipart form data.
+ * Files above {@link MAX_UPLOAD_BYTES} are rejected in the browser so they
+ * never reach Vercel Blob or a Function.
  */
 export async function uploadAndProcess({
   file,
   endpoint,
   id,
   fields,
-  onUploadProgress,
 }: ProcessOptions): Promise<Response> {
-  if (file.size <= DIRECT_LIMIT) {
-    const body = new FormData();
-    body.append("file", file);
-    for (const [k, v] of Object.entries(fields ?? {})) body.append(k, v);
-    return fetch(`${endpoint}?id=${id}`, { method: "POST", body });
-  }
+  if (file.size > MAX_UPLOAD_BYTES) return tooLarge();
 
-  const blob = await upload(file.name, file, {
-    access: "private",
-    handleUploadUrl: "/api/blob/upload",
-    multipart: true,
-    onUploadProgress: (p) => onUploadProgress?.(p.percentage),
-  });
-
-  return fetch(`${endpoint}?id=${id}`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      pathname: blob.pathname,
-      filename: file.name,
-      type: file.type,
-      fields: fields ?? {},
-    }),
-  });
+  const body = new FormData();
+  body.append("file", file);
+  for (const [k, v] of Object.entries(fields ?? {})) body.append(k, v);
+  return fetch(`${endpoint}?id=${id}`, { method: "POST", body });
 }
 
 /**
- * Uploads multiple files (used by merge-style tools) and calls the endpoint.
- * Large files are uploaded to Blob in parallel; the endpoint receives a JSON
- * array of blob references. If every file is small, a single multipart POST
- * is used instead.
+ * Sends several files (merge-style tools) in one multipart POST.
+ * The combined size has the same ceiling as a single file.
  */
 export async function uploadManyAndProcess({
   files,
   endpoint,
   id,
   fields,
-  onUploadProgress,
 }: {
   files: File[];
   endpoint: string;
@@ -75,35 +58,10 @@ export async function uploadManyAndProcess({
   onUploadProgress?: (percentage: number) => void;
 }): Promise<Response> {
   const totalBytes = files.reduce((sum, f) => sum + f.size, 0);
+  if (totalBytes > MAX_UPLOAD_BYTES) return tooLarge();
 
-  if (totalBytes <= DIRECT_LIMIT) {
-    const body = new FormData();
-    for (const f of files) body.append("file", f);
-    for (const [k, v] of Object.entries(fields ?? {})) body.append(k, v);
-    return fetch(`${endpoint}?id=${id}`, { method: "POST", body });
-  }
-
-  let uploaded = 0;
-  const blobs = await Promise.all(
-    files.map(async (file) => {
-      const blob = await upload(file.name, file, {
-        access: "private",
-        handleUploadUrl: "/api/blob/upload",
-        multipart: true,
-        onUploadProgress: (p) => {
-          // Approximate combined progress across all files.
-          const done = uploaded + (p.loaded ?? 0);
-          onUploadProgress?.(Math.min(100, Math.round((done / totalBytes) * 100)));
-        },
-      });
-      uploaded += file.size;
-      return { pathname: blob.pathname, filename: file.name, type: file.type };
-    }),
-  );
-
-  return fetch(`${endpoint}?id=${id}`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ blobs, fields: fields ?? {} }),
-  });
+  const body = new FormData();
+  for (const f of files) body.append("file", f);
+  for (const [k, v] of Object.entries(fields ?? {})) body.append(k, v);
+  return fetch(`${endpoint}?id=${id}`, { method: "POST", body });
 }

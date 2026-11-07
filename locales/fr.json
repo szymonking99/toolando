@@ -397,7 +397,7 @@
     "dropClickMulti": "Glissez des fichiers ici ou cliquez pour choisir",
     "supportedFormat": "Format pris en charge",
     "supported": "Pris en charge",
-    "maxSize": "max. 500 Mo",
+    "maxSize": "max. 4 Mo",
     "removeFile": "Supprimer le fichier",
     "convertDone": "Conversion terminée",
     "downloadNamed": "Télécharger",

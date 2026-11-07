@@ -35,7 +35,7 @@ export const roToolContentTemplates: ToolContentTemplates = {
     },
     {
       q: "Care este dimensiunea maximă a fișierului?",
-      a: "Poți încărca fișiere de până la 500 MB. Fișierele mai mari pot necesita mai mult timp de procesare.",
+      a: "Poți încărca fișiere de până la 4 MB. Fișierele mai mari pot necesita mai mult timp de procesare.",
     },
     {
       q: "Calitatea fișierului {TO} va fi bună?",

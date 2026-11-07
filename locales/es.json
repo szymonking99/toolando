@@ -397,7 +397,7 @@
     "dropClickMulti": "Arrastra archivos aquí o haz clic para elegir",
     "supportedFormat": "Formato admitido",
     "supported": "Admitidos",
-    "maxSize": "máx. 500 MB",
+    "maxSize": "máx. 4 MB",
     "removeFile": "Quitar archivo",
     "convertDone": "Conversión completada",
     "downloadNamed": "Descargar",

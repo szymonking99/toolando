@@ -34,7 +34,7 @@ export const noToolContentTemplates: ToolContentTemplates = {
     },
     {
       q: "Hva er maksimal filstørrelse?",
-      a: "Du kan laste opp filer på opptil 500 MB. Større filer kan ta lengre tid å behandle.",
+      a: "Du kan laste opp filer på opptil 4 MB. Større filer kan ta lengre tid å behandle.",
     },
     {
       q: "Blir kvaliteten på {TO} god?",

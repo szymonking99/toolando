@@ -1,15 +1,16 @@
 import { handleUpload, type HandleUploadBody } from "@vercel/blob/client";
 import { NextResponse, type NextRequest } from "next/server";
+import { MAX_UPLOAD_BYTES } from "@/lib/upload-limit";
 
 export const runtime = "nodejs";
 
-// Upload ceiling for direct-to-Blob client uploads (500 MB).
-const MAX_BYTES = 500 * 1024 * 1024;
+// Blob transfer counts toward Fast Origin Transfer, then the function
+// reads the blob again. Keep the token ceiling at the direct-upload size
+// so a stale client cannot stage a large file.
 
 /**
- * Issues short-lived client upload tokens so the browser can upload large files
- * straight to Vercel Blob, bypassing the 4.5 MB serverless request body limit.
- * The uploaded blob is read (and deleted) later by the conversion routes.
+ * Token endpoint kept for older clients. New uploads are multipart and
+ * never call this. The token refuses anything above the 4 MB ceiling.
  */
 export async function POST(req: NextRequest) {
   const body = (await req.json()) as HandleUploadBody;
@@ -20,7 +21,7 @@ export async function POST(req: NextRequest) {
       request: req,
       onBeforeGenerateToken: async () => ({
         // Any file type is allowed; individual converters validate the format.
-        maximumSizeInBytes: MAX_BYTES,
+        maximumSizeInBytes: MAX_UPLOAD_BYTES,
         addRandomSuffix: true,
         // Token is only valid for a short window to start the upload.
         validUntil: Date.now() + 60 * 60 * 1000,

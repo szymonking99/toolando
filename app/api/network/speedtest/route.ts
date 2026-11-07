@@ -3,9 +3,11 @@ import { NextRequest, NextResponse } from "next/server"
 export const runtime = "edge"
 
 export async function GET(req: NextRequest) {
+  // Hobby origin transfer is 10 GB / 30 days. A multi-megabyte probe
+  // with Cache-Control: no-store is billed on every click.
   const size = Math.min(
     Number(req.nextUrl.searchParams.get("size") || "0"),
-    5_000_000,
+    200_000,
   )
 
   if (size <= 0) {

@@ -34,7 +34,7 @@ export const nlToolContentTemplates: ToolContentTemplates = {
     },
     {
       q: "Wat is de maximale bestandsgrootte?",
-      a: "Je kunt bestanden tot 500 MB uploaden. Grotere bestanden kunnen langer duren om te verwerken.",
+      a: "Je kunt bestanden tot 4 MB uploaden. Grotere bestanden kunnen langer duren om te verwerken.",
     },
     {
       q: "Wordt de kwaliteit van {TO} goed?",

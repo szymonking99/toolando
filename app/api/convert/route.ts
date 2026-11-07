@@ -2,12 +2,10 @@ import { NextRequest } from "next/server";
 import { getTool, normalizeFormat } from "@/lib/tools";
 import { convertFile, ConversionError } from "@/lib/convert";
 import { readIntake } from "@/lib/upload-intake";
+import { MAX_UPLOAD_BYTES, uploadTooLargeMessage } from "@/lib/upload-limit";
 
 export const runtime = "nodejs";
-export const maxDuration = 300;
-
-// 500 MB upload ceiling (large files arrive via Vercel Blob).
-const MAX_BYTES = 500 * 1024 * 1024;
+export const maxDuration = 60;
 
 export async function POST(req: NextRequest) {
   const id = new URL(req.url).searchParams.get("id");
@@ -39,8 +37,8 @@ export async function POST(req: NextRequest) {
       return json({ error: "Przesłany plik jest pusty." }, 400);
     }
 
-    if (file.buffer.length > MAX_BYTES) {
-      return json({ error: "Plik jest za duży (limit 500 MB)." }, 413);
+    if (file.buffer.length > MAX_UPLOAD_BYTES) {
+      return json({ error: uploadTooLargeMessage() }, 413);
     }
 
     // Light extension check so users get a friendly message early.

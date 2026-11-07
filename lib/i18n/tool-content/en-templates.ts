@@ -35,7 +35,7 @@ export const enToolContentTemplates: ToolContentTemplates = {
     },
     {
       q: "What is the maximum file size?",
-      a: "You can upload files up to 500 MB. Larger files may take longer to process.",
+      a: "You can upload files up to 4 MB. Larger files are rejected so the site stays inside the free transfer allowance.",
     },
     {
       q: "Will the {TO} quality be good?",

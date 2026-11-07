@@ -35,7 +35,7 @@ export const huToolContentTemplates: ToolContentTemplates = {
     },
     {
       q: "Mi a maximális fájlméret?",
-      a: "Legfeljebb 500 MB méretű fájlokat tölthetsz fel. A nagyobb fájlok feldolgozása tovább tarthat.",
+      a: "Legfeljebb 4 MB méretű fájlokat tölthetsz fel. A nagyobb fájlok feldolgozása tovább tarthat.",
     },
     {
       q: "Jó lesz a {TO} minősége?",

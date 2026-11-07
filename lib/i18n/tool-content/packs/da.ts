@@ -35,7 +35,7 @@ export const daToolContentTemplates: ToolContentTemplates = {
     },
     {
       q: "Hvad er den maksimale filstørrelse?",
-      a: "Du kan uploade filer på op til 500 MB. Større filer kan tage længere tid at behandle.",
+      a: "Du kan uploade filer på op til 4 MB. Større filer kan tage længere tid at behandle.",
     },
     {
       q: "Bliver kvaliteten af {TO} god?",

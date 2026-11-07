@@ -34,7 +34,7 @@ export const ptToolContentTemplates: ToolContentTemplates = {
     },
     {
       q: "Qual é o tamanho máximo do arquivo?",
-      a: "Você pode enviar arquivos de até 500 MB. Arquivos maiores podem demorar mais para processar.",
+      a: "Você pode enviar arquivos de até 4 MB. Arquivos maiores podem demorar mais para processar.",
     },
     {
       q: "A qualidade do {TO} será boa?",

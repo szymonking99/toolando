@@ -42,11 +42,10 @@ import {
 } from "@/lib/office-workflows"
 import { redactPdf, fillPdfForm } from "@/lib/office-privacy"
 import { parseTimeToSeconds } from "@/lib/ffmpeg-utils"
+import { MAX_UPLOAD_BYTES, uploadTooLargeMessage } from "@/lib/upload-limit"
 
 export const runtime = "nodejs"
-export const maxDuration = 300
-
-const MAX_BYTES = 500 * 1024 * 1024
+export const maxDuration = 60
 
 async function zipResults(
   results: SpecialResult[],
@@ -99,8 +98,8 @@ export async function POST(req: NextRequest) {
       if (file.buffer.length === 0) {
         return json({ error: "Jeden z plików jest pusty." }, 400)
       }
-      if (file.buffer.length > MAX_BYTES) {
-        return json({ error: "Plik jest za duży (limit 500 MB)." }, 413)
+      if (file.buffer.length > MAX_UPLOAD_BYTES) {
+        return json({ error: uploadTooLargeMessage() }, 413)
       }
     }
 

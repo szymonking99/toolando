@@ -397,7 +397,7 @@
     "dropClickMulti": "Vedä tiedostot tähän tai napsauta valitaksesi",
     "supportedFormat": "Tuettu formaatti",
     "supported": "Tuettu",
-    "maxSize": "enint. 500 MB",
+    "maxSize": "enint. 4 MB",
     "removeFile": "Poista tiedosto",
     "convertDone": "Muunnos valmis",
     "downloadNamed": "Lataa",

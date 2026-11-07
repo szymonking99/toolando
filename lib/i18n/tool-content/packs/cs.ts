@@ -35,7 +35,7 @@ export const csToolContentTemplates: ToolContentTemplates = {
     },
     {
       q: "Jaká je maximální velikost souboru?",
-      a: "Můžeš nahrát soubory do 500 MB. Větší soubory mohou trvat déle.",
+      a: "Můžeš nahrát soubory do 4 MB. Větší soubory mohou trvat déle.",
     },
     {
       q: "Bude kvalita {TO} dobrá?",

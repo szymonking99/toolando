@@ -397,7 +397,7 @@
     "dropClickMulti": "将文件拖放到此处，或点击选择",
     "supportedFormat": "支持的格式",
     "supported": "支持",
-    "maxSize": "最大 500 MB",
+    "maxSize": "最大 4 MB",
     "removeFile": "移除文件",
     "convertDone": "转换完成",
     "downloadNamed": "下载",

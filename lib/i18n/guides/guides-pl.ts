@@ -160,7 +160,7 @@ export const guidesPl: Record<GuideSlug, GuideArticle> = {
       {
         title: "Kiedy plik zostaje na serwerze dłużej",
         paragraphs: [
-          "Tylko na czas trwania konwersji (zwykle sekundy do minuty). Przy dużych wideo do 500 MB operacja może trwać dłużej — plik nadal jest usuwany po zakończeniu.",
+          "Tylko na czas trwania konwersji (zwykle sekundy do minuty). Limit pliku to 4 MB i po zakończeniu jest usuwany.",
           "Opcja premium z kontem może zapisywać historię operacji (metadane, nie pliki) — szczegóły w polityce prywatności.",
         ],
       },

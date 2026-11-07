@@ -34,7 +34,7 @@ export const frToolContentTemplates: ToolContentTemplates = {
     },
     {
       q: "Quelle est la taille maximale des fichiers ?",
-      a: "Vous pouvez téléverser des fichiers jusqu'à 500 Mo. Les fichiers plus volumineux peuvent prendre plus de temps à traiter.",
+      a: "Vous pouvez téléverser des fichiers jusqu'à 4 Mo. Les fichiers plus volumineux ne sont pas acceptés.",
     },
     {
       q: "La qualité du {TO} sera-t-elle bonne ?",

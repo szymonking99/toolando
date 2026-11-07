@@ -305,7 +305,7 @@ const contentStrings: Record<string, ContentStrings> = {
       },
       {
         q: `Jaki jest maksymalny rozmiar pliku?`,
-        a: `Możesz przesłać pliki do 500 MB. Większe pliki mogą wymagać więcej czasu na przetwarzanie.`,
+        a: `Możesz przesłać pliki do 4 MB. Większe pliki są odrzucane, żeby strona mieściła się w darmowym limicie transferu.`,
       },
       {
         q: `Czy jakość pliku ${to.toUpperCase()} będzie dobra?`,
@@ -350,7 +350,7 @@ const contentStrings: Record<string, ContentStrings> = {
       },
       {
         q: `What is the maximum file size?`,
-        a: `You can upload files up to 500 MB. Larger files may take longer to process.`,
+        a: `You can upload files up to 4 MB. Larger files are rejected so the site stays inside the free transfer allowance.`,
       },
       {
         q: `Will the ${to.toUpperCase()} quality be good?`,
@@ -395,7 +395,7 @@ const contentStrings: Record<string, ContentStrings> = {
       },
       {
         q: `Wie groß darf die Datei maximal sein?`,
-        a: `Du kannst Dateien bis zu 500 MB hochladen. Größere Dateien brauchen unter Umständen etwas länger.`,
+        a: `Du kannst Dateien bis zu 4 MB hochladen. Größere Dateien werden abgelehnt.`,
       },
       {
         q: `Wird die Qualität der ${to.toUpperCase()}-Datei gut sein?`,
@@ -440,7 +440,7 @@ const contentStrings: Record<string, ContentStrings> = {
       },
       {
         q: `¿Cuál es el tamaño máximo de archivo?`,
-        a: `Puedes subir archivos de hasta 500 MB. Los archivos más grandes pueden tardar más en procesarse.`,
+        a: `Puedes subir archivos de hasta 4 MB. Los archivos más grandes se rechazan.`,
       },
       {
         q: `¿La calidad del ${to.toUpperCase()} será buena?`,
@@ -485,7 +485,7 @@ const contentStrings: Record<string, ContentStrings> = {
       },
       {
         q: `Який максимальний розмір файлу?`,
-        a: `Ви можете завантажувати файли розміром до 500 МБ. Більші файли можуть оброблятися довше.`,
+        a: `Ви можете завантажувати файли розміром до 4 МБ. Більші файли не приймаються.`,
       },
       {
         q: `Чи буде якість файлу ${to.toUpperCase()} хорошою?`,

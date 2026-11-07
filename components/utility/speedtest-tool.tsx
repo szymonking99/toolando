@@ -22,9 +22,10 @@ export function SpeedtestTool() {
       const ping = Math.round(performance.now() - t0)
       setLatency(ping)
 
-      // Measure download (~2MB)
+      // Short sample. A multi-megabyte no-store download is what filled
+      // the free Vercel origin-transfer quota.
       const start = performance.now()
-      const res = await fetch("/api/network/speedtest?size=2000000", {
+      const res = await fetch("/api/network/speedtest?size=200000", {
         cache: "no-store",
       })
       const blob = await res.blob()

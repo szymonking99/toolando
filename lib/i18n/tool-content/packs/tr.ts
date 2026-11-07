@@ -34,7 +34,7 @@ export const trToolContentTemplates: ToolContentTemplates = {
     },
     {
       q: "Maksimum dosya boyutu nedir?",
-      a: "500 MB'a kadar dosya yükleyebilirsiniz. Daha büyük dosyaların işlenmesi daha uzun sürebilir.",
+      a: "4 MB'a kadar dosya yükleyebilirsiniz. Daha büyük dosyaların işlenmesi daha uzun sürebilir.",
     },
     {
       q: "{TO} kalitesi iyi olacak mı?",

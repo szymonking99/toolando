@@ -34,7 +34,7 @@ export const idToolContentTemplates: ToolContentTemplates = {
     },
     {
       q: "Berapa ukuran file maksimum?",
-      a: "Anda dapat mengunggah file hingga 500 MB. File yang lebih besar mungkin membutuhkan waktu pemrosesan lebih lama.",
+      a: "Anda dapat mengunggah file hingga 4 MB. File yang lebih besar mungkin membutuhkan waktu pemrosesan lebih lama.",
     },
     {
       q: "Apakah kualitas {TO} akan bagus?",

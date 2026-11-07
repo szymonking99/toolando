@@ -162,7 +162,7 @@ const guidesDe: Record<GuideSlug, GuideArticle> = {
       {
         title: "Wann die Datei länger auf dem Server bleibt",
         paragraphs: [
-          "Nur während der Konvertierung (meist Sekunden bis eine Minute). Bei großen Videos bis 500 MB kann es länger dauern — die Datei wird danach trotzdem gelöscht.",
+          "Nur während der Konvertierung (meist Sekunden bis eine Minute). Bei Dateien bis 4 MB kann es etwas länger dauern — die Datei wird danach trotzdem gelöscht.",
           "Eine Premium-Option mit Konto kann Operationshistorie speichern (Metadaten, nicht Dateien) — Details in der Datenschutzrichtlinie.",
         ],
       },
@@ -443,7 +443,7 @@ const guidesEs: Record<GuideSlug, GuideArticle> = {
       {
         title: "Cuándo el archivo permanece más tiempo en el servidor",
         paragraphs: [
-          "Solo durante la conversión (suele ser de segundos a un minuto). Con vídeos grandes de hasta 500 MB puede tardar más; el archivo se elimina al terminar igual.",
+          "Solo durante la conversión (suele ser de segundos a un minuto). Con archivos de hasta 4 MB puede tardar un poco más; el archivo se elimina al terminar igual.",
           "Una opción premium con cuenta puede guardar historial de operaciones (metadatos, no archivos): detalles en la política de privacidad.",
         ],
       },
@@ -724,7 +724,7 @@ const guidesUk: Record<GuideSlug, GuideArticle> = {
       {
         title: "Коли файл залишається на сервері довше",
         paragraphs: [
-          "Лише на час конвертації (зазвичай секунди до хвилини). Для великих відео до 500 МБ операція може тривати довше — файл усе одно видаляється після завершення.",
+          "Лише на час конвертації (зазвичай секунди до хвилини). Ліміт файлу — 4 МБ, і після завершення його все одно видаляється.",
           "Преміум-опція з обліковим записом може зберігати історію операцій (метадані, не файли) — деталі в політиці конфіденційності.",
         ],
       },

@@ -34,7 +34,7 @@ export const koToolContentTemplates: ToolContentTemplates = {
     },
     {
       q: "최대 파일 크기는 얼마인가요?",
-      a: "최대 500MB까지 업로드할 수 있습니다. 더 큰 파일은 처리에 더 오래 걸릴 수 있습니다.",
+      a: "최대 4 MB까지 업로드할 수 있습니다. 더 큰 파일은 처리에 더 오래 걸릴 수 있습니다.",
     },
     {
       q: "{TO} 품질은 좋을까요?",
