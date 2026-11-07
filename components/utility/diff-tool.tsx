@@ -40,7 +40,7 @@ export function DiffTool() {
         </Field>
       </div>
       {(a || b) && (
-        <div className="overflow-auto rounded-xl border border-white/10">
+        <div className="overflow-auto rounded-xl border border-border">
           <table className="w-full text-xs font-mono">
             <tbody>
               {rows.map((row, i) => (
@@ -50,11 +50,11 @@ export function DiffTool() {
                     row.kind === "diff"
                       ? "bg-destructive/10"
                       : i % 2
-                        ? "bg-white/[0.02]"
+                        ? "bg-muted/30"
                         : ""
                   }
                 >
-                  <td className="w-1/2 border-r border-white/10 px-2 py-1 align-top text-muted-foreground">
+                  <td className="w-1/2 border-r border-border px-2 py-1 align-top text-muted-foreground">
                     {row.left || " "}
                   </td>
                   <td className="w-1/2 px-2 py-1 align-top">{row.right || " "}</td>

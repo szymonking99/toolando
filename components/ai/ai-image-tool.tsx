@@ -53,7 +53,7 @@ export function AiImageTool() {
         onChange={(e) => setPrompt(e.target.value)}
         rows={4}
         placeholder={t.aiTool.imagePromptPlaceholder}
-        className="w-full resize-y rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 text-sm leading-relaxed text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:border-primary/50"
+        className="w-full resize-y rounded-xl border border-border bg-muted/40 px-4 py-3 text-sm leading-relaxed text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:border-primary/50"
       />
 
       <div className="flex flex-wrap gap-2">
@@ -65,7 +65,7 @@ export function AiImageTool() {
             className={`rounded-lg border px-3 py-1.5 text-sm font-medium transition-colors ${
               ratio === id
                 ? "border-primary/60 bg-primary/15 text-foreground"
-                : "border-white/10 bg-white/[0.03] text-muted-foreground hover:border-primary/40"
+                : "border-border bg-muted/40 text-muted-foreground hover:border-primary/40"
             }`}
           >
             {ratioLabels[id]}
@@ -100,14 +100,14 @@ export function AiImageTool() {
       )}
 
       {loading && !image && (
-        <div className="flex aspect-square w-full max-w-md items-center justify-center rounded-xl border border-white/10 bg-white/[0.03]">
+        <div className="flex aspect-square w-full max-w-md items-center justify-center rounded-xl border border-border bg-muted/40">
           <Loader2 className="size-8 animate-spin text-primary" />
         </div>
       )}
 
       {image && (
         <div className="space-y-4">
-          <div className="overflow-hidden rounded-xl border border-white/10 bg-white/[0.02]">
+          <div className="overflow-hidden rounded-xl border border-border bg-muted/30">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={image || "/placeholder.svg"}

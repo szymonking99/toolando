@@ -118,7 +118,7 @@ export function TimezoneTool() {
         </div>
       </ResultBox>
 
-      <div className="overflow-hidden rounded-xl border border-white/10 bg-[#0b1220]">
+      <div className="overflow-hidden rounded-xl border border-border bg-card">
         <svg viewBox="0 0 100 60" className="h-auto w-full" role="img" aria-label="Mapa świata">
           <rect width="100" height="60" fill="#0b1220" />
           <ellipse cx="50" cy="30" rx="46" ry="24" fill="#132038" stroke="#1e3a5f" />

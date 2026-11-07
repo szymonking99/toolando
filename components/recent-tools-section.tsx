@@ -44,7 +44,7 @@ export function RecentToolsSection() {
               <li key={tool.id}>
                 <Link
                   href={href(`/tools/${tool.id}`)}
-                  className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-sm font-medium text-foreground transition-colors hover:border-primary/30 hover:bg-white/[0.08]"
+                  className="inline-flex items-center gap-1.5 rounded-full border border-border bg-muted/50 px-4 py-2 text-sm font-medium text-foreground transition-colors hover:border-primary/30 hover:bg-muted"
                 >
                   {favorites.includes(tool.id) && (
                     <Star className="size-3.5 fill-amber-400 text-amber-400" />

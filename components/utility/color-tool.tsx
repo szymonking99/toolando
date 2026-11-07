@@ -102,7 +102,7 @@ export function ColorTool() {
               type="color"
               value={hexToRgb(hex) ? hex : "#000000"}
               onChange={(e) => setHex(e.target.value)}
-              className="h-10 w-12 cursor-pointer rounded border border-white/10 bg-transparent"
+              className="h-10 w-12 cursor-pointer rounded border border-border bg-transparent"
             />
             <input
               className={inputClass}
@@ -117,7 +117,7 @@ export function ColorTool() {
               type="color"
               value={hexToRgb(bg) ? bg : "#000000"}
               onChange={(e) => setBg(e.target.value)}
-              className="h-10 w-12 cursor-pointer rounded border border-white/10 bg-transparent"
+              className="h-10 w-12 cursor-pointer rounded border border-border bg-transparent"
             />
             <input
               className={inputClass}
@@ -130,7 +130,7 @@ export function ColorTool() {
       {rgb && hsl && (
         <ResultBox>
           <div
-            className="mb-3 h-16 rounded-lg border border-white/10"
+            className="mb-3 h-16 rounded-lg border border-border"
             style={{ background: rgbToHex(rgb.r, rgb.g, rgb.b) }}
           />
           <ul className="space-y-1 font-mono text-sm">

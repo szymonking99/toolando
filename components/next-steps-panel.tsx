@@ -12,15 +12,15 @@ import { getSpecialTool } from "@/lib/special-tools"
 import { ShareButtons } from "@/components/share-buttons"
 
 const AI_SUMMARIZE_TOOLS = new Set([
-  "docx-pdf",
+  "docx-to-pdf",
+  "pdf-to-docx",
   "pdf-do-tekstu",
   "podzial-pdf",
   "laczenie-pdf",
   "kompresja-pdf",
   "numeracja-pdf",
-  "pdf-jpg",
-  "pdf-png",
-  "pdf-docx",
+  "pdf-to-jpg",
+  "pdf-to-png",
 ])
 
 function resolveTitle(locale: string, id: string): string {
@@ -49,7 +49,7 @@ export function NextStepsPanel({
     "Generate a PDF or DOCX summary in seconds."
 
   return (
-    <div className="mt-4 space-y-4 rounded-xl border border-white/10 bg-white/[0.03] p-4">
+    <div className="mt-4 space-y-4 rounded-xl border border-border bg-muted/40 p-4">
       {showAiCta && (
         <Link
           href={href("/tools/podsumowanie")}
@@ -88,7 +88,7 @@ export function NextStepsPanel({
       <ShareButtons
         title={toolTitle}
         path={`/tools/${toolId}`}
-        className="border-t border-white/10 pt-4"
+        className="border-t border-border pt-4"
       />
     </div>
   )

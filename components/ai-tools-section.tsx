@@ -53,7 +53,7 @@ export function AiToolsSection() {
               <Link
                 key={tool.id}
                 href={href(`/tools/${tool.id}`)}
-                className="group relative flex flex-col overflow-hidden rounded-2xl border border-primary/15 bg-gradient-to-br from-primary/[0.07] to-white/[0.02] p-6 backdrop-blur-md transition-all hover:border-primary/40 hover:from-primary/[0.12]"
+                className="group relative flex flex-col overflow-hidden rounded-2xl border border-primary/15 bg-gradient-to-br from-primary/[0.07] to-muted/20 p-6 backdrop-blur-md transition-all hover:border-primary/40 hover:from-primary/[0.12]"
               >
                 <div
                   aria-hidden="true"

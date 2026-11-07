@@ -31,7 +31,7 @@ export function ToolPageContentSection({
   labNote?: LabNote | null
 }) {
   return (
-    <article className="mt-12 space-y-10 border-t border-white/10 pt-10">
+    <article className="mt-12 space-y-10 border-t border-border pt-10">
       <section>
         <p className="text-pretty leading-relaxed text-muted-foreground">
           {content.extendedDescription}

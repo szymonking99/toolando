@@ -44,7 +44,7 @@ export function PopularToolsSection() {
           <Link
             key={tool.id}
             href={href(`/tools/${tool.id}`)}
-            className="group relative flex items-center justify-between gap-4 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] p-5 backdrop-blur-md transition-all hover:border-primary/40 hover:bg-white/[0.06]"
+            className="group relative flex items-center justify-between gap-4 overflow-hidden rounded-2xl border border-border bg-muted/40 p-5 backdrop-blur-md transition-all hover:border-primary/40 hover:bg-muted"
           >
             <div
               aria-hidden="true"
@@ -58,7 +58,7 @@ export function PopularToolsSection() {
                 className="size-4 text-muted-foreground transition-colors group-hover:text-primary"
                 aria-hidden="true"
               />
-              <span className="inline-flex items-center rounded-lg bg-white/5 px-2.5 py-1 text-sm font-semibold text-foreground ring-1 ring-white/10">
+              <span className="inline-flex items-center rounded-lg bg-muted/60 px-2.5 py-1 text-sm font-semibold text-foreground ring-1 ring-border">
                 {tool.to.toUpperCase()}
               </span>
             </div>

@@ -41,7 +41,7 @@ export function PasswordStrengthTool() {
               <div
                 key={i}
                 className={`h-2 flex-1 rounded-full ${
-                  i <= analysis.score ? "bg-primary" : "bg-white/10"
+                  i <= analysis.score ? "bg-primary" : "bg-muted"
                 }`}
               />
             ))}

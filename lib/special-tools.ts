@@ -151,7 +151,7 @@ export const specialTools: SpecialToolConfig[] = [
     category: "Dokumenty",
     name: "Kompresja PDF",
     description:
-      "Zmniejsz rozmiar pliku PDF przez optymalizację struktury dokumentu. Najlepsze efekty przy skanach i dużych PDF.",
+      "Sprząta strukturę PDF i oddaje mniejszy plik, gdy się da. Nie powiększa go. Skan pełen zdjęć prawie nie schodzi.",
     accept: ".pdf",
     acceptLabel: "PDF",
     multiple: false,

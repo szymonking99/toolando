@@ -78,7 +78,7 @@ export function FaviconTool() {
         Upload a square-ish image. We generate PNG favicons (16–512px) and download them as a ZIP — entirely in your browser.
       </p>
       <Field label="Source image">
-        <label className="flex cursor-pointer flex-col items-center gap-2 rounded-xl border border-dashed border-white/15 px-4 py-10 text-center hover:border-primary/40">
+        <label className="flex cursor-pointer flex-col items-center gap-2 rounded-xl border border-dashed border-border px-4 py-10 text-center hover:border-primary/40">
           <input
             ref={inputRef}
             type="file"

@@ -26,7 +26,7 @@ export function AccountRecentTools() {
   if (recent.length === 0) return null
 
   return (
-    <section className="rounded-2xl border border-white/10 bg-background/60 p-6 backdrop-blur-xl">
+    <section className="rounded-2xl border border-border bg-background/60 p-6 backdrop-blur-xl">
       <div className="flex items-center gap-2 text-foreground">
         <Clock className="size-5 text-primary" aria-hidden="true" />
         <h2 className="text-lg font-semibold">{recentCopy.title}</h2>
@@ -37,7 +37,7 @@ export function AccountRecentTools() {
           <li key={tool.id}>
             <Link
               href={href(`/tools/${tool.id}`)}
-              className="flex items-center justify-between rounded-xl border border-white/10 bg-white/[0.03] px-4 py-2.5 text-sm transition-colors hover:bg-white/[0.06]"
+              className="flex items-center justify-between rounded-xl border border-border bg-muted/40 px-4 py-2.5 text-sm transition-colors hover:bg-muted"
             >
               <span className="font-medium text-foreground">{tool.title}</span>
               <span className="text-xs text-muted-foreground">

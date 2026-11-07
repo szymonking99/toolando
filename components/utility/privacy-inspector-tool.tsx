@@ -50,7 +50,7 @@ export function PrivacyInspectorTool() {
     <div className="space-y-4">
       <p className="text-sm text-muted-foreground">{copy.intro}</p>
       <Field label={copy.pickFile}>
-        <label className="flex cursor-pointer flex-col items-center justify-center gap-2 rounded-xl border border-dashed border-white/15 bg-white/[0.02] px-4 py-10 text-center hover:border-primary/40">
+        <label className="flex cursor-pointer flex-col items-center justify-center gap-2 rounded-xl border border-dashed border-border bg-muted/30 px-4 py-10 text-center hover:border-primary/40">
           <input
             ref={inputRef}
             type="file"
@@ -70,7 +70,7 @@ export function PrivacyInspectorTool() {
       {error && <p className="text-sm text-destructive">{error}</p>}
 
       {report && summary && (
-        <div className="space-y-3 rounded-xl border border-white/10 bg-white/[0.03] p-4">
+        <div className="space-y-3 rounded-xl border border-border bg-muted/40 p-4">
           <div className={`flex items-start gap-2 text-sm font-medium ${summary.cls}`}>
             <summary.icon className="mt-0.5 size-4 shrink-0" />
             <span>{summary.text}</span>
@@ -79,7 +79,7 @@ export function PrivacyInspectorTool() {
             {report.findings.map((f) => (
               <li
                 key={f.key}
-                className="flex flex-wrap items-baseline justify-between gap-2 border-b border-white/5 py-2 text-sm last:border-0"
+                className="flex flex-wrap items-baseline justify-between gap-2 border-b border-border/60 py-2 text-sm last:border-0"
               >
                 <span className="text-muted-foreground">{f.label}</span>
                 <span

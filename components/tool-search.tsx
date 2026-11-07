@@ -71,17 +71,17 @@ export function ToolSearch({ className }: { className?: string }) {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder={t.search.placeholder}
-          className="w-full rounded-xl border border-white/10 bg-white/[0.04] py-2.5 pl-10 pr-4 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary/40 focus:outline-none focus:ring-1 focus:ring-primary/30"
+          className="w-full rounded-xl border border-border bg-muted/50 py-2.5 pl-10 pr-4 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary/40 focus:outline-none focus:ring-1 focus:ring-primary/30"
         />
       </div>
       {results.length > 0 && (
-        <ul className="mt-2 overflow-hidden rounded-xl border border-white/10 bg-background/95 shadow-lg backdrop-blur-md">
+        <ul className="mt-2 overflow-hidden rounded-xl border border-border bg-background/95 shadow-lg backdrop-blur-md">
           {results.map((tool) => (
             <li key={tool.id}>
               <Link
                 href={href(`/tools/${tool.id}`)}
                 onClick={() => setQuery("")}
-                className="flex items-center justify-between px-4 py-2.5 text-sm transition-colors hover:bg-white/[0.06]"
+                className="flex items-center justify-between px-4 py-2.5 text-sm transition-colors hover:bg-muted"
               >
                 <span className="font-medium text-foreground">{tool.title}</span>
                 <span className="text-xs text-muted-foreground">{tool.hint}</span>

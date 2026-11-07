@@ -28,12 +28,12 @@ export function MarkdownPreviewTool() {
           onChange={(e) => setMarkdown(e.target.value)}
         />
       </Field>
-      <div className="rounded-xl border border-white/10 bg-white/[0.03] p-4">
+      <div className="rounded-xl border border-border bg-muted/40 p-4">
         <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-muted-foreground">
           Podgląd
         </p>
         <article
-          className="prose prose-invert max-w-none prose-headings:font-semibold prose-a:text-primary"
+          className="prose dark:prose-invert max-w-none prose-headings:font-semibold prose-a:text-primary"
           dangerouslySetInnerHTML={{ __html: html }}
         />
       </div>

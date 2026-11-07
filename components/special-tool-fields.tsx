@@ -264,10 +264,10 @@ export function SpecialToolFields({
     ((t as { specialFields?: SpecialFieldsCopy }).specialFields) ?? FALLBACK_FIELDS
 
   const box =
-    "rounded-xl border border-white/10 bg-white/[0.03] px-4 py-4 space-y-3"
+    "rounded-xl border border-border bg-muted/40 px-4 py-4 space-y-3"
   const label = "text-sm font-medium text-foreground"
   const input =
-    "mt-1 w-full rounded-lg border border-white/10 bg-white/[0.04] px-3 py-2 text-sm text-foreground focus:border-primary/40 focus:outline-none focus:ring-1 focus:ring-primary/30"
+    "mt-1 w-full rounded-lg border border-border bg-muted/50 px-3 py-2 text-sm text-foreground focus:border-primary/40 focus:outline-none focus:ring-1 focus:ring-primary/30"
 
   switch (engine) {
     case "split-pdf":

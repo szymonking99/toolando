@@ -302,7 +302,7 @@ export function SpecialTool({ tool }: { tool: SpecialToolConfig }) {
         className={`flex cursor-pointer flex-col items-center justify-center gap-3 rounded-2xl border border-dashed p-10 text-center transition-colors ${
           dragging
             ? "border-primary bg-primary/[0.08]"
-            : "border-white/15 bg-white/[0.02] hover:border-primary/40 hover:bg-white/[0.04]"
+            : "border-border bg-muted/30 hover:border-primary/40 hover:bg-muted"
         }`}
       >
         <input
@@ -329,7 +329,7 @@ export function SpecialTool({ tool }: { tool: SpecialToolConfig }) {
           {files.map((file, index) => (
             <li
               key={`${file.name}-${index}`}
-              className="flex items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3"
+              className="flex items-center justify-between gap-3 rounded-xl border border-border bg-muted/40 px-4 py-3"
             >
               <div className="flex min-w-0 items-center gap-3">
                 {tool.multiple && (
@@ -342,7 +342,7 @@ export function SpecialTool({ tool }: { tool: SpecialToolConfig }) {
                   <img
                     src={previews[index] || "/placeholder.svg"}
                     alt={file.name}
-                    className="size-12 shrink-0 rounded-md border border-white/10 object-cover"
+                    className="size-12 shrink-0 rounded-md border border-border object-cover"
                   />
                 )}
                 <div className="min-w-0">
@@ -357,7 +357,7 @@ export function SpecialTool({ tool }: { tool: SpecialToolConfig }) {
               <button
                 type="button"
                 onClick={() => removeFile(index)}
-                className="shrink-0 rounded-md p-1.5 text-muted-foreground transition-colors hover:bg-white/10 hover:text-foreground"
+                className="shrink-0 rounded-md p-1.5 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
                 aria-label={t.tool.removeFile}
               >
                 <X className="size-4" />
@@ -368,7 +368,7 @@ export function SpecialTool({ tool }: { tool: SpecialToolConfig }) {
       )}
 
       {tool.hasQuality && files.length > 0 && (
-        <div className="rounded-xl border border-white/10 bg-white/[0.03] px-4 py-4">
+        <div className="rounded-xl border border-border bg-muted/40 px-4 py-4">
           <div className="flex items-center justify-between">
             <label
               htmlFor="quality"
@@ -428,7 +428,7 @@ export function SpecialTool({ tool }: { tool: SpecialToolConfig }) {
 
           {result.isImage && (
             <div
-              className="overflow-hidden rounded-lg border border-white/10"
+              className="overflow-hidden rounded-lg border border-border"
               style={{
                 backgroundColor: "#0b1020",
                 backgroundImage:
@@ -447,7 +447,7 @@ export function SpecialTool({ tool }: { tool: SpecialToolConfig }) {
           )}
 
           {result.note && tool.engine !== "compare-documents" && (
-            <pre className="max-h-48 overflow-auto whitespace-pre-wrap rounded-lg border border-white/10 bg-white/[0.03] px-3 py-2 text-xs leading-relaxed text-muted-foreground">
+            <pre className="max-h-48 overflow-auto whitespace-pre-wrap rounded-lg border border-border bg-muted/40 px-3 py-2 text-xs leading-relaxed text-muted-foreground">
               {result.note}
             </pre>
           )}
@@ -473,7 +473,7 @@ export function SpecialTool({ tool }: { tool: SpecialToolConfig }) {
               <button
                 type="button"
                 onClick={shareResult}
-                className="inline-flex items-center gap-2 rounded-md border border-white/15 px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-white/5"
+                className="inline-flex items-center gap-2 rounded-md border border-border px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-muted"
               >
                 <Share2 className="size-4" />
                 {(t.tool as { shareFile?: string }).shareFile ?? "Share file"}
@@ -482,7 +482,7 @@ export function SpecialTool({ tool }: { tool: SpecialToolConfig }) {
             <button
               type="button"
               onClick={mailtoHint}
-              className="inline-flex items-center gap-2 rounded-md border border-white/15 px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-white/5"
+              className="inline-flex items-center gap-2 rounded-md border border-border px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-muted"
             >
               <Mail className="size-4" />
               {(t.tool as { emailDraft?: string }).emailDraft ?? "E-mail draft"}
@@ -490,7 +490,7 @@ export function SpecialTool({ tool }: { tool: SpecialToolConfig }) {
             <button
               type="button"
               onClick={reset}
-              className="inline-flex items-center rounded-md border border-white/15 px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-white/5"
+              className="inline-flex items-center rounded-md border border-border px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-muted"
             >
               {t.tool.startOver}
             </button>
@@ -505,7 +505,7 @@ export function SpecialTool({ tool }: { tool: SpecialToolConfig }) {
                 <span>{t.tool.uploadingFiles}</span>
                 <span>{progress}%</span>
               </div>
-              <div className="h-2 w-full overflow-hidden rounded-full bg-white/10">
+              <div className="h-2 w-full overflow-hidden rounded-full bg-muted">
                 <div
                   className="h-full rounded-full bg-primary transition-all"
                   style={{ width: `${progress}%` }}
@@ -523,7 +523,7 @@ export function SpecialTool({ tool }: { tool: SpecialToolConfig }) {
                 </span>
                 <span>{workProgress}%</span>
               </div>
-              <div className="h-2 w-full overflow-hidden rounded-full bg-white/10">
+              <div className="h-2 w-full overflow-hidden rounded-full bg-muted">
                 <div
                   className="h-full rounded-full bg-primary transition-all duration-200"
                   style={{ width: `${workProgress}%` }}

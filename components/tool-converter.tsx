@@ -160,7 +160,7 @@ export function ToolConverter({ tool }: { tool: ToolConfig }) {
         className={`flex cursor-pointer flex-col items-center justify-center gap-3 rounded-2xl border border-dashed p-10 text-center transition-colors ${
           dragging
             ? "border-primary bg-primary/[0.08]"
-            : "border-white/15 bg-white/[0.02] hover:border-primary/40 hover:bg-white/[0.04]"
+            : "border-border bg-muted/30 hover:border-primary/40 hover:bg-muted"
         }`}
       >
         <input
@@ -186,7 +186,7 @@ export function ToolConverter({ tool }: { tool: ToolConfig }) {
       </label>
 
       {files.length > 0 && (
-        <div className="rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3">
+        <div className="rounded-xl border border-border bg-muted/40 px-4 py-3">
           <div className="mb-2 flex items-center justify-between gap-3">
             <p className="text-sm font-medium text-foreground">
               {files.length === 1
@@ -196,7 +196,7 @@ export function ToolConverter({ tool }: { tool: ToolConfig }) {
             <button
               type="button"
               onClick={reset}
-              className="shrink-0 rounded-md p-1.5 text-muted-foreground transition-colors hover:bg-white/10 hover:text-foreground"
+              className="shrink-0 rounded-md p-1.5 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
               aria-label={t.tool.removeFile}
             >
               <X className="size-4" />
@@ -243,7 +243,7 @@ export function ToolConverter({ tool }: { tool: ToolConfig }) {
             <button
               type="button"
               onClick={reset}
-              className="inline-flex items-center rounded-md border border-white/15 px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-white/5"
+              className="inline-flex items-center rounded-md border border-border px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-muted"
             >
               {t.tool.convertAnother}
             </button>
@@ -264,7 +264,7 @@ export function ToolConverter({ tool }: { tool: ToolConfig }) {
                 </span>
                 <span>{progress}%</span>
               </div>
-              <div className="h-2 w-full overflow-hidden rounded-full bg-white/10">
+              <div className="h-2 w-full overflow-hidden rounded-full bg-muted">
                 <div
                   className="h-full rounded-full bg-primary transition-all"
                   style={{ width: `${progress}%` }}
@@ -281,7 +281,7 @@ export function ToolConverter({ tool }: { tool: ToolConfig }) {
                 </span>
                 <span>{convProgress}%</span>
               </div>
-              <div className="h-2 w-full overflow-hidden rounded-full bg-white/10">
+              <div className="h-2 w-full overflow-hidden rounded-full bg-muted">
                 <div
                   className="h-full rounded-full bg-primary transition-all duration-200"
                   style={{ width: `${convProgress}%` }}

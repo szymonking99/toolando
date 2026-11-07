@@ -29,7 +29,7 @@ export function AiChatTool() {
   }
 
   return (
-    <div className="flex h-[32rem] flex-col overflow-hidden rounded-xl border border-white/10 bg-white/[0.02]">
+    <div className="flex h-[32rem] flex-col overflow-hidden rounded-xl border border-border bg-muted/30">
       <div ref={scrollRef} className="flex-1 space-y-4 overflow-y-auto p-4">
         {messages.length === 0 && (
           <div className="flex h-full flex-col items-center justify-center gap-3 text-center">
@@ -57,7 +57,7 @@ export function AiChatTool() {
               <span
                 className={`flex size-8 shrink-0 items-center justify-center rounded-full ${
                   isUser
-                    ? "bg-white/10 text-foreground"
+                    ? "bg-muted text-foreground"
                     : "bg-primary/15 text-primary"
                 }`}
               >
@@ -71,7 +71,7 @@ export function AiChatTool() {
                 className={`max-w-[80%] whitespace-pre-wrap rounded-2xl px-4 py-2.5 text-sm leading-relaxed ${
                   isUser
                     ? "bg-primary text-primary-foreground"
-                    : "border border-white/10 bg-white/[0.04] text-foreground"
+                    : "border border-border bg-muted/50 text-foreground"
                 }`}
               >
                 {text || (
@@ -92,7 +92,7 @@ export function AiChatTool() {
 
       <form
         onSubmit={submit}
-        className="flex items-center gap-2 border-t border-white/10 bg-white/[0.02] p-3"
+        className="flex items-center gap-2 border-t border-border bg-muted/30 p-3"
       >
         <input
           value={input}
@@ -108,7 +108,7 @@ export function AiChatTool() {
             }
           }}
           placeholder="Napisz wiadomość…"
-          className="flex-1 rounded-lg border border-white/10 bg-white/[0.03] px-4 py-2.5 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:border-primary/50"
+          className="flex-1 rounded-lg border border-border bg-muted/40 px-4 py-2.5 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:border-primary/50"
         />
         <button
           type="submit"

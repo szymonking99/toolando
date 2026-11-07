@@ -42,7 +42,7 @@ export function AspectRatioTool() {
           <button
             key={p.label}
             type="button"
-            className="rounded-lg border border-white/10 px-3 py-1.5 text-xs font-medium hover:border-primary/40"
+            className="rounded-lg border border-border px-3 py-1.5 text-xs font-medium hover:border-primary/40"
             onClick={() => {
               setWidth(String(p.w * 120))
               setHeight(String(p.h * 120))

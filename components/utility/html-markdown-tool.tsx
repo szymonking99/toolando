@@ -58,7 +58,7 @@ export function HtmlMarkdownTool() {
       </ResultBox>
       {mode === "md-html" && (
         <div
-          className="prose prose-invert max-w-none rounded-xl border border-white/10 bg-white/[0.03] p-4 text-sm"
+          className="prose dark:prose-invert max-w-none rounded-xl border border-border bg-muted/40 p-4 text-sm"
           dangerouslySetInnerHTML={{ __html: output }}
         />
       )}

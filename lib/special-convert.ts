@@ -339,20 +339,52 @@ export async function compressPdf(
   input: Buffer,
   originalName: string,
 ): Promise<SpecialResult> {
-  const { PDFDocument } = await import("pdf-lib")
-  let doc
+  const candidates: Buffer[] = []
+
   try {
-    doc = await PDFDocument.load(input, { ignoreEncryption: true })
+    const { PDFDocument } = await import("pdf-lib")
+    const doc = await PDFDocument.load(input, { ignoreEncryption: true })
+    candidates.push(Buffer.from(await doc.save({ useObjectStreams: true })))
   } catch {
-    throw new ConversionError("Nie udało się odczytać pliku PDF.")
+    /* try the other rewriter */
   }
 
-  const bytes = await doc.save({ useObjectStreams: true })
+  try {
+    const mupdf = await import("mupdf")
+    const opened = mupdf.Document.openDocument(input, "application/pdf")
+    if (!opened.needsPassword()) {
+      const pdf = opened.asPDF()
+      if (pdf) {
+        const buf = pdf.saveToBuffer("garbage=compact,compress")
+        candidates.push(Buffer.from(buf.asUint8Array()))
+      }
+    }
+  } catch {
+    /* keep the pdf-lib result */
+  }
+
+  let best = input
+  for (const candidate of candidates) {
+    if (candidate.length > 32 && candidate.length < best.length) best = candidate
+  }
+
   const stem = stemOf(originalName)
+  const saved = input.length - best.length
+  if (saved <= 0) {
+    return {
+      buffer: input,
+      filename: originalName.split(/[\\/]/).pop() || `${stem}.pdf`,
+      contentType: "application/pdf",
+      note: "Plik jest już zwarty, więc zostawiłem oryginał — kompresja struktury by go powiększyła. Skan pełen zdjęć prawie nie schodzi tą metodą.",
+    }
+  }
+
+  const pct = Math.max(1, Math.round((saved / input.length) * 100))
   return {
-    buffer: Buffer.from(bytes),
+    buffer: best,
     filename: `${stem}-skompresowany.pdf`,
     contentType: "application/pdf",
+    note: `Mniejszy o ${pct}%. To sprzątanie struktury pliku, nie ponowne kodowanie zdjęć w skanie.`,
   }
 }
 
@@ -372,6 +404,11 @@ export async function pdfToText(
     parts.push(page.toStructuredText("preserve-whitespace").asText())
   }
   const text = parts.join("\n\n").trim()
+  if (!text) {
+    throw new ConversionError(
+      "W tym PDF nie ma warstwy tekstowej. To wygląda na skan — użyj narzędzia OCR.",
+    )
+  }
   const stem = stemOf(originalName)
   return {
     buffer: Buffer.from(text, "utf8"),

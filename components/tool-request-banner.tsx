@@ -9,7 +9,7 @@ export function ToolRequestBanner() {
 
   return (
     <section className="px-4 py-12">
-      <div className="mx-auto flex max-w-4xl flex-col items-center gap-4 rounded-2xl border border-white/10 bg-white/[0.03] p-8 text-center sm:flex-row sm:text-left">
+      <div className="mx-auto flex max-w-4xl flex-col items-center gap-4 rounded-2xl border border-border bg-muted/40 p-8 text-center sm:flex-row sm:text-left">
         <span className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-primary/15 text-primary">
           <MessageSquarePlus className="size-6" aria-hidden="true" />
         </span>

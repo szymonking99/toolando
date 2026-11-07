@@ -1,14 +1,14 @@
 /** Suggested follow-up tools after a conversion completes. */
 
 const NEXT_BY_TOOL: Record<string, string[]> = {
-  "pdf-jpg": ["kompresor-obrazow", "pdf-png", "laczenie-pdf"],
-  "pdf-png": ["kompresor-obrazow", "pdf-jpg", "podzial-pdf"],
-  "jpg-png": ["kompresor-obrazow", "usun-exif", "znak-wodny"],
-  "png-jpg": ["kompresor-obrazow", "zmiana-rozmiaru-obrazu"],
-  "mp4-mp3": ["kalkulator-bitrate", "wyciszenie-wideo"],
-  "mp4-webm": ["przyciecie-wideo", "kompresja-wideo", "wyciszenie-wideo"],
-  "docx-pdf": ["podsumowanie", "pdf-do-tekstu", "laczenie-pdf"],
-  "heic-jpg": ["kompresor-obrazow", "usun-exif"],
+  "pdf-to-jpg": ["kompresor-obrazow", "pdf-do-obrazow", "laczenie-pdf"],
+  "pdf-to-png": ["kompresor-obrazow", "pdf-do-obrazow", "podzial-pdf"],
+  "jpg-to-png": ["kompresor-obrazow", "usun-exif", "znak-wodny"],
+  "png-to-jpg": ["kompresor-obrazow", "zmiana-rozmiaru-obrazu", "lustro-obrazu"],
+  "mp4-to-mp3": ["kompresja-audio", "kalkulator-bitrate"],
+  "mp4-to-webm": ["przyciecie-wideo", "kompresja-wideo", "zmiana-rozmiaru-wideo"],
+  "docx-to-pdf": ["pdf-do-tekstu", "laczenie-pdf", "kompresja-pdf"],
+  "heic-to-jpg": ["kompresor-obrazow", "usun-exif", "lustro-obrazu"],
 }
 
 const NEXT_BY_SPECIAL: Record<string, string[]> = {
@@ -28,6 +28,19 @@ const NEXT_BY_SPECIAL: Record<string, string[]> = {
   "redakcja-pdf": ["przygotuj-do-maila", "inspektor-prywatnosci", "usun-exif"],
   "wypelnij-pdf": ["podpis-pdf", "numeracja-pdf", "przygotuj-do-maila"],
   "zdjecia-do-pdf": ["rozdziel-skan", "ocr-skanu", "przygotuj-do-maila"],
+  "audio-z-wideo": ["kompresja-audio", "wyciszenie-wideo", "kalkulator-bitrate"],
+  "kompresja-audio": ["audio-z-wideo", "kalkulator-bitrate"],
+  "pdf-do-obrazow": ["kompresor-obrazow", "zdjecia-do-pdf", "ocr-skanu"],
+  "rozpakuj-zip": ["spakuj-zip", "naprawa-plikow"],
+  "spakuj-zip": ["rozpakuj-zip", "przygotuj-do-maila"],
+  "lustro-obrazu": ["obrot-obrazu", "przyciecie-obrazu", "kompresor-obrazow"],
+  "obrot-obrazu": ["lustro-obrazu", "przyciecie-obrazu", "kompresor-obrazow"],
+  "przyciecie-obrazu": ["zmiana-rozmiaru-obrazu", "kompresor-obrazow"],
+  "zmiana-rozmiaru-wideo": ["kompresja-wideo", "przyciecie-wideo", "scalanie-wideo"],
+  "scalanie-wideo": ["kompresja-wideo", "zmiana-rozmiaru-wideo"],
+  "wideo-do-gif": ["przyciecie-wideo", "kompresja-wideo"],
+  "pdf-haslo": ["redakcja-pdf", "przygotuj-do-maila"],
+  "wybor-stron-pdf": ["podzial-pdf", "laczenie-pdf", "pdf-do-obrazow"],
 }
 
 export function getNextStepToolIds(toolId: string, limit = 3): string[] {

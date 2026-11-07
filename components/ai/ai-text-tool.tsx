@@ -151,7 +151,7 @@ export function AiTextTool({ tool }: { tool: AiToolConfig }) {
             className={`flex cursor-pointer flex-col items-center justify-center gap-3 rounded-2xl border border-dashed p-10 text-center transition-colors ${
               dragging
                 ? "border-primary bg-primary/[0.08]"
-                : "border-white/15 bg-white/[0.02] hover:border-primary/40 hover:bg-white/[0.04]"
+                : "border-border bg-muted/30 hover:border-primary/40 hover:bg-muted"
             }`}
           >
             <input
@@ -173,7 +173,7 @@ export function AiTextTool({ tool }: { tool: AiToolConfig }) {
           </label>
 
           {file && (
-            <div className="flex items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3">
+            <div className="flex items-center justify-between gap-3 rounded-xl border border-border bg-muted/40 px-4 py-3">
               <div className="min-w-0">
                 <p className="truncate text-sm font-medium text-foreground">
                   {file.name}
@@ -188,7 +188,7 @@ export function AiTextTool({ tool }: { tool: AiToolConfig }) {
                   setFile(null)
                   if (inputRef.current) inputRef.current.value = ""
                 }}
-                className="shrink-0 rounded-md p-1.5 text-muted-foreground transition-colors hover:bg-white/10 hover:text-foreground"
+                className="shrink-0 rounded-md p-1.5 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
                 aria-label={t.aiTool.removeFile}
               >
                 <X className="size-4" />
@@ -207,7 +207,7 @@ export function AiTextTool({ tool }: { tool: AiToolConfig }) {
                 ? t.aiTool.translatePlaceholder
                 : t.aiTool.copyPlaceholder
             }
-            className="w-full resize-y rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 text-sm leading-relaxed text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:border-primary/50"
+            className="w-full resize-y rounded-xl border border-border bg-muted/40 px-4 py-3 text-sm leading-relaxed text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:border-primary/50"
           />
 
           <div className="flex flex-wrap items-center gap-3">
@@ -219,7 +219,7 @@ export function AiTextTool({ tool }: { tool: AiToolConfig }) {
                   onChange={(e) =>
                     setTone(e.target.value as (typeof TONE_KEYS)[number])
                   }
-                  className="rounded-lg border border-white/10 bg-white/[0.03] px-3 py-1.5 text-sm text-foreground outline-none focus:border-primary/50"
+                  className="rounded-lg border border-border bg-muted/40 px-3 py-1.5 text-sm text-foreground outline-none focus:border-primary/50"
                 >
                   {TONE_KEYS.map((key) => (
                     <option key={key} value={key} className="bg-background">
@@ -239,7 +239,7 @@ export function AiTextTool({ tool }: { tool: AiToolConfig }) {
                       e.target.value as (typeof LANGUAGE_KEYS)[number],
                     )
                   }
-                  className="rounded-lg border border-white/10 bg-white/[0.03] px-3 py-1.5 text-sm text-foreground outline-none focus:border-primary/50"
+                  className="rounded-lg border border-border bg-muted/40 px-3 py-1.5 text-sm text-foreground outline-none focus:border-primary/50"
                 >
                   {LANGUAGE_KEYS.map((key) => (
                     <option key={key} value={key} className="bg-background">
@@ -290,7 +290,7 @@ export function AiTextTool({ tool }: { tool: AiToolConfig }) {
             <button
               type="button"
               onClick={copy}
-              className="inline-flex items-center gap-1.5 rounded-md border border-white/15 px-2.5 py-1 text-xs font-medium text-foreground transition-colors hover:bg-white/5"
+              className="inline-flex items-center gap-1.5 rounded-md border border-border px-2.5 py-1 text-xs font-medium text-foreground transition-colors hover:bg-muted"
             >
               {copied ? (
                 <>

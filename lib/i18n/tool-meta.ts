@@ -362,7 +362,7 @@ const specialMaps: Record<string, SpecialMap> = {
       category: "Dokumenty",
       name: "Kompresja PDF",
       description:
-        "Zmniejsz rozmiar pliku PDF przez optymalizację struktury dokumentu.",
+        "Sprząta strukturę PDF i oddaje mniejszy plik, gdy się da. Nie powiększa go. Skan pełen zdjęć prawie nie schodzi.",
       actionLabel: "Kompresuj PDF",
       acceptLabel: "PDF",
     },
@@ -376,7 +376,8 @@ const specialMaps: Record<string, SpecialMap> = {
     "pdf-do-tekstu": {
       category: "Dokumenty",
       name: "PDF do tekstu",
-      description: "Wyodrębnij tekst z pliku PDF do pliku TXT.",
+      description:
+        "Wyciągnij tekst z PDF do pliku TXT. Skan bez warstwy tekstowej odeśle Cię do OCR.",
       actionLabel: "Wyodrębnij tekst",
       acceptLabel: "PDF",
     },
@@ -627,7 +628,8 @@ const specialMaps: Record<string, SpecialMap> = {
     "kompresja-pdf": {
       category: "Documents",
       name: "Compress PDF",
-      description: "Reduce PDF file size by optimizing the document structure.",
+      description:
+        "Cleans the PDF structure and returns a smaller file when it can. It will not make the file larger. Photo scans barely shrink.",
       actionLabel: "Compress PDF",
       acceptLabel: "PDF",
     },
@@ -641,7 +643,8 @@ const specialMaps: Record<string, SpecialMap> = {
     "pdf-do-tekstu": {
       category: "Documents",
       name: "PDF to text",
-      description: "Extract plain text from a PDF file into a TXT download.",
+      description:
+        "Pull the text layer out of a PDF into a TXT file. A scan with no text layer should go through OCR.",
       actionLabel: "Extract text",
       acceptLabel: "PDF",
     },
