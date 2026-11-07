@@ -7,6 +7,7 @@ import { LanguageSwitcher } from "@/components/language-switcher"
 import { SupportButton } from "@/components/support-button"
 import { AccountNavButton } from "@/components/account-nav-button"
 import { GlobalSearch } from "@/components/global-search"
+import { ThemeToggle } from "@/components/theme-toggle"
 
 type NavLink = { label: string; href: string }
 
@@ -78,13 +79,13 @@ export function SiteNavbar() {
     <header className="fixed inset-x-0 top-0 z-50 px-3 pt-3 sm:px-4 sm:pt-4">
       <nav
         aria-label="Main"
-        className="mx-auto flex h-14 w-full max-w-6xl items-center gap-2 rounded-2xl border border-white/10 bg-background/80 px-3 backdrop-blur-xl sm:gap-3 sm:px-4"
+        className="mx-auto flex h-14 w-full max-w-6xl items-center gap-2 rounded-2xl border border-border/80 bg-background/85 px-3 shadow-sm shadow-foreground/5 backdrop-blur-xl sm:gap-3 sm:px-4"
       >
         <a href={href("/")} className="flex shrink-0 items-center gap-2">
-          <span className="flex size-8 items-center justify-center rounded-lg bg-primary/15 text-primary ring-1 ring-primary/30">
+          <span className="flex size-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
             <Wrench className="size-4" aria-hidden="true" />
           </span>
-          <span className="text-sm font-semibold tracking-tight text-foreground sm:text-base">
+          <span className="font-display text-sm font-semibold tracking-tight text-foreground sm:text-base">
             Toolando
           </span>
         </a>
@@ -100,14 +101,14 @@ export function SiteNavbar() {
               setSearchOpen((v) => !v)
               setOpen(false)
             }}
-            className="flex size-9 items-center justify-center rounded-lg border border-white/10 text-foreground"
+            className="flex size-9 items-center justify-center rounded-lg border border-border text-foreground"
             aria-label={t.search.placeholder}
             aria-expanded={searchOpen}
           >
             <Search className="size-4" aria-hidden="true" />
           </button>
           {searchOpen && (
-            <div className="absolute right-0 top-full z-[70] mt-2 w-[min(92vw,20rem)] rounded-xl border border-white/10 bg-background/95 p-2 shadow-xl backdrop-blur-md">
+            <div className="absolute right-0 top-full z-[70] mt-2 w-[min(92vw,20rem)] rounded-xl border border-border bg-card p-2 shadow-xl">
               <GlobalSearch compact className="relative w-full" />
             </div>
           )}
@@ -118,7 +119,7 @@ export function SiteNavbar() {
             <a
               key={link.href}
               href={link.href}
-              className="shrink-0 rounded-lg px-2.5 py-1.5 text-sm font-medium text-muted-foreground transition-colors hover:bg-white/[0.05] hover:text-foreground"
+              className="shrink-0 rounded-lg px-2.5 py-1.5 text-sm font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
             >
               {link.label}
             </a>
@@ -128,7 +129,7 @@ export function SiteNavbar() {
             <button
               type="button"
               onClick={() => setMoreOpen((v) => !v)}
-              className="inline-flex items-center gap-0.5 rounded-lg px-2.5 py-1.5 text-sm font-medium text-muted-foreground transition-colors hover:bg-white/[0.05] hover:text-foreground"
+              className="inline-flex items-center gap-0.5 rounded-lg px-2.5 py-1.5 text-sm font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
               aria-expanded={moreOpen}
               aria-haspopup="true"
             >
@@ -136,13 +137,13 @@ export function SiteNavbar() {
               <ChevronDown className="size-3.5 opacity-70" aria-hidden="true" />
             </button>
             {moreOpen && (
-              <div className="absolute right-0 top-full z-[70] mt-1 max-h-[70vh] min-w-[13rem] overflow-y-auto rounded-xl border border-white/10 bg-background/95 py-1 shadow-xl backdrop-blur-md">
+              <div className="absolute right-0 top-full z-[70] mt-1 max-h-[70vh] min-w-[13rem] overflow-y-auto rounded-xl border border-border bg-card py-1 shadow-xl">
                 {moreLinks.map((link) => (
                   <a
                     key={link.href}
                     href={link.href}
                     onClick={() => setMoreOpen(false)}
-                    className="block px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-white/[0.06] hover:text-foreground"
+                    className="block px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
                   >
                     {link.label}
                   </a>
@@ -153,6 +154,7 @@ export function SiteNavbar() {
         </div>
 
         <div className="flex shrink-0 items-center gap-1.5 sm:gap-2">
+          <ThemeToggle />
           <div className="hidden sm:block">
             <LanguageSwitcher />
           </div>
@@ -167,7 +169,7 @@ export function SiteNavbar() {
               setOpen((v) => !v)
               setSearchOpen(false)
             }}
-            className="flex size-9 items-center justify-center rounded-lg border border-white/10 text-foreground xl:hidden"
+            className="flex size-9 items-center justify-center rounded-lg border border-border text-foreground xl:hidden"
             aria-label={open ? t.nav.closeMenu : t.nav.openMenu}
             aria-expanded={open}
           >
@@ -181,10 +183,10 @@ export function SiteNavbar() {
           <button
             type="button"
             aria-label={t.nav.closeMenu}
-            className="fixed inset-0 z-40 bg-black/50 xl:hidden"
+            className="fixed inset-0 z-40 bg-foreground/30 xl:hidden"
             onClick={() => setOpen(false)}
           />
-          <div className="relative z-50 mx-auto mt-2 max-h-[calc(100dvh-5.5rem)] w-full max-w-6xl overflow-y-auto rounded-2xl border border-white/10 bg-background/95 p-4 shadow-xl backdrop-blur-xl xl:hidden">
+          <div className="relative z-50 mx-auto mt-2 max-h-[calc(100dvh-5.5rem)] w-full max-w-6xl overflow-y-auto rounded-2xl border border-border bg-card p-4 shadow-xl xl:hidden">
             <div className="mb-3 sm:hidden">
               <LanguageSwitcher />
             </div>
@@ -194,7 +196,7 @@ export function SiteNavbar() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="rounded-lg px-3 py-2.5 text-sm font-medium text-muted-foreground transition-colors hover:bg-white/5 hover:text-foreground"
+                  className="rounded-lg px-3 py-2.5 text-sm font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
                 >
                   {link.label}
                 </a>

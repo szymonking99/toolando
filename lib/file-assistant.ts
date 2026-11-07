@@ -43,9 +43,9 @@ const TEXT_EXT = new Set([
 
 /** Special tools recommended per file kind / extension. First entry is primary. */
 const SPECIAL_BY_EXT: Record<string, string[]> = {
-  jpg: ["przygotuj-do-maila", "zdjecia-do-pdf", "ocr-skanu", "kompresor-obrazow", "usun-exif", "usuwanie-tla", "znak-wodny", "naprawa-plikow"],
-  jpeg: ["przygotuj-do-maila", "zdjecia-do-pdf", "ocr-skanu", "kompresor-obrazow", "usun-exif", "usuwanie-tla", "znak-wodny", "naprawa-plikow"],
-  png: ["przygotuj-do-maila", "zdjecia-do-pdf", "ocr-skanu", "kompresor-obrazow", "usun-exif", "usuwanie-tla", "znak-wodny", "naprawa-plikow"],
+  jpg: ["przygotuj-do-maila", "zdjecia-do-pdf", "ocr-skanu", "kompresor-obrazow", "lustro-obrazu", "usun-exif", "usuwanie-tla", "znak-wodny", "naprawa-plikow"],
+  jpeg: ["przygotuj-do-maila", "zdjecia-do-pdf", "ocr-skanu", "kompresor-obrazow", "lustro-obrazu", "usun-exif", "usuwanie-tla", "znak-wodny", "naprawa-plikow"],
+  png: ["przygotuj-do-maila", "zdjecia-do-pdf", "ocr-skanu", "kompresor-obrazow", "lustro-obrazu", "usun-exif", "usuwanie-tla", "znak-wodny", "naprawa-plikow"],
   webp: ["przygotuj-do-maila", "zdjecia-do-pdf", "kompresor-obrazow", "usun-exif", "naprawa-plikow"],
   avif: ["przygotuj-do-maila", "zdjecia-do-pdf", "kompresor-obrazow", "naprawa-plikow"],
   heic: ["heic-to-jpg", "zdjecia-do-pdf", "przygotuj-do-maila", "usun-exif", "naprawa-plikow"],
@@ -68,21 +68,23 @@ const SPECIAL_BY_EXT: Record<string, string[]> = {
     "podzial-pdf",
     "obrot-pdf",
     "pdf-do-tekstu",
+    "pdf-do-obrazow",
     "numeracja-pdf",
   ],
-  mp4: ["kompresja-wideo", "naprawa-plikow", "przyciecie-wideo", "wyciszenie-wideo"],
+  mp4: ["kompresja-wideo", "zmiana-rozmiaru-wideo", "naprawa-plikow", "przyciecie-wideo", "wyciszenie-wideo"],
   webm: ["kompresja-wideo", "naprawa-plikow", "przyciecie-wideo", "wyciszenie-wideo"],
   mov: ["kompresja-wideo", "naprawa-plikow", "przyciecie-wideo", "wyciszenie-wideo"],
   mkv: ["kompresja-wideo", "naprawa-plikow", "przyciecie-wideo", "wyciszenie-wideo"],
-  zip: ["naprawa-plikow"],
+  zip: ["rozpakuj-zip", "naprawa-plikow"],
   docx: ["porownaj-dokumenty", "naprawa-plikow"],
   xlsx: ["naprawa-plikow"],
   pptx: ["naprawa-plikow"],
   json: ["naprawa-plikow"],
-  mp3: ["naprawa-plikow"],
-  wav: ["naprawa-plikow"],
-  flac: ["naprawa-plikow"],
-  m4a: ["naprawa-plikow"],
+  mp3: ["kompresja-audio", "naprawa-plikow"],
+  wav: ["kompresja-audio", "naprawa-plikow"],
+  flac: ["kompresja-audio", "naprawa-plikow"],
+  m4a: ["kompresja-audio", "naprawa-plikow"],
+  ogg: ["kompresja-audio", "naprawa-plikow"],
 }
 
 const UTILITY_BY_KIND: Partial<Record<FileKind, { id: string; labelKey: string; label: string }[]>> = {

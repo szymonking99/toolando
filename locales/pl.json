@@ -1,73 +1,73 @@
 {
   "meta": {
-    "title": "Toolando.tech — HEIC na JPG, PDF, EXIF i narzędzia plików online",
-    "description": "Konwertuj HEIC, kompresuj PDF, usuń EXIF i otwieraj pliki w przeglądarce. Asystent plików, batch ZIP, poradniki z testów. Pliki nie są przechowywane."
+    "title": "Toolando.tech — narzędzia do plików online | HEIC, PDF, EXIF",
+    "description": "Konwertuj HEIC, kompresuj PDF, usuń EXIF i otwieraj pliki w przeglądarce. Asystent plików, poradniki z testów. Plików nie przechowujemy."
   },
   "socialProof": {
-    "toolsCount": "Poradniki z testów konwersji — nie farma stron X→Y",
+    "toolsCount": "Poradniki z realnych testów — nie farma stron X→Y",
     "usesToday": "{uses} użyć dziś"
   },
   "recent": {
     "title": "Ostatnio używane",
     "subtitle": "Twoje ostatnie narzędzia — zapisane lokalnie w tej przeglądarce.",
-    "favoritesHint": "Dodaj gwiazdkę na stronie narzędzia, aby przypiąć je tutaj."
+    "favoritesHint": "Dodaj gwiazdkę na stronie narzędzia, żeby przypiąć je tutaj."
   },
   "premiumUpsell": {
-    "title": "Odblokuj narzędzia AI z Premium",
-    "description": "Generowanie tekstu, streszczenia, obrazy, tłumaczenia i czat — jedna subskrypcja, cena jasna z góry.",
+    "title": "Odblokuj AI w Premium",
+    "description": "Tekst, streszczenia, obrazy, tłumaczenia i czat — jedna subskrypcja, cena jasna od razu.",
     "point1": "Wszystkie narzędzia AI bez limitów",
-    "point2": "Szybsza kolejka, kiedy jest ruch",
+    "point2": "Szybsza kolejka w godzinach szczytu",
     "point3": "Wspierasz rozwój serwisu",
     "cta": "Wybierz Premium",
     "compare": "Zobacz plany",
-    "trialHint": "Zaloguj się, aby zobaczyć podgląd — potem ulepsz w dowolnym momencie."
+    "trialHint": "Zaloguj się, żeby zobaczyć podgląd — Premium włączysz, kiedy zechcesz."
   },
   "privacyBadge": {
-    "title": "Prywatność przede wszystkim",
-    "local": "Przetwarzane lokalnie w przeglądarce"
+    "title": "Prywatność na pierwszym miejscu",
+    "local": "Działa lokalnie w przeglądarce"
   },
   "onboarding": {
     "skip": "Zamknij",
     "next": "Dalej",
-    "start": "Przeglądaj narzędzia",
+    "start": "Zobacz narzędzia",
     "learnMore": "Jak działa Toolando",
     "step1": {
-      "title": "Konwertuj, licz, otwieraj — w jednym miejscu",
-      "body": "287+ narzędzi do plików, kalkulatory, utility dla developerów i AI — wybierz narzędzie lub szukaj Ctrl+K."
+      "title": "Konwertuj, licz i otwieraj — w jednym miejscu",
+      "body": "Setki narzędzi do plików, kalkulatory, narzędzia dla programistów i AI. Wybierz z listy albo szukaj Ctrl+K."
     },
     "step2": {
       "title": "Prywatność tam, gdzie ma znaczenie",
-      "body": "Wiele narzędzi działa w przeglądarce. Konwersje serwerowe usuwają pliki po zakończeniu."
+      "body": "Wiele narzędzi działa w przeglądarce. Przy konwersji na serwerze plik znika zaraz po zakończeniu."
     },
     "step3": {
-      "title": "Narzędzia AI z Premium",
-      "body": "Konwertery za darmo. AI w prostej subskrypcji miesięcznej — zobacz ceny zanim trafisz na paywall."
+      "title": "AI w Premium",
+      "body": "Konwertery są darmowe. AI to prosta subskrypcja miesięczna — cenę zobaczysz zanim zapłacisz."
     }
   },
   "exitIntent": {
     "title": "Zanim wyjdziesz…",
-    "body": "Szukasz innego konwertera? Przeszukaj 287+ narzędzi albo zaproponuj nowe.",
-    "browse": "Przeglądaj narzędzia",
+    "body": "Szukasz innego narzędzia? Przejrzyj katalog albo zaproponuj coś nowego.",
+    "browse": "Zobacz narzędzia",
     "request": "Zaproponuj narzędzie",
     "close": "Zamknij"
   },
   "nextSteps": {
-    "title": "Kolejne kroki",
-    "aiSummarizeTitle": "Podsumuj dokument AI",
-    "aiSummarizeBody": "Wygeneruj streszczenie PDF lub DOCX w kilka sekund (Premium lub 1 próba/dzień)."
+    "title": "Co dalej?",
+    "aiSummarizeTitle": "Podsumuj dokument z AI",
+    "aiSummarizeBody": "Streszczenie PDF lub DOCX w kilka sekund (Premium albo 1 próba dziennie)."
   },
   "newsletter": {
-    "title": "Nowe narzędzia i aktualizacje Premium",
-    "subtitle": "Zostaw e-mail — damy znać o ważnych funkcjach (bez spamu).",
+    "title": "Nowości i Premium",
+    "subtitle": "Zostaw e-mail — napiszemy, gdy pojawi się coś ważnego. Bez spamu.",
     "placeholder": "ty@example.com",
     "cta": "Zapisz się",
-    "thanks": "Dzięki! Potwierdź przez formularz kontaktowy, jeśli chcesz odpowiedź.",
+    "thanks": "Dzięki! Jeśli chcesz odpowiedź, potwierdź przez formularz kontaktowy.",
     "confirmViaContact": "Dokończ zapis przez kontakt →",
     "error": "Nie udało się zapisać. Spróbuj ponownie."
   },
   "toolRequest": {
-    "title": "Brakuje konwertera?",
-    "body": "Zaproponuj nowe narzędzie lub format — priorytetyzujemy prośby użytkowników.",
+    "title": "Brakuje narzędzia?",
+    "body": "Napisz, czego Ci brakuje — najpierw robimy to, o co prosicie najczęściej.",
     "cta": "Zaproponuj narzędzie"
   },
   "comparison": {
@@ -85,32 +85,32 @@
   },
   "premiumPage": {
     "title": "Toolando Premium",
-    "subtitle": "Narzędzia AI, jasna cena, anuluj kiedy chcesz.",
+    "subtitle": "Narzędzia AI, jasna cena — anulujesz, kiedy chcesz.",
     "freeTitle": "Darmowy",
-    "freeDesc": "Wszystkie konwertery, kalkulatory i większość utility.",
+    "freeDesc": "Wszystkie konwertery, kalkulatory i większość narzędzi utility.",
     "premiumTitle": "Premium",
-    "premiumDesc": "Pełny pakiet AI — tekst, obrazy, streszczenia, tłumaczenia, czat.",
+    "premiumDesc": "Pełny pakiet AI — tekst, obrazy, streszczenia, tłumaczenia i czat.",
     "supporterTitle": "Wspierający",
     "supporterDesc": "Premium + bez reklam (wkrótce).",
     "cta": "Wybierz Premium",
-    "signIn": "Zaloguj się, aby subskrybować",
-    "faqTitle": "FAQ cenowe",
+    "signIn": "Zaloguj się, żeby subskrybować",
+    "faqTitle": "Pytania o cenę",
     "faq1q": "Jak działają kredyty?",
-    "faq1a": "Nie ma kredytów za żądanie — Premium to stała miesięczna subskrypcja z nielimitowanym AI.",
+    "faq1a": "Nie ma kredytów za pojedyncze zapytanie — Premium to stała opłata miesięczna z nielimitowanym AI.",
     "faq2q": "Czy mogę spróbować przed płatnością?",
-    "faq2a": "Załóż darmowe konto, korzystaj z konwerterów, ulepsz gdy potrzebujesz AI.",
+    "faq2a": "Załóż darmowe konto, korzystaj z konwerterów i włącz Premium dopiero, gdy potrzebujesz AI.",
     "faq3q": "A prywatność plików?",
-    "faq3a": "Pliki serwerowe są usuwane po przetworzeniu. Narzędzia w przeglądarce nie wysyłają danych."
+    "faq3a": "Pliki z serwera usuwamy po przetworzeniu. Narzędzia w przeglądarce w ogóle ich nie wysyłają."
   },
   "privacyPage": {
     "title": "Prywatność w centrum projektu",
     "subtitle": "Jak Toolando chroni Twoje pliki i dane.",
     "localTitle": "Narzędzia lokalne w przeglądarce",
-    "localBody": "Utility, uniwersalny otwieracz i wiele kalkulatorów działają w całości w przeglądarce — dane nie opuszczają urządzenia.",
-    "serverTitle": "Konwersje serwerowe",
-    "serverBody": "Przy uploadzie plik służy tylko do tej operacji i jest potem usuwany. HTTPS end-to-end.",
+    "localBody": "Kalkulatory, asystent plików i wiele narzędzi utility działają w całości w przeglądarce — dane nie opuszczają urządzenia.",
+    "serverTitle": "Konwersje na serwerze",
+    "serverBody": "Po wrzuceniu pliku używamy go tylko do tej jednej operacji, a potem go usuwamy. Połączenie jest szyfrowane (HTTPS).",
     "aiTitle": "Narzędzia AI",
-    "aiBody": "Premium AI wysyła tylko treść, którą sam przekażesz — nigdy nie sprzedajemy ani nie używamy do reklam.",
+    "aiBody": "Premium AI wysyła wyłącznie treść, którą sam podasz — nie sprzedajemy jej i nie używamy do reklam.",
     "badge": "Prywatność na pierwszym miejscu",
     "readPolicy": "Pełna polityka prywatności"
   },
@@ -121,7 +121,7 @@
     "formats": "Formaty",
     "about": "O platformie",
     "contact": "Kontakt",
-    "cta": "Przeglądaj narzędzia",
+    "cta": "Zobacz narzędzia",
     "openMenu": "Otwórz menu",
     "closeMenu": "Zamknij menu",
     "allTools": "Wszystkie narzędzia",
@@ -134,32 +134,36 @@
     "onlineTools": "Kalkulatory",
     "converters": "Konwertery",
     "calculators": "Kalkulatory",
-    "developer": "Dla developerów",
+    "developer": "Dla programistów",
     "premium": "Premium",
     "guides": "Poradniki",
-    "faq": "Pytania i odpowiedzi",
+    "faq": "Najczęstsze pytania",
     "more": "Więcej",
     "fileAssistant": "Asystent plików",
     "wontOpen": "Nie otwiera się",
     "tooBig": "Za duży",
     "scanToPdf": "Skan → PDF",
-    "privacyProblem": "Prywatność"
+    "privacyProblem": "Prywatność",
+    "themeToggle": "Motyw",
+    "themeSystem": "Jak w systemie",
+    "themeLight": "Jasny",
+    "themeDark": "Ciemny"
   },
   "hero": {
     "badge": "Wrzuć plik. Toolando wie, co z nim zrobić.",
     "titleA": "Co chcesz",
     "titleHighlight": "zrobić?",
-    "subtitle": "Opisz problem, wrzuć plik albo otwórz zestaw dla swojej roli. Narzędzia z naciskiem na prywatność — i poradniki, które mówią, kiedy lepiej nie konwertować.",
-    "browse": "Przeglądaj narzędzia",
+    "subtitle": "Konwertuj, kompresuj i chroń pliki — bez konta i bez zostawiania śladów. Wrzuć plik albo napisz, czego potrzebujesz.",
+    "browse": "Zobacz narzędzia",
     "learnMore": "Dowiedz się więcej",
     "convertCta": "Wrzuć plik",
-    "askLabel": "Co chcesz zrobić?",
-    "askHint": "Napisz zwykłym zdaniem — np. „zmniejszyć zdjęcie z iPhone’a”, „za duży PDF do maila”…"
+    "askLabel": "Opisz, co chcesz zrobić",
+    "askHint": "Np. „zmniejszyć zdjęcie z iPhone’a” albo „PDF za duży do maila”."
   },
   "search": {
-    "placeholder": "Opisz co chcesz zrobić — np. zmniejszyć zdjęcie z iPhone’a…",
-    "noResults": "Nie znaleziono narzędzia. Spróbuj opisać cel zwykłym zdaniem.",
-    "aiThinking": "Odczytuję intencję…",
+    "placeholder": "Opisz, co chcesz zrobić — np. zmniejszyć zdjęcie z iPhone’a…",
+    "noResults": "Nie znaleźliśmy narzędzia. Spróbuj opisać to zwykłym zdaniem.",
+    "aiThinking": "Dobieram narzędzie…",
     "aiBadge": "Dobór narzędzi przez AI",
     "intents": {
       "pdfWord": "Najpewniej potrzebujesz PDF → Word (DOCX), żeby edytować treść.",
@@ -185,22 +189,31 @@
       "removeBg": "Usuwanie tła zostawia obiekt na przezroczystym PNG.",
       "splitPdf": "Podziel PDF na mniejsze pliki albo wyodrębnij strony.",
       "rotatePdf": "Obróć strony PDF bez utraty jakości tekstu.",
-      "extractAudio": "Wyodrębnij audio z wideo do MP3, M4A lub WAV.",
+      "extractAudio": "Wyciągnij dźwięk z wideo do MP3, M4A albo WAV.",
       "videoToGif": "Zrób animowany GIF z krótkiego fragmentu wideo.",
       "protectPdf": "Zabezpiecz PDF hasłem (AES-256).",
-      "rotateImage": "Obróć zdjęcie o 90°, 180° lub 270°.",
+      "rotateImage": "Obróć zdjęcie o 90°, 180° albo 270°.",
+      "cropImage": "Przytnij zdjęcie do wybranego prostokąta.",
+      "reorderPdf": "Wybierz strony PDF albo ułóż je w nowej kolejności.",
+      "mergeVideo": "Połącz kilka klipów w jeden plik MP4.",
+      "packZip": "Spakuj wiele plików do jednego ZIP-a.",
+      "unpackZip": "Wyciągnij pliki z ZIP. Jeden plik pobierzesz od razu.",
+      "pdfToImages": "Zrób JPG z każdej strony PDF.",
+      "compressAudio": "Zmniejsz audio do MP3 — suwak ustawia bitrate.",
+      "flipImage": "Odbij zdjęcie w poziomie, w pionie albo w obie strony.",
+      "resizeVideo": "Zmień szerokość filmu. Wynik to MP4.",
       "watermark": "Dodaj znak wodny na obraz przed publikacją.",
       "aiHelp": "Do pisania, streszczeń i tłumaczeń użyj narzędzi AI (Premium).",
       "openFile": "Najpierw otwórz plik w asystencie — zobaczysz format i bezpieczne opcje.",
       "formatConversion": "Pasuje konwerter {from} → {to}.",
-      "repairFile": "Spróbuj naprawy pliku — Toolando zdiagnozuje typ i przepisze uszkodzony kontener (PDF, obraz, wideo/audio, ZIP/DOCX, JSON).",
+      "repairFile": "Spróbuj naprawić plik — Toolando rozpozna typ i przepisze uszkodzony kontener (PDF, obraz, wideo/audio, ZIP/DOCX, JSON).",
       "imagesToPdf": "Zrób jeden PDF ze zdjęć lub skanów — kolejność plików to kolejność stron.",
-      "stampPdf": "Dodaj tekstową pieczątkę lub obraz podpisu na każdą stronę PDF.",
+      "stampPdf": "Dodaj tekstową pieczątkę albo obraz podpisu na każdą stronę PDF.",
       "prepareEmail": "Skompresuj, usuń EXIF i spakuj do ZIP gotowego do maila — opcjonalnie złóż obrazy w PDF.",
-      "compareDocs": "Porównaj dwa PDF lub DOCX (warstwa tekstowa) i pobierz prosty diff.",
+      "compareDocs": "Porównaj dwa PDF lub DOCX (warstwa tekstowa) i pobierz prosty plik z różnicami.",
       "redactPdf": "Zaczernij e-maile, PESEL, IBAN i własne frazy w PDF przed wysyłką.",
       "fillPdf": "Wypełnij pola formularza albo dodaj pieczątkę z imieniem, NIP-em i datą.",
-      "splitScan": "Rozdziel wielostronicowy skan PDF na osobne strony w ZIP."
+      "splitScan": "Rozdziel wielostronicowy skan PDF na osobne strony w ZIP-ie."
     }
   },
   "share": {
@@ -260,29 +273,29 @@
     }
   },
   "opener": {
-    "title": "Uniwersalny asystent plików",
-    "subtitle": "Wrzuć dowolny plik. Toolando pokaże, co to jest, co ujawnia i co możesz zrobić — konwersja, kompresja, usuwanie metadanych albo sam podgląd. Czasem lepiej nie konwertować.",
+    "title": "Asystent plików",
+    "subtitle": "Wrzuć dowolny plik. Pokażemy, co to jest, co ujawnia i co możesz z nim zrobić — konwersja, kompresja, usunięcie metadanych albo sam podgląd. Czasem lepiej nic nie zmieniać.",
     "cta": "Otwórz asystenta",
     "kindImages": "Obrazy",
     "kindVideo": "Wideo",
     "kindAudio": "Dźwięk",
     "kindDocs": "PDF, kod i dane",
-    "readError": "Nie udało się odczytać zawartości pliku.",
-    "dropAny": "Upuść plik — Toolando go rozpozna",
-    "dropHint": "Podgląd działa lokalnie w przeglądarce. Konwersje wysyłają plik tylko na czas operacji, potem są usuwane.",
-    "noConverter": "Dla tego formatu nie mamy jeszcze konwertera — możesz jednak podejrzeć i pobrać plik poniżej.",
+    "readError": "Nie udało się odczytać pliku.",
+    "dropAny": "Upuść plik — rozpoznamy go automatycznie",
+    "dropHint": "Podgląd działa lokalnie w przeglądarce. Przy konwersji plik trafia na serwer tylko na czas operacji, a potem jest usuwany.",
+    "noConverter": "Dla tego formatu nie mamy jeszcze konwertera — możesz jednak podejrzeć plik i pobrać go poniżej.",
     "convertTo": "Konwertuj na inny format",
     "optionOne": "opcja",
     "optionMany": "opcji",
-    "downloadedOk": "Gotowe! Plik został pobrany.",
+    "downloadedOk": "Gotowe — plik został pobrany.",
     "download": "Pobierz",
     "close": "Zamknij",
     "emptyFile": "(pusty plik)",
-    "textTruncated": "Podgląd skrócony do pierwszych 200 000 znaków. Pobierz plik, aby zobaczyć całość.",
-    "binaryPreview": "Podgląd binarny (pierwsze bajty w formacie szesnastkowym)",
+    "textTruncated": "Podgląd pokazuje pierwsze 200 000 znaków. Pobierz plik, żeby zobaczyć całość.",
+    "binaryPreview": "Podgląd binarny (pierwsze bajty w zapisie szesnastkowym)",
     "documentPreview": "Podgląd tekstu dokumentu",
     "documentNoPreviewTitle": "Brak podglądu tekstu dla tego dokumentu",
-    "documentNoPreviewBody": "Ten format Office nie da się tu wygodnie podejrzeć jako tekst. Użyj akcji poniżej (np. konwersja DOCX → PDF) albo pobierz oryginał.",
+    "documentNoPreviewBody": "Tego formatu Office nie da się tu wygodnie podejrzeć jako tekst. Skorzystaj z akcji poniżej (np. DOCX → PDF) albo pobierz oryginał.",
     "kinds": {
       "image": "Obraz",
       "video": "Wideo",
@@ -297,7 +310,7 @@
   },
   "ai": {
     "badge": "AI Premium",
-    "title": "Inteligentne narzędzia AI",
+    "title": "Narzędzia AI",
     "subtitle": "Pisz, streszczaj, tłumacz i generuj obrazy — w przeglądarce, bez instalacji.",
     "openTool": "Otwórz narzędzie",
     "more": "Więcej narzędzi AI"
@@ -311,27 +324,27 @@
   "categories": {
     "title": "Kategorie konwerterów",
     "subtitle": "Audio, wideo, obrazy, dokumenty i inne — wszystkie konwersje w jednym miejscu.",
-    "browse": "Przeglądaj"
+    "browse": "Zobacz"
   },
   "toolsIndex": {
-    "intro": "Wybierz konwertery plików, kalkulatory albo narzędzia dla developerów. Każde działa w przeglądarce — bez instalacji.",
+    "intro": "Wybierz konwertery plików, kalkulatory albo narzędzia dla programistów. Wszystko działa w przeglądarce — bez instalacji.",
     "formatsLink": "Encyklopedia formatów",
     "guidesLink": "Poradniki konwersji"
   },
   "knowledgeHub": {
     "title": "Wiedza o formatach i konwersji",
-    "subtitle": "Nie tylko konwertuj — zobacz, kiedy wybrać MP3 zamiast FLAC, WebP zamiast JPG albo PDF zamiast DOCX. Poradniki tłumaczą, kiedy konwersja ma sens, a kiedy lepiej zostawić plik w spokoju.",
+    "subtitle": "Nie tylko konwertuj — sprawdź, kiedy wybrać MP3 zamiast FLAC, WebP zamiast JPG albo PDF zamiast DOCX. Poradniki mówią wprost, kiedy konwersja ma sens, a kiedy lepiej zostawić plik w spokoju.",
     "formatsTitle": "Encyklopedia formatów plików",
-    "formatsDesc": "Ponad 40 formatów: audio, wideo, obrazy, dokumenty, dane i archiwa. Zalety, wady, kompatybilność i porównania z alternatywami.",
-    "formatsCta": "Przeglądaj formaty",
+    "formatsDesc": "Ponad 40 formatów: audio, wideo, obrazy, dokumenty, dane i archiwa. Zalety, wady, kompatybilność i porównania.",
+    "formatsCta": "Zobacz formaty",
     "guidesTitle": "Poradniki konwersji",
     "guidesDesc": "Praktyczne artykuły: jakość audio, kompresja obrazów, wideo na social media, PDF vs DOCX i bezpieczeństwo plików online.",
     "guidesCta": "Czytaj poradniki",
     "comparisonsTitle": "Porównania formatów",
-    "comparisonsDesc": "MP3 vs FLAC, JPG vs WebP, PDF vs DOCX — bezpośrednie porównania z jasnym werdyktem.",
-    "comparisonsCta": "Przeglądaj porównania",
+    "comparisonsDesc": "MP3 vs FLAC, JPG vs WebP, PDF vs DOCX — porównania z jasnym werdyktem.",
+    "comparisonsCta": "Zobacz porównania",
     "glossaryTitle": "Słownik pojęć",
-    "glossaryDesc": "Bitrate, kodek, kompresja stratna, MIME — wyjaśnienia bez żargonu technicznego.",
+    "glossaryDesc": "Bitrate, kodek, kompresja stratna, MIME — prosto, bez zbędnego żargonu.",
     "glossaryCta": "Otwórz słownik"
   },
   "editorial": {
@@ -344,24 +357,24 @@
   },
   "featuredGuides": {
     "title": "Polecane poradniki",
-    "subtitle": "Praktyczne artykuły o formatach plików, bezpieczeństwie i konwersji — pisane na podstawie realnych testów, nie szablonów SEO.",
+    "subtitle": "O formatach, bezpieczeństwie i konwersji — na podstawie realnych testów, nie szablonów SEO.",
     "readArticle": "Czytaj poradnik",
     "allGuides": "Wszystkie poradniki"
   },
   "why": {
-    "title": "Dlaczego Toolando.tech?",
-    "subtitle": "Konwertery i poradniki bez ukrytych limitów. Pliki nie zostają na serwerze.",
-    "speedTitle": "Pliki nie są przechowywane",
-    "speedDesc": "Konwersja na serwerze trwa tyle, ile trwa zadanie. Potem plik jest usuwany. Kalkulatory liczą w Twojej przeglądarce.",
+    "title": "Dlaczego Toolando?",
+    "subtitle": "Narzędzia bez ukrytych limitów. Plików nie trzymamy na serwerze dłużej, niż trzeba.",
+    "speedTitle": "Plików nie przechowujemy",
+    "speedDesc": "Konwersja na serwerze trwa tyle, ile samo zadanie. Potem plik znika. Kalkulatory liczą u Ciebie w przeglądarce.",
     "simpleTitle": "Kiedy lepiej nie konwertować",
-    "simpleDesc": "MP3 nie odzyska jakości. Skan PDF nie stanie się magicznie Wordem. To jest w poradnikach, nie w sloganie.",
+    "simpleDesc": "Z MP3 nie wrócisz do studyjnej jakości. Skan PDF nie stanie się magicznie Wordem. Mówimy o tym w poradnikach — nie w sloganie.",
     "toolsTitle": "Opisy z realnych testów",
-    "toolsDesc": "Opisy formatów i konwerterów pochodzą z testów na FFmpeg i LibreOffice — nie ze skopiowanej specyfikacji."
+    "toolsDesc": "Opisy formatów i konwerterów powstają po testach na FFmpeg i LibreOffice — nie ze skopiowanej specyfikacji."
   },
   "ctaSection": {
-    "title": "Wybierz narzędzie i zacznij pracę",
+    "title": "Wybierz narzędzie i zacznij",
     "subtitle": "Konwertery, kalkulatory i narzędzia dla programistów — bez instalacji.",
-    "browse": "Przeglądaj narzędzia"
+    "browse": "Zobacz narzędzia"
   },
   "footer": {
     "tools": "Narzędzia",
@@ -373,7 +386,7 @@
     "rights": "© 2026 Toolando.tech. Wszelkie prawa zastrzeżone.",
     "aboutMe": "O mnie",
     "howItWorks": "Jak to działa",
-    "faq": "Pytania i odpowiedzi",
+    "faq": "Najczęstsze pytania",
     "guides": "Poradniki",
     "editorial": "Redakcja",
     "formats": "Formaty plików",
@@ -493,7 +506,7 @@
   },
   "cookieConsent": {
     "title": "Pliki cookies",
-    "description": "Toolando.tech korzysta z plików cookies niezbędnych do działania strony oraz — za Twoją zgodą — z cookies analitycznych (Google Analytics) i reklamowych (Google AdSense). Możesz zaakceptować wszystkie cookies lub ograniczyć się do niezbędnych.",
+    "description": "Używamy niezbędnych cookies, żeby strona działała. Analityczne (Google Analytics) i reklamowe (Google AdSense) włączamy tylko za Twoją zgodą. Możesz zaakceptować wszystkie albo zostać przy niezbędnych.",
     "acceptAll": "Akceptuję wszystkie",
     "necessaryOnly": "Tylko niezbędne",
     "privacyLink": "Polityka prywatności"
@@ -961,12 +974,12 @@
     "convertersDesc": "Audio, wideo, obrazy, dokumenty, dane, fonty i archiwa — plus kompresja, łączenie PDF i usuwanie tła.",
     "calculatorsTitle": "Kalkulatory i przeliczniki",
     "calculatorsDesc": "Waluty, VAT, daty, strefy czasowe, jednostki i bitrate.",
-    "developerTitle": "Dla developerów i tekst",
-    "developerDesc": "Hasła, QR, Base64, UUID, hash, kolory, timestamp i licznik znaków.",
+    "developerTitle": "Dla programistów i tekst",
+    "developerDesc": "Hasła, QR, Base64, UUID, hash, kolory, znacznik czasu i licznik znaków.",
     "specialTools": "Narzędzia plików",
-    "browseConverters": "Przeglądaj konwertery",
-    "browseCalculators": "Przeglądaj kalkulatory",
-    "browseDeveloper": "Przeglądaj narzędzia"
+    "browseConverters": "Zobacz konwertery",
+    "browseCalculators": "Zobacz kalkulatory",
+    "browseDeveloper": "Zobacz narzędzia"
   },
   "specialFields": {
     "splitMode": "Tryb podziału",
@@ -1005,7 +1018,18 @@
     "fillExtra": "Dodatkowa notatka",
     "audioFormat": "Format audio",
     "pdfPassword": "Hasło",
-    "pdfPasswordHint": "Min. 4 znaki. Zapamiętaj je — bez hasła nie otworzysz pliku."
+    "pdfPasswordHint": "Min. 4 znaki. Zapamiętaj je — bez hasła nie otworzysz pliku.",
+    "cropLeft": "Od lewej (px)",
+    "cropTop": "Od góry (px)",
+    "cropWidth": "Szerokość (px)",
+    "cropHeight": "Wysokość (px)",
+    "pageOrder": "Strony w kolejności",
+    "pageOrderHint": "np. 3,1,2 albo 1-3,5 — zachowujemy podaną kolejność",
+    "flipDirection": "Odbicie",
+    "flipHorizontal": "W poziomie",
+    "flipVertical": "W pionie",
+    "flipBoth": "W obie strony",
+    "videoSizeHint": "Pusta wysokość = zachowaj proporcje. Szerokość 160–3840 px."
   },
   "accountRecent": {
     "title": "Ostatnio używane",
@@ -1018,30 +1042,30 @@
   "assistant": {
     "inspectorTitle": "Informacje o pliku",
     "actionsTitle": "Co możesz z nim zrobić",
-    "actionsSubtitle": "Rozpoznaliśmy format i proponujemy jedną główną operację plus dodatkowe. Nie musisz konwertować, jeśli chcesz tylko podgląd.",
+    "actionsSubtitle": "Rozpoznaliśmy format i proponujemy jeden główny krok oraz kilka dodatkowych. Nie musisz konwertować, jeśli wystarczy Ci podgląd.",
     "primaryCta": "Polecany następny krok",
     "name": "Nazwa",
     "size": "Rozmiar",
     "type": "Typ",
     "resolution": "Rozdzielczość",
-    "preview": "Podgląd tutaj",
-    "convertTo": "Konwertuj do",
+    "preview": "Podgląd",
+    "convertTo": "Konwertuj na",
     "navHint": "Asystent plików",
-    "homeTitle": "Wrzuć plik — Toolando wie, co dalej",
-    "homeSubtitle": "Wykrywamy format, pokazujemy ryzyka metadanych i proponujemy konwersję / kompresję / usunięcie EXIF / podgląd. Czasem lepiej zostawić oryginał.",
+    "homeTitle": "Wrzuć plik — Toolando podpowie, co dalej",
+    "homeSubtitle": "Rozpoznamy format, pokażemy co ujawniają metadane i zaproponujemy konwersję, kompresję, usunięcie EXIF albo sam podgląd. Czasem najlepiej zostawić oryginał.",
     "homeCta": "Otwórz asystenta plików",
     "tips": {
-      "heic": "To prawdopodobnie zdjęcie HEIC z iPhone’a. Otwórz je tutaj, skonwertuj do JPG pod Windows albo zostaw HEIC, jeśli zależy Ci na jakości i rozmiarze.",
-      "flac": "FLAC jest bezstratny. Konwertuj do MP3 tylko, gdy potrzebujesz mniejszego pliku lub szerszej kompatybilności.",
-      "png": "PNG świetnie nadaje się do grafiki z przezroczystością. Zdjęcia na WWW zwykle lepiej wysłać jako WebP/AVIF.",
+      "heic": "To prawdopodobnie zdjęcie HEIC z iPhone’a. Otwórz je tutaj, skonwertuj do JPG pod Windowsa albo zostaw HEIC, jeśli zależy Ci na jakości i rozmiarze.",
+      "flac": "FLAC jest bezstratny. Idź w MP3 tylko wtedy, gdy potrzebujesz mniejszego pliku albo szerszej kompatybilności.",
+      "png": "PNG świetnie sprawdza się przy grafice z przezroczystością. Zdjęcia na stronę WWW zwykle lepiej wysłać jako WebP lub AVIF.",
       "pdf": "Nie zawsze trzeba konwertować — możesz podejrzeć, skompresować, połączyć albo wyciągnąć tekst.",
-      "webImage": "To już nowoczesny format WWW. Konwertuj tylko, gdy system docelowy wymaga JPG/PNG.",
-      "wav": "WAV jest nieskompresowany — idealny do montażu. Do udostępniania wybierz MP3/AAC."
+      "webImage": "To już nowoczesny format pod WWW. Konwertuj tylko, gdy system docelowy wymaga JPG lub PNG.",
+      "wav": "WAV jest nieskompresowany — idealny do montażu. Do udostępniania wybierz MP3 lub AAC."
     }
   },
   "homeHubs": {
     "title": "Popularne teraz",
-    "subtitle": "Wskocz w kategorię — albo wrzuć plik i pozwól Toolando wybrać.",
+    "subtitle": "Wybierz kategorię — albo wrzuć plik i pozwól Toolando dobrać narzędzie.",
     "items": {
       "pdf": "PDF",
       "image": "Obrazy",

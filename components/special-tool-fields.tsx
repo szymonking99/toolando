@@ -29,6 +29,12 @@ export type SpecialFieldValues = {
   fillExtra: string
   audioFormat: "mp3" | "m4a" | "wav"
   pdfPassword: string
+  cropLeft: string
+  cropTop: string
+  cropWidth: string
+  cropHeight: string
+  pageOrder: string
+  flipDirection: "horizontal" | "vertical" | "both"
 }
 
 export const defaultSpecialFields: SpecialFieldValues = {
@@ -57,6 +63,12 @@ export const defaultSpecialFields: SpecialFieldValues = {
   fillExtra: "",
   audioFormat: "mp3",
   pdfPassword: "",
+  cropLeft: "0",
+  cropTop: "0",
+  cropWidth: "800",
+  cropHeight: "600",
+  pageOrder: "1-3",
+  flipDirection: "horizontal",
 }
 
 export function buildSpecialFields(
@@ -73,10 +85,13 @@ export function buildSpecialFields(
     case "rotate-image":
       return { rotation: values.rotation }
     case "resize-image":
+    case "resize-video":
       return {
         width: values.width,
         height: values.height,
       }
+    case "flip-image":
+      return { flipDirection: values.flipDirection }
     case "watermark-image":
       return { watermarkText: values.watermarkText }
     case "trim-video":
@@ -89,6 +104,15 @@ export function buildSpecialFields(
       return { audioFormat: values.audioFormat }
     case "protect-pdf":
       return { pdfPassword: values.pdfPassword }
+    case "crop-image":
+      return {
+        cropLeft: values.cropLeft,
+        cropTop: values.cropTop,
+        cropWidth: values.cropWidth,
+        cropHeight: values.cropHeight,
+      }
+    case "extract-pdf-pages":
+      return { pageOrder: values.pageOrder }
     case "pdf-page-numbers":
       return { pageNumberPosition: values.pageNumberPosition }
     case "images-to-pdf":
@@ -162,6 +186,17 @@ type SpecialFieldsCopy = {
   audioFormat?: string
   pdfPassword?: string
   pdfPasswordHint?: string
+  cropLeft?: string
+  cropTop?: string
+  cropWidth?: string
+  cropHeight?: string
+  pageOrder?: string
+  pageOrderHint?: string
+  flipDirection?: string
+  flipHorizontal?: string
+  flipVertical?: string
+  flipBoth?: string
+  videoSizeHint?: string
 }
 
 const FALLBACK_FIELDS: SpecialFieldsCopy = {
@@ -202,6 +237,17 @@ const FALLBACK_FIELDS: SpecialFieldsCopy = {
   audioFormat: "Audio format",
   pdfPassword: "Password",
   pdfPasswordHint: "Min. 4 characters. Remember it — without it you cannot open the file.",
+  cropLeft: "Left (px)",
+  cropTop: "Top (px)",
+  cropWidth: "Width (px)",
+  cropHeight: "Height (px)",
+  pageOrder: "Pages in order",
+  pageOrderHint: "e.g. 3,1,2 or 1-3,5 — order is kept",
+  flipDirection: "Mirror",
+  flipHorizontal: "Horizontal",
+  flipVertical: "Vertical",
+  flipBoth: "Both",
+  videoSizeHint: "Height empty = keep aspect ratio. Width 160–3840 px.",
 }
 
 export function SpecialToolFields({
@@ -281,6 +327,7 @@ export function SpecialToolFields({
         </div>
       )
     case "resize-image":
+    case "resize-video":
       return (
         <div className={box}>
           <div className="grid gap-3 sm:grid-cols-2">
@@ -306,6 +353,34 @@ export function SpecialToolFields({
               />
             </label>
           </div>
+          {engine === "resize-video" && (
+            <p className="text-xs text-muted-foreground">
+              {f.videoSizeHint ??
+                "Height empty = keep aspect ratio. Width 160–3840 px."}
+            </p>
+          )}
+        </div>
+      )
+    case "flip-image":
+      return (
+        <div className={box}>
+          <label className={label}>
+            {f.flipDirection ?? "Mirror"}
+            <select
+              className={input}
+              value={values.flipDirection}
+              onChange={(e) =>
+                onChange({
+                  flipDirection: e.target
+                    .value as SpecialFieldValues["flipDirection"],
+                })
+              }
+            >
+              <option value="horizontal">{f.flipHorizontal ?? "Horizontal"}</option>
+              <option value="vertical">{f.flipVertical ?? "Vertical"}</option>
+              <option value="both">{f.flipBoth ?? "Both"}</option>
+            </select>
+          </label>
         </div>
       )
     case "watermark-image":
@@ -383,6 +458,70 @@ export function SpecialToolFields({
           <p className="text-xs text-muted-foreground">
             {f.pdfPasswordHint ??
               "Min. 4 characters. Remember it — without it you cannot open the file."}
+          </p>
+        </div>
+      )
+    case "crop-image":
+      return (
+        <div className={box}>
+          <div className="grid gap-3 sm:grid-cols-2">
+            <label className={label}>
+              {f.cropLeft ?? "Left (px)"}
+              <input
+                className={input}
+                type="number"
+                min={0}
+                value={values.cropLeft}
+                onChange={(e) => onChange({ cropLeft: e.target.value })}
+              />
+            </label>
+            <label className={label}>
+              {f.cropTop ?? "Top (px)"}
+              <input
+                className={input}
+                type="number"
+                min={0}
+                value={values.cropTop}
+                onChange={(e) => onChange({ cropTop: e.target.value })}
+              />
+            </label>
+            <label className={label}>
+              {f.cropWidth ?? "Width (px)"}
+              <input
+                className={input}
+                type="number"
+                min={1}
+                value={values.cropWidth}
+                onChange={(e) => onChange({ cropWidth: e.target.value })}
+              />
+            </label>
+            <label className={label}>
+              {f.cropHeight ?? "Height (px)"}
+              <input
+                className={input}
+                type="number"
+                min={1}
+                value={values.cropHeight}
+                onChange={(e) => onChange({ cropHeight: e.target.value })}
+              />
+            </label>
+          </div>
+        </div>
+      )
+    case "extract-pdf-pages":
+      return (
+        <div className={box}>
+          <label className={label}>
+            {f.pageOrder ?? "Pages in order"}
+            <input
+              className={input}
+              value={values.pageOrder}
+              onChange={(e) => onChange({ pageOrder: e.target.value })}
+              placeholder="3,1,2"
+            />
+          </label>
+          <p className="text-xs text-muted-foreground">
+            {f.pageOrderHint ?? "e.g. 3,1,2 or 1-3,5 — order is kept"}
           </p>
         </div>
       )

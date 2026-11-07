@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next"
 import { Analytics } from "@vercel/analytics/next"
-import { Geist, Geist_Mono } from "next/font/google"
+import { DM_Sans, Geist_Mono, Syne } from "next/font/google"
 import { I18nProvider } from "@/components/i18n-provider"
 import { CookieConsent } from "@/components/cookie-consent"
 import { ConsentModeInit } from "@/components/consent-mode-init"
@@ -9,7 +9,9 @@ import { EzoicHeadScripts } from "@/components/ezoic-head-scripts"
 import { EzoicRouteHandler } from "@/components/ezoic-route-handler"
 import { PwaRegister } from "@/components/pwa-register"
 import { JsonLd } from "@/components/json-ld"
+import { ThemeProvider } from "@/components/theme-provider"
 import { organizationSchema, websiteSchema, SITE_URL } from "@/lib/seo/structured-data"
+import { themeInitScript } from "@/lib/theme-script"
 import { getDictionary } from "@/lib/i18n/dictionaries"
 import {
   supportedLocales,
@@ -21,7 +23,14 @@ import { showAdSenseVerificationMeta } from "@/lib/seo/ads-policy"
 import { INDEXED_LOCALES, isIndexedLocale, noindexRobots } from "@/lib/seo/publisher-index"
 import "../globals.css"
 
-const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] })
+const dmSans = DM_Sans({
+  variable: "--font-dm-sans",
+  subsets: ["latin", "latin-ext"],
+})
+const syne = Syne({
+  variable: "--font-display",
+  subsets: ["latin"],
+})
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
@@ -110,8 +119,8 @@ export async function generateMetadata({
 export const viewport: Viewport = {
   colorScheme: "light dark",
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "white" },
-    { media: "(prefers-color-scheme: dark)", color: "black" },
+    { media: "(prefers-color-scheme: light)", color: "#f4f8f9" },
+    { media: "(prefers-color-scheme: dark)", color: "#0f1419" },
   ],
 }
 
@@ -131,19 +140,23 @@ export default async function LocaleLayout({
     <html
       lang={locale}
       dir={dir}
-      className={`dark overflow-x-hidden bg-background ${geistSans.variable} ${geistMono.variable}`}
+      suppressHydrationWarning
+      className={`overflow-x-hidden bg-background ${dmSans.variable} ${syne.variable} ${geistMono.variable}`}
     >
       <head>
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
         <EzoicHeadScripts />
       </head>
       <body className="overflow-x-hidden bg-background font-sans antialiased">
         <ConsentModeInit />
         {/* Site-wide structured data: brand identity + sitelinks search box */}
         <JsonLd data={[organizationSchema(), websiteSchema(locale)]} />
-        <I18nProvider locale={locale} dictionary={dictionary}>
-          {children}
-          <CookieConsent />
-        </I18nProvider>
+        <ThemeProvider>
+          <I18nProvider locale={locale} dictionary={dictionary}>
+            {children}
+            <CookieConsent />
+          </I18nProvider>
+        </ThemeProvider>
         <ConsentGatedScripts />
         <EzoicRouteHandler />
         <PwaRegister />

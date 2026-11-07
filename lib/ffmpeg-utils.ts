@@ -100,6 +100,51 @@ export async function ffmpegTransform(
   }
 }
 
+/** Concatenate multiple media files (ffmpeg concat demuxer). */
+export async function ffmpegConcat(
+  inputs: { buffer: Buffer; ext: string }[],
+  outputExt: string,
+  extraOutArgs: string[] = ["-c", "copy"],
+): Promise<Buffer> {
+  if (inputs.length < 2) {
+    throw new ConversionError("Potrzeba co najmniej dwóch plików do scalenia.")
+  }
+
+  const ffmpeg = await resolveFfmpegPath()
+  if (!ffmpeg) {
+    throw new ConversionError("Silnik ffmpeg jest niedostępny.", 500)
+  }
+
+  const tmpDir = await fs.mkdtemp(path.join(os.tmpdir(), "toolando-concat-"))
+  const outPath = path.join(tmpDir, `out-${randomUUID()}.${outputExt}`)
+  const listPath = path.join(tmpDir, "list.txt")
+
+  try {
+    const lines: string[] = []
+    for (let i = 0; i < inputs.length; i++) {
+      const inPath = path.join(tmpDir, `in-${i}.${inputs[i].ext}`)
+      await fs.writeFile(inPath, inputs[i].buffer)
+      const escaped = inPath.replace(/\\/g, "/").replace(/'/g, "'\\''")
+      lines.push(`file '${escaped}'`)
+    }
+    await fs.writeFile(listPath, lines.join("\n"), "utf8")
+    await runFfmpeg(ffmpeg, [
+      "-y",
+      "-f",
+      "concat",
+      "-safe",
+      "0",
+      "-i",
+      listPath,
+      ...extraOutArgs,
+      outPath,
+    ])
+    return await fs.readFile(outPath)
+  } finally {
+    await fs.rm(tmpDir, { recursive: true, force: true }).catch(() => {})
+  }
+}
+
 /** Parse "1:30" or "90" to seconds. */
 export function parseTimeToSeconds(raw: string): number {
   const t = raw.trim()

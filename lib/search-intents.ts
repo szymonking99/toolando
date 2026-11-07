@@ -298,6 +298,78 @@ export const SEARCH_INTENTS: SearchIntent[] = [
   },
   {
     aliases: [
+      "przyciac zdjecie", "przyciąć zdjęcie", "crop image", "crop zdjecie",
+      "wyciac fragment", "wyciąć fragment",
+    ],
+    toolIds: ["przyciecie-obrazu"],
+    answerKey: "cropImage",
+  },
+  {
+    aliases: [
+      "kolejnosc stron pdf", "kolejność stron pdf", "wybor stron pdf",
+      "wybór stron pdf", "reorder pdf", "extract pdf pages",
+    ],
+    toolIds: ["wybor-stron-pdf"],
+    answerKey: "reorderPdf",
+  },
+  {
+    aliases: [
+      "scal wideo", "polacz wideo", "połącz wideo", "merge video",
+      "polaczyc filmiki", "połączyć filmiki",
+    ],
+    toolIds: ["scalanie-wideo"],
+    answerKey: "mergeVideo",
+  },
+  {
+    aliases: [
+      "spakuj zip", "zrob zip", "zrób zip", "pack zip", "create zip",
+      "archiwum zip",
+    ],
+    toolIds: ["spakuj-zip"],
+    answerKey: "packZip",
+  },
+  {
+    aliases: [
+      "rozpakuj zip", "unzip", "wypakuj zip", "wyciagnij z zip",
+      "wyciągnij z zip", "extract zip", "otworz zip", "otwórz zip",
+    ],
+    toolIds: ["rozpakuj-zip"],
+    answerKey: "unpackZip",
+  },
+  {
+    aliases: [
+      "pdf do jpg", "pdf na jpg", "pdf to jpg", "pdf to image",
+      "strony pdf na zdjecia", "strony pdf na zdjęcia", "pdf jako obraz",
+    ],
+    toolIds: ["pdf-do-obrazow"],
+    answerKey: "pdfToImages",
+  },
+  {
+    aliases: [
+      "kompresja audio", "zmniejsz mp3", "compress audio", "mp3 za duzy",
+      "mp3 za duży", "wav do mp3", "flac do mp3", "shrink audio",
+    ],
+    toolIds: ["kompresja-audio"],
+    answerKey: "compressAudio",
+  },
+  {
+    aliases: [
+      "lustro", "odbicie zdjecia", "odbicie zdjęcia", "flip image",
+      "mirror image", "odbij zdjecie", "odbij zdjęcie",
+    ],
+    toolIds: ["lustro-obrazu"],
+    answerKey: "flipImage",
+  },
+  {
+    aliases: [
+      "zmien rozmiar wideo", "zmień rozmiar wideo", "resize video",
+      "zmniejsz film", "skaluj wideo", "video resolution",
+    ],
+    toolIds: ["zmiana-rozmiaru-wideo", "kompresja-wideo"],
+    answerKey: "resizeVideo",
+  },
+  {
+    aliases: [
       "znak wodny", "watermark", "nakladka na obraz",
     ],
     toolIds: ["znak-wodny"],

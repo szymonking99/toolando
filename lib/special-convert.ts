@@ -236,6 +236,34 @@ function parsePageList(spec: string, total: number): number[] {
     .sort((a, b) => a - b)
 }
 
+/** Like parsePageList but keeps user order (for reorder / extract-to-one-PDF). */
+function parsePageOrder(spec: string, total: number): number[] {
+  const pages: number[] = []
+  for (const part of spec.split(",")) {
+    const p = part.trim()
+    if (!p) continue
+    if (p.includes("-")) {
+      const [aStr, bStr] = p.split("-")
+      const a = Number(aStr.trim())
+      const b = Number(bStr.trim())
+      if (!Number.isFinite(a) || !Number.isFinite(b)) continue
+      if (a <= b) {
+        for (let i = a; i <= b; i++) {
+          if (i >= 1 && i <= total) pages.push(i)
+        }
+      } else {
+        for (let i = a; i >= b; i--) {
+          if (i >= 1 && i <= total) pages.push(i)
+        }
+      }
+    } else {
+      const n = Number(p)
+      if (Number.isFinite(n) && n >= 1 && n <= total) pages.push(n)
+    }
+  }
+  return pages
+}
+
 export async function splitPdf(
   input: Buffer,
   originalName: string,
@@ -811,6 +839,528 @@ export async function rotateImage(
     buffer: out,
     filename: `${stem}-obrocony.${ext}`,
     contentType,
+  }
+}
+
+export async function cropImage(
+  input: Buffer,
+  originalName: string,
+  left: number,
+  top: number,
+  width: number,
+  height: number,
+): Promise<SpecialResult> {
+  const sharp = (await import("sharp")).default
+  let image = sharp(input, { failOn: "none" })
+  const meta = await image.metadata()
+  const iw = meta.width ?? 0
+  const ih = meta.height ?? 0
+  if (iw < 1 || ih < 1) {
+    throw new ConversionError("Nie udało się odczytać wymiarów obrazu.")
+  }
+
+  const l = Math.max(0, Math.floor(left))
+  const t = Math.max(0, Math.floor(top))
+  const w = Math.floor(width)
+  const h = Math.floor(height)
+  if (w < 1 || h < 1) {
+    throw new ConversionError("Szerokość i wysokość muszą być większe od 0.")
+  }
+  if (l + w > iw || t + h > ih) {
+    throw new ConversionError(
+      `Przycięcie wychodzi poza obraz (${iw}×${ih} px). Sprawdź lewy/górny róg i rozmiar.`,
+    )
+  }
+
+  image = image.extract({ left: l, top: t, width: w, height: h })
+  const format = String(meta.format || "")
+
+  let out: Buffer
+  let ext: string
+  let contentType: string
+
+  switch (format) {
+    case "jpeg":
+    case "jpg":
+      out = await image.jpeg({ quality: 92, mozjpeg: true }).toBuffer()
+      ext = "jpg"
+      contentType = "image/jpeg"
+      break
+    case "png":
+      out = await image.png({ compressionLevel: 9 }).toBuffer()
+      ext = "png"
+      contentType = "image/png"
+      break
+    case "webp":
+      out = await image.webp({ quality: 92 }).toBuffer()
+      ext = "webp"
+      contentType = "image/webp"
+      break
+    case "avif":
+      out = await image.avif({ quality: 80 }).toBuffer()
+      ext = "avif"
+      contentType = "image/avif"
+      break
+    case "tiff":
+      out = await image.tiff({ quality: 90 }).toBuffer()
+      ext = "tiff"
+      contentType = "image/tiff"
+      break
+    case "gif":
+      out = await image.gif().toBuffer()
+      ext = "gif"
+      contentType = "image/gif"
+      break
+    case "heif":
+    case "heic":
+      out = await image.jpeg({ quality: 92, mozjpeg: true }).toBuffer()
+      ext = "jpg"
+      contentType = "image/jpeg"
+      break
+    default:
+      throw new ConversionError(
+        "Nieobsługiwany format obrazu. Użyj JPG, PNG, WebP, AVIF, TIFF, GIF lub HEIC.",
+      )
+  }
+
+  const stem = stemOf(originalName)
+  return {
+    buffer: out,
+    filename: `${stem}-crop.${ext}`,
+    contentType,
+  }
+}
+
+export async function extractPdfPages(
+  input: Buffer,
+  originalName: string,
+  pageSpec: string,
+): Promise<SpecialResult> {
+  const { PDFDocument } = await import("pdf-lib")
+  let source
+  try {
+    source = await PDFDocument.load(input, { ignoreEncryption: true })
+  } catch {
+    throw new ConversionError("Nie udało się odczytać pliku PDF.")
+  }
+
+  const total = source.getPageCount()
+  const pages = parsePageOrder(pageSpec, total)
+  if (pages.length === 0) {
+    throw new ConversionError(
+      "Podaj strony w kolejności docelowej (np. 3,1,2 albo 1-3,5).",
+    )
+  }
+
+  const out = await PDFDocument.create()
+  const indices = pages.map((p) => p - 1)
+  const copied = await out.copyPages(source, indices)
+  for (const page of copied) out.addPage(page)
+
+  const bytes = await out.save()
+  const stem = stemOf(originalName)
+  return {
+    buffer: Buffer.from(bytes),
+    filename: `${stem}-wybrane.pdf`,
+    contentType: "application/pdf",
+    note: `Złożono ${pages.length} stron w kolejności: ${pages.join(", ")}.`,
+  }
+}
+
+export async function mergeVideos(
+  files: { buffer: Buffer; name: string }[],
+): Promise<SpecialResult> {
+  if (files.length < 2) {
+    throw new ConversionError("Dodaj co najmniej dwa pliki wideo.")
+  }
+
+  const { ffmpegConcat } = await import("@/lib/ffmpeg-utils")
+  const inputs = files.map((f) => ({
+    buffer: f.buffer,
+    ext: extOf(f.name) || "mp4",
+  }))
+
+  let out: Buffer
+  try {
+    out = await ffmpegConcat(inputs, "mp4", ["-c", "copy"])
+  } catch {
+    // Re-encode when stream copy fails (mixed codecs).
+    out = await ffmpegConcat(inputs, "mp4", [
+      "-c:v",
+      "libx264",
+      "-preset",
+      "fast",
+      "-crf",
+      "23",
+      "-c:a",
+      "aac",
+      "-b:a",
+      "128k",
+      "-movflags",
+      "+faststart",
+    ])
+  }
+
+  return {
+    buffer: out,
+    filename: `scalone-${files.length}-klipow.mp4`,
+    contentType: "video/mp4",
+  }
+}
+
+export async function packZip(
+  files: { buffer: Buffer; name: string }[],
+): Promise<SpecialResult> {
+  if (files.length === 0) {
+    throw new ConversionError("Dodaj co najmniej jeden plik.")
+  }
+
+  const JSZip = (await import("jszip")).default
+  const zip = new JSZip()
+  const used = new Set<string>()
+
+  for (const file of files) {
+    let name = file.name.replace(/[/\\]/g, "_").trim() || "plik"
+    if (used.has(name)) {
+      const dot = name.lastIndexOf(".")
+      const stem = dot > 0 ? name.slice(0, dot) : name
+      const ext = dot > 0 ? name.slice(dot) : ""
+      let i = 2
+      while (used.has(`${stem}-${i}${ext}`)) i++
+      name = `${stem}-${i}${ext}`
+    }
+    used.add(name)
+    zip.file(name, file.buffer)
+  }
+
+  const buffer = await zip.generateAsync({ type: "nodebuffer" })
+  return {
+    buffer,
+    filename: files.length === 1 ? `${stemOf(files[0].name)}.zip` : "archiwum.zip",
+    contentType: "application/zip",
+  }
+}
+
+const UNPACK_MAX_FILES = 80
+const UNPACK_MAX_BYTES = 150 * 1024 * 1024
+
+function zipEntryName(raw: string): string | null {
+  const base = raw.split(/[/\\]/).pop()?.trim() ?? ""
+  if (!base || base === "." || base === "..") return null
+  if (base === ".DS_Store" || base.startsWith("._")) return null
+  const cleaned = base.replace(/[\u0000-\u001f]/g, "").slice(0, 140)
+  return cleaned || null
+}
+
+export async function unpackZip(
+  input: Buffer,
+  originalName: string,
+): Promise<SpecialResult> {
+  const JSZip = (await import("jszip")).default
+  let zip
+  try {
+    zip = await JSZip.loadAsync(input)
+  } catch {
+    throw new ConversionError(
+      "Nie udało się otworzyć ZIP. Plik może być uszkodzony albo chroniony hasłem.",
+    )
+  }
+
+  const entries = Object.values(zip.files).filter((entry) => {
+    if (entry.dir) return false
+    const path = entry.name.replace(/\\/g, "/")
+    if (path.startsWith("__MACOSX/") || path.split("/").includes("..")) return false
+    return true
+  })
+
+  if (entries.length === 0) {
+    throw new ConversionError("Archiwum nie zawiera plików do wyciągnięcia.")
+  }
+  if (entries.length > UNPACK_MAX_FILES) {
+    throw new ConversionError(
+      `Za dużo plików w archiwum (maks. ${UNPACK_MAX_FILES}).`,
+    )
+  }
+
+  const extracted: { name: string; buffer: Buffer }[] = []
+  const used = new Set<string>()
+  let total = 0
+
+  for (const entry of entries) {
+    let name = zipEntryName(entry.name)
+    if (!name) continue
+    if (used.has(name)) {
+      const dot = name.lastIndexOf(".")
+      const stem = dot > 0 ? name.slice(0, dot) : name
+      const ext = dot > 0 ? name.slice(dot) : ""
+      let i = 2
+      while (used.has(`${stem}-${i}${ext}`)) i++
+      name = `${stem}-${i}${ext}`
+    }
+
+    let buffer: Buffer
+    try {
+      buffer = Buffer.from(await entry.async("nodebuffer"))
+    } catch {
+      throw new ConversionError(
+        "Nie udało się rozpakować. Archiwa z hasłem nie są obsługiwane.",
+      )
+    }
+    total += buffer.length
+    if (total > UNPACK_MAX_BYTES) {
+      throw new ConversionError(
+        "Rozpakowana zawartość jest za duża (limit 150 MB).",
+      )
+    }
+    used.add(name)
+    extracted.push({ name, buffer })
+  }
+
+  if (extracted.length === 0) {
+    throw new ConversionError("Archiwum nie zawiera plików do wyciągnięcia.")
+  }
+
+  if (extracted.length === 1) {
+    return {
+      buffer: extracted[0].buffer,
+      filename: extracted[0].name,
+      contentType: "application/octet-stream",
+      note: "Wyciągnięto jeden plik z archiwum.",
+    }
+  }
+
+  const flat = new JSZip()
+  for (const file of extracted) flat.file(file.name, file.buffer)
+  const buffer = await flat.generateAsync({ type: "nodebuffer" })
+  return {
+    buffer,
+    filename: `${stemOf(originalName)}-rozpakowane.zip`,
+    contentType: "application/zip",
+    note: `Wyciągnięto ${extracted.length} plików. Ścieżki folderów zostały spłaszczone.`,
+  }
+}
+
+const PDF_IMAGE_MAX_PAGES = 40
+
+export async function pdfToImages(
+  input: Buffer,
+  originalName: string,
+): Promise<SpecialResult> {
+  const mupdf = await import("mupdf")
+  let doc
+  try {
+    doc = mupdf.Document.openDocument(input, "application/pdf")
+  } catch {
+    throw new ConversionError("Nie udało się odczytać pliku PDF.")
+  }
+
+  if (doc.needsPassword()) {
+    throw new ConversionError("Ten PDF jest chroniony hasłem.")
+  }
+
+  const pageCount = doc.countPages()
+  if (pageCount === 0) {
+    throw new ConversionError("Plik PDF nie zawiera żadnych stron.")
+  }
+  if (pageCount > PDF_IMAGE_MAX_PAGES) {
+    throw new ConversionError(
+      `Za dużo stron (maks. ${PDF_IMAGE_MAX_PAGES}). Najpierw wybierz zakres w narzędziu „Wybór stron PDF”.`,
+    )
+  }
+
+  const matrix = mupdf.Matrix.scale(2, 2)
+  const stem = stemOf(originalName)
+  const renderPage = (index: number): Buffer => {
+    const page = doc.loadPage(index)
+    const pixmap = page.toPixmap(matrix, mupdf.ColorSpace.DeviceRGB, false)
+    return Buffer.from(pixmap.asJPEG(90, false))
+  }
+
+  if (pageCount === 1) {
+    return {
+      buffer: renderPage(0),
+      filename: `${stem}.jpg`,
+      contentType: "image/jpeg",
+    }
+  }
+
+  const JSZip = (await import("jszip")).default
+  const zip = new JSZip()
+  const pad = String(pageCount).length
+  for (let i = 0; i < pageCount; i++) {
+    zip.file(
+      `${stem}-${String(i + 1).padStart(pad, "0")}.jpg`,
+      renderPage(i),
+    )
+  }
+  const buffer = await zip.generateAsync({ type: "nodebuffer" })
+  return {
+    buffer,
+    filename: `${stem}-strony.zip`,
+    contentType: "application/zip",
+    note: `Zapisano ${pageCount} stron jako JPG.`,
+  }
+}
+
+export async function compressAudio(
+  input: Buffer,
+  originalName: string,
+  quality: number,
+): Promise<SpecialResult> {
+  const q = Math.min(100, Math.max(1, Math.round(quality) || 70))
+  const rates = [64, 96, 128, 160, 192, 256, 320]
+  const target = 64 + (q / 100) * 256
+  const bitrate = rates.reduce((best, rate) =>
+    Math.abs(rate - target) < Math.abs(best - target) ? rate : best,
+  )
+  const ext = extOf(originalName) || "mp3"
+  const { ffmpegTransform } = await import("@/lib/ffmpeg-utils")
+
+  const out = await ffmpegTransform(input, ext, "mp3", (inPath, outPath) => [
+    "-y",
+    "-i",
+    inPath,
+    "-vn",
+    "-codec:a",
+    "libmp3lame",
+    "-b:a",
+    `${bitrate}k`,
+    outPath,
+  ])
+
+  return {
+    buffer: out,
+    filename: `${stemOf(originalName)}-${bitrate}k.mp3`,
+    contentType: "audio/mpeg",
+    note: `Zapisano MP3 ${bitrate} kb/s. To kompresja stratna — oryginału z tego pliku nie odzyskasz.`,
+  }
+}
+
+async function encodeSharpImage(
+  image: import("sharp").Sharp,
+  format: string,
+): Promise<{ out: Buffer; ext: string; contentType: string }> {
+  switch (format) {
+    case "jpeg":
+    case "jpg":
+      return {
+        out: await image.jpeg({ quality: 92, mozjpeg: true }).toBuffer(),
+        ext: "jpg",
+        contentType: "image/jpeg",
+      }
+    case "png":
+      return {
+        out: await image.png({ compressionLevel: 9 }).toBuffer(),
+        ext: "png",
+        contentType: "image/png",
+      }
+    case "webp":
+      return {
+        out: await image.webp({ quality: 92 }).toBuffer(),
+        ext: "webp",
+        contentType: "image/webp",
+      }
+    case "avif":
+      return {
+        out: await image.avif({ quality: 80 }).toBuffer(),
+        ext: "avif",
+        contentType: "image/avif",
+      }
+    case "tiff":
+      return {
+        out: await image.tiff({ quality: 90 }).toBuffer(),
+        ext: "tiff",
+        contentType: "image/tiff",
+      }
+    case "gif":
+      return {
+        out: await image.gif().toBuffer(),
+        ext: "gif",
+        contentType: "image/gif",
+      }
+    case "heif":
+    case "heic":
+      return {
+        out: await image.jpeg({ quality: 92, mozjpeg: true }).toBuffer(),
+        ext: "jpg",
+        contentType: "image/jpeg",
+      }
+    default:
+      throw new ConversionError(
+        "Nieobsługiwany format obrazu. Użyj JPG, PNG, WebP, AVIF, TIFF, GIF lub HEIC.",
+      )
+  }
+}
+
+export async function flipImage(
+  input: Buffer,
+  originalName: string,
+  direction: "horizontal" | "vertical" | "both",
+): Promise<SpecialResult> {
+  const sharp = (await import("sharp")).default
+  let image = sharp(input, { failOn: "none" })
+  const meta = await image.metadata()
+  const format = String(meta.format || "")
+
+  if (direction === "horizontal" || direction === "both") image = image.flop()
+  if (direction === "vertical" || direction === "both") image = image.flip()
+
+  const encoded = await encodeSharpImage(image, format)
+  return {
+    buffer: encoded.out,
+    filename: `${stemOf(originalName)}-lustro.${encoded.ext}`,
+    contentType: encoded.contentType,
+  }
+}
+
+export async function resizeVideo(
+  input: Buffer,
+  originalName: string,
+  width: number,
+  height: number,
+): Promise<SpecialResult> {
+  const w = Math.floor(width)
+  if (!Number.isFinite(w) || w < 160 || w > 3840) {
+    throw new ConversionError("Szerokość musi być między 160 a 3840 px.")
+  }
+  const evenW = w % 2 === 0 ? w : w - 1
+  let scale = `scale=${evenW}:-2`
+  if (Number.isFinite(height) && height > 0) {
+    const h = Math.floor(height)
+    if (h < 160 || h > 2160) {
+      throw new ConversionError("Wysokość musi być między 160 a 2160 px.")
+    }
+    const evenH = h % 2 === 0 ? h : h - 1
+    scale = `scale=${evenW}:${evenH}`
+  }
+
+  const ext = extOf(originalName) || "mp4"
+  const { ffmpegTransform } = await import("@/lib/ffmpeg-utils")
+  const out = await ffmpegTransform(input, ext, "mp4", (inPath, outPath) => [
+    "-y",
+    "-i",
+    inPath,
+    "-vf",
+    scale,
+    "-c:v",
+    "libx264",
+    "-preset",
+    "fast",
+    "-crf",
+    "23",
+    "-c:a",
+    "aac",
+    "-b:a",
+    "128k",
+    "-movflags",
+    "+faststart",
+    outPath,
+  ])
+
+  return {
+    buffer: out,
+    filename: `${stemOf(originalName)}-${evenW}.mp4`,
+    contentType: "video/mp4",
   }
 }
 

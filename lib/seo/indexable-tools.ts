@@ -75,6 +75,15 @@ export const INDEXABLE_SPECIAL_IDS = new Set([
   "wideo-do-gif",
   "pdf-haslo",
   "obrot-obrazu",
+  "przyciecie-obrazu",
+  "wybor-stron-pdf",
+  "scalanie-wideo",
+  "spakuj-zip",
+  "rozpakuj-zip",
+  "pdf-do-obrazow",
+  "kompresja-audio",
+  "lustro-obrazu",
+  "zmiana-rozmiaru-wideo",
 ])
 
 /** High-intent utilities that deserve their own SERP entry. */

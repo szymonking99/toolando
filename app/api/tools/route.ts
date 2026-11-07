@@ -22,6 +22,15 @@ import {
   videoToGif,
   protectPdf,
   rotateImage,
+  cropImage,
+  extractPdfPages,
+  mergeVideos,
+  packZip,
+  unpackZip,
+  pdfToImages,
+  compressAudio,
+  flipImage,
+  resizeVideo,
   type SpecialResult,
 } from "@/lib/special-convert"
 import { repairFile } from "@/lib/file-repair"
@@ -372,6 +381,75 @@ export async function POST(req: NextRequest) {
           ? (rot as 90 | 180 | 270)
           : 90
         result = await rotateImage(files[0].buffer, files[0].name, degrees)
+        break
+      }
+      case "crop-image": {
+        result = await cropImage(
+          files[0].buffer,
+          files[0].name,
+          Number(intake.field("cropLeft") ?? 0),
+          Number(intake.field("cropTop") ?? 0),
+          Number(intake.field("cropWidth") ?? 0),
+          Number(intake.field("cropHeight") ?? 0),
+        )
+        break
+      }
+      case "extract-pdf-pages": {
+        result = await extractPdfPages(
+          files[0].buffer,
+          files[0].name,
+          intake.field("pageOrder") ?? "",
+        )
+        break
+      }
+      case "merge-video": {
+        if (files.length < 2) {
+          return json({ error: "Dodaj co najmniej dwa pliki wideo." }, 400)
+        }
+        result = await mergeVideos(
+          files.map((f) => ({ buffer: f.buffer, name: f.name })),
+        )
+        break
+      }
+      case "pack-zip": {
+        result = await packZip(
+          files.map((f) => ({ buffer: f.buffer, name: f.name })),
+        )
+        break
+      }
+      case "unpack-zip": {
+        result = await unpackZip(files[0].buffer, files[0].name)
+        break
+      }
+      case "pdf-to-images": {
+        result = await pdfToImages(files[0].buffer, files[0].name)
+        break
+      }
+      case "compress-audio": {
+        result = await compressAudio(
+          files[0].buffer,
+          files[0].name,
+          Number(intake.field("quality") ?? 70),
+        )
+        break
+      }
+      case "flip-image": {
+        const dirRaw = intake.field("flipDirection") ?? "horizontal"
+        const direction = (
+          ["horizontal", "vertical", "both"] as const
+        ).includes(dirRaw as never)
+          ? (dirRaw as "horizontal" | "vertical" | "both")
+          : "horizontal"
+        result = await flipImage(files[0].buffer, files[0].name, direction)
+        break
+      }
+      case "resize-video": {
+        result = await resizeVideo(
+          files[0].buffer,
+          files[0].name,
+          Number(intake.field("width") ?? 1280),
+          Number(intake.field("height") ?? 0),
+        )
         break
       }
       default:

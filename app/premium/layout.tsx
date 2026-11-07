@@ -1,8 +1,17 @@
 import type { Metadata, Viewport } from "next"
-import { Geist, Geist_Mono } from "next/font/google"
+import { DM_Sans, Geist_Mono, Syne } from "next/font/google"
+import { ThemeProvider } from "@/components/theme-provider"
+import { themeInitScript } from "@/lib/theme-script"
 import "../globals.css"
 
-const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] })
+const dmSans = DM_Sans({
+  variable: "--font-dm-sans",
+  subsets: ["latin", "latin-ext"],
+})
+const syne = Syne({
+  variable: "--font-display",
+  subsets: ["latin"],
+})
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
@@ -10,15 +19,15 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Premium — Toolando.tech",
-  description: "Zarządzaj swoją subskrypcją Premium w Toolando.tech.",
+  description: "Zarządzaj subskrypcją Premium w Toolando.tech.",
   robots: { index: false, follow: false },
 }
 
 export const viewport: Viewport = {
   colorScheme: "light dark",
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "white" },
-    { media: "(prefers-color-scheme: dark)", color: "black" },
+    { media: "(prefers-color-scheme: light)", color: "#f4f8f9" },
+    { media: "(prefers-color-scheme: dark)", color: "#0f1419" },
   ],
 }
 
@@ -28,9 +37,15 @@ export default function PremiumLayout({
   return (
     <html
       lang="pl"
-      className={`dark bg-background ${geistSans.variable} ${geistMono.variable}`}
+      suppressHydrationWarning
+      className={`bg-background ${dmSans.variable} ${syne.variable} ${geistMono.variable}`}
     >
-      <body className="bg-background font-sans antialiased">{children}</body>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+      </head>
+      <body className="bg-background font-sans antialiased">
+        <ThemeProvider>{children}</ThemeProvider>
+      </body>
     </html>
   )
 }

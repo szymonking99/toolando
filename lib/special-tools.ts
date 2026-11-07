@@ -26,6 +26,15 @@ export type SpecialToolId =
   | "wideo-do-gif"
   | "pdf-haslo"
   | "obrot-obrazu"
+  | "przyciecie-obrazu"
+  | "wybor-stron-pdf"
+  | "scalanie-wideo"
+  | "spakuj-zip"
+  | "rozpakuj-zip"
+  | "pdf-do-obrazow"
+  | "kompresja-audio"
+  | "lustro-obrazu"
+  | "zmiana-rozmiaru-wideo"
 
 export type SpecialEngine =
   | "compress-image"
@@ -54,6 +63,15 @@ export type SpecialEngine =
   | "video-to-gif"
   | "protect-pdf"
   | "rotate-image"
+  | "crop-image"
+  | "extract-pdf-pages"
+  | "merge-video"
+  | "pack-zip"
+  | "unpack-zip"
+  | "pdf-to-images"
+  | "compress-audio"
+  | "flip-image"
+  | "resize-video"
 
 export type SpecialToolConfig = {
   id: SpecialToolId
@@ -401,11 +419,11 @@ export const specialTools: SpecialToolConfig[] = [
     category: "Audio",
     name: "Audio z wideo",
     description:
-      "Wyodrębnij ścieżkę dźwiękową z MP4, WebM, MOV lub MKV do MP3, M4A albo WAV — bez pobierania z YouTube/TikTok.",
+      "Wyciągnij dźwięk z MP4, WebM, MOV lub MKV do MP3, M4A albo WAV — z pliku, który już masz (bez pobierania z YouTube/TikTok).",
     accept: ".mp4,.webm,.mov,.mkv,.avi,.m4v",
     acceptLabel: "MP4, WebM, MOV, MKV",
     multiple: false,
-    actionLabel: "Wyodrębnij audio",
+    actionLabel: "Wyciągnij audio",
     hasQuality: false,
     previewImage: false,
   },
@@ -415,7 +433,7 @@ export const specialTools: SpecialToolConfig[] = [
     category: "Wideo",
     name: "Wideo → GIF",
     description:
-      "Zrób animowany GIF z krótkiego fragmentu wideo. Ustaw początek i koniec oraz jakość (rozdzielczość / FPS).",
+      "Zrób animowany GIF z krótkiego fragmentu wideo. Ustaw początek, koniec i jakość (rozdzielczość / klatki na sekundę).",
     accept: ".mp4,.webm,.mov,.mkv,.avi,.m4v",
     acceptLabel: "MP4, WebM, MOV, MKV",
     multiple: false,
@@ -429,9 +447,9 @@ export const specialTools: SpecialToolConfig[] = [
     category: "Dokumenty",
     name: "Hasło na PDF",
     description:
-      "Zabezpiecz PDF hasłem (AES-256). Otwieranie wymaga podanego hasła — nie zostawiaj kopii bez hasła na dysku współdzielonym.",
+      "Zabezpiecz PDF hasłem (AES-256). Bez niego nikt nie otworzy pliku — nie zostawiaj niezabezpieczonej kopii na wspólnym dysku.",
     accept: ".pdf",
-    acceptLabel: "PDF (bez hasła)",
+    acceptLabel: "PDF bez hasła",
     multiple: false,
     actionLabel: "Zabezpiecz PDF",
     hasQuality: false,
@@ -450,6 +468,132 @@ export const specialTools: SpecialToolConfig[] = [
     actionLabel: "Obróć obraz",
     hasQuality: false,
     previewImage: true,
+  },
+  {
+    id: "przyciecie-obrazu",
+    engine: "crop-image",
+    category: "Obrazy",
+    name: "Przycięcie obrazu",
+    description:
+      "Wytnij prostokąt ze zdjęcia — podaj lewy i górny róg oraz szerokość i wysokość w pikselach. Gdy się da, zachowujemy oryginalny format.",
+    accept: ".jpg,.jpeg,.png,.webp,.avif,.tiff,.gif,.heic,.heif",
+    acceptLabel: "JPG, PNG, WebP, AVIF, TIFF, GIF, HEIC",
+    multiple: false,
+    actionLabel: "Przytnij obraz",
+    hasQuality: false,
+    previewImage: true,
+  },
+  {
+    id: "wybor-stron-pdf",
+    engine: "extract-pdf-pages",
+    category: "Dokumenty",
+    name: "Wybór i kolejność stron PDF",
+    description:
+      "Zostaw tylko wybrane strony albo ułóż je w nowej kolejności w jednym PDF (np. 3,1,2 albo 1-3,5).",
+    accept: ".pdf",
+    acceptLabel: "PDF",
+    multiple: false,
+    actionLabel: "Złóż PDF",
+    hasQuality: false,
+    previewImage: false,
+  },
+  {
+    id: "scalanie-wideo",
+    engine: "merge-video",
+    category: "Wideo",
+    name: "Scalanie wideo",
+    description:
+      "Połącz co najmniej dwa klipy w jeden plik MP4. Kolejność wrzuconych plików to kolejność w filmie.",
+    accept: ".mp4,.webm,.mov,.mkv,.avi,.m4v",
+    acceptLabel: "MP4, WebM, MOV, MKV (min. 2)",
+    multiple: true,
+    actionLabel: "Połącz wideo",
+    hasQuality: false,
+    previewImage: false,
+  },
+  {
+    id: "spakuj-zip",
+    engine: "pack-zip",
+    category: "Pliki",
+    name: "Spakuj do ZIP",
+    description:
+      "Wrzuć wiele plików — dostaniesz jeden ZIP gotowy do wysyłki albo archiwum.",
+    accept: "*/*",
+    acceptLabel: "Dowolne pliki (wiele)",
+    multiple: true,
+    actionLabel: "Spakuj do ZIP",
+    hasQuality: false,
+    previewImage: false,
+  },
+  {
+    id: "rozpakuj-zip",
+    engine: "unpack-zip",
+    category: "Pliki",
+    name: "Rozpakuj ZIP",
+    description:
+      "Wyciągnij pliki z archiwum ZIP. Jeden plik w środku pobierzesz od razu; kilka wraca jako spłaszczony ZIP — bez ścieżek i bez haseł.",
+    accept: ".zip",
+    acceptLabel: "ZIP bez hasła",
+    multiple: false,
+    actionLabel: "Rozpakuj",
+    hasQuality: false,
+    previewImage: false,
+  },
+  {
+    id: "pdf-do-obrazow",
+    engine: "pdf-to-images",
+    category: "Dokumenty",
+    name: "PDF → obrazy JPG",
+    description:
+      "Zrób JPG z każdej strony PDF. Jedna strona to jeden plik, więcej stron pakujemy do ZIP (maks. 40 stron).",
+    accept: ".pdf",
+    acceptLabel: "PDF (maks. 40 stron)",
+    multiple: false,
+    actionLabel: "Zrób JPG",
+    hasQuality: false,
+    previewImage: true,
+  },
+  {
+    id: "kompresja-audio",
+    engine: "compress-audio",
+    category: "Audio",
+    name: "Kompresja audio",
+    description:
+      "Zmniejsz MP3, WAV, M4A, FLAC albo OGG do MP3. Suwak ustawia bitrate — wyżej znaczy lepsza jakość i większy plik.",
+    accept: ".mp3,.wav,.m4a,.aac,.ogg,.flac,.opus,.wma",
+    acceptLabel: "MP3, WAV, M4A, FLAC, OGG",
+    multiple: false,
+    actionLabel: "Kompresuj audio",
+    hasQuality: true,
+    previewImage: false,
+  },
+  {
+    id: "lustro-obrazu",
+    engine: "flip-image",
+    category: "Obrazy",
+    name: "Lustro obrazu",
+    description:
+      "Odbij zdjęcie w poziomie, w pionie albo w obie strony. Gdy się da, zostawiamy oryginalny format.",
+    accept: ".jpg,.jpeg,.png,.webp,.avif,.tiff,.gif,.heic,.heif",
+    acceptLabel: "JPG, PNG, WebP, AVIF, TIFF, GIF, HEIC",
+    multiple: false,
+    actionLabel: "Odbij obraz",
+    hasQuality: false,
+    previewImage: true,
+  },
+  {
+    id: "zmiana-rozmiaru-wideo",
+    engine: "resize-video",
+    category: "Wideo",
+    name: "Zmiana rozmiaru wideo",
+    description:
+      "Zmień szerokość filmu. Wysokość dopasuje się sama albo podaj obie wartości. Wynik to MP4.",
+    accept: ".mp4,.webm,.mov,.mkv,.avi,.m4v",
+    acceptLabel: "MP4, WebM, MOV, MKV",
+    multiple: false,
+    actionLabel: "Zmień rozmiar",
+    hasQuality: false,
+    previewImage: false,
   },
 ]
 

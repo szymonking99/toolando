@@ -16,9 +16,7 @@ type SupportButtonProps = {
 /**
  * Premium "Support us" call to action.
  *
- * Visual style: glass/blur surface with a subtle blue→indigo gradient, a soft
- * glow, bold typography and a gentle hover scale — deliberately more eye-catching
- * than the muted nav links, while staying on-brand with Toolando's dark UI.
+ * Solid primary CTA — more eye-catching than muted nav links, on-brand teal.
  */
 export function SupportButton({ fullWidth, compact, className }: SupportButtonProps) {
   const { t, href } = useI18n()
@@ -31,11 +29,10 @@ export function SupportButton({ fullWidth, compact, className }: SupportButtonPr
       aria-label={label}
       className={cn(
         "group relative inline-flex items-center justify-center gap-2 overflow-hidden whitespace-nowrap rounded-xl",
-        "border border-white/20 bg-white/10 backdrop-blur-md",
-        "bg-gradient-to-r from-blue-600 to-indigo-600",
-        "font-semibold text-white shadow-lg shadow-indigo-600/25",
+        "border border-primary/20 bg-primary",
+        "font-semibold text-primary-foreground shadow-md shadow-primary/25",
         "transition-transform duration-200 ease-out hover:scale-[1.03]",
-        "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background",
+        "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background",
         fullWidth
           ? "w-full px-6 py-3.5 text-base"
           : compact

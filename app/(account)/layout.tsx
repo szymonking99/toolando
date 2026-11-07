@@ -1,13 +1,22 @@
 import type { Metadata, Viewport } from "next"
-import { Geist, Geist_Mono } from "next/font/google"
+import { DM_Sans, Geist_Mono, Syne } from "next/font/google"
 import { cookies, headers } from "next/headers"
 import { rtlLocales } from "@/lib/i18n/config"
 import { getDictionary } from "@/lib/i18n/dictionaries"
 import { resolveAccountLocale } from "@/lib/i18n/resolve-account-locale"
 import { I18nProvider } from "@/components/i18n-provider"
+import { ThemeProvider } from "@/components/theme-provider"
+import { themeInitScript } from "@/lib/theme-script"
 import "../globals.css"
 
-const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] })
+const dmSans = DM_Sans({
+  variable: "--font-dm-sans",
+  subsets: ["latin", "latin-ext"],
+})
+const syne = Syne({
+  variable: "--font-display",
+  subsets: ["latin"],
+})
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
@@ -16,8 +25,8 @@ const geistMono = Geist_Mono({
 export const viewport: Viewport = {
   colorScheme: "light dark",
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "white" },
-    { media: "(prefers-color-scheme: dark)", color: "black" },
+    { media: "(prefers-color-scheme: light)", color: "#f4f8f9" },
+    { media: "(prefers-color-scheme: dark)", color: "#0f1419" },
   ],
 }
 
@@ -54,12 +63,18 @@ export default async function AccountLayout({
     <html
       lang={locale}
       dir={dir}
-      className={`dark bg-background ${geistSans.variable} ${geistMono.variable}`}
+      suppressHydrationWarning
+      className={`bg-background ${dmSans.variable} ${syne.variable} ${geistMono.variable}`}
     >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+      </head>
       <body className="bg-background font-sans antialiased">
-        <I18nProvider locale={locale} dictionary={dictionary}>
-          {children}
-        </I18nProvider>
+        <ThemeProvider>
+          <I18nProvider locale={locale} dictionary={dictionary}>
+            {children}
+          </I18nProvider>
+        </ThemeProvider>
       </body>
     </html>
   )

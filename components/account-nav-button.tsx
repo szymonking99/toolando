@@ -23,13 +23,13 @@ export function AccountNavButton({ fullWidth, className }: AccountNavButtonProps
     return (
       <span
         className={cn(
-          "inline-flex h-9 items-center rounded-xl border border-white/10 bg-white/5 px-3 lg:px-4",
+          "inline-flex h-9 items-center rounded-xl border border-border bg-muted/50 px-3 lg:px-4",
           fullWidth && "w-full",
           className,
         )}
         aria-hidden="true"
       >
-        <span className="h-4 w-16 animate-pulse rounded bg-white/10" />
+        <span className="h-4 w-16 animate-pulse rounded bg-muted-foreground/20" />
       </span>
     )
   }
@@ -39,7 +39,7 @@ export function AccountNavButton({ fullWidth, className }: AccountNavButtonProps
       <Link
         href="/sign-in"
         className={cn(
-          "inline-flex items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-sm font-medium text-foreground transition-colors hover:bg-white/10 lg:px-4",
+          "inline-flex items-center justify-center gap-2 rounded-xl border border-border bg-card px-3 py-2 text-sm font-medium text-foreground transition-colors hover:bg-muted lg:px-4",
           fullWidth && "w-full py-3",
           className,
         )}
@@ -56,13 +56,13 @@ export function AccountNavButton({ fullWidth, className }: AccountNavButtonProps
     <Link
       href="/account"
       className={cn(
-        "inline-flex items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-sm font-medium text-foreground transition-colors hover:bg-white/10 lg:px-4",
+        "inline-flex items-center justify-center gap-2 rounded-xl border border-border bg-card px-3 py-2 text-sm font-medium text-foreground transition-colors hover:bg-muted lg:px-4",
         fullWidth && "w-full py-3",
         className,
       )}
     >
       {isPremium ? (
-        <Crown className="size-4 text-amber-300" aria-hidden="true" />
+        <Crown className="size-4 text-amber-500 dark:text-amber-300" aria-hidden="true" />
       ) : (
         <User className="size-4" aria-hidden="true" />
       )}
